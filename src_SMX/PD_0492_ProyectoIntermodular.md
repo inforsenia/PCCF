@@ -8,26 +8,31 @@ Es un módulo de 67 horas.
 
 ## Secuenciación de las Unidades de Programación. 
 
-Dada la naturaleza de este módulo de nueva creación, se tratarán Unidades de Programación que permitirán alcanzar diferentes Resultados de Aprendizaje de varios módulos del ciclo formativo. 
+A tenor de las indicaciones recibidas y la nueva legislación de Formación Profesional, de deduce que el módulo "Proyecto Intermodular" debe componerse por "retos", relacionados con los resultados de aprendizaje (RA) de módulos de primer y de segundo curso, cohesionados entre sí y con un sentido que exceda el de cada módulo o RA por separado.
 
-Estas Unidades de Programación se abordarán mediante el planteamiento de actividades basadas en retos, para cada una de las cuales se especificarán los datos mostrados en la siguiente tabla:
+Con estas premisas, el módulo se programa mediante un proyecto marco: "Creación de empresa", estructurado en "áreas de conocimiento", atendidas por uno o varios profesores/as.
+
+Cada área de conocimiento se estructura a su vez en una secuencia de "retos". La ejecución de todos los retos de un área de conocimiento la completa, del mismo modo que al completar todas las áreas del proyecto, este se da por terminado.
+
+El desarrollo de las distintas áreas de conocimiento no está ordenado, pudiendose trabajar en varios retos pertenecientes a distintas áreas en paralelo. 
+
+Dado lo novedoso y dinámico del módulo, la especificación de áreas y retos se concretará en la Programación de Aula que se irá ensayando durante el curso, sirviendo como base para la Programación Didáctica del presente módulo en cursos posteriores.
+
+En cualquier caso, tanto áreas como retos se especificarán señalando al menos los sigueintes datos:
 
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
-|¿Qué?|Nombre de la actividad|
-|¿Para qué?|RA/Módulo profesional|
-|¿Cómo?|Individual o grupo, Soporte o formato, Instrucciones, Recursos necesarios|
-|¿Cuándo?|Tiempo de realización|
-|¿Dónde?|Lugar de realización, presentación o entrega|
-|¿Quién?|Individual o en grupo|
-|¿Cómo se va a evaluar?|Herramientas de evaluación utilizadas|
-|Docente responsable|Puede ser el/la del módulo profesional de algún RA o el/la docente encargado/a del Proyecto Intermodular|
+|Denominación|Nombre de la actividad o área|
+|Enunciado|Qué se pide realizar|
+|Recursos|Todo aquello material o inmaterial necesario para la realización|
+|Relación de contenidos|RAs/Módulos profesionales implicados|
+|Realizadores|Individual o grupo|
+|Cronología|Cuando y cuanto tiempo|
+|Evaluación|Criterios de RA implicados, herramientas, rúbricas, etc|
+|Calificación|Ponderación y condicionado|
+|Docente/s responsable/s|Profesorado implicado en cada área|
 
-Todos los módulos del ciclo, tanto de primer como de segundo curso, son susceptibles de tratarse en las actividades planteadas en el Proyecto Intermodular.
-
-Dado el caracter dinámico y flexible de la programación didáctica, las actividades/retos se irán configurando conforme avance el curso, de manera que puedan corresponder con contenidos relacionados con RAs de diferentes módulos que se están tratando en cada momento, asegurando así que el alumnado tiene ya adquiridos los conocimientos necesarios para enfrentarse a cada reto en cuestión.
-
-El detalle de todas las actividades/retos se reflejará en la Programación de Aula al final del curso y podrá servir de base para la Programación Didáctica del presente módulo en cursos posteriores.
+Los retos se programarán de modo que el alumnado tenga ya adquiridos los conocimientos necesarios para enfrentarse estos.
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -35,7 +40,7 @@ La metodología didáctica adoptada en esta programación se encuentra alineada 
 
 Se apuesta por metodologías activas, centradas en el estudiante, que fomentan el aprendizaje significativo, el trabajo cooperativo, la resolución de problemas y la aplicación práctica de los contenidos en contextos reales o simulados. Asimismo, se integran estrategias que favorecen la autonomía, la reflexión crítica y el desarrollo de competencias profesionales, personales y sociales.
 
-Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en el diseño de las **Situaciones de Aprendizaje**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
+Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en el diseño de las **Áreas y Retos**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
 
 ## Recursos
 
@@ -43,7 +48,9 @@ Los recursos didácticos utilizados en este módulo se seleccionan en coherencia
 
 Se contempla el uso de recursos variados, tanto materiales como digitales, que favorecen un aprendizaje activo, contextualizado y accesible. Entre ellos se incluyen: equipamiento técnico específico del módulo, herramientas TIC, plataformas educativas, materiales audiovisuales, documentación profesional actualizada y recursos adaptados a las necesidades del grupo.
 
-La concreción de los recursos específicos que se emplearán en cada unidad didáctica o actividad se detallará en las correspondientes **Situaciones de Aprendizaje**, en función de los objetivos, contenidos y metodologías aplicadas.
+Se considera de especial relevancia la matriculación como profesor de todo el equipo docente del curso en el módulo en Aules FP.
+
+La concreción de los recursos específicos que se emplearán en cada área o reto se detallará durante el desarrollo de estos, como ya se ha comentado.
 
 ## Uso de espacios y equipamientos. 
 
@@ -51,7 +58,7 @@ El uso de los espacios y equipamientos necesarios para el desarrollo de este mó
 
 Se prioriza la utilización de espacios que reproduzcan contextos profesionales reales o simulados, favoreciendo así el aprendizaje significativo y la adquisición de competencias en condiciones similares a las del entorno laboral. Asimismo, se garantiza el acceso a los equipamientos técnicos y tecnológicos adecuados, asegurando su disponibilidad, mantenimiento y uso responsable, cumpliendo la normativa del Centro y de la Conselleria.
 
-Las especificidades sobre el uso de espacios y equipamientos en cada actividad concreta se detallarán en las **Situaciones de Aprendizaje**, adaptándose a las necesidades del alumnado y a los objetivos de cada propuesta didáctica.
+Las especificidades sobre el uso de espacios y equipamientos en cada actividad concreta se detallarán en cada **Reto**, adaptándose a las necesidades del alumnado y a los objetivos de cada propuesta didáctica.
 
 ## Medidas de atención a la diversidad. 
 
@@ -59,7 +66,7 @@ Las medidas de atención a la diversidad contempladas en esta programación se f
 
 Se parte del reconocimiento de la diversidad como un valor y una oportunidad para el aprendizaje, promoviendo estrategias que favorezcan la participación, la motivación y el progreso de todos los estudiantes. Entre las medidas generales se incluyen la flexibilización metodológica, la adaptación de recursos, el uso de apoyos personalizados y la atención a distintos ritmos y estilos de aprendizaje.
 
-Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
+Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en cada **Reto**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
 ## Evaluación del aprendizaje. 
 
@@ -73,7 +80,7 @@ La evaluación es:
 - **Adaptada**: contempla medidas para el alumnado con necesidades específicas.
 - **Basada en la adquisición de competencias**: se evalúa mediante los **Resultados de Aprendizaje (RA)** y sus correspondientes **Criterios de Evaluación (CE)** definidos en el título.
 
-El objetivo de la evaluación es la superación del módulo por parte del alumnado. Para ello, es imprescindible que **todos los RA estén aprobados**.
+El objetivo de la evaluación es la superación del módulo por parte del alumnado. Para ello, es imprescindible que **todos los RA implicados estén aprobados**.
 
 Cada RA puede tener un **peso ponderado** en la calificación final del módulo. Para su evaluación, se tendrán en cuenta los CE asociados, también ponderados, que deben convertirse en **indicadores de logro claros, precisos y observables**.
 
@@ -81,7 +88,7 @@ El **peso de los CE o RA** puede modificarse durante el curso si existe una just
 
 ### Tipos de evaluación 
 
-La evaluación de un módulo será realizada por el profesor titular del correspondiente módulo profesional y, en su caso, teniendo en cuenta el informe de la empresa tras la Formación en Empresa.
+La evaluación del módulo será realizada por el equipo docente del grupo.
 
 Durante el curso se llevarán a cabo varias sesiones de evaluación, que serán las siguientes:
 
@@ -99,15 +106,11 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 - **Escala del 1 al 10 sin decimales**: el redondeo o truncamiento de los decimales será a discreción del profesor que evalúa el módulo.
 
-- **Resultados de Aprendizaje (RA) en empresa**: dado que este módulo no es susceptible de dualización no habrá Resultados de Aprendizaje evaluados en empresa.
-
 - **Nota final del Ciclo**: se calculará como la **media aritmética** de los módulos, excluyendo las convalidaciones sin nota.
 
 - **Mención honorífica**: se otorga a quienes obtienen un **10 en un módulo**, con un máximo del **10% del grupo**.
 
 - **Matrícula de honor**: se concede a quienes obtienen una **nota final de Ciclo igual o superior a 9**, con un máximo de **2 en el alumnado de Ciclo Medio** y **3 en Ciclo Superior**.
-## Esquema General de Inglés Profesional (GS)
-
 
 - **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
 
