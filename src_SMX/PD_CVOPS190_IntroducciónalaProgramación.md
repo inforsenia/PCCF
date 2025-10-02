@@ -29,16 +29,15 @@ Los **Resultados de Aprendizaje** relativos al módulo de Introducción a la Pro
 
 ## Secuenciación de las Unidades de Programación. 
 
-A RELLENAR POR DOCENTE
+| Número | Título                    						| Inicio    | Fin       |
+|--------|---------------------------						|-----------|-----------|
+| 01	 | UP01: Introducción a la programación. Algorítmos. Pseudocódigo       | 15/09/2025| 22/09/2025|
+| 02	 | UP02: Programación Estructurada. Funciones Y Procedimientos		| 29/09/2025| 27/10/2025|
+| 03	 | UP03: POO: Clases y Objetos,  Métodos				| 03/11/2025| 17/11/2025|
+| 04	 | UP04: POO: Constructores y Destructores. Sobrecarga			| 24/11/2025| 15/12/2025|
+| 05	 | UP05: POO: Manejo de flujos de información. Excepciones. Ficheros	| 12/01/2026| 19/01/2026|
+| 06	 | UP06: POO: Estructuras de almacenamiento. Operaciones Agregadas.	| 26/01/2026| 02/02/2026|
 
-Se propone esta tabla
-
-| Número | Título                    | Inicio    | Fin       |
-|--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -122,9 +121,17 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 - **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
 
-La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
+La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General:
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+$$ Nota final = 0,05·RA1+0,2·RA2+0,2·RA3+0,2·RA4+0,15·RA5+0,2·RA6 $$
+
+En cada una de las Unidades de Programación se especificarán los Resultados de Aprendizaje (RA en adelante) asociados y cómo se  evaluarán.
+
+En general, la parte a evaluar con docencia en el centro se califica ponderando el resultado de una prueba objetiva con un 80% y el 20% restante según el resultado de la parte práctica. 
+
+En la convocatoria ordinaria, si el alumno mantiene el proceso de evaluación continua, se mantiene la ponderación del método de calificación aplicado durante el curso en el centro.
+
+En caso de no mantener el derecho a evaluación contínua y en las evaluaciones extraordinarias, la nota de la totalidad de los RA se calculará según el resultado de una prueba objetiva.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -167,8 +174,11 @@ Esta presentación se puede simultanear, en su caso, con la presentación del Pr
 
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
+La calificación de cada RA dualizado entre la empresa y el centro se calculará según la proporción de horas  realizadas en cada uno de ellos.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
+En ambos casos, las valoraciones se indican con valores de 1  a 10 y se ponderan en proporción al número de horas establecidas en empresa y en el centro. Es decir:
+• Si se dualiza un RA al 70% en el centro y al 30% en la empresa, se pondera la nota obtenida en cada uno de ellos con esos porcentajes
+• Si un RA se desarrolla sólo en la empresa, la calificación de ese RA será la media de la nota obtenida en la empresa y la que el alumno obtenga para ese RA según la nota del seguimiento de la Formación en Empresa y la nota en la exposición de su trabajo tras su estancia en la empresa.
 
 ### Recuperación: 
 
@@ -195,7 +205,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
-A RELLENAR POR DOCENTE
+No se ha planificado ninguna actividad extraescolar para este módulo.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 

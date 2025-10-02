@@ -157,7 +157,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General:
 
-Nota final = 0,3·RA1 + 0,3·RA2 + 0,3·RA3 + 0,05·RA4 + 0,05·RA5
+$$ Nota final = 0,3·RA1 + 0,3·RA2 + 0,3·RA3 + 0,05·RA4 + 0,05·RA5 $$
 
 En cada una de las Unidades de Programación se especificarán los Resultados de Aprendizaje (RA en adelante) asociados y cómo se  evaluarán.
 
