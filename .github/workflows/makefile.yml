@@ -47,3 +47,20 @@ jobs:
         name: PDFs-PCCFs
         path: PDFS/ 
 
+    - name: Copiar los PDFs a la carpeta releases con fecha
+      run: |
+        DATE=$(date +'%Y-%m-%d_%H-%M-%S')
+        mkdir -p releases/$DATE
+        cp PDFS/*.pdf releases/$DATE/
+
+    - name: Configurar Git
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+
+    - name: Hacer commit y push de los PDFs
+      run: |
+        git add releases/
+        git commit -m "Add generated PDFs [auto]"
+        git push
+
