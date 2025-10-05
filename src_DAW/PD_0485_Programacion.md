@@ -16,8 +16,6 @@ Tiene una correspondéncia de Créditos de 14.
 | Código| Descripción del estándar       |
 |-------|--------------------------------|
 | UC0227_3 | Desarrollar componentes software en lenguajes de programación orientados a objetos. |
-|<img width=200/>|<img width=500/>|
-
 
 
 ## Resultados de Aprendizaje
@@ -35,7 +33,6 @@ Los **Resultados de Aprendizaje** relativos al módulo de Programación son:
 | RA07 | Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación. |
 | RA08 | Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información. |
 | RA09 | Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos. |
-|<img width=200/>|<img width=500/>|
 
 
 
@@ -49,10 +46,6 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 | j | Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia. |
 | q | Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos. |
 | w | Evaluar situaciones de prevención de riesgos laborales y de protección ambiental, proponiendo y aplicando medidas de prevención personales y colectivas, de acuerdo a la normativa aplicable en los procesos del trabajo, para garantizar entornos seguros. |
-|<img width=100/>|<img width=500/>|
-
-
-
 
 
 
@@ -72,16 +65,18 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 ## Secuenciación de las Unidades de Programación. 
 
-A RELLENAR POR DOCENTE
-
-Se propone esta tabla
-
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
+| 01     | UP01: Introducción a la Programación y Java  | 08/09/2025| 29/09/2025|
+| 02     | UP02: Pensamiento computacional     | 30/09/2025| 07/10/2025|
+| 03     | UP03: Estructuras de programación   | 13/10/2025| 13/11/2025|
+| 04     | UP04: Programación modular   | 17/11/2025| 09/12/2025|
+| 05     | UP05: Estructuras de datos   | 11/12/2025| 22/12/2025|
+| 06     | UP06: Programación Orientada a Objetos     | 07/01/2026| 22/01/2026|
+| 07     | UP07: Uso avanzado de clases   | 26/01/2026| 19/02/2026|
+| 08     | UP08: Gestión de Ficheros     | 23/02/2026| 05/03/2026|
+| 09     | UP09: Acceso a datos   | 09/03/2026| 30/03/2026|
+| 10     | UP10: Interfaz Gráfica de Usuario   | 14/04/2026| 15/05/2026|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -117,8 +112,6 @@ Las adaptaciones específicas, tanto metodológicas como organizativas, se concr
 
 ## Evaluación del aprendizaje. 
 
-
-
 ### Principios y objeto de la evaluación 
 
 La evaluación es:
@@ -135,6 +128,7 @@ Cada RA puede tener un **peso ponderado** en la calificación final del módulo.
 
 El **peso de los CE o RA** puede modificarse durante el curso si existe una justificación pedagógica. En tal caso, se informará al alumnado a través de los medios establecidos en esta guía.
 
+******
 ### Tipos de evaluación 
 
 La evaluación de un módulo será realizada por el profesor titular del correspondiente módulo profesional y, en su caso, teniendo en cuenta el informe de la empresa tras la Formación en Empresa.
@@ -149,6 +143,7 @@ Durante el curso se llevarán a cabo varias sesiones de evaluación, que serán 
 
 En cada sesión de evaluación, el tutor elaborará un acta que refleje los acuerdos y decisiones adoptadas de forma colegiada con el equipo docente.
 
+******
 ### Calificaciones 
 
 El alumnado podrá obtener las siguientes calificaciones:
@@ -165,9 +160,13 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 - **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
 
-La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
+El cálculo de la calificación final se realizará en función de la ponderación de cada uno de los Resultado de Aprendizaje. El detalle de la ponderación se indica en el Esquema General.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+En cada **Unidad de Programación** se indicará qué Resultados de Aprendizaje son susceptibles de evaluarse.
+De forma general, el 100% de la calificación se obtendrá a partir de pruebas objetivas. Además, se realizarán actividades prácticas de entrega obligatoria que permitirán al alumnado la comprensión de los contenidos y que servirán de indicador para la preparación de las pruebas objetivas que siempre estarán basadas en esas actividades prácticas. La no entrega de las actividades podrá suponer una reducción de la calificación proporcional al número de actividades no entregadas.
+
+En la convocatoria ordinaria, si el alumno ha mantenido el proceso de evaluación continua, se tendrá en cuenta este sistema de calificación. En caso contrario, así como en la evaluación extraordinaria, el 100% de cada RA se calificará a través de una prueba objetiva.
+*******
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -182,6 +181,7 @@ Las Unidades de Programación/Situaciones de Aprendizaje deben:
 
 El equipo docente se compromente a facilitar en Aules un seguimiento del progreso de los RA por parte del alumnado.
 
+******
 ### Formación en empresa 
 
 En el caso de que el alumnado no supere los Resultados de Aprendizaje requeridos
@@ -195,50 +195,58 @@ justificada y acreditada, permanecerá en el centro educativo realizando activid
 extraescolares y/o de refuerzo que le permitan acercarse al ámbito socio-laboral. 
 
 La fase de Formación en Empresa podrá acogerse a las condiciones que cada empresa 
-tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora del mismo 
+tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora vigente. 
 
 Para realizar la Formación en Empresa es **requisito** que el alumno haya adquirido las 
 competencias de riesgos específicos y medidas de **Prevención de Riesgos Laborales**. 
 
 #### Superación de los RA's asociados a la FE
 
-Respecto a la evaluación, el tutor recabará el parecer de los instructores, que compartirá con los profesores del equipo docente. 
+Respecto a la evaluación, el tutor recabará el parecer del tutor/a de la Empresa, que compartirá con los equipos educativos. 
 
-Además, se reservarán unos días a final de curso, finalizado el período de Formación en Empresa, para que el alumnado muestre el trabajo realizado en la empresa al profesorado, y pueda responder a las cuestiones que se le planteen desde cada módulo. 
+Además, se reservarán unos días a final de curso, finalizado el período de Formación en Empresa, para que el alumnado exponga el trabajo realizado al profesorado, y pueda responder a las cuestiones que se le planteen desde cada módulo. 
 
-Esta presentación se puede simultanear, en su caso, con la presentación del Proyecto Intermodular, de tal modo que bien sea por una vía o por otra quede constancia de que cada estudiante ha adquirido todos los conocimientos requeridos en los diversos módulos. 
+Esta presentación se puede simultanear, en su caso, con la presentación del Proyecto Intermodular, de tal modo que bien sea por una vía o por otra quede constancia de que cada estudiante ha adquirido todas las capacidades requeridas en los diversos módulos. 
 
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
+La evaluación y calificación de cada Resultado de Aprendizaje (RA) se determinará proporcionalmente al número de horas realizadas en cada uno de los dos ámbitos (Centro educativo y Empresa).
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
+Para la calificación numérica del RA realizado en la empresa se tendrá en cuenta la información sobre su formación en la empresa, así como la exposición que realizaran al finalizar.
 
+******
 ### Recuperación: 
 
-Para el alumnado que **no haya superado algún módulo o RA** se establecerá un **programa de recuperación individual** que se diseñará de forma diferenciada según periodos: 
-recuperación 
+Para el alumnado que **no haya superado algún módulo o RA** se establecerá un **programa de recuperación individual** que se diseñará de forma diferenciada según periodos:  
 
 - No superados en la **evaluación ordinaria de primero o segundo**: se podrán recuperar en la **convocatoria extraordinaria** .
-- **Alumnos de segundo curso con módulos no superados de primero**: Se diseñará para que el alumnado lo pueda realizar simultáneamente con los módulos de segundo **sin garantizarse su asistencia a clase**. Dispondrá de **convocatoria ordinaria y extraordinaria**. 
+- **Alumnos de segundo curso con módulos no superados de primero**: se diseñará para que el alumnado lo pueda realizar simultáneamente con los módulos de segundo **sin garantizarse su asistencia a clase**. Dispondrá de **convocatoria ordinaria y extraordinaria**. 
 
 
-
+******
 ### Convocatoria Ordinaria
 
 1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs 
    durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo 
-   de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará
-   al calendario propuesto por el centro.
+2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará al calendario propuesto por el centro.
 
+******
 ### Convocatoria Extraordinaria
 
-La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
+La convocatoria extraordinaria del módulo se ajustará a lo decidido de manera conjunta y ha sido 
 descrito en el Proyecto Curricular de Ciclo Formativo.
+
 
 ## Actividades complementarias y extraescolares. 
 
-A RELLENAR POR DOCENTE
+Se planifican las siguientes actividades complementarias y extraescolares:
+-	*ProgramaMe* Navidad y Regional: Concurso de programación para el alumnado matriculado en Ciclos Formativos de Formación Profesional. Participan en equipos formados por tres estudiantes. Los problemas son aplicaciones de consola y el ganador es el equipo que resuelve correctamente más problemas con menos tiempo acumulado en sus envíos correctos.
+-	**ProgramaMe* Nacional: Si se clasifican en el Regional de Valencia, el equipo clasificado acudirá en el mes de junio a la Facultad de Informática de la Universidad Complutense de Madrid para participar en la gran final del concurso de programación.
+-	Participación en la Semana del Código
+-	Recomendar lecturas científicas o ficticias, al igual que películas o documentales, con el fin de motivar al alumno.
+-	Diferentes actividades que podrían surgir a lo largo de curso: visitas a centros de programación, empresas del sector, ponencias y congresos de Programación, etc.
+-  Asistencia a las jornadas *Inf0rSenia 2026*.
+
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
@@ -246,6 +254,4 @@ La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en es
 
 ## Esquema General de Programación
 
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
-
-NO RELLENAR.
+ 
