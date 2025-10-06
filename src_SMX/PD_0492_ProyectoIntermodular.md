@@ -10,29 +10,29 @@ Es un módulo de 67 horas.
 
 A tenor de las indicaciones recibidas y la nueva legislación de Formación Profesional, de deduce que el módulo "Proyecto Intermodular" debe componerse por "retos", relacionados con los resultados de aprendizaje (RA) de módulos de primer y de segundo curso, cohesionados entre sí y con un sentido que exceda el de cada módulo o RA por separado.
 
-Con estas premisas, el módulo se programa mediante un proyecto marco: "Creación de empresa", estructurado en "áreas de conocimiento", atendidas por uno o varios profesores/as.
+Con estas premisas, el módulo se programa mediante un proyecto marco: "Creación de empresa", estructurado en "Áreas de Conocimiento", atendidas por uno o varios profesores/as que se asimilarán a Unidades de Programación de ahora en adelante.
 
-Cada área de conocimiento se estructura a su vez en una secuencia de "retos". La ejecución de todos los retos de un área de conocimiento la completa, del mismo modo que al completar todas las áreas del proyecto, este se da por terminado.
+Cada Área de Conocimiento se estructura a su vez en una secuencia de Retos que se asimilarán a Situaciones e Aprendizaje de ahora en adelante. La ejecución de todos los Retos de un Área de Conocimiento la completa, del mismo modo que al completar todas las Áreas del proyecto, este se da por completado.
 
-El desarrollo de las distintas áreas de conocimiento no está ordenado, pudiendose trabajar en varios retos pertenecientes a distintas áreas en paralelo. 
+El desarrollo de las distintas Áreas de Conocimiento no está ordenado en el tiempo, pudiendose trabajar en varios Retos pertenecientes a distintas Áreas en paralelo. 
 
-Dado lo novedoso y dinámico del módulo, la especificación de áreas y retos se concretará en la Programación de Aula que se irá ensayando durante el curso, sirviendo como base para la Programación Didáctica del presente módulo en cursos posteriores.
+Dado lo novedoso y dinámico del módulo, la especificación de Áreas y Retos se concretará en la Programación de Aula, que se irá ensayando durante el curso, sirviendo como base para la Programación Didáctica del presente módulo en cursos posteriores.
 
-En cualquier caso, tanto áreas como retos se especificarán señalando al menos los sigueintes datos:
+En cualquier caso, tanto Áreas como Retos se especificarán señalando al menos los sigueintes datos:
 
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
-|Denominación|Nombre de la actividad o área|
+|Denominación|Nombre del Reto o Área|
 |Enunciado|Qué se pide realizar|
 |Recursos|Todo aquello material o inmaterial necesario para la realización|
 |Relación de contenidos|RAs/Módulos profesionales implicados|
 |Realizadores|Individual o grupo|
-|Cronología|Cuando y cuanto tiempo|
+|Cronología|Cuándo y cuánto tiempo|
 |Evaluación|Criterios de RA implicados, herramientas, rúbricas, etc|
 |Calificación|Ponderación y condicionado|
-|Docente/s responsable/s|Profesorado implicado en cada área|
+|Docente/s responsable/s|Profesorado implicado en cada Área o Reto|
 
-Los retos se programarán de modo que el alumnado tenga ya adquiridos los conocimientos necesarios para enfrentarse estos.
+Los Retos se programarán de modo que el alumnado tenga ya adquiridos los conocimientos necesarios para enfrentarse estos.
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -50,7 +50,7 @@ Se contempla el uso de recursos variados, tanto materiales como digitales, que f
 
 Se considera de especial relevancia la matriculación como profesor de todo el equipo docente del curso en el módulo en Aules FP.
 
-La concreción de los recursos específicos que se emplearán en cada área o reto se detallará durante el desarrollo de estos, como ya se ha comentado.
+La concreción de los recursos específicos que se emplearán en cada Área o Reto se detallará durante el desarrollo de estos, como ya se ha comentado.
 
 ## Uso de espacios y equipamientos. 
 
@@ -80,7 +80,7 @@ La evaluación es:
 - **Adaptada**: contempla medidas para el alumnado con necesidades específicas.
 - **Basada en la adquisición de competencias**: se evalúa mediante los **Resultados de Aprendizaje (RA)** y sus correspondientes **Criterios de Evaluación (CE)** definidos en el título.
 
-El objetivo de la evaluación es la superación del módulo por parte del alumnado. Para ello, es imprescindible que **todos los RA implicados estén aprobados**.
+El objetivo de la evaluación es la superación del módulo por parte del alumnado. Para ello, es imprescindible que **todos los RA declarados en las distintas Áreas estén aprobados**.
 
 Cada RA puede tener un **peso ponderado** en la calificación final del módulo. Para su evaluación, se tendrán en cuenta los CE asociados, también ponderados, que deben convertirse en **indicadores de logro claros, precisos y observables**.
 
@@ -116,19 +116,21 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-La calificación del presente módulo se calculará en base a todos los Resultados de Aprendizaje trabajados, de manera proporcional. 
+La calificación del presente módulo se calculará en base a todos los Resultados de Aprendizaje trabajados, de manera proporcional al número de horas del resto de módulos. 
 
-Cada actividad/reto realizado se valorará con una calificación entre 0 y 10.
+Cada Reto realizado se valorará con una calificación entre 0 y 10.
 
-Posteriormente se elaborará una lista en la que aparecerán todos los Resultados de Aprendizaje que han sido abordados a lo largo del curso mediante las diferentes tareas/retos. Dependiendo del número de tareas/retos en las que aparezca cada Resultado de Aprendizaje, este tendrá un peso u otro (porcentaje) en la nota final del módulo.
+Posteriormente se elaborará una lista en la que aparecerán todos los Resultados de Aprendizaje que han sido abordados a lo largo del curso mediante los diferentes Retos. Dependiendo del número de Retos en las que aparezca cada Resultado de Aprendizaje, este tendrá un peso u otro (porcentaje) en la nota final del módulo.
 
-La nota de cada Resultado de Aprendizaje será la media aritmética de la nota de todas las actividades/retos en las que se trabaje dicho Resultado de Aprendizaje.
+La nota de cada Resultado de Aprendizaje será la media aritmética de la nota de todas los Retos en las que se trabaje dicho Resultado de Aprendizaje.
 
 La nota final del módulo se calculará en base a la nota de cada Resultado de Aprendizaje ponderada por el peso de dicho RA en el módulo.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
-Cada módulo se divide en **Unidades de Programación (UP) o Situaciones de Aprendizaje (SA)** que agrupan Resultados de Aprendizaje y sus criterios de evaluación. A cada RA se le asigna un **peso evaluativo** y una **carga horaria** proporcional. 
+Como ya se ha comentado, dada la peculiaridad intyegradora del módulo, las Unidades de Programación de asimilarán a Áreas de Conocimiento, así como las Situaciones de Aprendizaje lo harán a los Retos.
+
+Con lo anterior en cuenta, y por término general: cada módulo se divide en **Unidades de Programación (UP) o Situaciones de Aprendizaje (SA)** que agrupan Resultados de Aprendizaje y sus criterios de evaluación. A cada RA se le asigna un **peso evaluativo** y una **carga horaria** proporcional. 
 
 Las Unidades de Programación/Situaciones de Aprendizaje deben: 
 
