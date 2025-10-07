@@ -33,6 +33,7 @@ Dotación de medios: Se detectarán posibles necesidades del alumnado (falta de 
 
 Toda la información relevante será comunicada al alumnado y las familias (si procede) a través de los canales oficiales del centro.
 
+
 8. Evaluación del Protocolo
 
 Finalizado el periodo de emergencia, el departamento realizará una evaluación interna del desarrollo del plan de actuación para identificar mejoras y ajustar el protocolo en futuras situaciones similares.
