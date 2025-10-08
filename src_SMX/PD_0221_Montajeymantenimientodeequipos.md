@@ -264,7 +264,3 @@ Se propondrá al alumnado la asistencia a las jornadas *Inf0rSenia 2026*.
 La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
 
 ## Esquema General de Montaje y mantenimiento de equipos
-
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
-
-NO RELLENAR.
