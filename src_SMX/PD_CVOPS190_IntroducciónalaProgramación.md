@@ -213,6 +213,3 @@ La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en es
 
 ## Esquema General de Introducción a la Programación
 
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
-
-NO RELLENAR.
