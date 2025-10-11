@@ -5,7 +5,7 @@
 ## Datos identificativos y contextualización del módulo. 
 
 Es un módulo de 34 horas que se imparte en el Ciclo de Grado Superior de 
-Técnico en Desarrollo de Aplicaciones Web.
+Técnico en Desarrollo de Aplicaciones Multiplataforma.
 
 Tiene una correspondéncia de Créditos de 3.
 
@@ -33,9 +33,9 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 
 | Obj| Objetivo General del Ciclo |
 |----|----------------------------|
-| e | Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos. |
-| j | Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia. |
-| q | Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos. |
+| e | Seleccionar y emplear lenguajes, herramientas y librerías, interpretando las especificaciones para desarrollar aplicaciones multiplataforma con acceso a bases de datos. |
+| j | Seleccionar y emplear técnicas, lenguajes y entornos de desarrollo, evaluando sus posibilidades, para desarrollar aplicaciones en teléfonos móviles, tabletas y otros dispositivos inteligentes. |
+| q | Seleccionar y emplear lenguajes y herramientas, atendiendo a los requerimientos, para desarrollar componentes personalizados en sistemas ERP-CRM. |
 |<img width=100/>|<img width=500/>|
 
 
@@ -50,29 +50,27 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | Obj| Competencia del Título |
 |----|----------------------------|
 | a | Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos. |
-| e | Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones. |
-| f | Integrar contenidos en la lógica de una aplicación web, desarrollando componentes de acceso a datos adecuados a las especificaciones. |
-| i | Integrar componentes multimedia en la interface de una aplicación web, realizando el análisis de interactividad, accesibilidad y usabilidad de la aplicación. |
-| j | Desarrollar e integrar componentes software en el entorno del servidor web, empleando herramientas y lenguajes específicos, para cumplir las especificaciones de la aplicación. |
-| v |  Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y tener iniciativa en su actividad profesional con sentido de la responsabilidad social. |
-| y |  |
-| z |  |
+| e | Desarrollar aplicaciones multiplataforma con acceso a bases de datos utilizando lenguajes, librerías y herramientas adecuados a las especificaciones. |
+| f | Desarrollar aplicaciones implementando un sistema completo de formularios e informes que permitan gestionar de forma integral la información almacenada. |
+| i | Participar en el desarrollo de juegos y aplicaciones en el ámbito del entretenimiento y la educación empleando técnicas, motores y entornos de desarrollo específicos. |
+| j | Desarrollar aplicaciones para teléfonos móviles, tabletas y otros dispositivos inteligentes empleando técnicas y entornos de desarrollo específicos. |
+| v | Gestionar su carrera profesional, analizando las oportunidades de empleo, autoempleo y de aprendizaje. |
+| y | Participar de forma activa en la vida económica, social y cultural, con una actitud crítica y responsable. |
 |<img width=100/>|<img width=500/>|
 
 
 
 ## Secuenciación de las Unidades de Programación. 
 
-A RELLENAR POR DOCENTE
 
-Se propone esta tabla
-
-| Número | Título                    | Inicio    | Fin       |
-|--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
+ Número | Título                                        | Inicio    | Fin       |
+|--------|-----------------------------------------------|-----------|-----------|
+| 01     | UP01: El reto de la Digitalización            | 08/09/2025| 30/09/2025|
+| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 01/10/2025| 31/10/2025|
+| 03     | UP03: La Computación en la Nube               | 01/11/2025| 30/11/2025|
+| 04     | UP04: La Inteligencia Artificial              | 01/12/2025| 19/12/2025|
+| 05     | UP05: Los Datos y su Protección               | 20/12/2025| 25/01/2025|
+| 06     | UP06: La Transformación Digital               | 26/01/2025| 16/02/2025|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -158,7 +156,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -201,8 +199,13 @@ Esta presentación se puede simultanear, en su caso, con la presentación del Pr
 
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
+La calificación de cada Resultado de Aprendizaje (RA) cuya evaluación se lleve a cabo de forma compartida entre la empresa y el instituto se determinará en función de la proporción de horas realizadas en cada uno de los ámbitos. En ambos casos, la valoración se expresará en una escala de 1 a 10, ponderándose posteriormente según el número de horas desarrolladas en la empresa y en el instituto, respectivamente.<br>
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
+- Si un RA se desarrolla en un 20 % en la empresa y en un 80 % en el instituto, la calificación final se obtendrá ponderando las notas asignadas en cada ámbito en esas proporciones.  _(Ejemplo: Nota empresa = 8, Nota instituto = 7 → Calificación final = (8 × 0,20) + (7 × 0,80) = 7,2)._
+
+- Si un RA se desarrolla íntegramente en la empresa (100 %), la calificación final coincidirá con la nota otorgada en la empresa.  _(Ejemplo: Nota empresa = 9 → Calificación final = 9)._  La nota del RA realizado en la empresa se obtendrá en función de la información del trabajo en la empresa y de la exposición que realizaran al acabar
+
+La nota del RA en su parte dualizada se obtendrá en función del seguimiento de la FE, así como de la presentación final del alumno.
 
 ### Recuperación: 
 
@@ -227,16 +230,10 @@ recuperación
 La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
 descrito en el Proyecto Curricular de Ciclo Formativo.
 
-## Actividades complementarias y extraescolares. 
 
-A RELLENAR POR DOCENTE
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
 La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
 
 ## Esquema General de Digitalización aplicada a los sectores productivos (GS)
-
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
-
-NO RELLENAR.
