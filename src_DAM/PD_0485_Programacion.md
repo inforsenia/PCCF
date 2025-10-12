@@ -42,11 +42,10 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 
 | Obj| Objetivo General del Ciclo |
 |----|----------------------------|
-| e | Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos. |
+| f | Seleccionar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos. |
+| g | Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos. |
 | j | Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia. |
 | q | Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos. |
-| w | Evaluar situaciones de prevención de riesgos laborales y de protección ambiental, proponiendo y aplicando medidas de prevención personales y colectivas, de acuerdo a la normativa aplicable en los procesos del trabajo, para garantizar entornos seguros. |
-
 
 
 ## Competencias del Título 
@@ -56,11 +55,8 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | Obj| Competencia del Título |
 |----|----------------------------|
 | e | Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones. |
+| f | Integrar contenidos en la lógica de una aplicación web, desarrollando componentes de acceso a datos adecuados a las especificaciones. |
 | j | Desarrollar e integrar componentes software en el entorno del servidor web, empleando herramientas y lenguajes específicos, para cumplir las especificaciones de la aplicación. |
-| t |  Generar entornos seguros en el desarrollo de su trabajo y el de su equipo, supervisando y aplicando los procedimientos de prevención de riesgos laborales y ambientales de acuerdo con lo establecido por la normativa y los objetivos de la empresa. |
-| w |  Ejercer sus derechos y cumplir con las obligaciones derivadas de su actividad profesional, de acuerdo con lo establecido en la legislación vigente, participando activamente en la vida económica, social y cultural. |
-|<img width=100/>|<img width=500/>|
-
 
 
 ## Secuenciación de las Unidades de Programación. 
@@ -166,8 +162,8 @@ En cada **Unidad de Programación** se indicará qué Resultados de Aprendizaje 
 De forma general, el 100% de la calificación se obtendrá a partir de pruebas objetivas. Además, se realizarán actividades prácticas de entrega obligatoria que permitirán al alumnado la comprensión de los contenidos y que servirán de indicador para la preparación de las pruebas objetivas que siempre estarán basadas en esas actividades prácticas. La no entrega de las actividades podrá suponer una reducción de la calificación proporcional al número de actividades no entregadas.
 
 En la convocatoria ordinaria, si el alumno ha mantenido el proceso de evaluación continua, se tendrá en cuenta este sistema de calificación. En caso contrario, así como en la evaluación extraordinaria, el 100% de cada RA se calificará a través de una prueba objetiva.
-*******
 
+*******
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
 Cada módulo se divide en **Unidades de Programación (UP) o Situaciones de Aprendizaje (SA)** que agrupan Resultados de Aprendizaje y sus criterios de evaluación. A cada RA se le asigna un **peso evaluativo** y una **carga horaria** proporcional. 
@@ -241,7 +237,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 Se planifican las siguientes actividades complementarias y extraescolares:
 -	*ProgramaMe* Navidad y Regional: Concurso de programación para el alumnado matriculado en Ciclos Formativos de Formación Profesional. Participan en equipos formados por tres estudiantes. Los problemas son aplicaciones de consola y el ganador es el equipo que resuelve correctamente más problemas con menos tiempo acumulado en sus envíos correctos.
--	**ProgramaMe* Nacional: Si se clasifican en el Regional de Valencia, el equipo clasificado acudirá en el mes de junio a la Facultad de Informática de la Universidad Complutense de Madrid para participar en la gran final del concurso de programación.
+-	*ProgramaMe* Nacional: Si se clasifican en el Regional de Valencia, el equipo clasificado acudirá en el mes de junio a la Facultad de Informática de la Universidad Complutense de Madrid para participar en la gran final del concurso de programación.
 -	Participación en la Semana del Código
 -	Recomendar lecturas científicas o ficticias, al igual que películas o documentales, con el fin de motivar al alumno.
 -	Diferentes actividades que podrían surgir a lo largo de curso: visitas a centros de programación, empresas del sector, ponencias y congresos de Programación, etc.
