@@ -24,23 +24,15 @@ jobs:
 
     - name: SMX - Proyecto
       run: make proyecto-smx
-    - name: SMX - Programaciones
-      run: make programaciones-smx
       
     - name: DAW - Proyecto
       run: make proyecto-daw	
-    - name: DAW - Programaciones
-      run: make programaciones-daw
 
     - name: DAM - Proyecto
       run: make proyecto-dam	
-    - name: DAM - Programaciones
-      run: make programaciones-dam 
     
     - name: ASIR - Proyecto
       run: make proyecto-asir
-    - name: ASIR - Programaciones
-      run: make programaciones-asir
       
     - uses: actions/upload-artifact@v4
       with:
@@ -51,7 +43,7 @@ jobs:
       run: |
         DATE=$(date +'%Y-%m-%d_%H-%M-%S')
         mkdir -p releases/$DATE
-        cp PDFS/*.pdf releases/$DATE/
+        cp -r PDFS/ releases/$DATE/
 
     - name: Configurar Git
       run: |
