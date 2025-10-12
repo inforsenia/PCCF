@@ -75,7 +75,7 @@ proyecto-smx: files proyecto-base
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_SMX.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para SMX ${RESET}"
 
-	# Me dejo aqui el --verbose por si quiero apuntar algo mas fino en los errores.
+
 	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_SENIA_SMX.pdf ${RESET}"
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_SMX.pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Programaciones Generadas para SMX ${RESET}"
@@ -96,7 +96,7 @@ proyecto-asir: files proyecto-base
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_ASIR.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para ASIR ${RESET}"
 
-	# Me dejo aqui el --verbose por si quiero apuntar algo mas fino en los errores.
+	@# Me dejo aqui el --verbose por si quiero apuntar algo mas fino en los errores.
 	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_SENIA_ASIR.pdf ${RESET}"
 	@cd temp/ && pandoc  --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_ASIR.pdf ./PD_*.md
 
@@ -140,7 +140,7 @@ proyecto-dam: files proyecto-base
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_DAM.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para DAM ${RESET}"
 
-	# Me dejo aqui el --verbose por si quiero apuntar algo mas fino en los errores.
+	@# Me dejo aqui el --verbose por si quiero apuntar algo mas fino en los errores.
 	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_SENIA_DAM.pdf ${RESET}"
 	@cd temp/ && pandoc  --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_DAM.pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Programaciones Generadas para DAM ${RESET}"

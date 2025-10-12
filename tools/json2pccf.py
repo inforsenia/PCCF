@@ -9,6 +9,9 @@ from box import Box
 # Importamos Jinja2
 import jinja2
 
+import warnings
+warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
+
 # Cargar el JSON desde un archivo
 
 if sys.argv[1] == "DAW":
@@ -75,12 +78,10 @@ for codigo in data_box.ModulosProfesionales:
     
 
     if os.path.exists(fmod):
-        print(" Fichero ya presente: , nada que hacer: "+str(fmod))
-        print(" Se utilizara el ya subido de "+modulo.nombre.replace(" ",""))
-        print("")
+        print(" PD provisionado : "+modulo.nombre.replace(" ",""))
 
     else:
-        print(" Generando Programacion Didactica para "+modulo.nombre.replace(" ",""))
+        print(" PD generado : Programacion Didactica para "+modulo.nombre.replace(" ",""))
         templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
         templateEnv = jinja2.Environment(loader=templateLoader)
         TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_"+sys.argv[1]+".md"
@@ -91,7 +92,7 @@ for codigo in data_box.ModulosProfesionales:
         fmodulo.write(outputText)
         fmodulo.close()
 
-    print(" - Includes from PCCF para "+modulo.nombre.replace(" ",""))
+    #print(" - Includes from PCCF para "+modulo.nombre.replace(" ",""))
 
     with open(fmod, "rt") as fin:
          with open("./temp/out.txt", "wt") as fout:
@@ -125,7 +126,7 @@ for codigo in data_box.ModulosProfesionales:
     shutil.move("./temp/out.txt", fmod)
 
     # Creamos la PD Individual
-    print(" Generando Programacion Didactica Standalone para "+modulo.nombre.replace(" ",""))
+    print("  - Generando PD Standalone para "+modulo.nombre.replace(" ",""))
     templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
     templateEnv = jinja2.Environment(loader=templateLoader)
     TEMPLATE_TITULO = "PCCF_PD_Plantilla_Portada_Modulo.md"
@@ -136,7 +137,7 @@ for codigo in data_box.ModulosProfesionales:
     ftitulo.close()
     
     # Creamos el PDF desde el excel
-    print(" * [ PCCF ] : Si existe el libro rellenado en la ruta, usarlo ")
+    #print(" * [ PCCF ] : Si existe el libro rellenado en la ruta, usarlo ")
     ruta_al_libro="excels/"+s_ciclo+"_libro.xlsx"
     
     if os.path.exists(ruta_al_libro):
@@ -145,7 +146,7 @@ for codigo in data_box.ModulosProfesionales:
         print(" * [ PCCF ] - Excel por defecto ")
         ruta_al_libro="PDFS/"+s_ciclo+"_libro_autogenerado.xlsx"
         
-    print(" Obtenemos el PDF desde el Excel ")
+    #print(" Obtenemos el PDF desde el Excel ")
     subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
     shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
     

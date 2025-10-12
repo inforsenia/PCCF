@@ -7,11 +7,17 @@ import shutil
 from openpyxl import load_workbook
 import subprocess
 import os
+import warnings
+warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
 
 def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
     # Cargar el libro y la hoja
     wb = load_workbook(ruta_excel)
-    ws = wb[hoja]
+    try:
+        ws = wb[hoja]
+    except KeyError as ke:
+        print(" * Hoja no encontrada : "+str(ke))
+        return
 
     # Crear un nuevo libro y copiar solo el rango deseado
     nuevo_wb = wb.copy_worksheet(ws)

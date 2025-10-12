@@ -16,13 +16,15 @@ rm -f PDFS/PDs_$1/*
 cd ./temp_$1/
 
 for d in $(ls -1); do 
-    echo " * [ ProgsDidacticas ] Modulo - Codigo : $d"
+    echo -n " * [ ProgsDidacticas ] Modulo - Codigo : $d -> "
     cd $d
     pandoc --template ${TEMPLATE_TEX_PD} ${PANDOC_OPTIONS} -o ../../PDFS/PDs_$1/PD_$1_$d.pdf ./PD_*.md
     if [ -f "./PD_9999_CuadroResumen.pdf" ]; then
-        echo " *** [ PDF ] - Si tenemos cuadro resumen -- Se concatena "
+        echo " Existe Cuadro Resumen, aplicando pdfunite"
         pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf
         mv /tmp/PD_$1_$d.pdf ../../PDFS/PDs_$1/PD_$1_$d.pdf
+    else
+        echo " No tiene Cuadro Resumen"
     fi
     cd ..
 done

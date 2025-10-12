@@ -4,6 +4,7 @@ import sys
 import json
 import os
 import shutil
+
 from box import Box
 import pandas as pd
 import numpy as np
@@ -13,6 +14,11 @@ from openpyxl.styles import Font, Fill
 from openpyxl.styles.colors import Color
 from openpyxl.styles import PatternFill
 from openpyxl.styles import NamedStyle
+
+debug = False
+
+import warnings
+warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
 
 # Estilos para celdas
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
@@ -226,13 +232,13 @@ for codigo in data_box.ModulosProfesionales:
     try:
         ws.cell(column=p_complist_col,row=p_complist_row+1).value=str(modulo.ObjetivosGenerales)
     except Exception as e:
-        print(" No tiene Objetivos Generales")
+        print("  - INFO : No tiene Objetivos Generales")
 
     ws.cell(column=p_complist_col,row=p_complist_row+2).value="EMPLEA"
     try:
         ws.cell(column=p_complist_col,row=p_complist_row+3).value=str(modulo.CompetenciasTitulo)
     except Exception as e:
-        print(" No tiene Objetivos CompetenciasTitulo")
+        print("  - INFO : No tiene Objetivos CompetenciasTitulo")
 
 
     # Ahora ya seguimos para abajo
@@ -314,7 +320,7 @@ for codigo in data_box.ModulosProfesionales:
         p_ra_titulo_row=p_ra_titulo_row+numCriterios+2
 
 
-print(" * Quitamos la primera hoja ")
+if (debug): print(" * Quitamos la primera hoja ")
 del wb['Sheet']
 print(" * Guardamos el libro en : "+str(libro))
 wb.save(libro)
