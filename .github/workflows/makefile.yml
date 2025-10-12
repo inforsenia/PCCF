@@ -43,7 +43,7 @@ jobs:
       run: |
         DATE=$(date +'%Y-%m-%d_%H-%M-%S')
         mkdir -p releases/$DATE
-        cp -r PDFS/ releases/$DATE/
+        cp -r PDFS/* releases/$DATE/
 
     - name: Configurar Git
       run: |
