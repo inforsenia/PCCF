@@ -76,12 +76,12 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                                     | Inicio    | Fin       |
 |--------|--------------------------------------------|-----------|-----------|
-| 01     | UP01: Planificación de interfaces gráficas | 08/09/2025| 30/09/2025|
+| 01     | UP01: Planificación de interfaces gráficas | 08/09/2025| 30/09/2025|
 | 02     | UP02: Uso de estilos                       | 01/10/2025| 15/11/2025|
-| 03     | UP03: Implantación de contenido multimedia | 16/11/2025| 30/11/2025|
-| 04     | UP04: Integración de contenido interactivo | 01/12/2025| 12/12/2025|
-| 05     | UP05: Diseño de webs accesibles            | 13/10/2025| 23/01/2025|
-| 06     | UP06: Usabilidad en la web/Diseño amigable | 24/01/2025| 16/02/2025|
+| 03     | UP03: Implantación de contenido multimedia | 16/11/2025| 30/11/2025|
+| 04     | UP04: Integración de contenido interactivo | 01/12/2025| 12/12/2025|
+| 05     | UP05: Diseño de webs accesibles            | 13/10/2025| 23/01/2025|
+| 06     | UP06: Usabilidad en la web/Diseño amigable | 24/01/2025| 16/02/2025|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
