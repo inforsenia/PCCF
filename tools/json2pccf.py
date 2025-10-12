@@ -4,6 +4,7 @@ import sys
 import json
 import os
 import shutil
+import subprocess
 from box import Box
 # Importamos Jinja2
 import jinja2
@@ -133,5 +134,19 @@ for codigo in data_box.ModulosProfesionales:
     ftitulo = open(pdtit,"w")
     ftitulo.write(outputText)
     ftitulo.close()
+    
+    # Creamos el PDF desde el excel
+    print(" * [ PCCF ] : Si existe el libro rellenado en la ruta, usarlo ")
+    ruta_al_libro="excels/"+s_ciclo+"_libro.xlsx"
+    
+    if os.path.exists(ruta_al_libro):
+        print(" * [ PCCF ] - Excel provisto ")
+    else:
+        print(" * [ PCCF ] - Excel por defecto ")
+        ruta_al_libro="PDFS/"+s_ciclo+"_libro_autogenerado.xlsx"
+        
+    print(" Obtenemos el PDF desde el Excel ")
+    subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
+    shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
     
 sys.exit(0)
