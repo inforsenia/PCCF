@@ -50,7 +50,7 @@ data_box = Box(data)
 # Abrimos el excel
 #writer = pd.ExcelWriter("datos.xlsx", engine="openpyxl")
 
-libro="PDFS/"+str(sys.argv[1])+"_libro.xlsx"
+libro="PDFS/"+str(sys.argv[1])+"_libro_autogenerado.xlsx"
 wb = openpyxl.Workbook()
 
 # Algunas posiciones fijas
@@ -73,7 +73,7 @@ p_TOTAL_HORAS_DUAL="I5"
 for codigo in data_box.ModulosProfesionales:
 
     modulo=data_box.ModulosProfesionales[codigo]
-    print(modulo.nombre)
+    print(" [ Json2Excel ] : "+modulo.nombre)
 
     p_ra_titulo_col=2
     p_ra_titulo_row=8
@@ -136,7 +136,7 @@ for codigo in data_box.ModulosProfesionales:
 
 
 
-    print(" - Resultados de Aprendizaje ")
+    #print(" - Resultados de Aprendizaje ")
     ws.merge_cells(start_row=p_ra_titulo_row, start_column=p_ra_titulo_col, end_row=p_ra_titulo_row+1, end_column=p_ra_titulo_col)
     ws.cell(column=p_ra_titulo_col,row=p_ra_titulo_row).value="RESULTADO DE APRENDIZAJE"
     ws.cell(column=p_ra_titulo_col,row=p_ra_titulo_row).alignment = Alignment(horizontal='center', vertical='center')
@@ -144,7 +144,7 @@ for codigo in data_box.ModulosProfesionales:
 
     ws.column_dimensions[p_ra_col_l].width = 40
 
-    print(" - %RA ")
+    #print(" - %RA ")
     p_percent_ra_col=p_ra_titulo_col+1
     p_percent_ra_row=p_ra_titulo_row
     ws.merge_cells(start_row=p_percent_ra_row, start_column=p_percent_ra_col, end_row=p_percent_ra_row+1, end_column=p_percent_ra_col)
@@ -152,7 +152,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_percent_ra_col,row=p_percent_ra_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_percent_ra_col,row=p_percent_ra_row).fill = PatternFill('gray125')
 
-    print(" - COMP ")
+    #print(" - COMP ")
     p_comp_col=p_percent_ra_col+1
     p_comp_row=p_percent_ra_row
     ws.merge_cells(start_row=p_comp_row, start_column=p_comp_col, end_row=p_comp_row+1, end_column=p_comp_col)
@@ -160,7 +160,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_comp_col,row=p_comp_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_comp_col,row=p_comp_row).fill = PatternFill('gray125')
 
-    print(" - CRITERIOS DE EVALUACIÓN ")
+    #print(" - CRITERIOS DE EVALUACIÓN ")
     p_ce_col=p_comp_col+1
     p_ce_row=p_comp_row
     ws.merge_cells(start_row=p_ce_row, start_column=p_ce_col, end_row=p_comp_row+1, end_column=p_ce_col)
@@ -172,7 +172,7 @@ for codigo in data_box.ModulosProfesionales:
 
 
 
-    print(" - HORAS ")
+    #print(" - HORAS ")
     p_h_col=p_ce_col+1
     p_h_row=p_ce_row
     ws.merge_cells(start_row=p_h_row, start_column=p_h_col, end_row=p_h_row+1, end_column=p_h_col)
@@ -181,7 +181,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_h_col,row=p_h_row).fill = PatternFill('gray125')
 
 
-    print(" - %CE ")
+    #print(" - %CE ")
     p_ce_per_col=p_h_col+1
     p_ce_per_row=p_h_row
     ws.merge_cells(start_row=p_ce_per_row, start_column=p_ce_per_col, end_row=p_ce_per_row+1, end_column=p_ce_per_col)
@@ -189,7 +189,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_ce_per_col,row=p_ce_per_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_ce_per_col,row=p_ce_per_row).fill = PatternFill('gray125')
 
-    print(" - REQUISITO FE")
+    #print(" - REQUISITO FE")
     p_req_fe_col=p_ce_per_col+1
     p_req_fe_row=p_h_row
     ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col, end_row=p_req_fe_row+1, end_column=p_req_fe_col)
@@ -198,7 +198,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_req_fe_col,row=p_req_fe_row).fill = PatternFill('gray125')
     ws.column_dimensions[p_req_fe_col_l].width =15
 
-    print(" - HORAS DUAL ")
+    #print(" - HORAS DUAL ")
     p_horas_dual_col=p_req_fe_col+1
     p_horas_dual_row=p_req_fe_row
     ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col, end_row=p_horas_dual_row+1, end_column=p_horas_dual_col)
@@ -207,7 +207,7 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_horas_dual_col,row=p_horas_dual_row).fill = PatternFill('gray125')
 
 
-    print(" - CONTENIDOS ")
+    #print(" - CONTENIDOS ")
     p_contenidos_col=p_horas_dual_col+1
     p_contenidos_row=p_horas_dual_row
     ws.merge_cells(start_row=p_contenidos_row, start_column=p_contenidos_col, end_row=p_contenidos_row+1, end_column=p_contenidos_col)
@@ -219,14 +219,10 @@ for codigo in data_box.ModulosProfesionales:
 
     # Peticion de las Competencias
 
-    print(" - COMPETENCIAS - LISTA ")
+    #print(" - COMPETENCIAS - LISTA ")
     p_complist_col=p_contenidos_col
     p_complist_row=p_contenidos_row-6
     ws.cell(column=p_complist_col,row=p_complist_row).value="CPROF"
-    try:
-        print(str(modulo.ObjetivosGenerales))
-    except Exception as e:
-        print(str(e))
     try:
         ws.cell(column=p_complist_col,row=p_complist_row+1).value=str(modulo.ObjetivosGenerales)
     except Exception as e:
@@ -286,9 +282,9 @@ for codigo in data_box.ModulosProfesionales:
             else:
                 numCProf = numCriterios // 2
             numCEmplea = numCriterios - numCProf
-            print(" -- NCRITERIOS "+str(numCriterios))
-            print(" -- Tenemos CPROF : "+str(numCProf))
-            print(" -- Tenemos EMPLEA : "+str(numCEmplea))
+            #print(" -- NCRITERIOS "+str(numCriterios))
+            #print(" -- Tenemos CPROF : "+str(numCProf))
+            #print(" -- Tenemos EMPLEA : "+str(numCEmplea))
 
             ws.cell(column=p_comp_col,row=p_ce_row).value="CPROF"
             ws.cell(column=p_comp_col,row=p_ce_row).fill = PatternFill('gray125')
