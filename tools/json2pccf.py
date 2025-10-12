@@ -15,6 +15,7 @@ if sys.argv[1] == "DAW":
     with open('./boe/rd-daw.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
+
 elif sys.argv[1] == "DAM":
 
     with open('./boe/rd-dam.json', 'r', encoding='utf-8') as f:
@@ -34,8 +35,17 @@ else:
     print(" * No se ha indicado Ciclo ")
     sys.exit(0)
 
+# Nos guardamos el ciclo 
+s_ciclo=sys.argv[1]
+dir_ciclo="./temp_"+s_ciclo+"/"
+
+# Creamos el directorio para luego poder generar las PD de manera individual
+os.makedirs(dir_ciclo,exist_ok=True)
+
 # Convertir el diccionario a un objeto Box
 data_box = Box(data)
+
+
 
 for codigo in data_box.ModulosProfesionales:
 
@@ -45,10 +55,23 @@ for codigo in data_box.ModulosProfesionales:
     modulo.CPSS=data_box.CompetenciasProfesionalesPersonalesSociales
     modulo.OG=data_box.ObjetivosGenerales
 
+    dir_modulo = dir_ciclo+str(codigo)+"/"
+    os.makedirs(dir_modulo,exist_ok=True)
+
+    # fmod es la ruta al fichero del modulo dentro de la PD General del Ciclo
     fmod = "./temp/PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
-    
+
+    # pdmod es la ruta al fichero del modulo de manera standalone
+    # esto se hace para mas adelante construir los PDFS de todos los modulos
+    # de manera independiente
+    pdmod = dir_modulo+"PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
+    pdtit = dir_modulo+"PD_0000_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
+
     # Esto hay que hacerlo aqui
     fmod = fmod.replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
+    # Creamos la ruta al fichero que sera la programacion standalone
+    pdmod = pdmod.replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
+    
 
     if os.path.exists(fmod):
         print(" Fichero ya presente: , nada que hacer: "+str(fmod))
@@ -63,10 +86,6 @@ for codigo in data_box.ModulosProfesionales:
         template = templateEnv.get_template(TEMPLATE_FILE)
         outputText = template.render(modulo=modulo)
         fmod = "./temp/PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
-
-        # Quitamos las Tildes graficas
-        # Fixes : #2
-
         fmodulo = open(fmod,"w")
         fmodulo.write(outputText)
         fmodulo.close()
@@ -78,19 +97,15 @@ for codigo in data_box.ModulosProfesionales:
             for line in fin:
                 if "@@@" in line:
                     pccff="".join(line.split('@')[3]).rstrip()
-                    print("   - [@@@] : "+"".join(line.split('@')[3]).rstrip())
-
                     if os.path.exists("./temp/"+pccff):
                         newpages=0
                         with open("./temp/"+pccff, "rt") as fincluded:
                             for linein in fincluded:
                                 ignorar=False
                                 if linein.startswith('\\newpage') and newpages < 10:
-                                    print("   - [!] Ignorando saltos de pagina en las 10 primeras lineas")
                                     ignorar=True
 
                                 if linein.startswith('# '):
-                                    print("   - [!] Ignorando H1 "+linein)
                                     ignorar=True
 
                                 if linein.startswith('#'):
@@ -105,6 +120,18 @@ for codigo in data_box.ModulosProfesionales:
                 else:
                     fout.write(line)
             fout.close()
+    shutil.copy("./temp/out.txt", pdmod)
     shutil.move("./temp/out.txt", fmod)
 
+    # Creamos la PD Individual
+    print(" Generando Programacion Didactica Standalone para "+modulo.nombre.replace(" ",""))
+    templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
+    templateEnv = jinja2.Environment(loader=templateLoader)
+    TEMPLATE_TITULO = "PCCF_PD_Plantilla_Portada_Modulo.md"
+    template = templateEnv.get_template(TEMPLATE_TITULO)
+    outputText = template.render(modulo=modulo)
+    ftitulo = open(pdtit,"w")
+    ftitulo.write(outputText)
+    ftitulo.close()
+    
 sys.exit(0)
