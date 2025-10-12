@@ -92,6 +92,9 @@ proyecto-asir: files proyecto-base
 	./tools/json2excel.py ASIR
 	@echo " ${LIGHTBLUE} Excel Generado para ASIR ${RESET}"
 
+	@echo " ${LIGHTBLUE} Fuentes de las Programaciones de SMX ${RESET}"
+	./tools/json2pccf.py ASIR
+
 	@echo " ${LIGHTBLUE} Proyecto de ASIR ${RESET}"
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_ASIR.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para ASIR ${RESET}"
