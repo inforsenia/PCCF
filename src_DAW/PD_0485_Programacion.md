@@ -240,12 +240,13 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 ## Actividades complementarias y extraescolares. 
 
 Se planifican las siguientes actividades complementarias y extraescolares:
--	*ProgramaMe* Navidad y Regional: Concurso de programación para el alumnado matriculado en Ciclos Formativos de Formación Profesional. Participan en equipos formados por tres estudiantes. Los problemas son aplicaciones de consola y el ganador es el equipo que resuelve correctamente más problemas con menos tiempo acumulado en sus envíos correctos.
--	**ProgramaMe* Nacional: Si se clasifican en el Regional de Valencia, el equipo clasificado acudirá en el mes de junio a la Facultad de Informática de la Universidad Complutense de Madrid para participar en la gran final del concurso de programación.
--	Participación en la Semana del Código
--	Recomendar lecturas científicas o ficticias, al igual que películas o documentales, con el fin de motivar al alumno.
--	Diferentes actividades que podrían surgir a lo largo de curso: visitas a centros de programación, empresas del sector, ponencias y congresos de Programación, etc.
--  Asistencia a las jornadas *Inf0rSenia 2026*.
+
+- *ProgramaMe* Navidad y Regional: Concurso de programación para el alumnado matriculado en Ciclos Formativos de Formación Profesional. Participan en equipos formados por tres estudiantes. Los problemas son aplicaciones de consola y el ganador es el equipo que resuelve correctamente más problemas con menos tiempo acumulado en sus envíos correctos.
+- **ProgramaMe* Nacional: Si se clasifican en el Regional de Valencia, el equipo clasificado acudirá en el mes de junio a la Facultad de Informática de la Universidad Complutense de Madrid para participar en la gran final del concurso de programación.
+- Participación en la Semana del Código
+- Recomendar lecturas científicas o ficticias, al igual que películas o documentales, con el fin de motivar al alumno.
+- Diferentes actividades que podrían surgir a lo largo de curso: visitas a centros de programación, empresas del sector, ponencias y congresos de Programación, etc.
+- Asistencia a las jornadas *Inf0rSenia 2026*.
 
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
