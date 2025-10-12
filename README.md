@@ -21,7 +21,7 @@ diferentes ciclos.
 
 ## Entorno y Desarrollo
 
-Se recomienda usar `emacs`, un editor de texto para toda una vida o `vim` y trabajar desde
+Se recomienda usar `emacs`, un editor de texto para toda una vida, scite o `vim` y trabajar desde
 Sistemas Operativos que promuevan el Software Libre y Abierto, como Ubuntu o Debian.
 
 [![Emacs](https://img.shields.io/badge/Emacs-%237F5AB6.svg?&logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/)
