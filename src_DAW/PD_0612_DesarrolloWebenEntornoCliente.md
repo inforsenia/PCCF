@@ -117,7 +117,6 @@ Las adaptaciones específicas, tanto metodológicas como organizativas, se concr
 
 ## Evaluación del aprendizaje. 
 
-docente
 
 ### Principios y objeto de la evaluación 
 
