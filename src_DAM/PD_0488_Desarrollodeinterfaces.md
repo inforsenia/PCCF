@@ -9,7 +9,7 @@ Técnico en Desarrollo de Aplicaciones Multiplataforma.
 
 Tiene una correspondéncia de Créditos de 9.
 
-
+DOCENTE
 
 ## Relación entre los estándares de competencia y los módulos del ciclo formativo
 
