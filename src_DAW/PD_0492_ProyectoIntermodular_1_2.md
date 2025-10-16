@@ -10,9 +10,9 @@ Es un módulo de 34 horas que tiene una continuidad en el segundo curso hasta la
 
 Durante el curso se trabajarán los Resultados de Aprendizaje que el equipo docente crea convenientes en este módulo. Estos RA se abordarán mediante la realización de un proyecto.
 
-Durante el curso se plantean dos fases del proyecto, una fase inicial básica que se realizará durante el primer trimestre y después otra más elaborada que se desarrollarà durante el resto del curso.
+Se plantean dos fases del proyecto, una fase inicial básica que se realizará durante el primer trimestre y después otra más elaborada que se desarrollarà durante el resto del curso.
 
-El proyecto se abordará mediante el planteamiento de actividades basadas en retos, de los que habrá que especificar:
+El proyecto se abordará mediante el planteamiento de actividades basadas en retos, para cada una de las cuales se especificarán los datos mostrados en la siguiente tabla:
 
 
 | Aspecto a detallar | Descripción |

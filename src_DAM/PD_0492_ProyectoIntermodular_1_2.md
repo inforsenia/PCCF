@@ -8,9 +8,11 @@ Es un módulo de 34 horas que tiene una continuidad en el segundo curso hasta la
 
 ## Secuenciación de las Unidades de Programación. 
 
-Dada la naturaleza de este módulo de nueva creación, se tratarán Unidades de Programación que permitirán alcanzar diferentes Resultados de Aprendizaje de varios módulos del ciclo formativo. 
+Durante el curso se trabajarán los Resultados de Aprendizaje que el equipo docente crea convenientes en este módulo. Estos RA se abordarán mediante la realización de un proyecto.
 
-Estas Unidades de Programación se abordarán mediante el planteamiento de actividades basadas en retos, para cada una de las cuales se especificarán los datos mostrados en la siguiente tabla:
+Se plantean dos fases del proyecto, una fase inicial básica que se realizará durante el primer trimestre y después otra más elaborada que se desarrollarà durante el resto del curso.
+
+El proyecto se abordará mediante el planteamiento de actividades basadas en retos, para cada una de las cuales se especificarán los datos mostrados en la siguiente tabla:
 
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
@@ -62,6 +64,10 @@ Se parte del reconocimiento de la diversidad como un valor y una oportunidad par
 Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
 ## Evaluación del aprendizaje. 
+
+Durante el primer trimestre se evaluarà la consecución de los RA trabajados durante esta fase del proyecto.
+
+Al final del curso se evaluará la consecución de todos los RA planteados en una exposición final ante todo el equipo docente del curso.
 
 ### Principios y objeto de la evaluación 
 
