@@ -90,12 +90,15 @@ A RELLENAR POR DOCENTE
 
 Se propone esta tabla
 
-| Número | Título                    | Inicio    | Fin       |
-|--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
+| Número | Título                                                           | Inicio    | Fin       |
+|--------|------------------------------------------------------------------|-----------|-----------|
+| 01     | UP01: Introducción a los Sistemas de Gestión Empresarial         | 08/09/2025| 15/09/2025|
+| 02     | UP02: Instalación de un Sistema de Gestión Empresarial           | 15/09/2025| 03/11/2025|
+| 03     | UP03: Gestión de usuarios en odoo                                | 03/11/2025| 01/12/2025|
+| 04     | UP04: Gestión de las bases de datos de odoo                      | 01/12/2025| 22/12/2025|
+| 05     | UP05: Entorno de desarrollo en odoo. Adaptación de componentes   | 07/01/2026| 20/01/2026|
+| 06     | UP06: Desarrollo de componentes en odoo                          | 20/01/2026| 03/02/2026|
+
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -181,7 +184,26 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+El cálculo ponderado de la nota de los RAs 1, 2 y 3 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en prácticas obligatorias      |    100%   |
+
+La nota del RA 4 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en el examen práctico.         |     70%   |
+| Nota obtenida en las prácticas obligatorias. |     30%   |
+
+La nota del RAs 4 y 5 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en la práctica obligatoria.    |    100%   |
+
+La nota media del módulo será la obtenida del cálculo de los porcentajes de cada RA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -252,7 +274,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
-A RELLENAR POR DOCENTE
+Las propuestas por el equipo docente.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
@@ -262,4 +284,3 @@ La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en es
 
 NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
 
-NO RELLENAR.
