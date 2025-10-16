@@ -224,8 +224,8 @@ Esta presentación se puede simultanear, en su caso, con la presentación del Pr
 
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
+El cálculo de la calificación de un RA Dualizado será en relación al porcentaje de horas que se dualicen de cada RA. Se tendrá en cuenta el peso de los criterios de evaluación dentro del RA para calcularlos en proporción, siendo la nota de la formación en la empresa, en función del seguimiento de la FE, así como de la presentación final del alumno.
 
-Se aplicarán las ponderaciones establecidas para cada RA que resultarán en una media ponderada de los mismos.
 
 ### Recuperación: 
 
