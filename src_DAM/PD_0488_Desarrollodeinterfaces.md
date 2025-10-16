@@ -191,7 +191,26 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+La nota del RA 1 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en el examen.                  |    100%   |
+
+El cálculo ponderado de la nota de los RAs 2, 3 y 4 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en el examen práctico.         |     70%   |
+| Nota obtenida en las prácticas obligatorias. |     30%   |
+
+La nota del RAs 5 y 6 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en la práctica obligatoria.    |    100%   |
+
+La nota media del módulo será la obtenida aplicando los porcentajes correspondientes a cada RA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -262,7 +281,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
-A RELLENAR POR DOCENTE
+Los realizados por el departamento de informática y los propuestos por el equipo docente del ciclo.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
@@ -272,4 +291,4 @@ La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en es
 
 NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
 
-NO RELLENAR.
+
