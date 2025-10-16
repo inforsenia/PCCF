@@ -8,9 +8,12 @@ Es un módulo de 34 horas que tiene una continuidad en el segundo curso hasta la
 
 ## Secuenciación de las Unidades de Programación. 
 
-Dada la naturaleza de este módulo de nueva creación, se tratarán Unidades de Programación que permitirán alcanzar diferentes Resultados de Aprendizaje de varios módulos del ciclo formativo. 
+Durante el curso se trabajarán los Resultados de Aprendizaje que el equipo docente crea convenientes en este módulo. Estos RA se abordarán mediante la realización de un proyecto.
 
-Estas Unidades de Programación se abordarán mediante el planteamiento de actividades basadas en retos, para cada una de las cuales se especificarán los datos mostrados en la siguiente tabla:
+Durante el curso se plantean dos fases del proyecto, una fase inicial básica que se realizará durante el primer trimestre y después otra más elaborada que se desarrollarà durante el resto del curso.
+
+El proyecto se abordará mediante el planteamiento de actividades basadas en retos, de los que habrá que especificar:
+
 
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
@@ -63,6 +66,10 @@ Las adaptaciones específicas, tanto metodológicas como organizativas, se concr
 
 ## Evaluación del aprendizaje. 
 
+Durante el primer trimestre se evaluarà la consecución de los RA trabajados durante esta fase del proyecto.
+
+Al final del curso se evaluará la consecución de todos los RA planteados en una exposición final ante todo el equipo docente del curso.
+
 ### Principios y objeto de la evaluación 
 
 La evaluación es:
@@ -87,7 +94,6 @@ Durante el curso se llevarán a cabo varias sesiones de evaluación, que serán 
 
 - **Inicial**: antes del segundo mes. De carácter diagnóstica y sin calificación.
 - **Parciales**: se realizarán un mínimo de dos por curso (primer y segundo trimestre). Incluyen calificaciones numéricas orientativas sobre la progresión del alumnado.
-- **Formación en Empresa (FE)**: antes del inicio de la FE. Evalúa la situación e idoneidad del alumnado para realizar esta fase.
 - **Ordinaria**: al final del curso. Se decide la promoción y titulación del alumnado.
 - **Extraordinaria**: destinada a la recuperación de módulos no superados.
 
