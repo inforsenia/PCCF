@@ -39,10 +39,15 @@ def generar_tabla_markdown(strings,hoja_orig):
         print("|----------|-------------|", file=fichero)
         for s in strings:
             # Separar el código (ej: "RA06.") del resto del texto
-            partes = s.split('. ', 1)
+            
+            partes = s.split('.', 1)
             codigo = partes[0] + '.'
             descripcion = partes[1] if len(partes) > 1 else ""
-            print(f"| {codigo.ljust(8)} | {descripcion} |", file=fichero)
+            
+            if codigo == "None.": 
+                pass
+            else:
+                print(f"| {codigo.ljust(8)} | {descripcion} |", file=fichero)
         print("\n\n\n",file=fichero)
 
 # Ejemplo de uso:
@@ -61,7 +66,8 @@ except KeyError as ke:
 print(" * [ PCCF ] : Generando plan de Formacion en Empresa ")
 for fila in range(fila_inicio, ws.max_row + 1):
         celda_actual = ws[f"{columna_a_buscar}{fila}"]
-        if celda_actual.value is not None:
+        
+        if celda_actual.value is not None and celda_actual.data_type != 'f':
             # Obtener la columna anterior (ej: 'B' si columna_a_buscar es 'C')
             columna_anterior = chr(ord(columna_a_buscar) - 7)
             celda_anterior = ws[f"{columna_anterior}{fila}"]
@@ -71,8 +77,8 @@ for fila in range(fila_inicio, ws.max_row + 1):
                 if celda_anterior.coordinate in merged_range:
                     # Obtener la celda superior izquierda del rango fusionado
                     celda_fusionada = ws[merged_range.start_cell.coordinate]
-                    strings.add(celda_fusionada.value)
-            strings.add(celda_anterior.value)
+                    strings.add(str(celda_fusionada.value))
+            strings.add(str(celda_anterior.value))
 
 ras_ordenados=sorted(strings)
 generar_tabla_markdown(ras_ordenados,hoja_orig)
