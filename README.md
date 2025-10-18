@@ -130,14 +130,12 @@ Se muestran algunos usages de `targets` a modo de ejemplo, pero lo mejor siempre
 
 ```shell
 # Crea el PDF de PCCF de SMX y lo abre mediante xdg-open.
-make local-proyecto-smx
+make proyecto-smx
 # Lo mismo para ASIR, DAM y DAW
-make local-proyecto-asir
-make local-proyecto-dam
-make local-proyecto-daw
+make proyecto-asir
+make proyecto-dam
+make proyecto-daw
 
-# Crea la hoja de calculo para DAW
-make local-excel-daw
 ```
 
 ## Dependencias
