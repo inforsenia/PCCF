@@ -70,6 +70,7 @@ for codigo in data_box.ModulosProfesionales:
     # de manera independiente
     pdmod = dir_modulo+"PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
     pdtit = dir_modulo+"PD_0000_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
+    pdplanformativo = "./temp/PCCF_222_PlanFormativo.md"
 
     # Esto hay que hacerlo aqui
     fmod = fmod.replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
@@ -148,6 +149,7 @@ for codigo in data_box.ModulosProfesionales:
         
     #print(" Obtenemos el PDF desde el Excel ")
     subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
+    subprocess.run("./tools/excel-to-plan-formativo.py "+ruta_al_libro+" \""+modulo.nombre+"\" "+pdplanformativo+" ",shell=True,check=True)
     shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
     
 sys.exit(0)
