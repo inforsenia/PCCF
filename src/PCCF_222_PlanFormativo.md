@@ -1,6 +1,6 @@
 \newpage
 
-# Módulos Formativos y Resultados de Aprendizaje (RA) en el Ámbito Empresarial
+# Plan Formativo y Resultados de Aprendizaje 
 
 En el marco del Ciclo Formativo de Informática, la formación teórica y práctica se diseña 
 no solo para cumplir con los objetivos académicos, sino también para responder a las 
@@ -18,8 +18,9 @@ Esta correspondencia permite a los estudiantes identificar, desde el inicio de s
 cómo cada módulo contribuye al desarrollo de habilidades y conocimientos demandados por el mercado laboral.
 
 Las tablas que se muestra a continuación reflejan, de manera clara y organizada, 
-los RA específicos que se consideran clave para cada módulo, 
-facilitando así la comprensión de la relevancia práctica de la formación recibida 
-y fomentando una preparación integral y orientada a la empleabilidad.
+los RA específicos que se considera clave para cada módulo que sea trabajado 
+durante su periódo de Formación en Empresa, facilitando así la comprensión 
+de la relevancia práctica de la formación recibida y fomentando una 
+preparación integral y orientada a la empleabilidad.
 
 
