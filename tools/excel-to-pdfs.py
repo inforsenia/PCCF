@@ -56,7 +56,11 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
     # Guardar archivo temporal
     # Configurar la página en apaisado y ajustar al contenido
     ws.page_setup.orientation = ws.ORIENTATION_LANDSCAPE
-    ws.page_setup.fitToPage = True
+    try:
+        #ws.page_setup.fitToPage = True
+        ws.sheet_properties.pageSetUpPr.fitToPage = True
+    except Exception as e :
+        print(str(e))
     ws.page_setup.fitToWidth = 1
     ws.page_setup.fitToHeight = 1  # Ajustar automáticamente la altura
     ws.page_margins.left = 0.1 
@@ -89,13 +93,9 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
 ruta_excel = sys.argv[1]
 hoja = sys.argv[2]
 
-if hoja.startswith("Lenguajes de marcas"): hoja="Lenguajes de marcas y sistemas "
-if hoja.startswith("Desarrollo web en entorno servi") : hoja="Desarrollo Web en Entorno Servi"
-if hoja.startswith("Desarrollo Web en Entorno Clien") : hoja="Desarrollo Web en Entorno Clien"
-if hoja.startswith("Sostenibilidad"): hoja="Sostenibilidad aplicada al sist"
-if hoja.startswith("Itinerario personal para la empleabilidad II"): hoja="IPE2"
-if hoja.startswith("Itinerario personal para la empleabilidad I"): hoja="IPE1"
-if hoja.startswith("Digitalización aplicada a los sectores productivos (GS)"): hoja="Digitalización aplicada a los s"
+from pccf_utils import get_hoja_label
+hoja = get_hoja_label(hoja)
+print(" Trabajando con la hoja : "+hoja)
 
 rango = "B1:I64" 
 ruta_pdf = "/tmp/cuadro-resumen.pdf"
