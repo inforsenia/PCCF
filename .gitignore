@@ -2,3 +2,4 @@ PDFS/
 temp/
 temp_*/
 boe/temp-txt.txt
+tools/__pycache__/
