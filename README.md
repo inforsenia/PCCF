@@ -128,8 +128,9 @@ mensajes de salida, ni el mismo formato (colores) ^_^.
 
 Se muestran algunos usages de `targets` a modo de ejemplo, pero lo mejor siempre : *Use the source, Luke!*:
 
-```shell
-# Crea el PDF de PCCF de SMX y lo abre mediante xdg-open.
+```bash
+
+# Crea el PDF de PCCF de SMX
 make proyecto-smx
 # Lo mismo para ASIR, DAM y DAW
 make proyecto-asir
