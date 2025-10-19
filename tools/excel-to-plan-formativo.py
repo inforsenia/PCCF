@@ -18,15 +18,9 @@ hoja = sys.argv[2]
 plan_empresa_md = sys.argv[3]
 hoja_orig=hoja
 
-if hoja.startswith("Lenguajes de marcas"): hoja="Lenguajes de marcas y sistemas "
-if hoja.startswith("Desarrollo web en entorno servi") : hoja="Desarrollo Web en Entorno Servi"
-if hoja.startswith("Desarrollo Web en Entorno Clien") : hoja="Desarrollo Web en Entorno Clien"
-if hoja.startswith("Sostenibilidad"): hoja="Sostenibilidad aplicada al sist"
-if hoja.startswith("Itinerario personal para la empleabilidad II"): hoja="IPE2"
-if hoja.startswith("Itinerario personal para la empleabilidad I"): hoja="IPE1"
-if hoja.startswith("Digitalización aplicada a los sectores productivos (GS)"): hoja="Digitalización aplicada a los s"
-if hoja.startswith("Inglés Profesional (GM)"): hoja ="Inglés Profesional (GM)"
-
+from pccf_utils import get_hoja_label
+hoja = get_hoja_label(hoja)
+print(" Trabajando con la hoja : "+hoja)
 
 def generar_tabla_markdown(strings,hoja_orig):
     
@@ -66,7 +60,7 @@ except KeyError as ke:
 print(" * [ PCCF ] : Generando plan de Formacion en Empresa ")
 for fila in range(fila_inicio, ws.max_row + 1):
         celda_actual = ws[f"{columna_a_buscar}{fila}"]
-        
+        if hoja == "ISO": print(str(celda_actual.value))
         if celda_actual.value is not None and celda_actual.data_type != 'f':
             # Obtener la columna anterior (ej: 'B' si columna_a_buscar es 'C')
             columna_anterior = chr(ord(columna_a_buscar) - 7)
