@@ -7,7 +7,7 @@
 Es un módulo de 200 horas que se imparte en el Ciclo de Grado Superior de 
 Técnico en Administración de Sistemas Informáticos y Redes.
 
-Tiene una correspondéncia de Créditos de 12.
+Tiene una correspondéncia en Créditos de 12.
 
 
 

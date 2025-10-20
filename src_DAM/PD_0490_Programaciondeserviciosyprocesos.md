@@ -7,7 +7,7 @@
 Es un módulo de 67 horas que se imparte en el Ciclo de Grado Superior de 
 Técnico en Desarrollo de Aplicaciones Multiplataforma.
 
-Tiene una correspondéncia de Créditos de 5.
+Tiene una correspondéncia en Créditos de 5.
 
 
 

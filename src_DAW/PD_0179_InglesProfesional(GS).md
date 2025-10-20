@@ -7,7 +7,7 @@
 Es un módulo de 68 horas que se imparte en el Ciclo de Grado Superior de 
 Técnico en Desarrollo de Aplicaciones Web.
 
-Tiene una correspondéncia de Créditos de 4.
+Tiene una correspondéncia en Créditos de 4.
 
 
 

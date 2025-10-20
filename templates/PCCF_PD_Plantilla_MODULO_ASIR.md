@@ -7,7 +7,7 @@
 Es un módulo de {{ modulo.horas }} horas que se imparte en el Ciclo de Grado Superior de 
 Técnico en Administración de Sistemas Informáticos y Redes.
 
-Tiene una correspondéncia de Créditos de {{ modulo.creditos}}.
+Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
 
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 
