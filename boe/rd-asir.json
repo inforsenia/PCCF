@@ -22,6 +22,8 @@
 	"s" : "Participar de forma activa en la vida económica, social y cultural con actitud crítica y responsable.",
 	"t" : "Crear y gestionar una pequeña empresa, realizando un estudio de viabilidad de productos, de planificación de la producción y de comercialización."
     },
+    "CompetenciasProfesionales"  : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n"],
+    "CompetenciasSociales"  : ["ñ","o","p","q","r","s","t"],
     "CualificacionesINCUAL":{
 	"Completas":
 	{

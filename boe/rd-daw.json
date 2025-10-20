@@ -25,6 +25,8 @@
         "v": " Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y tener iniciativa en su actividad profesional con sentido de la responsabilidad social.",
         "w": " Ejercer sus derechos y cumplir con las obligaciones derivadas de su actividad profesional, de acuerdo con lo establecido en la legislación vigente, participando activamente en la vida económica, social y cultural."
     },
+    "CompetenciasProfesionales"  : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o"],
+    "CompetenciasSociales"  : ["p","q","r","s","t","u","v","w"],
     "CualificacionesINCUAL":{
             "Completas":
             {

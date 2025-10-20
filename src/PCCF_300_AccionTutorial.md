@@ -128,24 +128,21 @@ Charla sobre los siguientes conceptos:
 
 ### Sesión 16: Control del miedo
 
-    Visualización del vídeo y charla sobre los miedos personales y profesionales de los alumnos.
-
-    https://www.almaserra.com/l/breve-neurobiologia-del-miedo/
+- Visualización del vídeo y charla sobre los miedos personales y profesionales de los alumnos.
+- https://www.almaserra.com/l/breve-neurobiologia-del-miedo/
 
 ## BLOQUE 6: ENTORNO LABORAL Y EMPLEABILIDAD
 
 ### Sesión 17: Preparación para las prácticas y relaciones con la empresa
 
-    Charla sobre los derechos, deberes, actitud profesional (puntualidad, ser proactivos, preguntar cualquier duda, avisar en caso de enfermedad, respeto a los compañeros y superiores, aceptación de la jerarquía), cultura empresarial, higiene personal.
+Charla sobre los derechos, deberes, actitud profesional (puntualidad, ser proactivos, preguntar cualquier duda, avisar en caso de enfermedad, respeto a los compañeros y superiores, aceptación de la jerarquía), cultura empresarial, higiene personal.
 
 ### Sesión 18: Búsqueda activa de empleo.
 
-    Creación de perfiles en las plataformas de búsqueda de empleo.
-    Coger cita con Labora y otras empresas de trabajo temporal o consultoras informáticas.
-
-    Saber buscar empleo público y registrarse en la recepción de correos:
-
-    https://www.gva.es/es/inicio/atencion_ciudadano/buscadores/busc_empleo_publico
+- Creación de perfiles en las plataformas de búsqueda de empleo.
+- Coger cita con Labora y otras empresas de trabajo temporal o consultoras informáticas.
+- Saber buscar empleo público y registrarse en la recepción de correos:
+- https://www.gva.es/es/inicio/atencion_ciudadano/buscadores/busc_empleo_publico
 
 ### Sesión 19: Diario SAO y certificado digital.
 

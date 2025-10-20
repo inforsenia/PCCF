@@ -8,8 +8,5 @@ ciclo de grado medio de Sistemas Microinformáticos y Redes, Desarrollo de
 Aplicaciones Web, Desarrollo de Aplicaciones Multiplataforma y el Grado 
 Superior de Administración de Sistemas y Redes.
 
-Así como otros grados grado medios y superiores de la familia de Administración y Comercio y Marketing. 
-
-Las instalaciones del centro nos permitirán realizar actividades en salas con
-escenario, acceder a la biblioteca, etc.
+Así como otros grados medios, básicos y superiores de la familia de Administración y Comercio y Marketing. 
 

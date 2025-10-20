@@ -24,6 +24,8 @@
         "u" : " Crear y gestionar una pequeña empresa, realizando un estudio de viabilidad de productos, planificación de la producción y comercialización.",
         "v" : " Participar de forma activa en la vida económica, social y cultural, con una actitud crítica y responsable."
     },
+    "CompetenciasProfesionales"  : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o"],
+    "CompetenciasSociales"  : ["p","q","r","s","t","u","v"],
     "CualificacionesINCUAL":
     {
 	"Completas":

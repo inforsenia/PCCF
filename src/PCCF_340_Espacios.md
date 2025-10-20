@@ -23,8 +23,8 @@ A continuación se describen las características de cada una de las aulas:
 
     - Switch Huawei.
     - 16 equipos para alumnado conectados al switch del aula.
-    - 1 ADI 
-    - 1 equipo para el/la docente conectado al mismo switch. Este equipo está conectado a la ADI por HDMI.
+    - 1 Proyector 
+    - 1 equipo para el/la docente conectado al mismo switch. Este equipo está conectado al proyector por HDMI.
     - Este aula es utilizada tanto por grupos de Ciclos Formativos como por grupos de ESO y Bachillerato.
     
 - **Aula 3**:

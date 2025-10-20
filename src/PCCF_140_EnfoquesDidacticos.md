@@ -4,7 +4,7 @@
 
 El empleo de metodologías activas que además atiendan a la diversidad del alumnado es preceptivo. 
 Sin perjuicio de otras ausentes, se listan abajo algunas de estas metodologías de obligado cumplimiento.
-Se deja para las programaciones didácticas la especificación de las metodologías empleadas por cada unidad de aprendizaje:
+Se deja para las programaciones didácticas la especificación en las unidades de programación de las metodologías empleadas por cada unidad de aprendizaje:
 
 ### Aprendizaje Basado en Proyectos (ABP)
 
