@@ -1,3 +1,7 @@
+\newpage
+
+# Protocolo del plan de clases online por emergencia
+
 Acordamos establecer un plan de actuación que garantice la continuidad del proceso de enseñanza-aprendizaje en caso de suspensión de clases presenciales por causas de fuerza mayor (DANA u otras emergencias climáticas o sanitarias).
 
 2. Ámbito de Aplicación
