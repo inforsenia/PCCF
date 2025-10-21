@@ -14,19 +14,8 @@ Estas Unidades de Programación se abordarán mediante el planteamiento de activ
 
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
-|¿Qué?|Nombre de la actividad|
-|¿Para qué?|RA/Módulo profesional|
-|¿Cómo?|Individual o grupo, Soporte o formato, Instrucciones, Recursos necesarios|
-|¿Cuándo?|Tiempo de realización|
-|¿Dónde?|Lugar de realización, presentación o entrega|
-|¿Quién?|Individual o en grupo|
-|¿Cómo se va a evaluar?|Herramientas de evaluación utilizadas|
-|Docente responsable|Puede ser el/la del módulo profesional de algún RA o el/la docente encargado/a del Proyecto Intermodular|
-
-| Aspecto a detallar | Descripción |
-|--------------------|-------------|
 |¿Qué?|Creación de una empresa de informática|
-|¿Para qué?|Itinerario profesional para la empleabilidad I. Fundamentos de hardware. |
+|¿Para qué?| Uso de Resultados de Aprendizaje relativos a los siguientes módulos: Itinerario profesional para la empleabilidad I. Fundamentos de hardware. |
 |¿Cómo?| Uso de un lenguaje de marcas (Markdown) para elaborar la memoria que describe el trabajo realizado. Uso de una herramienta de presentación. |
 |¿Cuándo?| 1ª Evaluación |
 |¿Dónde?| Memoria entregada en Aules en un formato estándar (PDF), además, de presentación del alumno ante la clase. |
@@ -37,7 +26,7 @@ Estas Unidades de Programación se abordarán mediante el planteamiento de activ
 | Aspecto a detallar | Descripción |
 |--------------------|-------------|
 |¿Qué?|Instalación de un Sistema Informático de una oficina|
-|¿Para qué?|Planificación y administración de redes. Implantación de sistemas operativos. Fundamentos de hardware. Gestión de bases de datos. Lenguajes de marcas y sistemas de gestión de información. |
+|¿Para qué?|  Uso de Resultados de Aprendizaje relativos a los siguientes módulos: Planificación y administración de redes. Implantación de sistemas operativos. Fundamentos de hardware. Gestión de bases de datos. Lenguajes de marcas y sistemas de gestión de información. |
 |¿Cómo?| Uso de un lenguaje de marcas (Markdown) para elaborar la memoria que describe el trabajo realizado. Uso de una herramienta de presentaciones. GNS3 para realizar la virtualización de la red. Puesta en marcha de un Controlador de Dominio, y configuración de clientes. Página web estática. Puesta en marcha de una base de datos para la gestión de la empresa. |
 |¿Cuándo?| 2ª y 3ª Evaluación |
 |¿Dónde?| Memoria entregada en Aules en un formato estándar (PDF), además, de presentación del alumno ante la clase. |
