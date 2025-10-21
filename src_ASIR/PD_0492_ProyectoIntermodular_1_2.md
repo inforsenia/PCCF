@@ -23,6 +23,28 @@ Estas Unidades de Programación se abordarán mediante el planteamiento de activ
 |¿Cómo se va a evaluar?|Herramientas de evaluación utilizadas|
 |Docente responsable|Puede ser el/la del módulo profesional de algún RA o el/la docente encargado/a del Proyecto Intermodular|
 
+| Aspecto a detallar | Descripción |
+|--------------------|-------------|
+|¿Qué?|Creación de una empresa de informática|
+|¿Para qué?|Itinerario profesional para la empleabilidad I. Fundamentos de hardware. |
+|¿Cómo?| Uso de un lenguaje de marcas (Markdown) para elaborar la memoria que describe el trabajo realizado. Uso de una herramienta de presentación. |
+|¿Cuándo?| 1ª Evaluación |
+|¿Dónde?| Memoria entregada en Aules en un formato estándar (PDF), además, de presentación del alumno ante la clase. |
+|¿Quién?|Individual|
+|¿Cómo se va a evaluar?| Utilización de rúbrica en Aules |
+|Docente responsable|Puede ser el/la del módulo profesional de algún RA o el/la docente encargado/a del Proyecto Intermodular|
+
+| Aspecto a detallar | Descripción |
+|--------------------|-------------|
+|¿Qué?|Instalación de un Sistema Informático de una oficina|
+|¿Para qué?|Planificación y administración de redes. Implantación de sistemas operativos. Fundamentos de hardware. Gestión de bases de datos. Lenguajes de marcas y sistemas de gestión de información. |
+|¿Cómo?| Uso de un lenguaje de marcas (Markdown) para elaborar la memoria que describe el trabajo realizado. Uso de una herramienta de presentaciones. GNS3 para realizar la virtualización de la red. Puesta en marcha de un Controlador de Dominio, y configuración de clientes. Página web estática. Puesta en marcha de una base de datos para la gestión de la empresa. |
+|¿Cuándo?| 2ª y 3ª Evaluación |
+|¿Dónde?| Memoria entregada en Aules en un formato estándar (PDF), además, de presentación del alumno ante la clase. |
+|¿Quién?|Individual|
+|¿Cómo se va a evaluar?| Utilización de rúbrica en Aules |
+|Docente responsable|Puede ser el/la del módulo profesional de algún RA o el/la docente encargado/a del Proyecto Intermodular|
+
 Todos los módulos del ciclo, tanto de primer como de segundo curso, son susceptibles de tratarse en las actividades planteadas en el Proyecto Intermodular.
 
 Dado el caracter dinámico y flexible de la programación didáctica, las actividades/retos se irán configurando conforme avance el curso, de manera que puedan corresponder con contenidos relacionados con RAs de diferentes módulos que se están tratando en cada momento, asegurando así que el alumnado tiene ya adquiridos los conocimientos necesarios para enfrentarse a cada reto en cuestión.
