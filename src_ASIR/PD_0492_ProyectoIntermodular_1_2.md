@@ -120,8 +120,6 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 - **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
 
-La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
-
 La calificación del presente módulo se calculará en base a todos los Resultados de Aprendizaje trabajados, de manera proporcional. 
 
 Cada actividad/reto realizado se valorará con una calificación entre 0 y 10.
