@@ -24,6 +24,7 @@ está formado por los siguientes documentos:
 | [Orden 20/2019](https://dogv.gva.es/datos/2019/05/03/pdf/2019_4442.pdf) | Regulación Respuesta Educativa para la Inclusión|
 | [Orden 32/2011](https://dogv.gva.es/datos/2011/12/28/pdf/2011_13033.pdf)| Regula el derecho del alumnado a la objetividad en la evaluación, y se establece el procedimiento de reclamación de calificaciones obtenidas y de las decisiones de promoción, de certificación o de obtención del título académico que corresponda|
 | [Resolución de 17 de julio de 2025] | Instrucciones para la organización y funcionamiento de los centros |
+| [Resolución de 27 de junio de 2025](https://www.boe.es/boe/dias/2025/07/12/pdfs/BOE-A-2025-14430.pdf) | Módulo optativos |
 
 En esta lista se incluye la relación de disposiciones normativas de ámbito estatal, autonómico y regulaciones específicas del centro educativo, lo que centraliza este contenido y facilita la redacción de las programaciones didácticas posteriores.
 
