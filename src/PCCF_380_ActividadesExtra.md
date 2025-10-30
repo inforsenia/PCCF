@@ -28,7 +28,7 @@ A continuación se indican diversas opciones así como información adicional (l
 
 - [Interciclo] Hacer alguna **visita a una empresa** para que puedan observar de qué forma trabajan los profesionales, al igual que a alguna universidad, instituto de investigación o centro de cálculo. 
     - El CPD de la Feria Valencia. Así como una breve charla de la instalación de la infraestructura de Red.
-    - Palacio de Congresos, para conocer su infraestructura de red e instalaciones. Contacto Javier Polit.
+    - Palacio de Congresos, para conocer su infraestructura de red e instalaciones.
 
 - [Interciclo] En coordinación con el **Plan de Fomento de la Lectura** del centro, dentro del módulo se realizarán las siguientes actividades o Lectura mediante el trabajo de textos específicos en varios idiomas y documentación de referencia para realizar trabajos de síntesis 
     - [https://museo.inf.upv.es/literatura-recomendada/](https://museo.inf.upv.es/literatura-recomendada/)

@@ -56,7 +56,7 @@ La evaluación continua y la participación activa del alumnado son fundamentale
 
 La encuesta diseñada por el departamento ha sido elaborada teniendo en cuenta los principios pedagógicos expuestos anteriormente. En primer lugar, **facilita el seguimiento del proceso de enseñanza-aprendizaje**, ya que permite recoger información relevante sobre la percepción del alumnado respecto a la calidad de la formación, la adecuación de los contenidos y la eficacia de las metodologías empleadas. Además, **garantiza la participación anónima del alumnado**, lo que fomenta respuestas sinceras y constructivas, asegurando la inclusión de todas las voces del grupo. Esta herramienta se convierte así en un instrumento clave para la **mejora continua de la práctica docente**, la **detección de necesidades formativas** y el **fortalecimiento del vínculo entre el entorno educativo y el mundo profesional**.
 
-Podéis encontrar 3 encuestas posibles en los anexos, ya en formato ~.xml~ para su despliegue en Aules.
+Podéis encontrar 3 encuestas posibles en los anexos, ya en formato `.xml` para su despliegue en Aules.
 
 ## Temporalización y ejecución de la Encuesta
 

@@ -43,6 +43,34 @@ if sys.argv[2] == "ASIR":
 
 # Convertir el diccionario a un objeto Box
 data_box1 = Box(data1)
+
+
+if len(sys.argv) != 2 and sys.argv[2] == "--contextoSocio":
+
+
+    print("|Competencias Profesionales | %  |")
+    print("|---------------------------|----|")
+    numc=len(data_box1.CompetenciasProfesionales)
+    propc=100/numc
+    for cprof in data_box1.CompetenciasProfesionales:
+        print(" | "+data_box1.CompetenciasProfesionalesPersonalesSociales[cprof]+"|"+str(round(propc,2))+"%  |")
+    
+
+    print("")
+    print("|Competencias Sociales | %  |")
+    print("|----------------------|----|")
+    numc=len(data_box1.CompetenciasSociales)
+    propc=100/numc
+    for csoci in data_box1.CompetenciasSociales:
+        print(" | "+data_box1.CompetenciasProfesionalesPersonalesSociales[csoci]+"|"+str(round(propc,2))+"%  |")
+        
+
+    for comp_orig in data_box1.CompetenciasProfesionalesPersonalesSociales:
+        text_comp_orig = data_box1.CompetenciasProfesionalesPersonalesSociales[comp_orig]
+        #print("Contexto : "+text_comp_orig)
+
+    sys.exit(0)
+
 data_box2 = Box(data2)
 
 if len(sys.argv) != 3 and sys.argv[3] == "--competencias":

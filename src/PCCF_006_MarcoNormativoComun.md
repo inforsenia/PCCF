@@ -6,6 +6,7 @@ El Marco Normativo vigente que se ha tenido en cuenta para el desarrollo del pro
 está formado por los siguientes documentos:
 
 **Ámbito estatal**
+
 | Nombre | Descripción |
 |--------|-------------|
 | [LOE 3/2022](https://www.boe.es/eli/es/lo/2022/03/31/3/con)| Ordenación e Integración de la Formación Profesional|
@@ -16,6 +17,7 @@ está formado por los siguientes documentos:
 
 
 **Ámbito de la comunitat valenciana**
+
 | Nombre | Descripción |
 |--------|-------------|
 | [Orden 8/2025](https://dogv.gva.es/datos/2025/04/30/pdf/2025_13083_es.pdf) | Regula la evaluación del proceso de enseñanza-aprendizaje en FP|

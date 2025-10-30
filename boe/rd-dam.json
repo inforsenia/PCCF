@@ -14,7 +14,7 @@
         "l":"Crear tutoriales, manuales de usuario, de instalación, de configuración y de administración, empleando herramientas específicas.",
         "m":"Empaquetar aplicaciones para su distribución preparando paquetes auto instalables con asistentes incorporados.",
         "n":"Desarrollar aplicaciones multiproceso y multihilo empleando librerías y técnicas de programación específicas.",
-        "ñ":"Desarrollar aplicaciones capaces de ofrecer servicios en red empleando mecanismos de comunicación.",
+        "ny":"Desarrollar aplicaciones capaces de ofrecer servicios en red empleando mecanismos de comunicación.",
         "o":"Participar en la implantación de sistemas ERP-CRM evaluando la utilidad de cada uno de sus módulos.",
         "p":"Gestionar la información almacenada en sistemas ERP-CRM garantizando su integridad.",
         "q":"Desarrollar componentes personalizados para un sistema ERP-CRM atendiendo a los requerimientos.",
@@ -27,7 +27,7 @@
         "x":"Crear y gestionar una pequeña empresa, realizando un estudio de viabilidad de productos, de planificación de la producción y de comercialización.",
         "y":"Participar de forma activa en la vida económica, social y cultural, con una actitud crítica y responsable."
     },
-    "CompetenciasProfesionales"  : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s"],
+    "CompetenciasProfesionales"  : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","ny","o","p","q","r","s"],
     "CompetenciasSociales"  : ["t","u","v","w","x","y"],
     "CualificacionesINCUAL":{
             "Completas":
