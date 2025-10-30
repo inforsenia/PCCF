@@ -8,8 +8,12 @@ Es un módulo de 68 horas que se imparte en el Ciclo de Grado Superior de
 Técnico en Desarrollo de Aplicaciones Multiplataforma.
 
 Tiene una correspondéncia en Créditos de 4.
+## Datos identificativos y contextualización del módulo. 
 
+Es un módulo de 67 horas que se imparte en el Ciclo de Grado Superior de 
+Técnico en Administración de Sistemas Informáticos y Redes.
 
+Tiene una correspondéncia en Créditos de 4.
 
 ## Resultados de Aprendizaje
 
@@ -24,19 +28,16 @@ Los **Resultados de Aprendizaje** relativos al módulo de Inglés Profesional (G
 | RA05 |  Aplica actitudes y comportamientos profesionales en situaciones de comunicación, describiendo las relaciones típicas características del país de la lengua extranjera. |
 |<img width=200/>|<img width=500/>|
 
-
-
 ## Objetivos Generales 
 
 La formación del módulo contribuye a alcanzar los *Objetivos Generales del Ciclo* siguientes:
 
 | Obj| Objetivo General del Ciclo |
 |----|----------------------------|
-| e | Seleccionar y emplear lenguajes, herramientas y librerías, interpretando las especificaciones para desarrollar aplicaciones multiplataforma con acceso a bases de datos. |
-| j | Seleccionar y emplear técnicas, lenguajes y entornos de desarrollo, evaluando sus posibilidades, para desarrollar aplicaciones en teléfonos móviles, tabletas y otros dispositivos inteligentes. |
-| q | Seleccionar y emplear lenguajes y herramientas, atendiendo a los requerimientos, para desarrollar componentes personalizados en sistemas ERP-CRM. |
+| e | Instalar y administrar software de gestión, relacionándolo con su explotación, para implantar y gestionar bases de datos. |
+| j | Seleccionar sistemas de protección y recuperación, analizando sus características funcionales, para poner en marcha soluciones de alta disponibilidad. |
+| q | Identificar formas de intervención en situaciones colectivas, analizando el proceso de toma de decisiones y efectuando consultas para liderar las mismas. |
 |<img width=100/>|<img width=500/>|
-
 
 
 
@@ -48,30 +49,25 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Obj| Competencia del Título |
 |----|----------------------------|
-| a | Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos. |
-| e | Desarrollar aplicaciones multiplataforma con acceso a bases de datos utilizando lenguajes, librerías y herramientas adecuados a las especificaciones. |
-| f | Desarrollar aplicaciones implementando un sistema completo de formularios e informes que permitan gestionar de forma integral la información almacenada. |
-| i | Participar en el desarrollo de juegos y aplicaciones en el ámbito del entretenimiento y la educación empleando técnicas, motores y entornos de desarrollo específicos. |
-| j | Desarrollar aplicaciones para teléfonos móviles, tabletas y otros dispositivos inteligentes empleando técnicas y entornos de desarrollo específicos. |
-| v | Gestionar su carrera profesional, analizando las oportunidades de empleo, autoempleo y de aprendizaje. |
-| y | Participar de forma activa en la vida económica, social y cultural, con una actitud crítica y responsable. |
-| z |  |
+| a | Administrar sistemas operativos de servidor, instalando y configurando el software, en condiciones de calidad para asegurar el funcionamiento del sistema. |
+| e | Optimizar el rendimiento del sistema configurando los dispositivos hardware de acuerdo a los requisitos de funcionamiento. |
+| f | Evaluar el rendimiento de los dispositivos hardware identificando posibilidades de mejoras según las necesidades de funcionamiento. |
+| i | Implementar soluciones de alta disponibilidad, analizando las distintas opciones del mercado, para proteger y recuperar el sistema ante situaciones imprevistas. |
+| j | Supervisar la seguridad física según especificaciones del fabricante y el plan de seguridad para evitar interrupciones en la prestación de servicios del sistema. |
 |<img width=100/>|<img width=500/>|
-
-
 
 ## Secuenciación de las Unidades de Programación. 
 
-A RELLENAR POR DOCENTE
 
-Se propone esta tabla
-
-| Número | Título                    | Inicio    | Fin       |
-|--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
+| Número | Título                     | Inicio    | Fin       |
+|--------|--------------------------- |-----------|-----------|
+| 01     | UP01: "Debugging Global: Resolución de incidencias" | 08/09/2025| 23/10/2025|
+| 02     | UP02: Presentación de proyectos tecnológicos: Del código al discurso profesional    | 24/10/2025| 25/11/2025|
+| 03     | UP03: Documentación técnica bilingüe: Guías de usuario y manuales para software| 26/11/2025| 22/12/2025|
+| 04     | UP04: Reuniones virtuales con clientes: Simulación de negociaciones y soporte técnico | 7/01/2026| 14/02/2026|
+| 05     | UP05: Análisis de casos de éxito en TI: Comprensión y debate de artículos técnicos en inglés| 15/02/2026| 18/03/2026|
+| 06     | UP06: Cultura corporativa en empresas tecnológicas: Normas y protocolos en entornos internacionales |19/03/2026 | 22/04/2026|
+| 07     | UP07: Proyectos            |25/04/2026 | 30/06/2026|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -157,7 +153,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
+La Calificación será calculada a partir de los porcentajes indicados en el Esquema General.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -200,8 +196,7 @@ Esta presentación se puede simultanear, en su caso, con la presentación del Pr
 
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
-
-!!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
+En el cálculo de la calificación de un RA Dualizado se tendrá en cuenta las horas de la empresa.
 
 ### Recuperación: 
 
@@ -210,8 +205,6 @@ recuperación
 
 - No superados en la **evaluación ordinaria de primero o segundo**: se podrán recuperar en la **convocatoria extraordinaria** .
 - **Alumnos de segundo curso con módulos no superados de primero**: Se diseñará para que el alumnado lo pueda realizar simultáneamente con los módulos de segundo **sin garantizarse su asistencia a clase**. Dispondrá de **convocatoria ordinaria y extraordinaria**. 
-
-
 
 ### Convocatoria Ordinaria
 
@@ -226,16 +219,9 @@ recuperación
 La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
 descrito en el Proyecto Curricular de Ciclo Formativo.
 
-## Actividades complementarias y extraescolares. 
-
-A RELLENAR POR DOCENTE
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
 La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
 
 ## Esquema General de Inglés Profesional (GS)
-
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
-
-NO RELLENAR.

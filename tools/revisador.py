@@ -71,6 +71,9 @@ if len(sys.argv) != 2 and sys.argv[2] == "--contextoSocio":
 
     sys.exit(0)
 
+if len(sys.argv) != 2 and sys.argv[2] == "--imagenCompetencias":
+    sys.exit(0)
+
 data_box2 = Box(data2)
 
 if len(sys.argv) != 3 and sys.argv[3] == "--competencias":
