@@ -154,5 +154,10 @@ sudo apt install make pandoc \
 		 texlive-fonts-extra
 
 sudo apt install python3-jinja2 \
-		 python3-box
+		 python3-box \
+         python3-numpy \
+         python-openpyxl-doc \
+         python-pandas-doc \
+         python3-pandas
+
 ```
