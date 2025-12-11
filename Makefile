@@ -70,8 +70,13 @@ proyecto-%: files proyecto-base
 	cp -r src_$(FAMILIA)/* temp/
 	
 	@echo " ${LIGHTBLUE} Poblando específico desde src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"
-	# Copiar archivos específicos del ciclo
-	cp -r src_$(FAMILIA)_$(CICLO_UPPER)/* temp/
+	# Copiar archivos específicos del ciclo (si existen)
+	@if [ -n "$$(find src_$(FAMILIA)_$(CICLO_UPPER) -maxdepth 1 -name '*' -not -path 'src_$(FAMILIA)_$(CICLO_UPPER)' 2>/dev/null)" ]; then \
+		cp -r src_$(FAMILIA)_$(CICLO_UPPER)/* temp/; \
+		echo " ${LIGHTBLUE} Archivos específicos copiados desde src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"; \
+	else \
+		echo " ${LIGHTYELLOW} No hay archivos específicos en src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"; \
+	fi
 	
 	@echo " ${LIGHTBLUE} Libro de las Programaciones de $(CICLO_UPPER) ${RESET}"
 	./tools/json2excel.py $(CICLO_UPPER) $(FAMILIA)

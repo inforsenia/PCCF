@@ -2,7 +2,7 @@
 
 # Programación didáctica: Módulo {{ modulo.nombre }}
 
-## Datos identificativos y contextualización del módulo. 
+## Datos identificativos y contextualización del módulo.
 
 Es un módulo de {{ modulo.horas }} horas que se imparte en el Ciclo de Grado Medio de 
 Técnico en Sistemas Microinformáticos y Redes.
