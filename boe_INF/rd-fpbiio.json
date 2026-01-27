@@ -15,15 +15,19 @@
         "m": "Valorar actuacions encaminades a la conservació del medi ambient diferenciant les conseqüències de les activitats quotidianes que puguen afectar l'equilibri del mateix.",
         "n": "Obtenir i comunicar informació destinada a l'autoaprenentatge i al seu ús en diferents contextos del seu entorn personal, social o professional mitjançant recursos al seu abast i els propis de les tecnologies de la informació i de la comunicació.",
         "ny": "Actuar amb respecte i sensibilitat cap a la diversitat cultural, el patrimoni històric-artístic i les manifestacions culturals i artístiques, apreciant el seu ús i gaudi com a font d'enriquiment personal i social.",
-        "o": "Comunicar-se amb claredat, precisió i fluïdesa en diferents contextos socials o professionals i per diferents mitjans, canals i suports al seu abast, utilitzant i adequadament recursos lingüístics orals i escrits propis de la llengua valenciana.",
+        "o": "Comunicar-se amb claredat, precisió i fluïdesa en diferents contextos socials o professionals i per diferents mitjans, canals i suports al seu abast, utilitzant i adequadament recursos lingüístics orals i escrits propis de la llengua castellana i en el seu cas de la llengua co-oficial.",
         "p": "Comunicar-se en situacions habituals tant laborals com personals i socials utilitzant recursos lingüístics bàsics en llengua estrangera.",
         "q": "Realitzar explicacions senzilles sobre esdeveniments i fenòmens característics de les societats contemporànies a partir d'informació històrica i geogràfica a la seua disposició.",
         "r": "Adaptar-se a les noves situacions laborals originades per canvis tecnològics i organitzatius en la seua activitat laboral, utilitzant les ofertes formatives al seu abast i localitzant els recursos mitjançant les tecnologies de la informació i la comunicació.",
         "s": "Complir les tasques pròpies del seu nivell amb autonomia i responsabilitat, emprant criteris de qualitat i eficiència en el treball assignat i efectuant-lo de forma individual o com a membre d'un equip.",
-        "t": "Comunicar-se eficaçment, respectant l'autonomia i competència de les diferents persones que intervenen en el seu àmbit de treball, contribuint a la qualitat del treball realitzat."
+        "t": "Comunicar-se eficaçment, respectant l'autonomia i competència de les diferents persones que intervenen en el seu àmbit de treball, contribuint a la qualitat del treball realitzat.",
+        "u": "Assumir i complir les mesures de prevenció de riscos i seguretat laboral en la realització de les activitats laborals evitant danys personals, laborals i ambientals.",
+        "v": "Complir les normes de qualitat, d'accessibilitat universal i disseny per a tots que afecten la seua activitat professional.",
+        "w": "Actuar amb esperit emprenedor, iniciativa personal i responsabilitat en l'elecció dels procediments de la seua activitat professional.",
+        "x": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, d'acord amb l'establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
     },
     "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    "CompetenciasSociales": ["k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t"],
+    "CompetenciasSociales": ["k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"],
     "CualificacionesINCUAL": {
         "Completas": {
             "IFC361_1": {
@@ -152,7 +156,7 @@
                     }
                 }
             },
-            "horas": "180",
+            "horas": "299",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1207_1": "Realitzar operacions auxiliars de muntatge d'equips microinformàtics.",
                 "UC1208_1": "Realitzar operacions auxiliars de manteniment de sistemes microinformàtics."
@@ -214,7 +218,7 @@
                     }
                 }
             },
-            "horas": "115",
+            "horas": "200",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1209_1": "Realitzar operacions auxiliars amb tecnologies de la informació i la comunicació."
             },
@@ -294,7 +298,7 @@
                         "d": "S'han realitzat les tasques de neteja i manteniment d'útils d'enquadernació, i els ajustaments pertinents per a un adequat funcionament.",
                         "e": "S'han identificat els diferents recursos consumibles tints i líquids, paper, cintes i cartutxos d'impressió, tòner o altres-relacionant-los amb els equips de reproducció i informàtics.",
                         "f": "S'ha manejat els equips, assumint el compromís de mantenir i cuidar aquests, i obtenint el màxim profit als mitjans utilitzats en el procés, evitant costos i desgasts innecessaris.",
-                        "g": "S'ha realitzat les següents consideracions durant l'activitat: - Posar a punt i netejar les màquines. - Detectar petites averies mecàniques solucionant, si és possible, les contigències observades. - Aprovisionar amb els materials necessaris les màquines. - Realitzar les proves de funcionament bàsic dels equips informàtics i de reproducció. - Realitzar labors de manteniment bàsic dels equips informàtics i d'oficina. - Substituir consumibles, d'entre diversos tipus facilitats, en l'equip que corresponga.",
+                        "g": "S'ha realitzat les següents consideracions durant l'activitat: - Posar a punt i netejar les màquines. - Detectar petites averies mecàniques solucionant, si és possible, les contigències observades. - Aprovisionar amb els materials necessaris les màquines. - Realitzar les proves de funcionament bàsic dels equips informàtics i de reproducció. - Realitzar labors de manteniment bàsic dels equips informàtics i d'oficina. - Substituir consumibles, d'entre diversos tipus facilitats, en l'equip que corresponga. - Adoptar les mesures de seguretat necessàries per a comprovar el funcionament bàsic en mode segur. - Utilitzar els equips de protecció d’acord amb els connectors i terminals implicats.",
                         "h": "S'ha realitzat les següents consideracions durant l'activitat: - Tomar les mesures de seguretat necessàries per comprovar el funcionament bàsic en mode segur. - Utilitzar els equips de protecció d'acord amb els connectors i terminals implicats."
                     }
                 },
@@ -317,7 +321,7 @@
                     }
                 }
             },
-            "horas": "140",
+            "horas": "299",
             "UnidadesCompetenciaAcreditadas": {
                 "UC0974_1": "Realitzar operacions bàsiques de tractament de dades i textos, i confecció de documentació.",
                 "UC0971_1": "Realitzar operacions auxiliars de reproducció i arxiu en suport convencional o informàtic."
@@ -404,7 +408,7 @@
                     }
                 }
             },
-            "horas": "115",
+            "horas": "332",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales ": ["g", "h", "i", "w"],
             "CompetenciasTitulo": ["c", "d", "g", "h", "i", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -910,96 +914,107 @@
             "ObjetivosGenerales ": ["ny", "o", "p", "q", "r", "s", "t", "u", "v", "z"],
             "CompetenciasTitulo": ["n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "z"]
         },
-        "3033": {
-            "nombre": "Formació en centres de treball",
+        "3160972": {
+            "nombre": "Projecte intermodular d'aprenentatge col·laboratiu",
             "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Realitza operacions auxiliars en el muntatge de sistemes microinformàtics, aplicant els processos del sistema de qualitat establert en l'empresa i els corresponents protocols de seguretat.",
+                    "Resultado": "RA1",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat els components per al muntatge, la seua funció i la seua disposició.",
-                        "b": "S'han seleccionat i utilitzat les eines i instruments per a l'operació de muntatge.",
-                        "c": "S'ha realitzat fixació i interconnexió dels components i accessoris utilitzant les tècniques correctes.",
-                        "d": "S'han realitzat les configuracions bàsiques del sistema operatiu.",
-                        "e": "S'ha comprovat la funcionalitat de l'equip microinformàtic.",
-                        "f": "S'ha operat respectant els criteris de seguretat personal i material, amb la qualitat requerida.",
-                        "g": "S'ha participat dins del grup de treball, mostrant iniciativa i interès."
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
                     }
                 },
                 "RA02": {
-                    "Resultado": "Realitza operacions de manteniment en sistemes microinformàtics i perifèrics, seguint indicacions, segons els plans de manteniment corresponents.",
+                    "Resultado": "RA2",
                     "CriteriosEvaluacion": {
-                        "a": "S'han realitzat intervencions de manteniment preventiu sobre l'equip microinformàtic.",
-                        "b": "S'han realitzat revisions de l'estat dels suports i perifèrics.",
-                        "c": "S'han seleccionat i utilitzat les eines i instruments per a les operacions de manteniment.",
-                        "d": "S'ha realitzat la neteja de components, suports i perifèrics respectant les disposicions tècniques establertes pel fabricant mantenint la seua funcionalitat.",
-                        "e": "S'han recollit els residus i elements desfets de manera adequada per a la seua eliminació o reciclatge.",
-                        "f": "S'han determinat les possibles mesures de correcció en funció dels resultats obtinguts.",
-                        "g": "S'han realitzat les operacions amb criteris de respecte al medi ambient.",
-                        "h": "S'han realitzat totes les operacions tenint en compte la normativa de seguretat laboral i de protecció ambiental."
-                    }
-                },
-                "RA03": {
-                    "Resultado": "Realitza operacions de muntatge i manteniment en instal·lacions de xarxes, seguint indicacions, segons els plans de manteniment corresponents.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han identificat els equips de la xarxa.",
-                        "b": "S'han realitzat operacions de muntatge de racks.",
-                        "c": "S'han seleccionat eines per al muntatge i el manteniment.",
-                        "d": "S'han muntat/desmuntat suports i elements de xarxes sense fils.",
-                        "e": "S'han realitzat operacions de muntatge de canalitzacions.",
-                        "f": "S'han realitzat operacions de muntatge de cables.",
-                        "g": "S'han realitzat operacions de muntatge de rosetes i equips distribuïdors.",
-                        "h": "S'han utilitzat les eines i instruments per a les operacions de muntatge manteniment.",
-                        "i": "S'ha realitzat la neteja de components, suports i perifèrics respectant les disposicions tècniques establertes pel fabricant mantenint la seua funcionalitat.",
-                        "j": "S'han recollit els residus i elements desfets de manera adequada per a la seua eliminació o reciclatge.",
-                        "k": "S'han realitzat totes les operacions tenint en compte la normativa de seguretat laboral i de protecció ambiental."
-                    }
-                },
-                "RA04": {
-                    "Resultado": "Realitza labors bàsiques d'administració i gestió d'oficina identificant en cada cas els documents a utilitzar i les tècniques a aplicar.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han identificat els equips de reproducció i enquadernació existents en l'entorn laboral.",
-                        "b": "S'han realitzat labors de reprografia, còpia i enquadernació de documents.",
-                        "c": "S'han realitzat labors d'enquadernat bàsic.",
-                        "d": "S'ha comprovat el nivell d'existències de l'emmagatzematge de material d'oficina.",
-                        "e": "S'han realitzat labors bàsiques d'arxiu.",
-                        "f": "S'han reconegut els documents comercials i administratius utilitzats.",
-                        "g": "S'ha demostrat responsabilitat en la realització del treball.",
-                        "h": "S'han mantingut unes relacions laborals cordials amb la resta de companys, integrant-se en el grup de treball."
-                    }
-                },
-                "RA05": {
-                    "Resultado": "Actua conforme a les normes de prevenció i riscos laborals de l'empresa.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha complert en tot moment la normativa general sobre prevenció i seguretat, així com les establertes per l'empresa.",
-                        "b": "S'han identificat els factors i situacions de risc que es presenten en el seu àmbit d'actuació en el centre de treball.",
-                        "c": "S'han adoptat actituds relacionades amb l'activitat per a minimitzar els riscos laborals i mediambientals.",
-                        "d": "S'ha emprat l'equip de protecció individual (EPIs) establert per a les diferents operacions.",
-                        "e": "S'han utilitzat els dispositius de protecció de les màquines, equips i instal·lacions en les diferents activitats.",
-                        "f": "S'ha actuat segons el pla de prevenció.",
-                        "g": "S'ha mantingut la zona de treball lliure de riscos, amb ordre i neteja.",
-                        "h": "S'ha treballat minimitzant el consum d'energia i la generació de residus."
-                    }
-                },
-                "RA06": {
-                    "Resultado": "Actua de forma responsable i s'integra en el sistema de relacions tècnico-socials de l'empresa.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han executat amb diligència les instruccions que rep.",
-                        "b": "S'ha responsabilitzat del treball que desenvolupa, comunicant-se eficaçment amb la persona adequada en cada moment.",
-                        "c": "S'ha complert amb els requeriments i normes tècniques, demostrant un bon fer professional i finalitzant el seu treball en un temps límit raonable.",
-                        "d": "S'ha mostrat en tot moment una actitud de respecte cap als procediments i normes establerts.",
-                        "e": "S'ha organitzat el treball que realitza d'acord amb les instruccions i procediments establerts, complint les tasques en ordre de prioritat i actuant sota criteris de seguretat i qualitat en les intervencions.",
-                        "f": "S'ha coordinat l'activitat que desenvolupa amb la resta del personal, informant de qualsevol canvi, necessitat rellevant o contingència no prevista.",
-                        "g": "S'ha incorporat puntualment al lloc de treball, gaudint dels descansos instituïts i no abandonant el centre de treball abans de l'establert sense motius degudament justificats.",
-                        "h": "S'ha preguntat de manera apropiada la informació necessària o els dubtes que puga tenir per al desempeny de les seues labors al seu responsable immediat.",
-                        "i": "S'ha realitzat el treball conforme a les indicacions realitzades pels seus superiors, plantejant les possibles modificacions o suggeriments en el lloc i modes adequats."
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
                     }
                 }
             },
-            "horas": "130",
+            "horas": "400",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
             "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        },
+        "IPO1": {
+            "nombre": "IPO1",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["a"],
+            "CompetenciasTitulo": ["a"]
+        },
+        "IPO2": {
+            "nombre": "IPO2",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["a"],
+            "CompetenciasTitulo": ["a"]
         }
     }
 }

@@ -866,16 +866,16 @@
             }
     },
     "0227":{
-            "nombre":"Serveis en xarxa",
+            "nom":"Serveis en xarxa",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
             "UC0955_2":"Monitoritzar els processos de comunicacions de la xarxa local.",
             "UC0956_2":"Realitzar els processos de connexió entre xarxes privades i xarxes públiques."
             },
-            "ObjetivosGenerales" : ["d","f","h","i","k","l","m"],
+            "ObjectiusGenerals" : ["d","f","h","i","k","l","m"],
             "CompetenciasTitulo" : ["a","d","e","f","g","j","m","ñ","r"],
-            "creditos":"-",
-            "ResultadosAprendizaje":{
+            "credits":"-",
+            "ResultatsAprenentatge":{
             "RA01": {
                     "Resultado": " Instal·la serveis de configuració dinàmica, descrivint les seues característiques i aplicacions.",
                         "CriteriosEvaluacion": {
@@ -969,13 +969,13 @@
             }
     },
     "0228":{
-            "nombre":"Aplicacions web",
+            "nom":"Aplicacions web",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjectiusGenerals" : ["a","c","i","k","l","m"],
             "CompetenciasTitulo" : ["c","f","i","j","m","n","ñ","q","r"],
             "credits":"-",
-            "ResultadosAprendizaje":{
+            "ResultatsAprenentatge":{
             "RA01": {
                     "Resultado": " Instal·la gestors de continguts, identificant les seues aplicacions i configurant-los segons requeriments.",
                         "CriteriosEvaluacion": {
@@ -1038,13 +1038,13 @@
             }
     },
     "CVOPS190":{
-            "nombre":"Introducció a la Programació",
+            "nom":"Introducció a la Programació",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjectiusGenerals" : [],
             "CompetenciasTitulo" : [],
             "credits":"-",
-            "ResultadosAprendizaje":{
+            "ResultatsAprenentatge":{
             "RA01": {
                     "Resultado": " Reconèix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.",
                         "CriteriosEvaluacion": {
@@ -1123,7 +1123,7 @@
             }
     },
     "0225":{
-        "nombre":"Xarxes Locals",
+        "nom":"Xarxes Locals",
         "horas": "224",
         "UnidadesCompetenciaAcreditadas" : {
             "UC0220_2": "Instal·lar, configurar i verificar els elements de la xarxa local segons procediments establerts."
@@ -1131,7 +1131,7 @@
         "ObjectiusGenerals" : ["a", "b", "d", "e", "f", "g", "h", "i", "j", "k" ,"l" ,"m"] ,
         "CompetenciasTitulo" : ["c", "e", "f", "g", "h", "j", "l"],
         "credits":"-",
-        "ResultadosAprendizaje":{
+        "ResultatsAprenentatge":{
             "RA01": {
                 "Resultado": " Reconèix l'estructura de xarxes locals cablejades analitzant les característiques d'entorns d'aplicació i descrivint la funcionalitat dels seus components.",
                 "CriteriosEvaluacion": {
@@ -1206,7 +1206,7 @@
                         }
         }
     },
-        "MOPANGPROF": {
+        "MOP": {
             "nombre": "Anglés oral en entorns professionals",
             "creditos": "",
             "ResultadosAprendizaje": {
@@ -1240,42 +1240,8 @@
             "ObjetivosGenerales ": ["a"],
             "CompetenciasTitulo": ["a"]
         },
-        "MOPCOMPROF": {
+        "MOP": {
             "nombre": "Comunicació professional",
-            "creditos": "",
-            "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "RA1",
-                    "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
-                    }
-                },
-                "RA02": {
-                    "Resultado": "RA2",
-                    "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
-                    }
-                }
-            },
-            "horas": "1",
-            "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
-        },
-        "PI": {
-            "nombre": "Projecte intermodular",
             "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {

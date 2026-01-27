@@ -3,51 +3,33 @@
 def get_hoja_label(hoja):
     # Comunes
     if hoja.startswith("Lenguajes de marcas"): hoja="LM"
-    if hoja.startswith("Sostenibilidad"): hoja="Sostenibilidad"
-    if hoja.startswith("Itinerario personal para la empleabilidad II"): hoja="IPE2"
-    if hoja.startswith("Itinerario personal para la empleabilidad I"): hoja="IPE1"
-    if hoja.startswith("Digitalización"): hoja="Digitalización"
-    if hoja.startswith("Inglés Profesional"): hoja ="Inglés"
+    if hoja.startswith("Sostenibilitat"): hoja="Sostenibilitat"
+    if hoja.startswith("Itinerari personal per a l'ocupabilitat II"): hoja="IPO2"
+    if hoja.startswith("Itinerari personal per a l'ocupabilitat I"): hoja="IPO1"
+    if hoja.startswith("Digitalització"): hoja="Digitalització"
+    if hoja.startswith("Anglés Professional"): hoja ="Anglés"
 
-    if hoja.startswith("Montaje y "): hoja="MME"
-    if hoja.startswith("Sistemas operativos monopuesto"): hoja="SOM"
-    if hoja.startswith("Aplicaciones ofimáticas"): hoja="AOF"
-    if hoja.startswith("Sistemas operativos en red"): hoja="SOX"
-    if hoja.startswith("Seguridad informática"): hoja="SIN"
-    if hoja.startswith("Servicios en red"): hoja="SRE"
-    if hoja.startswith("Aplicaciones web"): hoja="AW"
-    if hoja.startswith("Redes Locales"): hoja="Redes"
+    if hoja.startswith("Muntatge"): hoja="MME"
+    if hoja.startswith("Sistemes operatius mono"): hoja="SOM"
+    if hoja.startswith("Aplicacions ofimátiques"): hoja="AOF"
+    if hoja.startswith("Sistemes operatius en xarxa"): hoja="SOX"
+    if hoja.startswith("Seguretat informàtica"): hoja="SIN"
+    if hoja.startswith("Serveis en xarxa"): hoja="SEX"
+    if hoja.startswith("Aplicacions web"): hoja="AW"
+    if hoja.startswith("Xarxes locals"): hoja="XL"
 
     # DAM DAW
-    
-    if hoja.startswith("Entornos de"): hoja = "ED"
-    if hoja.startswith("Sistemas Informáticos"): hoja="SI"
+    if hoja.startswith("Entorns de"): hoja = "ED"
+    if hoja.startswith("Sistemes Informàtics"): hoja="SI"
     if hoja.startswith("Bases de "): hoja="BBDD"
-    if hoja.startswith("Programación"): hoja="PROG"
-
-    # DAW
-    if hoja.startswith("Desarrollo web en entorno servi") : hoja="DWES"
-    if hoja.startswith("Desarrollo Web en Entorno Clien") : hoja="DWEC"
-    if hoja.startswith("Despliegue de") : hoja="DAW"
-    if hoja.startswith("Diseño de interfaces web") : hoja="DIW"
+    if hoja.startswith("Programació"): hoja="PRG"
 
     # DAM
-    if hoja.startswith("Desarrollo de Inter") : hoja="DI"
-    if hoja.startswith("Acceso a ") : hoja="AD"
-    if hoja.startswith("Programación multimedia y dispo"): hoja="PMDM"
-    if hoja.startswith("Programación de servicios y pro"): hoja="PSP"
-    if hoja.startswith("Sistemas de gestión empresarial"): hoja="SGE"
-
-    # ASIR
-    if hoja.startswith("Implantación de Siste"): hoja = "ISO"
-    if hoja.startswith("Administración de Sistemas Oper"): hoja = "ASO"
-    if hoja.startswith("Planificación y Administración"): hoja = "PAX"
-    if hoja.startswith("Fundamentos de Hard"): hoja = "FHW"
-    if hoja.startswith("Gestión de Base de Datos"): hoja = "GBD"
-    if hoja.startswith("Administración de Sistemas Ge"): hoja = "ASGBD"
-    if hoja.startswith("Servicios de Red e I") : hoja = "SER"
-    if hoja.startswith("Seguridad y Alt"): hoja = "SAD"
-    if hoja.startswith("Implantación de Aplicaci"): hoja = "IAW"
+    if hoja.startswith("Desenvolupament d'Inter") : hoja="DI"
+    if hoja.startswith("Accés a ") : hoja="AD"
+    if hoja.startswith("Programació multimèdia i dispo"): hoja="PMDM"
+    if hoja.startswith("Programació de serveis i pro"): hoja="PSP"
+    if hoja.startswith("Sistemes de gestió empresarial"): hoja="SGE"
 
     # CEIABD
     if hoja.startswith("Models d"): hoja = "MIA"

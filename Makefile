@@ -22,7 +22,7 @@ PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="../rsrc/sorts-mill-goudy/OFLGoudyS
 PDF_PATH:=$(shell readlink -f PDFS)
 
 # Lista de ciclos disponibles por familia
-CICLOS_INF = smx asir daw dam ceiabd fpbiio
+CICLOS_INF = smx dam ceiabd fpbiio
 CICLOS_SCO = apd ei is
 CICLOS_ALL = $(CICLOS_INF) $(CICLOS_SCO)
 
