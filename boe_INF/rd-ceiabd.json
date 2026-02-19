@@ -21,8 +21,52 @@
         "r": "Supervisar i aplicar procediments de gestió de qualitat, d'accessibilitat universal i de «disseny per a totes les persones», en les activitats professionals incloses en els processos de producció o prestació de serveis.",
         "s": "Exercir els seus drets i complir amb les obligacions derivades de la seva activitat professional, d'acord amb el que està establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
     },
-    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"],
-    "CompetenciasSociales": ["n", "ny", "o", "p", "q", "r", "s"],
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+    ],
+    "CompetenciasSociales": [
+        "n",
+        "ny",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 3,
+        "e": 1,
+        "f": 3,
+        "g": 3,
+        "h": 3,
+        "i": 1,
+        "j": 1,
+        "k": 3,
+        "l": 3,
+        "m": 1,
+        "n": 1,
+        "ny": 1,
+        "o": 1,
+        "p": 1,
+        "q": 1,
+        "r": 1,
+        "s": 1
+    },
     "CualificacionesINCUAL": {
         "Completas": {
             "NO APLICA": {
@@ -148,8 +192,37 @@
             },
             "horas": "40",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "j", "k", "m", "n", "ny", "o", "p"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "j", "k", "m", "n", "ny", "o", "p", "q", "r", "s"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
         },
         "5072": {
             "nombre": "Sistemes d'aprenentatge automàtic",
@@ -234,8 +307,40 @@
             },
             "horas": "50",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "j", "k", "m", "n", "ny", "o", "p"],
-            "CompetenciasTitulo": ["a", "c", "d", "e", "f", "g", "j", "k", "m", "n", "ny", "o", "p", "q", "r", "s"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
         },
         "5073": {
             "nombre": "Programació d'Intel·ligència Artificial",
@@ -298,8 +403,37 @@
             },
             "horas": "110",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "j", "k", "m", "n", "f", "o", "p"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "j", "k", "m", "n", "f", "o", "p", "q", "r", "s"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
         },
         "5074": {
             "nombre": "Sistemes de Big Data",
@@ -365,8 +499,37 @@
             },
             "horas": "55",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["b", "c", "h", "i", "j", "k", "l", "m", "n", "f", "o", "p"],
-            "CompetenciasTitulo": ["b", "c", "h", "i", "j", "k", "l", "m", "n", "f", "o", "p", "q", "r", "s"]
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
         },
         "5075": {
             "nombre": "Big Data aplicat",
@@ -440,8 +603,37 @@
             },
             "horas": "75",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["b", "c", "h", "i", "j", "k", "l", "m", "n", "f", "o", "p"],
-            "CompetenciasTitulo": ["b", "c", "h", "i", "j", "k", "l", "m", "n", "f", "o", "p", "q", "r", "s"]
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
         }
     }
 }

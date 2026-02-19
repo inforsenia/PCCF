@@ -3,8 +3,26 @@
 ## Afegir un nou cicle 
 
 ### 1. Crear el nou arxiu `rd-xxxx.json`
-
+ 
 Pots fer servir alguna IA ([DeepSeek.com](https://www.deepseek.com/)) passant-li com a context el `json` d'un altre cicle i el `pdf` amb el currículum per a que emplene els valors del `json` però no alterar les claus. Inclús pots demanar que traduisca els valors al Valencià.
+ 
+#### 1.1 Importància de les competències
+ 
+Per a que la taula de competències (arxiu `PCCF_111_Competencies_*.md`) mostre el nivell d'importància amb estrelles (★), cal afegir el diccionari `ImportanciaCompetencias` al final del JSON:
+ 
+```json
+"ImportanciaCompetencias": {
+    "a": 3,
+    "b": 2,
+    "c": 1
+}
+```
+ 
+- **3**: ★★★ (Molt important)
+- **2**: ★★ (Importància mitja)
+- **1**: ★ (Menys important)
+ 
+Si una competència no es troba al diccionari, es mostrarà amb **2 estrelles (★★)** per defecte.
 
 ### 2. Generar la plantilla de les PD's per als mòduls del nou cicle
 
@@ -57,7 +75,7 @@ I tindrem 3 noves carpetes (o si ja existien s'afegiran a elles els nous arxius)
 | `PDFS/FPBIIO_libro_autogenerado.xlsx`   | Excel genèric generat a partir de la informació del rd-fpbiio.json i que posteriorment utilitzarà cada docent per a ajustar les ponderacions de cada RA i designar els CE o RA que van a FEE. |
 | `PDFS/PCCF_IESEPM_FPBIIO.pdf`           | PCCF preeliminar del cicle corresponent en PDF               |
 | `PDFS/Programaciones_IESEPM_FPBIIO.pdf` | PDF amb totes les PD's de tots els mòduls del cicle          |
-| `PCCF_111_Competencies_FPBIIO.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
+| `PDFS/PCCF_111_Competencies_FPBIIO.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
 
 ### 6. Afegir el nou cicle a l'script `pccf_utils.py`
 
@@ -113,8 +131,3 @@ Si a la carpeta `src_FAMILIA_MODUL` trobem el fitxer corresponent a la PD del m�
 ### Generació del PCCF:
 
 La generació final del PCCF es basa en el contingut de les carpetes `src` i `src_FAMILIA_CICLE` corresponent al cicle, tots els fitxers de dites carpetes (excepte els de les PD) es junten en una carpeta (temp) que després s'uniran en un únic document PDF.
-
-
-
-
-

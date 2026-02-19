@@ -57,6 +57,34 @@
         "x",
         "y"
     ],
+    "ImportanciaCompetencias": {
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 3,
+        "e": 3,
+        "f": 3,
+        "g": 2,
+        "h": 2,
+        "i": 1,
+        "j": 3,
+        "k": 1,
+        "l": 1,
+        "m": 1,
+        "n": 3,
+        "ny": 3,
+        "o": 1,
+        "p": 2,
+        "q": 3,
+        "r": 2,
+        "s": 2,
+        "t": 2,
+        "u": 1,
+        "v": 2,
+        "w": 3,
+        "x": 1,
+        "y": 1
+    },
     "CualificacionesINCUAL": {
         "Completas": {
             "IFC155_3": {
@@ -1813,8 +1841,12 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         },
         "MOPCOMPROF": {
             "nombre": "Comunicació professional",
@@ -1847,8 +1879,12 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         },
         "PI": {
             "nombre": "Projecte intermodular",
@@ -1881,8 +1917,12 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         }
     }
 }

@@ -26,8 +26,59 @@
         "w": "Actuar amb esperit emprenedor, iniciativa personal i responsabilitat en l'elecció dels procediments de la seua activitat professional.",
         "x": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, d'acord amb l'establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
     },
-    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    "CompetenciasSociales": ["k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"],
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j"
+    ],
+    "CompetenciasSociales": [
+        "n",
+        "ny",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 3,
+        "b": 3,
+        "c": 2,
+        "d": 2,
+        "e": 3,
+        "f": 2,
+        "g": 2,
+        "h": 1,
+        "i": 2,
+        "j": 2,
+        "k": 1,
+        "l": 1,
+        "m": 1,
+        "n": 3,
+        "ny": 3,
+        "o": 3,
+        "p": 3,
+        "q": 1,
+        "r": 1,
+        "s": 3,
+        "t": 2,
+        "u": 3,
+        "v": 1,
+        "w": 1,
+        "x": 1
+    },
     "CualificacionesINCUAL": {
         "Completas": {
             "IFC361_1": {
@@ -161,8 +212,31 @@
                 "UC1207_1": "Realitzar operacions auxiliars de muntatge d'equips microinformàtics.",
                 "UC1208_1": "Realitzar operacions auxiliars de manteniment de sistemes microinformàtics."
             },
-            "ObjetivosGenerales ": ["a", "d", "e", "f", "i"],
-            "CompetenciasTitulo": ["c", "f", "g", "h", "i", "j", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "a",
+                "d",
+                "e",
+                "f",
+                "i"
+            ],
+            "CompetenciasTitulo": [
+                "c",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3030": {
             "nombre": "Operacions auxiliars per a la configuració i l'explotació",
@@ -222,8 +296,26 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1209_1": "Realitzar operacions auxiliars amb tecnologies de la informació i la comunicació."
             },
-            "ObjetivosGenerales ": ["a", "i", "j", "w"],
-            "CompetenciasTitulo": ["a", "j", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "a",
+                "i",
+                "j",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "j",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3031": {
             "nombre": "Ofimàtica i arxiu de documents",
@@ -326,8 +418,28 @@
                 "UC0974_1": "Realitzar operacions bàsiques de tractament de dades i textos, i confecció de documentació.",
                 "UC0971_1": "Realitzar operacions auxiliars de reproducció i arxiu en suport convencional o informàtic."
             },
-            "ObjetivosGenerales ": ["b", "c", "j", "w"],
-            "CompetenciasTitulo": ["a", "b", "f", "j", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "j",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "f",
+                "j",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3016": {
             "nombre": "Instal·lació i manteniment de xarxes per a transmissió de dades",
@@ -410,8 +522,29 @@
             },
             "horas": "332",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["g", "h", "i", "w"],
-            "CompetenciasTitulo": ["c", "d", "g", "h", "i", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "g",
+                "h",
+                "i",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "c",
+                "d",
+                "g",
+                "h",
+                "i",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3009": {
             "nombre": "Ciències aplicades 1",
@@ -529,8 +662,27 @@
             },
             "horas": "90",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["k", "l", "m", "n"],
-            "CompetenciasTitulo": ["k", "l", "m", "n", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "k",
+                "l",
+                "m",
+                "n"
+            ],
+            "CompetenciasTitulo": [
+                "k",
+                "l",
+                "m",
+                "n",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3019": {
             "nombre": "Ciències aplicades 2",
@@ -687,8 +839,27 @@
             },
             "horas": "90",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["k", "l", "m", "n"],
-            "CompetenciasTitulo": ["k", "l", "m", "n", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "k",
+                "l",
+                "m",
+                "n"
+            ],
+            "CompetenciasTitulo": [
+                "k",
+                "l",
+                "m",
+                "n",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "3011": {
             "nombre": "Comunicació i societat I",
@@ -798,8 +969,30 @@
             },
             "horas": "120",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["ny", "o", "p", "r", "s", "t", "u", "v", "z"],
-            "CompetenciasTitulo": ["n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "z"]
+            "ObjetivosGenerales ": [
+                "ny",
+                "o",
+                "p",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "z"
+            ]
         },
         "3012": {
             "nombre": "Comunicació i societat II",
@@ -911,8 +1104,31 @@
             },
             "horas": "120",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["ny", "o", "p", "q", "r", "s", "t", "u", "v", "z"],
-            "CompetenciasTitulo": ["n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "z"]
+            "ObjetivosGenerales ": [
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "z"
+            ]
         },
         "3160972": {
             "nombre": "Projecte intermodular d'aprenentatge col·laboratiu",
@@ -945,8 +1161,64 @@
             },
             "horas": "400",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ]
         },
         "IPO1": {
             "nombre": "IPO1",
@@ -979,8 +1251,12 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         },
         "IPO2": {
             "nombre": "IPO2",
@@ -1013,8 +1289,12 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a"],
-            "CompetenciasTitulo": ["a"]
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         }
     }
 }

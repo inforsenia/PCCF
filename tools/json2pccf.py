@@ -63,6 +63,7 @@ else:
             competencias_profesionales=data_box.CompetenciasProfesionales,
             competencias_sociales=data_box.CompetenciasSociales,
             cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
+            importancia=data.get("ImportanciaCompetencias", {}),
         )
         with open(comp_file, "w", encoding="utf-8") as fc:
             fc.write(output_comp)
