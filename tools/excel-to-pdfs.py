@@ -94,7 +94,9 @@ ruta_excel = sys.argv[1]
 hoja = sys.argv[2]
 
 from pccf_utils import get_hoja_label
-hoja = get_hoja_label(hoja)
+
+if not ruta_excel.endswith("_libro_autogenerado.xlsx"):
+    hoja = get_hoja_label(hoja)
 print(" Trabajando con la hoja : "+hoja)
 
 rango = "B1:I64" 

@@ -12,12 +12,25 @@ diferentes ciclos.
 
 ## Ciclos Formativos
 
+### Familia de Informática:
+
 | Siglas | Nombre Completo | Nivel |
 |--------|-----------------|-------|
+| IIO | Informática y Oficina | Grado Básico |
 | SMX    | Sistemas Microinformáticos y Redes | Grado Medio |
 | DAW 	 | Desarrollo de Aplicaciones Web | Grado Superior |
 | DAM    | Desarrollo de Aplicaciones Multiplataforma | Grado Superior |
 | ASIR   | Admnistración de Sistemas Informáticos y Redes | Grado Superior |
+| CEIABD | Curso de especialización de IA y BD | Curso de Especialización |
+
+### Familia de Servicios a la comunidad:
+
+| Siglas | Nombre Completo | Nivel |
+|--------|-----------------|-------|
+| APD | Atención a Personas en Situación de Dependencia | Grado Medio |
+| EI    | Educación Infantil | Grado Superior |
+| IS 	 | Integración Social | Grado Superior |
+
 
 ## Entorno y Desarrollo
 
@@ -99,7 +112,7 @@ secuenciaciones de horas adecuadas. Cuando todo el departamento haya rellenado l
 pesos y horas, se construirán las diferentes Programaciones Didácticas estableciendo como última página del PDF
 la hoja respectiva de su módulo. 
 
-Se han añadido las listas de las Competencias Profesionales y Sociales.
+Se han añadido las listas de las Competencias Profesionales y Sociales con su nivel de importancia (estrellas ★).
 
 ---
 
@@ -128,6 +141,8 @@ mensajes de salida, ni el mismo formato (colores) ^_^.
 
 Se muestran algunos usages de `targets` a modo de ejemplo, pero lo mejor siempre : *Use the source, Luke!*:
 
+#### Opción 1: Usar el valor por defecto (SENIA):
+
 ```bash
 
 # Crea el PDF de PCCF de SMX
@@ -137,6 +152,56 @@ make proyecto-asir
 make proyecto-dam
 make proyecto-daw
 
+```
+
+#### Opción 2: Especificar un centro diferente:
+
+```bash
+make CENTRO_EDUCATIVO=MIESCUELA proyecto-smx
+make CENTRO_EDUCATIVO='COLEGIO XYZ' proyecto-dam
+```
+
+#### Opción 3: Usar en línea de comandos (persistente para la sesión):
+
+```bash
+export CENTRO_EDUCATIVO=NUEVOCENTRO
+make proyecto-ceiabd
+make proyecto-daw
+```
+
+### Opción 4: Ver ayuda:
+
+```bash
+make help
+```
+
+```bash
+Targets disponibles:
+  Familia INF:
+    proyecto-smx       Generar proyecto para SMX
+    proyecto-asir      Generar proyecto para ASIR
+    proyecto-daw       Generar proyecto para DAW
+    proyecto-dam       Generar proyecto para DAM
+    proyecto-ceiabd    Generar proyecto para CEIABD
+    proyecto-fpbiio    Generar proyecto para FPBIIO
+  Familia SCO:
+    proyecto-apd       Generar proyecto para APD
+    proyecto-ei        Generar proyecto para EI
+    proyecto-is        Generar proyecto para IS
+  Conjunto:
+    todos              Generar todos los proyectos
+    todos-inf          Generar todos los proyectos INF
+    todos-sco          Generar todos los proyectos SCO
+    clean              Limpiar archivos generados
+    files              Crear estructura de directorios
+    dependences        Instalar dependencias
+
+Ejemplos:
+  make proyecto-smx                 # Usa 'SENIA' por defecto
+  make proyecto-asir                # Genera solo ASIR
+  make todos                        # Genera todos los ciclos
+  make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam
+  make CENTRO_EDUCATIVO=IESEPM todos
 ```
 
 ## Dependencias
@@ -151,7 +216,9 @@ sudo apt install make pandoc \
 	     texlive-extra-utils \
 		 texlive-lang-spanish \
 		 texlive-latex-extra \
-		 texlive-fonts-extra
+		 texlive-fonts-extra \
+		 libreoffice \
+         poppler-utils
 
 sudo apt install python3-jinja2 \
 		 python3-box \
@@ -160,4 +227,35 @@ sudo apt install python3-jinja2 \
          python-pandas-doc \
          python3-pandas
 
+```
+
+## Contenedor
+
+Para simplificar el trabajo y la gestión de dependencias en diferentes equipos existen una serie de ficheros para crear un contenedor Docker y lanzar los scripts desde allí:
+
+```sh
+contenedor_build.sh
+contenedor_lanza.sh
+contenedor_limpia.sh
+docker-compose.yml
+Dockerfile
+```
+
+Para lanzar (diferentes modos):
+
+```bash
+# Sesión interactiva con bash (modo por defecto)
+./contenedor_lanza.sh
+
+# Ejecutar un comando específico y salir
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM proyecto-daw"
+
+# Iniciar en segundo plano
+./contenedor_lanza.sh -d
+
+# Acceder con un comando específico
+./contenedor_lanza.sh --command "ls -la"
+
+# Mostrar ayuda
+./contenedor_lanza.sh --help
 ```

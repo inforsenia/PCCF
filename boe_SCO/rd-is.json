@@ -1,0 +1,833 @@
+{
+    "CompetenciasProfesionalesPersonalesSociales": {
+        "a": "Programar, organitzar i avaluar les intervencions d'integració social aplicant estratègies i tècniques específiques, promovent l'equitat, igualtat d'oportunitats i inclusió, actuant en tot moment amb una actitud de respecte cap a les persones destinatàries i garantint la creació d'entorns segurs tant per a les persones destinatàries com per al professional amb la finalitat de millorar la seua situació personal, familiar i/o social.",
+        "b": "Detectar i analitzar les necessitats i característiques de les persones i col·lectius susceptibles d'atenció social, utilitzant instruments i tècniques d'avaluació adequades.",
+        "c": "Dissenyar, implementar i avaluar projectes d'intervenció social ajustats a les necessitats detectades i al marc legal vigent.",
+        "d": "Aplicar estratègies i tècniques de mediació comunitària per a la prevenció i gestió de conflictes entre persones, actors i col·lectius socials.",
+        "e": "Organitzar i desenvolupar activitats d'inserció sociolaboral dirigides a persones amb discapacitat o en risc d'exclusió social, incloent la metodologia d'ocupació amb suport.",
+        "f": "Realitzar intervencions educatives de suport a l'alumnat amb necessitats específiques d'ajuda educativa en contextos escolars, en col·laboració amb l'equip interdisciplinari.",
+        "g": "Utilitzar i adaptar sistemes augmentatius i alternatius de comunicació per a persones amb dificultats comunicatives.",
+        "h": "Desenvolupar habilitats socials i comunicatives per afavorir la relació social, la dinàmica de grups, la conducció de reunions i la gestió de conflictes.",
+        "i": "Organitzar i implementar intervencions en unitats de convivència, incloent la prevenció i actuació en casos de violència domèstica.",
+        "j": "Aplicar la perspectiva de gènere en tots els projectes i intervencions socials.",
+        "k": "Participar en la dinamització comunitària i en la promoció de la participació ciutadana.",
+        "l": "Col·laborar en l'elaboració i desenvolupament de programes d'habilitats d'autonomia personal i social.",
+        "m": "Realitzar el seguiment i avaluació dels processos d'intervenció social, elaborant informes i registres oportuns.",
+        "n": "Assegurar la creació d'entorns segurs i l'aplicació de normatives de prevenció de riscos laborals i protecció ambiental.",
+        "ny": "Adaptar-se a les noves situacions laborals i tecnològiques, actualitzant coneixements i utilitzant recursos per a l'aprenentatge al llarg de la vida.",
+        "o": "Actuar amb responsabilitat, autonomia i ètica professional, treballant en equip i respectant la diversitat.",
+        "p": "Comunicar-se eficaçment amb tots els agents implicats en els processos d'intervenció social.",
+        "q": "Aplicar protocols de qualitat i accessibilitat universal en les activitats professionals.",
+        "r": "Gestionar recursos i documentació associada a les intervencions socials.",
+        "s": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, participant activament en la vida social i cultural."
+    },
+    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"],
+    "CompetenciasSociales": ["n", "ny", "o", "p", "q", "r", "s"],
+    "CualificacionesINCUAL": {
+        "Completas": {
+            "SSC090_3": {
+                "denominació": "Educació d'habilitats d'autonomia personal i social",
+                "unitats_competència": {
+                    "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
+                    "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social.",
+                    "UC0254_3": "Establir, adaptar i aplicar sistemes alternatius de comunicació."
+                }
+            },
+            "SSC324_3": {
+                "denominació": "Mediació comunitària",
+                "unitats_competència": {
+                    "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció.",
+                    "UC1039_3": "Prevenir conflictes entre diferents persones, actors i col·lectius socials.",
+                    "UC1040_3": "Organitzar i implementar el procés de gestió de conflictes.",
+                    "UC1041_3": "Realitzar la valoració, el seguiment i la difusió de la mediació com una via de gestió de conflictes.",
+                    "UC1026_3": "Incorporar la perspectiva de gènere en els projectes d'intervenció social."
+                }
+            },
+            "SSC323_3": {
+                "denominació": "Inserció laboral de persones amb discapacitat",
+                "unitats_competència": {
+                    "UC1034_3": "Gestionar la informació sobre els recursos sociolaborals i formatius i col·laborar en l'anàlisi de llocs de treball per a la inserció sociolaboral de persones amb discapacitat.",
+                    "UC1035_3": "Realitzar les intervencions dirigides a l'entrenament per a l'adquisició i desenvolupament d'habilitats sociolaborals en les persones amb discapacitat.",
+                    "UC1036_3": "Donar suport en el procés d'inserció sociolaboral de persones amb discapacitat.",
+                    "UC1037_3": "Efectuar el seguiment de la inserció sociolaboral amb l'empresa, l'usuari i el seu entorn personal."
+                }
+            },
+            "SSC450_3": {
+                "denominació": "Promoció i intervenció socioeducativa amb persones amb discapacitat",
+                "unitats_competència": {
+                    "UC1448_3": "Detectar, generar i utilitzar recursos socials i comunitaris per a la realització d'intervencions socioeducatives amb persones amb discapacitat.",
+                    "UC1449_3": "Organitzar i realitzar l'acompanyament de persones amb discapacitat en la realització d'activitats programades.",
+                    "UC1450_3": "Organitzar, desenvolupar i avaluar processos d'inclusió de persones amb discapacitat en espais d'oci i temps lliure.",
+                    "UC1451_3": "Organitzar i desenvolupar l'entrenament en estratègies cognitives bàsiques i alfabetització tecnològica per a persones amb discapacitat, en col·laboració amb professionals de nivell superior.",
+                    "UC1452_3": "Actuar, orientar i donar suport a les famílies de persones amb discapacitat, en col·laboració amb professionals de nivell superior."
+                }
+            }
+        },
+        "Incompletas": {
+            "SSC444_3": {
+                "denominació": "Atenció a l'alumnat amb necessitats educatives especials (ACNEE) en centres educatius",
+                "unitats_competència": {
+                    "UC1427_3": "Executar, en col·laboració amb el tutor/a i/o amb l'equip interdisciplinari del centre educatiu, els programes educatius de l'alumnat amb necessitats educatives especials (ACNEE) a la seua aula de referència.",
+                    "UC1428_3": "Implementar els programes d'autonomia i higiene personal en l'assec de l'alumnat amb necessitats educatives especials (ACNEE), participant amb l'equip interdisciplinari del centre educatiu."
+                }
+            },
+            "SSC321_3": {
+                "denominació": "Dinamització comunitària",
+                "unitats_competència": {
+                    "UC1022_3": "Dinamitzar la planificació, desenvolupament i avaluació d'intervencions i projectes comunitaris i de participació ciutadana que es desenvolupen entre els diferents agents que configuren una comunitat o una zona territorial.",
+                    "UC1024_3": "Establir estratègies de comunicació i difusió dels diferents projectes i actuacions comunitaris."
+                }
+            }
+        }
+    },
+    "ObjetivosGenerales": {
+        "a": "Analitzar el context social on es desenvolupen les intervencions d'integració social, identificant els factors i dinàmiques que influeixen en els processos d'inclusió i exclusió social.",
+        "b": "Detecció de necessitats i planificació d'intervencions socials ajustades a les característiques de persones i col·lectius en situació de vulnerabilitat.",
+        "c": "Dissenyar i implementar projectes de mediació comunitària per a la prevenció i resolució de conflictes socials.",
+        "d": "Organitzar i desenvolupar programes d'inserció sociolaboral per a persones amb discapacitat o en risc d'exclusió social, utilitzant metodologies com l'ocupació amb suport.",
+        "e": "Col·laborar en l'atenció educativa d'alumnat amb necessitats específiques d'ajuda educativa, seguint les adaptacions curriculars i les directrius de l'equip interdisciplinari.",
+        "f": "Aplicar sistemes augmentatius i alternatius de comunicació per a persones amb dificultats comunicatives, adaptant-los a les seues necessitats.",
+        "g": "Desenvolupar habilitats socials i comunicatives per millorar la interacció professional, la dinàmica de grups i la gestió de conflictes.",
+        "h": "Intervenir en unitats de convivència, incloent la prevenció i actuació en casos de violència domèstica, garantint la seguretat i el benestar de les persones.",
+        "i": "Incorporar la perspectiva de gènere en totes les fases dels projectes d'intervenció social.",
+        "j": "Participar en processos de dinamització comunitària i promoció de la participació ciutadana.",
+        "k": "Elaborar i desenvolupar programes d'habilitats d'autonomia personal i social per a persones en situació de dependència.",
+        "l": "Realitzar el seguiment i avaluació de les intervencions socials, elaborant la documentació associada.",
+        "m": "Aplicar normatives de prevenció de riscos laborals, protecció ambiental i qualitat en l'activitat professional.",
+        "n": "Adaptar-se als canvis tecnològics i organitzatius, aprofitant els recursos per a l'aprenentatge continu.",
+        "o": "Actuar amb ètica professional, autonomia i responsabilitat, fomentant el treball en equip i el respecte a la diversitat.",
+        "p": "Utilitzar eficaçment les tècniques de comunicació professional amb tots els agents implicats.",
+        "q": "Aplicar principis d'accessibilitat universal i disseny per a tothom en les activitats professionals.",
+        "r": "Gestionar recursos materials, humans i econòmics en el desenvolupament de projectes socials.",
+        "s": "Exercir els drets i deures com a professional i ciutadà/ana, participant activament en la societat."
+    },
+    "ModulosProfesionales": {
+        "0337": {
+            "nombre": "Context de la intervenció social",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza la dinàmica social, relacionant-la amb els conceptes i processos psicològics i sociològics que la sustenten.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han explicat els processos bàsics del desenvolupament evolutiu de l'ésser humà.",
+                        "b": "S'han caracteritzat els processos que influeixen en la conformació social de la conducta i les actituds.",
+                        "c": "S'han descrit els elements que configuren l'estructura social i les relacions entre ells.",
+                        "d": "S'han descrit els processos bàsics que intervenen en la dinàmica i el canvi social.",
+                        "e": "S'han identificat els factors que afavoreixen o inhibeixen el canvi social.",
+                        "f": "S'han identificat els factors que faciliten o dificulten la participació social i comunitària.",
+                        "g": "S'ha argumentat la necessitat de conéixer els aspectes bàsics de la dinàmica social en el disseny de les intervencions.",
+                        "h": "S'ha explicat el paper de la perspectiva de gènere en la dinàmica i el canvi social."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza els processos d'integració i exclusió social, identificant els factors sociològics i psicològics influents.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit els conceptes psicològics i sociològics bàsics relacionats amb els processos d'inclusió i exclusió social.",
+                        "b": "S'han explicat els processos bàsics associats a la integració i exclusió social de persones i col·lectius.",
+                        "c": "S'han identificat les principals causes de la marginació i l'exclusió social.",
+                        "d": "S'han identificat els indicadors generals de marginació i exclusió social.",
+                        "e": "S'han descrit les principals necessitats i demandes socials segons els diferents col·lectius.",
+                        "f": "S'ha diferenciat entre necessitat i demanda social.",
+                        "g": "S'ha argumentat la influència de les necessitats socials en la marginació i exclusió social.",
+                        "h": "S'han concretat els mecanismes i processos generals de reinserció social."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Interpreta el marc de la intervenció social, relacionant la seua estructura jurídica i administrativa amb la realitat en què es desenvolupa.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han explicat els antecedents i l'evolució de les polítiques d'intervenció social.",
+                        "b": "S'ha descrit l'actual marc jurídic i administratiu de la intervenció social.",
+                        "c": "S'ha relacionat el marc jurídic dels sistemes de protecció social amb la realitat en què es desenvolupen.",
+                        "d": "S'han concretat els diferents sectors d'intervenció social.",
+                        "e": "S'ha justificat la necessitat de la protecció social com un dret de les persones.",
+                        "f": "S'ha argumentat la importància dels sistemes de protecció social com a element d'integració i estabilitat social.",
+                        "g": "S'ha valorat la importància de la discriminació positiva en els processos d'igualtat.",
+                        "h": "S'ha descrit el paper del tècnic superior en Integració Social en el marc de la intervenció social."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Determina els àmbits d'intervenció social, descrivint les característiques i necessitats dels col·lectius que els integren.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les característiques biològiques, psicològiques i socials associades a situacions o risc d'exclusió social.",
+                        "b": "S'han identificat els col·lectius que integren els diferents àmbits d'intervenció social.",
+                        "c": "S'han explicat les característiques i necessitats de les persones i col·lectius susceptibles d'exclusió social.",
+                        "d": "S'han identificat els factors influents en la situació o risc d'exclusió social dels diferents col·lectius.",
+                        "e": "S'han descrit les variables que influeixen en les situacions de necessitat en els sectors objecte d'intervenció.",
+                        "f": "S'han relacionat les característiques dels subjectes i col·lectius específics amb les demandes i necessitats d'intervenció social.",
+                        "g": "S'han identificat les principals fonts d'informació sobre els col·lectius d'intervenció.",
+                        "h": "S'ha valorat la importància de fonamentar la intervenció en les necessitats dels destinataris."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Caracteritza serveis i programes d'intervenció social, relacionant-los amb les necessitats personals i socials a les que donen resposta.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents enfocaments, modalitats i estratègies d'intervenció social.",
+                        "b": "S'han relacionat les principals organitzacions i serveis dirigits a la intervenció social amb diferents col·lectius.",
+                        "c": "S'han descrit diferents contextos i sistemes organitzatius d'intervenció.",
+                        "d": "S'han explicat les línies generals dels principals programes d'intervenció social i promoció d'igualtat.",
+                        "e": "S'han identificat els aspectes bàsics de la intervenció social amb diferents col·lectius.",
+                        "f": "S'han enumerat les principals prestacions i ajudes a les que tenen dret els diferents col·lectius.",
+                        "g": "S'ha valorat la importància del suport social en la integració de les persones.",
+                        "h": "S'han concretat la importància social, l'àmbit d'actuació i els límits del voluntariat en la intervenció social."
+                    }
+                }
+            },
+            "horas": "70",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
+                "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "f", "o"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "fi", "o"]
+        },
+        "0338": {
+            "nombre": "Inserció sociolaboral",
+            "creditos": "13",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza el context de la inserció sociolaboral, analitzant el marc legal i els recursos existents.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit el marc legal i les polítiques d'ocupació dirigides a col·lectius amb dificultats d'inserció sociolaboral.",
+                        "b": "S'han descrit les principals modalitats d'inserció sociolaboral.",
+                        "c": "S'han identificat els recursos laborals i formatius per a la inserció sociolaboral de les persones usuàries.",
+                        "d": "S'han identificat les principals fonts d'informació sobre els recursos formatius i sociolaborals existents.",
+                        "e": "S'han enumerat tècniques per a l'elaboració d'arxius amb informació sobre els recursos sociolaborals i formatius existents.",
+                        "f": "S'han identificat tècniques per a l'estudi d'igualtat d'oportunitats que ofereixen els recursos sociolaborals i formatius.",
+                        "g": "S'han identificat els canals que permeten establir i mantenir relacions de col·laboració sistemàtica amb empreses i institucions.",
+                        "h": "S'ha argumentat la importància del paper del tècnic superior d'Integració Social en el projecte d'inserció sociolaboral."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Planifica la intervenció en inserció sociolaboral, identificant les necessitats de les persones a les que va dirigida.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han caracteritzat les necessitats específiques d'inserció sociolaboral que presenten els diferents col·lectius d'intervenció.",
+                        "b": "S'han identificat les variables que contribueixen a determinar les competències laborals de diferents col·lectius i persones usuàries.",
+                        "c": "S'ha valorat la importància de respectar el dret d'autodeterminació de les persones usuàries.",
+                        "d": "S'han definit les principals fases i elements del procés de planificació de projectes d'inserció sociolaboral.",
+                        "e": "S'han determinat itineraris d'inserció sociolaboral.",
+                        "f": "S'han identificat els documents i instruments de planificació característics de la inserció sociolaboral.",
+                        "g": "S'han descrit estratègies pròpies de la intervenció que garanteixen una major implicació de les persones usuàries i el seu entorn en la cerca activa d'ocupació.",
+                        "h": "S'ha valorat la importància de col·laborar amb l'equip interdisciplinari en l'anàlisi de l'ajust entre les persones usuàries i el lloc de treball."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica tècniques d'entrenament en habilitats sociolaborals, relacionant les necessitats de les persones usuàries amb l'entorn laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat tècniques de promoció de l'autonomia personal en l'entorn laboral.",
+                        "b": "S'han elaborat activitats per al desenvolupament d'habilitats sociolaborals dirigides a la cerca activa d'ocupació.",
+                        "c": "S'han aplicat tècniques per a millorar les habilitats socials de les persones usuàries en l'entorn laboral.",
+                        "d": "S'han seleccionat estratègies que afavoreixen l'establiment d'un bon clima laboral i eviten les situacions de crisi.",
+                        "e": "S'han estructurat les tasques i funcions pròpies del lloc de treball de la persona usuària.",
+                        "f": "S'han seqüenciat les activitats que afavoreixen el desenvolupament de l'activitat laboral de forma independent.",
+                        "g": "S'han establert les mesures que asseguren el compliment de les normes de seguretat i higiene durant la jornada laboral.",
+                        "h": "S'ha valorat la importància de la implicació de la persona usuària i la seua família en el procés d'inserció sociolaboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Planifica activitats d'inserció sociolaboral de persones amb discapacitat aplicant metodologia d'ocupació amb suport.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit el marc legal i les polítiques actives d'ocupació en col·lectius amb dificultat d'inserció.",
+                        "b": "S'han identificat les principals fonts d'informació sobre els recursos sociolaborals i formatius per a la seua inserció sociolaboral.",
+                        "c": "S'han aplicat tècniques d'entrenament en habilitats sociolaborals.",
+                        "d": "S'han descrit els principis que regeixen els projectes d'Ocupació amb Suport.",
+                        "e": "S'han aplicat procediments de presentació i acompanyament a l'empresa.",
+                        "f": "S'han determinat els suports externs i les seues tasques en el procés d'inserció sociolaboral.",
+                        "g": "S'han seleccionat estratègies per a la implicació dels suports naturals en l'adaptació de la persona usuària al seu lloc de treball.",
+                        "h": "S'han identificat les tècniques i recursos que afavoreixen l'adaptació de l'entorn laboral a les necessitats de la persona usuària.",
+                        "i": "S'han determinat productes de suport i adaptacions del lloc de treball.",
+                        "j": "S'han establert vies de comunicació que afavoreixen la coordinació entre l'empresa i l'equip durant la fase de suport.",
+                        "k": "S'ha valorat la necessitat de canviar de la fase de suport a la de seguiment o manteniment mitjançant l'anàlisi dels indicadors establerts."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Defineix procediments per al seguiment i avaluació del procés d'inserció sociolaboral, justificant la selecció de les estratègies, tècniques i instruments d'avaluació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els indicadors que determinen l'èxit o el fracàs del projecte d'inserció.",
+                        "b": "S'han descrit tècniques de recollida d'informació per a valorar el procés d'adaptació de la persona usuària al lloc de treball.",
+                        "c": "S'han elaborat instruments de valoració i observació del manteniment d'aprenentatges adquirits.",
+                        "d": "S'han descrit procediments de mesura de la satisfacció i adaptació dels implicats en el procés d'inserció laboral.",
+                        "e": "S'ha valorat la importància de mantenir els canals de comunicació entre tots els elements implicats en el procés d'inserció sociolaboral.",
+                        "f": "S'ha descrit el protocol de coordinació amb l'equip interdisciplinari durant la fase de seguiment.",
+                        "g": "S'han elaborat informes i memòries finals sobre el projecte d'inserció laboral.",
+                        "h": "S'han registrat i organitzat els resultats de l'avaluació del procés d'inserció sociolaboral."
+                    }
+                }
+            },
+            "horas": "115",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1034_3": "Gestionar la informació sobre els recursos sociolaborals i formatius i col·laborar en l'anàlisi de llocs de treball per a la inserció sociolaboral de persones amb discapacitat.",
+                "UC1035_3": "Realitzar les intervencions dirigides a l'entrenament per a l'adquisició i desenvolupament d'habilitats sociolaborals en les persones amb discapacitat.",
+                "UC1036_3": "Donar suport en el procés d'inserció sociolaboral de persones amb discapacitat.",
+                "UC1037_3": "Efectuar el seguiment de la inserció sociolaboral amb l'empresa, l'usuari i el seu entorn personal."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "k", "ñ", "o", "q", "r", "t", "u", "v", "w"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "k", "ñ", "o", "q", "s", "t", "u"]
+        },
+        "0339": {
+            "nombre": "Atenció a les unitats de convivència",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica la intervenció en la unitat de convivència, relacionant els models d'intervenció amb els aspectes generals de la metodologia d'intervenció social.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents models d'intervenció en unitats de convivència.",
+                        "b": "S'han analitzat els recursos destinats a la intervenció en unitats de convivència en l'àmbit estatal i autònom.",
+                        "c": "S'han identificat les característiques de la intervenció en el servei d'ajuda a domicili, programa de família, teleassistència i recursos residencials per a col·lectius específics.",
+                        "d": "S'han definit els objectius que s'han de aconseguir en una intervenció en una unitat de convivència.",
+                        "e": "S'han descrit les principals estratègies i tècniques per a la intervenció en unitats de convivència.",
+                        "f": "S'han definit les activitats dins del projecte d'intervenció en la unitat de convivència.",
+                        "g": "S'han determinat les pautes per a la intervenció directa en les unitats de convivència.",
+                        "h": "S'ha valorat el treball en equip per a la planificació de la intervenció."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza la intervenció en unitats de convivència, analitzant les necessitats de les mateixes en l'àmbit domèstic, personal i relacional.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els factors que intervenen en l'adquisició de competències necessàries per a l'autonomia de les unitats de convivència.",
+                        "b": "S'han identificat els nivells d'autonomia en les diferents unitats de convivència.",
+                        "c": "S'han identificat les necessitats i capacitats de les unitats de convivència en l'àmbit domèstic, personal i relacional.",
+                        "d": "S'han determinat les necessitats de formació, informació, supervisió i acompanyament de la unitat de convivència.",
+                        "e": "S'han relacionat els objectius i estratègies d'intervenció social amb les necessitats que presenta la unitat de convivència.",
+                        "f": "S'han organitzat l'espai, els recursos i els temps necessaris per a la posada en pràctica de la intervenció en les unitats de convivència, tenint en compte la generació d'entorns segurs.",
+                        "g": "S'han relacionat les mancances i alteracions en la vida quotidiana de les unitats de convivència amb la intervenció del tècnic superior en Integració Social.",
+                        "h": "S'ha argumentat la importància de respectar les decisions de cada membre de la unitat de convivència."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Dissena activitats del projecte d'intervenció en les unitats de convivència, analitzant les estratègies d'intervenció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els protocols d'actuació, tenint en compte les característiques de la unitat de convivència.",
+                        "b": "S'han planificat les activitats d'organització de les tasques de manteniment del domicili, tenint en compte el projecte d'intervenció.",
+                        "c": "S'han determinat estratègies i tècniques de suport social i emocional en la unitat de convivència.",
+                        "d": "S'ha previst el suport a la gestió domèstica de la unitat de convivència.",
+                        "e": "S'han descrit els suports de comunicació i productes de suport necessaris en la unitat de convivència.",
+                        "f": "S'han dissenyat processos per a la participació de les persones usuàries en els espais i activitats d'oci i temps lliure.",
+                        "g": "S'han establert processos i activitats d'educació afectiu-sexual.",
+                        "h": "S'ha definit l'assessorament a la unitat de convivència sobre les responsabilitats i accions que han d'assumir.",
+                        "i": "S'ha simulat la resolució de les contingències en la intervenció en unitats de convivència.",
+                        "j": "S'ha valorat la importància de que el tracte dispensat a les persones de la unitat de convivència s'ajuste als criteris i normes d'atenció establertes."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Organitza estratègies d'intervenció en l'àmbit de la prevenció de violència domèstica, analitzant els factors personals i socials.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els factors de risc en diferents col·lectius.",
+                        "b": "S'han identificat els diferents nivells de prevenció en la intervenció social.",
+                        "c": "S'han descrit diferents accions preventives per a evitar que es produeixen o agreugen situacions de violència domèstica.",
+                        "d": "S'han dissenyat estratègies que promoguen la prevenció d'accions violentes.",
+                        "e": "S'han seleccionat instruments i materials que ofereixen informació i formació.",
+                        "f": "S'han determinat accions de sensibilització per a les situacions de violència domèstica i l'entorn de les mateixes.",
+                        "g": "S'han elaborat activitats de sensibilització sobre el problema de la violència domèstica per a tots els sectors de la població.",
+                        "h": "S'ha valorat la utilització de les tecnologies de la informació i la comunicació en la realització d'accions preventives."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa estratègies d'intervenció en violència domèstica, relacionant les característiques de la situació amb el protocol establert.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit les característiques de possibles situacions de violència domèstica.",
+                        "b": "S'han descrit els factors de risc en situacions de violència domèstica.",
+                        "c": "S'han analitzat les prestacions dels serveis existents relacionats amb la detecció i atenció de situacions de violència.",
+                        "d": "S'han seleccionat els indicadors de violència domèstica.",
+                        "e": "S'han identificat els protocols existents per a actuar en situacions de violència domèstica.",
+                        "f": "S'ha simulat l'acompanyament personal, social i emocional en situacions de violència domèstica.",
+                        "g": "S'han aplicat tècniques d'atenció psicosocial per a les persones que han patit una situació de violència domèstica.",
+                        "h": "S'ha valorat el compliment dels criteris i les normes establertes en el protocol d'actuació quant al tracte dispensat a les persones que han patit violència domèstica."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Realitza activitats per al control i seguiment de la intervenció en la unitat de convivència, justificant la selecció de les estratègies, tècniques i instruments d'avaluació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els indicadors del procés de control i seguiment de la intervenció en unitats de convivència.",
+                        "b": "S'han seleccionat les diferents tècniques, instruments i protocols per a la realització del seguiment de la intervenció en les unitats de convivència.",
+                        "c": "S'han elaborat els instruments d'avaluació que valoren interna i externament la intervenció en la unitat de convivència.",
+                        "d": "S'han aplicat tècniques i procediments d'avaluació per a valorar el nivell de satisfacció de les necessitats de les unitats de convivència.",
+                        "e": "S'han registrat les dades en els suports establerts per l'equip interdisciplinari.",
+                        "f": "S'ha transmès la informació a les persones implicades en la intervenció tant directa com indirectament.",
+                        "g": "S'ha valorat la necessitat de que el tècnic superior d'Integració Social reflexione sobre les seues pròpies intervencions.",
+                        "h": "S'ha justificat la presa de decisions per a modificar o adaptar la intervenció en les unitats de convivència."
+                    }
+                }
+            },
+            "horas": "80",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
+                "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "g", "f", "o", "q", "r", "s", "t", "u", "v", "w"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "g", "f", "o", "q", "r", "s", "t", "u"]
+        },
+        "0340": {
+            "nombre": "Mediació comunitària",
+            "creditos": "9",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica intervencions de mediació, relacionant-les amb els contextos en què es desenvolupen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat i interpretat el context sociocultural on es du a terme la intervenció de mediació comunitària.",
+                        "b": "S'han seleccionat els objectius de la intervenció, partint de les característiques del context social en què es desenvolupa.",
+                        "c": "S'ha valorat la importància de la planificació en el procés d'intervenció.",
+                        "d": "S'han dissenyat activitats o tallers afavoridors de la comunicació.",
+                        "e": "S'han dissenyat activitats d'encontre comunitari atenent a les necessitats detectades en les potencial persones usuàries.",
+                        "f": "S'ha identificat als mediadors naturals com a agents possibilitadors d'intercanvi de comunicació.",
+                        "g": "S'han creat o revitalitzat espais d'encontre entre els individus, grups i entitats les relacions dels quals siguen susceptibles de derivar en conflicte.",
+                        "h": "S'ha valorat la coherència de la planificació de les activitats amb els objectius previstos en la intervenció."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza actuacions per a la prevenció de conflictes, seleccionant les estratègies d'intervenció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han interpretat els principis que fonamenten els diferents models d'intervenció per a la prevenció de conflictes.",
+                        "b": "S'han identificat les principals estratègies d'intervenció en la gestió de conflictes.",
+                        "c": "S'han seleccionat els models i tècniques que es van a emprar en el procés de prevenció i/o resolució de conflictes d'acord amb el coneixement de la situació prèvia.",
+                        "d": "S'han seguit criteris de confidencialitat i respecte en el tractament de la informació sobre el conflicte.",
+                        "e": "S'ha planificat activitats apropiades en els processos mediació grupal o comunitària, potenciant el diàleg i la confiança.",
+                        "f": "S'han seleccionat els espais d'encontre atenent a les característiques dels participants i del context.",
+                        "g": "S'ha ofert el servei de mediació voluntària com una opció en la gestió de conflictes.",
+                        "h": "S'ha valorat el contrast d'opinions i l'intercanvi d'experiències de tots els participants en l'organització de la intervenció."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Realitza activitats que afavoreixen els processos de mediació, descrivint el desenvolupament dels mateixos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han adequat o modificat els espais, adaptant-se a les necessitats de la intervenció.",
+                        "b": "S'ha comunicat la localització del lloc d'encontre a totes les persones usuàries potencial.",
+                        "c": "S'han utilitzat les tècniques de comunicació, afavorint el diàleg i la relació de les parts implicades.",
+                        "d": "S'han aplicat tècniques per a mantenir un clima de serenitat en el procés de mediació.",
+                        "e": "S'ha informat a les parts implicades en el procés de mediació sobre les fases del mateix per al seu coneixement i acceptació.",
+                        "f": "S'ha derivat, en cas precís, a les parts en conflicte a altres serveis de la comunitat.",
+                        "g": "S'han elaborat propostes de treball per a mediar en conflictes grupals i/o millorar les relacions de la comunitat.",
+                        "h": "S'han redactat els acords per escrit i s'han facilitat a les parts per a la seua posterior confirmació.",
+                        "i": "S'ha mostrat iniciativa davant les situacions sorgides en el desenvolupament de la intervenció."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza activitats d'avaluació, comparant els resultats de la intervenció amb els objectius previstos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han establert els criteris i indicadors per a dur a terme l'avaluació.",
+                        "b": "S'han definit les estratègies per a comprovar els resultats de la intervenció realitzada.",
+                        "c": "S'han seleccionat les tècniques i instruments per a avaluar la intervenció realitzada.",
+                        "d": "S'ha comprovat sistemàticament que la intervenció s'està realitzant de manera correcta.",
+                        "e": "S'ha comprovat la funcionalitat i adequació dels espais i recursos emprats.",
+                        "f": "S'ha implicat a les persones que han participat en la intervenció en la comprovació dels resultats de la mateixa.",
+                        "g": "S'ha comprovat el nivell de compliment dels objectius previstos.",
+                        "h": "S'ha valorat la importància de mantenir una actitud permanent de millora en l'eficàcia i qualitat del servei."
+                    }
+                }
+            },
+            "horas": "80",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1039_3": "Prevenir conflictes entre diferents persones, actors i col·lectius socials.",
+                "UC1040_3": "Organitzar i implementar el procés de gestió de conflictes.",
+                "UC1041_3": "Realitzar la valoració, el seguiment i la difusió de la mediació com una via de gestió de conflictes."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "m", "ñ", "o", "q", "r", "t", "w"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "m", "ñ", "o", "q", "s", "u"]
+        },
+        "0341": {
+            "nombre": "Suport a la intervenció educativa",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza el suport a la intervenció educativa, relacionant-lo amb les competències i l'àmbit d'actuació del tècnic en el centre escolar.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les persones susceptibles d'intervenció per part del tècnic, en el context educatiu.",
+                        "b": "S'han descrit les estructures organitzatives dels centres que atenen alumnat amb necessitats específiques de suport educatiu.",
+                        "c": "S'ha analitzat la legislació vigent en relació amb l'atenció a la diversitat en els centres educatius.",
+                        "d": "S'han identificat els diferents nivells de concreció curricular i els elements bàsics del currículum.",
+                        "e": "S'ha relacionat la intervenció educativa dirigida a l'alumnat amb necessitats específiques de suport educatiu, amb el projecte educatiu i els documents de programació del centre.",
+                        "f": "S'han identificat les característiques, objectius, organització i funcionament dels programes d'atenció a la diversitat.",
+                        "g": "S'ha identificat l'estructura organitzativa i funcional de l'equip interdisciplinari d'atenció a l'alumnat amb necessitats específiques de suport educatiu.",
+                        "h": "S'ha identificat l'àmbit d'actuació del tècnic en el context de l'atenció a la diversitat en els centres educatius.",
+                        "i": "S'ha valorat la importància de la planificació i el treball en equip en el procés d'intervenció educativa."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza el suport a la intervenció educativa, aplicant les directrius de l'equip interdisciplinari i els principis d'inclusió i individualització.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit l'estructura i els elements d'una adaptació curricular.",
+                        "b": "S'han relacionat les necessitats educatives específiques de suport educatiu amb les adaptacions curriculars requerides.",
+                        "c": "S'han identificat les activitats que s'han de realitzar amb l'alumnat, analitzant les adaptacions curriculars individuals.",
+                        "d": "S'han aplicat tècniques per a la programació d'activitats de suport a la intervenció educativa, atenent als principis d'inclusió i individualització.",
+                        "e": "S'han seleccionat criteris metodològics d'acord amb els objectius de la institució, el marc curricular i les necessitats i interessos de l'alumnat.",
+                        "f": "S'han identificat les mesures d'accés al currículum establertes en una adaptació curricular.",
+                        "g": "S'ha valorat el paper de les activitats complementàries en la integració escolar.",
+                        "h": "S'han descrit les funcions del tècnic per a promoure la participació en les activitats complementàries de les persones destinatàries."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Desenvolupa activitats de suport a la intervenció educativa, adequant els materials curriculars a les directrius de l'equip interdisciplinari i les necessitats de l'alumnat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha seqüenciat l'activitat, atenent a la temporalització establerta en la programació.",
+                        "b": "S'han seleccionat materials curriculars acords amb les directrius establertes per l'equip interdisciplinari.",
+                        "c": "S'han adequat els materials curriculars a les característiques de l'alumne o alumna.",
+                        "d": "S'han aplicat criteris d'organització de l'espai, de materials i de mobiliari que garanteixen l'accessibilitat i el compliment de les normes de seguretat i higiene.",
+                        "e": "S'han identificat productes de suport per a afavorir l'autonomia en l'aula.",
+                        "f": "S'ha valorat l'ús de les tecnologies de la informació i la comunicació en l'adaptació de materials curriculars a les característiques de l'alumnat.",
+                        "g": "S'ha sensibilitzat a tots els qui intervenen en el procés educatiu de la importància de generar entorns segurs."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza el seguiment dels processos de suport a la intervenció educativa, transmetent la informació a l'equip interdisciplinari o al tutor o tutora de l'alumnat pels canals establerts.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les tècniques i instruments per al control i seguiment del suport a la intervenció educativa.",
+                        "b": "S'han identificat les activitats d'avaluació del programa educatiu.",
+                        "c": "S'han seleccionat les estratègies i tècniques d'avaluació de les activitats de suport a la intervenció educativa.",
+                        "d": "S'han identificat indicadors d'avaluació en les adaptacions curriculars de la intervenció educativa.",
+                        "e": "S'ha valorat la importància de l'avaluació en els diferents moments del procés.",
+                        "f": "S'han utilitzat instruments d'avaluació en l'aplicació de tècniques de prevenció d'accidents en l'aula.",
+                        "g": "S'ha interpretat la informació obtinguda dels diferents instruments.",
+                        "h": "S'ha argumentat sobre la importància del procés de seguiment de l'activitat del tècnic i de l'eficàcia de la intervenció."
+                    }
+                }
+            },
+            "horas": "65",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1427_3": "Executar, en col·laboració amb el tutor/a i/o amb l'equip interdisciplinari del centre educatiu, els programes educatius de l'alumnat amb necessitats educatives especials (ACNEE) a la seua aula de referència.",
+                "UC1428_3": "Implementar els programes d'autonomia i higiene personal en l'assec de l'alumnat amb necessitats educatives especials (ACNEE), participant amb l'equip interdisciplinari del centre educatiu."
+            },
+            "ObjetivosGenerales ": ["a", "d", "f", "h", "j", "ñ", "o", "q", "r", "t", "u", "v", "w"],
+            "CompetenciasTitulo": ["a", "d", "f", "h", "j", "ñ", "o", "q", "s", "t", "u"]
+        },
+        "0342": {
+            "nombre": "Promoció de l'autonomia personal",
+            "creditos": "13",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Elabora programes d'entrenament d'habilitats d'autonomia personal i social, seleccionant les tècniques pròpies de la intervenció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les fases d'un programa d'entrenament d'habilitats d'autonomia personal i social.",
+                        "b": "S'han determinat els elements d'un programa d'entrenament d'habilitats d'autonomia personal i social.",
+                        "c": "S'ha valorat l'estat de les persones usuàries per a determinar els objectius del programa.",
+                        "d": "S'han identificat estratègies d'intervenció en l'entrenament d'habilitats d'autonomia personal i social.",
+                        "e": "S'han seleccionat tècniques d'entrenament d'habilitats d'autonomia personal i social en funció de la situació d'intervenció.",
+                        "f": "S'han seqüenciat les actuacions dirigides a l'aprenentatge i manteniment d'hàbits d'autonomia personal i social.",
+                        "g": "S'han determinat els recursos del programa d'entrenament en habilitats d'autonomia personal i social.",
+                        "h": "S'han dissenyat les adaptacions necessàries en el programa d'intervenció per a atendre les necessitats individuals de les persones.",
+                        "i": "S'han establert les pautes d'actuació i col·laboració amb l'equip interdisciplinari i la família.",
+                        "j": "S'ha argumentat la importància de les habilitats d'autonomia personal i social en la vida quotidiana de les persones."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza activitats d'adquisició d'habilitats de la vida diària, descrivint les fases del procés de promoció d'autonomia.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat l'estat de les persones per determinar els objectius de les activitats.",
+                        "b": "S'han definit diferents situacions d'ensenyament-aprenentatge de promoció de l'autonomia en les activitats de la vida diària.",
+                        "c": "S'han seleccionat les tècniques per afavorir l'autonomia en les activitats de la vida diària.",
+                        "d": "S'han seleccionat els mitjans i ajudes tècniques.",
+                        "e": "S'han seqüenciat activitats de promoció d'autonomia en les activitats de la vida diària.",
+                        "f": "S'han establert les adaptacions de les ajudes tècniques en funció de les característiques de la persona.",
+                        "g": "S'han establert mesures de prevenció i seguretat, seguint la normativa legal vigent.",
+                        "h": "S'ha valorat la necessitat d'establir estratègies de col·laboració amb la família."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Organitza activitats d'adquisició de competències bàsiques de mobilitat, descrivint les fases del procés.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat l'estat de les persones per determinar els objectius de les activitats.",
+                        "b": "S'han seleccionat les tècniques d'orientació i mobilitat.",
+                        "c": "S'han seleccionat els mitjans i ajudes tècniques.",
+                        "d": "S'han seqüenciat activitats d'adquisició de competències bàsiques de mobilitat.",
+                        "e": "S'han establert les adaptacions de les ajudes tècniques en funció de les característiques de la persona.",
+                        "f": "S'han establert mesures de prevenció i seguretat seguint la normativa legal vigent.",
+                        "g": "S'ha valorat la necessitat de controlar les variacions en la situació de la persona respecte a la seua mobilitat.",
+                        "h": "S'ha valorat la necessitat d'establir estratègies de col·laboració amb la família."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Organitza activitats d'entrenament i adquisició d'habilitats socials, justificant la seua elecció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals obstacles que dificulten la comunicació i interacció social de la persona.",
+                        "b": "S'ha valorat l'estat de les persones per determinar els objectius de les activitats.",
+                        "c": "S'han definit diferents situacions d'ensenyament-aprenentatge d'adquisició d'habilitats socials.",
+                        "d": "S'han concretat les estratègies metodològiques que s'han de seguir en el procés d'intervenció.",
+                        "e": "S'han seleccionat les tècniques i procediments que s'han d'aplicar en el desenvolupament d'habilitats socials.",
+                        "f": "S'han organitzat les tasques que s'han de realitzar per a l'adquisició d'habilitats socials.",
+                        "g": "S'ha valorat la importància del paper del professional com a model en l'adquisició d'habilitats socials.",
+                        "h": "S'ha determinat el protocol d'actuació per a una situació d'alteració de conducta."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Organitza activitats d'estimulació, manteniment i rehabilitació de les capacitats cognitives, seleccionant-les en funció de les necessitats que presenten.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat l'estat de les persones per determinar els objectius de les activitats.",
+                        "b": "S'han seleccionat estratègies d'intervenció dirigides al manteniment i millora de les capacitats cognitives.",
+                        "c": "S'han definit les tècniques i procediments que s'han d'aplicar en el desenvolupament d'activitats d'estimulació, manteniment i rehabilitació de les capacitats cognitives.",
+                        "d": "S'han seleccionat recursos per a la realització d'exercicis i activitats proposades.",
+                        "e": "S'han seqüenciat activitats d'estimulació, manteniment i rehabilitació de les capacitats cognitives.",
+                        "f": "S'han establert adaptacions en les activitats en funció de les característiques de les persones.",
+                        "g": "S'ha valorat la necessitat de controlar les variacions en la situació de la persona respecte a les seues capacitats cognitives.",
+                        "h": "S'ha valorat la necessitat d'establir estratègies de col·laboració amb la família."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Desenvolupa activitats d'entrenament d'habilitats d'autonomia personal i social, seleccionant-les en funció de les característiques de les persones usuàries.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han realitzat activitats per al manteniment i millora de l'autonomia personal i social.",
+                        "b": "S'han adaptat les activitats a les necessitats de les persones usuàries.",
+                        "c": "S'han utilitzat els mitjans i ajudes tècniques establerts en el programa d'intervenció.",
+                        "d": "S'han utilitzat els materials amb iniciativa i creativitat.",
+                        "e": "S'ha assessorat a la persona usuària sobre els serveis i recursos comunitaris i la seua manera d'utilització.",
+                        "f": "S'han aplicat protocols d'actuació davant situacions de crisi en les persones.",
+                        "g": "S'han adoptat mesures de prevenció i seguretat.",
+                        "h": "S'han resolt de manera eficient les contingències sorgides.",
+                        "i": "S'ha valorat la importància de respectar la capacitat d'elecció de les persones usuàries."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Realitza activitats de seguiment del procés de promoció d'habilitats d'autonomia personal i social justificant la selecció de les estratègies, tècniques i instruments d'avaluació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat criteris i indicadors per a l'avaluació del programa d'entrenament.",
+                        "b": "S'han elaborat instruments d'avaluació per al programa d'entrenament.",
+                        "c": "S'han registrat les dades en els suports establerts.",
+                        "d": "S'han elaborat informes sobre el desenvolupament del programa.",
+                        "e": "S'han transmès els resultats de l'avaluació a les persones implicades.",
+                        "f": "S'ha respost de manera eficaç a les contingències sorgides en la intervenció.",
+                        "g": "S'ha valorat la importància de la transmissió de la informació a l'equip interdisciplinari.",
+                        "h": "S'ha argumentat la importància del seguiment de la intervenció per a la millora de la mateixa."
+                    }
+                }
+            },
+            "horas": "115",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social."
+            },
+            "ObjetivosGenerales ": ["a", "b", "d", "f", "h", "i", "j", "ñ", "o", "q", "r", "t", "u", "v", "w"],
+            "CompetenciasTitulo": ["a", "b", "d", "f", "h", "i", "j", "ñ", "o", "q", "s", "t", "u"]
+        },
+        "0343": {
+            "nombre": "Sistemes augmentatius i alternatius de la comunicació",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Detecta les necessitats comunicatives de l'usuari, relacionant-les amb els sistemes alternatius i augmentatius de comunicació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les necessitats comunicatives de l'usuari.",
+                        "b": "S'han identificat els recursos que afavoreixen el procés de comunicació.",
+                        "c": "S'ha valorat la influència de la comunicació en el desenvolupament diari de les persones.",
+                        "d": "S'han descrit i valorat els aspectes que determinen l'elecció d'un o altre sistema de comunicació en funció de les característiques motòriques, cognitives, actitudinals i ambientals de l'usuari.",
+                        "e": "S'han analitzat les diferents formes d'interacció i les condicions més favorables perquè la comunicació s'estableix.",
+                        "f": "S'han identificat elements externs, que poden afectar a l'ús correcte dels sistemes alternatius i augmentatius de comunicació.",
+                        "g": "S'han aplicat estratègies de foment de la implicació familiar, escolar i del seu entorn social, en la intervenció amb sistemes alternatius i augmentatius de comunicació."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza la intervenció per a potenciar la comunicació, interpretant les característiques de l'usuari i del context.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit els objectius d'acord amb les necessitats de l'usuari.",
+                        "b": "S'han seleccionat les estratègies i la metodologia comunicativa per a les diferents propostes d'intervenció.",
+                        "c": "S'han identificat procediments d'intervenció adequats.",
+                        "d": "S'han seleccionat els sistemes alternatius i augmentatius de comunicació d'acord amb els objectius previstos.",
+                        "e": "S'han identificat productes de suport adequades.",
+                        "f": "S'ha valorat la importància d'organitzar la intervenció en l'àmbit del suport a la comunicació."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica programes d'intervenció en l'àmbit de la comunicació, utilitzant sistemes alternatius i augmentatius amb ajuda.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han creat missatges amb els diferents sistemes de comunicació amb ajuda, facilitant la comunicació i atenció a l'usuari.",
+                        "b": "S'han descrit els principals signes utilitzats en les situacions habituals d'atenció social i educativa.",
+                        "c": "S'han comprés missatges expressats mitjançant sistemes de comunicació amb ajuda.",
+                        "d": "S'han realitzat els ajustos necessaris en funció de les característiques particulars dels usuaris.",
+                        "e": "S'han identificat productes de suport que es podrien aplicar en casos pràctics caracteritzats i els requisits d'ubicació i ús que haurien de mantenir-se.",
+                        "f": "S'han aplicat estratègies comunicatives analitzant diferents contextos.",
+                        "g": "S'ha analitzat la importància d'incrementar el nombre de símbols i pictogrames atenent als interessos i necessitats de la persona usuària.",
+                        "h": "S'ha comprovat l'ús correcte d'aquells sistemes en els quals siga precisa la participació de terceres persones.",
+                        "i": "S'ha fomentat la implicació de l'entorn de l'alumne en el coneixement i ús del sistema amb ajuda."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Aplica programes d'intervenció en l'àmbit de la comunicació, utilitzant llengua de signes i sistemes alternatius i augmentatius sense ajuda.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les estructures bàsiques dels sistemes alternatius sense ajuda i els principals signes utilitzats en les situacions habituals d'atenció social i educativa.",
+                        "b": "S'han creat missatges en llengua de signes i en diferents sistemes de comunicació sense ajuda, facilitant la comunicació i atenció a les persones usuàries.",
+                        "c": "S'han aplicat els ajustos necessaris en funció de les característiques particulars dels usuaris.",
+                        "d": "S'han comprés missatges expressats en llengua de signes i mitjançant sistemes de comunicació sense ajuda.",
+                        "e": "S'han aplicat estratègies comunicatives, analitzant diferents contextos comunicatius.",
+                        "f": "S'ha analitzat la importància d'augmentar el nombre de signes i el seu contingut atenent als interessos i necessitats de la persona usuària.",
+                        "g": "S'ha comprovat l'ús correcte d'aquells sistemes en els quals siga precisa la participació de terceres persones.",
+                        "h": "S'ha fomentat la implicació de l'entorn de l'alumne en el coneixement i ús del sistema sense ajuda."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Comprova l'eficàcia de la intervenció, detectant els aspectes susceptibles de millora en l'àmbit comunicatiu.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha registrat el nivell de competència comunicativa en els principals sistemes de comunicació de la persona usuària.",
+                        "b": "S'ha comprovat la correcta utilització dels elements que componen el sistema de comunicació elegit.",
+                        "c": "S'han registrat elements aliens als sistemes de comunicació aplicats, que pogueren interferir en el desenvolupament de la intervenció en la comunicació.",
+                        "d": "S'han identificat els desajustos entre la persona usuària i el sistema de comunicació establert.",
+                        "e": "S'ha determinat el nivell de compliment dels objectius previstos.",
+                        "f": "S'ha valorat la importància de realitzar registres comunicatius com a mitjà d'avaluació de la competència comunicativa de la persona usuària.",
+                        "g": "S'han analitzat les principals informacions i orientacions ofertes als cuidadors i cuidadores, afavorint la generalització de conductes comunicatives establertes."
+                    }
+                }
+            },
+            "horas": "80",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0254_3": "Establir, adaptar i aplicar sistemes alternatius de comunicació."
+            },
+            "ObjetivosGenerales ": ["a", "b", "d", "h", "j", "l", "ñ", "o", "q", "r", "t", "u", "w"],
+            "CompetenciasTitulo": ["a", "b", "d", "h", "j", "l", "ñ", "o", "q", "s", "t", "u"]
+        },
+        "0344": {
+            "nombre": "Metodologia de la intervenció social",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Determina mètodes, tècniques i instruments per a l'anàlisi de la realitat social, interpretant les seues característiques i l'àmbit d'aplicació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals mètodes, tècniques i instruments d'obtenció d'informació.",
+                        "b": "S'han concretat els requisits d'aplicació dels diferents instruments i recursos.",
+                        "c": "S'han identificat les aplicacions, possibilitats i limitacions de les diverses tècniques i instruments.",
+                        "d": "S'han elaborat instruments coherents amb la seua finalitat.",
+                        "e": "S'han utilitzat les tecnologies de la comunicació en l'elaboració d'instruments per a l'obtenció d'informació.",
+                        "f": "S'han seleccionat les tècniques d'anàlisi adequades a la situació.",
+                        "g": "S'ha justificat el paper de l'anàlisi de la realitat en l'èxit de la intervenció.",
+                        "h": "S'han valorat els aspectes ètics de la recollida i tractament de la informació."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Determina els elements que constitueixen un projecte d'intervenció social, relacionant-los amb els diferents models de planificació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han comparat diversos models teòrics d'intervenció social.",
+                        "b": "S'han identificat els diferents nivells de planificació en la intervenció social.",
+                        "c": "S'han comparat diferents models de planificació.",
+                        "d": "S'han descrit les fases del procés de planificació.",
+                        "e": "S'ha justificat la necessitat de fonamentar adequadament els projectes d'intervenció social.",
+                        "f": "S'han identificat els elements fonamentals de la planificació.",
+                        "g": "S'han comparat mètodes, tècniques i instruments aplicables en la intervenció social."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Determina estratègies de promoció i difusió de projectes d'intervenció social, relacionant els recursos disponibles amb els objectius que es persegueixen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han explicat els conceptes i processos bàsics relatius a la publicitat i els mitjans de comunicació.",
+                        "b": "S'ha argumentat la importància dels mitjans de comunicació en la promoció i difusió dels projectes socials.",
+                        "c": "S'han identificat els elements fonamentals d'una campanya de promoció i difusió.",
+                        "d": "S'han descrit els principals mitjans, estratègies i tècniques per a la promoció i difusió dels projectes socials.",
+                        "e": "S'han utilitzat les tecnologies de la informació i la comunicació per a l'elaboració de materials de promoció i difusió.",
+                        "f": "S'han dissenyat campanyes de promoció i difusió de projectes socials utilitzant recursos de diversa mena.",
+                        "g": "S'ha argumentat la necessitat de promocionar i difondre els projectes socials.",
+                        "h": "S'ha justificat la necessitat de garantir la veracitat informativa en els processos de promoció i difusió dels projectes socials."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Incorpora la perspectiva de gènere en l'elaboració dels projectes d'intervenció social, relacionant les estratègies i criteris utilitzats amb el marc teòric i legal vigent.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha argumentat la importància de l'anàlisi de la realitat des de la perspectiva de gènere.",
+                        "b": "S'ha argumentat la necessitat d'incorporar la perspectiva de gènere en l'elaboració dels projectes d'intervenció social.",
+                        "c": "S'ha interpretat el marc legislatiu que promou la igualtat d'oportunitats.",
+                        "d": "S'ha analitzat la informació i els recursos de les institucions i organismes d'igualtat que existisquen en l'entorn de la intervenció.",
+                        "e": "S'han identificat els criteris per a incorporar la perspectiva de gènere en els projectes.",
+                        "f": "S'han analitzat els protocols internacionals sobre l'ús del llenguatge no sexista.",
+                        "g": "S'ha assegurat l'ús no sexista del llenguatge en la planificació dels projectes d'intervenció social.",
+                        "h": "S'han identificat les estratègies per a incorporar la perspectiva de gènere en els instruments de promoció i difusió.",
+                        "i": "S'han identificat les principals manifestacions de violència de gènere com a reflex de la desigualtat entre homes i dones."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Defineix procediments d'avaluació de projectes d'intervenció social, analitzant els diferents models teòrics i tenint en compte la perspectiva de gènere.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit models, tècniques i instruments d'avaluació en la intervenció social.",
+                        "b": "S'han explicat les funcions i principis generals de l'avaluació.",
+                        "c": "S'han descrit les diferents fases de l'avaluació.",
+                        "d": "S'han concretat les tècniques, indicadors, criteris i instruments d'avaluació de projectes d'intervenció social.",
+                        "e": "S'han establert els procediments generals per a la gestió de la qualitat en els projectes dissenyats.",
+                        "f": "S'han determinat estratègies i instruments per a verificar la incorporació de la perspectiva de gènere en projectes d'intervenció social.",
+                        "g": "S'ha argumentat la necessitat de l'avaluació per a optimitzar el funcionament dels programes i garantir la seua qualitat.",
+                        "h": "S'han utilitzat les tecnologies de la informació i la comunicació per a l'elaboració i presentació d'informes d'avaluació i memòries."
+                    }
+                }
+            },
+            "horas": "70",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
+                "UC1026_3": "Incorporar la perspectiva de gènere en els projectes d'intervenció social."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "ñ", "w"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "ñ", "u"]
+        },
+        "0017": {
+            "nombre": "Habilitats socials",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Implementa estratègies i tècniques per afavorir la comunicació i relació social amb el seu entorn, relacionant-les amb els principis de la intel·ligència emocional i social.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els principis de la intel·ligència emocional i social.",
+                        "b": "S'ha valorat la importància de les habilitats socials en el desenvolupament de la labor professional.",
+                        "c": "S'han caracteritzat les diferents etapes d'un procés comunicatiu.",
+                        "d": "S'han identificat els diferents estils de comunicació, els seus avantatges i limitacions.",
+                        "e": "S'ha valorat la importància de l'ús de la comunicació tant verbal com no verbal en les relacions interpersonals.",
+                        "f": "S'ha establert una eficaç comunicació per a assignar tasques, rebre instruccions i intercanviar idees o informació.",
+                        "g": "S'han utilitzat les habilitats socials adequades a la situació i atenent a la diversitat cultural.",
+                        "h": "S'ha demostrat interès per no jutjar a les persones i respectar els seus elements diferenciadors personals: emocions, sentiments, personalitat.",
+                        "i": "S'ha demostrat una actitud positiva cap al canvi i a aprendre de tot el que succeeix.",
+                        "j": "S'ha valorat la importància de l'autocrítica i l'autoavaluació en el desenvolupament d'habilitats de relació interpersonal i de comunicació adequades."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Dinamitza el treball del grup, aplicant les tècniques adequades i justificant la seua selecció en funció de les característiques, situació i objectius del grup.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els elements fonamentals d'un grup, la seua estructura i dinàmica, així com els factors que poden modificar-les.",
+                        "b": "S'han analitzat i seleccionat les diferents tècniques de dinamització i funcionament de grups.",
+                        "c": "S'han explicat els avantatges del treball en equip front a l'individual.",
+                        "d": "S'han diferenciat els diversos rols que poden donar-se en un grup i les relacions entre ells.",
+                        "e": "S'han identificat les principals barreres de comunicació grupal.",
+                        "f": "S'han plantejat diferents estratègies d'actuació per aprofitar la funció de lideratge i els rols en l'estructura i funcionament del grup.",
+                        "g": "S'ha definit el repartiment de tasques com a procediment per al treball en grup.",
+                        "h": "S'ha valorat la importància d'una actitud tolerant i d'empatia per a aconseguir la confiança del grup.",
+                        "i": "S'ha aconseguit un ambient de treball relaxat i cooperatiu.",
+                        "j": "S'han respectat les opinions diferents a la pròpia i els acords de grup."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Condueix reunions analitzant les diferents formes o estils d'intervenció i d'organització en funció de les característiques dels destinataris i el context.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els diferents tipus i funcions de les reunions.",
+                        "b": "S'han descrit les etapes del desenvolupament d'una reunió.",
+                        "c": "S'han aplicat tècniques de moderació de reunions, justificant-les.",
+                        "d": "S'ha demostrat la importància de la capacitat d'exposar idees de manera clara i concisa.",
+                        "e": "S'han descrit els factors de risc, els sabotatges possibles d'una reunió, justificant les estratègies de resolució.",
+                        "f": "S'ha valorat la necessitat d'una bona i diversa informació en la convocatòria de reunions.",
+                        "g": "S'ha descrit la importància de la motivació i de les estratègies utilitzades, per a aconseguir la participació en les reunions.",
+                        "h": "S'han aplicat tècniques de recollida d'informació i avaluació de resultats d'una reunió.",
+                        "i": "S'han demostrat actituds de respecte i tolerància en la conducció de reunions."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Implementa estratègies de gestió de conflictes i resolució de problemes, seleccionant-les en funció de les característiques del context i analitzant els diferents models.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat i identificat les principals fonts dels problemes i conflictes grupals.",
+                        "b": "S'han descrit les principals tècniques i estratègies per a la gestió de conflictes.",
+                        "c": "S'han identificat i descrit les estratègies més adequades per a la cerca de solucions i resolució de problemes.",
+                        "d": "S'han descrit les diferents fases del procés de presa de decisions.",
+                        "e": "S'han resolt problemes i conflictes aplicant els procediments adequats a cada cas.",
+                        "f": "S'han respectat les opinions dels demés respecte a les possibles vies de solució de problemes i conflictes.",
+                        "g": "S'han aplicat correctament tècniques de mediació i negociació.",
+                        "h": "S'ha tingut en compte a les persones (usuaris), siga quina siga la seua edat o condició física i mental, en el procés de presa de decisions.",
+                        "i": "S'ha planificat la tasca de presa de decisions i l'autoavaluació del procés.",
+                        "j": "S'ha valorat la importància de l'intercanvi comunicatiu en la presa de decisions."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Avalua els processos de grup i la pròpia competència social per al desenvolupament de les seues funcions professionals, identificant els aspectes susceptibles de millora.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat els indicadors d'avaluació.",
+                        "b": "S'han aplicat tècniques d'investigació social i sociomètriques.",
+                        "c": "S'ha autoavaluat la situació personal i social de partida del professional.",
+                        "d": "S'han dissenyat instruments de recollida d'informació.",
+                        "e": "S'han registrat les dades en suports establerts.",
+                        "f": "S'ha interpretat les dades recollides.",
+                        "g": "S'han identificat les situacions que necessiten millorar.",
+                        "h": "S'han marcat les pautes a seguir en la millora.",
+                        "i": "S'ha realitzat una autoavaluació final del procés treballat pel professional."
+                    }
+                }
+            },
+            "horas": "60",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["m", "o", "q", "r", "s", "t", "w"],
+            "CompetenciasTitulo": ["m", "o", "q", "r", "s", "u"]
+        }
+    }
+}

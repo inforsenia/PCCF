@@ -1,0 +1,534 @@
+{
+    "CompetenciasProfesionalesPersonalesSociales": {
+        "a": "Determinar les necessitats assistencials i psicosocials de la persona en situació de dependència, mitjançant la interpretació de la informació obtinguda a través del pla d'atenció individual, respectant la confidencialitat.",
+        "b": "Organitzar les activitats d'atenció a les persones en situació de dependència, afavorint la seva col·laboració i la de la família, i tenint en compte les directrius establertes en el pla d'atenció individualitzada.",
+        "c": "Realitzar les tasques d'higiene personal i vestit de les persones en situació de dependència, aportant l'ajuda precisa, afavorint al màxim la seva autonomia en les activitats de la vida diària i mantenint cap a ells una actitud de respecte i professionalitat.",
+        "d": "Organitzar la intervenció relativa a l'alimentació, supervisant els menús, preparant els aliments i administrant-los quan siga necessari.",
+        "e": "Gestionar la documentació bàsica i el pressupost de la unitat de convivència, optimitzant els recursos i assegurant la viabilitat de la gestió econòmica.",
+        "f": "Realitzar les activitats de manteniment i neteja del domicili, garantint les condicions d'habitabilitat, higiene i ordre, amb criteris de qualitat, seguretat i cura del medi ambient i, en el seu cas, tramitant la documentació pertinent.",
+        "g": "Realitzar les intervencions relacionades amb l'estat físic de les persones en situació de dependència, seguint les pautes establertes i mostrant en tot moment respecte per la seva intimitat.",
+        "h": "Realitzar els trasllats, mobilitzacions i suport a la deambulació de les persones en situació de dependència, emprant els protocols i les ajudes tècniques necessàries, seguint les pautes marcades en el pla d'atenció individual (PIA) i adoptant mesures de prevenció i seguretat.",
+        "i": "Aplicar mesures de prevenció i seguretat tant per a les persones en situació de dependència com per als professionals, en els diferents àmbits d'intervenció.",
+        "j": "Donar resposta a situacions d'emergència i risc per a la salut en el desenvolupament de la seua activitat professional, aplicant tècniques de primers auxilis.",
+        "k": "Implementar intervencions de suport psicosocial, emprant ajudes tècniques, suports de comunicació i tecnologies de la informació i la comunicació, i seguint les pautes marcades en el pla d'atenció individual.",
+        "l": "Aplicar tècniques i estratègies per al manteniment i desenvolupament de les habilitats d'autonomia personal i social de les persones en situació de dependència, emprant ajudes tècniques i de comunicació conforme a les pautes marcades en el pla d'atenció individual.",
+        "m": "Realitzar tasques d'acompanyament i assistència personal, respectant les directrius del Pla Individual de Vida Independent i les decisions de la persona usuària.",
+        "n": "Assessorar a la persona en situació de dependència, als familiars i cuidadors no formals, proporcionant-los pautes d'actuació en la cura i l'atenció assistencial i psicosocial, i adequant la comunicació i les actituds a les característiques de la persona interlocutora.",
+        "ny": "Resoldre les contingençes amb iniciativa i autonomia, mostrant una actitud autocrítica i buscant alternatives per afavorir el benestar de les persones en situació de dependència.",
+        "o": "Col·laborar en el control i seguiment de les activitats assistencials, psicosocials i de gestió domiciliària, complimentant els registres oportuns, manejant les aplicacions informàtiques del servei i comunicant les incidències detectades.",
+        "p": "Gestionar les trucades entrants i sortints del servei de teleassistència, rebent-les i emetent-les segons els protocols establerts i utilitzant aplicacions informàtiques i eines telemàtiques.",
+        "q": "Adaptar-se a les noves situacions laborals originades per canvis tecnològics i organitzatius en els processos productius, actualitzant els seus coneixements, utilitzant els recursos existents per a l'aprenentatge al llarg de la vida i les tecnologies de la informació i la comunicació.",
+        "r": "Actuar amb responsabilitat i autonomia en l'àmbit de la seua competència, organitzant i desenvolupant la tasca assignada, cooperant o treballant en equip amb altres professionals en l'entorn de treball.",
+        "s": "Resoldre de forma responsable les incidències relatives a la seua activitat, identificant les causes que les provoquen, dins de l'àmbit de la seua competència i autonomia.",
+        "t": "Comunicar-se eficaçment, respectant l'autonomia i competència de les diferents persones que intervenen en l'àmbit del seu treball.",
+        "u": "Aplicar els protocols i les mesures preventives de riscos laborals i protecció ambiental durant el procés productiu, per a evitar danys en les persones i en l'entorn laboral i ambiental.",
+        "v": "Aplicar procediments de qualitat, d'accessibilitat universal i de «disseny per a tothom» en les activitats professionals incloses en els processos de producció o prestació de serveis.",
+        "w": "Realitzar la gestió bàsica per a la creació i funcionament d'una petita empresa i tenir iniciativa en la seua activitat professional.",
+        "x": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, d'acord amb l'establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
+    },
+    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p"],
+    "CompetenciasSociales": ["q", "r", "s", "t", "u", "v", "w", "x"],
+    "CualificacionesINCUAL": {
+        "Completas": {
+            "SSC089_2": {
+                "denominació": "Atenció sociosanitària a persones en el domicili",
+                "unitats_competència": {
+                    "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària.",
+                    "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària.",
+                    "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
+                }
+            },
+            "SSC320_2": {
+                "denominació": "Atenció sociosanitària a persones dependents en institucions socials",
+                "unitats_competència": {
+                    "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari.",
+                    "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
+                    "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
+                    "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional."
+                }
+            },
+            "CSS_810_2": {
+                "denominació": "Gestió de trucades de teleassistència",
+                "unitats_competència": {
+                    "UC_1423_2": "Atendre i gestionar les trucades entrants del servei de teleassistència.",
+                    "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
+                    "UC_1425_2": "Manejar les eines, tècniques i habilitats per prestar el servei de teleassistència."
+                }
+            }
+        },
+        "Incompletas": {}
+    },
+    "ObjetivosGenerales": {
+        "a": "Identificar tècniques i instruments d'observació i registre, seleccionant-los en funció de les característiques de les persones en situació de dependència i del pla d'atenció individualitzat, per determinar les seues necessitats assistencials i psicosocials.",
+        "b": "Interpretar les directrius del programa d'intervenció, adequant-les a les característiques i necessitats de les persones en situació de dependència, per organitzar les activitats assistencials i psicosocials.",
+        "c": "Identificar les possibilitats i limitacions de les persones en situació de dependència, seleccionant el tipus d'ajuda segons els seus nivells d'autonomia i autodeterminació, per a la realització de les activitats d'higiene personal i vestit, i seguint les pautes marcades en el pla d'atenció individualitzat.",
+        "d": "Interpretar les prescripcions dietètiques establertes en el pla d'atenció individualitzat, adequant els menús i la preparació d'aliments, per organitzar la intervenció relacionada amb l'alimentació.",
+        "e": "Identificar les necessitats de suport a la ingestió de les persones en situació de dependència, relacionant-les amb les tècniques i suports d'ajuda per administrar els aliments.",
+        "f": "Analitzar procediments d'administració i control de despeses, relacionant-los amb els recursos i necessitats de les persones en situació de dependència per gestionar el pressupost de la unitat de convivència.",
+        "g": "Identificar procediments de manteniment del domicili, seleccionant els recursos i mitjans necessaris que garanteixin les condicions d'habitabilitat, higiene i ordre amb criteris de qualitat, seguretat i cura del medi ambient, per realitzar les activitats de manteniment i neteja.",
+        "h": "Seleccionar tècniques de preparació per a l'exploració, administració i control de medicació i recollida de mostres de la persona en situació de dependència, relacionant-les amb les seues característiques i les pautes establertes per dur a terme intervencions relacionades amb l'estat físic.",
+        "i": "Seleccionar procediments i ajudes tècniques, seguint les directrius del pla d'atenció individualitzat i adequant-los a la situació de les persones en situació de dependència, per realitzar els trasllats, mobilitzacions i suport a la deambulació dels mateixos.",
+        "j": "Identificar factors de risc, relacionant-los amb les mesures de prevenció i seguretat, per aplicar les mesures adequades per preservar la integritat de les persones en situació de dependència i els propis professionals.",
+        "k": "Seleccionar tècniques de primers auxilis, seguint els protocols establerts per actuar en situacions d'emergència i risc per a la salut en el desenvolupament de la seua activitat professional.",
+        "l": "Analitzar estratègies psicològiques, rehabilitadores, ocupacionals i de comunicació, adequant-les a circumstàncies específiques de la persona en situació de dependència, per realitzar intervencions de suport psicosocial acordes amb les directrius del pla d'atenció individualitzat.",
+        "m": "Identificar sistemes de suport a la comunicació, relacionant-los amb les característiques de la persona, per al desenvolupament i manteniment d'habilitats d'autonomia personal i social.",
+        "n": "Seleccionar ajudes tècniques i de comunicació, relacionant-les amb les possibilitats i característiques de la persona en situació de dependència, per afavorir les habilitats d'autonomia personal i social i les possibilitats de vida independent.",
+        "ny": "Identificar els principis de vida independent, relacionant-los amb les característiques de la persona i del context, per promoure la seua autonomia i participació social.",
+        "o": "Analitzar els elements crítics del Pla Individual de Vida Independent, relacionant-lo amb les decisions de cada persona per realitzar les tasques d'acompanyament i assistència personal.",
+        "p": "Seleccionar estils de comunicació i actituds, relacionant-les amb les característiques de l'interlocutor, per assessorar a les persones en situació de dependència, famílies i cuidadors no formals.",
+        "q": "Identificar els protocols d'actuació, relacionant-los amb les contingençes, per resoldre-les amb seguretat i eficàcia.",
+        "r": "Complimentar instruments de control i seguiment, aplicant els protocols, per col·laborar en el control i seguiment en les activitats assistencials, psicosocials i de gestió.",
+        "s": "Identificar eines telemàtiques i aplicacions informàtiques, seleccionant els protocols establerts per a l'emissió, recepció i gestió de trucades del servei de teleassistència.",
+        "t": "Analitzar i utilitzar els recursos existents per a l'aprenentatge al llarg de la vida i les tecnologies de la informació i la comunicació per aprendre i actualitzar els seus coneixements, reconeixent les possibilitats de millora professional i personal, per adaptar-se a diferents situacions professionals i laborals.",
+        "u": "Desenvolupar treballs en equip i valorar la seua organització, participant amb tolerància i respecte, i prendre decisions col·lectives o individuals per actuar amb responsabilitat i autonomia.",
+        "v": "Adoptar i valorar solucions creatives davant problemes i contingençes que es presenten en el desenvolupament dels processos de treball, per resoldre de forma responsable les incidències de la seua activitat.",
+        "w": "Aplicar tècniques de comunicació, adaptant-se als continguts que es van a transmetre, a la seua finalitat i a les característiques dels receptors, per assegurar l'eficàcia del procés.",
+        "x": "Analitzar els riscos ambientals i laborals associats a l'activitat professional, relacionant-los amb les causes que els produeixen, a fi de fonamentar les mesures preventives que es van adoptar, i aplicar els protocols corresponents, per evitar danys en un mateix, en les demés persones, en l'entorn i en el medi ambient.",
+        "y": "Analitzar i aplicar les tècniques necessàries per donar resposta a l'accessibilitat universal i al «disseny per a tothom».",
+        "z": "Aplicar i analitzar les tècniques necessàries per millorar els procediments de qualitat del treball en el procés d'aprenentatge i del sector productiu de referència.",
+        "aa": "Utilitzar procediments relacionats amb la cultura emprenedora, empresarial i d'iniciativa professional, per realitzar la gestió bàsica d'una petita empresa o emprendre un treball.",
+        "ab": "Reconèixer els seus drets i deures com a agent actiu en la societat, tenint en compte el marc legal que regula les condicions socials i laborals per participar com a ciutadà democràtic."
+    },
+    "ModulosProfesionales": {
+        "0210": {
+            "nombre": "Organització de l'atenció a les persones en situació de dependència",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Interpreta programes d'atenció a les persones en situació de dependència, relacionant el model organitzatiu i de funcionament amb el marc legal vigent.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han comparat les normatives en matèria d'atenció a les persones en situació de dependència en l'àmbit europeu, estatal, autònom i local.",
+                        "b": "S'han descrit els diferents models i serveis d'atenció a les persones en situació de dependència.",
+                        "c": "S'han identificat els requisits i les característiques organitzatives i funcionals que han de reunir els serveis d'atenció a les persones en situació de dependència.",
+                        "d": "S'han descrit les estructures organitzatives i les relacions funcionals tipus dels equipaments residencials dirigits a persones en situació de dependència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Organitza la intervenció amb les persones en situació de dependència, seleccionant les estratègies en funció de les seues característiques i les directrius del programa d'intervenció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les estratègies d'intervenció per al desenvolupament de les activitats d'atenció a les persones en situació de dependència.",
+                        "b": "S'han interpretat correctament les directrius, criteris i estratègies establerts en un pla d'atenció individualitzat.",
+                        "c": "S'han determinat les intervencions que s'han de realitzar per a l'atenció a les persones en situació de dependència a partir dels protocols d'actuació de la institució corresponent.",
+                        "d": "S'han seleccionat estratègies per a l'atenció a les persones en situació de dependència a partir de les seues característiques i del pla d'atenció individualitzat."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Organitza els recursos necessaris per a la intervenció, relacionant el context on desenvolupa la seua activitat amb les característiques de les persones en situació de dependència.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els factors de l'entorn que afavoreixen o inhibeixen l'autonomia de les persones en la seua vida quotidiana.",
+                        "b": "S'ha reconegut el mobiliari i els instruments de treball propis de cada context d'intervenció.",
+                        "c": "S'ha condicionat l'entorn per afavorir la mobilitat i els desplaçaments de les persones en situació de dependència, així com el seu ús i utilitat.",
+                        "d": "S'ha identificat la normativa legal vigent en matèria de prevenció i seguretat per organitzar els recursos."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Gestiona la documentació bàsica de l'atenció a persones en situació de dependència, relacionant-la amb els objectius de la intervenció.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els elements que ha de recollir la documentació bàsica de la persona usuària.",
+                        "b": "S'han aplicat protocols de recollida de la informació precisa per conèixer els canvis de les persones en situació de dependència i el seu grau de satisfacció.",
+                        "c": "S'ha justificat la utilitat i la importància de documentar per escrit la intervenció realitzada.",
+                        "d": "S'han identificat els canals de comunicació de les incidències detectades."
+                    }
+                }
+            },
+            "horas": "70",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari."
+            },
+            "ObjetivosGenerales ": ["a", "b", "j", "f", "o", "p", "q", "r", "u", "w", "x"],
+            "CompetenciasTitulo": ["a", "b", "i", "m", "n", "f", "o", "r", "t", "u"]
+        },
+        "0211": {
+            "nombre": "Destreses socials",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza estratègies i tècniques per afavorir la comunicació i relació social amb el seu entorn, analitzant els principis de la intel·ligència emocional i social.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els principis de la intel·ligència emocional i social.",
+                        "b": "S'ha valorat la importància de les habilitats socials i comunicatives en el desenvolupament de la labor professional i en les relacions interpersonals.",
+                        "c": "S'han identificat els diferents estils de comunicació, els seus avantatges i limitacions.",
+                        "d": "S'han identificat les principals barreres i interferències que dificulten la comunicació."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica tècniques de treball en grup, adequant-les al rol que desempenye en cada moment.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els elements fonamentals d'un grup i els factors que poden modificar la seua dinàmica.",
+                        "b": "S'han analitzat i seleccionat les diferents tècniques de dinamització i funcionament de grups.",
+                        "c": "S'han explicat els avantatges del treball en equip front a l'individual.",
+                        "d": "S'han diferenciat els diversos rols i la tipologia dels integrants d'un grup."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica tècniques de gestió de conflictes i resolució de problemes, interpretant les pautes d'actuació establertes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les fonts de l'origen dels problemes i conflictes.",
+                        "b": "S'han relacionat els recursos tècnics utilitzats amb els tipus de problemes estàndard.",
+                        "c": "S'ha presentat, ordenada i clarament, el procés seguit i els resultats obtinguts en la resolució d'un problema.",
+                        "d": "S'han planificat les tasques que s'han de realitzar amb previsió de les dificultats i la manera de superar-les."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Valora el seu grau de competència social per al desenvolupament de les seues funcions professionals, analitzant la seua incidència en les relacions interpersonals i grupals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els indicadors d'avaluació de la competència social.",
+                        "b": "S'ha registrat la situació personal i social de partida del professional.",
+                        "c": "S'han registrat les dades en suports establerts.",
+                        "d": "S'han interpretat les dades recollides."
+                    }
+                }
+            },
+            "horas": "70",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["p", "q", "s", "u", "w", "z"],
+            "CompetenciasTitulo": ["n", "ny", "p", "r", "t", "v"]
+        },
+        "0212": {
+            "nombre": "Característiques i necessitats de les persones en situació de dependència",
+            "creditos": "8.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza el concepte d'autonomia personal, analitzant els factors que intervenen tant en la seua prevenció i promoció com en el seu deteriorament.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els processos bàsics associats a la promoció de l'autonomia personal i la vida independent.",
+                        "b": "S'han caracteritzat les habilitats d'autonomia personal.",
+                        "c": "S'han identificat els factors que afavoreixen o inhibeixen el manteniment de l'autonomia personal i la vida independent.",
+                        "d": "S'han descrit les principals alteracions emocionals i conductuals associades a la pèrdua d'autonomia personal."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Classifica els nivells de dependència i les ajudes requerides associats al procés d'envelliment, analitzant els canvis i deterioraments produïts pel mateix.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han relacionat els canvis biològics, psicològics i socials propis de l'envelliment amb les dificultats que impliquen en la vida diària de la persona.",
+                        "b": "S'han identificat les patologies més freqüents en la persona major.",
+                        "c": "S'han descrit les principals característiques i necessitats de les persones majors.",
+                        "d": "S'han identificat les principals manifestacions de deteriorament personal i social propi de les persones majors."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Reconeix les característiques de les persones amb discapacitat, relacionant-les amb els nivells de dependència i l'ajuda requerida.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha relacionat l'evolució del concepte de discapacitat amb els canvis socials, culturals, econòmics i científic-tecnològics.",
+                        "b": "S'han relacionat els diferents tipus de discapacitat amb les dificultats que impliquen en la vida quotidiana de les persones.",
+                        "c": "S'han descrit les principals necessitats psicològiques i socials de les persones amb discapacitat.",
+                        "d": "S'han relacionat diferents tipologies i nivells de discapacitat amb el grau de dependència i tipus de suport necessitat."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Descriu les malalties generadores de dependència, determinant els seus efectes sobre les persones que les pateixen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han caracteritzat les malalties agudes, cròniques i terminals per la seua influència en l'autonomia personal de la persona malalta.",
+                        "b": "S'han identificat les principals característiques i necessitats psicològiques i socials dels pacients amb malalties generadores de dependència.",
+                        "c": "S'han definit les principals característiques de les malalties mentals més freqüents.",
+                        "d": "S'ha descrit la influència de les malalties mentals en l'autonomia personal i social de les persones que les pateixen."
+                    }
+                }
+            },
+            "horas": "85",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "h", "i", "l", "m", "n", "f", "o", "p", "r", "s", "e", "y"],
+            "CompetenciasTitulo": ["a", "b", "c", "d", "g", "h", "k", "l", "m", "n", "o", "p", "v"]
+        },
+        "0213": {
+            "nombre": "Atenció i suport psicosocial",
+            "creditos": "13",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Organitza l'entorn on desenvolupa la seua labor, relacionant les necessitats psicosocials de les persones en situació de dependència amb les característiques de la institució o el domicili.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques organitzatives i funcionals de la institució o el domicili que incideixen en la situació psicosocial de les persones en situació de dependència.",
+                        "b": "S'han descrit els factors ambientals i els elements espacials i materials que incideixen en la relació social.",
+                        "c": "S'han respectat les orientacions rebudes, les necessitats i característiques de les persones, els seus costums i gustos, així com les normes de seguretat i higiene en el manteniment dels espais i el mobiliari.",
+                        "d": "S'ha orientat sobre els espais i materials a l'usuari i cuidadors informals per afavorir el desenvolupament autònom, la comunicació i la convivència de les persones en situació de dependència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Selecciona estratègies de suport psicosocial i habilitats de relació social, analitzant les necessitats i característiques de les persones en situació de dependència i el pla de treball establert.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les característiques i necessitats fonamentals de les relacions socials de les persones en situació de dependència.",
+                        "b": "S'han analitzat els criteris i estratègies per organitzar la intervenció referida al suport psicosocial a les persones en situació de dependència i la creació de noves relacions.",
+                        "c": "S'han identificat els recursos, mitjans, tècniques i estratègies de suport i desenvolupament de les habilitats socials de les persones en situació de dependència.",
+                        "d": "S'han seleccionat els mitjans i recursos expressius i comunicatius que afavoreixen el manteniment de les capacitats relacionals de les persones en situació de dependència."
+                    }
+                }
+            },
+            "horas": "130",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
+                "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
+            },
+            "ObjetivosGenerales ": ["a", "b", "j", "l", "m", "n", "ny", "o", "p", "q", "r", "u", "v", "w", "z"],
+            "CompetenciasTitulo": ["a", "b", "i", "k", "l", "m", "n", "ny", "o", "r", "s", "t", "v"]
+        },
+        "0214": {
+            "nombre": "Suport a la comunicació",
+            "creditos": "4.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Relaciona els sistemes alternatius i augmentatius de comunicació amb la persona en situació de dependència, valorant les seues dificultats específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha argumentat la influència de la comunicació en el desenvolupament diari de les persones.",
+                        "b": "S'han definit els conceptes de comunicació alternativa i augmentativa.",
+                        "c": "S'han descrit les característiques dels principals sistemes alternatius i augmentatius de comunicació.",
+                        "d": "S'han identificat els principals factors que dificulten o afavoreixen la comunicació amb la persona en situació de dependència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Realitza activitats de suport a la comunicació, descrivint sistemes alternatius i augmentatius de comunicació amb ajuda.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les característiques i utilitzacions bàsiques dels principals sistemes alternatius de comunicació amb ajuda.",
+                        "b": "S'han creat missatges senzills amb els diferents sistemes de comunicació amb ajuda, facilitant la comunicació i atenció a la persona usuària.",
+                        "c": "S'han descrit altres sistemes i elements facilitadors de la comunicació amb ajuda.",
+                        "d": "S'han comprès missatges expressats mitjançant sistemes de comunicació amb ajuda."
+                    }
+                }
+            },
+            "horas": "45",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
+                "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
+            },
+            "ObjetivosGenerales ": ["a", "b", "j", "l", "m", "n", "p", "q", "r", "v", "w", "y", "z"],
+            "CompetenciasTitulo": ["a", "b", "i", "k", "l", "n", "f", "o", "s", "t", "v"]
+        },
+        "0215": {
+            "nombre": "Suport domiciliari",
+            "creditos": "13",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Organitza el pla de treball en el domicili de persones en situació de dependència, interpretant les directrius establertes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques del pla de treball.",
+                        "b": "S'ha descrit la importància de l'adaptació del pla de treball a la realitat de la persona en situació de dependència.",
+                        "c": "S'han identificat les tasques que s'han de realitzar en el domicili.",
+                        "d": "S'han seqüenciat les tasques domèstiques diàries que s'han de realitzar en el domicili, en funció del pla de treball i de les adaptacions realitzades, si fora necessari."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Planifica la gestió de la despesa, relacionant les tècniques bàsiques d'administració amb les necessitats de la unitat de convivència.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat la documentació relacionada amb les despeses de la unitat de convivència.",
+                        "b": "S'ha reconegut la necessitat de saber interpretar els documents de gestió domiciliària.",
+                        "c": "S'ha elaborat un dossier de les partides de despesa general mensual.",
+                        "d": "S'ha elaborat un dossier de despeses extraordinàries d'una unitat de convivència."
+                    }
+                }
+            },
+            "horas": "130",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
+            },
+            "ObjetivosGenerales ": ["a", "b", "d", "f", "g", "j", "p", "q", "r", "u", "v", "w", "x", "z"],
+            "CompetenciasTitulo": ["a", "b", "d", "e", "f", "i", "n", "f", "o", "r", "s", "t", "u", "v"]
+        },
+        "0216": {
+            "nombre": "Atenció sanitària",
+            "creditos": "11.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Organitza les activitats d'atenció sanitària a persones en situació de dependència, relacionant-les amb les característiques i necessitats de les mateixes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les característiques anatomo-fisiològiques bàsiques i les alteracions més freqüents dels sistemes cardiovascular, respiratori, digestiu i reproductor.",
+                        "b": "S'han descrit les principals característiques i necessitats d'atenció física de les persones en situació de dependència.",
+                        "c": "S'han identificat els principals signes de deteriorament físic i sanitari associats a situacions de dependència.",
+                        "d": "S'han identificat les característiques de l'entorn que afavoreixen o dificulten l'estat físic i de salut de la persona usuària."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica tècniques de mobilització, trasllat i deambulació, analitzant les característiques de la persona en situació de dependència.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han aplicat les tècniques més freqüents de posicionament de persones enllitades, adequant-les a l'estat i condicions de les mateixes.",
+                        "b": "S'han aplicat tècniques de mobilització, deambulació i trasllat de persones en situació de dependència, adaptant-les al seu estat i condicions.",
+                        "c": "S'han aplicat procediments que garanteixin una càrrega segura i la prevenció d'aparició de possibles lesions en el professional.",
+                        "d": "S'han utilitzat les ajudes tècniques de mobilització, transport, deambulació i posicionament en llit de persones en situació de dependència més adequades al seu estat i condicions."
+                    }
+                }
+            },
+            "horas": "115",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
+                "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
+                "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
+            },
+            "ObjetivosGenerales ": ["a", "b", "e", "h", "i", "j", "p", "r", "v", "w", "x", "z"],
+            "CompetenciasTitulo": ["a", "b", "d", "g", "h", "i", "n", "f", "o", "s", "t", "u", "v"]
+        },
+        "0217": {
+            "nombre": "Atenció higiènica",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Organitza les activitats d'higiene de les persones en situació de dependència i el seu entorn relacionant-les amb les característiques i necessitats de les mateixes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha interpretat el pla de cures individualitzat de la persona en situació de dependència.",
+                        "b": "S'han identificat les atencions higièniques requerides per una persona, tenint en compte el seu estat de salut i nivell de dependència.",
+                        "c": "S'han relacionat les circumstàncies de la persona en situació de dependència amb les dificultats que impliquen en la seua vida quotidiana.",
+                        "d": "S'han identificat les característiques de l'entorn que afavoreixen o dificulten l'autonomia de la persona i el seu estat d'higiene personal."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica tècniques d'higiene i asseig personal, analitzant les necessitats i condicions de la persona en situació de dependència i el seu entorn.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han explicat les principals mesures preventives de les úlceres per pressió així com els productes sanitaris per a la seua prevenció i tractament.",
+                        "b": "S'han aplicat els procediments d'asseig i higiene personal, total o parcial, en funció de l'estat i necessitats de la persona.",
+                        "c": "S'han realitzat tècniques de vestit i calçat, tenint en compte les necessitats i nivell d'autonomia de la persona.",
+                        "d": "S'ha mostrat sensibilitat cap a la necessitat de potenciar l'autonomia de la persona."
+                    }
+                }
+            },
+            "horas": "50",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
+                "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
+                "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
+            },
+            "ObjetivosGenerales ": ["a", "b", "c", "h", "i", "j", "p", "q", "r", "v", "w", "x", "z"],
+            "CompetenciasTitulo": ["a", "b", "c", "g", "h", "i", "n", "f", "o", "s", "t", "u", "v"]
+        },
+        "0831": {
+            "nombre": "Teleassistència",
+            "creditos": "6.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Organitza la pròpia intervenció en el servei de teleassistència, tenint en compte les característiques i l'equipament tècnic del lloc de treball.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les característiques, funcions i estructura del servei de teleassistència.",
+                        "b": "S'ha organitzat l'espai físic de la persona operadora amb criteris de neteja, ordre i prevenció de riscos.",
+                        "c": "S'han descrit les normes d'higiene, ergonomia i comunicació que prevenen riscos sobre la salut de cada professional.",
+                        "d": "S'ha argumentat la necessitat de seguir els protocols establerts per optimitzar la qualitat del servei en els diferents torns."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica procediments de gestió de les trucades sortints utilitzant aplicacions informàtiques i eines telemàtiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha accedit a l'aplicació informàtica mitjançant la contrasenya assignada.",
+                        "b": "S'han seleccionat en l'aplicació informàtica les agendes que s'han de realitzar durant el torn de treball.",
+                        "c": "S'han programat les trucades en funció del número, tipus i prioritat establerta en el protocol.",
+                        "d": "S'ha seleccionat correctament la trucada d'agenda en l'aplicació informàtica."
+                    }
+                }
+            },
+            "horas": "65",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC_1423_2": "Atendre i gestionar les trucades entrants del servei de teleassistència.",
+                "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
+                "UC_1425_2": "Manejar les eines, tècniques i habilitats per prestar el servei de teleassistència."
+            },
+            "ObjetivosGenerales ": ["a", "j", "p", "q", "r", "s", "u", "v", "w", "x", "z"],
+            "CompetenciasTitulo": ["a", "i", "n", "f", "o", "p", "r", "s", "t", "u", "v"]
+        },
+        "0020": {
+            "nombre": "Primers auxilis",
+            "creditos": "3.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Realitza la valoració inicial de l'assistència en una urgència, descrivint riscos, recursos disponibles i tipus d'ajuda necessària.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha assegurat la zona segons el procediment oportú.",
+                        "b": "S'han identificat les tècniques d'autoprotecció en la manipulació de persones accidentades.",
+                        "c": "S'ha descrit el contingut mínim d'un botiquí d'urgències i les indicacions dels productes i medicaments.",
+                        "d": "S'han establert les prioritats d'actuació en múltiples víctimes."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica tècniques de suport vital bàsic, descrivint-les i relacionant-les amb l'objectiu que s'ha de aconseguir.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit els fonaments de la reanimació cardio-pulmonar.",
+                        "b": "S'han aplicat tècniques d'obertura de la via aèria.",
+                        "c": "S'han aplicat tècniques de suport ventilatori i circulatori.",
+                        "d": "S'ha realitzat desfibril·lació externa semiautomàtica (DEA)."
+                    }
+                }
+            },
+            "horas": "35",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["k"],
+            "CompetenciasTitulo": ["j"]
+        },
+        "0218": {
+            "nombre": "Formació i orientació laboral",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Selecciona oportunitats d'ocupació, identificant les diferents possibilitats d'inserció i les alternatives d'aprenentatge al llarg de la vida.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la formació permanent com a factor clau per a l'ocupabilitat i l'adaptació a les exigències del procés productiu.",
+                        "b": "S'han identificat els itineraris formatius/professionals relacionats amb el perfil professional del tècnic en Atenció a Persones en Situació de Dependència.",
+                        "c": "S'han determinat les aptituds i actituds requerides per a l'activitat professional relacionada amb el perfil del títol.",
+                        "d": "S'han identificat els principals jaciments d'ocupació i d'inserció laboral per al tècnic en Atenció a Persones en Situació de Dependència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica les estratègies del treball en equip, valorant la seua eficàcia i eficiència per a la consecució dels objectius de l'organització.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han valorat els avantatges de treball en equip en situacions de treball relacionades amb el perfil del tècnic en Atenció a Persones en Situació de Dependència.",
+                        "b": "S'han identificat els equips de treball que poden constituir-se en una situació real de treball.",
+                        "c": "S'han determinat les característiques de l'equip de treball eficaç front als equips ineficaços.",
+                        "d": "S'ha valorat positivament la necessària existència de diversitat de rols i opinions assumits pels membres d'un equip."
+                    }
+                }
+            },
+            "horas": "50",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["j", "t", "u", "w", "x", "ab"],
+            "CompetenciasTitulo": ["i", "q", "r", "t", "u", "x"]
+        },
+        "0219": {
+            "nombre": "Empresa i iniciativa emprenedora",
+            "creditos": "3.5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Reconeix les capacitats associades a la iniciativa emprenedora, analitzant els requeriments derivats dels llocs de treball i de les activitats empresarials.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb el progrés de la societat i l'augment en el benestar dels individus.",
+                        "b": "S'ha analitzat el concepte de cultura emprenedora i la seua importància com a font de creació d'ocupació i benestar social.",
+                        "c": "S'ha valorat la importància de la iniciativa individual, la creativitat, la formació i la col·laboració com a requisits indispensables per a tenir èxit en l'activitat emprenedora.",
+                        "d": "S'ha analitzat la capacitat d'iniciativa en el treball d'una persona ocupada en una pime relacionada amb l'atenció a persones en situació de dependència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Defineix l'oportunitat de creació d'una petita empresa, valorant l'impacte sobre l'entorn d'actuació i incorporant valors ètics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit les funcions bàsiques que es realitzen en una empresa i s'ha analitzat el concepte de sistema aplicat a l'empresa.",
+                        "b": "S'han identificat els principals components de l'entorn general que envolta a l'empresa, en especial l'entorn econòmic, social, demogràfic i cultural.",
+                        "c": "S'ha analitzat la influència en l'activitat empresarial de les relacions amb els clients, amb els proveïdors i amb la competència com a principals integrants de l'entorn específic.",
+                        "d": "S'han identificat els elements de l'entorn d'una pime relacionada amb l'atenció a persones en situació de dependència."
+                    }
+                }
+            },
+            "horas": "35",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": ["aa", "ab"],
+            "CompetenciasTitulo": ["w", "x"]
+        },
+        "0220": {
+            "nombre": "Formació en centres de treball",
+            "creditos": "22",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica l'estructura i organització de l'empresa, relacionant-les amb el tipus de servei que presta.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat l'estructura organitzativa de l'empresa i les funcions de cada àrea de la mateixa.",
+                        "b": "S'ha comparat l'estructura de l'empresa amb les organitzacions empresarials tipus existents en el sector.",
+                        "c": "S'han relacionat les característiques del servei i el tipus de clients amb el desenvolupament de l'activitat empresarial.",
+                        "d": "S'han identificat els procediments de treball en el desenvolupament de la prestació de servei."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica hàbits ètics i laborals en el desenvolupament de la seua activitat professional, d'acord amb les característiques del lloc de treball i amb els procediments establerts en l'empresa.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut i justificat: la disponibilitat personal i temporal necessàries en el lloc de treball; les actituds personals i professionals necessàries per al lloc de treball; els requeriments actitudinals davant la prevenció de riscos en l'activitat professional; els requeriments actitudinals referits a la qualitat en l'activitat professional.",
+                        "b": "S'han identificat les normes de prevenció de riscos laborals i els aspectes fonamentals de la Llei de Prevenció de Riscos Laborals d'aplicació en l'activitat professional.",
+                        "c": "S'han posat en marxa els equips de protecció individual segons els riscos de l'activitat professional i les normes de l'empresa.",
+                        "d": "S'ha mantingut una actitud de respecte al medi ambient en les activitats desenvolupades."
+                    }
+                }
+            },
+            "horas": "220",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [],
+            "CompetenciasTitulo": []
+        }
+    }
+}

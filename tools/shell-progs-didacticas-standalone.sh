@@ -6,7 +6,7 @@ if [ ! -d ./temp_$1 ]; then
 fi
 
 TEMPLATE_TEX_PD="../../rsrc/templates/eisvogel.latex"
-PANDOC_OPTIONS="-V fontsize=12pt -V --pdf-engine=xelatex "
+PANDOC_OPTIONS="-V fontsize=12pt -V toc-title="Índx" -V --pdf-engine=xelatex"
 TEMPLATE_TEX_TASK="../../rsrc/templates/eisvogel.latex"
 
 echo " * [ ProgsDidacticas ] CICLO : $1"

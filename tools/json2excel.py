@@ -28,28 +28,27 @@ import jinja2
 
 # Cargar el JSON desde un archivo
 
-if sys.argv[1] == "DAW":
-
-    with open('./boe/rd-daw.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-elif sys.argv[1] == "DAM":
-
-    with open('./boe/rd-dam.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-elif sys.argv[1] == "ASIR":
-
-    with open('./boe/rd-asir.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-elif sys.argv[1] == "SMX":
-
-    with open('./boe/rd-smx.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-else:
-    print(" * No se ha indicado Ciclo ")
+if len(sys.argv) < 3:
+    print(" * No se ha indicado Ciclo y Familia ")
+    print(f" * Uso: {sys.argv[0]} <ciclo> <familia>")
+    print(" * Ejemplo: ./json2excel.py ASIR INF")
     sys.exit(0)
+
+# Convertir el argumento a minúsculas
+ciclo = sys.argv[1].lower()
+familia = sys.argv[2].upper()
+nombre_archivo = f'./boe_{familia}/rd-{ciclo}.json'
+
+try:
+    with open(nombre_archivo, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+except FileNotFoundError:
+    print(f" * No se encontró el archivo para el ciclo: {sys.argv[1]}")
+    print(f" * Archivo buscado: {nombre_archivo}")
+    sys.exit(1)
+except json.JSONDecodeError:
+    print(f" * Error al leer el archivo JSON: {nombre_archivo}")
+    sys.exit(1)
 
 data_box = Box(data)
 
@@ -228,13 +227,13 @@ for codigo in data_box.ModulosProfesionales:
     #print(" - COMPETENCIAS - LISTA ")
     p_complist_col=p_contenidos_col
     p_complist_row=p_contenidos_row-6
-    ws.cell(column=p_complist_col,row=p_complist_row).value="CPROF"
+    ws.cell(column=p_complist_col,row=p_complist_row).value="OBJECTIUS"
     try:
         ws.cell(column=p_complist_col,row=p_complist_row+1).value=str(modulo.ObjetivosGenerales)
     except Exception as e:
         print("  - INFO : No tiene Objetivos Generales")
 
-    ws.cell(column=p_complist_col,row=p_complist_row+2).value="EMPLEA"
+    ws.cell(column=p_complist_col,row=p_complist_row+2).value="COMPETENCIES"
     try:
         ws.cell(column=p_complist_col,row=p_complist_row+3).value=str(modulo.CompetenciasTitulo)
     except Exception as e:
@@ -280,8 +279,8 @@ for codigo in data_box.ModulosProfesionales:
         # Ingenieria para las competencias
         if numCriterios < 3:
             print(" * Demasiados pocos criterios, no se hace nada mas que los titulos")
-            ws.cell(column=p_comp_col,row=p_ce_row+1).value="CPROF"
-            ws.cell(column=p_comp_col,row=p_ce_row+2).value="EMPLEA"
+            ws.cell(column=p_comp_col,row=p_ce_row+1).value="OBJECTIUS"
+            ws.cell(column=p_comp_col,row=p_ce_row+2).value="COMPETENCIES"
         else:
             if numCriterios % 2 == 1:
                 numCProf = numCriterios // 2 + 1
@@ -292,12 +291,12 @@ for codigo in data_box.ModulosProfesionales:
             #print(" -- Tenemos CPROF : "+str(numCProf))
             #print(" -- Tenemos EMPLEA : "+str(numCEmplea))
 
-            ws.cell(column=p_comp_col,row=p_ce_row).value="CPROF"
+            ws.cell(column=p_comp_col,row=p_ce_row).value="OBJECTIUS"
             ws.cell(column=p_comp_col,row=p_ce_row).fill = PatternFill('gray125')
             ws.merge_cells(start_row=p_ce_row+1, start_column=p_comp_col, end_row=p_ce_row+numCProf, end_column=p_comp_col)
             ws.cell(column=p_comp_col,row=p_ce_row+1).alignment=Alignment(horizontal='center', vertical='center')
 
-            ws.cell(column=p_comp_col,row=p_ce_row+numCProf+1).value="EMPLEA"
+            ws.cell(column=p_comp_col,row=p_ce_row+numCProf+1).value="COMPETENCIES"
             ws.cell(column=p_comp_col,row=p_ce_row+numCProf+1).fill = PatternFill('gray125')
             ws.merge_cells(start_row=p_ce_row+2+numCProf, start_column=p_comp_col, end_row=p_ce_row+2+numCProf+numCEmplea-1, end_column=p_comp_col)
             ws.cell(column=p_comp_col,row=p_ce_row+numCProf+2).alignment=Alignment(horizontal='center', vertical='center')

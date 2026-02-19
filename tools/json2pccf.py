@@ -13,31 +13,27 @@ import warnings
 warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
 
 # Cargar el JSON desde un archivo
-
-if sys.argv[1] == "DAW":
-
-    with open('./boe/rd-daw.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-
-elif sys.argv[1] == "DAM":
-
-    with open('./boe/rd-dam.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-elif sys.argv[1] == "SMX":
-
-    with open('./boe/rd-smx.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-elif sys.argv[1] == "ASIR":
-
-    with open('./boe/rd-asir.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-else:
-    print(" * No se ha indicado Ciclo ")
+if len(sys.argv) < 3:
+    print(" * No se ha indicado Ciclo y Familia ")
+    print(f" * Uso: {sys.argv[0]} <ciclo> <familia>")
+    print(" * Ejemplo: ./json2pccf.py ASIR INF")
     sys.exit(0)
+
+# Convertir el argumento a minúsculas
+ciclo = sys.argv[1].lower()
+familia = sys.argv[2].upper()
+nombre_archivo = f'./boe_{familia}/rd-{ciclo}.json'
+
+try:
+    with open(nombre_archivo, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+except FileNotFoundError:
+    print(f" * No se encontró el archivo para el ciclo: {sys.argv[1]}")
+    print(f" * Archivo buscado: {nombre_archivo}")
+    sys.exit(1)
+except json.JSONDecodeError:
+    print(f" * Error al leer el archivo JSON: {nombre_archivo}")
+    sys.exit(1)
 
 # Nos guardamos el ciclo 
 s_ciclo=sys.argv[1]
@@ -48,6 +44,35 @@ os.makedirs(dir_ciclo,exist_ok=True)
 
 # Convertir el diccionario a un objeto Box
 data_box = Box(data)
+
+# Generar fichero con las Competencias del Ciclo a partir de plantilla Jinja
+dir_srcciclo="./src_"+familia+"_"+s_ciclo+"/"
+comp_file = os.path.join(dir_srcciclo, f"PCCF_111_Competencies_{s_ciclo}.md")
+if os.path.exists(comp_file):
+    print(f" * PCCF: fichero de competencias ya existe: {comp_file}")
+else:
+    try:
+        # si no existe lo generamos directamente en la carpeta PDFS
+        comp_file = os.path.join("PDFS", f"PCCF_111_Competencies_{s_ciclo}.md")
+        templateLoader = jinja2.FileSystemLoader(searchpath=f"./templates_{familia}/")
+        templateEnv = jinja2.Environment(loader=templateLoader)
+        TEMPLATE_COMP = "PCCF_111_Competencies_Cicle.md"
+        template = templateEnv.get_template(TEMPLATE_COMP)
+        output_comp = template.render(
+            ciclo=s_ciclo,
+            competencias_profesionales=data_box.CompetenciasProfesionales,
+            competencias_sociales=data_box.CompetenciasSociales,
+            cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
+            importancia=data.get("ImportanciaCompetencias", {}),
+        )
+        with open(comp_file, "w", encoding="utf-8") as fc:
+            fc.write(output_comp)
+        print(f" * PCCF: fichero de competencias generado: {comp_file}")
+    except jinja2.TemplateNotFound:
+        print(f" * PCCF: plantilla {TEMPLATE_COMP} no encontrada, se omite generación de competencias")
+    except Exception as e:
+        print(f" * PCCF: error al generar fichero de competencias: {e}")
+
 
 
 
@@ -83,7 +108,7 @@ for codigo in data_box.ModulosProfesionales:
 
     else:
         print(" PD generado : Programacion Didactica para "+modulo.nombre.replace(" ",""))
-        templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
+        templateLoader = jinja2.FileSystemLoader(searchpath=f"./templates_{familia}/")
         templateEnv = jinja2.Environment(loader=templateLoader)
         TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_"+sys.argv[1]+".md"
         template = templateEnv.get_template(TEMPLATE_FILE)
@@ -128,7 +153,7 @@ for codigo in data_box.ModulosProfesionales:
 
     # Creamos la PD Individual
     print("  - Generando PD Standalone para "+modulo.nombre.replace(" ",""))
-    templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
+    templateLoader = jinja2.FileSystemLoader(searchpath=f"./templates_{familia}/")
     templateEnv = jinja2.Environment(loader=templateLoader)
     TEMPLATE_TITULO = "PCCF_PD_Plantilla_Portada_Modulo.md"
     template = templateEnv.get_template(TEMPLATE_TITULO)
@@ -139,7 +164,7 @@ for codigo in data_box.ModulosProfesionales:
     
     # Creamos el PDF desde el excel
     #print(" * [ PCCF ] : Si existe el libro rellenado en la ruta, usarlo ")
-    ruta_al_libro="excels/"+s_ciclo+"_libro.xlsx"
+    ruta_al_libro=f"excels_{familia}/"+s_ciclo+"_libro.xlsx"
     
     if os.path.exists(ruta_al_libro):
         print(" * [ PCCF ] - Excel provisto ")

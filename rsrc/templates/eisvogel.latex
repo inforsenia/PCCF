@@ -985,6 +985,7 @@ $include-before$
 
 $endfor$
 $if(toc)$
+\renewcommand*\contentsname{Índex}
 $if(toc-title)$
 \renewcommand*\contentsname{$toc-title$}
 $endif$

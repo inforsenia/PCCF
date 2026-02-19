@@ -1,0 +1,1928 @@
+{
+    "CompetenciasProfesionalesPersonalesSociales": {
+        "a": "Configurar i explotar sistemes informàtics, adaptant la configuració lògica del sistema segons les necessitats d'ús i els criteris establerts.",
+        "b": "Aplicar tècniques i procediments relacionats amb la seguretat en sistemes, serveis i aplicacions, complint el pla de seguretat.",
+        "c": "Gestionar bases de dades, interpretant el seu disseny lògic i verificant integritat, consistència, seguretat i accessibilitat de les dades.",
+        "d": "Gestionar entorns de desenvolupament adaptant la seua configuració en cada cas per permetre el desenvolupament i desplegament d'aplicacions.",
+        "e": "Desenvolupar aplicacions multiplataforma amb accés a bases de dades utilitzant llenguatges, llibreries i eines adequades a les especificacions.",
+        "f": "Desenvolupar aplicacions implementant un sistema complet de formularis i informes que permeten gestionar de forma integral la informació emmagatzemada.",
+        "g": "Integrar continguts gràfics i components multimèdia en aplicacions multiplataforma, emprant eines específiques i complint els requeriments establerts.",
+        "h": "Desenvolupar interfícies gràfics d'usuari interactius i amb l'usabilitat adequada, emprant components visuals estàndard o implementant components visuals específics.",
+        "i": "Participar en el desenvolupament de jocs i aplicacions en l'àmbit de l'entreteniment i l'educació emprant tècniques, motors i entorns de desenvolupament específics.",
+        "j": "Desenvolupar aplicacions per a telèfons mòbils, tauletes i altres dispositius intel·ligents emprant tècniques i entorns de desenvolupament específics.",
+        "k": "Crear ajudes generals i sensibles al context, emprant eines específiques i integrant-les en les seues aplicacions corresponents.",
+        "l": "Crear tutorials, manuals d'usuari, d'instal·lació, de configuració i d'administració, emprant eines específiques.",
+        "m": "Empaquetar aplicacions per a la seua distribució preparant paquets auto instal·lables amb assistents incorporats.",
+        "n": "Desenvolupar aplicacions multiprocés i multifil emprant llibreries i tècniques de programació específiques.",
+        "ny": "Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació.",
+        "o": "Participar en la implantació de sistemes ERP-CRM avaluant la utilitat de cadascun dels seus mòduls.",
+        "p": "Gestionar la informació emmagatzemada en sistemes ERP-CRM garantint la seua integritat.",
+        "q": "Desenvolupar components personalitzats per a un sistema ERP-CRM atenent als requeriments.",
+        "r": "Realitzar plans de proves verificant el funcionament dels components programari desenvolupats, segons les especificacions.",
+        "s": "Desplegar i distribuir aplicacions en diferents àmbits d'implantació verificant el seu comportament i realitzant les modificacions necessàries.",
+        "t": "Establir vies eficaces de relació professional i comunicació amb els seus superiors, companys i subordinats, respectant l'autonomia i competències de les diferents persones.",
+        "u": "Liderar situacions col·lectives que es puguen produir, mediant en conflictes personals i laborals, contribuint a l'establiment d'un ambient de treball agradable, actuant en tot moment de forma respectuosa i tolerant.",
+        "v": "Gestionar la seua carrera professional, analitzant les oportunitats d'ocupació, autoocupació i d'aprenentatge.",
+        "w": "Mantenir l'esperit d'innovació i actualització en l'àmbit del seu treball per adaptar-se als canvis tecnològics i organitzatius del seu entorn professional.",
+        "x": "Crear i gestionar una petita empresa, realitzant un estudi de viabilitat de productes, de planificació de la producció i de comercialització.",
+        "y": "Participar de forma activa en la vida econòmica, social i cultural, amb una actitud crítica i responsable."
+    },
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "ny",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s"
+    ],
+    "CompetenciasSociales": [
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 3,
+        "e": 3,
+        "f": 3,
+        "g": 2,
+        "h": 2,
+        "i": 1,
+        "j": 3,
+        "k": 1,
+        "l": 1,
+        "m": 1,
+        "n": 3,
+        "ny": 3,
+        "o": 1,
+        "p": 2,
+        "q": 3,
+        "r": 2,
+        "s": 2,
+        "t": 2,
+        "u": 1,
+        "v": 2,
+        "w": 3,
+        "x": 1,
+        "y": 1
+    },
+    "CualificacionesINCUAL": {
+        "Completas": {
+            "IFC155_3": {
+                "Nombre": "Programació en llenguatges estructurats d'aplicacions de gestió",
+                "UCs": {
+                    "UC0223_3": "Configurar i explotar sistemes informàtics.",
+                    "UC0226_3": "Programar bases de dades relacionals.",
+                    "UC0494_3": "Desenvolupar components programari en llenguatges de programació estructurada."
+                }
+            },
+            "IFC080_3": {
+                "Nombre": "Programació amb llenguatges orientats a objectes i bases de dades relacionals",
+                "UCs": {
+                    "UC0223_3": "Configurar i explotar sistemes informàtics.",
+                    "UC0226_3": "Programar bases de dades relacionals.",
+                    "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
+                }
+            },
+            "Incompletas": {
+                "IFC363_3": {
+                    "Nombre": "Administració i programació en sistemes de planificació de recursos empresarials i de gestió de relacions amb clients",
+                    "UCs": {
+                        "UC1213_3": "Instal·lar i configurar sistemes de planificació de recursos empresarials i de gestió de relacions amb clients."
+                    }
+                },
+                "IFC303_3": {
+                    "Nombre": "Programació de sistemes informàtics",
+                    "UCs": {
+                        "UC0964_3": "Configurar i explotar sistemes informàtics."
+                    }
+                }
+            }
+        }
+    },
+    "ObjetivosGenerales": {
+        "a": "Ajustar la configuració lògica del sistema analitzant les necessitats i criteris establerts per configurar i explotar sistemes informàtics.",
+        "b": "Identificar les necessitats de seguretat analitzant vulnerabilitats i verificant el pla preestablert per aplicar tècniques i procediments relacionats amb la seguretat en el sistema.",
+        "c": "Interpretar el disseny lògic de bases de dades, analitzant i complint les especificacions relatives a la seua aplicació, per gestionar bases de dades.",
+        "d": "Instal·lar i configurar mòduls i complements, avaluant la seua funcionalitat, per gestionar entorns de desenvolupament.",
+        "e": "Seleccionar i emprar llenguatges, eines i llibreries, interpretant les especificacions per desenvolupar aplicacions multiplataforma amb accés a bases de dades.",
+        "f": "Gestionar la informació emmagatzemada, planificant i implementant sistemes de formularis i informes per desenvolupar aplicacions de gestió.",
+        "g": "Seleccionar i utilitzar eines específiques, llenguatges i llibreries, avaluant les seues possibilitats i seguint un manual d'estil, per manipular i integrar en aplicacions multiplataforma continguts gràfics i components multimèdia.",
+        "h": "Emprar eines de desenvolupament, llenguatges i components visuals, seguint les especificacions i verificant interactivitat i usabilitat, per desenvolupar interfícies gràfics d'usuari en aplicacions multiplataforma.",
+        "i": "Seleccionar i emprar tècniques, motors i entorns de desenvolupament, avaluant les seues possibilitats, per participar en el desenvolupament de jocs i aplicacions en l'àmbit de l'entreteniment.",
+        "j": "Seleccionar i emprar tècniques, llenguatges i entorns de desenvolupament, avaluant les seues possibilitats, per desenvolupar aplicacions en telèfons mòbils, tauletes i altres dispositius intel·ligents.",
+        "k": "Valorar i emprar eines específiques, atenent a l'estructura dels continguts, per crear ajudes generals i sensibles al context.",
+        "l": "Valorar i emprar eines específiques, atenent a l'estructura dels continguts, per crear tutorials, manuals d'usuari i altres documents associats a una aplicació.",
+        "m": "Seleccionar i emprar tècniques i eines, avaluant la utilitat dels assistents d'instal·lació generats, per empaquetar aplicacions.",
+        "n": "Analitzar i aplicar tècniques i llibreries específiques, simulant diferents escenaris, per desenvolupar aplicacions capaces d'oferir serveis en xarxa.",
+        "ny": "Analitzar i aplicar tècniques i llibreries de programació, avaluant la seua funcionalitat per desenvolupar aplicacions multiprocés i multifil.",
+        "o": "Reconèixer l'estructura dels sistemes ERP-CRM, identificant la utilitat de cadascun dels seus mòduls, per participar en la seua implantació.",
+        "p": "Realitzar consultes, analitzant i avaluant el seu abast, per gestionar la informació emmagatzemada en sistemes ERP-CRM.",
+        "q": "Seleccionar i emprar llenguatges i eines, atenent als requeriments, per desenvolupar components personalitzats en sistemes ERP-CRM.",
+        "r": "Verificar els components programari desenvolupats, analitzant les especificacions, per completar un pla de proves.",
+        "s": "Establir procediments, verificant la seua funcionalitat, per desplegar i distribuir aplicacions.",
+        "t": "Descriure els rols de cadascun dels components del grup de treball, identificant en cada cas la responsabilitat associada, per establir les relacions professionals més convenients.",
+        "u": "Identificar formes d'intervenció davant conflictes de tipus personal i laboral, tenint en compte les decisions més convenients, per garantir un entorn de treball satisfactori.",
+        "v": "Identificar i valorar les oportunitats de promoció professional i d'aprenentatge, analitzant el context del sector, per elegir l'itinerari laboral i formatiu més convenient.",
+        "w": "Identificar els canvis tecnològics, organitzatius, econòmics i laborals en la seua activitat, analitzant les seues implicacions en l'àmbit de treball, per mantenir l'esperit d'innovació.",
+        "x": "Reconèixer les oportunitats de negoci, identificant i analitzant demandes del mercat per crear i gestionar una petita empresa.",
+        "y": "Reconèixer els seus drets i deures com a agent actiu en la societat, analitzant el marc legal que regula les condicions socials i laborals per participar com a ciutadà democràtic."
+    },
+    "ModulosProfesionales": {
+        "0483": {
+            "nombre": "Sistemes Informàtics",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Avalua sistemes informàtics, identificant els seus components i característiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut els components físics d'un sistema informàtic i els seus mecanismes d'interconexió.",
+                        "b": "S'han classificat els tipus de memòries, assenyalant les seves característiques i identificant les seues prestacions i la funció que desenvolupen en el conjunt del sistema.",
+                        "c": "S'ha verificat el procés de posada en marxa d'un equip.",
+                        "d": "S'han classificat, instal·lat i configurat diferents tipus de dispositius perifèrics.",
+                        "e": "S'han identificat els tipus de xarxes i sistemes de comunicació.",
+                        "f": "S'han identificat els components d'una xarxa informàtica.",
+                        "g": "S'han interpretat mapes físics i lògics d'una xarxa informàtica.",
+                        "h": "S'han reconegut les normes de seguretat i prevenció de riscos laborals en l'ús dels sistemes informàtics."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Instal·la sistemes operatius planificant el procés i interpretant documentació tècnica.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els elements funcionals d'un sistema informàtic.",
+                        "b": "S'han analitzat les característiques, funcions i arquitectura d'un sistema operatiu.",
+                        "c": "S'han comparat sistemes operatius en base als seus requisits, característiques, camps d'aplicació i llicències d'ús.",
+                        "d": "S'ha planificat el procés de la instal·lació de sistemes operatius.",
+                        "e": "S'han instal·lat i actualitzat sistemes operatius lliures i propietaris.",
+                        "f": "S'han aplicat tècniques d'actualització i recuperació del sistema.",
+                        "g": "S'han utilitzat tecnologies de virtualització per a instal·lar i provar sistemes operatius.",
+                        "h": "S'han instal·lat, desinstal·lat i actualitzat aplicacions.",
+                        "i": "S'han documentat els processos realitzats."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Gestiona la informació del sistema identificant les estructures d'emmagatzematge i aplicant mesures per a assegurar la integritat de les dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han comparat sistemes de fitxers.",
+                        "b": "S'ha identificat l'estructura i funció dels directoris del sistema operatiu.",
+                        "c": "S'han utilitzat eines en entorn gràfic i comandaments per a localitzar informació en el sistema de fitxers.",
+                        "d": "S'han creat diferents tipus de particions i unitats lògiques.",
+                        "e": "S'han realitzat i restaurat còpies de seguretat.",
+                        "f": "S'han planificat i automatitzat tasques.",
+                        "g": "S'han instal·lat i avaluat utilitats relacionades amb la gestió d'informació."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Gestiona sistemes operatius utilitzant comandaments i eines gràfiques i avaluant les necessitats del sistema.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han configurat comptes d'usuari locals i grups.",
+                        "b": "S'ha assegurat l'accés al sistema mitjançant l'ús de directrius de compte i directrius de contrasenyes.",
+                        "c": "S'han identificat, arrancat i aturat serveis i processos.",
+                        "d": "S'ha protegit l'accés a la informació mitjançant l'ús de permisos locals i llistes de control d'accés.",
+                        "e": "S'han utilitzat comandaments per a realitzar les tasques bàsiques de configuració i administració del sistema.",
+                        "f": "S'ha monitoritzat el sistema.",
+                        "g": "S'han instal·lat i avaluat utilitats per al manteniment i optimització del sistema.",
+                        "h": "S'han avaluat les necessitats del sistema informàtic en relació amb el desenvolupament d'aplicacions."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Interconnecta sistemes en xarxa configurant dispositius i protocols.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha configurat el protocol TCP/IP.",
+                        "b": "S'han configurat xarxes d'àrea local cablades.",
+                        "c": "S'han configurat xarxes d'àrea local sense fils.",
+                        "d": "S'han utilitzat dispositius d'interconnexió de xarxes.",
+                        "e": "S'ha configurat l'accés a xarxes d'àrea extensa.",
+                        "f": "S'han gestionat ports de comunicacions.",
+                        "g": "S'ha verificat el funcionament de la xarxa mitjançant l'ús de comandaments i eines bàsiques.",
+                        "h": "S'han aplicat protocols segurs de comunicacions."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Opera sistemes en xarxa gestionar els seus recursos i identificant les restriccions de seguretat existents.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha configurat l'accés a recursos locals i recursos de xarxa.",
+                        "b": "S'han identificat i configurat els drets d'usuari i directrius de seguretat.",
+                        "c": "S'han explotat servidors de fitxers, servidors d'impressió i servidors d'aplicacions.",
+                        "d": "S'ha accedit als servidors utilitzant tècniques de connexió remota.",
+                        "e": "S'ha avaluat la necessitat de protegir els recursos i el sistema.",
+                        "f": "S'han instal·lat i avaluat utilitats de seguretat bàsica.",
+                        "g": "S'han configurat i explotat dominis."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Elabora documentació valorant i utilitzant aplicacions informàtiques de propòsit general.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha classificat software en funció de la seua llicència i propòsit.",
+                        "b": "S'han analitzat les necessitats específiques de software associades a l'ús de sistemes informàtics en diferents entorns productius.",
+                        "c": "S'han realitzat tasques de documentació mitjançant l'ús de ferramentes ofimàtiques i de treball col·laboratiu.",
+                        "d": "S'han utilitzat sistemes de correu i missatgeria electrònica.",
+                        "e": "S'han utilitzat els serveis de transferència de fitxers.",
+                        "f": "S'han utilitzat mètodes de cerca de documentació tècnica mitjançant l'ús de serveis d'Internet.",
+                        "g": "S'han utilitzat ferramentes de propòsit general."
+                    }
+                }
+            },
+            "horas": "160",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0223_3": "Configurar y explotar sistemas informáticos."
+            },
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "l",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y"
+            ]
+        },
+        "0484": {
+            "nombre": "Bases de Dades",
+            "creditos": "12",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els sistemes lògics d'emmagatzematge i les seues característiques.",
+                        "b": "S'han identificat els diferents tipus de bases de dades segons el model de dades utilitzat.",
+                        "c": "S'han identificat els diferents tipus de bases de dades en funció de la ubicació de la informació.",
+                        "d": "S'ha avaluat la utilitat d'un sistema gestor de bases de dades.",
+                        "e": "S'ha reconegut la funció de cadascun dels elements d'un sistema gestor de bases de dades.",
+                        "f": "S'han classificat els sistemes gestors de bases de dades.",
+                        "g": "S'ha reconegut la utilitat de les bases de dades distribuïdes.",
+                        "h": "S'han analitzat les polítiques de fragmentació de la informació.",
+                        "i": "S'ha identificat la legislació vigent sobre protecció de dades.",
+                        "j": "S'han reconegut els conceptes de Big Data i de la intel·ligència de negocis."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat el format d'emmagatzematge de la informació.",
+                        "b": "S'han creat les taules i les relacions entre elles.",
+                        "c": "S'han seleccionat els tipus de dades adequats.",
+                        "d": "S'han definit els camps clau en les taules.",
+                        "e": "S'han implantat les restriccions reflectides en el disseny lògic.",
+                        "f": "S'han creat vistes.",
+                        "g": "S'han creat els usuaris i se'ls han assignat privilegis.",
+                        "h": "S'han utilitzat assistents, eines gràfiques i els llenguatges de definició i control de dades."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Consulta la informació emmagatzemada en una base de dades emprant assistents, eines gràfiques i el llenguatge de manipulació de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les eines i sentències per a realitzar consultes.",
+                        "b": "S'han realitzat consultes simples sobre una taula.",
+                        "c": "S'han realitzat consultes sobre el contingut de diverses taules mitjançant composicions internes.",
+                        "d": "S'han realitzat consultes sobre el contingut de diverses taules mitjançant composicions externes.",
+                        "e": "S'han realitzat consultes resum.",
+                        "f": "S'han realitzat consultes amb subconsultes.",
+                        "g": "S'han realitzat consultes que impliquen múltiples seleccions.",
+                        "h": "S'han aplicat criteris d'optimització de consultes."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les eines i sentències per a modificar el contingut de la base de dades.",
+                        "b": "S'han inserit, esborrat i actualitzat dades en les taules.",
+                        "c": "S'ha inclòs en una taula la informació resultant de l'execució d'una consulta.",
+                        "d": "S'han dissenyat guions de sentències per a dur a terme tasques complexes.",
+                        "e": "S'ha reconegut el funcionament de les transaccions.",
+                        "f": "S'han anul·lat parcial o totalment els canvis produïts per una transacció.",
+                        "g": "S'han identificat els efectes de les diferents polítiques de bloqueig de registres.",
+                        "h": "S'han adoptat mesures per a mantenir la integritat i consistència de la informació."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les diverses formes d'automatitzar tasques.",
+                        "b": "S'han reconegut els mètodes d'execució de guions.",
+                        "c": "S'han identificat les eines disponibles per a editar guions.",
+                        "d": "S'han definit i utilitzat guions per a automatitzar tasques.",
+                        "e": "S'ha fet ús de les funcions proporcionades pel sistema gestor.",
+                        "f": "S'han definit procediments i funcions d'usuari.",
+                        "g": "S'han utilitzat estructures de control de flux.",
+                        "h": "S'han definit esdeveniments i disparadors.",
+                        "i": "S'han utilitzat cursos.",
+                        "j": "S'han utilitzat excepcions."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Dissena models relacionals normalitzats interpretant diagrames entitat/relació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han utilitzat eines gràfiques per a representar el disseny lògic i conceptual.",
+                        "b": "S'ha extret l'esquema entitat-relació estès a partir dels requeriments d'un model donat, reconeixent les entitats, atributs i relacions del mateix.",
+                        "c": "S'ha aplicat la simbologia normalitzada en l'elaboració del diagrama entitat-relació.",
+                        "d": "Se han identificat els tabals del disseny lògic.",
+                        "e": "Se han identificat els camps que forman part dels tauls del disseny lògic.",
+                        "f": "S'han analitzat les relacions entre els tauls del disseny lògic.",
+                        "g": "Se han identificat els camps clau.",
+                        "h": "S'han aplicat regles d'integritat.",
+                        "i": "S'han aplicat regles de normalització.",
+                        "j": "S'han analitzat i documentat les restriccions que no poden plasmarse en el disseny lògic."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Gestiona la informació emmagatzemada en bases de dades no relacionals, avaluant i utilitzant les possibilitats que proporciona el sistema gestor.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han caracteritzat les bases de dades no relacionals.",
+                        "b": "S'han avaluat els principals tipus de bases de dades no relacionals.",
+                        "c": "S'han identificat els elements utilitzats en aquestes bases de dades.",
+                        "d": "S'han identificat diferents formes de gestió de la informació segons el tipus de base de dades no relacionals.",
+                        "e": "S'han utilitzat les eines del sistema gestor per a la gestió de la informació emmagatzemada."
+                    }
+                }
+            },
+            "horas": "166",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0226_3": "Programar bases de dades relacionals."
+            },
+            "ObjetivosGenerales ": [
+                "c",
+                "e",
+                "f",
+                "p",
+                "t"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "e",
+                "p",
+                "t"
+            ]
+        },
+        "0485": {
+            "nombre": "Programació",
+            "creditos": "14",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els blocs que componen l'estructura d'un programa informàtic.",
+                        "b": "S'han creat projectes de desenvolupament d'aplicacions.",
+                        "c": "S'han utilitzat entorns integrats de desenvolupament.",
+                        "d": "S'han identificat els diferents tipus de variables i la utilitat específica de cadascuna.",
+                        "e": "S'ha modificat el codi d'un programa per a crear i utilitzar variables.",
+                        "f": "S'han creat i utilitzat constants i literals.",
+                        "g": "S'han classificat, reconegut i utilitzat en expressions els operadors del llenguatge.",
+                        "h": "S'ha comprovat el funcionament de les conversions de tipus explícites i implícites.",
+                        "i": "S'han introduït comentaris en el codi."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els fonaments de la programació orientada a objectes.",
+                        "b": "S'han escrit programes simples.",
+                        "c": "S'han instanciat objectes a partir de classes predefinides.",
+                        "d": "S'han utilitzat mètodes i propietats dels objectes.",
+                        "e": "S'han escrit crides a mètodes estàtics.",
+                        "f": "S'han utilitzat paràmetres en la crida a mètodes.",
+                        "g": "S'han incorporat i utilitzat llibreries d'objectes.",
+                        "h": "S'han utilitzat constructors.",
+                        "i": "S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha escrit i provat codi que fa ús d'estructures de selecció.",
+                        "b": "S'han utilitzat estructures de repetició.",
+                        "c": "S'han reconegut les possibilitats de les sentències de salt.",
+                        "d": "S'ha escrit codi utilitzant control d'excepcions.",
+                        "e": "S'han creat programes executables utilitzant diferents estructures de control.",
+                        "f": "S'han provat i depurat els programes.",
+                        "g": "S'ha comentat i documentat el codi.",
+                        "h": "S'han creat excepcions.",
+                        "i": "S'han utilitzat asercions per a la detecció i correcció d'errors durant la fase de desenvolupament."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha reconegut la sintaxi, estructura i components típics d'una classe.",
+                        "b": "S'han definit classes.",
+                        "c": "S'han definit propietats i mètodes.",
+                        "d": "S'han creat constructors.",
+                        "e": "S'han desenvolupat programes que instancien i utilitzen objectes de les classes creades anteriorment.",
+                        "f": "S'han utilitzat mecanismes per a controlar la visibilitat de les classes i dels seus membres.",
+                        "g": "S'han definit i utilitzat classes heretades.",
+                        "h": "S'han creat i utilitzat mètodes estàtics.",
+                        "i": "S'han creat i utilitzat conjunts i llibreries de classes."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha utilitzat la consola per a realitzar operacions d'entrada i sortida d'informació.",
+                        "b": "S'han aplicat formats en la visualització de la informació.",
+                        "c": "S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades.",
+                        "d": "S'han utilitzat fitxers per a emmagatzemar i recuperar informació.",
+                        "e": "S'han creat programes que utilitzen diversos mètodes d'accés al contingut dels fitxers.",
+                        "f": "S'han utilitzat les eines de l'entorn de desenvolupament per a crear interfícies gràfics d'usuari simples.",
+                        "g": "S'han programat controladors d'esdeveniments.",
+                        "h": "S'han escrit programes que utilitzen interfícies gràfics per a l'entrada i sortida d'informació."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Escriu programes que manipulen informació seleccionant i utilitzant tipus avançats de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han escrit programes que utilitzen matrius (arrays).",
+                        "b": "S'han reconegut les llibreries de classes relacionades amb tipus de dades avançats.",
+                        "c": "S'han utilitzat llistes per a emmagatzemar i processar informació.",
+                        "d": "S'han utilitzat iteradors per a recórrer els elements de les llistes.",
+                        "e": "S'han reconegut les característiques i avantatges de cadascuna de les col·leccions de dades disponibles.",
+                        "f": "S'han creat classes i mètodes genèrics.",
+                        "g": "S'han utilitzat expressions regulars en la cerca de patrons en cadenes de text.",
+                        "h": "S'han identificat les classes relacionades amb el tractament de documents escrits en diferents llenguatges d'intercanvi de dades.",
+                        "i": "S'han realitzat programes que realitzen manipulacions sobre documents escrits en diferents llenguatges d'intercanvi de dades.",
+                        "j": "S'han utilitzat operacions agregades per al maneig d'informació emmagatzemada en col·leccions."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Desenvolupa programes aplicant característiques avançades dels llenguatges orientats a objectes i de l'entorn de programació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els conceptes d'herència, superclasse i subclasse.",
+                        "b": "S'han utilitzat modificadors per a bloquejar i forçar l'herència de classes i mètodes.",
+                        "c": "S'ha reconegut la incidència dels constructors en l'herència.",
+                        "d": "S'han creat classes heretades que sobreescriuen la implementació de mètodes de la superclasse.",
+                        "e": "S'han dissenyat i aplicat jerarquies de classes.",
+                        "f": "S'han provat i depurat les jerarquies de classes.",
+                        "g": "S'han realitzat programes que implementen i utilitzen jerarquies de classes.",
+                        "h": "S'ha comentat i documentat el codi.",
+                        "i": "S'han identificat i avaluat els escenaris d'ús d'interfícies.",
+                        "j": "S'han identificat i avaluat els escenaris d'utilització de l'herència i la composició."
+                    }
+                },
+                "RA08": {
+                    "Resultado": "Utilitza bases de dades orientades a objectes, analitzant les seues característiques i aplicant tècniques per a mantenir la persistència de la informació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques de les bases de dades orientades a objectes.",
+                        "b": "S'ha analitzat la seua aplicació en el desenvolupament d'aplicacions mitjançant llenguatges orientats a objectes.",
+                        "c": "S'han instal·lat sistemes gestors de bases de dades orientats a objectes.",
+                        "d": "S'han classificat i analitzat els diferents mètodes suportats pels sistemes gestors per a la gestió de la informació emmagatzemada.",
+                        "e": "S'han creat bases de dades i les estructures necessàries per a l'emmagatzematge d'objectes.",
+                        "f": "S'han programat aplicacions que emmagatzemen objectes en les bases de dades creades.",
+                        "g": "S'han realitzat programes per a recuperar, actualitzar i eliminar objectes de les bases de dades.",
+                        "h": "S'han realitzat programes per a emmagatzemar i gestionar tipus de dades estructurats, compostos i relacionats."
+                    }
+                },
+                "RA09": {
+                    "Resultado": "Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques i mètodes d'accés a sistemes gestors de bases de dades.",
+                        "b": "S'han programat connexions amb bases de dades.",
+                        "c": "S'ha escrit un codi per a emmagatzemar informació en bases de dades.",
+                        "d": "S'han creat programes per a recuperar i mostrar informació emmagatzemada en bases de dades.",
+                        "e": "S'han efectuat esborrats i modificacions sobre la informació emmagatzemada.",
+                        "f": "S'han creat aplicacions que mostren la informació emmagatzemada en bases de dades.",
+                        "g": "S'han creat aplicacions per a gestionar la informació present en bases de dades."
+                    }
+                }
+            },
+            "horas": "266",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
+            },
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "e",
+                "j",
+                "t",
+                "w"
+            ]
+        },
+        "0373": {
+            "nombre": "Llenguatges de marques i sistemes de gestió d'informació",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques generals dels llenguatges de marques.",
+                        "b": "S'han reconegut els avantatges que proporcionen en el tractament de la informació.",
+                        "c": "S'han classificat els llenguatges de marques i identificat els més rellevants.",
+                        "d": "S'han diferenciat els seus àmbits d'aplicació.",
+                        "e": "S'han reconegut la necessitat i els àmbits específics d'aplicació d'un llenguatge de marques de propòsit general.",
+                        "f": "S'han analitzat les característiques pròpies de diferents llenguatges de marques.",
+                        "g": "S'ha identificat l'estructura d'un document i les seues regles sintàctiques.",
+                        "h": "S'ha contrastat la necessitat de crear documents ben formats i la influència en el seu processament.",
+                        "i": "S'han identificat els avantatges que aporten els espais de noms."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat i classificat els llenguatges de marques relacionats amb la web i les seues diferents versions i estàndards.",
+                        "b": "S'ha analitzat l'estructura d'un document HTML i identificat les seccions que el componen.",
+                        "c": "S'ha reconegut la funcionalitat de les principals etiquetes i els atributs del llenguatge HTML.",
+                        "d": "S'han establert les semblances i diferències entre les diferents versions d'HTML.",
+                        "e": "S'han utilitzat eines en la creació de documents web.",
+                        "f": "S'han identificat els avantatges que aporta la utilització de fulls d'estil.",
+                        "g": "S'han aplicat fulls d'estil.",
+                        "h": "S'han validat documents HTML i CSS.",
+                        "i": "S'han identificat les tecnologies en què es basa la sindicació de continguts.",
+                        "j": "S'han reconegut els àmbits d'aplicació de la sindicació de continguts."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Accedeix i manipula documents web utilitzant llenguatges de script de client.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat i classificat els llenguatges de script de client relacionats amb la web i les seues diferents versions i estàndards.",
+                        "b": "S'ha identificat la sintaxi bàsica dels llenguatges de script de client.",
+                        "c": "S'han utilitzat mètodes per a la selecció i accés dels diferents elements d'un document web.",
+                        "d": "S'han creat i modificat elements de documents web.",
+                        "e": "S'han eliminat elements de documents web.",
+                        "f": "S'han realitzat modificacions sobre els estils d'un document web."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Estableix mecanismes de validació de documents per a l'intercanvi d'informació utilitzant mètodes per a definir la seua sintaxi i estructura.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert la necessitat de descriure la informació transmesa en els documents i les seues regles.",
+                        "b": "S'han identificat les tecnologies relacionades amb la definició de documents.",
+                        "c": "S'ha analitzat l'estructura i sintaxi específica utilitzada en la descripció.",
+                        "d": "S'han creat descripcions de documents.",
+                        "e": "S'han utilitzat descripcions en l'elaboració i validació de documents.",
+                        "f": "S'han associat les descripcions amb els documents.",
+                        "g": "S'han utilitzat eines específiques."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza conversions sobre documents per a l'intercanvi d'informació utilitzant tècniques, llenguatges i eines de processament.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la necessitat de la conversió de documents per a l'intercanvi de la informació.",
+                        "b": "S'han establert àmbits d'aplicació.",
+                        "c": "S'han analitzat les tecnologies implicades i el seu mode de funcionament.",
+                        "d": "S'ha descrit la sintaxi específica utilitzada en la conversió i adaptació de documents per a l'intercanvi d'informació.",
+                        "e": "S'han creat especificacions de conversió.",
+                        "f": "S'han identificat i caracteritzat eines específiques relacionades amb la conversió de documents per a l'intercanvi d'informació.",
+                        "g": "S'han realitzat conversions sobre documents per a l'intercanvi d'informació."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Gestiona la informació en formats d'intercanvi de dades analitzant i utilitzant tecnologies d'emmagatzematge i llenguatges de consulta.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals mètodes d'emmagatzematge de la informació utilitzats en documents d'intercanvi de dades.",
+                        "b": "S'han identificat els avantatges i inconvenients d'emmagatzemar informació en formats d'intercanvi de dades.",
+                        "c": "S'han establert tecnologies eficients d'emmagatzematge d'informació en funció de les seues característiques.",
+                        "d": "S'han identificat llenguatges i eines per al tractament i emmagatzematge d'informació i la seua inclusió en documents d'intercanvi de dades.",
+                        "e": "S'han utilitzat llenguatges de consulta i manipulació en documents d'intercanvi de dades.",
+                        "f": "S'han utilitzat sistemes gestors de bases de dades relacionals en l'emmagatzematge d'informació en formats d'intercanvi de dades.",
+                        "g": "S'han utilitzat tècniques específiques per a crear documents d'intercanvi de dades a partir d'informació emmagatzemada en bases de dades relacionals.",
+                        "h": "S'han identificat les característiques dels sistemes.",
+                        "i": "S'han utilitzat eines per a gestionar la informació emmagatzemada en bases de dades natives."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Opera sistemes empresarials de gestió d'informació realitzant tasques d'importació, integració, assegurament i extracció de la informació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals sistemes de gestió empresarial.",
+                        "b": "S'han reconegut els avantatges dels sistemes de gestió d'informació empresarials.",
+                        "c": "S'han avaluat les característiques de les principals aplicacions de gestió empresarial.",
+                        "d": "S'han instal·lat aplicacions de gestió de la informació empresarial.",
+                        "e": "S'han configurat i administrat les aplicacions.",
+                        "f": "S'han establert i verificat mecanismes d'accés segur a la informació.",
+                        "g": "S'han generat informes.",
+                        "h": "S'han realitzat procediments d'extracció d'informació per al seu tractament i incorporació a diversos sistemes.",
+                        "i": "S'han elaborat documents relatius a l'explotació de l'aplicació."
+                    }
+                }
+            },
+            "horas": "96",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "h",
+                "o",
+                "p",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "h",
+                "o",
+                "p",
+                "t",
+                "w"
+            ]
+        },
+        "0487": {
+            "nombre": "Entorns de desenvolupament",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Reconeix els elements i eines que intervenen en el desenvolupament d'un programa informàtic, analitzant les seues característiques i les fases en què actuen fins a arribar a la seua posada en funcionament.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha reconegut la relació dels programes amb els components del sistema informàtic: memòria, processador, perifèrics, entre altres.",
+                        "b": "S'han identificat les fases de desenvolupament d'una aplicació informàtica.",
+                        "c": "S'han diferenciat els conceptes de codi font, objecte i executable.",
+                        "d": "S'han reconegut les característiques de la generació de codi intermedi per a la seua execució en màquines virtuals.",
+                        "e": "S'han classificat els llenguatges de programació, identificant les seues característiques.",
+                        "f": "S'ha avaluat la funcionalitat oferta per les eines utilitzades en el desenvolupament de programari.",
+                        "g": "S'han identificat les característiques i escenaris d'ús de les metodologies àgils de desenvolupament de programari."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Avalua entorns integrats de desenvolupament analitzant les seues característiques per a editar codi font i generar executables.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han instal·lat entorns de desenvolupament, propietaris i lliures.",
+                        "b": "S'han afegit i eliminat mòduls en l'entorn de desenvolupament.",
+                        "c": "S'ha personalitzat i automatitzat l'entorn de desenvolupament.",
+                        "d": "S'ha configurat el sistema d'actualització de l'entorn de desenvolupament.",
+                        "e": "S'han generat executables a partir de codi font de diferents llenguatges en un mateix entorn de desenvolupament.",
+                        "f": "S'han generat executables a partir d'un mateix codi font amb diversos entorns de desenvolupament.",
+                        "g": "S'han identificat les característiques comunes i específiques de diversos entorns de desenvolupament."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Verifica el funcionament de programes dissenyant i realitzant proves.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents tipus de proves.",
+                        "b": "S'han definit casos de prova.",
+                        "c": "S'han identificat les eines de depuració i prova d'aplicacions ofertes per l'entorn de desenvolupament.",
+                        "d": "S'han utilitzat eines de depuració per a definir punts de ruptura i seguiment.",
+                        "e": "S'han utilitzat les eines de depuració per a examinar i modificar el comportament d'un programa en temps d'execució.",
+                        "f": "S'han efectuat proves unitàries de classes i funcions.",
+                        "g": "S'han implementat proves automàtiques.",
+                        "h": "S'han documentat les incidències detectades.",
+                        "i": "S'han utilitzat dobles de prova per a aïllar els components durant les proves."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Optimitza codi emprant les eines disponibles en l'entorn de desenvolupament.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els patrons de refactorització més usuals.",
+                        "b": "S'han elaborat les proves associades a la refactorització.",
+                        "c": "S'ha revisat el codi font usant un analitzador de codi.",
+                        "d": "S'han identificat les possibilitats de configuració d'un analitzador de codi.",
+                        "e": "S'han aplicat patrons de refactorització amb les eines que proporciona l'entorn de desenvolupament.",
+                        "f": "S'ha realitzat el control de versions integrat en l'entorn de desenvolupament.",
+                        "g": "S'han utilitzat eines de l'entorn de desenvolupament per a documentar les classes.",
+                        "h": "S'han utilitzat repositoris remots per al desenvolupament de codi col·laboratiu.",
+                        "i": "S'han utilitzat eines per a la integració contínua del codi."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Genera diagrames de classes valorant la seua importància en el desenvolupament d'aplicacions i emprant eines específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els conceptes bàsics de la programació orientada a objectes.",
+                        "b": "S'han utilitzat eines per a l'elaboració de diagrames de classes.",
+                        "c": "S'ha interpretat el significat de diagrames de classes.",
+                        "d": "S'han traçat diagrames de classes a partir de les especificacions de les mateixes.",
+                        "e": "S'ha generat codi a partir d'un diagrama de classes.",
+                        "f": "S'ha generat un diagrama de classes mitjançant enginyeria inversa."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Genera diagrames de comportament valorant la seua importància en el desenvolupament d'aplicacions i emprant eines específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents tipus de diagrames de comportament.",
+                        "b": "S'ha reconegut el significat dels diagrames de casos d'ús.",
+                        "c": "S'han interpretat diagrames d'interacció.",
+                        "d": "S'han elaborat diagrames d'interacció senzills.",
+                        "e": "S'ha interpretat el significat de diagrames d'activitats.",
+                        "f": "S'han elaborat diagrames d'activitats senzills.",
+                        "g": "S'han interpretat diagrames d'estats.",
+                        "h": "S'han plantejat diagrames d'estats senzills."
+                    }
+                }
+            },
+            "horas": "96",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "d",
+                "e",
+                "h",
+                "i",
+                "j"
+            ],
+            "CompetenciasTitulo": [
+                "d",
+                "f",
+                "h",
+                "i",
+                "j"
+            ]
+        },
+        "0179": {
+            "nombre": "Anglès Professional (GS)",
+            "creditos": "4",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Comprèn informació, de índole professional, acadèmica i quotidiana, continguda en tot tipus de discursos orals, emesos per qualsevol mitjà de comunicació en llengua estàndard, interpretant amb precisió el contingut del missatge.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la idea principal de missatges en llengua estàndard relacionats amb la vida social, professional o acadèmica.",
+                        "b": "S'ha reconegut la finalitat de missatges directes o emesos en qualsevol suport en llengua estàndard.",
+                        "c": "S'ha extret informació específica continguda en diferents discursos orals en llengua estàndard, relacionada amb la vida social, professional o acadèmica.",
+                        "d": "S'ha identificat el punt de vista i l'actitud del parlant.",
+                        "e": "S'ha identificat el fil argumental de missatges orals i determinat els rols que apareixen en dits missatges.",
+                        "f": "S'han comprès adequadament missatges en llengua estàndard en ambients amb contaminació acústica.",
+                        "g": "S'han extret les idees principals de conferències, xerrades i informes, i altres formes de presentació acadèmica i professional, lingüísticament complexes.",
+                        "h": "S'ha pres consciència de la importància de comprendre globalment un missatge sense entendre tots i cadascun dels elements del mateix."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Comprèn missatges escrits, de naturalesa professional, acadèmica i quotidiana, de relativa dificultat, analitzant de forma comprensible el seu contingut.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la idea principal de textos específics del seu àmbit social, professional o acadèmic.",
+                        "b": "S'ha reconegut la finalitat de diferents textos escrits en qualsevol suport, en llengua estàndard i relacionats amb l'activitat professional.",
+                        "c": "S'ha extret informació específica de textos, de diferent naturalesa, relatius a la seua professió, i continguts en diferents suports.",
+                        "d": "S'ha pres consciència de la importància de comprendre globalment un text sense entendre tots i cadascun dels elements del mateix.",
+                        "e": "S'han llegit i comprès, de manera autònoma, textos relacionats amb el sector amb la velocitat i estil de lectura pròpia del nivell competencial.",
+                        "f": "S'ha interpretat la correspondència relativa a la seua especialitat, captant fàcilment el significat essencial.",
+                        "g": "S'han interpretat textos extensos, i d'una certa complexitat, relacionats o no amb la seua especialitat, podent realitzar diverses lectures del mateix.",
+                        "h": "S'ha identificat amb rapidesa el contingut i la importància de notícies, articles i informes sobre una ampla sèrie de temes professionals.",
+                        "i": "S'han interpretat instruccions, amb diferents nivells de dificultat, i missatges tècnics rebuts a través de suports digitals.",
+                        "j": "S'han traduït textos d'una certa complexitat, utilitzant material de suport en cas necessari."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Produeix missatges orals clars i ben estructurats, analitzant el contingut de la situació i adaptant-se al registre lingüístic de l'interlocutor.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han emés missatges generals propis del sector i de la vida quotidiana, utilitzant nexes i estratègies d'interacció.",
+                        "b": "S'ha intercanviat amb fluïdesa informació específica i detallada utilitzant estructures d'una complexitat acord al nivell competencial.",
+                        "c": "S'han seleccionat i aplicat els registres adequats per a l'emissió del missatge, així com protocols i normes de relació social propis del país.",
+                        "d": "S'han realitzat presentacions, ben estructurades, sobre temes del seu àmbit professional, fent ús dels protocols establerts.",
+                        "e": "S'ha utilitzat correctament la terminologia de la professió.",
+                        "f": "S'ha descrit i seqüenciat oralment un procés de treball de la seua competència.",
+                        "g": "S'ha sol·licitat la reformulació del discurs o part del mateix quan s'ha considerat necessari.",
+                        "h": "S'ha interaccionat espontàniament, adoptant un nivell de formalitat adequat a les circumstàncies.",
+                        "i": "S'ha expressat amb fluïdesa, precisió i eficàcia sobre una ampla sèrie de temes generals, acadèmics, professionals o d'oci, marcant amb claredat la relació entre les idees.",
+                        "j": "S'han expressat i defensat punts de vista amb claredat, proporcionant explicacions i arguments adequats.",
+                        "k": "S'ha respost a preguntes relatives a la seua vida socio-professional, incloses les pròpies d'una entrevista de treball."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Redacta documents i informes, propis del sector o de la vida acadèmica i quotidiana, relacionant els recursos lingüístics amb el propòsit dels mateixos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han escrit textos clars i detallats sobre una varietat de temes relacionats amb la seua professió, sintetitzant i avaluant informació i arguments procedents de diverses fonts.",
+                        "b": "S'ha complert documentació específica del seu camp professional, utilitzant vocabulari específic i protocols i normes de relació social propis del país.",
+                        "c": "S'ha organitzat la informació amb correcció, precisió, amb cohesió i coherència, sol·licitant i/o facilitant informació de tipus general o detallada.",
+                        "d": "S'han complert textos mitjançant suports visuals i claus lingüístiques.",
+                        "e": "S'han elaborat informes, destacant els aspectes significatius i oferint detalls rellevants que servisquen de suport.",
+                        "f": "S'han escrit cartes, formals i informals, emprant les fórmules de cortesia establertes i el vocabulari específic per a l'elaboració de les mateixes.",
+                        "g": "S'han resumit diferents tipus de documents escrits, utilitzant els seus propis recursos lingüístics.",
+                        "h": "S'han utilitzat les fórmules de cortesia pròpies del document que es va a elaborar."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica actituds i comportaments professionals en situacions de comunicació, descrivint les relacions típiques característiques del país de la llengua estrangera.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit els trets més significatius de les costums i usos de la comunitat on es parla la llengua estrangera.",
+                        "b": "S'han descrit els protocols i normes de relació social propis del país.",
+                        "c": "S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+                        "d": "S'ha identificat els aspectes socio-professionals propis del sector, en qualsevol tipus de text.",
+                        "e": "S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera.",
+                        "f": "S'han reconegut els marcadors lingüístics de la procedència regional."
+                    }
+                }
+            },
+            "horas": "68",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "0486": {
+            "nombre": "Accés a dades",
+            "creditos": "9",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Desenvolupa aplicacions que gestionen informació emmagatzemada en fitxers identificant el camp d'aplicació dels mateixos i utilitzant classes específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han utilitzat classes per a la gestió de fitxers i directoris.",
+                        "b": "S'han valorat els avantatges i els inconvenients de les diferents formes d'accés.",
+                        "c": "S'han utilitzat classes per a recuperar informació emmagatzemada en fitxers.",
+                        "d": "S'han utilitzat classes per a emmagatzemar informació en fitxers.",
+                        "e": "S'han utilitzat classes per a realitzar conversions entre diferents formats de fitxers.",
+                        "f": "S'han previst i gestionat les excepcions.",
+                        "g": "S'han provat i documentat les aplicacions desenvolupades."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Desenvolupa aplicacions que gestionen informació emmagatzemada en bases de dades relacionals identificant i utilitzant mecanismes de connexió.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han valorat els avantatges i inconvenients d'utilitzar connectors.",
+                        "b": "S'han utilitzat gestors de bases de dades incrustats i independents.",
+                        "c": "S'ha utilitzat el connector idoni en l'aplicació.",
+                        "d": "S'ha establert la connexió.",
+                        "e": "S'ha definit l'estructura de la base de dades.",
+                        "f": "S'han desenvolupat aplicacions que modifiquen el contingut de la base de dades.",
+                        "g": "S'han definit els objectes destinats a emmagatzemar el resultat de les consultes.",
+                        "h": "S'han desenvolupat aplicacions que efectuen consultes.",
+                        "i": "S'han eliminat els objectes una vegada finalitzada la seua funció.",
+                        "j": "S'han gestionat les transaccions.",
+                        "k": "S'han executat procediments emmagatzemats en la base de dades."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Gestiona la persistència de les dades identificant eines de mapatge objecte relacional (ORM) i desenvolupant aplicacions que les utilitzen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha instal·lat l'eina ORM.",
+                        "b": "S'ha configurat l'eina ORM.",
+                        "c": "S'han definit configuracions de mapatge.",
+                        "d": "S'han aplicat mecanismes de persistència als objectes.",
+                        "e": "S'han desenvolupat aplicacions que modifiquen i recuperen objectes persistents.",
+                        "f": "S'han desenvolupat aplicacions que realitzen consultes usant el llenguatge SQL.",
+                        "g": "S'han gestionat les transaccions."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Desenvolupa aplicacions que gestionen la informació emmagatzemada en bases de dades objecte relacionals i orientades a objectes valorant les seues característiques i utilitzant els mecanismes d'accés incorporats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els avantatges i inconvenients de les bases de dades que emmagatzemen objectes.",
+                        "b": "S'han establert i tancat connexions.",
+                        "c": "S'ha gestionat la persistència d'objectes simples.",
+                        "d": "S'ha gestionat la persistència d'objectes estructurats.",
+                        "e": "S'han desenvolupat aplicacions que realitzen consultes.",
+                        "f": "S'han modificat els objectes emmagatzemats.",
+                        "g": "S'han gestionat les transaccions.",
+                        "h": "S'han provat i documentat les aplicacions desenvolupades."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa aplicacions que gestionen la informació emmagatzemada en bases de dades documentals natives avaluant i utilitzant classes específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han valorat els avantatges i inconvenients d'utilitzar bases de dades documentals natives.",
+                        "b": "S'ha establert la connexió amb la base de dades.",
+                        "c": "S'han desenvolupat aplicacions que efectuen consultes sobre el contingut de la base de dades.",
+                        "d": "S'han afegit i eliminat col·leccions de la base de dades.",
+                        "e": "S'han desenvolupat aplicacions per a afegir, modificar i eliminar documents de la base de dades."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Programa components d'accés a dades identificant les característiques que ha de posseir un component i utilitzant eines de desenvolupament.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han valorat els avantatges i inconvenients d'utilitzar programació orientada a components.",
+                        "b": "S'han identificat eines de desenvolupament de components.",
+                        "c": "S'han programat components que gestionen informació emmagatzemada en fitxers.",
+                        "d": "S'han programat components que gestionen mitjançant connectors informació emmagatzemada en bases de dades.",
+                        "e": "S'han programat components que gestionen informació usant mapatge objecte relacional.",
+                        "f": "S'han programat components que gestionen informació emmagatzemada en bases de dades objecte relacionals i orientades a objectes.",
+                        "g": "S'han programat components que gestionen informació emmagatzemada en una base de dades documental nativa.",
+                        "h": "S'han provat i documentat els components desenvolupats.",
+                        "i": "S'han integrat els components desenvolupats en aplicacions."
+                    }
+                }
+            },
+            "horas": "133",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
+            },
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "e",
+                "f",
+                "l",
+                "p",
+                "r",
+                "t"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "e",
+                "f",
+                "l",
+                "p",
+                "r",
+                "t"
+            ]
+        },
+        "0488": {
+            "nombre": "Desenvolupament d'interfícies",
+            "creditos": "9",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Genera interfícies gràfics d'usuari mitjançant editors visuals utilitzant les funcionalitats de l'editor i adaptant el codi generat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les eines i llibreries disponibles per a la generació d'interfícies gràfics.",
+                        "b": "S'ha creat un interfície gràfic utilitzant les eines d'un editor visual.",
+                        "c": "S'han utilitzat les funcions de l'editor per a ubicar els components de l'interfície.",
+                        "d": "S'han modificat les propietats dels components per a adequar-les a les necessitats de l'aplicació.",
+                        "e": "S'ha analitzat el codi generat per l'editor visual.",
+                        "f": "S'ha modificat el codi generat per l'editor visual.",
+                        "g": "S'han associat als esdeveniments les accions corresponents.",
+                        "h": "S'ha desenvolupat una aplicació que inclou l'interfície gràfic obtingut."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Genera interfícies naturals d'usuari utilitzant eines visuals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les eines disponibles per a l'aprenentatge automàtic relacionades amb les interfícies d'usuari.",
+                        "b": "S'ha creat una interfície natural d'usuari utilitzant les eines disponibles.",
+                        "c": "S'ha utilitzat el reconeixement de veu per a implementar accions en les interfícies naturals d'usuari.",
+                        "d": "S'ha incorporat la detecció del moviment del cos per a implementar accions en les interfícies naturals d'usuari.",
+                        "e": "S'han integrat elements de detecció de parts del cos per a implementar accions en les interfícies naturals d'usuari.",
+                        "f": "S'ha integrat la realitat augmentada en els interfícies d'usuari."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Crea components visuals valorant i emprant eines específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les eines per a disseny i prova de components.",
+                        "b": "S'han creat components visuals.",
+                        "c": "S'han definit els seus mètodes i propietats amb assignació de valors per defecte.",
+                        "d": "S'han determinat els esdeveniments als quals ha de respondre el component i se'ls han associat les accions corresponents.",
+                        "e": "S'han realitzat proves unitàries sobre els components desenvolupats.",
+                        "f": "S'han documentat els components creats.",
+                        "g": "S'han empaquetat components.",
+                        "h": "S'han programat aplicacions el seu interfície gràfic utilitza els components creats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Dissena interfícies gràfiques identificant i aplicant criteris d'usabilitat i accessibilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals estàndards d'usabilitat i accessibilitat.",
+                        "b": "S'ha valorat la importància de l'ús d'estàndards per a la creació d'interfícies.",
+                        "c": "S'han creat diferents tipus de menús la seua estructura i contingut segueixen els estàndards establerts.",
+                        "d": "S'han distribuït les accions en menús, barres d'eines, botons de comanda, entre altres, seguint un criteri coherent.",
+                        "e": "S'han distribuït adequadament els controls en la interfície d'usuari.",
+                        "f": "S'ha utilitzat el tipus de control més apropiat en cada cas.",
+                        "g": "S'ha dissenyat l'aspecte de la interfície d'usuari (colors i fonts entre altres) atenent a la seua llegibilitat.",
+                        "h": "S'ha verificat que els missatges generats per l'aplicació són adequats en extensió i claredat.",
+                        "i": "S'han realitzat proves per a avaluar la usabilitat i accessibilitat de l'aplicació."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Crea informes avaluant i utilitzant eines gràfiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert l'estructura de l'informe.",
+                        "b": "S'han generat informes bàsics a partir de diferents fonts de dades mitjançant assistents.",
+                        "c": "S'han establert filtres sobre els valors a presentar en els informes.",
+                        "d": "S'han inclòs valors calculats, recomptes i totals.",
+                        "e": "S'han inclòs gràfics generats a partir de les dades.",
+                        "f": "S'han utilitzat eines per a generar el codi corresponent als informes d'una aplicació.",
+                        "g": "S'ha modificat el codi corresponent als informes.",
+                        "h": "S'ha desenvolupat una aplicació que inclou informes incrustats."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Documenta aplicacions seleccionant i utilitzant eines específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat sistemes de generació d'ajudes.",
+                        "b": "S'han generat ajudes en els formats habituals.",
+                        "c": "S'han generat ajudes sensibles al context.",
+                        "d": "S'ha documentat l'estructura de la informació persistent.",
+                        "e": "S'ha confeccionat el manual d'usuari i la guia de referència.",
+                        "f": "S'han confeccionat els manuals d'instal·lació, configuració i administració.",
+                        "g": "S'han confeccionat tutorials."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Prepara aplicacions per a la seua distribució avaluant i utilitzant eines específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han empaquetat els components que requereix l'aplicació.",
+                        "b": "S'ha personalitzat l'assistent d'instal·lació.",
+                        "c": "S'han generat paquets d'instal·lació utilitzant l'entorn de desenvolupament.",
+                        "d": "S'han generat paquets d'instal·lació utilitzant eines externes.",
+                        "e": "S'han signat digitalment les aplicacions per a la seua distribució.",
+                        "f": "S'han generat paquets instal·lables en mode desatès.",
+                        "g": "S'ha preparat el paquet d'instal·lació perquè l'aplicació puga ser correctament desinstal·lada.",
+                        "h": "S'ha preparat l'aplicació per a ser distribuïda a través de diferents canals de distribució."
+                    }
+                },
+                "RA08": {
+                    "Resultado": "Avalua el funcionament d'aplicacions dissenyant i executant proves.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert una estratègia de proves.",
+                        "b": "S'han realitzat proves d'integració dels diferents elements.",
+                        "c": "S'han realitzat proves de regressió.",
+                        "d": "S'han realitzat proves de volum i estrès.",
+                        "e": "S'han realitzat proves de seguretat.",
+                        "f": "S'han realitzat proves d'ús de recursos per part de l'aplicació.",
+                        "g": "S'ha documentat l'estratègia de proves i els resultats obtinguts."
+                    }
+                }
+            },
+            "horas": "166",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0494_3": "Desenvolupar components programari en llenguatges de programació estructurada."
+            },
+            "ObjetivosGenerales ": [
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "r",
+                "s",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "r",
+                "s",
+                "t",
+                "w"
+            ]
+        },
+        "0489": {
+            "nombre": "Programació multimèdia i dispositius mòbils",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Aplica tecnologies de desenvolupament per a dispositius mòbils avaluant les seues característiques i capacitats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les limitacions que planteja l'execució d'aplicacions en els dispositius mòbils.",
+                        "b": "S'han identificat les tecnologies de desenvolupament d'aplicacions per a dispositius mòbils.",
+                        "c": "S'han instal·lat, configurat i utilitzat entorns de treball per al desenvolupament d'aplicacions per a dispositius mòbils.",
+                        "d": "S'han identificat configuracions que classifiquen els dispositius mòbils en base a les seues característiques.",
+                        "e": "S'han descrit perfils que estableixen la relació entre el dispositiu i l'aplicació.",
+                        "f": "S'ha analitzat l'estructura d'aplicacions existents per a dispositius mòbils identificant les classes utilitzades.",
+                        "g": "S'han realitzat modificacions sobre aplicacions existents.",
+                        "h": "S'han utilitzat emuladors per a comprovar el funcionament de les aplicacions."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Desenvolupa aplicacions per a dispositius mòbils analitzant i emprant les tecnologies i llibreries específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha generat l'estructura de classes necessària per a l'aplicació.",
+                        "b": "S'han analitzat i utilitzat les classes que modelen finestres, menús, alertes i controls per al desenvolupament d'aplicacions gràfiques senzilles.",
+                        "c": "S'han utilitzat les classes necessàries per a la connexió i comunicació amb dispositius sense fils.",
+                        "d": "S'han desenvolupat aplicacions que fan ús de les funcionalitats proporcionades pels sensors.",
+                        "e": "S'han utilitzat les classes necessàries per a establir connexions i comunicacions HTTP i HTTPS.",
+                        "f": "S'han utilitzat les classes necessàries per a establir connexions amb magatzems de dades garantint la persistència.",
+                        "g": "S'han realitzat proves d'interacció usuari-aplicació per a optimitzar les aplicacions desenvolupades a partir d'emuladors.",
+                        "h": "S'han empaquetat i desplegat les aplicacions desenvolupades en dispositius mòbils reals.",
+                        "i": "S'han documentat els processos necessaris per al desenvolupament de les aplicacions.",
+                        "j": "S'han establert els permisos requerits per al funcionament de les aplicacions."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Desenvolupa programes que integren continguts multimèdia analitzant i emprant les tecnologies i llibreries específiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat entorns de desenvolupament multimèdia.",
+                        "b": "S'han reconegut les classes que permeten la captura, processament i emmagatzematge de dades multimèdia.",
+                        "c": "S'han utilitzat classes per a la conversió de dades multimèdia d'un format a un altre.",
+                        "d": "S'han utilitzat classes per a processar dades multimèdia.",
+                        "e": "S'han utilitzat classes per al control d'esdeveniments, tipus de mitjana i excepcions, entre altres.",
+                        "f": "S'han utilitzat classes per a la creació i control d'animacions.",
+                        "g": "S'han utilitzat classes per a reproduir continguts multimèdia.",
+                        "h": "S'han depurat i documentat els programes desenvolupats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Selecciona i prova motors de jocs analitzant l'arquitectura de jocs 2D i 3D.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els elements que componen l'arquitectura d'un joc 2D i 3D.",
+                        "b": "S'han analitzat els components d'un motor de jocs.",
+                        "c": "S'han analitzat entorns de desenvolupament de jocs.",
+                        "d": "S'han analitzat diferents motors de jocs, les seues característiques i funcionalitats.",
+                        "e": "S'han identificat els blocs funcionals d'un joc existent.",
+                        "f": "S'ha reconegut la representació lògica i espacial d'una escena gràfica sobre un joc existent."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa jocs 2D i 3D senzills utilitzant motors de jocs.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert la lògica d'un nou joc.",
+                        "b": "S'han creat els objectes necessaris per al joc i definit les seues característiques.",
+                        "c": "S'han creat les escenes del joc i distribuït els objectes en les mateixes.",
+                        "d": "S'han creat materials per a determinar les propietats finals de la superfície d'un objecte.",
+                        "e": "S'han establert les propietats físiques dels objectes.",
+                        "f": "S'ha incorporat so als diferents esdeveniments del joc.",
+                        "g": "S'han utilitzat càmeres i configurat la il·luminació.",
+                        "h": "S'han desenvolupat i implantat jocs per a dispositius mòbils.",
+                        "i": "S'han realitzat proves de funcionament i optimització dels jocs desenvolupats.",
+                        "j": "S'han documentat les fases de disseny i desenvolupament dels jocs creats."
+                    }
+                }
+            },
+            "horas": "133",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "d",
+                "e",
+                "g",
+                "h",
+                "i",
+                "j",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "s",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "d",
+                "e",
+                "g",
+                "h",
+                "i",
+                "j",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "s",
+                "t",
+                "w"
+            ]
+        },
+        "0490": {
+            "nombre": "Programació de serveis i processos",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Desenvolupa aplicacions compostes per diversos processos reconeixent i aplicant principis de programació paral·lela.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut les característiques de la programació concurrent i els seus àmbits d'aplicació.",
+                        "b": "S'han identificat les diferències entre programació paral·lela i programació distribuïda, els seus avantatges i inconvenients.",
+                        "c": "S'han analitzat les característiques dels processos i de la seua execució pel sistema operatiu.",
+                        "d": "S'han caracteritzat els fils d'execució i descrit la seua relació amb els processos.",
+                        "e": "S'han utilitzat classes per a programar aplicacions que creen subprocessos.",
+                        "f": "S'han utilitzat mecanismes per a compartir informació amb els subprocessos iniciats.",
+                        "g": "S'han utilitzat mecanismes per a sincronitzar i obtenir el valor retornat pels subprocessos iniciats.",
+                        "h": "S'han desenvolupat aplicacions que gestionen i utilitzen processos per a l'execució de diverses tasques en paral·lel.",
+                        "i": "S'han depurat i documentat les aplicacions desenvolupades."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Desenvolupa aplicacions compostes per diversos fils d'execució analitzant i aplicant llibreries específiques del llenguatge de programació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat situacions en què resulte útil la utilització de diversos fils en un programa.",
+                        "b": "S'han reconegut els mecanismes per a crear, iniciar i finalitzar fils.",
+                        "c": "S'han programat aplicacions que implementen diversos fils.",
+                        "d": "S'han identificat els possibles estats d'execució d'un fil i programat aplicacions que els gestionen.",
+                        "e": "S'han utilitzat mecanismes per a compartir informació entre diversos fils d'un mateix procés.",
+                        "f": "S'han desenvolupat programes formats per diversos fils sincronitzats mitjançant tècniques específiques.",
+                        "g": "S'ha establert i controlat la prioritat de cadascun dels fils d'execució.",
+                        "h": "S'han depurat i documentat els programes desenvolupats.",
+                        "i": "S'ha analitzat el context d'execució dels fils.",
+                        "j": "S'han analitzat llibreries específiques del llenguatge de programació que permeten la programació multifil.",
+                        "k": "S'han reconegut els problemes derivats de la compartició d'informació entre els fils d'un mateix procés."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Programa mecanismes de comunicació en xarxa emprant sockets i analitzant l'escenari d'execució.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat escenaris que precisen establir comunicació en xarxa entre diverses aplicacions.",
+                        "b": "S'han identificat els rols de client i de servidor i les seues funcions associades.",
+                        "c": "S'han reconegut llibreries i mecanismes del llenguatge de programació que permeten programar aplicacions en xarxa.",
+                        "d": "S'ha analitzat el concepte de socket, els seus tipus i característiques.",
+                        "e": "S'han utilitzat sockets per a programar una aplicació client que es comunique amb un servidor.",
+                        "f": "S'ha desenvolupat una aplicació servidor en xarxa i verificat el seu funcionament.",
+                        "g": "S'han desenvolupat aplicacions que utilitzen sockets per a intercanviar informació",
+                        "h": "S'han utilitzat fils per a possibilitar la comunicació simultània de diversos clients amb el servidor.",
+                        "i": "S'han caracteritzat els models de comunicació més usuals en les arquitectures d'aplicacions distribuïdes.",
+                        "j": "S'han depurat i documentat les aplicacions desenvolupades."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Desenvolupa aplicacions que ofereixen serveis en xarxa, utilitzant llibreries de classes i aplicant criteris d'eficiència i disponibilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat diferents protocols estàndard de comunicació per a la implementació de serveis en xarxa.",
+                        "b": "S'han reconegut els avantatges de la utilització de protocols estàndard per a la comunicació entre aplicacions i processos.",
+                        "c": "S'han analitzat llibreries que permeten implementar serveis en xarxa utilitzant protocols estàndard de comunicació.",
+                        "d": "S'han desenvolupat i provat serveis de comunicació en xarxa.",
+                        "e": "S'han utilitzat clients de comunicacions per a verificar el funcionament dels serveis.",
+                        "f": "S'han incorporat mecanismes per a possibilitar la comunicació simultània de diversos clients amb el servei.",
+                        "g": "S'ha verificat la disponibilitat del servei.",
+                        "h": "S'han depurat i documentat les aplicacions desenvolupades."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Protegeix les aplicacions i les dades definint i aplicant criteris de seguretat en l'accés, emmagatzematge i transmissió de la informació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat i aplicat principis i pràctiques de programació segura.",
+                        "b": "S'han analitzat les principals tècniques i pràctiques criptogràfiques.",
+                        "c": "S'han definit i implantat polítiques de seguretat per a limitar i controlar l'accés dels usuaris a les aplicacions desenvolupades.",
+                        "d": "S'han utilitzat esquemes de seguretat basats en rols.",
+                        "e": "S'han emprat algoritmes criptogràfics per a protegir l'accés a la informació emmagatzemada.",
+                        "f": "S'han identificat mètodes per a assegurar la informació transmesa.",
+                        "g": "S'han desenvolupat aplicacions que utilitzen comunicacions segures per a la transmissió d'informació.",
+                        "h": "S'han depurat i documentat les aplicacions desenvolupades."
+                    }
+                }
+            },
+            "horas": "67",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0964_3": "Crear elements programari per a la gestió del sistema i els seus recursos."
+            },
+            "ObjetivosGenerales ": [
+                "b",
+                "e",
+                "i",
+                "j",
+                "l",
+                "n",
+                "ny",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "e",
+                "i",
+                "j",
+                "l",
+                "n",
+                "ny",
+                "t",
+                "w"
+            ]
+        },
+        "0491": {
+            "nombre": "Sistemes de gestió empresarial",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica sistemes de planificació de recursos i de gestió de relacions amb clients (ERP-CRM).",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut els diferents sistemes ERP-CRM que existeixen en el mercat.",
+                        "b": "S'han identificat els diferents tipus de llicència dels sistemes ERP-CRM.",
+                        "c": "S'han comparat sistemes ERP-CRM en funció de les seues característiques i requisits.",
+                        "d": "S'ha identificat el sistema operatiu adequat a cada sistema ERP-CRM.",
+                        "e": "S'ha identificat el sistema gestor de dades adequat a cada sistema ERP-CRM.",
+                        "f": "S'han verificat les configuracions del sistema operatiu i del gestor de dades per a garantir la funcionalitat de l'ERP-CRM.",
+                        "g": "S'han documentat les operacions realitzades.",
+                        "h": "S'han documentat les incidències produïdes durant el procés."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Implanta sistemes ERP-CRM interpretant la documentació tècnica i identificant les diferents opcions i mòduls.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els mòduls que componen l'ERP-CRM.",
+                        "b": "S'han realitzat diferents tipus d'instal·lacions.",
+                        "c": "S'han configurat els mòduls instal·lats.",
+                        "d": "S'han realitzat instal·lacions adaptades a les necessitats plantejades en diferents supòsits.",
+                        "e": "S'ha verificat el funcionament de l'ERP-CRM.",
+                        "f": "S'han documentat les operacions realitzades i les incidències."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Realitza operacions de gestió, consulta i anàlisi de la informació seguint les especificacions de disseny i utilitzant les eines proporcionades pels sistemes ERP-CRM.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han utilitzat eines i llenguatges de consulta i manipulació de dades proporcionats pels sistemes ERP-CRM.",
+                        "b": "S'han generat formularis.",
+                        "c": "S'han generat informes.",
+                        "d": "S'han exportat dades i informes.",
+                        "e": "S'han automatitzat les extraccions de dades mitjançant processos.",
+                        "f": "S'ha verificat el rendiment del sistema ERP-CRM.",
+                        "g": "S'han documentat les operacions realitzades i les incidències observades.",
+                        "h": "S'ha obtingut informació rellevant a partir de les dades processades."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Adapta sistemes ERP-CRM identificant els requeriments d'un supòsit empresarial i utilitzant les eines proporcionades pels mateixos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les possibilitats d'adaptació de l'ERP-CRM.",
+                        "b": "S'han adaptat definicions de camps, taules i vistes de la base de dades de l'ERP-CRM.",
+                        "c": "S'han adaptat consultes.",
+                        "d": "S'han adaptat interfícies d'entrada de dades i de processos.",
+                        "e": "S'han personalitzat informes.",
+                        "f": "S'han creat quadres de comandament.",
+                        "g": "S'han adaptat procediments emmagatzemats de servidor.",
+                        "h": "S'han realitzat proves.",
+                        "i": "S'han documentat les operacions realitzades i les incidències observades.",
+                        "j": "S'han realitzat integracions amb un altre sistema de gestió empresarial."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa components per a un sistema ERP-CRM analitzant i utilitzant el llenguatge de programació incorporat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut les sentències del llenguatge propi del sistema ERP-CRM.",
+                        "b": "S'han utilitzat els elements de programació del llenguatge per a crear components de manipulació de dades i extracció d'informació.",
+                        "c": "S'han modificat components programari per a afegir noves funcionalitats al sistema.",
+                        "d": "S'han integrat els nous components programari en el sistema ERP-CRM.",
+                        "e": "S'ha verificat el correcte funcionament dels components creats.",
+                        "f": "S'han documentat tots els components creats o modificats.",
+                        "g": "S'ha analitzat l'arquitectura de l'ERP-CRM."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC1213_3": "Instal·lar i configurar sistemes de planificació de recursos empresarials i de gestió de relacions amb clients."
+            },
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "e",
+                "f",
+                "l",
+                "o",
+                "p",
+                "q",
+                "r",
+                "t",
+                "u",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "e",
+                "f",
+                "l",
+                "o",
+                "p",
+                "q",
+                "r",
+                "t",
+                "u",
+                "w"
+            ]
+        },
+        "1708": {
+            "nombre": "Sostenibilitat aplicada al sistema productiu",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a la seua consecució.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit el concepte de sostenibilitat, establint els marcs internacionals associats al desenvolupament sostenible.",
+                        "b": "S'han identificat les qüestions ambientals, socials i de governança que influeixen en el desenvolupament sostenible de les organitzacions empresarials.",
+                        "c": "S'han relacionat els Objectius de Desenvolupament Sostenible ODS, amb la seua importància per a la consecució de l'Agenda 2030.",
+                        "d": "S'ha analitzat la importància d'identificar els aspectes ASG més rellevants per als grups d'interès de les organitzacions relacionant-los amb els riscos i oportunitats que suposen per a la pròpia organització.",
+                        "e": "S'han identificat els principals estàndards de mètriques per a l'avaluació del rendiment en sostenibilitat i el seu paper en la rendició de comptes que marca la legislació vigent i les futures regulacions en desenvolupament.",
+                        "f": "S'ha descrit la inversió socialment responsable i el paper dels analistes, inversors, agències i índexs de sostenibilitat en el foment de la sostenibilitat."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza els reptes ambientals i socials als quals s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per a minimitzar-los.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals reptes ambientals i socials.",
+                        "b": "S'han relacionat els reptes ambientals i socials amb el desenvolupament de l'activitat econòmica.",
+                        "c": "S'ha analitzat l'efecte dels impactes ambientals i socials sobre les persones i els sectors productius.",
+                        "d": "S'han identificat les mesures i accions encaminades a minimitzar els impactes ambientals i socials.",
+                        "e": "S'ha analitzat la importància d'establir aliances i treballar de manera transversal i coordinada per a abordar amb èxit els reptes ambientals i socials."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Estableix l'aplicació de criteris de sostenibilitat en el rendiment professional i personal, identificant els elements necessaris.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els ODS més rellevants per a l'activitat professional que realitza.",
+                        "b": "S'han analitzat els riscos i oportunitats que representen els ODS.",
+                        "c": "S'han identificat les accions necessàries per a atendre alguns dels reptes ambientals i socials des de l'activitat professional i l'entorn personal."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'han aplicat principis de ecodisseny.",
+                        "e": "S'ha analitzat el cicle de vida del producte.",
+                        "f": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza activitats sostenibles minimitzant l'impacte de les mateixes en el medi ambient.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'ha avaluat l'impacte de les activitats personals i professionals.",
+                        "e": "S'han aplicat principis de ecodisseny.",
+                        "f": "S'han aplicat estratègies sostenibles.",
+                        "g": "S'ha analitzat el cicle de vida del producte.",
+                        "h": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
+                        "i": "S'ha aplicat la normativa ambiental."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza un pla de sostenibilitat d'una empresa del sector, identificant els seus grups d'interès, els aspectes ASG materials i justificant accions per a la seua gestió i mesura.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals grups d'interès de l'empresa.",
+                        "b": "S'han analitzat els aspectes ASG materials, les expectatives dels grups d'interès i la importància dels aspectes ASG en relació amb els objectius empresarials.",
+                        "c": "S'han definit accions encaminades a minimitzar els impactes negatius i aprofitar les oportunitats que plantegen els principals aspectes ASG identificats.",
+                        "d": "S'han determinat les mètriques d'avaluació del rendiment de l'empresa d'acord amb els estàndards de sostenibilitat més àmpliament utilitzats.",
+                        "e": "S'ha elaborat un informe de sostenibilitat amb el pla i els indicadors proposats."
+                    }
+                }
+            },
+            "horas": "32",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [],
+            "CompetenciasTitulo": []
+        },
+        "1709": {
+            "nombre": "Itinerari personal per a l'ocupabilitat I",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Assoleix les competències necessàries per a l'obtenció del Títol de tècnic bàsic en Prevenció de Riscos Laborals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la cultura preventiva en tots els àmbits activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats dels mateixos, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+                        "b": "S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
+                        "c": "S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per a evitar els danys en el seu origen i minimitzar les seues conseqüències.",
+                        "d": "S'han analitzat els protocols d'actuació en cas d'emergència.",
+                        "e": "S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
+                        "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+                        "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
+                        "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
+                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Distingeix les característiques del sector productiu i defineix els llocs de treball relacionant-los amb les competències professionals expressades en el títol",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
+                        "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Analitza les seues condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de contractes, canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+                        "b": "S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
+                        "c": "S'han identificat les característiques definidores dels nous entorns d'organització del treball i els drets que conlevan.",
+                        "d": "S'han identificat els diferents components del rebut de salari.",
+                        "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
+                        "f": "S'ha valorat el paper de laSeguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
+                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'auto orientació i elabora una fulla de ruta per a la inserció professional en base a l'anàlisi de les competències, interessos i destreses personals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+                        "b": "S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
+                        "c": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+                        "d": "S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
+                        "e": "S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
+                        "f": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
+                        "g": "S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+                        "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
+                        "i": "S'han identificat els itineraris formats professionals relacionats amb el perfil professional.",
+                        "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
+                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+                        "b": "S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
+                        "c": "S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "d": "S'ha posat en pràctica la competència digital per a configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "e": "S'ha analitzat el concepte d'identitat digital i el seu impacte en l'ocupabilitat.",
+                        "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
+                        "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
+                        "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
+                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Identifica el concepte de salut psicosocial derivada del rendiment professional, identificant i avaluant els factors de risc associats a la mateixa, i aplicant mesures correctives:",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat i valorat el concepte de salut psicosocial com a factor determinant del benestar mental de l'individu i dels entorns laborals saludables.",
+                        "b": "S'ha analitzat la salut mental com a desencadenant de siniestralitat i absentisme laboral, així com la seua evolució en els diferents col·lectius de treballadors, especialment en els grups de població jove.",
+                        "c": "S'ha après a reconèixer i identificar els factors de risc psicosocial en l'àmbit laboral.",
+                        "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
+                        "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com a les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
+                        "f": "S'han activat les estratègies d'afrontament personal davant els estressors derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
+                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten l'adequada resposta a les situacions de conflicte en l'àmbit laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "1710": {
+            "nombre": "Itinerari personal per a l'ocupabilitat II",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seues possibilitats d'inserció laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
+                        "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
+                        "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
+                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i el seu aporte de valor."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació en cerca de la millora de la seua ocupabilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
+                        "b": "S'ha participat activament en l'establiment dels objectius de l'equip i en la presa de decisions del mateix i assumit la responsabilitat de les accions i decisions del grup, participant activament en el compliment d'uns objectius compartits cooperant amb altres persones i compartint el lideratge.",
+                        "c": "S'han incorporat al propi procés d'aprenentatge les tècniques i recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva sent capaç d'adaptar-los a cada situació i circumstàncies, valorant les oportunitats i dificultats que ofereix cadascuna d'elles.",
+                        "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
+                        "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
+                        "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
+                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu cap a un model sostenible.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb la construcció d'una societat més sostenible que millore en el benestar dels individus.",
+                        "b": "S'han analitzat les diferents metodologies per a emprendre i la seua importància per a afavorir la innovació i com a font de creació d'ocupació i benestar social.",
+                        "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
+                        "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
+                        "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
+                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socio productiu utilitzant metodologies àgils per a l'emprenedoria.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixen en oportunitats.",
+                        "b": "S'ha posat en pràctica el procés creatiu amb la finalitat de conseguir una idea emprenedora que aporte valor econòmic, social i/o cultural.",
+                        "c": "S'ha dissenyat un model de negoci i/o gestió derivat de la idea emprenedora.",
+                        "d": "S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
+                        "e": "S'ha analitzat la contribució de l'Economia Circular i l'Economia del Bé Comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
+                        "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
+                        "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
+                        "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
+                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per a desenvolupar destreses en tècniques de comunicació i venda."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte emprenedor d'innovació social i/o tecnològica aplicada en col·laboració amb l'entorn.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
+                        "b": "S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
+                        "c": "S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
+                        "d": "S'han posat en marxa les estratègies pròpies del pensament de disseny per a detectar necessitats socials i mediambientals.",
+                        "e": "S'han analitzat els elements del disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
+                        "h": "S'han investigat les opcions financeres socialment responsables.",
+                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza la rendibilitat de la proposta emprenedora valorant inversió, costos i beneficis i dissenya una estratègia per a la posada en marxa de la mateixa tenint en compte obligacions administratives, fiscals i comptables.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
+                        "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
+                        "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
+                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "1665": {
+            "nombre": "Digitalització aplicada als sectors productius (GS)",
+            "creditos": "3",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Analitza el concepte de digitalització i la seua repercusió en els sectors productius tenint en compte l'activitat de l'empresa i identificant entorns IT (Information Technology: tecnologia de la informació) i OT (Operation Technology: tecnologia d'operació) característics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit en què consisteix el concepte de digitalització.",
+                        "b": "S'ha relacionat la implantació de la tecnologia digital amb l'organització de les empreses.",
+                        "c": "S'han establert les diferències i semblances entre els entorns IT i OT.",
+                        "d": "S'han identificat els departaments típics de les empreses que poden constituir entorns IT.",
+                        "e": "S'han seleccionat les tecnologies típiques de la digitalització en planta i en negoci.",
+                        "f": "S'ha analitzat la importància de la connexió entre entorns IT i OT.",
+                        "g": "S'han analitzat els avantatges de digitalitzar una empresa industrial d'extrem a extrem."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza les tecnologies habilitadores digitals necessàries per a l'adequació/transformació de les empreses a entorns digitals descrivint les seues característiques i aplicacions.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les principals tecnologies habilitadores digitals.",
+                        "b": "S'han relacionat les THD amb el desenvolupament de productes i serveis.",
+                        "c": "S'ha relacionat la importància de les THD amb l'economia sostenible i eficient.",
+                        "d": "S'han identificat nous mercats generats per les THD.",
+                        "e": "S'ha analitzat la implicació de THD tant en la part de negoci com en la part de planta.",
+                        "f": "S'han identificat les millores produïdes a causa de la implantació de les tecnologies habilitadores en relació amb els entorns IT i OT.",
+                        "g": "S'ha elaborat un informe que relacione, les tecnologies amb les seues característiques i àrees d'aplicació."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Identifica sistemes basats en cloud/núvol i la seua influència en el desenvolupament dels sistemes digitals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents nivells del cloud/núvol.",
+                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres",
+                        "c": "S'ha descrit el concepte d'edge computing i la seua relació amb el cloud/núvol.",
+                        "d": "S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
+                        "e": "S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica aplicacions de la IA (intel·ligència artificial) en entorns del sector on està enquadrat el títol descrivint les millores implícites en la seua implementació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la importància de la IA en l'automatització de processos i la seua optimització.",
+                        "b": "S'ha relacionat la IA amb la recollida massiva de dades (Big Data) i el seu tractament (anàlisi) amb la rendabilitat de les empreses.",
+                        "c": "S'ha valorat la importància present i futura de la IA.",
+                        "d": "S'han identificat els sectors amb implantació més rellevant d'IA.",
+                        "e": "S'han identificat els llenguatges de programació en IA.",
+                        "f": "S'ha descrit com influix la IA en el sector del títol."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Avalua la importància de les dades, així com la seua protecció en una economia digital globalitzada, definint sistemes de seguretat i ciberseguretat tant a nivell d'equip/sistema, com globals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert la diferència entre dada i informació.",
+                        "b": "S'ha descrit el cicle de vida de la dada.",
+                        "c": "S'ha identificat la relació entre Big Data, anàlisi de dades, machine/ deep learning i intel·ligència artificial.",
+                        "d": "S'han descrit les característiques que defineixen Big Data.",
+                        "e": "S'han descrit les etapes típiques de la ciència de dades i la seua relació en el procés.",
+                        "f": "S'han descrit els procediments d'emmagatzematge de dades en el cloud/núvol.",
+                        "g": "S'ha descrit la importància del cloud computing.",
+                        "h": "S'han identificat els principals objectius de la ciència de dades en les diferents empreses.",
+                        "i": "S'ha valorat la importància de la seguretat i la seua regulació en relació amb les dades."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Desenvolupa un projecte de transformació digital d'una empresa d'un sector relacionat amb el títol, tenint en compte els canvis que s'han de produir en funció dels objectius de l'empresa.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els objectius estratègics de l'empresa.",
+                        "b": "S'han identificat i alineat les àrees de producció/negoci i de comunicacions.",
+                        "c": "S'han identificat les àrees susceptibles de ser digitalitzades.",
+                        "d": "S'ha analitzat l'encaix de AD (àrees digitalitzades entre si i amb les que no ho estan.",
+                        "e": "S'han tingut en compte les necessitats presents i futures de l'empresa.",
+                        "f": "S'han relacionat cadascuna de les àrees amb la implantació de les tecnologies.",
+                        "g": "S'han analitzat les possibles bretxes de seguretat en cadascuna de les àrees.",
+                        "h": "S'ha definit el tractament de les dades i la seua anàlisi.",
+                        "i": "S'ha tingut en compte la integració entre dades, aplicacions, plataformes que els suporten, entre altres.",
+                        "j": "S'han documentat els canvis realitzats en funció de l'estratègia.",
+                        "k": "S'han tingut en compte la idoneïtat dels recursos humans."
+                    }
+                }
+            },
+            "horas": "34",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "CVOPS190": {
+            "nombre": "Introducció al Núvol Públic",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Comprèn els fonaments de la computació en el núvol, els seus avantatges davant sistemes tradicionals, el marc d'adopció, els principis de migració i els aspectes clau de facturació, com estimació i optimització de costos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha comprès els conceptes fonamentals de la computació en el núvol.",
+                        "b": "S'ha demostrat la capacitat per a explicar els avantatges del núvol davant sistemes tradicionals",
+                        "c": "S'ha participat en activitats relacionades amb l'ecosistema de serveis en el núvol.",
+                        "d": "S'han identificat els principis bàsics de la facturació i costos en el núvol.",
+                        "e": "S'ha fet ús correcte d'eines per a estimar i gestionar pressupostos.",
+                        "f": "S'ha participat en activitats pràctiques sobre gestió de costos."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Identifica els components clau de la infraestructura global del núvol, diferenciant serveis principals, regions, zones de disponibilitat i aplicant mesures bàsiques de seguretat com el model de responsabilitat compartida, gestió d'accés i protecció de dades",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha adquirit coneixement dels components d'una infraestructura global en el núvol.",
+                        "b": "S'ha demostrat la capacitat per a explorar i descriure les principals categories de serveis disponibles",
+                        "c": "S'ha realitzat una avaluació de l'ús adequat de serveis bàsics en exercicis pràctics.",
+                        "d": "S'ha comprès el model de responsabilitat compartida en el núvol.",
+                        "e": "S'ha aplicat mesures de seguretat bàsiques mitjançant eines de gestió d'accés.",
+                        "f": "S'han realitzat exercicis sobre gestió d'usuaris i polítiques de seguretat."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Dissena i configura xarxes virtuals i serveis de còmput en el núvol, aplicant bones pràctiques de seguretat, estratègies de balanç de càrrega, escalat automàtic i aprofitant tecnologies serverless, contenidors i màquines virtuals segons casos d'ús específics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha realitzat el disseny i configuració de xarxes virtuals privades.",
+                        "b": "S'ha aplicat bones pràctiques de seguretat en xarxes i arquitectures.",
+                        "c": "S'ha participat activament en la creació i configuració d'una xarxa funcional.",
+                        "d": "S'ha realitzat la selecció de serveis de computació adequats segons casos d'ús.",
+                        "e": "S'ha dut a terme la configuració i gestió de balanç de càrrega i escalat automàtic.",
+                        "f": "S'han desenvolupat pràctiques relacionades amb l'optimització de recursos computacionals."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Gestiona serveis d'emmagatzematge i bases de dades en el núvol, seleccionant tecnologies adequades per a casos específics, i dissenya arquitectures escalables i resilients utilitzant eines de monitoratge i optimització per a millorar el rendiment.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha realitzat la diferenciació entre tecnologies d'emmagatzematge en el núvol.",
+                        "b": "S'ha dut a terme la configuració i gestió de bases de dades en un entorn de núvol.",
+                        "c": "S'ha treballat en la resolució de problemes pràctics sobre emmagatzematge i bases de dades",
+                        "d": "S'ha dissenyat arquitectures escalables i resilients basades en les millors pràctiques.",
+                        "e": "S'ha fet ús d'eines de monitoratge i recomanacions d'optimització.",
+                        "f": "S'ha participat en activitats que simulen l'anàlisi i millora d'arquitectures existents."
+                    }
+                }
+            },
+            "horas": "100"
+        },
+        "MOPANGPROF": {
+            "nombre": "Anglés oral en entorns professionals",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        },
+        "MOPCOMPROF": {
+            "nombre": "Comunicació professional",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        },
+        "PI": {
+            "nombre": "Projecte intermodular",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        }
+    }
+}

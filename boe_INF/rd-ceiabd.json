@@ -1,0 +1,639 @@
+{
+    "CompetenciasProfesionalesPersonalesSociales": {
+        "a": "Aplicar sistemes d'Intel·ligència Artificial per identificar noves formes d'interacció en els negocis que millorin la productivitat.",
+        "b": "Desenvolupar i implementar sistemes d'Intel·ligència Artificial que facilitin la presa de decisions àgils dins d'un negoci gestionant i explotant dades massives.",
+        "c": "Gestionar la transformació digital necessària en les organitzacions per a la consecució de l'eficiència empresarial mitjançant el tractament de dades.",
+        "d": "Aplicar Intel·ligència Artificial en funcionalitats, processos i sistemes de decisió empresarials.",
+        "e": "Gestionar els diferents tipus d'Intel·ligència Artificial per a la consecució de transformació i canvi en les empreses.",
+        "f": "Administrar el desenvolupament de processos automatitzats que permetin la millora de la productivitat de les empreses.",
+        "g": "Optimitzar el desenvolupament de processos autònoms emprant eines d'Intel·ligència Artificial.",
+        "h": "Integrar sistemes d'explotació de grans volums de dades aplicant solucions de Big Data.",
+        "i": "Implantar les funcionalitats, processos i sistemes de decisions empresarials aplicant tècniques de Big Data en ells.",
+        "j": "Executar el sistema d'explotació de dades segons les necessitats d'ús i les condicions de seguretat establertes assegurant el compliment dels principis legals i ètics.",
+        "k": "Configurar les eines que s'utilitzen per construir solucions Big Data i d'Intel·ligència Artificial.",
+        "l": "Gestionar de manera eficient les dades, la informació i la seva representació per transformar-les en coneixement.",
+        "m": "Complir la legislació vigent que regula la normativa dels mitjans de comunicació audiovisual i de l'accessibilitat universal.",
+        "n": "Adaptar-se a les noves situacions laborals, mantenint actualitzats els coneixements científics, tècnics i tecnològics relatius al seu entorn professional, gestionant la seva formació i els recursos existents en l'aprenentatge al llarg de la vida i utilitzant les tecnologies de la informació i la comunicació.",
+        "ny": "Resoldre situacions, problemes o contingençes amb iniciativa i autonomia en l'àmbit de la seva competència, amb creativitat, innovació i esperit de millora en el treball personal i en el dels membres de l'equip.",
+        "o": "Organitzar i coordinar equips de treball amb responsabilitat, supervisant el desenvolupament del mateix, mantenint relacions fluides i assumint el lideratge, així com aportant solucions als conflictes grupals que es presentin.",
+        "p": "Comunicar-se amb els seus iguals, superiors, clientela i persones sota la seva responsabilitat, utilitzant vies eficaces de comunicació, transmetent la informació o coneixements adequats i respectant l'autonomia i competència de les persones que intervenen en l'àmbit del seu treball.",
+        "q": "Generar entorns segurs en el desenvolupament del seu treball i el del seu equip, supervisant i aplicant els procediments de prevenció de riscos laborals i ambientals, d'acord amb el que està establert per la normativa i els objectius de l'empresa.",
+        "r": "Supervisar i aplicar procediments de gestió de qualitat, d'accessibilitat universal i de «disseny per a totes les persones», en les activitats professionals incloses en els processos de producció o prestació de serveis.",
+        "s": "Exercir els seus drets i complir amb les obligacions derivades de la seva activitat professional, d'acord amb el que està establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
+    },
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+    ],
+    "CompetenciasSociales": [
+        "n",
+        "ny",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 3,
+        "e": 1,
+        "f": 3,
+        "g": 3,
+        "h": 3,
+        "i": 1,
+        "j": 1,
+        "k": 3,
+        "l": 3,
+        "m": 1,
+        "n": 1,
+        "ny": 1,
+        "o": 1,
+        "p": 1,
+        "q": 1,
+        "r": 1,
+        "s": 1
+    },
+    "CualificacionesINCUAL": {
+        "Completas": {
+            "NO APLICA": {
+                "NO APLICA": "NO APLICA",
+                "NO APLICA": {
+                    "NO APLICA": "NO APLICA",
+                    "NO APLICA": "NO APLICA",
+                    "NO APLICA": "NO APLICA"
+                }
+            }
+        },
+        "Incompletas": {
+            "NO APLICA": {
+                "NO APLICA": "NO APLICA",
+                "NO APLICA": {
+                    "NO APLICA": "NO APLICA",
+                    "NO APLICA": "NO APLICA",
+                    "NO APLICA": "NO APLICA"
+                }
+            }
+        }
+    },
+    "ObjetivosGenerales": {
+        "a": "Caracteritzar les interaccions en els negocis de les empreses i organitzacions per aplicar sistemes d'Intel·ligència artificial que incrementin la productivitat.",
+        "b": "Seleccionar dades rellevants de l'empresa o organització per desenvolupar i implementar solucions que facilitin la presa de decisions.",
+        "c": "Aplicar tècniques de tractament de dades per gestionar la transformació digital en les organitzacions.",
+        "d": "Caracteritzar sistemes de la Intel·ligència Artificial per implantar funcionalitats, processos i sistemes de decisions.",
+        "e": "Interpretar plans de canvi i millora dels processos de les empreses i organitzacions per a la seva gestió amb Intel·ligència artificial.",
+        "f": "Caracteritzar processos de millora de la productivitat de les empreses per administrar el desenvolupament de processos automatitzats.",
+        "g": "Aplicar eines d'intel·ligència artificial per optimitzar el desenvolupament dels processos autònoms.",
+        "h": "Utilitzar solucions de Big Data per integrar sistemes d'explotació de dades.",
+        "i": "Analitzar i avaluar solucions Big Data per a la seva implantació en les funcionalitats, processos i sistemes de decisions.",
+        "j": "Determinar la documentació tècnica i normativa vigent dels procediments de protecció de dades per executar el sistema d'explotació de dades complint amb els principis legals i ètics.",
+        "k": "Determinar la solució d'Intel·ligència Artificial i Big Data per configurar les eines i llenguatges específics.",
+        "l": "Aplicar tècniques Big Data per gestionar les dades de l'organització i obtenir coneixement a partir d'elles.",
+        "m": "Analitzar i utilitzar els recursos i oportunitats d'aprenentatge relacionats amb l'evolució científica, tecnològica i organitzativa del sector i les tecnologies de la informació i la comunicació, per mantenir l'esperit d'actualització i adaptar-se a noves situacions laborals i personals.",
+        "n": "Desenvolupar la creativitat i l'esperit d'innovació per respondre als reptes que es presenten en els processos i en l'organització del treball i de la vida personal.",
+        "ny": "Avaluar situacions de prevenció de riscos laborals i de protecció ambiental, proposant i aplicant mesures de prevenció personal i col·lectiva, d'acord amb la normativa aplicable en els processos de treball, per garantir entorns segurs.",
+        "o": "Identificar i proposar les accions professionals necessàries, per donar resposta a l'accessibilitat universal, al «disseny per a totes les persones», així com per evitar possibles biaixos de gènere en el desenvolupament i aplicacions d'Intel·ligència Artificial i Big Data.",
+        "p": "Identificar i aplicar paràmetres de qualitat en els treballs i activitats realitzades en el procés d'aprenentatge, per valorar la cultura de l'avaluació i de la qualitat i ser capaços de supervisar i millorar procediments de gestió de qualitat."
+    },
+    "ModulosProfesionales": {
+        "5071": {
+            "nombre": "Models d'Intel·ligència Artificial",
+            "creditos": "4",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza sistemes d'Intel·ligència Artificial relacionant-los amb la millora de l'eficiència operativa de les organitzacions i empreses.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principis fonamentals dels sistemes intel·ligents.",
+                        "b": "S'ha recopilat informació sobre camps on s'aplica Intel·ligència Artificial.",
+                        "c": "S'han identificat les tècniques bàsiques a utilitzar en l'entorn de la IA.",
+                        "d": "S'han identificat noves formes d'interaccions en els negocis que millorin l'eficiència operativa."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Utilitza models de sistemes d'Intel·ligència Artificial implementant sistemes de resolució de problemes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat els requisits bàsics a implementar en un sistema de resolució de problemes.",
+                        "b": "S'han classificat models d'Intel·ligència Artificial.",
+                        "c": "S'han caracteritzat els models d'automatització de tasques.",
+                        "d": "S'han caracteritzat els models de raonament imprecís.",
+                        "e": "S'han caracteritzat els models de sistemes basats en regles.",
+                        "f": "S'ha valorat l'adequació dels models a la implementació del sistema de resolució de problemes."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Relaciona el processament de llenguatge natural amb les seves aplicacions determinant el seu potencial i identificant les seves limitacions.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el processament de llenguatge natural.",
+                        "b": "S'ha justificat el paper del lingüista en un projecte d'intel·ligència artificial.",
+                        "c": "S'ha determinat el potencial de les tècniques existents de processament de llenguatge, així com les seves limitacions.",
+                        "d": "S'ha considerat en quins casos és factible aplicar aquestes tècniques en la resolució d'un problema.",
+                        "e": "S'ha avaluat el treball cooperatiu entre lingüistes i informàtics en el camp del processament del llenguatge natural.",
+                        "f": "S'ha descrit la formació teòrica que precisa l'investigador en processament del llenguatge natural.",
+                        "g": "S'ha elaborat un sistema de processament de llenguatge orientat a una tasca específica."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Analitza sistemes robotitzats, avaluant opcions de disseny i implementació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han recopilat els problemes del modelat i control cinemàtic en robots manipuladors.",
+                        "b": "S'han buscat solucions als problemes dels robots.",
+                        "c": "S'han valorat les característiques diferenciadores de les tècniques de programació de robots i de sistemes robotitzats.",
+                        "d": "S'han avaluat diferents opcions en el disseny i implementació de sistemes robotitzats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica sistemes experts avaluant la influència dels controladors intel·ligents en el comportament del sistema.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit la dinàmica i les estructures elementals dels sistemes experts.",
+                        "b": "S'han determinat les destreses necessàries per representar i simular comportaments bàsics de sistemes de molt diversos àmbits.",
+                        "c": "S'ha raonat com influïx la variació de les característiques dels sistemes en la seva dinàmica d'actuació.",
+                        "d": "S'han desenvolupat estratègies de control definint els objectius i les especificacions de la resposta del sistema.",
+                        "e": "S'han relacionat els controladors intel·ligents amb el comportament del sistema."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Aplica principis legals i ètics al desenvolupament de la Intel·ligència Artificial integrant-los com a part del procés.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han argumentat els possibles riscos legals i ètics de l'aplicació d'Intel·ligència Artificial.",
+                        "b": "S'ha reconegut la necessitat de respectar la privadesa de les dades.",
+                        "c": "S'ha decidit el compliment estricte de la legalitat en la seva aplicació.",
+                        "d": "S'ha integrat com a part del procés la protecció davant previsibles errors i atacs (security by design).",
+                        "e": "S'ha comprovat que es compleixen totes les normes legals i ètiques en totes les àrees de la Intel·ligència Artificial (privacy by design).",
+                        "f": "S'han identificat i corregit els possibles biaixos de gènere en el desenvolupament i aplicacions d'Intel·ligència Artificial i Big Data."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Desenvolupa un projecte integrador que combine tècniques d'intel·ligència artificial i anàlisi de dades massives, aplicant models, algorismes i sistemes de Big Data per resoldre un problema real o simulat d'interès social, científic o empresarial, gestionant tot el cicle de vida del projecte des de l'obtenció de dades fins a la presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "Defineix el problema i els objectius del projecte, contextualitzant-ne la rellevància i la viabilitat tècnica.",
+                        "b": "Selecciona i justifica les fonts de dades, garantint-ne la qualitat, fiabilitat i adequació al propòsit del projecte.",
+                        "c": "Disseny i entrena models d'intel·ligència artificial aplicant tècniques d'aprenentatge supervisat, no supervisat o profund segons corresponga.",
+                        "d": "Implementa algorismes d'aprenentatge automàtic, utilitzant eines i llibreries adequades i avaluant-ne el rendiment mitjançant mètriques pertinents.",
+                        "e": "Desenvolupa sistemes de Big Data per a la ingesta, emmagatzematge i processament eficient de grans volums d'informació.",
+                        "f": "Integra els components del projecte (models, algorismes, sistemes i visualitzacions) en una solució funcional i documentada.",
+                        "g": "Analitza i comunica els resultats obtinguts, elaborant informes tècnics i presentacions visuals que facilitin la interpretació de les dades i les conclusions.",
+                        "h": "Avalua críticament les limitacions del model o sistema, i proposa possibles millores o línies futures de treball.",
+                        "i": "Treballa de forma col·laborativa i ètica, mostrant autonomia, responsabilitat i respecte a la normativa de protecció de dades i propietat intel·lectual."
+                    }
+                }
+            },
+            "horas": "40",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
+        },
+        "5072": {
+            "nombre": "Sistemes d'aprenentatge automàtic",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza la Intel·ligència Artificial forta i feble determinant usos i possibilitats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat les especificitats d'Intel·ligència Artificial forta i feble.",
+                        "b": "S'han establert les barreres entre la Intel·ligència Artificial i l'aprenentatge automàtic (Machine Learning).",
+                        "c": "S'han diferenciat àmbits d'aplicació de la Intel·ligència Artificial forta i feble.",
+                        "d": "S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial feble.",
+                        "e": "S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial forta.",
+                        "f": "S'han reconegut els avantatges que proporciona cada tipus en la resolució dels problemes."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Determina tècniques i eines de sistemes d'aprenentatge automàtic (Machine Learning), provant la seva aplicabilitat per a la resolució de problemes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principis de sistemes d'aprenentatge automàtic.",
+                        "b": "S'han determinat tipus i usos de sistemes d'aprenentatge automàtic.",
+                        "c": "S'han determinat tècniques i eines de sistemes d'aprenentatge automàtic.",
+                        "d": "S'han trobat diferències entre els tipus de sistemes d'aprenentatge automàtic.",
+                        "e": "S'han associat tècniques i eines a cada tipus de sistemes d'aprenentatge automàtic."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica algorismes d'aprenentatge supervisat, optimitzant el resultat del model i minimitzant els riscos associats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han proporcionat les dades etiquetades al model.",
+                        "b": "S'han seleccionat les dades d'entrada, ja siguin per a la fase d'entrenament, fase de validació o fase de prova de dades entre altres.",
+                        "c": "S'han utilitzat les dades en la fase d'entrenament per a la construcció del model aplicant característiques rellevants obtingudes.",
+                        "d": "S'ha avaluat el model amb les dades obtingudes en la fase de validació.",
+                        "e": "S'han ajustat les dades d'aprenentatge supervisat en la fase d'ajust per millorar el rendiment de les diferents característiques o paràmetres.",
+                        "f": "S'ha implementat el model per realitzar prediccions sobre noves dades.",
+                        "g": "S'han detectat i minimitzat els riscos associats al model.",
+                        "h": "S'ha optimitzat el model d'aprenentatge supervisat validant dades de prova."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Aplica tècniques d'aprenentatge no supervisat relacionant-les amb els tipus de problemes que tracten de resoldre.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han caracteritzat els tipus de problemes que l'aprenentatge no supervisat tracta de resoldre.",
+                        "b": "S'han caracteritzat les tècniques d'aprenentatge no supervisat utilitzades per a la resolució d'aquests tipus de problemes.",
+                        "c": "S'han aplicat algorismes utilitzats en l'aprenentatge no supervisat.",
+                        "d": "S'ha optimitzat el model d'aprenentatge no supervisat validant dades de prova."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica models computacionals de xarxes neuronals comparant-los amb altres mètodes d'intel·ligència artificial.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els models neuronals per triar el més adequat per a cada classe de problema.",
+                        "b": "S'han aplicat tècniques d'aprenentatge profund (deep learning) per entrenar xarxes de neurones.",
+                        "c": "S'han comparat les xarxes de neurones artificials amb altres mètodes d'intel·ligència artificial.",
+                        "d": "S'ha reconegut una xarxa de neurones entrenada a partir d'un conjunt de dades."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Valora la qualitat dels resultats obtinguts en la pràctica amb sistemes d'aprenentatge automàtic integrant principis fonamentals de la computació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la conveniència dels algorismes proposats per donar solució als problemes plantejats.",
+                        "b": "S'ha avaluat l'aplicació pràctica dels principis i tècniques bàsiques dels sistemes intel·ligents.",
+                        "c": "S'han integrats els principis fonamentals de la computació en la pràctica per seleccionar, valorar i crear nous desenvolupaments tecnològics.",
+                        "d": "S'han desenvolupat sistemes i aplicacions informàtiques que utilitzen tècniques dels sistemes intel·ligents.",
+                        "e": "S'han desenvolupat tècniques d'aprenentatge computacional dedicades a l'extracció automàtica d'informació a partir de grans volums de dades."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Desenvolupa un projecte integrador que combine tècniques d'intel·ligència artificial i anàlisi de dades massives, aplicant models, algorismes i sistemes de Big Data per resoldre un problema real o simulat d'interès social, científic o empresarial, gestionant tot el cicle de vida del projecte des de l'obtenció de dades fins a la presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "Defineix el problema i els objectius del projecte, contextualitzant-ne la rellevància i la viabilitat tècnica.",
+                        "b": "Selecciona i justifica les fonts de dades, garantint-ne la qualitat, fiabilitat i adequació al propòsit del projecte.",
+                        "c": "Disseny i entrena models d'intel·ligència artificial aplicant tècniques d'aprenentatge supervisat, no supervisat o profund segons corresponga.",
+                        "d": "Implementa algorismes d'aprenentatge automàtic, utilitzant eines i llibreries adequades i avaluant-ne el rendiment mitjançant mètriques pertinents.",
+                        "e": "Desenvolupa sistemes de Big Data per a la ingesta, emmagatzematge i processament eficient de grans volums d'informació.",
+                        "f": "Integra els components del projecte (models, algorismes, sistemes i visualitzacions) en una solució funcional i documentada.",
+                        "g": "Analitza i comunica els resultats obtinguts, elaborant informes tècnics i presentacions visuals que facilitin la interpretació de les dades i les conclusions.",
+                        "h": "Avalua críticament les limitacions del model o sistema, i proposa possibles millores o línies futures de treball.",
+                        "i": "Treballa de forma col·laborativa i ètica, mostrant autonomia, responsabilitat i respecte a la normativa de protecció de dades i propietat intel·lectual."
+                    }
+                }
+            },
+            "horas": "50",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
+        },
+        "5073": {
+            "nombre": "Programació d'Intel·ligència Artificial",
+            "creditos": "12",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Caracteritza llenguatges de programació valorant la seva idoneïtat en el desenvolupament d'Intel·ligència Artificial.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat l'estructura d'un programa informàtic.",
+                        "b": "S'han valorat característiques en els llenguatges de programació adequades al tipus d'aplicacions a implementar.",
+                        "c": "S'ha determinat el llenguatge de programació més apropi per al desenvolupament de l'aplicació.",
+                        "d": "S'han valorat característiques dels llenguatges de programació per al desenvolupament d'Intel·ligència Artificial.",
+                        "e": "S'ha determinat el llenguatge de programació més apropi per al desenvolupament de l'aplicació d'Intel·ligència Artificial.",
+                        "f": "S'han caracteritzat llenguatges de marcatge destacant la informació que contenen les seves etiquetes."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Desenvolupa aplicacions d'Intel·ligència artificial utilitzant entorns de modelatge.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat plataformes d'Intel·ligència Artificial.",
+                        "b": "S'han caracteritzat entorns de model d'aplicacions d'Intel·ligència Artificial.",
+                        "c": "S'ha definit el model que es vol implementar segons el problema plantejat.",
+                        "d": "S'ha implementat l'aplicació d'Intel·ligència Artificial.",
+                        "e": "S'han avaluat els resultats obtinguts."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Avalua les millores en els negocis integrant convergència tecnològica.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els avantatges que ofereix unificar processos, serveis, eines, mètodes i sectors.",
+                        "b": "S'han identificat sistemes que faciliten la connexió tecnològica.",
+                        "c": "S'han avaluat les característiques d'aquests sistemes.",
+                        "d": "S'ha avaluat com la convergència tecnològica aporta seguretat en els negocis.",
+                        "e": "S'ha avaluat la millora en la capacitat de presa de decisions estratègiques en un negoci connectat."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Avalua models d'automatització industrial i de negoci relacionant-los amb els resultats esperats per les empreses.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les noves estratègies corporatives i models de negoci en les empreses.",
+                        "b": "S'ha definit la relació entre empreses i clients i el seu efecte en la forma en què les empreses organitzen i gestionen els seus actius i recursos.",
+                        "c": "S'han avaluat models d'automatització per als nous requeriments industrials i de negoci.",
+                        "d": "S'ha avaluat la conveniència de cada model per aconseguir els resultats esperats per les empreses."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte integrador que combine tècniques d'intel·ligència artificial i anàlisi de dades massives, aplicant models, algorismes i sistemes de Big Data per resoldre un problema real o simulat d'interès social, científic o empresarial, gestionant tot el cicle de vida del projecte des de l'obtenció de dades fins a la presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "Defineix el problema i els objectius del projecte, contextualitzant-ne la rellevància i la viabilitat tècnica.",
+                        "b": "Selecciona i justifica les fonts de dades, garantint-ne la qualitat, fiabilitat i adequació al propòsit del projecte.",
+                        "c": "Disseny i entrena models d'intel·ligència artificial aplicant tècniques d'aprenentatge supervisat, no supervisat o profund segons corresponga.",
+                        "d": "Implementa algorismes d'aprenentatge automàtic, utilitzant eines i llibreries adequades i avaluant-ne el rendiment mitjançant mètriques pertinents.",
+                        "e": "Desenvolupa sistemes de Big Data per a la ingesta, emmagatzematge i processament eficient de grans volums d'informació.",
+                        "f": "Integra els components del projecte (models, algorismes, sistemes i visualitzacions) en una solució funcional i documentada.",
+                        "g": "Analitza i comunica els resultats obtinguts, elaborant informes tècnics i presentacions visuals que facilitin la interpretació de les dades i les conclusions.",
+                        "h": "Avalua críticament les limitacions del model o sistema, i proposa possibles millores o línies futures de treball.",
+                        "i": "Treballa de forma col·laborativa i ètica, mostrant autonomia, responsabilitat i respecte a la normativa de protecció de dades i propietat intel·lectual."
+                    }
+                }
+            },
+            "horas": "110",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
+        },
+        "5074": {
+            "nombre": "Sistemes de Big Data",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Aplica tècniques d'anàlisi de dades que integren, processen i analitzen la informació, adaptant i implementant sistemes que les utilitzin.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat conceptes bàsics de matemàtica discreta, lògica algorísmica i complexitat computacional, i la seva aplicació per al tractament automàtic de la informació per mitjà de sistemes computacionals.",
+                        "b": "S'ha extret de forma automàtica informació i coneixement a partir de grans volums de dades.",
+                        "c": "S'han combinat diferents fonts i tipus de dades.",
+                        "d": "S'ha construït un conjunt de dades complexos i s'han relacionat entre si.",
+                        "e": "S'han establert objectius i prioritats, seqüenciació i organització del temps de realització.",
+                        "f": "S'han seleccionat i integrats sistemes d'informació que satisfan les necessitats del problema.",
+                        "g": "S'han determinat criteris de cost i qualitat necessaris per a l'eficàcia i eficiència de la implementació d'un sistema Big Data."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Configura quadres de comandament en diferents entorns computacionals usant tècniques d'anàlisi de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han classificat diferents llibreries i implementacions de les tècniques de representació de la informació.",
+                        "b": "S'ha creuat informació sobre l'objectiu a aconseguir i la naturalesa de les dades.",
+                        "c": "S'ha realitzat un quadre de comandament utilitzant tècniques senzilles.",
+                        "d": "S'han utilitzat tècniques predictives complexes per anticipar-se al que ocorri.",
+                        "e": "S'ha avaluat l'impacte de l'anàlisi de dades en la consecució dels objectius proposats."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Gestiona i emmagatzema dades facilitant la cerca de respostes en grans conjunts de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han extret i emmagatzemat dades de diverses fonts, per ser tractades en diferents escenaris.",
+                        "b": "S'ha fixat l'objectiu d'extreure valor de les dades per al qual és necessari comptar amb tecnologies eficients.",
+                        "c": "S'ha comprovat que la revolució digital exigeix poder emmagatzemar i processar ingents quantitats de dades de diferent tipus i descobrir el seu valor.",
+                        "d": "S'han desenvolupat sistemes de gestió, emmagatzematge i processament de grans volums de dades de manera eficient i segura, tenint en compte la normativa existent.",
+                        "e": "S'han utilitzat habilitats científiques en entorns de treball multidisciplinaris."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Aplica eines per a la visualització de dades utilitzades en les solucions Big Data facilitant les tasques d'anàlisi i presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han examinat diferents escenaris i tipologies de dades no estructurades.",
+                        "b": "S'ha implantat l'aplicació de la BI (Business Intelligence) per a l'extracció de valor.",
+                        "c": "S'ha reconegut la importància d'emmagatzemar grans volums de dades de forma distribuïda i redundant en un clúster de màquines.",
+                        "d": "S'han determinat les diferències en l'entorn d'aplicacions relacionades que faciliten el processament de dades de manera ràpida, eficient i eficaç.",
+                        "e": "S'ha comprovat la manera de programar i processar automàticament l'estructura de dades.",
+                        "f": "S'han valorat les diferents formes de visualitzar les dades que ens interessa representar gràficament, facilitant així les tasques d'anàlisi i presentació de resultats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte integrador que combine tècniques d'intel·ligència artificial i anàlisi de dades massives, aplicant models, algorismes i sistemes de Big Data per resoldre un problema real o simulat d'interès social, científic o empresarial, gestionant tot el cicle de vida del projecte des de l'obtenció de dades fins a la presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "Defineix el problema i els objectius del projecte, contextualitzant-ne la rellevància i la viabilitat tècnica.",
+                        "b": "Selecciona i justifica les fonts de dades, garantint-ne la qualitat, fiabilitat i adequació al propòsit del projecte.",
+                        "c": "Disseny i entrena models d'intel·ligència artificial aplicant tècniques d'aprenentatge supervisat, no supervisat o profund segons corresponga.",
+                        "d": "Implementa algorismes d'aprenentatge automàtic, utilitzant eines i llibreries adequades i avaluant-ne el rendiment mitjançant mètriques pertinents.",
+                        "e": "Desenvolupa sistemes de Big Data per a la ingesta, emmagatzematge i processament eficient de grans volums d'informació.",
+                        "f": "Integra els components del projecte (models, algorismes, sistemes i visualitzacions) en una solució funcional i documentada.",
+                        "g": "Analitza i comunica els resultats obtinguts, elaborant informes tècnics i presentacions visuals que facilitin la interpretació de les dades i les conclusions.",
+                        "h": "Avalua críticament les limitacions del model o sistema, i proposa possibles millores o línies futures de treball.",
+                        "i": "Treballa de forma col·laborativa i ètica, mostrant autonomia, responsabilitat i respecte a la normativa de protecció de dades i propietat intel·lectual."
+                    }
+                }
+            },
+            "horas": "55",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
+        },
+        "5075": {
+            "nombre": "Big Data aplicat",
+            "creditos": "8",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Gestiona solucions a problemes proposats, utilitzant sistemes d'emmagatzematge i eines associades al centre de dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el procés de disseny i construcció de solucions en sistemes d'emmagatzematge de dades.",
+                        "b": "S'han determinat els procediments i mecanismes per a la ingestió de dades.",
+                        "c": "S'ha determinat el format de dades adequat per a l'emmagatzematge.",
+                        "d": "S'han processat les dades emmagatzemades.",
+                        "e": "S'han presentat els resultats i les solucions al client final en una forma fàcil d'interpretar."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Gestiona sistemes d'emmagatzematge i l'ampli ecosistema al seu voltant facilitant el processament de grans quantitats de dades sense fallades i de forma ràpida.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha determinat la importància dels sistemes d'emmagatzematge per dipositar i processar grans quantitats de qualsevol tipus de dades ràpidament.",
+                        "b": "S'ha comprovat el poder de processament del seu model de computació distribuïda.",
+                        "c": "S'ha provat la tolerància a fallades dels sistemes.",
+                        "d": "S'ha determinat que es poden emmagatzemar tantes dades com es desitgi i decidir com utilitzar-les més tard.",
+                        "e": "S'ha visualitzat que el sistema pot créixer fàcilment afegint mòduls."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Genera mecanismes d'integritat de les dades, comprovant el seu manteniment en els sistemes de fitxers distribuïts i valorant la sobrecàrrega que comporta en el tractament de les dades.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la qualitat de les dades en els sistemes de fitxers distribuïts.",
+                        "b": "S'ha valorat que a major volum de tractament de dades correspon un major perill relacionat amb la integritat de les dades.",
+                        "c": "S'ha reconegut que els sistemes de fitxers distribuïts implementen una suma de verificació per a la comprovació dels continguts dels arxius.",
+                        "d": "S'ha reconegut el paper del servidor en els processos previs a la suma de verificació."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza el seguiment de la monitorització d'un sistema, assegurant la fiabilitat i estabilitat dels serveis que es proveeixen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han aplicat eines de monitorització eficient dels recursos.",
+                        "b": "S'han recollit mètriques, processament i visualització de les dades.",
+                        "c": "S'han generat alertes per detectar un risc o mal funcionament.",
+                        "d": "S'ha comprovat que les eines usades ofereixen un rendiment elevat amb rapidesa.",
+                        "e": "S'ha comprovat la fiabilitat de les dades segons respostes.",
+                        "f": "S'ha analitzat l'estabilitat de serveis."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Valida les tècniques de Big Data per transformar una gran quantitat de dades en informació significativa, facilitant la presa de decisions de negocis.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat gran quantitat de dades estructurades i no estructurades per reforçar la funció de BI.",
+                        "b": "S'ha realitzat la neteja i transformació de dades en base als objectius predeterminats.",
+                        "c": "S'ha comprovat que el Big Data multiplica la rellevància i la utilitat del BI per al negoci.",
+                        "d": "S'han conjugat dins d'un model d'empresa dades de clients, financers de vendes, de productes, de màrqueting, de xarxes socials, de la competència, entre altres, per extreure una anàlisi valuosa i efectiva per al negoci.",
+                        "e": "S'ha avaluat i interpretat la informació extreta de les dades i la seva influència en el triomf de diferents negocis.",
+                        "f": "S'ha simulat la implantació d'un model d'Intel·ligència de negocis BI."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Desenvolupa un projecte integrador que combine tècniques d'intel·ligència artificial i anàlisi de dades massives, aplicant models, algorismes i sistemes de Big Data per resoldre un problema real o simulat d'interès social, científic o empresarial, gestionant tot el cicle de vida del projecte des de l'obtenció de dades fins a la presentació de resultats.",
+                    "CriteriosEvaluacion": {
+                        "a": "Defineix el problema i els objectius del projecte, contextualitzant-ne la rellevància i la viabilitat tècnica.",
+                        "b": "Selecciona i justifica les fonts de dades, garantint-ne la qualitat, fiabilitat i adequació al propòsit del projecte.",
+                        "c": "Disseny i entrena models d'intel·ligència artificial aplicant tècniques d'aprenentatge supervisat, no supervisat o profund segons corresponga.",
+                        "d": "Implementa algorismes d'aprenentatge automàtic, utilitzant eines i llibreries adequades i avaluant-ne el rendiment mitjançant mètriques pertinents.",
+                        "e": "Desenvolupa sistemes de Big Data per a la ingesta, emmagatzematge i processament eficient de grans volums d'informació.",
+                        "f": "Integra els components del projecte (models, algorismes, sistemes i visualitzacions) en una solució funcional i documentada.",
+                        "g": "Analitza i comunica els resultats obtinguts, elaborant informes tècnics i presentacions visuals que facilitin la interpretació de les dades i les conclusions.",
+                        "h": "Avalua críticament les limitacions del model o sistema, i proposa possibles millores o línies futures de treball.",
+                        "i": "Treballa de forma col·laborativa i ètica, mostrant autonomia, responsabilitat i respecte a la normativa de protecció de dades i propietat intel·lectual."
+                    }
+                }
+            },
+            "horas": "75",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s"
+            ]
+        }
+    }
+}
