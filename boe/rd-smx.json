@@ -99,6 +99,7 @@
     "ModulosProfesionales":{
 	"0156":{
 	    "nombre":"Inglés Profesional (GM)",
+		"acronimo":"IP",
 	    "creditos":"10",
 	    "ResultadosAprendizaje":{
             "RA01": {
@@ -172,6 +173,7 @@
     },
     "1664":{
             "nombre": "Digitalización aplicada a los sectores productivos (GM)",
+		    "acronimo":"DASP",
             "creditos": "3",
             "ResultadosAprendizaje": {
                 "RA01": {
@@ -233,6 +235,7 @@
     },
         "1709":{
                 "nombre": "Itinerario personal para la empleabilidad I",
+			    "acronimo":"IPEI",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -310,6 +313,7 @@
         },
         "1710":{
                 "nombre": "Itinerario personal para la empleabilidad II",
+				"acronimo":"IPEII",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -380,6 +384,7 @@
         },
     "1708":{
                 "nombre": "Sostenibilidad aplicada al sistema productivo",
+				"acronimo":"SASP",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -444,6 +449,7 @@
     },
     "0221":{
             "nombre":"Montaje y mantenimiento de equipos",
+			"acronimo":"MME",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0957_2": "Mantener y regular el subsistema físico en sistemas informáticos.",
@@ -544,6 +550,7 @@
     },
     "0222":{
             "nombre":"Sistemas operativos monopuesto",
+		    "acronimo":"SOM",
             "horas": "133",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0219_2": "Instalar y configurar el software base en sistemas microinformáticos.",
@@ -615,6 +622,7 @@
     },
     "0223":{
             "nombre":"Aplicaciones ofimáticas",
+			"acronimo":"AOF",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0222_2":"Facilitar al usuario la utilización de paquetes informáticos de propósito general y aplicaciones específicas.", "UC0221_2":"Instalar, configurar y mantener paquetes informáticos de propósito general y aplicaciones específicas.}"
@@ -719,6 +727,7 @@
     },
     "0224":{
             "nombre":"Sistemas operativos en red",
+		    "acronimo":"SOR",
             "horas": "200",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : ["a","c","d","f","g","h","i","j","k","l","m","ñ"],
@@ -798,6 +807,7 @@
     },
     "0226":{
             "nombre":"Seguridad informática",
+		    "acronimo":"SI",
             "horas": "133",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0958_2": "Ejecutar procedimientos de administración y mantenimiento en el software base y de aplicación de cliente.",
@@ -868,6 +878,7 @@
     },
     "0227":{
             "nombre":"Servicios en red",
+		    "acronimo":"SER",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
             "UC0955_2":"Monitorizar los procesos de comunicaciones de la red local.",
@@ -971,6 +982,7 @@
     },
     "0228":{
             "nombre":"Aplicaciones web",
+		    "acronimo":"AW",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : ["a","c","i","k","l","m"],
@@ -1040,6 +1052,7 @@
     },
     "CVOPS190":{
             "nombre":"Introducción a la Programación",
+		    "acronimo":"OPS190",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : [],
@@ -1125,6 +1138,7 @@
     },
     "0225":{
             "nombre":"Redes Locales",
+		    "acronimo":"RL",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0220_2": "Instalar, configurar y verificar los elementos de la red local según procedimientos establecidos."
