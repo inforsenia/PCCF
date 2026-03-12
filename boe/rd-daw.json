@@ -97,6 +97,7 @@
     "ModulosProfesionales":{
         "CVOPS190":{
             "nombre":"Introducción a la Nube Pública",
+			"acronimo":"OPS190",
             "creditos": "10",
             "ResultadosAprendizaje":{
                 "RA01": {
@@ -142,6 +143,7 @@
         },
         "0483":{
             "nombre":"Sistemas Informáticos",
+			"acronimo":"SI",
             "creditos":"10",
             "ResultadosAprendizaje":{
                     "RA01": {
@@ -233,6 +235,7 @@
         },
         "0484":{
                 "nombre": "Bases de Datos",
+				"acronimo":"BD",
                 "creditos": "12",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -327,6 +330,7 @@
         },
         "0485":{
                 "nombre": "Programación",
+			    "acronimo":"PR",
                 "creditos": "14",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -448,6 +452,7 @@
         },
         "0373":{
                 "nombre": "Lenguajes de marcas y sistemas de gestión de información",
+			    "acronimo":"LMSGI",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -540,6 +545,7 @@
         },
         "0487":{
                 "nombre": "Entornos de desarrollo",
+			    "acronimo":"ED",
                 "creditos": "6",
                 "ResultadosAprendizaje": {
                 "RA01": {
@@ -618,6 +624,7 @@
         },
         "0179":{
                 "nombre": "Inglés Profesional (GS)",
+			    "acronimo":"IP",
                 "creditos": "4",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -689,6 +696,7 @@
         },
         "0613":{
                 "nombre": "Desarrollo web en entorno servidor",
+				"acronimo":"DWES",
                 "creditos": "12",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -797,6 +805,7 @@
         },
         "0614":{
                 "nombre": "Despliegue de aplicaciones web",
+			    "acronimo":"DAW",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -881,6 +890,7 @@
         },
         "0615":{
                 "nombre": "Diseño de interfaces web",
+			    "acronimo":"DIW",
                 "creditos": "9",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -959,6 +969,7 @@
         },
         "0612":{
                 "nombre": "Desarrollo Web en Entorno Cliente",
+			    "acronimo":"DWEC",
                 "creditos": "9",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -1053,6 +1064,7 @@
         },
         "1708190":{
                 "nombre": "Sostenibilidad aplicada al sistema productivo",
+			    "acronimo":"SASP",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -1117,6 +1129,7 @@
         },
         "1709":{
                 "nombre": "Itinerario personal para la empleabilidad I",
+				"acronimo":"IPEI",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -1194,6 +1207,7 @@
         },
         "1710":{
                 "nombre": "Itinerario personal para la empleabilidad II",
+				"acronimo":"IPEII",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -1264,6 +1278,7 @@
         },
         "1665190":{
                 "nombre": "Digitalización aplicada a los sectores productivos (GS)",
+			    "acronimo":"DASP",
                 "creditos": "3",
                 "ResultadosAprendizaje": {
                     "RA01": {
