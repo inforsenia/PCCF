@@ -97,6 +97,7 @@
     "ModulosProfesionales":{
         "0371":{
 	    "nombre":"Fundamentos de Hardware",
+		"acronimo":"FH",
 	    "creditos":"6",
 	    "ResultadosAprendizaje":{
             "RA01": {
@@ -168,6 +169,7 @@
         },
         "0373":{
             "nombre": "Lenguajes de marcas y sistemas de gestión de información",
+			"acronimo":"LMSI",
             "creditos": "7",
             "ResultadosAprendizaje": {
                 "RA01": {
@@ -258,6 +260,7 @@
         },
         "0369":{
             "nombre":"Implantación de Sistemas Operativos",
+			"acronimo":"ISO",
             "horas": "233",
             "UnidadesCompetenciaAcreditadas" : {
                         "UC0485_3": "Instalar, configurar y administrar el software de base y de aplicación del sistema."
@@ -359,6 +362,7 @@
         },
         "0179":{
             "nombre": "Inglés Profesional (GS)",
+			"acronimo":"IP",
             "creditos": "4",
             "ResultadosAprendizaje": {
 "RA01": {
@@ -430,6 +434,7 @@
         },
         "1708":{
                 "nombre": "Sostenibilidad aplicada al sistema productivo",
+				"acronimo":"SASP",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -494,6 +499,7 @@
         },
         "1709":{
                 "nombre": "Itinerario personal para la empleabilidad I",
+			    "acronimo":"IPEI",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -571,6 +577,7 @@
         },
         "1710":{
                 "nombre": "Itinerario personal para la empleabilidad II",
+			    "acronimo":"IPEII",
                 "creditos": "5",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -641,6 +648,7 @@
         },
         "1665":{
                 "nombre": "Digitalización aplicada a los sectores productivos (GS)",
+			    "acronimo":"DASP",
                 "creditos": "3",
                 "ResultadosAprendizaje": {
                     "RA01": {
@@ -716,6 +724,7 @@
         },
         "0370":{
             "nombre":"Planificación y Administración de Redes",
+			"acronimo":"PAR",
             "horas": "200",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : ["f","g","h","i","k","ñ","p"],
@@ -808,6 +817,7 @@
         },
         "0372":{
             "nombre":"Gestión de Base de Datos",
+			"acronimo":"GBD",
             "horas": "166",
             "UnidadesCompetenciaAcreditadas" : {
                         "UC0225_3": "Configurar y gestionar la base de datos."
@@ -887,6 +897,7 @@
         },
         "0374":{
             "nombre":"Administración de Sistemas Operativos",
+			"acronimo":"ASO",
             "horas": "133",
             "UnidadesCompetenciaAcreditadas" : {
                         "UC0490_3": "Gestionar servicios en el sistema informático.",
@@ -985,6 +996,7 @@
         },
         "0375":{
                     "nombre":"Servicios de Red e Internet",
+			        "acronimo":"SRI",
                     "horas": "166",
                     "UnidadesCompetenciaAcreditadas" : {
                         "UC0495_3": "Instalar, configurar y administrar el software para gestionar un entorno Web.",
@@ -1097,6 +1109,7 @@
         },
         "0376":{
             "nombre":"Implantación de Aplicaciones Web",
+			"acronimo":"IAW",
             "horas": "133",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0493_3": "Implementar, verificar y documentar aplicaciones Web en entornos Internet, intranet y extranet."
@@ -1190,6 +1203,7 @@
         "0377":{
 
             "nombre":"Administración de Sistemas Gestores de Bases de Datos",
+			"acronimo":"ASGBD",
             "horas": "67",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0224_3": "Configurar y gestionar un sistema gestor de bases de datos."
@@ -1272,6 +1286,7 @@
         },
         "0378":{
             "nombre":"Seguridad y Alta Disponibilidad",
+			"acronimo":"SAD",
             "horas": "133",
             "UnidadesCompetenciaAcreditadas" : {
                 "UC0486_3": "Asegurar equipos informáticos."
@@ -1365,6 +1380,7 @@
         },
         "CVOPS190":{
             "nombre":"Introducción a la Programación",
+			"acronimo":"OPS190",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : [],
