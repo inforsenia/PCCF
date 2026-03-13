@@ -18,6 +18,7 @@
         "o": "Aplicar els protocols i normes de seguretat, qualitat i respecte al medi ambient en les intervencions realitzades.",
         "p": "Complir amb els objectius de la producció, col·laborant amb l'equip de treball i actuant conforme als principis de responsabilitat i tolerància.",
         "q": "Adaptar-se a diferents llocs de treball i noves situacions laborals originades per canvis tecnològics i organitzatius en els processos productius.",
+        "r": "Resoldre problemes i prendre decisions individuals seguint les normes i procediments establerts definits dins de l'àmbit de la seua competència.",
         "s": "Exercir els seus drets i complir amb les obligacions derivades de les relacions laborals, d'acord amb el que s'estableix en la legislació vigent.",
         "t": "Gestionar la seua carrera professional, analitzant les oportunitats d'ocupació, autoocupació i aprenentatge.",
         "u": "Crear i gestionar una petita empresa, realitzant un estudi de viabilitat de productes, planificació de la producció i comercialització.",
@@ -38,11 +39,11 @@
         "l",
         "m",
         "n",
-        "ñ",
+        "ny",
         "o"
     ],
     "CompetenciasSociales": [
-        "ñ",
+        "ny",
         "o",
         "p",
         "q",
@@ -67,7 +68,7 @@
         "l": 3,
         "m": 2,
         "n": 1,
-        "ñ": 2,
+        "ny": 2,
         "o": 2,
         "p": 2,
         "q": 1,
@@ -313,7 +314,8 @@
                         "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
                         "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
                         "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
-                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí."
+                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí.",
+                        "j": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA02": {
@@ -321,7 +323,8 @@
                     "CriteriosEvaluacion": {
                         "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
                         "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament pròxima."
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament pròxima.",
+                        "d": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA03": {
@@ -333,7 +336,8 @@
                         "d": "S'han identificat els diferents components del rebut de salari.",
                         "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
                         "f": "S'ha valorat el paper de la Seguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
-                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
+                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral.",
+                        "h": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA04": {
@@ -349,7 +353,8 @@
                         "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
                         "i": "S'han identificat els itineraris formatius professionals relacionats amb el perfil professional.",
                         "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
-                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació."
+                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació.",
+                        "l": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA05": {
@@ -363,7 +368,8 @@
                         "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
                         "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
                         "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
-                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual."
+                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual.",
+                        "j": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA06": {
@@ -375,26 +381,25 @@
                         "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
                         "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
                         "f": "S'han activat les estratègies d'afrontament personal davant els estressores derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
-                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten la adequada resposta a les situacions de conflicte en l'àmbit laboral."
+                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten la adequada resposta a les situacions de conflicte en l'àmbit laboral.",
+                        "h": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 }
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjectiusGenerals ": [
-                "e",
-                "j",
+                "n",
+                "o",
                 "q"
             ],
             "CompetenciasTitulo": [
-                "a",
-                "e",
-                "f",
-                "i",
-                "j",
-                "v",
-                "y",
-                "z"
+                "m",
+                "q",
+                "r",
+                "s",
+                "t",
+                "v"
             ]
         },
         "1710": {
@@ -407,7 +412,8 @@
                         "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
                         "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
                         "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
-                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i la seua aportació de valor."
+                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i la seua aportació de valor.",
+                        "e": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA02": {
@@ -419,7 +425,8 @@
                         "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
                         "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
                         "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
-                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional."
+                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional.",
+                        "h": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA03": {
@@ -430,7 +437,8 @@
                         "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
                         "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
                         "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
-                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible."
+                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible.",
+                        "g": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA04": {
@@ -444,7 +452,8 @@
                         "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
                         "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
                         "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
-                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de marketing per a desenvolupar destreses en tècniques de comunicació i venda."
+                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de marketing per a desenvolupar destreses en tècniques de comunicació i venda.",
+                        "j": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA05": {
@@ -458,7 +467,8 @@
                         "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
                         "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
                         "h": "S'han investigat les opcions financeres socialment responsables.",
-                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix."
+                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix.",
+                        "j": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 },
                 "RA06": {
@@ -467,26 +477,22 @@
                         "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
                         "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
                         "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
-                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora."
+                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora.",
+                        "e": "S’ha aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma,  comunicació verbal, oral i escrita, treball en equip, capacitat d’adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
                     }
                 }
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjectiusGenerals ": [
-                "e",
-                "j",
-                "q"
+                "ny",
+                "p"
             ],
             "CompetenciasTitulo": [
-                "a",
-                "e",
-                "f",
-                "i",
-                "j",
-                "v",
-                "y",
-                "z"
+                "n",
+                "t",
+                "u",
+                "v"
             ]
         },
         "1708": {

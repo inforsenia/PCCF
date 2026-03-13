@@ -21,7 +21,11 @@ for d in $(ls -1); do
     pandoc --template ${TEMPLATE_TEX_PD} ${PANDOC_OPTIONS} -o ../../PDFS/PDs_$1/PD_$1_$d.pdf ./PD_*.md
     if [ -f "./PD_9999_CuadroResumen.pdf" ]; then
         echo " Existe Cuadro Resumen, aplicando pdfunite"
-        pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf
+        #se lanza el comando pdfunite:
+        #echo " * [ ProgsDidacticas ] PDF unido: pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "./PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf"
+        pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "./PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf
+        #se han juntado los pdf en la ruta:
+        #echo " * [ ProgsDidacticas ] PDF generado: /temp/PD_$1_$d.pdf"
         mv /tmp/PD_$1_$d.pdf ../../PDFS/PDs_$1/PD_$1_$d.pdf
     else
         echo " No tiene Cuadro Resumen"

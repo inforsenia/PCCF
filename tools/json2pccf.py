@@ -48,30 +48,31 @@ data_box = Box(data)
 # Generar fichero con las Competencias del Ciclo a partir de plantilla Jinja
 dir_srcciclo="./src_"+familia+"_"+s_ciclo+"/"
 comp_file = os.path.join(dir_srcciclo, f"PCCF_111_Competencies_{s_ciclo}.md")
-if os.path.exists(comp_file):
-    print(f" * PCCF: fichero de competencias ya existe: {comp_file}")
-else:
-    try:
-        # si no existe lo generamos directamente en la carpeta PDFS
-        comp_file = os.path.join("PDFS", f"PCCF_111_Competencies_{s_ciclo}.md")
-        templateLoader = jinja2.FileSystemLoader(searchpath=f"./templates_{familia}/")
-        templateEnv = jinja2.Environment(loader=templateLoader)
-        TEMPLATE_COMP = "PCCF_111_Competencies_Cicle.md"
-        template = templateEnv.get_template(TEMPLATE_COMP)
-        output_comp = template.render(
-            ciclo=s_ciclo,
-            competencias_profesionales=data_box.CompetenciasProfesionales,
-            competencias_sociales=data_box.CompetenciasSociales,
-            cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
-            importancia=data.get("ImportanciaCompetencias", {}),
-        )
-        with open(comp_file, "w", encoding="utf-8") as fc:
-            fc.write(output_comp)
-        print(f" * PCCF: fichero de competencias generado: {comp_file}")
-    except jinja2.TemplateNotFound:
-        print(f" * PCCF: plantilla {TEMPLATE_COMP} no encontrada, se omite generación de competencias")
-    except Exception as e:
-        print(f" * PCCF: error al generar fichero de competencias: {e}")
+# if os.path.exists(comp_file):
+#     print(f" * PCCF: fichero de competencias ya existe: {comp_file}")
+# else:
+try:
+    # tanto si no existe como si existe lo generamos directamente en la carpeta del ciclo
+    print(f" * PCCF: fichero de competencias : {comp_file}")
+    comp_file = os.path.join(dir_srcciclo, f"PCCF_111_Competencies_{s_ciclo}.md")
+    templateLoader = jinja2.FileSystemLoader(searchpath=f"./templates_{familia}/")
+    templateEnv = jinja2.Environment(loader=templateLoader)
+    TEMPLATE_COMP = "PCCF_111_Competencies_Cicle.md"
+    template = templateEnv.get_template(TEMPLATE_COMP)
+    output_comp = template.render(
+        ciclo=s_ciclo,
+        competencias_profesionales=data_box.CompetenciasProfesionales,
+        competencias_sociales=data_box.CompetenciasSociales,
+        cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
+        importancia=data.get("ImportanciaCompetencias", {}),
+    )
+    with open(comp_file, "w", encoding="utf-8") as fc:
+        fc.write(output_comp)
+    print(f" * PCCF: fichero de competencias generado: {comp_file}")
+except jinja2.TemplateNotFound:
+    print(f" * PCCF: plantilla {TEMPLATE_COMP} no encontrada, se omite generación de competencias")
+except Exception as e:
+    print(f" * PCCF: error al generar fichero de competencias: {e}")
 
 
 
@@ -93,7 +94,7 @@ for codigo in data_box.ModulosProfesionales:
     # pdmod es la ruta al fichero del modulo de manera standalone
     # esto se hace para mas adelante construir los PDFS de todos los modulos
     # de manera independiente
-    pdmod = dir_modulo+"PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
+    pdmod = dir_modulo+"PD_"+s_ciclo+"_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
     pdtit = dir_modulo+"PD_0000_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
     pdplanformativo = "./temp/PCCF_222_PlanFormativo.md"
 
@@ -113,7 +114,7 @@ for codigo in data_box.ModulosProfesionales:
         TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_"+sys.argv[1]+".md"
         template = templateEnv.get_template(TEMPLATE_FILE)
         outputText = template.render(modulo=modulo)
-        fmod = "./temp/PD_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
+        fmod = "./temp/PD_"+s_ciclo+"_"+str(codigo)+"_"+modulo.nombre.replace(" ","")+".md"
         fmodulo = open(fmod,"w")
         fmodulo.write(outputText)
         fmodulo.close()
@@ -164,17 +165,19 @@ for codigo in data_box.ModulosProfesionales:
     
     # Creamos el PDF desde el excel
     #print(" * [ PCCF ] : Si existe el libro rellenado en la ruta, usarlo ")
-    ruta_al_libro=f"excels_{familia}/"+s_ciclo+"_libro.xlsx"
+    ruta_al_libro=f"excels_{familia}/libro_"+s_ciclo+".xlsx"
     
     if os.path.exists(ruta_al_libro):
         print(" * [ PCCF ] - Excel provisto ")
     else:
         print(" * [ PCCF ] - Excel por defecto ")
-        ruta_al_libro="PDFS/"+s_ciclo+"_libro_autogenerado.xlsx"
+        ruta_al_libro="PDFS/libro_autogenerado_"+s_ciclo+".xlsx"
         
     #print(" Obtenemos el PDF desde el Excel ")
     subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
     subprocess.run("./tools/excel-to-plan-formativo.py "+ruta_al_libro+" \""+modulo.nombre+"\" "+pdplanformativo+" ",shell=True,check=True)
+    #movemos el pdf a la carpeta del modulo, imprimimos la nueva ruta:
+    print(" * [ PCCF ] - PDF generado: "+dir_modulo+"PD_9999_CuadroResumen.pdf")
     shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
     
 sys.exit(0)

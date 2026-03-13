@@ -66,6 +66,9 @@ proyecto-%: files proyecto-base
 	@echo " [ ${BLUE} Proyecto Curricular : $(CICLO_UPPER) (Familia $(FAMILIA)) ${RESET}]"
 	@echo " ${LIGHTBLUE} Poblando base desde src_$(FAMILIA) ${RESET}"
 	
+	# Asegurar que el directorio temporal existe (por si se borró en una ejecución anterior)
+	mkdir -p temp
+
 	# Copiar contenido base de la familia
 	cp -r src_$(FAMILIA)/* temp/
 	
@@ -90,12 +93,19 @@ proyecto-%: files proyecto-base
 	@echo " ${LIGHTBLUE} PDF Generado para $(CICLO_UPPER) ${RESET}"
 	
 	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
+	
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Programaciones Generadas para $(CICLO_UPPER) ${RESET}"
 	
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes módulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER)
 	
+	@echo " ${LIGHTBLUE} Limpiando carpetas temporales temp${RESET}"
+	rm -rf temp/
+
+	@echo " ${LIGHTBLUE} Limpiando carpetas temporales temp_$(CICLO_UPPER)${RESET}"
+	rm -rf temp_$(CICLO_UPPER)
+
 	@echo " ${LIGHTBLUE} [ Proyecto $(CICLO_UPPER) Completado ] ${RESET}"
 
 # Target para generar todos los ciclos

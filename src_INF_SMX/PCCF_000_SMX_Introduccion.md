@@ -1,21 +1,25 @@
 ---
-title: PCCF - Sistemas Microinformáticos y Redes
-subtitle: "Curso 2025-2026"
-author: Departamento de Informática
+title: PCCF - Sistemes Microinformàtics i Xarxes
+subtitle: "Curs 2025-2026"
+author: Departament d'Informàtica
 header-includes: |
-lang: es-ES
+lang: ca-ES
 keywords: [SMX]
 abstract: |
-          Proyecto Curricular de Ciclo Formativo para el Grado Medio de Sistemas Microinformáticos y Redes 
-          Impartido en el IES La Sénia.
-          Curso 2025-2026.
+          Projecte Curricular de Ciclo Formatiu per al Grau Mitjà de Sistemes Microinformàtics i Xarxes
+
+          Impartit a l'IES Eduardo Primo Marqués
+
+          Carlet (València)
+
+          Curs 2025-2026
 titlepage: true,
-page-background: "../rsrc/backgrounds/background5.pdf"
+page-background: "../rsrc/backgrounds/bg_EPM.pdf"
 page-background-opacity: 0.4
 titlepage-text-color: "3c4d64"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title-PCCF.pdf"
+titlepage-background: "../rsrc/backgrounds/pccf_EPM.pdf"
 ---
 
 \newpage

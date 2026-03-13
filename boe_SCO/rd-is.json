@@ -21,8 +21,56 @@
         "r": "Gestionar recursos i documentació associada a les intervencions socials.",
         "s": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, participant activament en la vida social i cultural."
     },
-    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"],
-    "CompetenciasSociales": ["n", "ny", "o", "p", "q", "r", "s"],
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+    ],
+    "CompetenciasSociales": [
+        "n",
+        "ny",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 3,
+        "b": 3,
+        "c": 3,
+        "d": 3,
+        "e": 2,
+        "f": 3,
+        "g": 2,
+        "h": 3,
+        "i": 3,
+        "j": 2,
+        "k": 2,
+        "l": 2,
+        "m": 2,
+        "n": 1,
+        "ny": 3,
+        "o": 3,
+        "p": 2,
+        "q": 3,
+        "r": 3,
+        "s": 3,
+        "t": 2,
+        "u": 2,
+        "v": 1,
+        "w": 1
+    },
     "CualificacionesINCUAL": {
         "Completas": {
             "SSC090_3": {
@@ -177,8 +225,38 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "f", "o"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "fi", "o"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "f",
+                "o"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "fi",
+                "o"
+            ]
         },
         "0338": {
             "nombre": "Inserció sociolaboral",
@@ -260,8 +338,34 @@
                 "UC1036_3": "Donar suport en el procés d'inserció sociolaboral de persones amb discapacitat.",
                 "UC1037_3": "Efectuar el seguiment de la inserció sociolaboral amb l'empresa, l'usuari i el seu entorn personal."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "k", "ñ", "o", "q", "r", "t", "u", "v", "w"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "k", "ñ", "o", "q", "s", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "k",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "u",
+                "v",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "k",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ]
         },
         "0339": {
             "nombre": "Atenció a les unitats de convivència",
@@ -353,8 +457,38 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "g", "f", "o", "q", "r", "s", "t", "u", "v", "w"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "g", "f", "o", "q", "r", "s", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "g",
+                "f",
+                "o",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "g",
+                "f",
+                "o",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u"
+            ]
         },
         "0340": {
             "nombre": "Mediació comunitària",
@@ -420,8 +554,31 @@
                 "UC1040_3": "Organitzar i implementar el procés de gestió de conflictes.",
                 "UC1041_3": "Realitzar la valoració, el seguiment i la difusió de la mediació com una via de gestió de conflictes."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "m", "ñ", "o", "q", "r", "t", "w"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "m", "ñ", "o", "q", "s", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "m",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "m",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "u"
+            ]
         },
         "0341": {
             "nombre": "Suport a la intervenció educativa",
@@ -485,8 +642,34 @@
                 "UC1427_3": "Executar, en col·laboració amb el tutor/a i/o amb l'equip interdisciplinari del centre educatiu, els programes educatius de l'alumnat amb necessitats educatives especials (ACNEE) a la seua aula de referència.",
                 "UC1428_3": "Implementar els programes d'autonomia i higiene personal en l'assec de l'alumnat amb necessitats educatives especials (ACNEE), participant amb l'equip interdisciplinari del centre educatiu."
             },
-            "ObjetivosGenerales ": ["a", "d", "f", "h", "j", "ñ", "o", "q", "r", "t", "u", "v", "w"],
-            "CompetenciasTitulo": ["a", "d", "f", "h", "j", "ñ", "o", "q", "s", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "d",
+                "f",
+                "h",
+                "j",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "u",
+                "v",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "d",
+                "f",
+                "h",
+                "j",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ]
         },
         "0342": {
             "nombre": "Promoció de l'autonomia personal",
@@ -591,8 +774,38 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social."
             },
-            "ObjetivosGenerales ": ["a", "b", "d", "f", "h", "i", "j", "ñ", "o", "q", "r", "t", "u", "v", "w"],
-            "CompetenciasTitulo": ["a", "b", "d", "f", "h", "i", "j", "ñ", "o", "q", "s", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "d",
+                "f",
+                "h",
+                "i",
+                "j",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "u",
+                "v",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "d",
+                "f",
+                "h",
+                "i",
+                "j",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ]
         },
         "0343": {
             "nombre": "Sistemes augmentatius i alternatius de la comunicació",
@@ -665,8 +878,35 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0254_3": "Establir, adaptar i aplicar sistemes alternatius de comunicació."
             },
-            "ObjetivosGenerales ": ["a", "b", "d", "h", "j", "l", "ñ", "o", "q", "r", "t", "u", "w"],
-            "CompetenciasTitulo": ["a", "b", "d", "h", "j", "l", "ñ", "o", "q", "s", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "d",
+                "h",
+                "j",
+                "l",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "u",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "d",
+                "h",
+                "j",
+                "l",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ]
         },
         "0344": {
             "nombre": "Metodologia de la intervenció social",
@@ -743,8 +983,38 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1026_3": "Incorporar la perspectiva de gènere en els projectes d'intervenció social."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "ñ", "w"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "ñ", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "ñ",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "ñ",
+                "u"
+            ]
         },
         "0017": {
             "nombre": "Habilitats socials",
@@ -826,8 +1096,23 @@
             },
             "horas": "60",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["m", "o", "q", "r", "s", "t", "w"],
-            "CompetenciasTitulo": ["m", "o", "q", "r", "s", "u"]
+            "ObjetivosGenerales ": [
+                "m",
+                "o",
+                "q",
+                "r",
+                "s",
+                "t",
+                "w"
+            ],
+            "CompetenciasTitulo": [
+                "m",
+                "o",
+                "q",
+                "r",
+                "s",
+                "u"
+            ]
         }
     }
 }

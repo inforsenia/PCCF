@@ -55,7 +55,7 @@ data_box = Box(data)
 # Abrimos el excel
 #writer = pd.ExcelWriter("datos.xlsx", engine="openpyxl")
 
-libro="PDFS/"+str(sys.argv[1])+"_libro_autogenerado.xlsx"
+libro="PDFS/libro_autogenerado_"+str(sys.argv[1])+".xlsx"
 wb = openpyxl.Workbook()
 
 # Algunas posiciones fijas

@@ -2,6 +2,7 @@ services:
   pccf:
     container_name: pccf
     build: .
+    user: "1000:1000"
     volumes:
       - ../PCCF:/home/PCCF
     # Por defecto, mantener el contenedor vivo para modo detached

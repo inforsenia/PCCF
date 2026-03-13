@@ -72,7 +72,7 @@ I tindrem 3 noves carpetes (o si ja existien s'afegiran a elles els nous arxius)
 | Ruta                                    | Descripció                                                   |
 | --------------------------------------- | ------------------------------------------------------------ |
 | `PDFS/PDs_FPBIIO/`                      | Esta carpeta conté un PDF amb la PD de cadascún dels mòduls  |
-| `PDFS/FPBIIO_libro_autogenerado.xlsx`   | Excel genèric generat a partir de la informació del rd-fpbiio.json i que posteriorment utilitzarà cada docent per a ajustar les ponderacions de cada RA i designar els CE o RA que van a FEE. |
+| `PDFS/libro_autogenerado_FPBIIO.xlsx`   | Excel genèric generat a partir de la informació del rd-fpbiio.json i que posteriorment utilitzarà cada docent per a ajustar les ponderacions de cada RA i designar els CE o RA que van a FEE. |
 | `PDFS/PCCF_IESEPM_FPBIIO.pdf`           | PCCF preeliminar del cicle corresponent en PDF               |
 | `PDFS/Programaciones_IESEPM_FPBIIO.pdf` | PDF amb totes les PD's de tots els mòduls del cicle          |
 | `PDFS/PCCF_111_Competencies_FPBIIO.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
@@ -90,7 +90,7 @@ if hoja.startswith("Sistemes de"): hoja = "SBD"
 if hoja.startswith("Big Data"): hoja = "BDA"
 ```
 
-i ho adaptem a FPBIIO, podem mirar les pestanyes de l'excel que s'ha generat en `PDFS/FPBIIO_libro_autogenerado.xlsx` i canviar-ho per les sigles del mòdul:
+i ho adaptem a FPBIIO, podem mirar les pestanyes de l'excel que s'ha generat en `PDFS/libro_autogenerado_FPBIIO.xlsx` i canviar-ho per les sigles del mòdul:
 
 ```python
 # FPBIIO
@@ -112,7 +112,7 @@ if hoja.startswith("Comunicació i societat 2"): hoja = "CS2"
 
 ### 1. Revisar el contingut de l'excel
 
-Copiar l'excel de `PDFS/FPBIIO_libro_autogenerado.xlsx` a `excel/FPBIIO_libro.xlsx` revisar el contingut per cadascun dels mòduls per part dels docents:
+Copiar l'excel de `PDFS/libro_autogenerado_FPBIIO.xlsx` a `excel/libro_FPBIIO.xlsx` revisar el contingut per cadascun dels mòduls per part dels docents:
 
 1. A la columna `C` s'indicarà el pes de cada RA en percentatge (tots junts hauran de sumar 100%)
 2. *La columna `D` no tinc clar per a que s'utilitza*

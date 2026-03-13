@@ -26,8 +26,62 @@
         "w": "Realitzar la gestió bàsica per a la creació i funcionament d'una petita empresa i tenir iniciativa en la seua activitat professional.",
         "x": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, d'acord amb l'establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
     },
-    "CompetenciasProfesionales": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ny", "o", "p"],
-    "CompetenciasSociales": ["q", "r", "s", "t", "u", "v", "w", "x"],
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "ny",
+        "o",
+        "p"
+    ],
+    "CompetenciasSociales": [
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x"
+    ],
+    "ImportanciaCompetencias": {
+        "a": 3,
+        "b": 3,
+        "c": 3,
+        "d": 3,
+        "e": 1,
+        "f": 2,
+        "g": 3,
+        "h": 3,
+        "i": 2,
+        "j": 3,
+        "k": 1,
+        "l": 2,
+        "m": 2,
+        "n": 1,
+        "ny": 3,
+        "o": 2,
+        "p": 1,
+        "q": 1,
+        "r": 3,
+        "s": 2,
+        "t": 2,
+        "u": 1,
+        "v": 1,
+        "w": 1,
+        "x": 2
+    },
     "CualificacionesINCUAL": {
         "Completas": {
             "SSC089_2": {
@@ -135,8 +189,31 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari."
             },
-            "ObjetivosGenerales ": ["a", "b", "j", "f", "o", "p", "q", "r", "u", "w", "x"],
-            "CompetenciasTitulo": ["a", "b", "i", "m", "n", "f", "o", "r", "t", "u"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "j",
+                "f",
+                "o",
+                "p",
+                "q",
+                "r",
+                "u",
+                "w",
+                "x"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "i",
+                "m",
+                "n",
+                "f",
+                "o",
+                "r",
+                "t",
+                "u"
+            ]
         },
         "0211": {
             "nombre": "Destreses socials",
@@ -179,10 +256,24 @@
                     }
                 }
             },
-            "horas": "70",
+            "horas": "166",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["p", "q", "s", "u", "w", "z"],
-            "CompetenciasTitulo": ["n", "ny", "p", "r", "t", "v"]
+            "ObjetivosGenerales ": [
+                "p",
+                "q",
+                "s",
+                "u",
+                "w",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "n",
+                "ny",
+                "p",
+                "r",
+                "t",
+                "v"
+            ]
         },
         "0212": {
             "nombre": "Característiques i necessitats de les persones en situació de dependència",
@@ -227,8 +318,40 @@
             },
             "horas": "85",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["a", "b", "c", "d", "e", "h", "i", "l", "m", "n", "f", "o", "p", "r", "s", "e", "y"],
-            "CompetenciasTitulo": ["a", "b", "c", "d", "g", "h", "k", "l", "m", "n", "o", "p", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "h",
+                "i",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p",
+                "r",
+                "s",
+                "e",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "g",
+                "h",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "v"
+            ]
         },
         "0213": {
             "nombre": "Atenció i suport psicosocial",
@@ -258,8 +381,38 @@
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": ["a", "b", "j", "l", "m", "n", "ny", "o", "p", "q", "r", "u", "v", "w", "z"],
-            "CompetenciasTitulo": ["a", "b", "i", "k", "l", "m", "n", "ny", "o", "r", "s", "t", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "j",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "u",
+                "v",
+                "w",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "i",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "r",
+                "s",
+                "t",
+                "v"
+            ]
         },
         "0214": {
             "nombre": "Suport a la comunicació",
@@ -289,38 +442,163 @@
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": ["a", "b", "j", "l", "m", "n", "p", "q", "r", "v", "w", "y", "z"],
-            "CompetenciasTitulo": ["a", "b", "i", "k", "l", "n", "f", "o", "s", "t", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "j",
+                "l",
+                "m",
+                "n",
+                "p",
+                "q",
+                "r",
+                "v",
+                "w",
+                "y",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "i",
+                "k",
+                "l",
+                "n",
+                "f",
+                "o",
+                "s",
+                "t",
+                "v"
+            ]
         },
         "0215": {
             "nombre": "Suport domiciliari",
             "creditos": "13",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Organitza el pla de treball en el domicili de persones en situació de dependència, interpretant les directrius establertes.",
+                    "Resultado": "Organitza el pla de treball en el domicili de persones en situació de dependència.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat les característiques del pla de treball.",
-                        "b": "S'ha descrit la importància de l'adaptació del pla de treball a la realitat de la persona en situació de dependència.",
-                        "c": "S'han identificat les tasques que s'han de realitzar en el domicili.",
-                        "d": "S'han seqüenciat les tasques domèstiques diàries que s'han de realitzar en el domicili, en funció del pla de treball i de les adaptacions realitzades, si fora necessari."
+                        "a": "Identificació de les característiques del pla de treball.",
+                        "b": "Importància de l’adaptació del pla a la realitat de la persona.",
+                        "c": "Identificació de les tasques a realitzar en el domicili.",
+                        "d": "Seqüenciació de les tasques domèstiques diàries.",
+                        "e": "Anàlisi de les necessitats i demandes a cobrir.",
+                        "f": "Respecte a les característiques culturals de la unitat de convivència.",
+                        "g": "Identificació de diferents tipus de plans d’atenció.",
+                        "h": "Valoració de l’ajust de la seqüència d’activitats per optimitzar temps i esforços."
                     }
                 },
                 "RA02": {
-                    "Resultado": "Planifica la gestió de la despesa, relacionant les tècniques bàsiques d'administració amb les necessitats de la unitat de convivència.",
+                    "Resultado": "Planifica la gestió de la despesa, relacionant les tècniques bàsiques d’administració amb les necessitats de la unitat de convivència.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha analitzat la documentació relacionada amb les despeses de la unitat de convivència.",
-                        "b": "S'ha reconegut la necessitat de saber interpretar els documents de gestió domiciliària.",
-                        "c": "S'ha elaborat un dossier de les partides de despesa general mensual.",
-                        "d": "S'ha elaborat un dossier de despeses extraordinàries d'una unitat de convivència."
+                        "a": "Anàlisi de la documentació relacionada amb les despeses de la unitat de convivència.",
+                        "b": "Reconeixement de la necessitat d’interpretar els documents de gestió domiciliària.",
+                        "c": "Elaboració d’un dossier de les partides de despesa general mensual.",
+                        "d": "Elaboració d’un dossier de despeses extraordinàries d’una unitat de convivència.",
+                        "e": "Enumeració dels factors que condicionen la distribució del pressupost mensual d’una unitat de convivència.",
+                        "f": "Enumeració i classificació de les despeses ordinàries i d’aprovisionament d’existències en una unitat de convivència tipus.",
+                        "g": "Anàlisi de les despeses mensuals de diferents unitats de convivència.",
+                        "h": "Valoració de la necessitat d’equilibri entre ingressos i despeses."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Organitza el proveïment de la unitat de convivència, descrivint les característiques dels productes.",
+                    "CriteriosEvaluacion": {
+                        "a": "Anàlisi de diferents tipus de documentació publicitària, seleccionant productes.",
+                        "b": "Valoració de les tecnologies com a font d’informació.",
+                        "c": "Determinació de la llista de la compra.",
+                        "d": "Anàlisi de l’etiquetatge de diferents productes de consum i aliments.",
+                        "e": "Identificació dels llocs apropiats per a l’emmagatzematge correcte dels productes, tenint en compte les seues característiques.",
+                        "f": "Enumeració dels tipus d’establiments i serveis destinats a la venda de productes d’alimentació, neteja, higiene i manteniment del domicili.",
+                        "g": "Establiment de criteris per a la col·locació dels diferents productes, atenent a criteris d’organització, seguretat i higiene."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Prepara el manteniment del domicili de persones en situació de dependència, seleccionant les tècniques i productes amb criteris de qualitat, seguretat i higiene.",
+                    "CriteriosEvaluacion": {
+                        "a": "Anàlisi de diferents tipus de residus i deixalles que es generen en el domicili.",
+                        "b": "Identificació dels tipus, maneig, riscos i manteniment d’ús dels electrodomèstics utilitzats en el domicili: rentadora, assecadora, planxa, aspiradora i altres.",
+                        "c": "Recopilació en un dossier de les tècniques de neteja de sòls, estris, mobiliari, finestres i sanitaris.",
+                        "d": "Identificació dels productes de neteja i desinfecció que cal utilitzar, descrivint les seues aplicacions, riscos d’ús i ubicació en el domicili.",
+                        "e": "Descripció dels riscos derivats del maneig i ús de les instal·lacions elèctriques en el domicili.",
+                        "f": "Descripció de les tècniques de rentada de roba a màquina i a mà, en funció de les característiques de la peça, del tipus de taca i del grau de brutícia.",
+                        "g": "Valoració del compliment de les normes de seguretat, higiene, prevenció i eliminació de productes, establides per al desenvolupament de les activitats de manteniment de la llar.",
+                        "h": "Descripció de les pautes d’interpretació de l’etiquetatge de les peces de roba, classificant-les en funció del seu posterior procés de rentada."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Selecciona aliments del menú, relacionant les seues característiques i proporcions amb les prescripcions establides.",
+                    "CriteriosEvaluacion": {
+                        "a": "Anàlisi dels conceptes bàsics relacionats amb l’alimentació i la nutrició.",
+                        "b": "Classificació dels aliments en funció de les seues característiques.",
+                        "c": "Identificació de les característiques d’una dieta saludable, així com dels tipus d’aliments que ha d’incloure.",
+                        "d": "Identificació de les racions i mesures casolanes.",
+                        "e": "Anàlisi de l’etiquetatge nutricional d’aliments envasats.",
+                        "f": "Selecció dels aliments que han de formar part de la ingesta diària, tenint en compte les prescripcions establides.",
+                        "g": "Valoració de la importància d’una dieta saludable."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Aplica tècniques bàsiques de cuina en el procés de preparació, relacionant-les amb les necessitats de la persona usuària i els protocols establits.",
+                    "CriteriosEvaluacion": {
+                        "a": "Reconeixement de la necessitat d’aplicar mesures d’higiene, prevenció de riscos i eliminació de productes en la preparació dels aliments.",
+                        "b": "Identificació de les tècniques culinàries bàsiques d’aplicació en la cuina familiar, indicant en cada cas les fases d’aplicació, procediments, temps i estris.",
+                        "c": "Recopilació de receptes de cuina, ajustant les quantitats i els temps en funció del nombre de comensals i les seues necessitats específiques.",
+                        "d": "Identificació dels procediments previs al cuinat: descongelar, tallar, pelar, trossejar i rentar els diferents productes.",
+                        "e": "Classificació dels materials, utensilis i electrodomèstics necessaris per a la preelaboració dels aliments: descongelar, tallar, pelar i rentar.",
+                        "f": "Aplicació de tècniques bàsiques de cuina per a l’elaboració de primers plats, segons plats i postres adequats a la dieta dels membres de la unitat de convivència.",
+                        "g": "Reconeixement de la necessitat de complir les normes de seguretat i higiene establides per a la manipulació i processament d’aliments.",
+                        "h": "Valoració de la importància de la presentació dels aliments."
+                    }
+                },
+                "RA07": {
+                    "Resultado": "Realitza el seguiment del pla de treball en el domicili de persones en situació de dependència, descrivint el protocol establit.",
+                    "CriteriosEvaluacion": {
+                        "a": "Identificació de les fonts d’informació, les tècniques de seguiment i la detecció de situacions de risc.",
+                        "b": "Anàlisi dels diferents recursos, seleccionant-los segons les necessitats de les persones en situació de dependència.",
+                        "c": "Registre de les dades en el suport establit.",
+                        "d": "Interpretació correcta de la informació recollida.",
+                        "e": "Identificació de les situacions en què és necessària la col·laboració d’altres professionals.",
+                        "f": "Valoració de la importància de l’avaluació per a millorar la qualitat del servei."
                     }
                 }
             },
-            "horas": "130",
+            "horas": "192",
             "UnidadesCompetenciaAcreditadas": {
                 "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
             },
-            "ObjetivosGenerales ": ["a", "b", "d", "f", "g", "j", "p", "q", "r", "u", "v", "w", "x", "z"],
-            "CompetenciasTitulo": ["a", "b", "d", "e", "f", "i", "n", "f", "o", "r", "s", "t", "u", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "d",
+                "f",
+                "g",
+                "j",
+                "p",
+                "q",
+                "r",
+                "u",
+                "v",
+                "w",
+                "x",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "d",
+                "e",
+                "f",
+                "i",
+                "n",
+                "f",
+                "o",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v"
+            ]
         },
         "0216": {
             "nombre": "Atenció sanitària",
@@ -351,8 +629,35 @@
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
                 "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": ["a", "b", "e", "h", "i", "j", "p", "r", "v", "w", "x", "z"],
-            "CompetenciasTitulo": ["a", "b", "d", "g", "h", "i", "n", "f", "o", "s", "t", "u", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "e",
+                "h",
+                "i",
+                "j",
+                "p",
+                "r",
+                "v",
+                "w",
+                "x",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "d",
+                "g",
+                "h",
+                "i",
+                "n",
+                "f",
+                "o",
+                "s",
+                "t",
+                "u",
+                "v"
+            ]
         },
         "0217": {
             "nombre": "Atenció higiènica",
@@ -383,8 +688,36 @@
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
                 "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": ["a", "b", "c", "h", "i", "j", "p", "q", "r", "v", "w", "x", "z"],
-            "CompetenciasTitulo": ["a", "b", "c", "g", "h", "i", "n", "f", "o", "s", "t", "u", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "p",
+                "q",
+                "r",
+                "v",
+                "w",
+                "x",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "g",
+                "h",
+                "i",
+                "n",
+                "f",
+                "o",
+                "s",
+                "t",
+                "u",
+                "v"
+            ]
         },
         "0831": {
             "nombre": "Teleassistència",
@@ -415,8 +748,32 @@
                 "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
                 "UC_1425_2": "Manejar les eines, tècniques i habilitats per prestar el servei de teleassistència."
             },
-            "ObjetivosGenerales ": ["a", "j", "p", "q", "r", "s", "u", "v", "w", "x", "z"],
-            "CompetenciasTitulo": ["a", "i", "n", "f", "o", "p", "r", "s", "t", "u", "v"]
+            "ObjetivosGenerales ": [
+                "a",
+                "j",
+                "p",
+                "q",
+                "r",
+                "s",
+                "u",
+                "v",
+                "w",
+                "x",
+                "z"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "i",
+                "n",
+                "f",
+                "o",
+                "p",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v"
+            ]
         },
         "0020": {
             "nombre": "Primers auxilis",
@@ -443,8 +800,12 @@
             },
             "horas": "35",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["k"],
-            "CompetenciasTitulo": ["j"]
+            "ObjetivosGenerales ": [
+                "k"
+            ],
+            "CompetenciasTitulo": [
+                "j"
+            ]
         },
         "0218": {
             "nombre": "Formació i orientació laboral",
@@ -471,8 +832,22 @@
             },
             "horas": "50",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["j", "t", "u", "w", "x", "ab"],
-            "CompetenciasTitulo": ["i", "q", "r", "t", "u", "x"]
+            "ObjetivosGenerales ": [
+                "j",
+                "t",
+                "u",
+                "w",
+                "x",
+                "ab"
+            ],
+            "CompetenciasTitulo": [
+                "i",
+                "q",
+                "r",
+                "t",
+                "u",
+                "x"
+            ]
         },
         "0219": {
             "nombre": "Empresa i iniciativa emprenedora",
@@ -499,8 +874,14 @@
             },
             "horas": "35",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": ["aa", "ab"],
-            "CompetenciasTitulo": ["w", "x"]
+            "ObjetivosGenerales ": [
+                "aa",
+                "ab"
+            ],
+            "CompetenciasTitulo": [
+                "w",
+                "x"
+            ]
         },
         "0220": {
             "nombre": "Formació en centres de treball",

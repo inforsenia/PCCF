@@ -1,12 +1,12 @@
 ---
-title: PCCF - Desenvolupament d'Aplicacions Multiplataforma
+title: PCCF - Educació Infantil
 subtitle: "Curs 2025-2026"
-author: Departament d'Informàtica
+author: Departament de Serveis a la Comunitat
 header-includes: |
 lang: ca-ES
-keywords: [SMX]
+keywords: [EI]
 abstract: |
-          Projecte Curricular del Cicle Formatiu per al Grau Superior de Desenvolupament d'Aplicacions Multiplataforma 
+          Projecte Curricular de Ciclo Formatiu per al Grau Superior d'Educació Infantil 
 
           Impartit a l'IES Eduardo Primo Marqués
 

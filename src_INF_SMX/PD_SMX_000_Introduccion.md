@@ -1,17 +1,13 @@
 ---
-title: PCCF - Desenvolupament d'Aplicacions Multiplataforma
+title: Programacions Didàctiques - Sistemes Microinformàtics i Xarxes
 subtitle: "Curs 2025-2026"
 author: Departament d'Informàtica
 header-includes: |
 lang: ca-ES
 keywords: [SMX]
 abstract: |
-          Projecte Curricular del Cicle Formatiu per al Grau Superior de Desenvolupament d'Aplicacions Multiplataforma 
-
+          Programacions Didàctiques del Cicle Formatiu per al Grau Mitjà Sistemes Microinformàtics i Xarxes
           Impartit a l'IES Eduardo Primo Marqués
-
-          Carlet (València)
-
           Curs 2025-2026
 titlepage: true,
 page-background: "../rsrc/backgrounds/bg_EPM.pdf"

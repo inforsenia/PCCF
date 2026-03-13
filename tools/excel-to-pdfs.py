@@ -95,7 +95,8 @@ hoja = sys.argv[2]
 
 from pccf_utils import get_hoja_label
 
-if not ruta_excel.endswith("_libro_autogenerado.xlsx"):
+# Si el libro no es autogenerado, convierto el nombre de la hoja a las siglas del módulo
+if not "autogenerado" in ruta_excel:
     hoja = get_hoja_label(hoja)
 print(" Trabajando con la hoja : "+hoja)
 

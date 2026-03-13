@@ -7,8 +7,11 @@ lang: es-ES
 keywords: [FPBIIO]
 abstract: |
           Projecte Curricular del Cicle Formatiu de Grau Bàsic d'Informàtica i Oficina 
+
           Impartit a l'IES Eduardo Primo Marqués
+
           Carlet (València)
+
           Curs 2025-2026
 titlepage: true,
 page-background: "../rsrc/backgrounds/bg_EPM.pdf"
