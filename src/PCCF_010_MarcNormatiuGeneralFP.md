@@ -1,6 +1,6 @@
 \newpage
 
-# Marc Normatiu Comú
+## Marc Normatiu Comú
 
 El Marc Normatiu vigent que s' ha tingut en compte per al desenvolupament del projecte curricular està format pels documents següents:
 
@@ -27,6 +27,4 @@ El Marc Normatiu vigent que s' ha tingut en compte per al desenvolupament del pr
 | [Orden 32/2011](https://dogv.gva.es/datos/2011/12/28/pdf/2011_13033.pdf)| Regula el dret de l' alumnat a l' objectivitat en l' avaluació, i s' estableix el procediment de reclamació de qualificacions obtingudes i de les decisions de promoció, de certificació o d' obtenció del títol acadèmic que corresponga |
 | [Resolució de 17 de juliol de 2025](https://dogv.gva.es/es/resultat-dogv?signatura=2025/28562) | per la qual es dicten instruccions sobre ordenació acadèmica i d'organització dels centres que imparteixin els graus D i E de Formació Professional durant el curs 2025-2026 a la Comunitat Valenciana. |
 | [Resolució de 27 de juny de 2025](https://www.boe.es/boe/dias/2025/07/12/pdfs/BOE-A-2025-14430.pdf) | Mòduls optatius |
-
-En aquesta llista s' inclou la relació de disposicions normatives d' àmbit estatal, autonòmic i regulacions específiques del centre educatiu, la qual cosa centralitza aquest contingut i facilita la redacció de les programacions didàctiques posteriors.
 

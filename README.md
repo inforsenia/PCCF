@@ -114,6 +114,15 @@ la hoja respectiva de su módulo.
 
 Se han añadido las listas de las Competencias Profesionales y Sociales con su nivel de importancia (estrellas ★).
 
+### Documentos generados automáticamente
+
+El sistema genera automáticamente varios documentos a partir de los datos del JSON:
+
+- **PCCF_033_ImportanciaCompetencies.md**: Tabla con todas las competencias del ciclo y su nivel de importancia (★, ★★, ★★★)
+- **PCCF_030_ContribucioModuls.md**: Tablas que muestran qué módulos contribuyen a desarrollar cada competencia (profesionales y de ocupabilidad)
+
+Estos documentos se generan en la carpeta `src_{FAMILIA}_{CICLO}/` y se integran automáticamente en el PCCF final.
+
 ---
 
 ## Descripción de las utilidades

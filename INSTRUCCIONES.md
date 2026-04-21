@@ -8,7 +8,7 @@ Pots fer servir alguna IA ([DeepSeek.com](https://www.deepseek.com/)) passant-li
  
 #### 1.1 Importància de les competències
  
-Per a que la taula de competències (arxiu `PCCF_111_Competencies_*.md`) mostre el nivell d'importància amb estrelles (★), cal afegir el diccionari `ImportanciaCompetencias` al final del JSON:
+Per a que la taula de competències (arxiu `PCCF_033_*_ImportanciaCompetencies.md`) mostre el nivell d'importància amb estrelles (★), cal afegir el diccionari `ImportanciaCompetencias` al final del JSON:
  
 ```json
 "ImportanciaCompetencias": {
@@ -41,7 +41,8 @@ Dins de la carpeta trobarem la següent estructura:
 | `PCCF_001_IdentificacioFPBIIO.md`            | Plantilla per al primer punt del PCCF (Identificació)        |
 | `PCCF_006_MarcoNormativoEspecificoFPBIIO.md` | Marc normatiu específic del PCCF de FPBIIO                   |
 | `PCCF_110_AdecuacionYArreglo_FPBIIO.md`      | Context socioeconomic i competència general del cicle, el fitxer |
-| `PCCF_111_Competencies_FPBIIO.md`            | Es generarà a la carpeta PDFS originalment, una vegada ens agrade com es genera, el podem moure ací i s'utilitzarà este en lloc de generar un de nou. |
+| `PCCF_033_FPBIIO_ImportanciaCompetencies.md`            | Es generarà a la carpeta PDFS originalment, una vegada ens agrade com es genera, el podem moure ací i s'utilitzarà este en lloc de generar un de nou. |
+| `PCCF_030_FPBIIO_ContribucioModuls.md`            | Es generarà automàticament. Conté dues taules que mostren quins mòduls contribueixen a desenvolupar cada competència (professionals i d'ocupabilitat). |
 | `PCCF_150_OrganizacionDistribucion.md`       | En esta plantilla s'utilitza la imatge de `imgs/FPBIIO_horario.png` |
 | `PD_000_FPBIIO_Introduccion.md`              | Plantilla per a la portada de les PD dels mòduls de FPBIIO.<br />Especificar nom del cicle, centre, curs, portada, etc. |
 
@@ -75,7 +76,8 @@ I tindrem 3 noves carpetes (o si ja existien s'afegiran a elles els nous arxius)
 | `PDFS/libro_autogenerado_FPBIIO.xlsx`   | Excel genèric generat a partir de la informació del rd-fpbiio.json i que posteriorment utilitzarà cada docent per a ajustar les ponderacions de cada RA i designar els CE o RA que van a FEE. |
 | `PDFS/PCCF_IESEPM_FPBIIO.pdf`           | PCCF preeliminar del cicle corresponent en PDF               |
 | `PDFS/Programaciones_IESEPM_FPBIIO.pdf` | PDF amb totes les PD's de tots els mòduls del cicle          |
-| `PDFS/PCCF_111_Competencies_FPBIIO.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
+| `PDFS/PCCF_033_FPBIIO_ImportanciaCompetencies.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
+| `PDFS/PCCF_030_FPBIIO_ContribucioModuls.md`       | Document generat automàticament amb taules de contribució de mòduls a competències |
 
 ### 6. Afegir el nou cicle a l'script `pccf_utils.py`
 

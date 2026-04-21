@@ -64,14 +64,19 @@ proyecto-%: files proyecto-base
 	@$(eval FAMILIA=$(if $(filter $(CICLO),$(CICLOS_INF)),INF,SCO))
 	
 	@echo " [ ${BLUE} Proyecto Curricular : $(CICLO_UPPER) (Familia $(FAMILIA)) ${RESET}]"
-	@echo " ${LIGHTBLUE} Poblando base desde src_$(FAMILIA) ${RESET}"
+	@echo " ${LIGHTBLUE} Creando temp ${RESET}"
 	
 	# Asegurar que el directorio temporal existe (por si se borró en una ejecución anterior)
 	mkdir -p temp
 
+	# Copiar contenido base del centro educativo
+	@echo " ${LIGHTBLUE} Poblando generico de centro desde src ${RESET}"
+	cp -r src/* temp/
+	
+	@echo " ${LIGHTBLUE} Poblando específico desde src_$(CICLO_UPPER) ${RESET}"
 	# Copiar contenido base de la familia
 	cp -r src_$(FAMILIA)/* temp/
-	
+
 	@echo " ${LIGHTBLUE} Poblando específico desde src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"
 	# Copiar archivos específicos del ciclo (si existen)
 	@if [ -n "$$(find src_$(FAMILIA)_$(CICLO_UPPER) -maxdepth 1 -name '*' -not -path 'src_$(FAMILIA)_$(CICLO_UPPER)' 2>/dev/null)" ]; then \

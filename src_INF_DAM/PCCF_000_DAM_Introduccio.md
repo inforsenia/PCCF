@@ -4,7 +4,7 @@ subtitle: "Curs 2025-2026"
 author: Departament d'Informàtica
 header-includes: |
 lang: ca-ES
-keywords: [SMX]
+keywords: [DAM]
 abstract: |
           Projecte Curricular del Cicle Formatiu per al Grau Superior de Desenvolupament d'Aplicacions Multiplataforma 
 
