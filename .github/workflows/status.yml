@@ -1,0 +1,30 @@
+name: Resumen de Estado
+
+on:
+  push:
+    paths:
+      - UP/**/*
+
+permissions:
+  contents: write
+
+jobs:
+  resumen-status:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Crear resumen de estado y actualizar repositorio
+        run: |
+            chmod +x ./tools/status.sh
+            ./tools/status.sh
+            
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add UP/STATUS_SUMMARY.md
+            git commit -m "[resumen] Actualizar resumen de estado" || echo "No changes to commit"
+            git push origin HEAD:${GITHUB_REF#refs/heads/}
