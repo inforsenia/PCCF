@@ -99,7 +99,9 @@
                         "c": "S'han analitzat els aspectes principals del marc legislatiu de l'educació infantil.",
                         "d": "S'han identificat les característiques del model d'intervenció socioeducativa en l'atenció a la infància.",
                         "e": "S'ha analitzat la relació entre educació i societat.",
-                        "f": "S'ha valorat l'educació infantil com a recurs per a la conciliació de la vida laboral i familiar."
+                        "f": "S'ha valorat l'educació infantil com a recurs per a la conciliació de la vida laboral i familiar.",
+                        "g": "S'ha utilitzat i valorat l'ús de les noves tecnologies com font d'intervenció.",
+                        "h": "S'ha mostrat iniciativa i disposició davant noves situacions de la professió."
                     }
                 },
                 "RA02": {
@@ -109,7 +111,11 @@
                         "b": "S'han descrit els diferents programes i serveis d'educació formal i no formal en l'atenció a la infància.",
                         "c": "S'ha identificat la funció social i educativa de cada àmbit.",
                         "d": "S'han identificat els objectius generals de l'atenció a la infància en els diferents àmbits.",
-                        "e": "S'han descrit els destinataris de la intervenció educativa en cada àmbit."
+                        "e": "S'han descrit els destinataris de la intervenció educativa en cada àmbit.",
+                        "f": "S'han identificat els diferents nivells de planificació d'una activitat d'educació no formal: pla, programa i projecte.",
+                        "g": "S'han comparat documents de planificació de distints tipus de institucions en l'àmbit formal i no formal.",
+                        "h": "S'han seleccionat objectius i continguts partint del marc curricular o del pla o programa i les característiques dels xiquets i xiquetes per aconseguir el desenvolupament de les seves capacitats individuals.",
+                        "i": "S'ha valorat la importància de la planificació en el procés d'intervenció educativa."
                     }
                 },
                 "RA03": {
@@ -121,7 +127,8 @@
                         "d": "S'han identificat els elements que componen una proposta pedagògica i la seua coherència.",
                         "e": "S'han determinat els elements bàsics de la programació d'aula.",
                         "f": "S'han especificat les característiques bàsiques de les unitats de programació.",
-                        "g": "S'han identificat les adaptacions possibles per a donar resposta a les necessitats educatives especials."
+                        "g": "S'han identificat les adaptacions possibles per a donar resposta a les necessitats educatives especials.",
+                        "h": "S'ha valorat la participació en les activitats en equip, el contrast d'opinions i el intercanvi d'experiències."
                     }
                 },
                 "RA04": {
@@ -131,7 +138,11 @@
                         "b": "S'han establert criteris per a l'organització dels espais i dels recursos.",
                         "c": "S'han descrit els principals tipus de recursos didàctics.",
                         "d": "S'han descrit les característiques de l'organització de l'ambient i l'espai.",
-                        "e": "S'ha valorat la importància de la presa de decisions per a organitzar els espais i els recursos."
+                        "e": "S'ha valorat la importància de la presa de decisions per a organitzar els espais i els recursos.",
+                        "f": "S 'han analitzat els espais i materials didàctics i mobiliari, comprovant el compliment de les normes de seguretat i higiene i les condicions d'accessibilitat.",
+                        "g": "S'han seleccionat materials didàctics i didàctic-interactiu adequats als objectius, continguts i criteris metodològics.",
+                        "h": "S'han establert els espais, materials, recursos humans, temps, tenint en compte l'edat, nombre de xiquets i xiquetes i en el seu cas, les necessitats educatives especials.",
+                        "i": "S'ha responsabilitzat de la importància de generar entorns segurs."
                     }
                 },
                 "RA05": {
@@ -142,7 +153,8 @@
                         "c": "S'han identificat els criteris per a l'elaboració d'activitats.",
                         "d": "S'han utilitzat els recursos adequats a l'activitat.",
                         "e": "S'ha valorat la coherència entre les activitats i els principis psicopedagògics.",
-                        "f": "S'ha valorat la importància del respecte als ritmes individuals."
+                        "f": "S'ha valorat la importància del respecte als ritmes individuals.",
+                        "g": "S'ha valorat la coherència de la planificació de les activitats d'educació formal i no formal amb els objectius de la programació."
                     }
                 },
                 "RA06": {
@@ -153,11 +165,13 @@
                         "c": "S'ha determinat la forma i la periodicitat de la informació a les famílies.",
                         "d": "S'han elaborat instruments d'avaluació.",
                         "e": "S'han descrit els procediments de transmissió d'informació als destinataris.",
-                        "f": "S'ha valorat la importància de la confidencialitat en la transmissió de la informació."
+                        "f": "S'ha valorat la importància de la confidencialitat en la transmissió de la informació.",
+                        "g": "S'ha valorat la importància de mantenir una actitud permanent de millora en l'eficàcia i qualitat del servei.",
+                        "h": "S'han identificat els recursos per a la formació permanent dels educadors i educadores."
                     }
                 }
             },
-            "horas": "130",
+            "horas": "266",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1028_3": "Programar, organitzar, realitzar i avaluar processos d'intervenció educativa de centre i de grup d'infants de zero a tres anys."
             },
@@ -171,9 +185,12 @@
             "CompetenciasTitulo": [
                 "a",
                 "b",
+                "c",
                 "g",
                 "h",
-                "i"
+                "i",
+                "k",
+                "l"
             ]
         },
         "0012": {
@@ -188,7 +205,10 @@
                         "c": "S'han descrit les característiques evolutives en l'atenció a les necessitats bàsiques durant els primers anys de vida.",
                         "d": "S'han identificat les rutines que afavoreixen l'adquisició d'hàbits de vida saludable.",
                         "e": "S'han descrit les activitats de la vida quotidiana que desenvolupen la progressiva autonomia.",
-                        "f": "S'han programat activitats d'atenció a les necessitats bàsiques."
+                        "f": "S'han programat activitats d'atenció a les necessitats bàsiques.",
+                        "g": "S'han dissenyat ambients aptes i segurs per a la satisfacció de les necessitats bàsiques dels nens i nenes",
+                        "h": "S'han establert els elements materials, espacials i temporals que intervenen en la planificació i desenvolupament de les rutines diaries",
+                        "i": "S'ha relacionat la forma d'atenció de cadascuna de les necessitats bàsiques amb les característiques dels nens i les nenes"
                     }
                 },
                 "RA02": {
@@ -199,7 +219,10 @@
                         "c": "S'han identificat les estratègies metodològiques afavoridores de l'adquisició d'hàbits.",
                         "d": "S'han descrit les activitats adequades per a l'adquisició de cada hàbit.",
                         "e": "S'han seqüenciat les activitats d'adquisició d'hàbits en funció de l'edat.",
-                        "f": "S'ha valorat la importància d'una programació fonamentada per a l'adquisició d'hàbits."
+                        "f": "S'ha valorat la importància d'una programació fonamentada per a l'adquisició d'hàbits.",
+                        "g": "S'han identificat els possibles conflictes i trastorns relacionats amb l'adquisició d'hàbits d'autonomía personal.",
+                        "h": "S'ha valorat la importància de l'adquisició de l'autonomia personal per a la construcció d'una autoimatge positiva i del seu desenvolupament integral per part de l'infant",
+                        "i": "S'ha explicat el paper de les persones adultes en l'adquisició de l'autonomia personal."
                     }
                 },
                 "RA03": {
@@ -209,7 +232,11 @@
                         "b": "S'han descrit criteris per a l'organització dels espais segons les activitats.",
                         "c": "S'ha valorat la importància de l'organització del temps segons els ritmes individuals.",
                         "d": "S'han identificat els recursos apropiats per a cada activitat.",
-                        "e": "S'han descrit els criteris de selecció dels recursos."
+                        "e": "S'han aportat solucions front a les dificultats detectades.",
+                        "f": "S'han seleccionat els objectes i recursos materials necessaris per a treballar els diferents hàbits d’ alimentació, higiene, descans i altres.",
+                        "g": "S'han seleccionat les ajudes tècniques necessàries.",
+                        "h": "S'ha comprovat que l'ambient, els materials i equips específics, compleixen amb les normes d'higiene i seguretat establerts en la normativa vigent",
+                        "i": "S'ha valorat la importancia de respectar els ritmes individuals dels nens i nenes."
                     }
                 },
                 "RA04": {
@@ -219,7 +246,12 @@
                         "b": "S'han emprat els recursos adequats a cada activitat.",
                         "c": "S'ha adaptat la intervenció a les característiques individuals.",
                         "d": "S'han aplicat les estratègies metodològiques afavoridores de l'adquisició d'hàbits.",
-                        "e": "S'ha valorat la importància de respectar els ritmes individuals."
+                        "e": "S'ha valorat la importància de respectar els ritmes individuals.",
+                        "f": "S'han respectat els ritmes individuals dels xiquets/etes.",
+                        "g": "S'han utilitzat les ajudes tècniques seguint els protocols establerts.",
+                        "h": "S'han respectat les normes d'higiene, prevenció i seguretat.",
+                        "i": "S'ha donat resposta adequadament front les contingencies.",
+                        "j": "S'ha valorat el paper de l'educador o educadora en la satisfacciò de les necessitats bàsiques i el desenvolupament de l'autonomia dels xiquets/etes."
                     }
                 },
                 "RA05": {
@@ -231,7 +263,7 @@
                         "d": "S'han descrit les pautes d'administració de medicaments.",
                         "e": "S'han identificat les situacions d'accidents infantils més freqüents.",
                         "f": "S'han aplicat les tècniques de primers auxilis apropiades a cada situació.",
-                        "g": "S'ha valorat la importància de la prevenció d'accidents."
+                        "g": "S'ha comprovat que l'ambient, els materials i equips especifics compleixen les normes de qualitat i seguretat esablertes."
                     }
                 },
                 "RA06": {
@@ -242,11 +274,14 @@
                         "c": "S'han aplicat els instruments d'avaluació.",
                         "d": "S'han interpretat les dades obtingudes.",
                         "e": "S'han proposat modificacions a partir dels resultats obtinguts.",
-                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció."
+                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció.",
+                        "g": "S'han identificat les situacions en les que és necessari la col·laboració de les famílies i d'altres professionals.",
+                        "h": "S'han elaborat informes sobre l'evolució en l'adquisició d'hàbits i la satisfacció de les necessitats bàsiques i/o trastorns en aquests àmbits dirigits a les famílies i altres professionals.",
+                        "i": "S'ha valorat la importància de l'avaluació per donar una resposta adequada a les necessitats bàsiques dels xiquets/etes."
                     }
                 }
             },
-            "horas": "110",
+            "horas": "166",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1029_3": "Desenvolupar programes d'adquisició i entrenament en hàbits d'autonomia i salut, així com altres programes d'intervenció educativa amb infants de zero a tres anys en col·laboració amb la família i altres professionals."
             },
@@ -365,7 +400,9 @@
                         "c": "S'han seleccionat continguts d'acord amb els objectius i les característiques del grup.",
                         "d": "S'han identificat estratègies metodològiques afavoridores del desenvolupament de l'expressió i la comunicació.",
                         "e": "S'han planificat activitats afavoridores del desenvolupament de l'expressió i la comunicació.",
-                        "f": "S'han establert criteris i procediments d'avaluació."
+                        "f": "S'han establert criteris i procediments d'avaluació.",
+                        "g": "S'han fet propostes creatives en el disseny d'activitats per a l'expressió i la comunicació infantil",
+                        "h": "S'ha valorat l'expressió com element essencial per a l'observació del desenvolupament infantil"
                     }
                 },
                 "RA02": {
@@ -375,7 +412,9 @@
                         "b": "S'han aplicat criteris de selecció de recursos segons els objectius de la intervenció.",
                         "c": "S'han seleccionat recursos adaptats a les característiques del grup.",
                         "d": "S'han elaborat recursos per a afavorir l'expressió i la comunicació.",
-                        "e": "S'ha valorat la importància d'adaptar els recursos a les necessitats individuals."
+                        "e": "S'ha valorat la importància d'adaptar els recursos a les necessitats individuals.",
+                        "f": "S'han relacionat el moment evolutiu dels xiquets i xiquetes amb les característiques del recurs seleccionat",
+                        "g": "S'ha valorat la importància d'adequar els recursos a les característiques evolutives dels xiquets i xiquetes"
                     }
                 },
                 "RA03": {
@@ -385,7 +424,12 @@
                         "b": "S'han realitzat activitats que afavorisquen l'accés a la lectura i l'escriptura.",
                         "c": "S'han emprat tècniques i recursos plàstics adequats a l'edat.",
                         "d": "S'han aplicat activitats que afavorisquen el desenvolupament de l'expressió musical i corporal.",
-                        "e": "S'ha valorat la importància de l'expressió per al desenvolupament integral."
+                        "e": "S'ha valorat la importància de l'expressió per al desenvolupament integral.",
+                        "f": "S'han identificat els principals trastorns i alteracions en el desenvolupament de l'expressió oral",
+                        "g": "S'han seleccionat estratègies d'intervenció promotores d'un clima d'afecte i confiança",
+                        "h": "S'ha valorat la importància de respectar la llengua materna dels xiquets i xiquetes",
+                        "i": "S'ha valorat la coherència de la realització de les activitats amb la planificació",
+                        "j": "S'han identificat els trastorns més comuns i les alternatives d'intervenció"
                     }
                 },
                 "RA04": {
@@ -395,7 +439,12 @@
                         "b": "S'han seleccionat activitats que afavorisquen el desenvolupament logicomatemàtic.",
                         "c": "S'han emprat recursos adequats al desenvolupament logicomatemàtic.",
                         "d": "S'han aplicat estratègies metodològiques afavoridores del pensament logicomatemàtic.",
-                        "e": "S'ha valorat la importància de l'experiència directa en l'aprenentatge logicomatemàtic."
+                        "e": "S'ha valorat la importància de l'experiència directa en l'aprenentatge logicomatemàtic.",
+                        "f": "S'han seleccionat estratègies d'intervenció promotores d'un clima d'afecte i confiança",
+                        "g": "S'ha valorat la coherència de la realització de les activitats amb la planificació",
+                        "h": "S'ha respost davant les contingències",
+                        "i": "S'han generat entorns d'intervenció segurs",
+                        "j": "S'han valorat les expressions d'aproximació al llenguatge gràfic"
                     }
                 },
                 "RA05": {
@@ -406,11 +455,14 @@
                         "c": "S'han aplicat els instruments d'avaluació.",
                         "d": "S'han interpretat les dades obtingudes.",
                         "e": "S'han proposat modificacions en funció dels resultats.",
-                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció."
+                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció.",
+                        "g": "S'han identificat les situacions en les que es necessari la col·laboració d'altres professionals",
+                        "h": "S'ha elaborat la documentació dirigida a les famílies i altres professionals",
+                        "i": "S'han identificat les possibles causes d'una intervenció no adequada"
                     }
                 }
             },
-            "horas": "100",
+            "horas": "166",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1031_3": "Desenvolupar els recursos expressius i comunicatius de l'infant a través del cos, el moviment, el ritme, la plàstica i altres activitats."
             },
@@ -425,7 +477,9 @@
                 "a",
                 "b",
                 "c",
-                "g"
+                "f",
+                "g",
+                "i"
             ]
         },
         "0015": {
@@ -440,7 +494,11 @@
                         "c": "S'han seleccionat continguts d'acord amb els objectius i les característiques del grup.",
                         "d": "S'han identificat estratègies metodològiques afavoridores del desenvolupament sensorial.",
                         "e": "S'han planificat activitats afavoridores del desenvolupament sensorial.",
-                        "f": "S'han establert criteris i procediments d'avaluació."
+                        "f": "S'han establert criteris i procediments d'avaluació.",
+                        "g": "S'han organitzat els espais adequant-se a les característiques evolutives en l'àmbit sensorial dels destinataris en funció de l'edat dels mateixos.",
+                        "h": "S'ha establert una distribució temporal de les activitats per adaptar-se a les característiques evolutives en l'àmbit sensorial dels destinataris en funció de l'edat dels mateixos.",
+                        "i": "S'han realitzat propostes creatives e innovadores en la planificació de la intervenció.",
+                        "j": "S'ha valorat la importància de la intervenció en l'àmbit sensorial com a medi per afavorir l'exploració de l'entorn per part del nen i de la nena"
                     }
                 },
                 "RA02": {
@@ -451,7 +509,9 @@
                         "c": "S'han seleccionat continguts d'acord amb els objectius i les característiques del grup.",
                         "d": "S'han identificat estratègies metodològiques afavoridores del desenvolupament motor.",
                         "e": "S'han planificat activitats afavoridores del desenvolupament motor.",
-                        "f": "S'han establert criteris i procediments d'avaluació."
+                        "f": "S'han establert criteris i procediments d'avaluació.",
+                        "g": "S'han seleccionat les ajudes tècniques que es necessari utilitzar.",
+                        "h": "S'ha valorat la importància del desenrotllament motor en l'adquisició de l'autonomia personal."
                     }
                 },
                 "RA03": {
@@ -462,7 +522,10 @@
                         "c": "S'han seleccionat continguts d'acord amb els objectius i les característiques del grup.",
                         "d": "S'han identificat estratègies metodològiques afavoridores del desenvolupament cognitiu.",
                         "e": "S'han planificat activitats afavoridores del desenvolupament cognitiu.",
-                        "f": "S'han establert criteris i procediments d'avaluació."
+                        "f": "S'han establert criteris i procediments d'avaluació.",
+                        "g": "S'han organitzat els espais adequant-se a les característiques evolutives en l’àmbit cognitiu dels destinataris en funció de l’edat dels mateixos.",
+                        "h": "S'ha establert una distribució temporal de les activitats per adaptar-se a les característiques evolutives dels xiquets i xiquetes.",
+                        "i": "S'han fet propostes creatives e innovadores."
                     }
                 },
                 "RA04": {
@@ -473,7 +536,10 @@
                         "c": "S'han seleccionat continguts d'acord amb els objectius i les característiques del grup.",
                         "d": "S'han identificat estratègies metodològiques afavoridores del desenvolupament psicomotor.",
                         "e": "S'han planificat activitats psicomotrius.",
-                        "f": "S'han establert criteris i procediments d'avaluació."
+                        "f": "S'han establert criteris i procediments d'avaluació.",
+                        "g": "S'ha establert una distribució temporal de les activitats per adaptar-se a les característiques psicomotrius dels destinataris en funció de l'edat dels mateixos.",
+                        "h": "S'han identificat els principis i àmbits d'actuació de l'educació psicomotriu.",
+                        "i": "S'ha valorat la importància de la psicomotricitat en l'educació infantil."
                     }
                 },
                 "RA05": {
@@ -483,7 +549,11 @@
                         "b": "S'han emprat recursos adequats a cada activitat.",
                         "c": "S'ha adaptat la intervenció a les característiques individuals.",
                         "d": "S'ha creat un clima afavoridor del desenvolupament.",
-                        "e": "S'ha valorat la importància de respectar els ritmes individuals."
+                        "e": "S'ha valorat la importància de respectar els ritmes individuals.",
+                        "f": "S'han seleccionat estratègies d'intervenció promotores d'un clima d'afecte i confiança.",
+                        "g": "S'ha valorat la coherència de la implantació de les activitats amb la planificació.",
+                        "h": "S'ha donat resposta a les contingències.",
+                        "i": "S'han generat entorns d'intervenció segurs."
                     }
                 },
                 "RA06": {
@@ -494,11 +564,13 @@
                         "c": "S'han aplicat instruments d'avaluació.",
                         "d": "S'han interpretat les dades obtingudes.",
                         "e": "S'han proposat modificacions en funció dels resultats.",
-                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció."
+                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció.",
+                        "g": "S'han identificat les possibles causes d'una intervenció no adequada.",
+                        "h": "S'ha ajustat l'actuació i actitud del professional a la pauta prevista."
                     }
                 }
             },
-            "horas": "95",
+            "horas": "192",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1033_3": "Definir, seqüenciar i avaluar aprenentatges, interpretant-los en el context del desenvolupament infantil de zero a sis anys."
             },
@@ -513,7 +585,10 @@
                 "a",
                 "b",
                 "c",
-                "g"
+                "f",
+                "g",
+                "i",
+                "k"
             ]
         },
         "0016": {
@@ -527,7 +602,12 @@
                         "b": "S'han identificat els principals conflictes relacionats amb l'afectivitat infantil.",
                         "c": "S'ha valorat el paper de l'escola i de l'educador o educadora en el desenvolupament afectiu.",
                         "d": "S'ha planificat el període d'adaptació.",
-                        "e": "S'han dissenyat estratègies educatives que afavorisquen el desenvolupament afectiu."
+                        "e": "S'han dissenyat estratègies educatives que afavorisquen el desenvolupament afectiu.",
+                        "f": "S'han proposat activitats, recursos i estratègies coherents amb els objectius i les característiques dels xiquets i les xiquetes.",
+                        "g": "S'han descrit estratègies adequades per a organitzar el període d'adaptació.",
+                        "h": "S'han proposat activitats afavoridores del desenvolupament de la identitat personal i d'una autoimatge positiva",
+                        "i": "S'ha valorat la importància de les persones adultes i els pares en la construcció d'una identitat personal ajustada.",
+                        "j": "S'ha valorat la importància de l'afectivitat en el desenvolupament integral del subjecte."
                     }
                 },
                 "RA02": {
@@ -538,7 +618,11 @@
                         "c": "S'ha valorat el paper de l'escola i de l'educador o educadora en el desenvolupament social.",
                         "d": "S'han dissenyat activitats i estratègies per al desenvolupament social.",
                         "e": "S'han analitzat programes d'habilitats socials dirigits a xiquets i xiquetes de 0 a 6 anys.",
-                        "f": "S'ha valorat la importància de l'educació incidental."
+                        "f": "S'ha valorat la importància de l'educació incidental.",
+                        "g": "S'han proposat activitats i estratègies per al desenvolupament d'habilitats socials en els xiquets i xiquetes.",
+                        "h": "S'han proposat activitats afavoridores de l'observació i exploració de l'entorn social.",
+                        "i": "S'ha valorat el paper de l'escola en la socialització dels xiquets i xiquetes.",
+                        "j": "S'ha valorat la importància de l'afectivitat en el desenvolupament integral infantil."
                     }
                 },
                 "RA03": {
@@ -546,7 +630,11 @@
                     "CriteriosEvaluacion": {
                         "a": "S'han identificat les característiques de l'evolució de la moralitat infantil.",
                         "b": "S'han dissenyat programes, activitats i estratègies per a l'educació en valors.",
-                        "c": "S'ha valorat la importància d'una formació adequada del judici moral."
+                        "c": "S'ha valorat la importància d'una formació adequada del judici moral.",
+                        "d": "S'han formulat objectius d'acord a les característiques evolutives dels xiquets i xiquetes.",
+                        "e": "S'han proposat activitats, recursos i estratègies evolutives dels xiquets i xiquetes.",
+                        "f": "S'han proposat programes i activitats d'educació en valors afavoridors del desenvolupament integral.",
+                        "g": "S'ha valorat l'actitud de les persones adultes en la interiorització de valors i normes en els xiquets i xiquetes de 0 a 6 anys."
                     }
                 },
                 "RA04": {
@@ -555,7 +643,13 @@
                         "a": "S'han analitzat les característiques del desenvolupament sexual en la infància.",
                         "b": "S'han identificat els principals conflictes relacionats amb el desenvolupament sexual.",
                         "c": "S'han dissenyat programes, activitats i estratègies per a l'educació sexual i la promoció d'igualtat.",
-                        "d": "S'ha valorat la influència dels estereotips en el desenvolupament sexual."
+                        "d": "S'ha valorat la influència dels estereotips en el desenvolupament sexual.",
+                        "e": "S'han proposat activitats, recursos i estratègies afavoridores del desenvolupament d'una identitat sexual.",
+                        "f": "S'han identificat i descrit els elements contextuals, personals i organitzatius que afavorisquen o dificulten una pràctica pedagògica no sexista.",
+                        "g": "S'han establert estratègies i mecanismes per a la detecció d'elements que dificulten la igualtat de gènere.",
+                        "h": "S'han descrit programes, activitats i estratègies d'actuació promotores d'igualtat.",
+                        "i": "S'han seleccionat recursos didàctics no sexistes per a la intervenció.",
+                        "j": "S'ha valorat la necessitat d'analitzar les pròpies actituds i comportaments relacionats amb la igualtat de gènere."
                     }
                 },
                 "RA05": {
@@ -565,7 +659,12 @@
                         "b": "S'han analitzat les tècniques i instruments per a l'avaluació i seguiment dels problemes de conducta habituals en la infància.",
                         "c": "S'han dissenyat programes i estratègies per a la intervenció en problemes habituals de conducta.",
                         "d": "S'han analitzat estratègies per a la prevenció i la resolució pacífica dels conflictes en l'aula.",
-                        "e": "S'ha valorat el conflicte com a mitjà per a l'aprenentatge i desenvolupament d'habilitats interpersonals en els xiquets i xiquetes."
+                        "e": "S'ha valorat el conflicte com a mitjà per a l'aprenentatge i desenvolupament d'habilitats interpersonals en els xiquets i xiquetes.",
+                        "f": "S'han identificat les tècniques d'intervenció més adequades a cada situació.",
+                        "g": "S'han descrit estratègies de mediació que propicien el consens entre els xiquets.",
+                        "h": "S'han descrit els instruments més adequats per al seguiment de la intervenció.",
+                        "i": "S'han descrit les pautes d'actuació correcta per part de l'educador o educadora davant els problemes de conducta i els conflictes en les relacions infantils.",
+                        "j": "S'ha valorat les limitacions dels xiquets i xiquetes per a modular i controlar la conducta."
                     }
                 },
                 "RA06": {
@@ -695,7 +794,7 @@
                     }
                 }
             },
-            "horas": "65",
+            "horas": "133",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1027_3": "Establir i mantenir relacions fluides amb la comunitat educativa i coordinació amb les famílies, el personal del centre educatiu i amb altres professionals."
             },
@@ -791,23 +890,27 @@
                         "d": "S'ha interpretat correctament la informació obtinguda.",
                         "e": "S'han identificat els aspectes que cal modificar en la intervenció.",
                         "f": "S'han proposat les mesures necessàries per a millorar la intervenció.",
-                        "g": "S'ha informat als membres de l'equip seguint els protocols establerts."
+                        "g": "S'ha informat als membres de l'equip seguint els protocols establerts.",
+                        "h": "S'han identificat situacions que requereixen la participació d'altres professionals i les pautes d'actuació a seguir.",
+                        "i": "S'ha informat a les famílies del progrés del xiquet o xiqueta de forma individualitzada i comprensible.",
+                        "j": "S'ha valorat la importància de destacar els aspectes positius de l'evolució del xiquet i la xiqueta en les informacions facilitades a la família."
                     }
                 },
                 "RA06": {
-                    "Resultado": "Avalua el procés i el resultat de les intervencions amb les famílies aplicant els instruments adequats i elaborant informes.",
+                    "Resultado": "Avalua el procés i el resultat de les intervencions amb famílies identificant les variables rellevant en el procés i justificant la seua elecció. Avalua el procés i el resultat de les intervencions amb famílies identificant les variables rellevant en el procés i justificant la seua elecció.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han dissenyat o seleccionat els instruments d'avaluació adequats.",
-                        "b": "S'han establert els indicadors d'avaluació.",
-                        "c": "S'han aplicat els instruments d'avaluació.",
-                        "d": "S'ha interpretat la informació obtinguda.",
-                        "e": "S'han identificat els aspectes que cal modificar.",
-                        "f": "S'han elaborat informes coherents.",
-                        "g": "S'ha valorat la importància de l'avaluació per a la millora de la intervenció."
+                        "a": "S'han seleccionat els indicadors d'avaluació.",
+                        "b": "S'han dissenyat o seleccionat instruments adequats per obtenir informació sobre: la situació familiar, les necessitats educatives de la família, les possibilitats i desitjos familiars de participació.",
+                        "c": "S'han aplicat correctament els instruments d'avaluació.",
+                        "d": "S'han recollit i interpretat correctament les dades.",
+                        "e": "S'han identificat les desviacions respecte al previst en la intervenció.",
+                        "f": "S'han proposat mesures de correcció en situacions problemàtiques.",
+                        "g": "S'ha valorat la necessitat de la participació de la família en l'avaluació de la intervenció.",
+                        "h": "S'ha valorat la importància de mantenir una actitud permanent de millora en l'eficàcia i qualitat del servei."
                     }
                 }
             },
-            "horas": "65",
+            "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -826,6 +929,7 @@
                 "d",
                 "e",
                 "g",
+                "i",
                 "j"
             ]
         },
@@ -1088,82 +1192,458 @@
                 "n"
             ]
         },
-        "0220": {
-            "nombre": "Formació en centres de treball",
-            "creditos": "22",
+        "0179": {
+            "nombre": "Anglès Professional (GS)",
+            "creditos": "4",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Identifica l'estructura i organització de l'empresa, relacionant-les amb el tipus de servei que presta.",
+                    "Resultado": "Comprèn informació, de índole professional, acadèmica i quotidiana, continguda en tot tipus de discursos orals, emesos per qualsevol mitjà de comunicació en llengua estàndard, interpretant amb precisió el contingut del missatge.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat l'estructura organitzativa de l'empresa i les funcions de cada àrea.",
-                        "b": "S'ha comparat l'estructura de l'empresa amb les organitzacions empresarials tipus del sector.",
-                        "c": "S'han relacionat les característiques del servei i el tipus de clients amb l'activitat empresarial.",
-                        "d": "S'han identificat els procediments de treball en el desenvolupament de la prestació de servei."
+                        "a": "S'ha identificat la idea principal de missatges en llengua estàndard relacionats amb la vida social, professional o acadèmica.",
+                        "b": "S'ha reconegut la finalitat de missatges directes o emesos en qualsevol suport en llengua estàndard.",
+                        "c": "S'ha extret informació específica continguda en diferents discursos orals en llengua estàndard, relacionada amb la vida social, professional o acadèmica.",
+                        "d": "S'ha identificat el punt de vista i l'actitud del parlant.",
+                        "e": "S'ha identificat el fil argumental de missatges orals i determinat els rols que apareixen en dits missatges.",
+                        "f": "S'han comprès adequadament missatges en llengua estàndard en ambients amb contaminació acústica.",
+                        "g": "S'han extret les idees principals de conferències, xerrades i informes, i altres formes de presentació acadèmica i professional, lingüísticament complexes.",
+                        "h": "S'ha pres consciència de la importància de comprendre globalment un missatge sense entendre tots i cadascun dels elements del mateix."
                     }
                 },
                 "RA02": {
-                    "Resultado": "Aplica hàbits ètics i laborals en el desenvolupament de la seua activitat professional.",
+                    "Resultado": "Comprèn missatges escrits, de naturalesa professional, acadèmica i quotidiana, de relativa dificultat, analitzant de forma comprensible el seu contingut.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han reconegut i justificat: la disponibilitat personal i temporal; les actituds personals i professionals; els requeriments actitudinals davant la prevenció de riscos; els requeriments actitudinals referits a la qualitat; les actituds relacionals amb l'equip de treball i la jerarquia; les actituds relacionades amb la documentació; les necessitats formatives per a la inserció laboral.",
-                        "b": "S'han identificat les normes de prevenció de riscos laborals aplicables.",
-                        "c": "S'han posat en marxa els equips de protecció individual.",
-                        "d": "S'ha mantingut una actitud de respecte al medi ambient.",
-                        "e": "S'ha mantingut organitzat, net i lliure d'obstacles el lloc de treball.",
-                        "f": "S'ha responsabilitzat del treball assignat interpretant i complint les instruccions rebudes.",
-                        "g": "S'ha establert una comunicació eficaç amb la persona responsable i els membres de l'equip.",
-                        "h": "S'ha coordinat amb la resta de l'equip, comunicant les incidències rellevants."
+                        "a": "S'ha identificat la idea principal de textos específics del seu àmbit social, professional o acadèmic.",
+                        "b": "S'ha reconegut la finalitat de diferents textos escrits en qualsevol suport, en llengua estàndard i relacionats amb l'activitat professional.",
+                        "c": "S'ha extret informació específica de textos, de diferent naturalesa, relatius a la seua professió, i continguts en diferents suports.",
+                        "d": "S'ha pres consciència de la importància de comprendre globalment un text sense entendre tots i cadascun dels elements del mateix.",
+                        "e": "S'han llegit i comprès, de manera autònoma, textos relacionats amb el sector amb la velocitat i estil de lectura pròpia del nivell competencial.",
+                        "f": "S'ha interpretat la correspondència relativa a la seua especialitat, captant fàcilment el significat essencial.",
+                        "g": "S'han interpretat textos extensos, i d'una certa complexitat, relacionats o no amb la seua especialitat, podent realitzar diverses lectures del mateix.",
+                        "h": "S'ha identificat amb rapidesa el contingut i la importància de notícies, articles i informes sobre una ampla sèrie de temes professionals.",
+                        "i": "S'han interpretat instruccions, amb diferents nivells de dificultat, i missatges tècnics rebuts a través de suports digitals.",
+                        "j": "S'han traduït textos d'una certa complexitat, utilitzant material de suport en cas necessari."
                     }
                 },
                 "RA03": {
-                    "Resultado": "Programa activitats educatives per a infants de 0 a 6 anys.",
+                    "Resultado": "Produeix missatges orals clars i ben estructurats, analitzant el contingut de la situació i adaptant-se al registre lingüístic de l'interlocutor.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat les característiques del context i dels xiquets i xiquetes.",
-                        "b": "S'han formulat els objectius de la intervenció.",
-                        "c": "S'han seleccionat els continguts d'acord amb els objectius i les característiques del grup.",
-                        "d": "S'han proposat les activitats adequades.",
-                        "e": "S'han seleccionat els recursos i materials necessaris.",
-                        "f": "S'han previst els espais i temps necessaris.",
-                        "g": "S'han establert criteris i procediments d'avaluació."
+                        "a": "S'han emés missatges generals propis del sector i de la vida quotidiana, utilitzant nexes i estratègies d'interacció.",
+                        "b": "S'ha intercanviat amb fluïdesa informació específica i detallada utilitzant estructures d'una complexitat acord al nivell competencial.",
+                        "c": "S'han seleccionat i aplicat els registres adequats per a l'emissió del missatge, així com protocols i normes de relació social propis del país.",
+                        "d": "S'han realitzat presentacions, ben estructurades, sobre temes del seu àmbit professional, fent ús dels protocols establerts.",
+                        "e": "S'ha utilitzat correctament la terminologia de la professió.",
+                        "f": "S'ha descrit i seqüenciat oralment un procés de treball de la seua competència.",
+                        "g": "S'ha sol·licitat la reformulació del discurs o part del mateix quan s'ha considerat necessari.",
+                        "h": "S'ha interaccionat espontàniament, adoptant un nivell de formalitat adequat a les circumstàncies.",
+                        "i": "S'ha expressat amb fluïdesa, precisió i eficàcia sobre una ampla sèrie de temes generals, acadèmics, professionals o d'oci, marcant amb claredat la relació entre les idees.",
+                        "j": "S'han expressat i defensat punts de vista amb claredat, proporcionant explicacions i arguments adequats.",
+                        "k": "S'ha respost a preguntes relatives a la seua vida socio-professional, incloses les pròpies d'una entrevista de treball."
                     }
                 },
                 "RA04": {
-                    "Resultado": "Organitza els recursos i l'ambient per al desenvolupament de l'activitat educativa.",
+                    "Resultado": "Redacta documents i informes, propis del sector o de la vida acadèmica i quotidiana, relacionant els recursos lingüístics amb el propòsit dels mateixos.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat els criteris per a l'organització de l'espai segons l'activitat.",
-                        "b": "S'han organitzat els espais d'acord amb els criteris establerts.",
-                        "c": "S'han seleccionat els recursos adequats a l'activitat.",
-                        "d": "S'han distribuït els materials segons els criteris establerts.",
-                        "e": "S'ha valorat la importància de generar un ambient estimulant i acollidor."
+                        "a": "S'han escrit textos clars i detallats sobre una varietat de temes relacionats amb la seua professió, sintetitzant i avaluant informació i arguments procedents de diverses fonts.",
+                        "b": "S'ha complert documentació específica del seu camp professional, utilitzant vocabulari específic i protocols i normes de relació social propis del país.",
+                        "c": "S'ha organitzat la informació amb correcció, precisió, amb cohesió i coherència, sol·licitant i/o facilitant informació de tipus general o detallada.",
+                        "d": "S'han complert textos mitjançant suports visuals i claus lingüístiques.",
+                        "e": "S'han elaborat informes, destacant els aspectes significatius i oferint detalls rellevants que servisquen de suport.",
+                        "f": "S'han escrit cartes, formals i informals, emprant les fórmules de cortesia establertes i el vocabulari específic per a l'elaboració de les mateixes.",
+                        "g": "S'han resumit diferents tipus de documents escrits, utilitzant els seus propis recursos lingüístics.",
+                        "h": "S'han utilitzat les fórmules de cortesia pròpies del document que es va a elaborar."
                     }
                 },
                 "RA05": {
-                    "Resultado": "Realitza activitats d'intervenció educativa amb xiquets i xiquetes de 0 a 6 anys.",
+                    "Resultado": "Aplica actituds i comportaments professionals en situacions de comunicació, descrivint les relacions típiques característiques del país de la llengua estrangera.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han aplicat les estratègies metodològiques adequades.",
-                        "b": "S'han emprat els recursos adequats a l'activitat.",
-                        "c": "S'ha adaptat la intervenció a les característiques individuals.",
-                        "d": "S'ha creat un clima de seguretat afectiva.",
-                        "e": "S'ha respost adequadament davant les contingències.",
-                        "f": "S'han mostrat actituds de respecte i afecte cap als xiquets i xiquetes.",
-                        "g": "S'ha potenciat l'autonomia dels xiquets i xiquetes."
-                    }
-                },
-                "RA06": {
-                    "Resultado": "Avalua el procés i el resultat de la intervenció educativa.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han seleccionat els indicadors d'avaluació.",
-                        "b": "S'han aplicat instruments d'avaluació.",
-                        "c": "S'han interpretat les dades obtingudes.",
-                        "d": "S'han identificat els aspectes que cal millorar.",
-                        "e": "S'han proposat mesures per a millorar la intervenció.",
-                        "f": "S'ha valorat la importància de l'avaluació per a la millora de la pràctica educativa."
+                        "a": "S'han definit els trets més significatius de les costums i usos de la comunitat on es parla la llengua estrangera.",
+                        "b": "S'han descrit els protocols i normes de relació social propis del país.",
+                        "c": "S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+                        "d": "S'ha identificat els aspectes socio-professionals propis del sector, en qualsevol tipus de text.",
+                        "e": "S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera.",
+                        "f": "S'han reconegut els marcadors lingüístics de la procedència regional."
                     }
                 }
             },
-            "horas": "220",
+            "horas": "68",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales": [],
-            "CompetenciasTitulo": []
+            "ObjetivosGenerales ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "1709": {
+            "nombre": "Itinerari personal per a l'ocupabilitat I",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Assoleix les competències necessàries per a l'obtenció del Títol de tècnic bàsic en Prevenció de Riscos Laborals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la cultura preventiva en tots els àmbits activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats dels mateixos, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+                        "b": "S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
+                        "c": "S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per a evitar els danys en el seu origen i minimitzar les seues conseqüències.",
+                        "d": "S'han analitzat els protocols d'actuació en cas d'emergència.",
+                        "e": "S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
+                        "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+                        "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
+                        "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
+                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Distingeix les característiques del sector productiu i defineix els llocs de treball relacionant-los amb les competències professionals expressades en el títol",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
+                        "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper.",
+                        "d": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Analitza les seues condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de contractes, canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+                        "b": "S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
+                        "c": "S'han identificat les característiques definidores dels nous entorns d'organització del treball i els drets que conlevan.",
+                        "d": "S'han identificat els diferents components del rebut de salari.",
+                        "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
+                        "f": "S'ha valorat el paper de laSeguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
+                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'auto orientació i elabora una fulla de ruta per a la inserció professional en base a l'anàlisi de les competències, interessos i destreses personals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+                        "b": "S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
+                        "c": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+                        "d": "S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
+                        "e": "S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
+                        "f": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
+                        "g": "S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+                        "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
+                        "i": "S'han identificat els itineraris formats professionals relacionats amb el perfil professional.",
+                        "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
+                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació.",
+                        "l": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+                        "b": "S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
+                        "c": "S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "d": "S'ha posat en pràctica la competència digital per a configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "e": "S'ha analitzat el concepte d'identitat digital i el seu impacte en l'ocupabilitat.",
+                        "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
+                        "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
+                        "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
+                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Identifica el concepte de salut psicosocial derivada del rendiment professional, identificant i avaluant els factors de risc associats a la mateixa, i aplicant mesures correctives:",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat i valorat el concepte de salut psicosocial com a factor determinant del benestar mental de l'individu i dels entorns laborals saludables.",
+                        "b": "S'ha analitzat la salut mental com a desencadenant de siniestralitat i absentisme laboral, així com la seua evolució en els diferents col·lectius de treballadors, especialment en els grups de població jove.",
+                        "c": "S'ha après a reconèixer i identificar els factors de risc psicosocial en l'àmbit laboral.",
+                        "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
+                        "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com a les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
+                        "f": "S'han activat les estratègies d'afrontament personal davant els estressors derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
+                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten l'adequada resposta a les situacions de conflicte en l'àmbit laboral.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "t",
+                "u",
+                "v",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "t",
+                "u",
+                "v",
+                "w",
+                "y"
+            ]
+        },
+        "1710": {
+            "nombre": "Itinerari personal per a l'ocupabilitat II",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seues possibilitats d'inserció laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
+                        "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
+                        "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
+                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i el seu aporte de valor.",
+                        "e": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació en cerca de la millora de la seua ocupabilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
+                        "b": "S'ha participat activament en l'establiment dels objectius de l'equip i en la presa de decisions del mateix i assumit la responsabilitat de les accions i decisions del grup, participant activament en el compliment d'uns objectius compartits cooperant amb altres persones i compartint el lideratge.",
+                        "c": "S'han incorporat al propi procés d'aprenentatge les tècniques i recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva sent capaç d'adaptar-los a cada situació i circumstàncies, valorant les oportunitats i dificultats que ofereix cadascuna d'elles.",
+                        "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
+                        "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
+                        "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
+                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu cap a un model sostenible.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb la construcció d'una societat més sostenible que millore en el benestar dels individus.",
+                        "b": "S'han analitzat les diferents metodologies per a emprendre i la seua importància per a afavorir la innovació i com a font de creació d'ocupació i benestar social.",
+                        "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
+                        "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
+                        "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
+                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible.",
+                        "g": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socio productiu utilitzant metodologies àgils per a l'emprenedoria.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixen en oportunitats.",
+                        "b": "S'ha posat en pràctica el procés creatiu amb la finalitat de conseguir una idea emprenedora que aporte valor econòmic, social i/o cultural.",
+                        "c": "S'ha dissenyat un model de negoci i/o gestió derivat de la idea emprenedora.",
+                        "d": "S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
+                        "e": "S'ha analitzat la contribució de l'Economia Circular i l'Economia del Bé Comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
+                        "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
+                        "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
+                        "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
+                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per a desenvolupar destreses en tècniques de comunicació i venda.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte emprenedor d'innovació social i/o tecnològica aplicada en col·laboració amb l'entorn.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
+                        "b": "S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
+                        "c": "S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
+                        "d": "S'han posat en marxa les estratègies pròpies del pensament de disseny per a detectar necessitats socials i mediambientals.",
+                        "e": "S'han analitzat els elements del disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
+                        "h": "S'han investigat les opcions financeres socialment responsables.",
+                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza la rendibilitat de la proposta emprenedora valorant inversió, costos i beneficis i dissenya una estratègia per a la posada en marxa de la mateixa tenint en compte obligacions administratives, fiscals i comptables.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
+                        "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
+                        "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
+                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora.",
+                        "e": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "w",
+                "x",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "v",
+                "w",
+                "x",
+                "y"
+            ]
+        },
+        "CVOPS190": {
+            "nombre": "Introducció al Núvol Públic",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Comprèn els fonaments de la computació en el núvol, els seus avantatges davant sistemes tradicionals, el marc d'adopció, els principis de migració i els aspectes clau de facturació, com estimació i optimització de costos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha comprès els conceptes fonamentals de la computació en el núvol.",
+                        "b": "S'ha demostrat la capacitat per a explicar els avantatges del núvol davant sistemes tradicionals",
+                        "c": "S'ha participat en activitats relacionades amb l'ecosistema de serveis en el núvol.",
+                        "d": "S'han identificat els principis bàsics de la facturació i costos en el núvol.",
+                        "e": "S'ha fet ús correcte d'eines per a estimar i gestionar pressupostos.",
+                        "f": "S'ha participat en activitats pràctiques sobre gestió de costos."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Identifica els components clau de la infraestructura global del núvol, diferenciant serveis principals, regions, zones de disponibilitat i aplicant mesures bàsiques de seguretat com el model de responsabilitat compartida, gestió d'accés i protecció de dades",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha adquirit coneixement dels components d'una infraestructura global en el núvol.",
+                        "b": "S'ha demostrat la capacitat per a explorar i descriure les principals categories de serveis disponibles",
+                        "c": "S'ha realitzat una avaluació de l'ús adequat de serveis bàsics en exercicis pràctics.",
+                        "d": "S'ha comprès el model de responsabilitat compartida en el núvol.",
+                        "e": "S'ha aplicat mesures de seguretat bàsiques mitjançant eines de gestió d'accés.",
+                        "f": "S'han realitzat exercicis sobre gestió d'usuaris i polítiques de seguretat."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Dissena i configura xarxes virtuals i serveis de còmput en el núvol, aplicant bones pràctiques de seguretat, estratègies de balanç de càrrega, escalat automàtic i aprofitant tecnologies serverless, contenidors i màquines virtuals segons casos d'ús específics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha realitzat el disseny i configuració de xarxes virtuals privades.",
+                        "b": "S'ha aplicat bones pràctiques de seguretat en xarxes i arquitectures.",
+                        "c": "S'ha participat activament en la creació i configuració d'una xarxa funcional.",
+                        "d": "S'ha realitzat la selecció de serveis de computació adequats segons casos d'ús.",
+                        "e": "S'ha dut a terme la configuració i gestió de balanç de càrrega i escalat automàtic.",
+                        "f": "S'han desenvolupat pràctiques relacionades amb l'optimització de recursos computacionals."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Gestiona serveis d'emmagatzematge i bases de dades en el núvol, seleccionant tecnologies adequades per a casos específics, i dissenya arquitectures escalables i resilients utilitzant eines de monitoratge i optimització per a millorar el rendiment.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha realitzat la diferenciació entre tecnologies d'emmagatzematge en el núvol.",
+                        "b": "S'ha dut a terme la configuració i gestió de bases de dades en un entorn de núvol.",
+                        "c": "S'ha treballat en la resolució de problemes pràctics sobre emmagatzematge i bases de dades",
+                        "d": "S'ha dissenyat arquitectures escalables i resilients basades en les millors pràctiques.",
+                        "e": "S'ha fet ús d'eines de monitoratge i recomanacions d'optimització.",
+                        "f": "S'ha participat en activitats que simulen l'anàlisi i millora d'arquitectures existents."
+                    }
+                }
+            },
+            "horas": "100"
+        },
+        "MOPANGPROF": {
+            "nombre": "Anglés oral en entorns professionals",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        },
+        "MOPCOMPROF": {
+            "nombre": "Comunicació professional",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        },
+        "PI": {
+            "nombre": "Projecte intermodular",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         }
     }
 }

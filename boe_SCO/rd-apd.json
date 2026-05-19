@@ -14,7 +14,7 @@
         "l": "Aplicar tècniques i estratègies per al manteniment i desenvolupament de les habilitats d'autonomia personal i social de les persones en situació de dependència, emprant ajudes tècniques i de comunicació conforme a les pautes marcades en el pla d'atenció individual.",
         "m": "Realitzar tasques d'acompanyament i assistència personal, respectant les directrius del Pla Individual de Vida Independent i les decisions de la persona usuària.",
         "n": "Assessorar a la persona en situació de dependència, als familiars i cuidadors no formals, proporcionant-los pautes d'actuació en la cura i l'atenció assistencial i psicosocial, i adequant la comunicació i les actituds a les característiques de la persona interlocutora.",
-        "ny": "Resoldre les contingençes amb iniciativa i autonomia, mostrant una actitud autocrítica i buscant alternatives per afavorir el benestar de les persones en situació de dependència.",
+        "ñ": "Resoldre les contingençes amb iniciativa i autonomia, mostrant una actitud autocrítica i buscant alternatives per afavorir el benestar de les persones en situació de dependència.",
         "o": "Col·laborar en el control i seguiment de les activitats assistencials, psicosocials i de gestió domiciliària, complimentant els registres oportuns, manejant les aplicacions informàtiques del servei i comunicant les incidències detectades.",
         "p": "Gestionar les trucades entrants i sortints del servei de teleassistència, rebent-les i emetent-les segons els protocols establerts i utilitzant aplicacions informàtiques i eines telemàtiques.",
         "q": "Adaptar-se a les noves situacions laborals originades per canvis tecnològics i organitzatius en els processos productius, actualitzant els seus coneixements, utilitzant els recursos existents per a l'aprenentatge al llarg de la vida i les tecnologies de la informació i la comunicació.",
@@ -41,7 +41,7 @@
         "l",
         "m",
         "n",
-        "ny",
+        "ñ",
         "o",
         "p"
     ],
@@ -70,7 +70,7 @@
         "l": 2,
         "m": 2,
         "n": 1,
-        "ny": 3,
+        "ñ": 3,
         "o": 2,
         "p": 1,
         "q": 1,
@@ -127,7 +127,7 @@
         "l": "Analitzar estratègies psicològiques, rehabilitadores, ocupacionals i de comunicació, adequant-les a circumstàncies específiques de la persona en situació de dependència, per realitzar intervencions de suport psicosocial acordes amb les directrius del pla d'atenció individualitzat.",
         "m": "Identificar sistemes de suport a la comunicació, relacionant-los amb les característiques de la persona, per al desenvolupament i manteniment d'habilitats d'autonomia personal i social.",
         "n": "Seleccionar ajudes tècniques i de comunicació, relacionant-les amb les possibilitats i característiques de la persona en situació de dependència, per afavorir les habilitats d'autonomia personal i social i les possibilitats de vida independent.",
-        "ny": "Identificar els principis de vida independent, relacionant-los amb les característiques de la persona i del context, per promoure la seua autonomia i participació social.",
+        "ñ": "Identificar els principis de vida independent, relacionant-los amb les característiques de la persona i del context, per promoure la seua autonomia i participació social.",
         "o": "Analitzar els elements crítics del Pla Individual de Vida Independent, relacionant-lo amb les decisions de cada persona per realitzar les tasques d'acompanyament i assistència personal.",
         "p": "Seleccionar estils de comunicació i actituds, relacionant-les amb les característiques de l'interlocutor, per assessorar a les persones en situació de dependència, famílies i cuidadors no formals.",
         "q": "Identificar els protocols d'actuació, relacionant-los amb les contingençes, per resoldre-les amb seguretat i eficàcia.",
@@ -154,7 +154,11 @@
                         "a": "S'han comparat les normatives en matèria d'atenció a les persones en situació de dependència en l'àmbit europeu, estatal, autònom i local.",
                         "b": "S'han descrit els diferents models i serveis d'atenció a les persones en situació de dependència.",
                         "c": "S'han identificat els requisits i les característiques organitzatives i funcionals que han de reunir els serveis d'atenció a les persones en situació de dependència.",
-                        "d": "S'han descrit les estructures organitzatives i les relacions funcionals tipus dels equipaments residencials dirigits a persones en situació de dependència."
+                        "d": "S'han descrit les estructures organitzatives i les relacions funcionals tipus dels equipaments residencials dirigits a persones en situació de dependència.",
+                        "e": "S'han descrit les funcions, nivells i procediments de coordinació dels equips interdisciplinaris dels serveis d’atenció a persones en situació de dependència.",
+                        "f": "S'han identificat els recursos humans necessaris per garantir l’atenció integral de les persones en situació dependència.",
+                        "g": "S'han identificat les funcions del TAPSD amb l’equip interdisciplinari de les institucions i serveis per a l'atenció a persones en situació de dependència.",
+                        "h": "S'ha argumentat la importància d'un equip interdisciplinari en la atenció a persones en situació de dependència."
                     }
                 },
                 "RA02": {
@@ -163,7 +167,11 @@
                         "a": "S'han descrit les estratègies d'intervenció per al desenvolupament de les activitats d'atenció a les persones en situació de dependència.",
                         "b": "S'han interpretat correctament les directrius, criteris i estratègies establerts en un pla d'atenció individualitzat.",
                         "c": "S'han determinat les intervencions que s'han de realitzar per a l'atenció a les persones en situació de dependència a partir dels protocols d'actuació de la institució corresponent.",
-                        "d": "S'han seleccionat estratègies per a l'atenció a les persones en situació de dependència a partir de les seues característiques i del pla d'atenció individualitzat."
+                        "d": "S'han seleccionat estratègies per a l'atenció a les persones en situació de dependència a partir de les seues característiques i del pla d'atenció individualitzat.",
+                        "e": "S'han seleccionat mètodes de treball, adaptant-los als recursos disponibles i a les especificacions del Pla de treball o d’Atenció individualitzat.",
+                        "f": "S'han temporalitzat les activitats i tasques.",
+                        "g": "S'han descrit els principis metodològics i pautes d’actuació del Tècnic/a en tasques de suport per a la vida independent.",
+                        "h": "S'ha argumentat la importància de respectar els principis de promoció de la vida independent i les decisions de les persones usuàries."
                     }
                 },
                 "RA03": {
@@ -172,7 +180,11 @@
                         "a": "S'han identificat els factors de l'entorn que afavoreixen o inhibeixen l'autonomia de les persones en la seua vida quotidiana.",
                         "b": "S'ha reconegut el mobiliari i els instruments de treball propis de cada context d'intervenció.",
                         "c": "S'ha condicionat l'entorn per afavorir la mobilitat i els desplaçaments de les persones en situació de dependència, així com el seu ús i utilitat.",
-                        "d": "S'ha identificat la normativa legal vigent en matèria de prevenció i seguretat per organitzar els recursos."
+                        "d": "S'ha identificat la normativa legal vigent en matèria de prevenció i seguretat per organitzar els recursos.",
+                        "e": "S'han aplicat els criteris que es deuen seguir per a l’organització dels espais, equipaments i materials per afavorir l'autonomia de la persona.",
+                        "f": "S'han identificat els suports tècnics necessaris per afavorir l' autonomia i comunicació de la persona.",
+                        "g": "S'han descrit els recursos existents en el context per optimitzar la intervenció.",
+                        "h": "S'ha argumentat la importància d’informar a les persones en situació de dependència i a les seues famílies o cuidadors no formals al voltant de les activitats programades, per afavorir la seua participació."
                     }
                 },
                 "RA04": {
@@ -181,11 +193,15 @@
                         "a": "S'han identificat els elements que ha de recollir la documentació bàsica de la persona usuària.",
                         "b": "S'han aplicat protocols de recollida de la informació precisa per conèixer els canvis de les persones en situació de dependència i el seu grau de satisfacció.",
                         "c": "S'ha justificat la utilitat i la importància de documentar per escrit la intervenció realitzada.",
-                        "d": "S'han identificat els canals de comunicació de les incidències detectades."
+                        "d": "S'han identificat els canals de comunicació de les incidències detectades.",
+                        "e": "S'ha integrat tota la documentació, organitzant-la i actualitzant-la, per a confeccionar un expedient individual.",
+                        "f": "S'han aplicat criteris d’actuació que garanteixen la protecció de dades de les persones usuàries.",
+                        "g": "S'han utilitzat equips i aplicacions informàtiques per a la gestió de la documentació i expedients",
+                        "h": "S'ha valorat la importància de respectar la confidencialitat de la informació"
                     }
                 }
             },
-            "horas": "70",
+            "horas": "133",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari."
             },
@@ -208,7 +224,7 @@
                 "i",
                 "m",
                 "n",
-                "f",
+                "ñ",
                 "o",
                 "r",
                 "t",
@@ -225,7 +241,11 @@
                         "a": "S'han descrit els principis de la intel·ligència emocional i social.",
                         "b": "S'ha valorat la importància de les habilitats socials i comunicatives en el desenvolupament de la labor professional i en les relacions interpersonals.",
                         "c": "S'han identificat els diferents estils de comunicació, els seus avantatges i limitacions.",
-                        "d": "S'han identificat les principals barreres i interferències que dificulten la comunicació."
+                        "d": "S'han identificat les principals barreres i interferències que dificulten la comunicació.",
+                        "e": "S'ha establert una comunicació eficaç per rebre instruccions i intercanviar idees o informació.",
+                        "f": "S'han utilitzat les habilitats socials adequades a la situació.",
+                        "g": "S'ha demostrat interès per no jutjar les persones i respectar-ne els elements diferenciadors personals: emocions, sentiments i personalitat.",
+                        "h": "S'ha demostrat una actitud positiva envers el canvi i l'aprenentatge."
                     }
                 },
                 "RA02": {
@@ -234,7 +254,11 @@
                         "a": "S'han descrit els elements fonamentals d'un grup i els factors que poden modificar la seua dinàmica.",
                         "b": "S'han analitzat i seleccionat les diferents tècniques de dinamització i funcionament de grups.",
                         "c": "S'han explicat els avantatges del treball en equip front a l'individual.",
-                        "d": "S'han diferenciat els diversos rols i la tipologia dels integrants d'un grup."
+                        "d": "S'han diferenciat els diversos rols i la tipologia dels integrants d'un grup.",
+                        "e": "S'han respectat les diferències individuals a la feina en grup.",
+                        "f": "S'han identificat les barreres principals de comunicació grupal.",
+                        "g": "S'ha definit el repartiment de tasques com a procediment per al treball en grup.",
+                        "h": "S'ha col·laborat en la creació d'un ambient de treball relaxat i cooperatiu."
                     }
                 },
                 "RA03": {
@@ -243,7 +267,11 @@
                         "a": "S'han analitzat les fonts de l'origen dels problemes i conflictes.",
                         "b": "S'han relacionat els recursos tècnics utilitzats amb els tipus de problemes estàndard.",
                         "c": "S'ha presentat, ordenada i clarament, el procés seguit i els resultats obtinguts en la resolució d'un problema.",
-                        "d": "S'han planificat les tasques que s'han de realitzar amb previsió de les dificultats i la manera de superar-les."
+                        "d": "S'han planificat les tasques que s'han de realitzar amb previsió de les dificultats i la manera de superar-les.",
+                        "e": "S'han respectat les opinions dels altres sobre les possibles vies de solució de problemes.",
+                        "f": "S'ha definit el concepte i els elements de la negociació a la resolució de conflictes.",
+                        "g": "S'han identificat els possibles comportaments en una situació de negociació i l'eficàcia dels mateixos",
+                        "h": "S'ha discriminat entre dades i opinions."
                     }
                 },
                 "RA04": {
@@ -252,13 +280,16 @@
                         "a": "S'han identificat els indicadors d'avaluació de la competència social.",
                         "b": "S'ha registrat la situació personal i social de partida del professional.",
                         "c": "S'han registrat les dades en suports establerts.",
-                        "d": "S'han interpretat les dades recollides."
+                        "d": "S'han interpretat les dades recollides.",
+                        "e": "S'han identificat les actuacions realitzades que cal millorar",
+                        "f": "S'han marcat les pautes que cal seguir en la millora",
+                        "g": "S'ha fet la valoració final del procés."
                     }
                 }
             },
             "horas": "166",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "p",
                 "q",
                 "s",
@@ -268,7 +299,7 @@
             ],
             "CompetenciasTitulo": [
                 "n",
-                "ny",
+                "ñ",
                 "p",
                 "r",
                 "t",
@@ -285,7 +316,11 @@
                         "a": "S'han descrit els processos bàsics associats a la promoció de l'autonomia personal i la vida independent.",
                         "b": "S'han caracteritzat les habilitats d'autonomia personal.",
                         "c": "S'han identificat els factors que afavoreixen o inhibeixen el manteniment de l'autonomia personal i la vida independent.",
-                        "d": "S'han descrit les principals alteracions emocionals i conductuals associades a la pèrdua d'autonomia personal."
+                        "d": "S'han descrit les principals alteracions emocionals i conductuals associades a la pèrdua d'autonomia personal.",
+                        "e": "S'han identificat els indicadors generals de la pèrdua d'autonomia.",
+                        "f": "S'ha justificat la necessitat de respectar la capacitat d'elecció de la persona en situació de dependència.",
+                        "g": "S'ha argumentat la importància de la prevenció per a retardar les situacions de dependència.",
+                        "h": "S'ha valorat la importància de la família i de l'entorn del subjecte en el manteniment de la seua autonomia personal i el seu benestar físic i psicosocial."
                     }
                 },
                 "RA02": {
@@ -294,7 +329,11 @@
                         "a": "S'han relacionat els canvis biològics, psicològics i socials propis de l'envelliment amb les dificultats que impliquen en la vida diària de la persona.",
                         "b": "S'han identificat les patologies més freqüents en la persona major.",
                         "c": "S'han descrit les principals característiques i necessitats de les persones majors.",
-                        "d": "S'han identificat les principals manifestacions de deteriorament personal i social propi de les persones majors."
+                        "d": "S'han identificat les principals manifestacions de deteriorament personal i social propi de les persones majors.",
+                        "e": "S'han relacionat els nivells de deterioració física, psicològic i social amb els graus de dependència i el tipus de suport requerit",
+                        "f": "S'han descrit les conductes característiques de les persones majors durant el període d'adaptació al servei d'atenció a la dependència i al professional de referència",
+                        "g": "S'han identificat les necessitats d'orientació i suport dels cuidadors familiars i no professional de la persona major",
+                        "h": "S'ha valorat la importància de respectar les decisions i interessos de les persones majors."
                     }
                 },
                 "RA03": {
@@ -303,7 +342,11 @@
                         "a": "S'ha relacionat l'evolució del concepte de discapacitat amb els canvis socials, culturals, econòmics i científic-tecnològics.",
                         "b": "S'han relacionat els diferents tipus de discapacitat amb les dificultats que impliquen en la vida quotidiana de les persones.",
                         "c": "S'han descrit les principals necessitats psicològiques i socials de les persones amb discapacitat.",
-                        "d": "S'han relacionat diferents tipologies i nivells de discapacitat amb el grau de dependència i tipus de suport necessitat."
+                        "d": "S'han relacionat diferents tipologies i nivells de discapacitat amb el grau de dependència i tipus de suport necessitat.",
+                        "e": "S'han identificat els principis de la vida independent.",
+                        "f": "S'han descrit les necessitats d'orientació i suport als cuidadors no professionals de la persona amb discapacitat.",
+                        "g": "S'ha argumentat la importància de l'eliminació de barreres físiques per a afavorir l'autonomia de les persones amb discapacitat física o sensorial.",
+                        "h": "S'ha argumentat la importància de respectar les decisions i interessos de les persones amb discapacitat."
                     }
                 },
                 "RA04": {
@@ -312,11 +355,15 @@
                         "a": "S'han caracteritzat les malalties agudes, cròniques i terminals per la seua influència en l'autonomia personal de la persona malalta.",
                         "b": "S'han identificat les principals característiques i necessitats psicològiques i socials dels pacients amb malalties generadores de dependència.",
                         "c": "S'han definit les principals característiques de les malalties mentals més freqüents.",
-                        "d": "S'ha descrit la influència de les malalties mentals en l'autonomia personal i social de les persones que les pateixen."
+                        "d": "S'ha descrit la influència de les malalties mentals en l'autonomia personal i social de les persones que les pateixen.",
+                        "e": "S'han identificat les necessitats de suport assistencial i psicosocial de les persones malaltes en funció de la tipologia de malalties que pateixen.",
+                        "f": "S'han descrit les principals pautes d'atenció a les necessitats psicològiques i socials de les persones malaltes.",
+                        "g": "S'han descrit les necessitats d'orientació i suport als cuidadors no professionals de la persona malalta.",
+                        "h": "S'ha sensibilitzat sobre la influència de la malaltia en la conducta de la persona malalta."
                     }
                 }
             },
-            "horas": "85",
+            "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales ": [
                 "a",
@@ -388,7 +435,7 @@
                 "l",
                 "m",
                 "n",
-                "ny",
+                "ñ",
                 "o",
                 "p",
                 "q",
@@ -406,7 +453,7 @@
                 "l",
                 "m",
                 "n",
-                "ny",
+                "ñ",
                 "o",
                 "r",
                 "s",
@@ -424,7 +471,10 @@
                         "a": "S'ha argumentat la influència de la comunicació en el desenvolupament diari de les persones.",
                         "b": "S'han definit els conceptes de comunicació alternativa i augmentativa.",
                         "c": "S'han descrit les característiques dels principals sistemes alternatius i augmentatius de comunicació.",
-                        "d": "S'han identificat els principals factors que dificulten o afavoreixen la comunicació amb la persona en situació de dependència."
+                        "d": "S'han identificat els principals factors que dificulten o afavoreixen la comunicació amb la persona en situació de dependència.",
+                        "e": "S'han interpretat les informacions, sobre el suport a la comunicació, rebudes en el pla/projecte d'atenció individualitzat.",
+                        "f": "S'han seleccionat tècniques per afavorir la implicació familiar i de l'entorn social en la comunicació amb la persona usuària.",
+                        "g": "S'ha justificat la necessitat d'adoptar mesures de prevenció i seguretat en l'ús de sistemes alternatius de comunicació."
                     }
                 },
                 "RA02": {
@@ -433,11 +483,34 @@
                         "a": "S'han descrit les característiques i utilitzacions bàsiques dels principals sistemes alternatius de comunicació amb ajuda.",
                         "b": "S'han creat missatges senzills amb els diferents sistemes de comunicació amb ajuda, facilitant la comunicació i atenció a la persona usuària.",
                         "c": "S'han descrit altres sistemes i elements facilitadors de la comunicació amb ajuda.",
-                        "d": "S'han comprès missatges expressats mitjançant sistemes de comunicació amb ajuda."
+                        "d": "S'han comprès missatges expressats mitjançant sistemes de comunicació amb ajuda.",
+                        "e": "S'ha justificat la importància de l'ús de les tecnologies de l'informació i la comunicació en les activitats de suport a la comunicació."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Realitza activitats se suport a la comunicació, descrivint sistemes alternatius i augmentatius de comunicaciò sense ajuda.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han descrit estructures bàsiques dels sistemes alternatius sense ajuda.",
+                        "b": "S'han descrit els principals signes utilitzats en situacions habituals d'atenció a persones en situació de dependència.",
+                        "c": "S'han creat missatges senzills amb els diferents sistemes de comunicació sense ajuda, facilitant la comunicació i l'atenció a la persona en situació de dependència.",
+                        "d": "S'han aplicat els ajustos necessaris en funció de les característiques particulars de les persones en situació de dependència.",
+                        "e": "S'han descrit altres sistemes i elements facilitadors de la comunicació sense ajuda.",
+                        "f": "S'han comprès missatges expressats mitjançant sistemes de comunicació sense ajuda.",
+                        "g": "S'ha justificat la necessitat d'adoptar mesures de prevenció i seguretat en l'ús de sistemes alternatius de comunicació."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza el seguiment de les actuacions de suport a la comunicació complimentant els protocols de registre establerts.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han complimentat els protocols de registre com mitjà d'avaluació de la competència comunicativa de la persona usuària.",
+                        "b": "S'ha argumentat la importància de transmetre la informació registrada a l'equip interdisciplinari.",
+                        "c": "S'han establert criteris per verificar el grau de compliment de las instruccions de suport a la comunicació en l'àmbit familiar.",
+                        "d": "S'ha comprovat la correcta utilització dels elements que composen el sistema de comunicació elegit.",
+                        "e": "S'han identificat protocols de transmissió a l'equip sobre l'adequació del sistema de comunicació elegit."
                     }
                 }
             },
-            "horas": "45",
+            "horas": "133",
             "UnidadesCompetenciaAcreditadas": {
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
@@ -729,7 +802,11 @@
                         "a": "S'han descrit les característiques, funcions i estructura del servei de teleassistència.",
                         "b": "S'ha organitzat l'espai físic de la persona operadora amb criteris de neteja, ordre i prevenció de riscos.",
                         "c": "S'han descrit les normes d'higiene, ergonomia i comunicació que prevenen riscos sobre la salut de cada professional.",
-                        "d": "S'ha argumentat la necessitat de seguir els protocols establerts per optimitzar la qualitat del servei en els diferents torns."
+                        "d": "S'ha argumentat la necessitat de seguir els protocols establerts per optimitzar la qualitat del servei en els diferents torns.",
+                        "e": "S'han utilitzat aplicacions informàtiques i ferramentes telemàtiques pròpies del servici de teleassistència.",
+                        "f": "S'han comprovat els terminals i dispositius auxiliars dels servicis de teleassistència.",
+                        "g": "S'han descrit les contingències més habituals en l'ús de les ferramentes telemàtiques.",
+                        "h": "S'ha justificat la importància de garantir la confidencialitat de la informació i el dret a la intimitat de les persones."
                     }
                 },
                 "RA02": {
@@ -738,11 +815,41 @@
                         "a": "S'ha accedit a l'aplicació informàtica mitjançant la contrasenya assignada.",
                         "b": "S'han seleccionat en l'aplicació informàtica les agendes que s'han de realitzar durant el torn de treball.",
                         "c": "S'han programat les trucades en funció del número, tipus i prioritat establerta en el protocol.",
-                        "d": "S'ha seleccionat correctament la trucada d'agenda en l'aplicació informàtica."
+                        "d": "S'ha seleccionat correctament la trucada d'agenda en l'aplicació informàtica.",
+                        "e": "S'ha aplicat un protocol de presentació personalitzat.",
+                        "f": "S'ha ajustat la conversa a l'objectiu de l'agenda i a les característiques de la persona usuària.",
+                        "g": "S'han seguit els protocols establerts per al comiat.",
+                        "h": "S'ha argumentat la valoració de l'ús d'un llenguatge apropiat a la persona que rep la trucada sortint."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica procediments de gestió de les crides entrants seguint el protocol i pautes d'actuació establits.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seguit els protocols establits per a la presentació, desenrotllament i comiat.",
+                        "b": "S'ha verificat l'alta de la persona en el servici.",
+                        "c": "S'ha adequat l'explicació sobre les característiques i prestacions del servici, així com sobre el funcionament del terminal i els dispositius auxiliars, a les característiques de la persona usuària.",
+                        "d": "S'han actualitzat les dades de la persona en l'aplicació informàtica.",
+                        "e": "S'han utilitzat estratègies facilitadores de la comunicació i un tracte personalitzat.",
+                        "f": "S'ha respost correctament davant situacions de crisis i emergències.",
+                        "g": "S'han posat en marxa els recursos adequats per a respondre a la demanda plantejada.",
+                        "h": "S'ha argumentat la importància de respectar les opinions i decisions de la persona usuària."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza el seguiment de les crides entrants i sortints registrant les incidències i actuacions realitzades, i elaborant l'informe corresponent.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han explicat els mitjans tècnics que afavorixen la transmissió d'informació entre torns.",
+                        "b": "S'han aplicat tècniques i procediments de registre d'informació.",
+                        "c": "S'han descrit els tipus d'informes del servici de teleassistència.",
+                        "d": "S'han elaborat informes de seguiment.",
+                        "e": "S'han identificat els aspectes de la seua pràctica laboral susceptibles de millora.",
+                        "f": "S'han identificat les situacions en les quals és necessària la intervenció d'altres professionals.",
+                        "g": "S'han transmés les incidències i propostes de millora als professionals competents.",
+                        "h": "S'ha valorat la importància d'adequar la seua competència professional a noves necessitats en el camp de la teleassistència."
                     }
                 }
             },
-            "horas": "65",
+            "horas": "200",
             "UnidadesCompetenciaAcreditadas": {
                 "UC_1423_2": "Atendre i gestionar les trucades entrants del servei de teleassistència.",
                 "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
@@ -807,109 +914,459 @@
                 "j"
             ]
         },
-        "0218": {
-            "nombre": "Formació i orientació laboral",
+        "1708": {
+            "nombre": "Sostenibilitat aplicada al sistema productiu",
             "creditos": "5",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Selecciona oportunitats d'ocupació, identificant les diferents possibilitats d'inserció i les alternatives d'aprenentatge al llarg de la vida.",
+                    "Resultado": " Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a la seua consecució.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha valorat la importància de la formació permanent com a factor clau per a l'ocupabilitat i l'adaptació a les exigències del procés productiu.",
-                        "b": "S'han identificat els itineraris formatius/professionals relacionats amb el perfil professional del tècnic en Atenció a Persones en Situació de Dependència.",
-                        "c": "S'han determinat les aptituds i actituds requerides per a l'activitat professional relacionada amb el perfil del títol.",
-                        "d": "S'han identificat els principals jaciments d'ocupació i d'inserció laboral per al tècnic en Atenció a Persones en Situació de Dependència."
+                        "a": "S'ha descrit el concepte de sostenibilitat, establint els marcs internacionals associats al desenvolupament sostenible.",
+                        "b": "S'han identificat els assumptes ambientals, socials i de governança que influeixen en el desenvolupament sostenible de les organitzacions empresarials.",
+                        "c": "S'han relacionat els Objectius de Desenvolupament Sostenible ODS, amb la seua importància per a la consecució de l'Agenda 2030.",
+                        "d": "S'ha analitzat la importància d'identificar els aspectes ASG més rellevants per als grups d'interès de les organitzacions relacionant-los amb els riscos i oportunitats que suposen per a la pròpia organització.",
+                        "e": "S'han identificat els principals estàndards de mètriques per a l'avaluació del desenvolupament en sostenibilitat i el seu paper en la rendició de comptes que marca la legislació vigent i les futures regulacions en desenvolupament.",
+                        "f": "S'ha descrit la inversió socialment responsable i el paper dels analistes, inversors, agències i índexs de sostenibilitat en el foment de la sostenibilitat."
                     }
                 },
                 "RA02": {
-                    "Resultado": "Aplica les estratègies del treball en equip, valorant la seua eficàcia i eficiència per a la consecució dels objectius de l'organització.",
+                    "Resultado": " Caracteritza els reptes ambientals i socials als quals s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per a minimitzar-los.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han valorat els avantatges de treball en equip en situacions de treball relacionades amb el perfil del tècnic en Atenció a Persones en Situació de Dependència.",
-                        "b": "S'han identificat els equips de treball que poden constituir-se en una situació real de treball.",
-                        "c": "S'han determinat les característiques de l'equip de treball eficaç front als equips ineficaços.",
-                        "d": "S'ha valorat positivament la necessària existència de diversitat de rols i opinions assumits pels membres d'un equip."
+                        "a": "S'han identificat els principals reptes ambientals i socials.",
+                        "b": "S'han relacionat els reptes ambientals i socials amb el desenvolupament de l'activitat econòmica.",
+                        "c": "S'ha analitzat l'efecte dels impactes ambientals i socials sobre les persones i els sectors productius.",
+                        "d": "S'han identificat les mesures i accions encaminades a minimitzar els impactes ambientals i socials.",
+                        "e": "S'ha analitzat la importància d'establir aliances i treballar de manera transversal i coordinada per a abordar amb èxit els reptes ambientals i socials."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Estableix l'aplicació de criteris de sostenibilitat en el desenvolupament professional i personal, identificant els elements necessaris.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els ODS més rellevants per a l'activitat professional que realitza.",
+                        "b": "S'han analitzat els riscos i oportunitats que representen els ODS.",
+                        "c": "S'han identificat les accions necessàries per a atendre alguns dels reptes ambientals i socials des de l'activitat professional i l'entorn personal."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant el model clàssic de producció.",
+                        "d": "S'han aplicat principis d'ecodisseny.",
+                        "e": "S'ha analitzat el cicle de vida del producte.",
+                        "f": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Realitza activitats sostenibles minimitzant l'impacte de les mateixes en el medi ambient.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant el model clàssic de producció.",
+                        "d": "S'ha avaluat l'impacte de les activitats personals i professionals.",
+                        "e": "S'han aplicat principis d'ecodisseny.",
+                        "f": "S'han aplicat estratègies sostenibles.",
+                        "g": "S'ha analitzat el cicle de vida del producte.",
+                        "h": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
+                        "i": "S'ha aplicat la normativa ambiental."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Analitza un pla de sostenibilitat d'una empresa del sector, identificant els seus grups d'interès, els aspectes ASG materials i justificant accions per a la seua gestió i mesura.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals grups d'interès de l'empresa.",
+                        "b": "S'han analitzat els aspectes ASG materials, les expectatives dels grups d'interès i la importància dels aspectes ASG en relació amb els objectius empresarials.",
+                        "c": "S'han definit accions encaminades a minimitzar els impactes negatius i aprofitar les oportunitats que plantegen els principals aspectes ASG identificats.",
+                        "d": "S'han determinat les mètriques d'avaluació del desenvolupament de l'empresa d'acord amb els estàndards de sostenibilitat més àmpliament utilitzats.",
+                        "e": "S'ha elaborat un informe de sostenibilitat amb el pla i els indicadors proposats."
                     }
                 }
             },
-            "horas": "50",
+            "horas": "30",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjectiusGenerals ": [],
+            "CompetenciasTitulo": []
+        },
+        "1709": {
+            "nombre": "Itinerari personal per a l'ocupabilitat I",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Assoleix les competències necessàries per a l'obtenció del Títol de tècnic bàsic en Prevenció de Riscos Laborals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la cultura preventiva en tots els àmbits activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats dels mateixos, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+                        "b": "S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
+                        "c": "S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per a evitar els danys en el seu origen i minimitzar les seues conseqüències.",
+                        "d": "S'han analitzat els protocols d'actuació en cas d'emergència.",
+                        "e": "S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
+                        "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+                        "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
+                        "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
+                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Distingeix les característiques del sector productiu i defineix els llocs de treball relacionant-los amb les competències professionals expressades en el títol",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
+                        "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper.",
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Analitza les seues condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de contractes, canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+                        "b": "S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
+                        "c": "S'han identificat les característiques definidores dels nous entorns d'organització del treball i els drets que conlevan.",
+                        "d": "S'han identificat els diferents components del rebut de salari.",
+                        "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
+                        "f": "S'ha valorat el paper de laSeguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
+                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'auto orientació i elabora una fulla de ruta per a la inserció professional en base a l'anàlisi de les competències, interessos i destreses personals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+                        "b": "S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
+                        "c": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+                        "d": "S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
+                        "e": "S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
+                        "f": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
+                        "g": "S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+                        "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
+                        "i": "S'han identificat els itineraris formats professionals relacionats amb el perfil professional.",
+                        "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
+                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+                        "b": "S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
+                        "c": "S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "d": "S'ha posat en pràctica la competència digital per a configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "e": "S'ha analitzat el concepte d'identitat digital i el seu impacte en l'ocupabilitat.",
+                        "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
+                        "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
+                        "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
+                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Identifica el concepte de salut psicosocial derivada del rendiment professional, identificant i avaluant els factors de risc associats a la mateixa, i aplicant mesures correctives:",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat i valorat el concepte de salut psicosocial com a factor determinant del benestar mental de l'individu i dels entorns laborals saludables.",
+                        "b": "S'ha analitzat la salut mental com a desencadenant de siniestralitat i absentisme laboral, així com la seua evolució en els diferents col·lectius de treballadors, especialment en els grups de població jove.",
+                        "c": "S'ha après a reconèixer i identificar els factors de risc psicosocial en l'àmbit laboral.",
+                        "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
+                        "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com a les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
+                        "f": "S'han activat les estratègies d'afrontament personal davant els estressors derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
+                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten l'adequada resposta a les situacions de conflicte en l'àmbit laboral."
+                    }
+                }
+            },
+            "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales ": [
-                "j",
                 "t",
                 "u",
+                "v",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "t",
+                "u",
+                "v",
+                "w",
+                "y"
+            ]
+        },
+        "1710": {
+            "nombre": "Itinerari personal per a l'ocupabilitat II",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seues possibilitats d'inserció laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
+                        "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
+                        "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
+                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i el seu aporte de valor."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació en cerca de la millora de la seua ocupabilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
+                        "b": "S'ha participat activament en l'establiment dels objectius de l'equip i en la presa de decisions del mateix i assumit la responsabilitat de les accions i decisions del grup, participant activament en el compliment d'uns objectius compartits cooperant amb altres persones i compartint el lideratge.",
+                        "c": "S'han incorporat al propi procés d'aprenentatge les tècniques i recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva sent capaç d'adaptar-los a cada situació i circumstàncies, valorant les oportunitats i dificultats que ofereix cadascuna d'elles.",
+                        "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
+                        "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
+                        "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
+                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu cap a un model sostenible.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb la construcció d'una societat més sostenible que millore en el benestar dels individus.",
+                        "b": "S'han analitzat les diferents metodologies per a emprendre i la seua importància per a afavorir la innovació i com a font de creació d'ocupació i benestar social.",
+                        "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
+                        "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
+                        "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
+                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socio productiu utilitzant metodologies àgils per a l'emprenedoria.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixen en oportunitats.",
+                        "b": "S'ha posat en pràctica el procés creatiu amb la finalitat de conseguir una idea emprenedora que aporte valor econòmic, social i/o cultural.",
+                        "c": "S'ha dissenyat un model de negoci i/o gestió derivat de la idea emprenedora.",
+                        "d": "S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
+                        "e": "S'ha analitzat la contribució de l'Economia Circular i l'Economia del Bé Comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
+                        "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
+                        "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
+                        "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
+                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per a desenvolupar destreses en tècniques de comunicació i venda."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte emprenedor d'innovació social i/o tecnològica aplicada en col·laboració amb l'entorn.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
+                        "b": "S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
+                        "c": "S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
+                        "d": "S'han posat en marxa les estratègies pròpies del pensament de disseny per a detectar necessitats socials i mediambientals.",
+                        "e": "S'han analitzat els elements del disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
+                        "h": "S'han investigat les opcions financeres socialment responsables.",
+                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza la rendibilitat de la proposta emprenedora valorant inversió, costos i beneficis i dissenya una estratègia per a la posada en marxa de la mateixa tenint en compte obligacions administratives, fiscals i comptables.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
+                        "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
+                        "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
+                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
                 "w",
                 "x",
-                "ab"
+                "y"
             ],
             "CompetenciasTitulo": [
-                "i",
-                "q",
-                "r",
-                "t",
-                "u",
-                "x"
+                "v",
+                "w",
+                "x",
+                "y"
             ]
         },
-        "0219": {
-            "nombre": "Empresa i iniciativa emprenedora",
-            "creditos": "3.5",
+        "1664": {
+            "nombre": "Digitalització aplicada als sectors productius (GM)",
+            "creditos": "3",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Reconeix les capacitats associades a la iniciativa emprenedora, analitzant els requeriments derivats dels llocs de treball i de les activitats empresarials.",
+                    "Resultado": "Estableix les diferències entre l'Economia Lineal (EL) i l'Economia Circular (EC), identificant els avantatges de l'EC en relació amb el medi ambient i el desenvolupament sostenible.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb el progrés de la societat i l'augment en el benestar dels individus.",
-                        "b": "S'ha analitzat el concepte de cultura emprenedora i la seua importància com a font de creació d'ocupació i benestar social.",
-                        "c": "S'ha valorat la importància de la iniciativa individual, la creativitat, la formació i la col·laboració com a requisits indispensables per a tenir èxit en l'activitat emprenedora.",
-                        "d": "S'ha analitzat la capacitat d'iniciativa en el treball d'una persona ocupada en una pime relacionada amb l'atenció a persones en situació de dependència."
+                        "a": "S'han identificat les etapes «típiques» dels models basats en EL i models basats en EC.",
+                        "b": "S'ha analitzat cada etapa dels models EL i EC i la seua repercusió en el medi ambient.",
+                        "c": "S'ha valorat la importància del reciclatge en els models econòmics.",
+                        "d": "S'han identificat processos reals basats en EL.",
+                        "e": "S'han identificat processos reals basats en EC.",
+                        "f": "S'han comparat els models anteriors en relació amb el seu impacte mediambiental i els ODS"
                     }
                 },
                 "RA02": {
-                    "Resultado": "Defineix l'oportunitat de creació d'una petita empresa, valorant l'impacte sobre l'entorn d'actuació i incorporant valors ètics.",
+                    "Resultado": "Caracteritza els principals aspectes de la 4a Revolució Industrial indicant els canvis i els avantatges que es produeixen tant des del punt de vista dels clients com de les empreses.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han descrit les funcions bàsiques que es realitzen en una empresa i s'ha analitzat el concepte de sistema aplicat a l'empresa.",
-                        "b": "S'han identificat els principals components de l'entorn general que envolta a l'empresa, en especial l'entorn econòmic, social, demogràfic i cultural.",
-                        "c": "S'ha analitzat la influència en l'activitat empresarial de les relacions amb els clients, amb els proveïdors i amb la competència com a principals integrants de l'entorn específic.",
-                        "d": "S'han identificat els elements de l'entorn d'una pime relacionada amb l'atenció a persones en situació de dependència."
+                        "a": "S'han relacionat els sistemes ciberfísics amb l'evolució industrial.",
+                        "b": "S'ha analitzat el canvi produït en els sistemes automatitzats.",
+                        "c": "S'ha descrit la combinació de la part física de les indústries amb el programari, IoT (Internet de les coses)",
+                        "d": "S'ha descrit la interrelació entre el món físic i el virtual.",
+                        "e": "S'ha relacionat la migració a entorns 4.0 amb la millora dels resultats de les empreses.",
+                        "f": "S'han identificat els avantatges per a clients i empreses."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Identifica l'estructura dels sistemes basats en cloud/núvol descrivint la seua tipologia i camp d'aplicació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents nivells del cloud/núvol.",
+                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres",
+                        "c": "S'ha descrit el concepte d'edge computing i la seua relació amb el cloud/núvol.",
+                        "d": "S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
+                        "e": "S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Compara els sistemes de producció/prestació de serveis digitalitzats amb els sistemes clàssics identificant les millores introduïdes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les tecnologies habilitadores (THD).",
+                        "b": "S'han descrit les característiques i aplicacions del IoT, IA (Intel·ligència Artificial, Big Data, tecnologia 5G, la robòtica col·laborativa, Blockchain, Ciberseguretat, fabricació additiva, realitat virtual, bessons digitals, entre altres).",
+                        "c": "S'ha descrit la contribució de les THD a la millora de la productivitat i l'eficiència dels sistemes productius o de prestació de serveis.",
+                        "d": "S'ha relacionat l'alineació entre les unitats funcionals de les empreses que conformen el sistema i l'objectiu del mateix.",
+                        "e": "S'ha relacionat la implantació de les tecnologies habilitadores (sensòrica, tractament de dades, automatització i comunicacions, entre altres amb la reducció de costos i la millora de la competitivitat.",
+                        "f": "S'han relacionat les tecnologies disruptives amb aplicacions concretes en els sectors productius.",
+                        "g": "S'han definit els sistemes d'emmagatzematge de dades no convencionals i l'accés als mateixos des de cada unitat.",
+                        "h": "S'han descrit les millores produïdes en el sistema i en cadascuna de les seues etapes."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Elabora un pla de transformació d'una empresa clàssica del sector en el qual s'emmarca el títol, basada en una EL, al concepte 4.0, determinant els canvis a introduir en les principals fases del sistema i indicant com afectaria als recursos humans.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha definit a nivell de blocs el diagrama de funcionament de l'empresa clàssica.",
+                        "b": "S'han identificat les etapes susceptibles de ser digitalitzades.",
+                        "c": "S'han definit les tecnologies implicades en cadascuna de les etapes.",
+                        "d": "S'ha establert la connexió de les etapes digitalitzades amb la resta del sistema.",
+                        "e": "S'ha elaborat un diagrama de blocs del sistema digitalitzat.",
+                        "f": "S'ha elaborat un informe de viabilitat i de les millores introduïdes.",
+                        "g": "S'ha analitzat la millora en la producció i gestió de residus, entre altres.",
+                        "h": "S'ha elaborat un document amb la seqüència del pla de transformació i els recursos empleats."
                     }
                 }
             },
-            "horas": "35",
+            "horas": "32",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjectiusGenerals ": [
+                "e",
+                "j",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ]
+        },
+        "MOPANGPROF": {
+            "nombre": "Anglés oral en entorns professionals",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales ": [
-                "aa",
-                "ab"
+                "a"
             ],
             "CompetenciasTitulo": [
-                "w",
-                "x"
+                "a"
             ]
         },
-        "0220": {
-            "nombre": "Formació en centres de treball",
-            "creditos": "22",
+        "MOPCOMPROF": {
+            "nombre": "Comunicació professional",
+            "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Identifica l'estructura i organització de l'empresa, relacionant-les amb el tipus de servei que presta.",
+                    "Resultado": "RA1",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat l'estructura organitzativa de l'empresa i les funcions de cada àrea de la mateixa.",
-                        "b": "S'ha comparat l'estructura de l'empresa amb les organitzacions empresarials tipus existents en el sector.",
-                        "c": "S'han relacionat les característiques del servei i el tipus de clients amb el desenvolupament de l'activitat empresarial.",
-                        "d": "S'han identificat els procediments de treball en el desenvolupament de la prestació de servei."
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
                     }
                 },
                 "RA02": {
-                    "Resultado": "Aplica hàbits ètics i laborals en el desenvolupament de la seua activitat professional, d'acord amb les característiques del lloc de treball i amb els procediments establerts en l'empresa.",
+                    "Resultado": "RA2",
                     "CriteriosEvaluacion": {
-                        "a": "S'han reconegut i justificat: la disponibilitat personal i temporal necessàries en el lloc de treball; les actituds personals i professionals necessàries per al lloc de treball; els requeriments actitudinals davant la prevenció de riscos en l'activitat professional; els requeriments actitudinals referits a la qualitat en l'activitat professional.",
-                        "b": "S'han identificat les normes de prevenció de riscos laborals i els aspectes fonamentals de la Llei de Prevenció de Riscos Laborals d'aplicació en l'activitat professional.",
-                        "c": "S'han posat en marxa els equips de protecció individual segons els riscos de l'activitat professional i les normes de l'empresa.",
-                        "d": "S'ha mantingut una actitud de respecte al medi ambient en les activitats desenvolupades."
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
                     }
                 }
             },
-            "horas": "220",
+            "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [],
-            "CompetenciasTitulo": []
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
+        },
+        "PI": {
+            "nombre": "Projecte intermodular",
+            "creditos": "",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "RA1",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                },
+                "RA02": {
+                    "Resultado": "RA2",
+                    "CriteriosEvaluacion": {
+                        "a": "CA1",
+                        "b": "CA2",
+                        "c": "CA3",
+                        "d": "CA4",
+                        "e": "CA5",
+                        "f": "CA6",
+                        "g": "CA7"
+                    }
+                }
+            },
+            "horas": "1",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "a"
+            ],
+            "CompetenciasTitulo": [
+                "a"
+            ]
         }
     }
 }

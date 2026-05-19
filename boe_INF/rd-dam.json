@@ -14,7 +14,7 @@
         "l": "Crear tutorials, manuals d'usuari, d'instal·lació, de configuració i d'administració, emprant eines específiques.",
         "m": "Empaquetar aplicacions per a la seua distribució preparant paquets auto instal·lables amb assistents incorporats.",
         "n": "Desenvolupar aplicacions multiprocés i multifil emprant llibreries i tècniques de programació específiques.",
-        "ny": "Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació.",
+        "ñ": "Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació.",
         "o": "Participar en la implantació de sistemes ERP-CRM avaluant la utilitat de cadascun dels seus mòduls.",
         "p": "Gestionar la informació emmagatzemada en sistemes ERP-CRM garantint la seua integritat.",
         "q": "Desenvolupar components personalitzats per a un sistema ERP-CRM atenent als requeriments.",
@@ -42,7 +42,7 @@
         "l",
         "m",
         "n",
-        "ny",
+        "ñ",
         "o",
         "p",
         "q",
@@ -72,7 +72,7 @@
         "l": 1,
         "m": 1,
         "n": 3,
-        "ny": 3,
+        "ñ": 3,
         "o": 1,
         "p": 2,
         "q": 3,
@@ -134,7 +134,7 @@
         "l": "Valorar i emprar eines específiques, atenent a l'estructura dels continguts, per crear tutorials, manuals d'usuari i altres documents associats a una aplicació.",
         "m": "Seleccionar i emprar tècniques i eines, avaluant la utilitat dels assistents d'instal·lació generats, per empaquetar aplicacions.",
         "n": "Analitzar i aplicar tècniques i llibreries específiques, simulant diferents escenaris, per desenvolupar aplicacions capaces d'oferir serveis en xarxa.",
-        "ny": "Analitzar i aplicar tècniques i llibreries de programació, avaluant la seua funcionalitat per desenvolupar aplicacions multiprocés i multifil.",
+        "ñ": "Analitzar i aplicar tècniques i llibreries de programació, avaluant la seua funcionalitat per desenvolupar aplicacions multiprocés i multifil.",
         "o": "Reconèixer l'estructura dels sistemes ERP-CRM, identificant la utilitat de cadascun dels seus mòduls, per participar en la seua implantació.",
         "p": "Realitzar consultes, analitzant i avaluant el seu abast, per gestionar la informació emmagatzemada en sistemes ERP-CRM.",
         "q": "Seleccionar i emprar llenguatges i eines, atenent als requeriments, per desenvolupar components personalitzats en sistemes ERP-CRM.",
@@ -733,14 +733,18 @@
                 "e",
                 "h",
                 "i",
-                "j"
+                "j",
+                "ñ",
+                "o"
             ],
             "CompetenciasTitulo": [
                 "d",
                 "f",
                 "h",
                 "i",
-                "j"
+                "j",
+                "m",
+                "n"
             ]
         },
         "0179": {
@@ -1168,7 +1172,7 @@
                 "l",
                 "m",
                 "n",
-                "ny",
+                "ñ",
                 "s",
                 "t",
                 "w"
@@ -1183,7 +1187,7 @@
                 "l",
                 "m",
                 "n",
-                "ny",
+                "ñ",
                 "s",
                 "t",
                 "w"
@@ -1276,7 +1280,7 @@
                 "j",
                 "l",
                 "n",
-                "ny",
+                "ñ",
                 "t",
                 "w"
             ],
@@ -1287,7 +1291,7 @@
                 "j",
                 "l",
                 "n",
-                "ny",
+                "ñ",
                 "t",
                 "w"
             ]
@@ -1470,197 +1474,6 @@
             "ObjetivosGenerales ": [],
             "CompetenciasTitulo": []
         },
-        "1709": {
-            "nombre": "Itinerari personal per a l'ocupabilitat I",
-            "creditos": "5",
-            "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Assoleix les competències necessàries per a l'obtenció del Títol de tècnic bàsic en Prevenció de Riscos Laborals.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha valorat la importància de la cultura preventiva en tots els àmbits activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats dels mateixos, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
-                        "b": "S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
-                        "c": "S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per a evitar els danys en el seu origen i minimitzar les seues conseqüències.",
-                        "d": "S'han analitzat els protocols d'actuació en cas d'emergència.",
-                        "e": "S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
-                        "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
-                        "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
-                        "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
-                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí."
-                    }
-                },
-                "RA02": {
-                    "Resultado": "Distingeix les característiques del sector productiu i defineix els llocs de treball relacionant-los amb les competències professionals expressades en el títol",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
-                        "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper."
-                    }
-                },
-                "RA03": {
-                    "Resultado": "Analitza les seues condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de contractes, canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
-                        "b": "S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
-                        "c": "S'han identificat les característiques definidores dels nous entorns d'organització del treball i els drets que conlevan.",
-                        "d": "S'han identificat els diferents components del rebut de salari.",
-                        "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
-                        "f": "S'ha valorat el paper de laSeguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
-                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral."
-                    }
-                },
-                "RA04": {
-                    "Resultado": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'auto orientació i elabora una fulla de ruta per a la inserció professional en base a l'anàlisi de les competències, interessos i destreses personals.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
-                        "b": "S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
-                        "c": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
-                        "d": "S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
-                        "e": "S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
-                        "f": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
-                        "g": "S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
-                        "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
-                        "i": "S'han identificat els itineraris formats professionals relacionats amb el perfil professional.",
-                        "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
-                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació."
-                    }
-                },
-                "RA05": {
-                    "Resultado": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
-                        "b": "S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
-                        "c": "S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
-                        "d": "S'ha posat en pràctica la competència digital per a configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
-                        "e": "S'ha analitzat el concepte d'identitat digital i el seu impacte en l'ocupabilitat.",
-                        "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
-                        "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
-                        "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
-                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual."
-                    }
-                },
-                "RA06": {
-                    "Resultado": "Identifica el concepte de salut psicosocial derivada del rendiment professional, identificant i avaluant els factors de risc associats a la mateixa, i aplicant mesures correctives:",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha identificat i valorat el concepte de salut psicosocial com a factor determinant del benestar mental de l'individu i dels entorns laborals saludables.",
-                        "b": "S'ha analitzat la salut mental com a desencadenant de siniestralitat i absentisme laboral, així com la seua evolució en els diferents col·lectius de treballadors, especialment en els grups de població jove.",
-                        "c": "S'ha après a reconèixer i identificar els factors de risc psicosocial en l'àmbit laboral.",
-                        "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
-                        "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com a les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
-                        "f": "S'han activat les estratègies d'afrontament personal davant els estressors derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
-                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten l'adequada resposta a les situacions de conflicte en l'àmbit laboral."
-                    }
-                }
-            },
-            "horas": "100",
-            "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
-            "CompetenciasTitulo": [
-                "a",
-                "e",
-                "f",
-                "i",
-                "j",
-                "v",
-                "y",
-                "z"
-            ]
-        },
-        "1710": {
-            "nombre": "Itinerari personal per a l'ocupabilitat II",
-            "creditos": "5",
-            "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seues possibilitats d'inserció laboral.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
-                        "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
-                        "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
-                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i el seu aporte de valor."
-                    }
-                },
-                "RA02": {
-                    "Resultado": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació en cerca de la millora de la seua ocupabilitat.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
-                        "b": "S'ha participat activament en l'establiment dels objectius de l'equip i en la presa de decisions del mateix i assumit la responsabilitat de les accions i decisions del grup, participant activament en el compliment d'uns objectius compartits cooperant amb altres persones i compartint el lideratge.",
-                        "c": "S'han incorporat al propi procés d'aprenentatge les tècniques i recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva sent capaç d'adaptar-los a cada situació i circumstàncies, valorant les oportunitats i dificultats que ofereix cadascuna d'elles.",
-                        "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
-                        "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
-                        "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
-                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional."
-                    }
-                },
-                "RA03": {
-                    "Resultado": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu cap a un model sostenible.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb la construcció d'una societat més sostenible que millore en el benestar dels individus.",
-                        "b": "S'han analitzat les diferents metodologies per a emprendre i la seua importància per a afavorir la innovació i com a font de creació d'ocupació i benestar social.",
-                        "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
-                        "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
-                        "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
-                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible."
-                    }
-                },
-                "RA04": {
-                    "Resultado": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socio productiu utilitzant metodologies àgils per a l'emprenedoria.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixen en oportunitats.",
-                        "b": "S'ha posat en pràctica el procés creatiu amb la finalitat de conseguir una idea emprenedora que aporte valor econòmic, social i/o cultural.",
-                        "c": "S'ha dissenyat un model de negoci i/o gestió derivat de la idea emprenedora.",
-                        "d": "S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
-                        "e": "S'ha analitzat la contribució de l'Economia Circular i l'Economia del Bé Comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
-                        "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
-                        "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
-                        "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
-                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per a desenvolupar destreses en tècniques de comunicació i venda."
-                    }
-                },
-                "RA05": {
-                    "Resultado": "Desenvolupa un projecte emprenedor d'innovació social i/o tecnològica aplicada en col·laboració amb l'entorn.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
-                        "b": "S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
-                        "c": "S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
-                        "d": "S'han posat en marxa les estratègies pròpies del pensament de disseny per a detectar necessitats socials i mediambientals.",
-                        "e": "S'han analitzat els elements del disseny de models de negoci ecosocials i/o de base tecnològica.",
-                        "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
-                        "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
-                        "h": "S'han investigat les opcions financeres socialment responsables.",
-                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix."
-                    }
-                },
-                "RA06": {
-                    "Resultado": "Analitza la rendibilitat de la proposta emprenedora valorant inversió, costos i beneficis i dissenya una estratègia per a la posada en marxa de la mateixa tenint en compte obligacions administratives, fiscals i comptables.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
-                        "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
-                        "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
-                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora."
-                    }
-                }
-            },
-            "horas": "100",
-            "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
-            "CompetenciasTitulo": [
-                "a",
-                "e",
-                "f",
-                "i",
-                "j",
-                "v",
-                "y",
-                "z"
-            ]
-        },
         "1665": {
             "nombre": "Digitalització aplicada als sectors productius (GS)",
             "creditos": "3",
@@ -1757,6 +1570,203 @@
                 "v",
                 "y",
                 "z"
+            ]
+        },
+        "1709": {
+            "nombre": "Itinerari personal per a l'ocupabilitat I",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Assoleix les competències necessàries per a l'obtenció del Títol de tècnic bàsic en Prevenció de Riscos Laborals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de la cultura preventiva en tots els àmbits activitats de l'empresa o organisme equiparat relacionant les condicions laborals amb la salut de la persona treballadora identificant i classificant els factors de risc en l'activitat i els danys derivats dels mateixos, especialment les situacions de risc més habituals en els entorns de treball del sector professional relacionat amb el títol.",
+                        "b": "S'han classificat i descrit els tipus de danys professionals, amb especial referència a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol.",
+                        "c": "S'ha determinat l'avaluació de riscos en l'empresa o organisme equiparat i definit les tècniques de prevenció i de protecció que s'han d'aplicar per a evitar els danys en el seu origen i minimitzar les seues conseqüències.",
+                        "d": "S'han analitzat els protocols d'actuació en cas d'emergència.",
+                        "e": "S'han determinat els principals drets i deures en matèria de prevenció de riscos laborals.",
+                        "f": "S'han classificat les diferents formes de gestió de la prevenció en l'empresa o organisme equiparat, en funció dels diferents criteris establerts en la normativa sobre prevenció de riscos laborals i determinat les formes de representació de les persones treballadores en l'empresa o organisme equiparat en matèria de prevenció de riscos.",
+                        "g": "S'ha valorat la importància de l'existència d'un pla preventiu en l'empresa o organisme equiparat que incloga la seqüenciació de 16 actuacions a realitzar en cas d'emergència i reflexionat sobre el contingut del mateix.",
+                        "h": "S'han determinat els requisits i condicions per a la vigilància de la salut de la persona treballadora i la seua importància com a mesura de prevenció.",
+                        "i": "S'han identificat les tècniques bàsiques de primers auxilis que han de ser aplicades en el lloc de l'accident davant diferents tipus de danys i la composició i ús del botiquí.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Distingeix les característiques del sector productiu i defineix els llocs de treball relacionant-los amb les competències professionals expressades en el títol",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
+                        "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper.",
+                        "d": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Analitza les seues condicions laborals com a persona treballadora per compte aliè identificant-les en els principals tipus de contractes, canvis i vicissituds rellevants que es poden presentar en la relació laboral en la normativa laboral i especialment en el conveni col·lectiu del sector.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els drets i obligacions derivats de la relació laboral, així com les condicions de treball pactades en un conveni col·lectiu aplicable al sector professional relacionat amb el títol.",
+                        "b": "S'han comparat les principals modalitats de contractació, localitzant els diferents models en les fonts oficials.",
+                        "c": "S'han identificat les característiques definidores dels nous entorns d'organització del treball i els drets que conlevan.",
+                        "d": "S'han identificat els diferents components del rebut de salari.",
+                        "e": "S'han identificat els recursos laborals existents davant les diferents vicissituds que es poden donar en la relació laboral,",
+                        "f": "S'ha valorat el paper de laSeguretat Social com a pilar essencial per a la millora de la qualitat de vida dels ciutadans.",
+                        "g": "S'han analitzat les principals prestacions derivades de la suspensió i extinció de la relació laboral.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Analitza i avalua el seu potencial professional i els seus interessos per a guiar-se en el procés d'auto orientació i elabora una fulla de ruta per a la inserció professional en base a l'anàlisi de les competències, interessos i destreses personals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els propis interessos, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+                        "b": "S'han analitzat les qualitats i competències personals afins a l'activitat professional relacionada amb el perfil del títol.",
+                        "c": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+                        "d": "S'han assenyalat les preferències professionals, interessos i metes en el marc d'un projecte professional.",
+                        "e": "S'ha valorat el concepte d'autoestima en el procés de cerca d'ocupació.",
+                        "f": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional.",
+                        "g": "S'han identificat expectatives de futur per a inserció professional analitzant competències, interessos i destreses personals.",
+                        "h": "S'han valorat fites importants en la trajectòria vital amb valor professionalitzador.",
+                        "i": "S'han identificat els itineraris formats professionals relacionats amb el perfil professional.",
+                        "j": "S'han formulat objectius professionals i s'ha determinat metes personals i professionals per a la millora de l'ocupabilitat i les condicions d'inserció laboral.",
+                        "k": "S'ha traçat un pla d'acció per a desenvolupar les àrees de millora i potenciar les fortaleses personals amb valor per a l'ocupació.",
+                        "l": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica les estratègies per a l'aprenentatge autònom reconeixent el seu valor professionalitzador, dissenyant i optimitzant el seu propi entorn d'aprenentatge fent ús de les tecnologies digitals com a eines d'aprenentatge autònom, sent coherent amb la seua identitat digital i els seus propis objectius professionals plantejats en el seu pla de desenvolupament individual.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha pres consciència de la responsabilitat individual en el desenvolupament professional valorant l'actitud d'aprenentatge permanent per al desenvolupament de pròpies i noves competències.",
+                        "b": "S'ha identificat l'ocupabilitat com a capacitat d'adaptació a l'entorn laboral.",
+                        "c": "S'han conegut i utilitzat eines, fonts d'informació, connexions i activitats per a la configuració d'un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "d": "S'ha posat en pràctica la competència digital per a configurar un entorn personal d'aprenentatge per a l'ocupabilitat.",
+                        "e": "S'ha analitzat el concepte d'identitat digital i el seu impacte en l'ocupabilitat.",
+                        "f": "S'ha justificat el disseny del seu entorn d'aprenentatge basat en com aquest millora l'ocupabilitat.",
+                        "g": "S'ha elaborat el seu pla de desenvolupament individual com a eina per a la millora de l'ocupabilitat.",
+                        "h": "S'han aplicat les eines d'aprenentatge autònom per al seu desenvolupament personal i professional.",
+                        "i": "S'ha dissenyat l'entorn d'aprenentatge que permet assolir el pla de desenvolupament individual.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Identifica el concepte de salut psicosocial derivada del rendiment professional, identificant i avaluant els factors de risc associats a la mateixa, i aplicant mesures correctives:",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat i valorat el concepte de salut psicosocial com a factor determinant del benestar mental de l'individu i dels entorns laborals saludables.",
+                        "b": "S'ha analitzat la salut mental com a desencadenant de siniestralitat i absentisme laboral, així com la seua evolució en els diferents col·lectius de treballadors, especialment en els grups de població jove.",
+                        "c": "S'ha après a reconèixer i identificar els factors de risc psicosocial en l'àmbit laboral.",
+                        "d": "S'han identificat els diferents tipus de danys derivats dels factors de risc psicosocial i la seua repercusió en els individus i en les organitzacions, així com el seu impacte en la competitivitat i productivitat de les empreses.",
+                        "e": "S'han definit i delimitat els conceptes d'estrès laboral, tecnoestrès i burnout com a les principals conseqüències davant condicions psicosocials desfavorables o adverses en l'entorn laboral.",
+                        "f": "S'han activat les estratègies d'afrontament personal davant els estressors derivats de les condicions laborals així com els recursos facilitadors del benestar emocional de les persones al llarg de la seua vida",
+                        "g": "S'han determinat les mesures d'intervenció a nivell social, empresarial i assistencial, que permeten l'adequada resposta a les situacions de conflicte en l'àmbit laboral.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "t",
+                "u",
+                "v",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "t",
+                "u",
+                "v",
+                "w",
+                "y"
+            ]
+        },
+        "1710": {
+            "nombre": "Itinerari personal per a l'ocupabilitat II",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Planifica i posa en marxa estratègies en els diferents processos selectius d'ocupació que li permeten millorar les seues possibilitats d'inserció laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat les tècniques utilitzades actualment en el sector per al procés de selecció de personal.",
+                        "b": "S'han desenvolupat estratègies per a la cerca d'ocupació relacionades amb les tècniques actuals més utilitzades contextualitzades al sector.",
+                        "c": "S'han valorat les actituds i aptituds que permeten superar processos selectius en el sector privat i en el sector públic.",
+                        "d": "S'ha construït una marca personal identificant les necessitats del mercat actual, les seues habilitats, destreses i el seu aporte de valor.",
+                        "e": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica estratègies relacionades amb les competències personals, socials i emocionals per a l'ocupació en cerca de la millora de la seua ocupabilitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat en el sector de referència.",
+                        "b": "S'ha participat activament en l'establiment dels objectius de l'equip i en la presa de decisions del mateix i assumit la responsabilitat de les accions i decisions del grup, participant activament en el compliment d'uns objectius compartits cooperant amb altres persones i compartint el lideratge.",
+                        "c": "S'han incorporat al propi procés d'aprenentatge les tècniques i recursos de presentació i comunicació, tant orals com escrits, adequats per a una comunicació efectiva i afectiva sent capaç d'adaptar-los a cada situació i circumstàncies, valorant les oportunitats i dificultats que ofereix cadascuna d'elles.",
+                        "d": "S'han aplicat tècniques i estratègies per a la gestió del temps disponible per a assolir els objectius tant individuals com de l'equip i programat les activitats necessàries.",
+                        "e": "S'han aplicat estratègies per a canalitzar les emocions mostrant una actitud flexible en les relacions amb altres persones.",
+                        "f": "S'han desenvolupat estratègies per a la programació d'activitats atenent a criteris d'organització eficient i preveient les possibles dificultats.",
+                        "g": "S'ha reaccionat de forma flexible i positiva davant conflictes i situacions noves, aprofitant les oportunitats i gestionant les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional.",
+                        "h": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Posa en pràctica les habilitats emprenedores necessàries per al desenvolupament de processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu cap a un model sostenible.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat el concepte d'innovació i la seua relació amb la construcció d'una societat més sostenible que millore en el benestar dels individus.",
+                        "b": "S'han analitzat les diferents metodologies per a emprendre i la seua importància per a afavorir la innovació i com a font de creació d'ocupació i benestar social.",
+                        "c": "S'han aplicat les habilitats emprenedores necessàries per a promoure l'emprenedoria i l'intraemprenedoria.",
+                        "d": "S'ha posat en pràctica el treball col·laboratiu com a requisit per al desenvolupament de processos d'innovació.",
+                        "e": "S'ha desenvolupat la competència digital necessària per a la millora dels processos d'innovació i investigació aplicades que promoguen la modernització del sector productiu.",
+                        "f": "S'han incorporat els objectius de les polítiques i iniciatives relacionades amb la sostenibilitat i el medi ambient a l'estratègia empresarial enfocada al desenvolupament d'un model econòmic i social sostenible.",
+                        "g": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica, defineix i valida idees d'emprenedoria generadores de noves oportunitats a partir d'estratègies d'anàlisi de l'entorn socio productiu utilitzant metodologies àgils per a l'emprenedoria.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els problemes de les persones destinatàries potencials del projecte emprenedor com a pas previ a la proposta de solucions que es converteixen en oportunitats.",
+                        "b": "S'ha posat en pràctica el procés creatiu amb la finalitat de conseguir una idea emprenedora que aporte valor econòmic, social i/o cultural.",
+                        "c": "S'ha dissenyat un model de negoci i/o gestió derivat de la idea emprenedora.",
+                        "d": "S'han incorporat valors ètics i socials a la idea emprenedora analitzant models de balanç social.",
+                        "e": "S'ha analitzat la contribució de l'Economia Circular i l'Economia del Bé Comú al desenvolupament d'un model econòmic i social basat en l'equitat, la justícia social i la sostenibilitat.",
+                        "f": "S'han analitzat els principals components de l'entorn general i específic, i el seu impacte en la idea emprenedora.",
+                        "g": "S'han realitzat entrevistes de problema per a validar el perfil i el problema de les persones destinatàries de la idea emprenedora.",
+                        "h": "S'ha validat la solució mitjançant la creació de prototips buscant l'encaix problema-solució.",
+                        "i": "S'ha experimentat amb la posada en pràctica d'estratègies de màrqueting per a desenvolupar destreses en tècniques de comunicació i venda.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Desenvolupa un projecte emprenedor d'innovació social i/o tecnològica aplicada en col·laboració amb l'entorn.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat els conceptes bàsics de l'emprenedoria i la innovació social.",
+                        "b": "S'ha reflexionat sobre la necessitat del lideratge ètic i sostenible en les organitzacions.",
+                        "c": "S'ha reflexionat sobre la tecnologia com a base per al canvi del model productiu.",
+                        "d": "S'han posat en marxa les estratègies pròpies del pensament de disseny per a detectar necessitats socials i mediambientals.",
+                        "e": "S'han analitzat els elements del disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "f": "S'han alineat metes de desenvolupament sostenible amb el disseny de models de negoci ecosocials i/o de base tecnològica.",
+                        "g": "S'han aplicat les estratègies necessàries per a analitzar la viabilitat del projecte emprenedor.",
+                        "h": "S'han investigat les opcions financeres socialment responsables.",
+                        "i": "S'han definit els agents implicats en el projecte, així com la seua participació en el mateix.",
+                        "j": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza la rendibilitat de la proposta emprenedora valorant inversió, costos i beneficis i dissenya una estratègia per a la posada en marxa de la mateixa tenint en compte obligacions administratives, fiscals i comptables.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han analitzat la inversió, els costos i beneficis i determinat si la proposta emprenedora és rendible.",
+                        "b": "S'han consultat i comparat les diferents formes jurídiques i associatives que poden aplicar-se a la proposta emprenedora i s'ha pres una decisió raonada sobre la més adequada al supòsit concret.",
+                        "c": "S'han identificat les diferents obligacions administratives, fiscals i comptables que es deriven de la proposta emprenedora.",
+                        "d": "S'ha traçat un pla d'acció per a la posada en marxa de la proposta emprenedora.",
+                        "e": "S'han aplicat i desenvolupat les competències socials i personals a la pràctica acadèmica i formativa amb una adequada diligència professional (assistència, puntualitat, actitud, presentació de treballs en temps i en forma, comunicació verbal, oral i escrita, treball en equip, capacitat d'adaptació, diligència professional, sigil i confidencialitat, i autonomia en la presa de decisions) talment estiguera al món laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales ": [
+                "w",
+                "x",
+                "y"
+            ],
+            "CompetenciasTitulo": [
+                "v",
+                "w",
+                "x",
+                "y"
             ]
         },
         "CVOPS190": {

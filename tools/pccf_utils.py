@@ -9,6 +9,13 @@ def get_hoja_label(hoja):
     if hoja.startswith("Digitalització"): hoja="Digitalització"
     if hoja.startswith("Anglés Professional"): hoja ="Anglés"
 
+    # Optatives
+    #cloud
+    #angles
+    #prog
+    #comunicacio
+
+    # SMX
     if hoja.startswith("Muntatge"): hoja="MME"
     if hoja.startswith("Sistemes operatius mono"): hoja="SOM"
     if hoja.startswith("Aplicacions ofimátiques"): hoja="AOF"
