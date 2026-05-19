@@ -205,7 +205,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "j",
@@ -365,7 +365,7 @@
             },
             "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -428,7 +428,7 @@
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "j",
@@ -515,7 +515,7 @@
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "j",
@@ -640,7 +640,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "d",
@@ -702,7 +702,7 @@
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
                 "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "e",
@@ -761,7 +761,7 @@
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
                 "UC0249_2": "Desenvolupar intervencions d'atenció física domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -855,7 +855,7 @@
                 "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
                 "UC_1425_2": "Manejar les eines, tècniques i habilitats per prestar el servei de teleassistència."
             },
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a",
                 "j",
                 "p",
@@ -907,7 +907,7 @@
             },
             "horas": "35",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "k"
             ],
             "CompetenciasTitulo": [
@@ -1011,7 +1011,7 @@
                     "CriteriosEvaluacion": {
                         "a": "S'han analitzat les principals oportunitats d'ocupació i d'inserció laboral en el sector professional, identificant les possibilitats d'ocupació, analitzat els seus requeriments actuals per al perfil professional.",
                         "b": "S'ha comparat els diferents requeriments exigits pel mercat laboral amb les exigències per al treball en la funció pública relacionats amb el sector privat.",
-                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper.",
+                        "c": "S'ha reflexionat sobre les actituds i aptituds requerides actualment per a l'activitat professional relacionades amb el títol, així com les competències personals i socials més rellevants per al sector, identificant la nostra zona de desenvolupament proper."
                     }
                 },
                 "RA03": {
@@ -1071,7 +1071,7 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "t",
                 "u",
                 "v",
@@ -1161,7 +1161,7 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "w",
                 "x",
                 "y"
@@ -1285,7 +1285,7 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a"
             ],
             "CompetenciasTitulo": [
@@ -1323,7 +1323,7 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a"
             ],
             "CompetenciasTitulo": [
@@ -1361,7 +1361,7 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "ObjetivosGenerales": [
                 "a"
             ],
             "CompetenciasTitulo": [
