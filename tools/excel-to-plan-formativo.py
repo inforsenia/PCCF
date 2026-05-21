@@ -22,21 +22,21 @@ from pccf_utils import get_hoja_label
 hoja = get_hoja_label(hoja)
 print(" Trabajando con la hoja : "+hoja)
 
-def generar_tabla_markdown(strings,hoja_orig):
+def generar_tabla_markdown(ra_dict, hoja_orig):
+    
+    es_nuevo = not os.path.exists(plan_empresa_md) or os.path.getsize(plan_empresa_md) == 0
     
     # Crear fichero y escribir
     with open(plan_empresa_md, 'a', encoding='utf-8') as fichero:
         
+        if es_nuevo:
+            print("# Plan de formación en empresa\n", file=fichero)
+            
         print("## "+hoja_orig, file=fichero)
         print("\n\n", file=fichero)
         
         # Verificar si hay datos válidos (excluyendo "None.")
-        datos_validos = []
-        for s in strings:
-            partes = s.split('.', 1)
-            codigo = partes[0] + '.'
-            if codigo != "None.":
-                datos_validos.append(s)
+        datos_validos = {k: v for k, v in ra_dict.items() if not k.startswith("None.") and k != "None"}
         
         # Si no hay datos válidos, mostrar mensaje
         if not datos_validos:
@@ -45,17 +45,26 @@ def generar_tabla_markdown(strings,hoja_orig):
             # Generar tabla normal
             print("| RA       | Descripción |", file=fichero)
             print("|----------|-------------|", file=fichero)
-            for s in datos_validos:
+            for s in sorted(datos_validos.keys()):
                 # Separar el código (ej: "RA06.") del resto del texto
                 partes = s.split('.', 1)
-                codigo = partes[0]  # Sin punto final
-                descripcion = partes[1] if len(partes) > 1 else ""
-                print(f"| {codigo.ljust(8)} | {descripcion} |", file=fichero)
+                codigo = partes[0].strip()
+                descripcion = partes[1].strip() if len(partes) > 1 else ""
+                
+                # Imprimir la fila del RA principal
+                print(f"| **{codigo.ljust(8)}** | **{descripcion}** |", file=fichero)
+                
+                # Criterios asociados en nuevas filas
+                criterios = sorted(list(datos_validos[s]))
+                for c in criterios:
+                    c_clean = c.replace('\n', ' ').strip()
+                    # Imprimimos una fila con la primera columna vacía y el criterio en la segunda
+                    print(f"| {' '.ljust(8)} | {c_clean} |", file=fichero)
         
         print("\n\n\n",file=fichero)
 
 # Ejemplo de uso:
-strings = set()
+ra_dict = {}
 
 
 
@@ -78,19 +87,30 @@ for fila in range(fila_inicio, ws.max_row + 1):
         procesar_forzado=True
         
     if celda_actual.value is not None and celda_actual.data_type != 'f' or procesar_forzado:
-        # Obtener la columna anterior (ej: 'B' si columna_a_buscar es 'C')
+        # Obtener la columna anterior (ej: 'B' si columna_a_buscar es 'I')
         columna_anterior = chr(ord(columna_a_buscar) - 7)
         celda_anterior = ws[f"{columna_anterior}{fila}"]
+        ra_val = str(celda_anterior.value)
 
         # Verificar si la celda anterior está fusionada
         for merged_range in ws.merged_cells.ranges:
             if celda_anterior.coordinate in merged_range:
                 # Obtener la celda superior izquierda del rango fusionado
                 celda_fusionada = ws[merged_range.start_cell.coordinate]
-                strings.add(str(celda_fusionada.value))
-        strings.add(str(celda_anterior.value))
+                ra_val = str(celda_fusionada.value)
+                break
+        
+        # Obtener CE (columna E)
+        columna_ce = chr(ord(columna_a_buscar) - 4)
+        celda_ce = ws[f"{columna_ce}{fila}"]
+        ce_val = str(celda_ce.value).strip() if celda_ce.value else ""
+        
+        if ra_val not in ra_dict:
+            ra_dict[ra_val] = set()
+            
+        if ce_val and ce_val != "None":
+            ra_dict[ra_val].add(ce_val)
     else:
         pass
 
-ras_ordenados=sorted(strings)
-generar_tabla_markdown(ras_ordenados,hoja_orig)
+generar_tabla_markdown(ra_dict, hoja_orig)
