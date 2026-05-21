@@ -5,7 +5,7 @@ author: Departament d'Informàtica
 header-includes: |
 lang: ca-ES
 keywords: []
-titlepage: true,
+titlepage: true
 page-background: "../../rsrc/backgrounds/bg_EPM.pdf"
 page-background-opacity: 0.4
 titlepage-text-color: "3c4d64"

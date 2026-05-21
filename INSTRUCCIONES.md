@@ -110,6 +110,80 @@ if hoja.startswith("Comunicació i societat 2"): hoja = "CS2"
 >
 > Com que els mòduls `Ciències aplicades I` i `Ciències aplicades II` comencen amb les mateixes lletres i es confonen, ho hem solucionat reanomenant el mòdul al rd-fpbiio per `Ciències aplicades 1` i `Ciències aplicades 2` respectivament. El mateix per als mòduls de `Comunicació i societat I i II`.
 
+### Taula de correspondència de sigles per mòdul
+
+A continuació es detalla la correspondència entre el nom complet del mòdul (com s'autogenera la pestanya de l'excel) i les sigles curtes que cal establir com a nom de la pestanya perquè el script el reconega com a revisat i s'incloga al Plan de Formación:
+
+| Cicle / Família | Nom del mòdul a l'Excel | Sigles de la pestanya |
+| :--- | :--- | :---: |
+| **Comuns / Optatives** | Llenguatges de marques i sistemes de gestió d'informació | **LM** |
+| | Sostenibilitat aplicada al sistema productiu | **SOS** |
+| | Itinerari personal per a l'ocupabilitat I | **IPO1** |
+| | Itinerari personal per a l'ocupabilitat II | **IPO2** |
+| | Digitalització aplicada als sectors productius | **DIG** |
+| | Anglés Professional | **ANG** |
+| | Anglés oral en entorns professionals | **AOEP** |
+| | Comunicació professional | **COM** |
+| | Projecte intermodular | **PI** |
+| | Introducció al Núvol Públic | **NVL** |
+| **SMX** | Muntatge i manteniment d'equips | **MME** |
+| | Sistemes operatius monopast | **SOM** |
+| | Aplicacions ofimàtiques | **AOF** |
+| | Sistemes operatius en xarxa | **SOX** |
+| | Seguretat informàtica | **SIN** |
+| | Serveis en xarxa | **SEX** |
+| | Aplicacions web | **AW** |
+| | Xarxes locals | **XL** |
+| **DAM / DAW** | Entorns de desenvolupament | **ED** |
+| | Sistemes Informàtics | **SI** |
+| | Bases de Dades | **BBDD** |
+| | Programació | **PRG** |
+| **DAM** | Desenvolupament d'interfícies | **DI** |
+| | Accés a dades | **AD** |
+| | Programació de serveis i processos | **PSP** |
+| | Programació multimèdia i dispositius mòbils | **PMDM** |
+| | Sistemes de gestió empresarial | **SGE** |
+| **CEIABD** | Models d'intel·ligència artificial | **MIA** |
+| | Sistemes d'aprenentatge automàtic | **SAA** |
+| | Programació d'intel·ligència artificial | **PIA** |
+| | Sistemes de big data | **SBD** |
+| | Big Data aplicat | **BDA** |
+| **FPBIIO** | Montatge i manteniment de sistemes i components | **MMEB** |
+| | Operacions auxiliars per a la configuració i l'explotació | **OA** |
+| | Ofimàtica i arxiu de documents | **OAD** |
+| | Instal·lació i manteniment de xarxes per a la transmissió | **IMXTD** |
+| | Ciències aplicades I / Ciències aplicades 1 | **CA1** |
+| | Ciències aplicades II / Ciències aplicades 2 | **CA2** |
+| | Comunicació i societat I / Comunicació i societat 1 | **CS1** |
+| | Comunicació i societat II / Comunicació i societat 2 | **CS2** |
+| **APD** | Organització de l'atenció a les persones en situació de dependència | **OAPD** |
+| | Destreses socials | **DS** |
+| | Característiques i necessitats de les persones en situació de dependència | **CNP** |
+| | Atenció i suport psicosocial | **ASP** |
+| | Suport a la comunicació | **SC** |
+| | Suport domiciliari | **SD** |
+| | Atenció sanitària | **AS** |
+| | Atenció higiènica | **AH** |
+| | Teleassistència | **TEL** |
+| | Primers auxilis | **PA** |
+| **EI** | Didàctica de l'educació infantil | **DEI** |
+| | Autonomia personal i salut infantil | **APSI** |
+| | El joc infantil i la seua metodologia | **JOC** |
+| | Expressió i comunicació | **EC** |
+| | Desenvolupament cognitiu i motor | **DCM** |
+| | Desenvolupament socioafectiu | **DSA** |
+| | Habilitats socials | **HHSS** |
+| | Intervenció amb famílies i atenció a menors en risc social | **IFAM** |
+| | Projecte d'atenció a la infància | **PAI** |
+| **IS** | Context de la intervenció social | **CIS** |
+| | Inserció sociolaboral | **ISL** |
+| | Atenció a les unitats de convivència | **AUC** |
+| | Mediació comunitària | **MC** |
+| | Suport a la intervenció educativa | **SIE** |
+| | Promoció de l'autonomia personal | **PAP** |
+| | Sistemes augmentatius i alternatius de la comunicació | **SAAC** |
+| | Metodologia de la intervenció social | **MIS** |
+
 ## Procediment per a generar correctament les PD's i PCCF de cada cicle
 
 ### 1. Revisar el contingut de l'excel

@@ -1,6 +1,8 @@
 \newpage
 
-# Contribució dels Mòduls a les Competències del Cicle DAM## Competències Professionals
+# Contribució dels Mòduls a les Competències del Cicle DAM
+
+## Competències Professionals
 
 ### Taula 1 (Mòduls 1-10)
 
@@ -18,9 +20,9 @@
 | **j** Desenvolupar aplicacions per a telèfons mòbils, ta... |   |   | X |   | X | X |   | X | X | X |
 | **k** Crear ajudes generals i sensibles al context, empr... |   |   |   |   |   |   |   | X |   |   |
 | **l** Crear tutorials, manuals d'usuari, d'instal·lació,... | X |   |   |   |   |   | X | X | X | X |
-| **m** Empaquetar aplicacions per a la seua distribució p... |   |   |   |   |   |   |   | X | X |   |
-| **n** Desenvolupar aplicacions multiprocés i multifil em... |   |   |   |   |   |   |   |   | X | X |
-| **ny** Desenvolupar aplicacions capaces d'oferir serveis ... |   |   |   |   |   |   |   |   | X | X |
+| **m** Empaquetar aplicacions per a la seua distribució p... |   |   |   |   | X |   |   | X | X |   |
+| **n** Desenvolupar aplicacions multiprocés i multifil em... |   |   |   |   | X |   |   |   | X | X |
+| **ñ** Desenvolupar aplicacions capaces d'oferir serveis ... |   |   |   |   |   |   |   |   | X | X |
 | **o** Participar en la implantació de sistemes ERP-CRM a... |   |   |   | X |   |   |   |   |   |   |
 | **p** Gestionar la informació emmagatzemada en sistemes ... |   | X |   | X |   |   | X |   |   |   |
 | **q** Desenvolupar components personalitzats per a un si... |   |   |   |   |   |   |   |   |   |   |
@@ -29,23 +31,23 @@
 
 ### Taula 2 (Mòduls 11-17)
 
-| Competència | 0491 | 1709 | 1710 | 1665 | MOPANGPROF | MOPCOMPROF | PI |
+| Competència | 0491 | 1665 | 1709 | 1710 | MOPANGPROF | MOPCOMPROF | PI |
 |-------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **a** Configurar i explotar sistemes informàtics, adapta... | X | X | X | X | X | X | X |
+| **a** Configurar i explotar sistemes informàtics, adapta... | X | X |   |   | X | X | X |
 | **b** Aplicar tècniques i procediments relacionats amb l... | X |   |   |   |   |   |   |
 | **c** Gestionar bases de dades, interpretant el seu diss... | X |   |   |   |   |   |   |
 | **d** Gestionar entorns de desenvolupament adaptant la s... |   |   |   |   |   |   |   |
-| **e** Desenvolupar aplicacions multiplataforma amb accés... | X | X | X | X |   |   |   |
-| **f** Desenvolupar aplicacions implementant un sistema c... | X | X | X | X |   |   |   |
+| **e** Desenvolupar aplicacions multiplataforma amb accés... | X | X |   |   |   |   |   |
+| **f** Desenvolupar aplicacions implementant un sistema c... | X | X |   |   |   |   |   |
 | **g** Integrar continguts gràfics i components multimèdi... |   |   |   |   |   |   |   |
 | **h** Desenvolupar interfícies gràfics d'usuari interact... |   |   |   |   |   |   |   |
-| **i** Participar en el desenvolupament de jocs i aplicac... |   | X | X | X |   |   |   |
-| **j** Desenvolupar aplicacions per a telèfons mòbils, ta... |   | X | X | X |   |   |   |
+| **i** Participar en el desenvolupament de jocs i aplicac... |   | X |   |   |   |   |   |
+| **j** Desenvolupar aplicacions per a telèfons mòbils, ta... |   | X |   |   |   |   |   |
 | **k** Crear ajudes generals i sensibles al context, empr... |   |   |   |   |   |   |   |
 | **l** Crear tutorials, manuals d'usuari, d'instal·lació,... | X |   |   |   |   |   |   |
 | **m** Empaquetar aplicacions per a la seua distribució p... |   |   |   |   |   |   |   |
 | **n** Desenvolupar aplicacions multiprocés i multifil em... |   |   |   |   |   |   |   |
-| **ny** Desenvolupar aplicacions capaces d'oferir serveis ... |   |   |   |   |   |   |   |
+| **ñ** Desenvolupar aplicacions capaces d'oferir serveis ... |   |   |   |   |   |   |   |
 | **o** Participar en la implantació de sistemes ERP-CRM a... | X |   |   |   |   |   |   |
 | **p** Gestionar la informació emmagatzemada en sistemes ... | X |   |   |   |   |   |   |
 | **q** Desenvolupar components personalitzats per a un si... | X |   |   |   |   |   |   |
@@ -67,13 +69,13 @@
 
 ### Taula 2 (Mòduls 11-17)
 
-| Competència | 0491 | 1709 | 1710 | 1665 | MOPANGPROF | MOPCOMPROF | PI |
+| Competència | 0491 | 1665 | 1709 | 1710 | MOPANGPROF | MOPCOMPROF | PI |
 |-------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **t** Establir vies eficaces de relació professional i c... | X |   |   |   |   |   |   |
-| **u** Liderar situacions col·lectives que es puguen prod... | X |   |   |   |   |   |   |
+| **t** Establir vies eficaces de relació professional i c... | X |   | X |   |   |   |   |
+| **u** Liderar situacions col·lectives que es puguen prod... | X |   | X |   |   |   |   |
 | **v** Gestionar la seua carrera professional, analitzant... |   | X | X | X |   |   |   |
-| **w** Mantenir l'esperit d'innovació i actualització en ... | X |   |   |   |   |   |   |
-| **x** Crear i gestionar una petita empresa, realitzant u... |   |   |   |   |   |   |   |
+| **w** Mantenir l'esperit d'innovació i actualització en ... | X |   | X | X |   |   |   |
+| **x** Crear i gestionar una petita empresa, realitzant u... |   |   |   | X |   |   |   |
 | **y** Participar de forma activa en la vida econòmica, s... |   | X | X | X |   |   |   |
 
 ### Llegenda de Mòduls
@@ -89,9 +91,9 @@
 - **0489**: Programació multimèdia i dispositius mòbils
 - **0490**: Programació de serveis i processos
 - **0491**: Sistemes de gestió empresarial
+- **1665**: Digitalització aplicada als sectors productius (GS)
 - **1709**: Itinerari personal per a l'ocupabilitat I
 - **1710**: Itinerari personal per a l'ocupabilitat II
-- **1665**: Digitalització aplicada als sectors productius (GS)
 - **MOPANGPROF**: Anglés oral en entorns professionals
 - **MOPCOMPROF**: Comunicació professional
 - **PI**: Projecte intermodular

@@ -9,7 +9,7 @@ abstract: |
           Programacions Didàctiques del Cicle Formatiu per al Grau Superior de Desenvolupament d'Aplicacions Multiplataforma
           Impartit a l'IES La Sénia.
           Curs 2025-2026.
-titlepage: true,
+titlepage: true
 page-background: "../rsrc/backgrounds/bg_EPM.pdf"
 page-background-opacity: 0.4
 titlepage-text-color: "3c4d64"

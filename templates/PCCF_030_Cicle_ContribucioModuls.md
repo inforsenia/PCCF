@@ -2,7 +2,7 @@
 
 # Contribució dels Mòduls a les Competències del Cicle {{ ciclo }}
 
-{%- set modulos_con_competencias = [] -%}
+{% set modulos_con_competencias = [] %}
 {%- for codigo, modulo in modulos.items() if modulo.get('CompetenciasTitulo', []) -%}
   {%- if modulos_con_competencias.append((codigo, modulo)) -%}{%- endif -%}
 {%- endfor -%}

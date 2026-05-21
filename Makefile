@@ -44,6 +44,15 @@ clean:
 	rm -f PDFS/*.pdf PDFS/*.odt
 	rm -rf temp/
 
+## ----------------------------------------------------------------
+##  JSON validation
+## ----------------------------------------------------------------
+.PHONY: validate-json
+validate-json:
+	@python3 tools/validate_json.py
+
+
+
 files:
 	@echo " [${BLUE} * Creando Espacio ${RESET}] "
 	@echo "${LIGHTBLUE} * Carpeta [ PDFS ]${RESET}"
@@ -63,6 +72,9 @@ proyecto-%: files proyecto-base
 	@$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	@$(eval FAMILIA=$(if $(filter $(CICLO),$(CICLOS_INF)),INF,SCO))
 	
+	# Run JSON validation before any other steps
+	@$(MAKE) validate-json
+
 	@echo " [ ${BLUE} Proyecto Curricular : $(CICLO_UPPER) (Familia $(FAMILIA)) ${RESET}]"
 	@echo " ${LIGHTBLUE} Creando temp ${RESET}"
 	

@@ -20,7 +20,7 @@
 | l | Crear tutorials, manuals d'usuari, d'instal·lació, de configuració i d'administració, emprant eines específiques. | $\star$ |
 | m | Empaquetar aplicacions per a la seua distribució preparant paquets auto instal·lables amb assistents incorporats. | $\star$ |
 | n | Desenvolupar aplicacions multiprocés i multifil emprant llibreries i tècniques de programació específiques. | $\star$$\star$$\star$ |
-| ny | Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació. | $\star$$\star$$\star$ |
+| ñ | Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació. | $\star$$\star$$\star$ |
 | o | Participar en la implantació de sistemes ERP-CRM avaluant la utilitat de cadascun dels seus mòduls. | $\star$ |
 | p | Gestionar la informació emmagatzemada en sistemes ERP-CRM garantint la seua integritat. | $\star$$\star$ |
 | q | Desenvolupar components personalitzats per a un sistema ERP-CRM atenent als requeriments. | $\star$$\star$$\star$ |

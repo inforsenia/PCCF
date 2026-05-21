@@ -1,6 +1,6 @@
 \newpage
 
-## Marc Normatiu Comú
+# Marc Normatiu Comú
 
 El Marc Normatiu vigent que s' ha tingut en compte per al desenvolupament del projecte curricular està format pels documents següents:
 
