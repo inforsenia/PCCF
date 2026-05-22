@@ -85,7 +85,7 @@
 - **0485**: Programació
 - **0373**: Llenguatges de marques i sistemes de gestió d'informació
 - **0487**: Entorns de desenvolupament
-- **0179**: Anglès Professional (GS)
+- **0179**: Anglés Professional (GS)
 - **0486**: Accés a dades
 - **0488**: Desenvolupament d'interfícies
 - **0489**: Programació multimèdia i dispositius mòbils

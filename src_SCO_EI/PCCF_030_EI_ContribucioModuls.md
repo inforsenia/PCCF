@@ -67,7 +67,7 @@
 - **0017**: Habilitats socials
 - **0018**: Intervenció amb famílies i atenció a menors en risc social
 - **0020**: Primers auxilis
-- **0179**: Anglès Professional (GS)
+- **0179**: Anglés Professional (GS)
 - **1709**: Itinerari personal per a l'ocupabilitat I
 - **1710**: Itinerari personal per a l'ocupabilitat II
 - **MOPANGPROF**: Anglés oral en entorns professionals

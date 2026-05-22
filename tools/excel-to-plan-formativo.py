@@ -19,7 +19,9 @@ plan_empresa_md = sys.argv[3]
 hoja_orig=hoja
 
 from pccf_utils import get_hoja_label
-hoja = get_hoja_label(hoja)
+# Si el libro no es autogenerado, convierto el nombre de la hoja a las siglas del módulo
+if not "autogenerado" in ruta_excel:
+    hoja = get_hoja_label(hoja)
 print(" Trabajando con la hoja : "+hoja)
 
 def generar_tabla_markdown(ra_dict, hoja_orig):
