@@ -2,7 +2,7 @@
 
 # Enfocaments didàctics i metodològics
 
-## Recursos i/o estratègies per a evitar l’us de la IA: 
+## Recursos i/o estratègies per a evitar l’us de la IA
 
 - Intentar no demanar treballs de desenvolupament amb ordinador perquè el generen amb IA i no lligen el que han generat. Si és així una opció seria demanar que ho defensen fent una presentació en la qual se’ls pot preguntar i aclarir si ho han fet ells o la IA, o al menys si han aprés alguna cosa encara que ho haja fet la IA. 
 
