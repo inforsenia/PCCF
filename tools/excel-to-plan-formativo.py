@@ -32,6 +32,7 @@ def generar_tabla_markdown(ra_dict, hoja_orig):
     with open(plan_empresa_md, 'a', encoding='utf-8') as fichero:
         
         if es_nuevo:
+            print("\\newpage\n", file=fichero)
             print("# Plan de formación en empresa\n", file=fichero)
             
         print("## "+hoja_orig, file=fichero)
