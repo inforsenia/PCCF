@@ -8,7 +8,7 @@
 
 - Examens: Una opció per a fer examens i evitar possible us de la IA seria obligar-los a gravar la seua pantalla mentre fan l’examen i que tinguen el rellotge visible (amb els segons), junt amb l’entrega de l’examen, s’entregarà la gravació de la pantalla de manera que el docent la puga revisar si ho creu necessàri. 
 
-## Qualificació de RA’s i Avaluacions 
+## Qualificació de RA’s i Avaluacions
 
 - La nota de l’avaluació a la que aporten valor diferents RA’s, serà igual o superior a 5 solament si tots els RA’s implicats es consideren superats (o al menys la part proporcional corresponent). El docent ho especificarà en les anotacions d'ITACA, justificant per quin motiu no ha superat l'avaluació.
 - Si algun docent considera important i/o imprescindible que les pràctiques estiguen superades per a aprovar els RA’s, s’haurà d’especificar a la programació. Si algun alumne no supera o no entrega alguna d’eixes pràctiques “obligatories” el RA es puntuarà amb una nota inferior a 5, i per tant la avaluació corresponent també la tindrà no superada. 
