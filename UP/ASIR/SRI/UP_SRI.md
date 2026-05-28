@@ -40,12 +40,12 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Sistemas de nombres planos y jerárquicos. Resolutores de nombres. Proceso de resolución de un nombre de dominio. Servidores raíz y dominios de primer nivel y sucesivos. Zonas primarias y secundarias. Transferencias de zona. Delegación. Tipos de registros. Servidores de nombres en direcciones «ip» dinámicas. Utilización de reenviadores. Comandos relativos a la resolución de nombres. El cliente del servicio de nombres de dominio. Configuración. El servidor de nombres de dominio. Configuración. Herramientas gráficas de configuración. Documentación de las configuraciones establecidas.
-*   **Teoría:** [Servicios en red: DNS](https://jgarciabenlloch.github.io/protocolos/dns).
-*   **Metodología:** Metodologías activas basadas en el proyecto [Terraformadores de Venus](https://terraformadoresdevenus.com).
+*   **Teoría:** [Servicios en red: DNS](https://profesorjavi.github.io/SR//dns).
+*   **Metodología:** Metodologías activas basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión 2: Configuración del Servidor DNS en la Red Sentinel](https://terraformadoresdevenus.com/mision-dns-sentinel).
-    *   **E2:** [Misión 3: Delegación de Zonas en el Servidor DNS](https://terraformadoresdevenus.com/mision-delegacion-dns).
-    *   **E3:** [Misión: Actualización Dinámica de DNS](https://terraformadoresdevenus.com/mision-actualizacion-dinamica).
+    *   **E1:** [Misión 2: Configuración del Servidor DNS en la Red Sentinel](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E2:** [Misión 3: Delegación de Zonas en el Servidor DNS](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E3:** [Misión: Actualización Dinámica de DNS](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** GNS3, VirtualBox, Sistema Operativo Linux (BIND9).
@@ -76,12 +76,12 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Funcionamiento del servicio DHCP. Características. Mensajes. Asignaciones. Tipos. Utilización de un cliente de DHCP. Autoconfiguración de red sin el servicio. Instalación y configuración de un servidor DHCP en sistemas operativos libres y propietarios. Parámetros y declaraciones de configuración. Servidor autorizado. Comandos utilizados para el funcionamiento del servicio. Herramientas gráficas de configuración. Diagnóstico y resolución de incidencias en el servicio. Documentación de las configuraciones establecidas.
-*   **Teoría:** [Servicios en red: DHCP](https://jgarciabenlloch.github.io/protocolos/dhcp).
+*   **Teoría:** [Servicios en red: DHCP](https://profesorjavi.github.io/SR//dhcp).
 *   **Metodología:** Aprendizaje basado en retos técnicos de la infraestructura de Venus.
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Configuración de un Servidor DHCP en Lobezno](https://terraformadoresdevenus.com/mision-dhcp-lobezno).
-    *   **E2:** [Misión: Alta Disponibilidad de DHCP](https://terraformadoresdevenus.com/mision-dhcp-ha).
-    *   **E3:** [Misión: Actualización Dinámica de DNS - Integración DHCP](https://terraformadoresdevenus.com/mision-actualizacion-dinamica).
+    *   **E1:** [Misión: Configuración de un Servidor DHCP en Lobezno](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E2:** [Misión: Alta Disponibilidad de DHCP](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E3:** [Misión: Actualización Dinámica de DNS - Integración DHCP](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Equipamiento:** MikroTik (Relay DHCP), Kea DHCP, Docker, Linux.
@@ -107,12 +107,12 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Web: Protocolo HTTP. Tipos MIME. Instalación y configuración. Módulos. Amfitriones virtuales. Autenticación. HTTPS. Certificados. Registro y monitorización. FTP: Servidores y clientes. Permisos y cuotas. Tipos de usuarios. Modes de conexión. Transferencias.
-*   **Teoría:** [HTTP](https://jgarciabenlloch.github.io/protocolos/http) y [FTP](https://jgarciabenlloch.github.io/protocolos/ftp).
+*   **Teoría:** [HTTP](https://profesorjavi.github.io/SR//http) y [FTP](https://profesorjavi.github.io/SR//ftp).
 *   **Metodología:** Proyecto de infraestructura de nube pública para startups.
 *   **Secuencia (Fases):**
-    *   **E1:** [Proyecto: Infraestructura Hosting - Servidor Apache y Seguridad HTTPS (Let's Encrypt)](https://terraformadoresdevenus.com/proyecto-hosting).
-    *   **E2:** [Proyecto: Infraestructura Hosting - Servidor Nginx y Hosting Especializado para Clientes](https://terraformadoresdevenus.com/proyecto-hosting).
-    *   **E3:** [Proyecto: Infraestructura Hosting - Servidor FTP seguro FTPS, SFTP y File Browser](https://terraformadoresdevenus.com/proyecto-hosting).
+    *   **E1:** [Proyecto: Infraestructura Hosting - Servidor Apache y Seguridad HTTPS (Let's Encrypt)](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E2:** [Proyecto: Infraestructura Hosting - Servidor Nginx y Hosting Especializado para Clientes](https://inforsenia.github.io/Terraformadores/v5/).
+    *   **E3:** [Proyecto: Infraestructura Hosting - Servidor FTP seguro FTPS, SFTP y File Browser](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Infraestructura:** AWS (EC2, IP elástica), Let's Encrypt, Apache, Nginx, vsftpd, Docker.
@@ -136,9 +136,9 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Agentes (MTA, MDA, MUA). Estructura de missatges. Protocol de transferència. Clients. Comptes, àlies i bústies. Webmail. Correu segur. Reenviament. Tècniques antispam. Protocols de descàrrega.
-*   **Teoría:** [Servicios en red: EMAIL](https://jgarciabenlloch.github.io/protocolos/email).
+*   **Teoría:** [Servicios en red: EMAIL](https://profesorjavi.github.io/SR//email).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Instalación y configuración del servicio de correo electrónico (Index Misiones)](https://terraformadoresdevenus.com/servicios-web-ftp-email-streaming).
+    *   **E1:** [Misión: Instalación y configuración del servicio de correo electrónico (Index Misiones)](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Sistemas:** Servidores Linux, Postfix, Dovecot, Roundcube.
@@ -163,9 +163,9 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Audio: Formats. Servidors de streaming. VoIP. Sindicació (Podcast). Vídeo: Formats. Servidors de vídeo. Còdecs. Videoconferència. Servidors de jocs en línia.
-*   **Teoría:** [Servicios en red: STREAMING](https://jgarciabenlloch.github.io/protocolos/streaming).
+*   **Teoría:** [Servicios en red: STREAMING](https://inforsenia.github.io/Terraformadores/v5/).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Configuración de un Servidor de Streaming con Nginx y RTMP y AWS](https://terraformadoresdevenus.com/mision-streaming-nginx).
+    *   **E1:** [Misión: Configuración de un Servidor de Streaming con Nginx y RTMP y AWS](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Herramientas:** Nginx (Módulo RTMP), OBS Studio, VLC Media Player, Video.js, AWS.
@@ -189,9 +189,9 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** Missatgeria instantània. Protocols. Clients. Normes de respecte. Servici de notícies. Llistes de distribució.
-*   **Teoría:** [Servicios en red: Monitorización/Mensajería](https://jgarciabenlloch.github.io/protocolos/monitorizacion).
+*   **Teoría:** [Servicios en red: Monitorización/Mensajería](https://profesorjavi.github.io/SR//monitorizacion).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Implementar un sistema de mensajería con Matrix (Synapse) para alertas automáticas](https://terraformadoresdevenus.com/mision-monitorizacion-docker).
+    *   **E1:** [Misión: Implementar un sistema de mensajería con Matrix (Synapse) para alertas automáticas](https://inforsenia.github.io/Terraformadores/v5/).
 
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** Docker, Matrix (Synapse), Prometheus (Alertmanager).
