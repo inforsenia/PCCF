@@ -1,5 +1,8 @@
 \newpage
-# El Programari Lliure i els seus valors com a premissa
+
+# Altres aspectes a tindre en compte
+
+## El Programari Lliure i els seus valors com a premissa
 
 En una societat cada vegada més digitalitzada, però alhora cada vegada més alièna a com funciona en realitat el món digital, resulta de valor pedagògic especial donar exemples i valors que potser no estan sent recolzats pel conjunt de la societat.
 

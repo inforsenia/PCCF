@@ -68,9 +68,16 @@ proyecto-base: files
 
 # Regla patrón para todos los ciclos
 proyecto-%: files proyecto-base
-	@$(eval CICLO=$(subst proyecto-,,$@))
+	@$(eval CICLO_RAW=$(subst proyecto-,,$@))
+	@$(eval CICLO=$(shell echo $(CICLO_RAW) | tr '[:upper:]' '[:lower:]'))
 	@$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
-	@$(eval FAMILIA=$(if $(filter $(CICLO),$(CICLOS_INF)),INF,SCO))
+	@$(eval FAMILIA=$(if $(filter $(CICLO),$(CICLOS_INF)),INF,$(if $(filter $(CICLO),$(CICLOS_SCO)),SCO,)))
+	@if [ -z "$(FAMILIA)" ]; then \
+		echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; \
+		echo " ${LIGHTYELLOW} Ciclos válidos INF: $(CICLOS_INF) ${RESET}"; \
+		echo " ${LIGHTYELLOW} Ciclos válidos SCO: $(CICLOS_SCO) ${RESET}"; \
+		exit 1; \
+	fi
 	
 	# Run JSON validation before any other steps
 	@$(MAKE) validate-json
