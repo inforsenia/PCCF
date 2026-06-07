@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **07/06/2026 a las 16:33:38 UTC**
+> 🕒 Última actualización: **07/06/2026 a las 16:34:02 UTC**
 
 ---
 
@@ -78,7 +78,7 @@
 | MME | pendiente |
 | OPS190 | pendiente |
 | RL | pendiente |
-| SASP | pendiente |
+| SASP | **completado** |
 | SER | **completado** |
 | SI | pendiente |
 | SOM | **completado** |
@@ -86,4 +86,4 @@
 
 ---
 
-_Generado automáticamente el 07/06/2026 a las 16:33:38 UTC_
+_Generado automáticamente el 07/06/2026 a las 16:34:02 UTC_
