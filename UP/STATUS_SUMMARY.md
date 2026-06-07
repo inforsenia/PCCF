@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **07/06/2026 a las 16:32:52 UTC**
+> 🕒 Última actualización: **07/06/2026 a las 16:33:15 UTC**
 
 ---
 
@@ -41,7 +41,7 @@
 | PMDM | pendiente |
 | PR | pendiente |
 | PSP | pendiente |
-| SASP | pendiente |
+| SASP | **completado** |
 | SGE | pendiente |
 | SI | pendiente |
 
@@ -86,4 +86,4 @@
 
 ---
 
-_Generado automáticamente el 07/06/2026 a las 16:32:52 UTC_
+_Generado automáticamente el 07/06/2026 a las 16:33:15 UTC_
