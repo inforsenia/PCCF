@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **07/06/2026 a las 16:33:15 UTC**
+> 🕒 Última actualización: **07/06/2026 a las 16:33:38 UTC**
 
 ---
 
@@ -62,7 +62,7 @@
 | LMSGI | pendiente |
 | OPS190 | pendiente |
 | PR | pendiente |
-| SASP | pendiente |
+| SASP | **completado** |
 | SI | pendiente |
 
 ## SMR
@@ -86,4 +86,4 @@
 
 ---
 
-_Generado automáticamente el 07/06/2026 a las 16:33:15 UTC_
+_Generado automáticamente el 07/06/2026 a las 16:33:38 UTC_
