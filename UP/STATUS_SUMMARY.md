@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **07/06/2026 a las 10:22:19 UTC**
+> 🕒 Última actualización: **07/06/2026 a las 16:32:52 UTC**
 
 ---
 
@@ -22,7 +22,7 @@
 | OPS190 | pendiente |
 | PAR | pendiente |
 | SAD | pendiente |
-| SASP | pendiente |
+| SASP | **completado** |
 | SRI | **completado** |
 
 ## DAM
@@ -86,4 +86,4 @@
 
 ---
 
-_Generado automáticamente el 07/06/2026 a las 10:22:19 UTC_
+_Generado automáticamente el 07/06/2026 a las 16:32:52 UTC_
