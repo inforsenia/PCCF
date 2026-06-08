@@ -46,11 +46,15 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Instalación y configuración de Suites Ofimáticas.
-  * Conceptos sobre /etc/alternatives.
-  * Combinación de Correspondencia.
-  * Gestión de Bases de Datos de Oficina.
+
+## Ejercicios realizados durante la Unidad:
+
+* Instalación y configuración de Suites Ofimáticas.
+* Conceptos sobre /etc/alternatives en Oleo sobre lienzo.
+* Entrevistas personales para exponer los contenidos aprendidos.
+* Conceptos sobre Sistemas Informáticos.
+* Combinación de Correspondencia.
+* Gestión de Bases de Datos de Oficina.
 
 
 

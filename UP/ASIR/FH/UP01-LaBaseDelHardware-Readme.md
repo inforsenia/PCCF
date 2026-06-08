@@ -48,11 +48,17 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Jerarquía de memória.
-  * Conceptos sobre Hardware.
-  * Redes y UDEV.
-  * Puntos de Acceso.
+
+## Ejercicios realizados durante la Unidad
+
+* Jerarquía de memória.
+* Conceptos sobre Hardware.
+* CPU
+* RAM
+* Placas Base
+* Discos Duros
+* Redes y UDEV.
+* Puntos de Acceso.
 
 
 

@@ -58,12 +58,14 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Instalación y configuración de Proxmox.
-  * Soporte a todos los otros módulos usando Proxmox.
-  * Puesta en marcha de ZFS como sistema de ficheros.
-  * Herramientas de Restauración.
-  * Monitorización.
+
+## Ejercicios realizados durante la Unidad
+  
+* Instalación y configuración de Proxmox.
+* Soporte a todos los otros módulos usando Proxmox.
+* Puesta en marcha de ZFS como sistema de ficheros.
+* Herramientas de Restauración y backup sobre Pools de almacenamiento.
+* Monitorización.
 
 
 
