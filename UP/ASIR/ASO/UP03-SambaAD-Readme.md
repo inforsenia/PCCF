@@ -1,4 +1,4 @@
-# UP02 : Usuarios, Grupos y Permisos
+# UP03 : Samba AD
 
 ## Resultados y Criterios
 
@@ -93,15 +93,17 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Creación del Dominio usando SambaAD.
-  * Creación de Usuarios y Grupos en el Dominio.
-  * Comprobaciones de pertenencia a grupos.
-  * Comprobaciones básicas de usuarios en el Dominio.
-  * Registros y errores.
-  * Scripting y Usuarios en el Dominio.
-  * Compartición de recursos.
-  * CUPS-PDF.
+
+## Ejercicios realizados durante la Unidad
+
+* Creación del Dominio usando SambaAD.
+* Creación de Usuarios y Grupos en el Dominio.
+* Comprobaciones de pertenencia a grupos.
+* Comprobaciones básicas de usuarios en el Dominio.
+* Registros y errores.
+* Scripting y Usuarios en el Dominio.
+* Compartición de recursos.
+* CUPS-PDF.
 
 
 

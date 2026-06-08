@@ -77,12 +77,15 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Conceptos sobre netplan
-  * Redes Virtuales.
-  * Scripting y Networking
 
-  
+## Ejercicios realizados durante la Unidad
+
+* Introducción al ShellScripting.
+* Conceptos sobre netplan.
+* Puertos y Port-Knocking.
+* Reenvio de puertos y NAT.
+* Redes Virtuales.
+* Scripting y Networking.
 
 
 

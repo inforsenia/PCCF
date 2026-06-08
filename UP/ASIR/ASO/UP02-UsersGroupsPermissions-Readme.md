@@ -77,12 +77,15 @@
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
 * Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Creación de Usuarios y Grupos.
-  * Comprobaciones de pertenencia a grupos.
-  * Comprobaciones básicas de usuarios.
-  * Registros y errores.
-  * Scripting y Usuarios.
+
+## Ejercicios realizados durante la Unidad
+
+* Creación de Usuarios y Grupos.
+* Comprobaciones de pertenencia a grupos.
+* Comprobaciones básicas de usuarios.
+* Scripts de Inicio de Sesión.
+* Registros y errores.
+* Scripting y Usuarios.
 
 
 
