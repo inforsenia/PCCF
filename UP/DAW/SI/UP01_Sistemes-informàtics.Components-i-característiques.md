@@ -28,12 +28,11 @@
 | 35 sessions | 08/09/2025 $\rightarrow$ 22/10/2025 |
 
 
+# Avaluació
 
-# Evaluación
-
-* Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
-* Observación directa.
-* Ejercicios realizados durante la Unidad:
-  * Ejercicios de cambio de Base. 
-  * Rutas absolutas y relativas.
-  * Expresiones regulares.
+* Proves escrites objectives que posen en joc els conceptes explicats en classe.
+* Observació directa.
+* Exercicis realitzats durant la Unitat:
+ * Exercicis de canvi de Base. 
+ * Rutes absolutes i relatives.
+ * Expressions regulars.
