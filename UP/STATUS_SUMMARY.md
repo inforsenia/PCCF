@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **10/06/2026 a las 14:45:22 UTC**
+> 🕒 Última actualización: **10/06/2026 a las 15:29:38 UTC**
 
 ---
 
@@ -42,7 +42,7 @@
 | PR | pendiente |
 | PSP | pendiente |
 | SASP | **completado** |
-| SGE | pendiente |
+| SGE | **completado** |
 | SI | pendiente |
 
 ## DAW
@@ -86,4 +86,4 @@
 
 ---
 
-_Generado automáticamente el 10/06/2026 a las 14:45:22 UTC_
+_Generado automáticamente el 10/06/2026 a las 15:29:38 UTC_
