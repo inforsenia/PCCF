@@ -30,9 +30,10 @@
 
 # Avaluació
 
-* Proves escrites objectives que posen en joc els conceptes explicats en classe.
-* Observació directa.
+* Proves escrites objectives que posen en joc els conceptes explicats en classe
+* Observació directa
 * Exercicis realitzats durant la Unitat:
- * Exercicis de canvi de Base. 
- * Rutes absolutes i relatives.
- * Expressions regulars.
+  * Representació de la informació 
+  * Introducció a la virtualització
+  * Reconeixement del hardware
+  * Gestió de particionament de discs
