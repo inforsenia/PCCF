@@ -1,1 +1,41 @@
+# UP02 : Instal·la sistemes operatius planificant el procés i interpretant documentació tècnica
 
+## Resultats i Criteris
+
+### Resultats d'Aprenentatge
+
+| RA   | Resultat                                                                                     |
+|------|----------------------------------------------------------------------------------------------|
+| RA02 | Instal·la sistemes operatius planificant el procés i interpretant documentació tècnica                                          |
+
+### Criteris d'Avaluació 
+
+| RA02 | Criteris d'Avaluació                              |
+|------|------------------------------------------------------|
+|a    | S’han identificat els elements funcionals d’un sistema informàtic.|
+|b    | S’han analitzat les característiques, funcions i arquitectura d’un sistema operatiu.|
+|c    | S’han comparat sistemes operatius en base als seus requisits, característiques, camps d’aplicació i llicències d’ús.|
+|d    | S’ha planificat el procés de la instal·lació de sistemes operatius.|
+|e    | S’han instal·lat i actualitzat sistemes operatius lliures i propietaris.|
+|f    | S’han aplicat tècniques d’actualització i recuperació del sistema.|
+|g    | S’han utilitzat tecnologies de virtualització per a instal·lar i provar sistemes operatius.|
+|h    | S’han instal·lat, desinstal·lat i actualitzat aplicacions.|
+|i    | S’han documentat els processos realitzats.|
+
+# Duració i temporalització
+
+| Sessions (hores)   | Dates                              |
+|------------|-------------------------------------|
+| 25 sessions | 23/10/2025 $\rightarrow$ 26/11/2025 |
+
+
+# Avaluació
+
+* Proves escrites objectives que posen en joc els conceptes explicats en classe
+* Observació directa
+* Exercicis realitzats durant la Unitat:
+  * Gestió de fitxers i directoris 
+  * Gestió de permisos
+  * Usuaris i grups
+  * Tasques programades
+  * Backups
