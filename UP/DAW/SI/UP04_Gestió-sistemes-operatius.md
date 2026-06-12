@@ -1,4 +1,4 @@
-# UP01 : Sistemes informàtics. Components i característiques
+# UP04 : Sistemes informàtics. Components i característiques
 
 ## Resultats i Criteris
 
