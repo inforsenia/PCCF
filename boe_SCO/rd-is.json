@@ -225,22 +225,6 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f",
-                "g",
-                "h",
-                "i",
-                "j",
-                "k",
-                "m",
-                "f",
-                "o"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -255,6 +239,22 @@
                 "k",
                 "m",
                 "fi",
+                "o"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "f",
                 "o"
             ]
         },
@@ -338,7 +338,20 @@
                 "UC1036_3": "Donar suport en el procés d'inserció sociolaboral de persones amb discapacitat.",
                 "UC1037_3": "Efectuar el seguiment de la inserció sociolaboral amb l'empresa, l'usuari i el seu entorn personal."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "k",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ],
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -352,19 +365,6 @@
                 "u",
                 "v",
                 "w"
-            ],
-            "CompetenciasTitulo": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "k",
-                "ñ",
-                "o",
-                "q",
-                "s",
-                "t",
-                "u"
             ]
         },
         "0339": {
@@ -457,7 +457,22 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "g",
+                "f",
+                "o",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u"
+            ],
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -473,21 +488,6 @@
                 "u",
                 "v",
                 "w"
-            ],
-            "CompetenciasTitulo": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "g",
-                "f",
-                "o",
-                "q",
-                "r",
-                "s",
-                "t",
-                "u"
             ]
         },
         "0340": {
@@ -554,19 +554,6 @@
                 "UC1040_3": "Organitzar i implementar el procés de gestió de conflictes.",
                 "UC1041_3": "Realitzar la valoració, el seguiment i la difusió de la mediació com una via de gestió de conflictes."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "m",
-                "ñ",
-                "o",
-                "q",
-                "r",
-                "t",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -578,6 +565,19 @@
                 "q",
                 "s",
                 "u"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "m",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "w"
             ]
         },
         "0341": {
@@ -642,7 +642,7 @@
                 "UC1427_3": "Executar, en col·laboració amb el tutor/a i/o amb l'equip interdisciplinari del centre educatiu, els programes educatius de l'alumnat amb necessitats educatives especials (ACNEE) a la seua aula de referència.",
                 "UC1428_3": "Implementar els programes d'autonomia i higiene personal en l'assec de l'alumnat amb necessitats educatives especials (ACNEE), participant amb l'equip interdisciplinari del centre educatiu."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a",
                 "d",
                 "f",
@@ -652,7 +652,7 @@
                 "q",
                 "u"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a",
                 "d",
                 "f",
@@ -766,7 +766,22 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "d",
+                "f",
+                "h",
+                "i",
+                "j",
+                "ñ",
+                "o",
+                "q",
+                "s",
+                "t",
+                "u"
+            ],
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "d",
@@ -782,21 +797,6 @@
                 "u",
                 "v",
                 "w"
-            ],
-            "CompetenciasTitulo": [
-                "a",
-                "b",
-                "d",
-                "f",
-                "h",
-                "i",
-                "j",
-                "ñ",
-                "o",
-                "q",
-                "s",
-                "t",
-                "u"
             ]
         },
         "0343": {
@@ -870,21 +870,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0254_3": "Establir, adaptar i aplicar sistemes alternatius de comunicació."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "d",
-                "h",
-                "j",
-                "l",
-                "ñ",
-                "o",
-                "q",
-                "r",
-                "t",
-                "u",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -898,6 +883,21 @@
                 "s",
                 "t",
                 "u"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "d",
+                "h",
+                "j",
+                "l",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "t",
+                "u",
+                "w"
             ]
         },
         "0344": {
@@ -975,22 +975,6 @@
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1026_3": "Incorporar la perspectiva de gènere en els projectes d'intervenció social."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f",
-                "g",
-                "h",
-                "i",
-                "j",
-                "k",
-                "m",
-                "ñ",
-                "u"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -1006,6 +990,22 @@
                 "m",
                 "ñ",
                 "w"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "m",
+                "ñ",
+                "u"
             ]
         },
         "0017": {
@@ -1088,15 +1088,6 @@
             },
             "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "m",
-                "o",
-                "q",
-                "r",
-                "s",
-                "t",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "m",
                 "o",
@@ -1104,6 +1095,15 @@
                 "r",
                 "s",
                 "u"
+            ],
+            "ObjetivosGenerales": [
+                "m",
+                "o",
+                "q",
+                "r",
+                "s",
+                "t",
+                "w"
             ]
         },
         "1709": {
@@ -1189,17 +1189,17 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "t",
-                "u",
-                "v",
-                "y"
-            ],
             "CompetenciasTitulo": [
                 "t",
                 "u",
                 "v",
                 "w",
+                "y"
+            ],
+            "ObjetivosGenerales": [
+                "t",
+                "u",
+                "v",
                 "y"
             ]
         },
@@ -1279,13 +1279,13 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "v",
                 "w",
                 "x",
                 "y"
             ],
-            "CompetenciasTitulo": [
-                "v",
+            "ObjetivosGenerales": [
                 "w",
                 "x",
                 "y"
@@ -1322,10 +1322,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1360,10 +1360,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1398,10 +1398,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         }

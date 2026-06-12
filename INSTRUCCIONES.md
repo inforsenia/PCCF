@@ -188,7 +188,7 @@ A continuació es detalla la correspondència entre el nom complet del mòdul (c
 
 ### 1. Revisar el contingut de l'excel
 
-Copiar l'excel de `PDFS/libro_autogenerado_FPBIIO.xlsx` a `excel/libro_FPBIIO.xlsx` revisar el contingut per cadascun dels mòduls per part dels docents:
+Una vegada generat l'excel (`make proyecto-FPBIIO`), el trobarem a `PDFS/libro_autogenerado_FPBIIO.xlsx`. Cada docent ha de revisar el contingut per al seu mòdul:
 
 1. A la columna `C` s'indicarà el pes de cada RA en percentatge (tots junts hauran de sumar 100%)
 2. *La columna `D` no tinc clar per a que s'utilitza*
@@ -196,7 +196,29 @@ Copiar l'excel de `PDFS/libro_autogenerado_FPBIIO.xlsx` a `excel/libro_FPBIIO.xl
 4. A la columna `H` s'indicarà "si", "SI" o "X" si el CE és un requeriment per a la FEE
 5. A la columna `I` S'indicarà les hores destinades de cada CE/RA a les FEE (en la fila 5 de la mateixa columna apareixerà el total d'hores enviades a DUAL). Esta columna és important perquè generarà l'arxiu: `PCCF_222_PlanFormativo.md` generant una taula en markdown per a cada mòdul, indicant els RA que tenen hores assignades a la FEE.
 6. A la columna `J` s'indicaran els continguts de cada RA
-7. Reanomenar la pestanya que conté el mòdul, per les sigles del mateix tal i com s'ha indicat a l'script `pccf_utils.py`, este pas indicarà que el mòdul està revisat i ja pot formar part de les PD's i el PCCF.
+
+### 2. Preparar l'excel per al seu ús
+
+Una vegada tots els docents han completat la revisió, cal renombrar les pestanyes de cada mòdul a les sigles curtes corresponents (segons la taula de correspondència) i moure l'excel a la carpeta `excels_{FAMILIA}/`. Per a fer-ho automàticament, utilitza el script `tools/preparar_excel.py`:
+
+```sh
+# Per a DAM (família INF)
+python3 tools/preparar_excel.py -c DAM -f INF
+
+# Per a SMX (família INF)
+python3 tools/preparar_excel.py -c SMX -f INF
+
+# Per a APD (família SCO)
+python3 tools/preparar_excel.py -c APD -f SCO
+```
+
+El script:
+1. Llig l'excel des de `PDFS/libro_autogenerado_{CICLO}.xlsx` (o des d'una ruta personalitzada amb `-i`)
+2. Renombra automàticament cada pestanya a les sigles curtes
+3. El guarda a `excels_{FAMILIA}/libro_{CICLO}.xlsx`
+4. Crea una còpia de seguretat del destí si ja existia
+
+> **Nota:** Si alguna pestanya no es renombra (perquè el nom no coincideix amb cap patró), caldrà afegir-la a `tools/pccf_utils.py` a la funció `get_hoja_label()`.
 
 ### Generació de PD's:
 

@@ -98,7 +98,7 @@ from pccf_utils import get_hoja_label
 # Si el libro no es autogenerado, convierto el nombre de la hoja a las siglas del módulo
 if not "autogenerado" in ruta_excel:
     hoja = get_hoja_label(hoja)
-print(" Trabajando con la hoja : "+hoja)
+print(" * [ PDF Cuadro Resumen ] : "+hoja)
 
 rango = "B1:I64" 
 ruta_pdf = "/tmp/cuadro-resumen.pdf"

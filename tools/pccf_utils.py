@@ -30,13 +30,14 @@ def get_hoja_label(hoja):
     if hoja.startswith("Entorns de"): return "ED"
     if hoja.startswith("Sistemes Informàtics"): return "SI"
     if hoja.startswith("Bases de "): return "BBDD"
+    # Específicos antes que el genérico "Programació"
+    if hoja.startswith("Programació de serveis i pro"): return "PSP"
+    if hoja.startswith("Programació multimèdia i dispo"): return "PMDM"
     if hoja.startswith("Programació"): return "PRG"
 
     # DAM
     if hoja.startswith("Desenvolupament d'inter"): return "DI"
     if hoja.startswith("Accés a "): return "AD"
-    if hoja.startswith("Programació de serveis i pro"): return "PSP"
-    if hoja.startswith("Programació multimèdia i dispo"): return "PMDM"
     if hoja.startswith("Sistemes de gestió empresarial"): return "SGE"
 
     # CEIABD

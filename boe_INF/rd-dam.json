@@ -246,15 +246,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0223_3": "Configurar y explotar sistemas informáticos."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "t",
-                "u",
-                "v",
-                "w",
-                "x"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -265,6 +256,15 @@
                 "w",
                 "x",
                 "y"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x"
             ]
         },
         "0484": {
@@ -370,17 +370,17 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0226_3": "Programar bases de dades relacionals."
             },
-            "ObjetivosGenerales ": [
-                "c",
-                "e",
-                "f",
-                "p",
-                "t"
-            ],
             "CompetenciasTitulo": [
                 "b",
                 "c",
                 "e",
+                "p",
+                "t"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "e",
+                "f",
                 "p",
                 "t"
             ]
@@ -518,16 +518,16 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
             },
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "j",
                 "t",
+                "w"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q",
                 "w"
             ]
         },
@@ -630,14 +630,14 @@
             },
             "horas": "96",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "h",
                 "o",
                 "p",
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "h",
                 "o",
                 "p",
@@ -728,15 +728,6 @@
             },
             "horas": "96",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "d",
-                "e",
-                "h",
-                "i",
-                "j",
-                "ñ",
-                "o"
-            ],
             "CompetenciasTitulo": [
                 "d",
                 "f",
@@ -745,6 +736,15 @@
                 "j",
                 "m",
                 "n"
+            ],
+            "ObjetivosGenerales": [
+                "d",
+                "e",
+                "h",
+                "i",
+                "j",
+                "ñ",
+                "o"
             ]
         },
         "0179": {
@@ -822,11 +822,6 @@
             },
             "horas": "68",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -836,6 +831,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "0486": {
@@ -924,7 +924,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "b",
                 "c",
                 "e",
@@ -934,7 +934,7 @@
                 "r",
                 "t"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "b",
                 "c",
                 "e",
@@ -1055,7 +1055,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0494_3": "Desenvolupar components programari en llenguatges de programació estructurada."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
                 "e",
                 "f",
@@ -1071,7 +1071,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
                 "e",
                 "f",
@@ -1162,7 +1162,7 @@
             },
             "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
                 "e",
                 "g",
@@ -1177,7 +1177,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
                 "e",
                 "g",
@@ -1273,7 +1273,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0964_3": "Crear elements programari per a la gestió del sistema i els seus recursos."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "b",
                 "e",
                 "i",
@@ -1284,7 +1284,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "b",
                 "e",
                 "i",
@@ -1369,7 +1369,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1213_3": "Instal·lar i configurar sistemes de planificació de recursos empresarials i de gestió de relacions amb clients."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a",
                 "b",
                 "c",
@@ -1384,7 +1384,7 @@
                 "u",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -1471,8 +1471,8 @@
             },
             "horas": "32",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [],
-            "CompetenciasTitulo": []
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1665": {
             "nombre": "Digitalització aplicada als sectors productius (GS)",
@@ -1556,11 +1556,6 @@
             },
             "horas": "34",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1570,6 +1565,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1709": {
@@ -1661,17 +1661,17 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "t",
-                "u",
-                "v",
-                "y"
-            ],
             "CompetenciasTitulo": [
                 "t",
                 "u",
                 "v",
                 "w",
+                "y"
+            ],
+            "ObjetivosGenerales": [
+                "t",
+                "u",
+                "v",
                 "y"
             ]
         },
@@ -1757,13 +1757,13 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "v",
                 "w",
                 "x",
                 "y"
             ],
-            "CompetenciasTitulo": [
-                "v",
+            "ObjetivosGenerales": [
                 "w",
                 "x",
                 "y"
@@ -1851,10 +1851,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1889,10 +1889,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1927,10 +1927,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         }

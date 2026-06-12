@@ -133,16 +133,21 @@ proyecto-%: files proyecto-base
 	@echo " ${LIGHTBLUE} [ Proyecto $(CICLO_UPPER) Completado ] ${RESET}"
 
 # Target para generar todos los ciclos
-todos: $(addprefix proyecto-,$(CICLOS_ALL))
+todos: $(addprefix proyecto-,$(CICLOS_ALL)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos generados ] ${RESET}"
 
 # Target para generar solo familia INF
-todos-inf: $(addprefix proyecto-,$(CICLOS_INF))
+todos-inf: $(addprefix proyecto-,$(CICLOS_INF)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos INF generados ] ${RESET}"
 
 # Target para generar solo familia SCO
-todos-sco: $(addprefix proyecto-,$(CICLOS_SCO))
+todos-sco: $(addprefix proyecto-,$(CICLOS_SCO)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos SCO generados ] ${RESET}"
+
+# Target para analizar los JSON y generar reporte
+report:
+	@echo " ${LIGHTYELLOW} [ Generando reporte de análisis... ] ${RESET}"
+	python3 tools/analizar_json.py
 
 # Regla para mostrar ayuda
 help:
@@ -164,6 +169,7 @@ help:
 	@echo "    todos              Generar todos los proyectos"
 	@echo "    todos-inf          Generar todos los proyectos INF"
 	@echo "    todos-sco          Generar todos los proyectos SCO"
+	@echo "    report             Generar reporte de análisis de JSONs"
 	@echo "    clean              Limpiar archivos generados"
 	@echo "    files              Crear estructura de directorios"
 	@echo "    dependences        Instalar dependencias"

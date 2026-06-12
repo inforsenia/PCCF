@@ -1126,11 +1126,6 @@
             },
             "horas": "68",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1140,6 +1135,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1709": {
@@ -1231,17 +1231,17 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "t",
-                "u",
-                "v",
-                "y"
-            ],
             "CompetenciasTitulo": [
                 "t",
                 "u",
                 "v",
                 "w",
+                "y"
+            ],
+            "ObjetivosGenerales": [
+                "t",
+                "u",
+                "v",
                 "y"
             ]
         },
@@ -1327,13 +1327,13 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "v",
                 "w",
                 "x",
                 "y"
             ],
-            "CompetenciasTitulo": [
-                "v",
+            "ObjetivosGenerales": [
                 "w",
                 "x",
                 "y"
@@ -1421,10 +1421,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1459,10 +1459,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1497,10 +1497,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         }

@@ -1,0 +1,1815 @@
+{
+    "CompetenciasProfesionalesPersonalesSociales": {
+        "a": "Administrar sistemas operativos de servidor, instalando y configurando el software, en condiciones de calidad para asegurar el funcionamiento del sistema.",
+        "b": "Administrar servicios de red (web, mensajería electrónica y transferencia de archivos, entre otros) instalando y configurando el software, en condiciones de calidad.",
+        "c": "Administrar aplicaciones instalando y configurando el software, en condiciones de calidad para responder a las necesidades de la organización.",
+        "d": "Implantar y gestionar bases de datos instalando y administrando el software de gestión en condiciones de calidad, según las características de la explotación.",
+        "e": "Optimizar el rendimiento del sistema configurando los dispositivos hardware de acuerdo a los requisitos de funcionamiento.",
+        "f": "Evaluar el rendimiento de los dispositivos hardware identificando posibilidades de mejoras según las necesidades de funcionamiento.",
+        "g": "Determinar la infraestructura de redes telemáticas elaborando esquemas y seleccionando equipos y elementos.",
+        "h": "Integrar equipos de comunicaciones en infraestructuras de redes telemáticas, determinando la configuración para asegurar su conectividad.",
+        "i": "Implementar soluciones de alta disponibilidad, analizando las distintas opciones del mercado, para proteger y recuperar el sistema ante situaciones imprevistas.",
+        "j": "Supervisar la seguridad física según especificaciones del fabricante y el plan de seguridad para evitar interrupciones en la prestación de servicios del sistema.",
+        "k": "Asegurar el sistema y los datos según las necesidades de uso y las condiciones de seguridad establecidas para prevenir fallos y ataques externos.",
+        "l": "Administrar usuarios de acuerdo a las especificaciones de explotación para garantizar los accesos y la disponibilidad de los recursos del sistema.",
+        "m": "Diagnosticar las disfunciones del sistema y adoptar las medidas correctivas para restablecer su funcionalidad.",
+        "n": "Gestionar y/o realizar el mantenimiento de los recursos de su área (programando y verificando su cumplimiento), en función de las cargas de trabajo y el plan de mantenimiento.",
+        "ñ": "Efectuar consultas, dirigiéndose a la persona adecuada y saber respetar la autonomía de los subordinados, informando cuando sea conveniente.",
+        "o": "Mantener el espíritu de innovación y actualización en el ámbito de su trabajo para adaptarse a los cambios tecnológicos y organizativos de su entorno profesional.",
+        "p": "Liderar situaciones colectivas que se puedan producir, mediando en conflictos personales y laborales, contribuyendo al establecimiento de un ambiente de trabajo agradable y actuando en todo momento de forma sincera, respetuosa y tolerante.",
+        "q": "Resolver problemas y tomar decisiones individuales, siguiendo las normas y procedimientos establecidos, definidos dentro del ámbito de su competencia.",
+        "r": "Gestionar su carrera profesional, analizando las oportunidades de empleo, autoempleo y de aprendizaje.",
+        "s": "Participar de forma activa en la vida económica, social y cultural con actitud crítica y responsable.",
+        "t": "Crear y gestionar una pequeña empresa, realizando un estudio de viabilidad de productos, de planificación de la producción y de comercialización."
+    },
+    "CompetenciasProfesionales": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n"
+    ],
+    "CompetenciasSociales": [
+        "ñ",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t"
+    ],
+    "CualificacionesINCUAL": {
+        "Completas": {
+            "IFC152_3": {
+                "Nombre": "Gestión de sistemas informáticos",
+                "UCs": {
+                    "UC0484_3": "Administrar los dispositivos hardware del sistema.",
+                    "UC0485_3": "Instalar, configurar y administrar el software de base y de aplicación del sistema.",
+                    "UC0486_3": "Asegurar equipos informáticos.    "
+                }
+            },
+            "IFC156_3": {
+                "Nombre": "Administración de servicios de Internet",
+                "UCs": {
+                    "UC0495_3": "Instalar, configurar y administrar el software para gestionar un entorno web.",
+                    "UC0496_3": "Instalar, configurar y administrar servicios de mensajería electrónica.",
+                    "UC0497_3": "Instalar, configurar y administrar servicios de transferencia de archivos y multimedia.",
+                    "UC0490_3": "Gestionar servicios en el sistema informático."
+                }
+            },
+            "IFC079_3": {
+                "Nombre": "Administración de bases de datos",
+                "UCs": {
+                    "UC0223_3": "Configurar y explotar sistemas informáticos.",
+                    "UC0224_3": "Configurar y gestionar un sistema gestor de bases de datos.",
+                    "UC0225_3": "Configurar y gestionar la base de datos."
+                }
+            }
+        },
+        "Incompletas": {
+            "IFC154_3": {
+                "Nombre": "Desarrollo de aplicaciones con tecnologías web",
+                "UCs": {
+                    "UC0493_3": "Implementar, verificar y documentar aplicaciones web en entornos internet, intranet y extranet."
+                }
+            }
+        }
+    },
+    "ObjetivosGenerales": {
+        "a": "Analizar la estructura del software de base, comparando las características y prestaciones de sistemas libres y propietarios, para administrar sistemas operativos de servidor.",
+        "b": "Instalar y configurar el software de base, siguiendo documentación técnica y especificaciones dadas, para administrar sistemas operativos de servidor.",
+        "c": "Instalar y configurar software de mensajería y transferencia de ficheros, entre otros, relacionándolos con su aplicación y siguiendo documentación y especificaciones dadas, para administrar servicios de red.",
+        "d": "Instalar y configurar software de gestión, siguiendo especificaciones y analizando entornos de aplicación, para administrar aplicaciones.",
+        "e": "Instalar y administrar software de gestión, relacionándolo con su explotación, para implantar y gestionar bases de datos.",
+        "f": "Configurar dispositivos hardware, analizando sus características funcionales, para optimizar el rendimiento del sistema.",
+        "g": "Configurar hardware de red, analizando sus características funcionales y relacionándolo con su campo de aplicación, para integrar equipos de comunicaciones.",
+        "h": "Analizar tecnologías de interconexión, describiendo sus características y posibilidades de aplicación, para configurar la estructura de la red telemática y evaluar su rendimiento.",
+        "i": "Elaborar esquemas de redes telemáticas utilizando software especifico para configurar la estructura de la red telemática.",
+        "j": "Seleccionar sistemas de protección y recuperación, analizando sus características funcionales, para poner en marcha soluciones de alta disponibilidad.",
+        "k": "Identificar condiciones de equipos e instalaciones, interpretando planes de seguridad y especificaciones de fabricante, para supervisar la seguridad física.",
+        "l": "Aplicar técnicas de protección contra amenazas externas, tipificándolas y evaluándolas para asegurar el sistema.",
+        "m": "Aplicar técnicas de protección contra pérdidas de información, analizando planes de seguridad y necesidades de uso para asegurar los datos.",
+        "n": "Asignar los accesos y recursos del sistema, aplicando las especificaciones de la explotación, para administrar usuarios",
+        "ñ": "Aplicar técnicas de monitorización interpretando los resultados y relacionándolos con las medidas correctoras para diagnosticar y corregir las disfunciones.",
+        "o": "Establecer la planificación de tareas, analizando actividades y cargas de trabajo del sistema para gestionar el mantenimiento.",
+        "p": "Identificar los cambios tecnológicos, organizativos, económicos y laborales en su actividad, analizando sus implicaciones en el ámbito de trabajo, para resolver problemas y mantener una cultura de actualización e innovación.",
+        "q": "Identificar formas de intervención en situaciones colectivas, analizando el proceso de toma de decisiones y efectuando consultas para liderar las mismas.",
+        "r": "Identificar y valorar las oportunidades de aprendizaje y su relación con el mundo laboral, analizando las ofertas y demandas del mercado para gestionar su carrera profesional.",
+        "s": "Reconocer las oportunidades de negocio, identificando y analizando demandas del mercado para crear y gestionar una pequeña empresa.",
+        "t": "Reconocer sus derechos y deberes como agente activo en la sociedad, analizando el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático."
+    },
+    "ModulosProfesionales": {
+        "0371": {
+            "nombre": "Fundamentos de Hardware",
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Configura equipos microinformáticos, componentes y periféricos, analizando sus características y relación con el conjunto.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado y caracterizado los dispositivos que constituyen los bloques funcionales de un equipo microinformático.",
+                        "b": "Se ha descrito el papel de los elementos físicos y lógicos que intervienen en el proceso de puesta en marcha de un equipo.",
+                        "c": "Se ha analizado la arquitectura general de un equipo y los mecanismos de conexión entre dispositivos.",
+                        "d": "Se han establecido los parámetros de configuración (hardware y software) de un equipo microinformático con las utilidades específicas.",
+                        "e": "Se ha evaluado las prestaciones del equipo.",
+                        "f": "Se han ejecutado utilidades de chequeo y diagnóstico.",
+                        "g": "Se han identificado averías y sus causas.",
+                        "h": "Se han clasificado los dispositivos periféricos y sus mecanismos de comunicación.",
+                        "i": "Se han utilizado protocolos estándar de comunicación inalámbrica entre dispositivos."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Instala software de propósito general evaluando sus características y entornos de aplicación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han catalogado los tipos de software según su licencia, distribución y propósito.",
+                        "b": "Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.",
+                        "c": "Se han instalado y evaluado utilidades para la gestión de archivos, recuperación de datos, mantenimiento y optimización del sistema.",
+                        "d": "Se han instalado y evaluado utilidades de seguridad básica.",
+                        "e": "Se ha instalado y evaluado software ofimático y de utilidad general.",
+                        "f": "Se ha consultado la documentación y las ayudas interactivas.",
+                        "g": "Se ha verificado la repercusión de la eliminación, modificación y/o actualización de las utilidades instaladas en el sistema.",
+                        "h": "Se han probado y comparado aplicaciones portables y no portables.",
+                        "i": "Se han realizado inventarios del software instalado y las características de su licencia."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Ejecuta procedimientos para recuperar el software base de un equipo, analizándolos y utilizando imágenes almacenadas en memoria auxiliar.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los soportes de memoria auxiliar adecuados para el almacenaje y restauración de imágenes de software.",
+                        "b": "Se ha reconocido la diferencia entre una instalación estándar y una preinstalación o imagen de software.",
+                        "c": "Se han identificado y probado las distintas secuencias de arranque configurables en un equipo.",
+                        "d": "Se han utilizado herramientas para el particionado de discos.",
+                        "e": "Se han empleado distintas utilidades y soportes para realizar imágenes.",
+                        "f": "Se han restaurado imágenes desde distintas ubicaciones."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Implanta hardware específico de centros de proceso de datos (CPD), analizando sus características y aplicaciones.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han reconocido las diferencias entre las configuraciones hardware de tipo personal y empresarial.",
+                        "b": "Se han analizado entornos que requieren implantar soluciones hardware específicas.",
+                        "c": "Se han detallado componentes hardware específicos para soluciones empresariales.",
+                        "d": "Se han analizado los requerimientos básicos de seguridad física, organización y condiciones ambientales de un CPD.",
+                        "e": "Se han implantado sistemas de alimentación ininterrumpida y estabilizadores de tensión.",
+                        "f": "Se han manipulado correctamente dispositivos hardware para almacenamiento y alimentación con conexión en caliente.",
+                        "g": "Se han documentado procedimientos, incidencias y parámetros utilizados en la instalación y configuración de dispositivos hardware.",
+                        "h": "Se han utilizado herramientas de inventariado, registrando las características de los dispositivos hardware.",
+                        "i": "Se ha clasificado y organizado la documentación técnica, controladores, utilidades y accesorios del hardware."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los riesgos y el nivel de peligrosidad que suponen la manipulación de los materiales, herramientas, útiles, máquinas y medios de transporte.",
+                        "b": "Se han operado las máquinas respetando las normas de seguridad.",
+                        "c": "Se han identificado las causas más frecuentes de accidentes en la manipulación de materiales y herramientas, entre otras.",
+                        "d": "Se han descrito los elementos de seguridad (protecciones, alarmas, y pasos de emergencia, entre otros) de las máquinas y los equipos de protección individual (calzado, protección ocular e indumentaria, entre otros) que se deben emplear en las distintas operaciones de montaje y mantenimiento.",
+                        "e": "Se ha relacionado la manipulación de materiales, herramientas y máquinas con las medidas de seguridad y protección personal requeridos.",
+                        "f": "Se han identificado las posibles fuentes de contaminación del entorno ambiental.",
+                        "g": "Se han clasificado los residuos generados para su retirada selectiva.",
+                        "h": "Se ha valorado el orden y la limpieza de instalaciones y equipos como primer factor de prevención de riesgos."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0484_3": "Administrar los dispositivos hardware del sistema.",
+                "UC0223_3": "Configurar y explotar sistemas informáticos."
+            }
+        },
+        "0373": {
+            "nombre": "Lenguajes de marcas y sistemas de gestión de información",
+            "creditos": "7",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Reconoce las características de lenguajes de marcas, analizando e interpretando fragmentos de código.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las características generales de los lenguajes de marcas.",
+                        "b": "Se han reconocido las ventajas que proporcionan en el tratamiento de la información.",
+                        "c": "Se han clasificado los lenguajes de marcas e identificado los más relevantes.",
+                        "d": "Se han diferenciado sus ámbitos de aplicación.",
+                        "e": "Se han reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.",
+                        "f": "Se han analizado las características propias del lenguaje XML.",
+                        "g": "Se han identificado la estructura de un documento XML y sus reglas sintácticas.",
+                        "h": "Se han contrastado la necesidad de crear documentos XML bien formados y la influencia en su procesamiento.",
+                        "i": "Se han identificado las ventajas que aportan los espacios de nombres."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Utiliza lenguajes de marcas para la transmisión de información a través de la web, analizando la estructura de los documentos e identificando sus elementos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones.",
+                        "b": "Se ha analizado la estructura de un documento HTML y se han identificado las secciones que lo componen.",
+                        "c": "Se han reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.",
+                        "d": "Se han establecido las semejanzas y diferencias entre los lenguajes HTML y XHTML.",
+                        "e": "Se ha reconocido la utilidad de XHTML en los sistemas de gestión de información.",
+                        "f": "Se han utilizado herramientas en la creación de documentos web.",
+                        "g": "Se han identificado las ventajas que aporta la utilización de hojas de estilo.",
+                        "h": "Se han aplicado hojas de estilo."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Genera canales de contenidos analizando y utilizando tecnologías de sindicación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las ventajas que aporta la sindicación de contenidos en la gestión y transmisión de la información.",
+                        "b": "Se han definido sus ámbitos de aplicación.",
+                        "c": "Se han analizado las tecnologías en que se basa la sindicación de contenidos.",
+                        "d": "Se han identificado la estructura y la sintaxis de un canal de contenidos.",
+                        "e": "Se han creado y validado canales de contenidos.",
+                        "f": "Se ha comprobado la funcionalidad y el acceso a los canales.",
+                        "g": "Se han utilizado herramientas específicas como agregadores y directorios de canales."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.",
+                        "b": "Se han identificado las tecnologías relacionadas con la definición de documentos XML.",
+                        "c": "Se ha analizado la estructura y sintaxis específica utilizada en la descripción.",
+                        "d": "Se han creado descripciones de documentos XML.",
+                        "e": "Se han utilizado descripciones en la elaboración y validación de documentos XML.",
+                        "f": "Se han asociado las descripciones con los documentos.",
+                        "g": "Se han utilizado herramientas específicas.",
+                        "h": "Se han documentado las descripciones."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la necesidad de la conversión de documentos XML.",
+                        "b": "Se han establecido ámbitos de aplicación.",
+                        "c": "Se han analizado las tecnologías implicadas y su modo de funcionamiento.",
+                        "d": "Se ha descrito la sintaxis específica utilizada en la conversión y adaptación de documentos XML.",
+                        "e": "Se han creado especificaciones de conversión.",
+                        "f": "Se han identificado y caracterizado herramientas específicas relacionadas con la conversión de documentos XML.",
+                        "g": "Se han realizado conversiones con distintos formatos de salida.",
+                        "h": "Se han documentado y depurado las especificaciones de conversión."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Gestiona información en formato XML analizando y utilizando tecnologías de almacenamiento y lenguajes de consulta.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los principales métodos de almacenamiento de la información usada en documentos XML.",
+                        "b": "Se han identificado los inconvenientes de almacenar información en formato XML.",
+                        "c": "Se han establecido tecnologías eficientes de almacenamiento de información en función de sus características.",
+                        "d": "Se han utilizado sistemas gestores de bases de datos relacionales en el almacenamiento de información en formato XML.",
+                        "e": "Se han utilizado técnicas específicas para crear documentos XML a partir de información almacenada en bases de datos relacionales.",
+                        "f": "Se han identificado las características de los sistemas gestores de bases de datos nativas XML.",
+                        "g": "Se han instalado y analizado sistemas gestores de bases de datos nativas XML.",
+                        "h": "Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.",
+                        "i": "Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Trabaja con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.",
+                        "b": "Se han evaluado las características de las principales aplicaciones de gestión empresarial.",
+                        "c": "Se han instalado aplicaciones de gestión empresarial.",
+                        "d": "Se han configurado y adaptado las aplicaciones.",
+                        "e": "Se ha establecido y verificado el acceso seguro a la información.",
+                        "f": "Se han generado informes.",
+                        "g": "Se han realizado tareas de integración con aplicaciones ofimáticas.",
+                        "h": "Se han realizado procedimientos de extracción de información para su tratamiento e incorporación a diversos sistemas.",
+                        "i": "Se han realizado tareas de asistencia y resolución de incidencias.",
+                        "j": "Se han elaborado documentos relativos a la explotación de la aplicación."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [
+                "b",
+                "c"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "d",
+                "e",
+                "r"
+            ]
+        },
+        "0369": {
+            "nombre": "Implantación de Sistemas Operativos",
+            "horas": "233",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0485_3": "Instalar, configurar y administrar el software de base y de aplicación del sistema."
+            },
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "j",
+                "l",
+                "m",
+                "n",
+                "ñ",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "g",
+                "",
+                "f",
+                "k",
+                "ñ"
+            ],
+            "creditos": "15",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Instala sistemas operativos, analizando sus características e interpretando la documentación técnica.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los elementos funcionales de un sistema informático.",
+                        "b": "Se han identificado las características, funciones y arquitectura de un sistema operativo.",
+                        "c": "Se han comparado diferentes sistemas operativos, sus versiones y licencias de uso, en función de sus requisitos, características y campos de aplicación.",
+                        "d": "Se han realizado instalaciones de diferentes sistemas operativos.",
+                        "e": "Se han previsto y aplicado técnicas de actualización y recuperación del sistema.",
+                        "f": "Se han solucionado incidencias del sistema y del proceso de inicio.",
+                        "g": "Se han utilizado herramientas para conocer el software instalado en el sistema y su origen.",
+                        "h": "Se ha elaborado documentación de soporte relativa a las instalaciones efectuadas y a las incidencias detectadas."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Configura el software de base, analizando las necesidades de explotación del sistema informático.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han planificado, creado y configurado cuentas de usuario, grupos, perfiles y políticas de contraseñas locales.",
+                        "b": "Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.",
+                        "c": "Se ha actuado sobre los servicios y procesos en función de las necesidades del sistema.",
+                        "d": "Se han instalado, configurado y verificado protocolos de red.",
+                        "e": "Se han analizado y configurado los diferentes métodos de resolución de nombres.",
+                        "f": "Se ha optimizado el uso de los sistemas operativos para sistemas portátiles.",
+                        "g": "Se han utilizado máquinas virtuales para realizar tareas de configuración de sistemas operativos y analizar sus resultados.",
+                        "h": "Se han documentado las tareas de configuración del software de base."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Asegura la información del sistema, describiendo los procedimientos y utilizando copias de seguridad y sistemas tolerantes a fallos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han comparado diversos sistemas de archivos y analizado sus diferencias y ventajas de implementación.",
+                        "b": "Se ha descrito la estructura de directorios del sistema operativo.",
+                        "c": "Se han identificado los directorios contenedores de los archivos de configuración del sistema (binarios, órdenes y librerías).",
+                        "d": "Se han utilizado herramientas de administración de discos para crear particiones, unidades lógicas, volúmenes simples y volúmenes distribuidos.",
+                        "e": "Se han implantado sistemas de almacenamiento redundante (RAID).",
+                        "f": "Se han implementado y automatizado planes de copias de seguridad.",
+                        "g": "Se han administrado cuotas de disco.",
+                        "h": "Se han documentado las operaciones realizadas y los métodos a seguir para la recuperación ante desastres."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Centraliza la información en servidores administrando estructuras de dominios y analizando sus ventajas.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han implementado dominios.",
+                        "b": "Se han administrado cuentas de usuario y cuentas de equipo.",
+                        "c": "Se ha centralizado la información personal de los usuarios del dominio mediante el uso de perfiles móviles y carpetas personales.",
+                        "d": "Se han creado y administrado grupos de seguridad.",
+                        "e": "Se han creado plantillas que faciliten la administración de usuarios con características similares.",
+                        "f": "Se han organizado los objetos del dominio para facilitar su administración.",
+                        "g": "Se han utilizado máquinas virtuales para administrar dominios y verificar su funcionamiento.",
+                        "h": "Se ha documentado la estructura del dominio y las tareas realizadas."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Administra el acceso a dominios analizando y respetando requerimientos de seguridad.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han incorporado equipos al dominio.",
+                        "b": "Se han previsto bloqueos de accesos no autorizados al dominio.",
+                        "c": "Se ha administrado el acceso a recursos locales y recursos de red.",
+                        "d": "Se han tenido en cuenta los requerimientos de seguridad.",
+                        "e": "Se han implementado y verificado directivas de grupo.",
+                        "f": "Se han asignado directivas de grupo.",
+                        "g": "Se han documentado las tareas y las incidencias."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Detecta problemas de rendimiento, monitorizando el sistema con las herramientas adecuadas y documentando el procedimiento.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los objetos monitorizables en un sistema informático.",
+                        "b": "Se han identificado los tipos de sucesos.",
+                        "c": "Se han utilizado herramientas de monitorización en tiempo real.",
+                        "d": "Se ha monitorizado el rendimiento mediante registros de contador y de seguimiento del sistema.",
+                        "e": "Se han planificado y configurado alertas de rendimiento.",
+                        "f": "Se han interpretado los registros de rendimiento almacenados.",
+                        "g": "Se ha analizado el sistema mediante técnicas de simulación para optimizar el rendimiento.",
+                        "h": "Se ha elaborado documentación de soporte y de incidencias."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Audita la utilización y acceso a recursos, identificando y respetando las necesidades de seguridad del sistema.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han administrado derechos de usuario y directivas de seguridad.",
+                        "b": "Se han identificado los objetos y sucesos auditables.",
+                        "c": "Se ha elaborado un plan de auditorías.",
+                        "d": "Se han identificado las repercusiones de las auditorías en el rendimiento del sistema.",
+                        "e": "Se han auditado sucesos correctos y erróneos.",
+                        "f": "Se han auditado los intentos de acceso y los accesos a recursos del sistema.",
+                        "g": "Se han gestionado los registros de auditoría.",
+                        "h": "Se ha documentado el proceso de auditoría y sus resultados."
+                    }
+                },
+                "RA08": {
+                    "Resultado": " Implanta software específico con estructura cliente/servidor dando respuesta a los requisitos funcionales.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha instalado software específico según la documentación técnica.",
+                        "b": "Se han realizado instalaciones desatendidas.",
+                        "c": "Se ha configurado y utilizado un servidor de actualizaciones.",
+                        "d": "Se han planificado protocolos de actuación para resolver incidencias.",
+                        "e": "Se han seguido los protocolos de actuación para resolver incidencias.",
+                        "f": "Se ha dado asistencia técnica a través de la red documentando las incidencias.",
+                        "g": "Se han elaborado guías visuales y manuales para instruir en el uso de sistemas operativos o aplicaciones.",
+                        "h": "Se han documentado las tareas realizadas."
+                    }
+                }
+            }
+        },
+        "0179": {
+            "nombre": "Inglés Profesional (GS)",
+            "creditos": "4",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Comprende información, de índole profesional, académica y cotidiana, contenida en todo tipo de discursos orales, emitidos por cualquier medio de comunicación en lengua estándar, interpretando con precisión el contenido del mensaje.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la idea principal de mensajes en lengua estándar relacionados con la vida social, profesional o académica.",
+                        "b": "Se ha reconocido la finalidad de mensajes directos o emitidos en cualquier soporte en lengua estándar.",
+                        "c": "Se ha extraído información específica contenida en distintos discursos orales en lengua estándar, relacionada con la vida social, profesional o académica.",
+                        "d": "Se ha identificado el punto de vista y la actitud del hablante.",
+                        "e": "Se ha identificado el hilo argumental de mensajes orales y determinado los roles que aparecen en dichos mensajes.",
+                        "f": "Se han comprendido adecuadamente mensajes en lengua estándar en ambientes con contaminación acústica.",
+                        "g": "Se han extraído las ideas principales de conferencias, charlas e informes, y otras formas de presentación académica y profesional, lingüísticamente complejas.",
+                        "h": "Se ha tomado conciencia de la importancia de comprender globalmente un mensaje sin entender todos y cada uno de los elementos del mismo."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Comprende mensajes escritos, de naturaleza profesional, académica y cotidiana, de relativa dificultad, analizando de forma comprensiva su contenido.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la idea principal de textos específicos de su ámbito social, profesional o académico.",
+                        "b": "Se ha reconocido la finalidad de distintos textos escritos en cualquier soporte, en lengua estándar y relacionados con la actividad profesional.",
+                        "c": "Se ha extraído información específica de textos, de diferente naturaleza, relativos a su profesión, y contenidos en distintos soportes.",
+                        "d": "Se ha tomado conciencia de la importancia de comprender globalmente un texto sin entender todos y cada uno de los elementos del mismo.",
+                        "e": "Se han leído y comprendido, de manera autónoma, textos relacionados con el sector con la velocidad y estilo de lectura propia del nivel competencial.",
+                        "f": "Se ha interpretado la correspondencia relativa a su especialidad, captando fácilmente el significado esencial.",
+                        "g": "Se han interpretado textos extensos, y de cierta complejidad, relacionados o no con su especialidad, pudiendo realizar varias lecturas del mismo.",
+                        "h": "Se ha identificado con rapidez el contenido y la importancia de noticias, artículos e informes sobre una amplia serie de temas profesionales.",
+                        "i": "Se han interpretado instrucciones, con distintos niveles de dificultad, y mensajes técnicos recibidos a través de soportes digitales.",
+                        "j": "Se han traducido textos de cierta complejidad, utilizando material de apoyo en caso necesario."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Produce mensajes orales claros y bien estructurados, analizando el contenido de la situación y adaptándose al registro lingüístico del interlocutor.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han emitido mensajes generales propios de sector y de la vida cotidiana, utilizando nexos y estrategias de interacción.",
+                        "b": "Se ha intercambiado con fluidez información específica y detallada utilizando estructuras de una complejidad acorde al nivel competencial.",
+                        "c": "Se han seleccionado y aplicado los registros adecuados para la emisión del mensaje, así como protocolos y normas de relación social propios del país.",
+                        "d": "Se han realizado presentaciones, bien estructuradas, sobre temas de su ámbito profesional, haciendo uso de los protocolos establecidos.",
+                        "e": "Se ha utilizado correctamente la terminología de la profesión.",
+                        "f": "Se ha descrito y secuenciado oralmente un proceso de trabajo de su competencia.",
+                        "g": "Se ha solicitado la reformulación del discurso o parte del mismo cuando se ha considerado necesario.",
+                        "h": "Se ha interaccionado espontáneamente, adoptando un nivel de formalidad adecuado a las circunstancias.",
+                        "i": "Se ha expresado con fluidez, precisión y eficacia sobre una amplia serie de temas generales, académicos, profesionales o de ocio, marcando con claridad la relación entre las ideas.",
+                        "j": "Se han expresado y defendido puntos de vista con claridad, proporcionando explicaciones y argumentos adecuados.",
+                        "k": "Se ha respondido a preguntas relativas a su vida socio-profesional, incluidas las propias de una entrevista de trabajo."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Redacta documentos e informes, propios del sector o de la vida académica y cotidiana, relacionando los recursos lingüísticos con el propósito de los mismos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han escrito textos claros y detallados sobre una variedad de temas relacionados con su profesión, sintetizando y evaluando información y argumentos procedentes de varias fuentes.",
+                        "b": "Se ha cumplimentado documentación específica de su campo profesional, utilizando vocabulario específico y protocolos y normas de relación social propios del país.",
+                        "c": "Se ha organizado la información con corrección, precisión, con cohesión y coherencia, solicitando y/o facilitando información de tipo general o detallada.",
+                        "d": "Se han cumplimentado textos mediante apoyos visuales y claves lingüísticas.",
+                        "e": "Se han elaborado informes, destacando los aspectos significativos y ofreciendo detalles relevantes que sirvan de apoyo.",
+                        "f": "Se han escrito cartas, formales e informales, empleando las fórmulas de cortesía establecidas y el vocabulario específico para la elaboración de las mismas.",
+                        "g": "Se han resumido diferentes tipos de documentos escritos, utilizando sus propios recursos lingüísticos.",
+                        "h": "Se han utilizado las fórmulas de cortesía propias del documento que se va a elaborar."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Aplica actitudes y comportamientos profesionales en situaciones de comunicación, describiendo las relaciones típicas características del país de la lengua extranjera.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han definido los rasgos más significativos de las costumbres y usos de la comunidad donde se habla la lengua extranjera.",
+                        "b": "Se han descrito los protocolos y normas de relación social propios del país.",
+                        "c": "Se han identificado los valores y creencias propios de la comunidad donde se habla la lengua extranjera.",
+                        "d": "Se ha identificado los aspectos socio-profesionales propios del sector, en cualquier tipo de texto.",
+                        "e": "Se han aplicado los protocolos y normas de relación social propios del país de la lengua extranjera.",
+                        "f": "Se han reconocido los marcadores lingüísticos de la procedencia regional."
+                    }
+                }
+            },
+            "horas": "67",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
+            ]
+        },
+        "1708": {
+            "nombre": "Sostenibilidad aplicada al sistema productivo",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Identifica los aspectos ambientales, sociales y de gobernanza (ASG) relativos a la sostenibilidad teniendo en cuenta el concepto de desarrollo sostenible y los marcos internacionales que contribuyen a su consecución.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible.",
+                        "b": "Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales.",
+                        "c": "Se han relacionado los Objetivos de Desarrollo Sostenible ODS,con su importancia para la consecución de la Agenda 2030.",
+                        "d": "Se ha analizado la importancia de identificar los aspectos ASG más relevantes para los grupos de interés de las organizaciones relacionándolos con los riesgos y oportunidades que suponen para la propia organización.",
+                        "e": "Se han identificado los principales estándares de métricas para la evaluación del desempeño en sostenibilidad y su papel en la rendición de cuentas que marca la legislación vigente y las futuras regulaciones en desarrollo.",
+                        "f": "Se ha descrito la inversión socialmente responsable y el papel de los analistas, inversores, agencias e índices de sostenibilidad en el fomento de la sostenibilidad."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Caracteriza los retos ambientales y sociales a los que se enfrenta la sociedad, describiendo los impactos sobre las personas y los sectores productivos y proponiendo acciones para minimizarlos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los principales retos ambientales y sociales.",
+                        "b": "Se han relacionado los retos ambientales y sociales con el desarrollo de la actividad económica.",
+                        "c": "Se ha analizado el efecto de los impactos ambientales y sociales sobre las personas y los sectores productivos.",
+                        "d": "Se han identificado las medidas y acciones encaminadas a minimizar los impactos ambientales y sociales.",
+                        "e": "Se ha analizado la importancia de establecer alianzas y trabajar de manera transversal y coordinada para abordar con éxito los retos ambientales y sociales."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Establece la aplicación de criterios de sostenibilidad en el desempeño profesional y personal, identificando los elementos necesarios.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los ODS más relevantes para la actividad profesional que realiza.",
+                        "b": "Se han analizado los riesgos y oportunidades que representan los ODS.",
+                        "c": "Se han identificado las acciones necesarias para atender algunos de los retos ambientales y sociales desde la actividad profesional y el entorno personal."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Propón productos y servicios responsables teniendo en cuenta los principios de la economía circular.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha caracterizado el modelo de producción y consumo actual.",
+                        "b": "Se han identificado los principios de la economía verde y circular.",
+                        "c": "Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.",
+                        "d": "Se han aplicado principios de ecodiseño.",
+                        "e": "Se ha analizado el ciclo de vida del producto.",
+                        "f": "Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Realiza actividades sostenibles minimizando el impacto de las mismas en el medio ambiente.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha caracterizado el modelo de producción y consumo actual.",
+                        "b": "Se han identificado los principios de la economía verde y circular.",
+                        "c": "Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.",
+                        "d": "Se ha evaluado el impacto de las actividades personales y profesionales.",
+                        "e": "Se han aplicado principios de ecodiseño.",
+                        "f": "Se han aplicado estrategias sostenibles.",
+                        "g": "Se ha analizado el ciclo de vida del producto.",
+                        "h": "Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados.",
+                        "i": "Se ha aplicado la normativa ambiental."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Analiza un plan de sostenibilidad de una empresa del sector, identificando sus grupos de interés, los aspectos ASG materiales y justificando acciones para su gestión y medición.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los principales grupos de interés de la empresa.",
+                        "b": "Se han analizado los aspectos ASG materiales, las expectativas de los grupos de interés y la importancia de los aspectos ASG en relación con los objetivos empresariales.",
+                        "c": "Se han definido acciones encaminadas a minimizar los impactos negativos y aprovechar las oportunidades que plantean los principales aspectos ASG identificados.",
+                        "d": "Se han determinado las métricas de evaluación del desempeño de la empresa de acuerdo con los estándares de sostenibilidad más ampliamente utilizados.",
+                        "e": "Se ha elaborado un informe de sostenibilidad con el plan y los indicadores propuestos."
+                    }
+                }
+            },
+            "horas": "34",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
+        },
+        "1709": {
+            "nombre": "Itinerario personal para la empleabilidad I",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Alcanza las competencias necesarias para la obtención del Título de técnico básico en Prevención de Riesgos Laborales.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha valorado la importancia de la cultura preventiva en todos los ámbitos actividades de la empresa u organismo equiparado relacionado las condiciones laborales con la salud de la persona trabajadora identificando y clasificando los factores de riesgo en la actividad y los daños derivados de los mismos, especialmente las situaciones de riesgo más habituales en los entornos de trabajo del sector profesional relacionado con el título.",
+                        "b": "Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del título.",
+                        "c": "Se ha determinado la evaluación de riesgos en la empresa u organismo equiparado y definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias.",
+                        "d": "Se han analizado los protocolos de actuación en caso de emergencia.",
+                        "e": "Se han determinado los principales derechos y deberes en materia de prevención de riesgos laborales.",
+                        "f": "Se han clasificado las distintas formas de gestión de la prevención en la empresa u organismo equiparado, en función de los distintos criterios establecidos en la normativa sobre prevención de riesgos laborales y determinado las formas de representación de las personas trabajadoras en la empresa u organismo equiparado en materia de prevención de riesgos.",
+                        "g": "Se ha valorado la importancia de la existencia de un plan preventivo en la empresa u organismo equiparado que incluya la secuenciación de 16 actuaciones a realizar en caso de emergencia y reflexionado sobre el contenido del mismo.",
+                        "h": "Se han determinado los requisitos y condiciones para la vigilancia de la salud de la persona trabajadora y su importancia como medida de prevención.",
+                        "i": "Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Distingue las características del sector productivo y define los puestos de trabajo relacionándolos con las competencias profesionales expresadas en el título",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado las principales oportunidades de empleo y de inserción laboral en el sector profesional, identificando las posibilidades de empleo, analizado sus requerimientos actuales para el perfil profesional.",
+                        "b": "Se ha comparado los diferentes requerimientos exigidos por el mercado laboral con las exigencias para el trabajo en la función pública relacionados con el sector privado.",
+                        "c": "Se ha reflexionado sobre las actitudes y aptitudes requeridas actualmente para la actividad profesional relacionadas con el título, así como las competencias personales y sociales más relevantes para el sector, identificando nuestra zona de desarrollo próximo."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Analiza sus condiciones laborales como persona trabajadora por cuenta ajena identificándolas en los principales tipos de contratos, cambios y vicisitudes relevantes que se pueden presentar en la relación laboral en la normativa laboral y especialmente en el convenio colectivo del sector.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado los derechos y obligaciones derivados de la relación laboral, así como las condiciones de trabajo pactadas en un convenio colectivo aplicable al sector profesional relacionado con el título.",
+                        "b": "Se han comparado las principales modalidades de contratación, localizando los diferentes modelos en las fuentes oficiales.",
+                        "c": "Se han identificado las características definitorias de los nuevos entornos de organización del trabajo y los derechos que conlleval.",
+                        "d": "Se han identificado los diferentes componentes del recibo de salario.",
+                        "e": "Se han identificado los recursos laborales existentes ante las diferentes vicisitudes que se pueden dar en la relación laboral,",
+                        "f": "Se ha valorado el papel de la Seguridad Social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.",
+                        "g": "Se han analizado las principales prestaciones derivadas de la suspensión y extinción de la relación laboral."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Analiza y evalúa su potencial profesional y sus intereses para guiarse en el proceso de auto orientación y elabora una hoja de ruta para la inserción profesional en base al análisis de las competencias, intereses y destrezas personales.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han evaluado los propios intereses, motivaciones, habilidades y destrezas en el marco de un proceso de autoconocimiento.",
+                        "b": "Se han analizado las cualidades y competencias personales afines a la actividad profesional relacionada con el perfil del título.",
+                        "c": "Se han determinado las competencias personales y sociales con valor para el empleo.",
+                        "d": "Se han señalado las preferencias profesionales, intereses y metas en el marco de un proyecto profesional.",
+                        "e": "Se ha valorado el concepto de autoestima en el proceso de búsqueda de empleo.",
+                        "f": "Se han identificado las fortalezas, debilidades, amenazas y oportunidades propias para la inserción profesional.",
+                        "g": "Se han identificado expectativas de futuro para inserción profesional analizando competencias, intereses y destrezas personales.",
+                        "h": "Se han valorado hitos importantes en la trayectoria vital con valor profesionalizador.",
+                        "i": "Se han identificado los itinerarios formativos profesionales relacionados con el perfil profesional.",
+                        "j": "Se han formulado objetivos profesionales y se ha determinado metas personales y profesionales para la mejora de la empleabilidad y las condiciones de inserción laboral.",
+                        "k": "Se ha trazado un plan de acción para desarrollar las áreas de mejora y potenciar las fortalezas personales con valor para el empleo."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Aplica las estrategias para el aprendizaje autónomo reconociendo su valor profesionalizador, diseñando y optimizando su propio entorno de aprendizaje haciendo uso de las tecnologías digitales como herramientas de aprendizaje autónomo, siendo coherente con su identidad digital y sus propios objetivos profesionales planteados en su plan de desarrollo individual.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha tomado conciencia de la responsabilidad individual en el desarrollo profesional valorando la actitud de aprendizaje permanente para el desarrollo de propias y nuevas competencias.",
+                        "b": "Se ha identificado la empleabilidad como capacidad de adaptación al entorno laboral.",
+                        "c": "Se han conocido y utilizado herramientas, fuentes de información, conexiones y actividades para la configuración de un entorno personal de aprendizaje para la empleabilidad.",
+                        "d": "Se ha puesto en práctica la competencia digital para configurar un entorno personal de aprendizaje para la empleabilidad.",
+                        "e": "Se ha analizado el concepto de identidad digital y su impacto en la empleabilidad.",
+                        "f": "Se ha justificado el diseño de su entorno de aprendizaje basado en cómo éste mejora la empleabilidad.",
+                        "g": "Se ha elaborado su plan de desarrollo individual como herramienta para la mejora de la empleabilidad.",
+                        "h": "Se han aplicado las herramientas de aprendizaje autónomo para su desarrollo personal y profesional.",
+                        "i": "Se ha diseñado el entorno de aprendizaje que permite alcanzar el plan de desarrollo individual."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Identifica el concepto de salud psicosocial derivada del desempeño profesional, identificando y evaluando los factores de riesgo asociados a la misma, y aplicando medidas correctivas:",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado y valorado el concepto de salud psicosocial como factor determinante del bienestar mental del individuo y de los entornos laborales saludables.",
+                        "b": "Se ha analizado la salud mental como desencadenante de siniestralidad y absentismo laboral, así como su evolución en los diferentes colectivos de trabajadores, especialmente en los grupos de población joven.",
+                        "c": "Se ha aprendido a reconocer e identificar los factores de riesgo psicosocial en el ámbito laboral.",
+                        "d": "Se han identificado los diferentes tipos de daños derivados de los factores de riesgo psicosocial y su repercusión en los individuos y en las organizaciones, así como su impacto en la competitividad y productividad de las empresas.",
+                        "e": "Se han definido y delimitado los conceptos de estrés laboral, tecnoestrés y burnout como las principales consecuencias ante condiciones psicosociales desfavorables o adversas en el entorno laboral.",
+                        "f": "Se han activado las estrategias de afrontamiento personal frente a los estresores derivados de las condiciones laborales así como los recursos facilitadores del bienestar emocional de las personas a lo largo de su vida",
+                        "g": "Se han determinado las medidas de intervención a nivel social, empresarial y asistencial, que permitan la adecuada respuesta a las situaciones de conflicto en el ámbito laboral."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
+            ]
+        },
+        "1710": {
+            "nombre": "Itinerario personal para la empleabilidad II",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Planifica y pone en marcha estrategias en los diferentes procesos selectivos de empleo que le permiten mejorar sus posibilidades de inserción laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han determinado las técnicas utilizadas actualmente en el sector para el proceso de selección de personal.",
+                        "b": "Se han desarrollado estrategias para la búsqueda de empleo relacionadas con las técnicas actuales más utilizadas contextualizadas al sector.",
+                        "c": "Se han valorado las actitudes y aptitudes que permiten superar procesos selectivos en el sector privado y en el sector público.",
+                        "d": "Se ha construido una marca personal identificando las necesidades del mercado actual, sus habilidades, destrezas y su aporte de valor."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Aplica estrategias relacionadas con las competencias personales, sociales y emocionales para el empleo en búsqueda de la mejora de su empleabilidad.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha valorado la importancia de las competencias personales y sociales en la empleabilidad en el sector de referencia.",
+                        "b": "Se ha participado activamente en el establecimiento de los objetivos del equipo y en la toma de decisiones del mismo y asumido la responsabilidad de las acciones y decisiones del grupo, participando activamente en el logro de unos objetivos compartidos cooperando con otras personas y compartiendo el liderazgo.",
+                        "c": "Se han incorporado al propio proceso de aprendizaje las técnicas y recursos de presentación y comunicación, tanto orales como escritos, adecuados para una comunicación efectiva y afectiva siendo capaz de adaptarlos a cada situación y circunstancias, valorando las oportunidades y dificultades que ofrece cada una de ellas.",
+                        "d": "Se han aplicado técnicas y estrategias para la gestión del tiempo disponible para alcanzar los objetivos tanto individuales como del equipo y programado las actividades necesarias.",
+                        "e": "Se han aplicado estrategias para canalizar las emociones mostrando una actitud flexible en las relaciones con otras personas.",
+                        "f": "Se han desarrollado estrategias para la programación de actividades atendiendo a criterios de organización eficiente y previendo las posibles dificultades.",
+                        "g": "Se ha reaccionado de forma flexible y positiva ante conflictos y situaciones nuevas,aprovechando las oportunidades y gestionando las dificultades haciendo uso de estrategias relacionadas con la inteligencia emocional."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Pone en práctica las habilidades emprendedoras necesarias para el desarrollo de procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo hacia un modelo sostenible.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado el concepto de innovación y su relación con la construcción de una sociedad más sostenible que mejore en el bienestar de los individuos.",
+                        "b": "Se han analizado las distintas metodologías para emprender y su importancia para favorecer la innovación y como fuente de creación de empleo y bienestar social.",
+                        "c": "Se han aplicado las habilidades emprendedoras necesarias para promover el emprendimiento y el intraemprendimiento.",
+                        "d": "Se ha puesto en práctica el trabajo colaborativo como requisito para el desarrollo de procesos de innovación.",
+                        "e": "Se ha desarrollado la competencia digital necesaria para la mejora de los procesos de innovación e investigación aplicadas que promuevan la modernización del sector productivo.",
+                        "f": "Se han incorporado los objetivos de las políticas e iniciativas relacionadas con la sostenibilidad y el medio ambiente a la estrategia empresarial enfocada al desarrollo de un modelo económico y social sostenible."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Identifica, define y valida ideas de emprendimiento generadoras de nuevas oportunidades a partir de estrategias de análisis del entorno socio productivo utilizando metodologías ágiles para el emprendimiento.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los problemas de las personas destinatarias potenciales del proyecto emprendedor como paso previo a la propuesta de soluciones que se conviertan en oportunidades.",
+                        "b": "Se ha puesto en práctica el proceso creativo con el fin de conseguir una idea emprendedora que aporte valor económico, social y/o cultural.",
+                        "c": "Se ha diseñado un modelo de negocio y/o gestión derivado de la idea emprendedora.",
+                        "d": "Se han incorporado valores éticos y sociales a la idea emprendedora analizando modelos de balance social.",
+                        "e": "Se ha analizado la contribución de la Economía Circular y la Economía del Bien Común al desarrollo de un modelo económico y social basado en la equidad, la justicia social y la sostenibilidad.",
+                        "f": "Se han analizado los principales componentes del entorno general y específico, y su impacto en la idea emprendedora.",
+                        "g": "Se han realizado entrevistas de problema para validar el perfil y el problema de las personas destinatarias de la idea emprendedora.",
+                        "h": "Se ha validado la solución mediante la creación de prototipos buscando el encaje problema-solución.",
+                        "i": "Se ha experimentado con la puesta en práctica de estrategias de marketing para desarrollar destrezas en técnicas de comunicación y venta."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Desarrolla un proyecto emprendedor de innovación social y/o tecnológica aplicadaen colaboración con el entorno.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado los conceptos básicos del emprendimiento y la innovación social.",
+                        "b": "Se ha reflexionado sobre la necesidad del liderazgo ético y sostenible en las organizaciones.",
+                        "c": "Se ha reflexionado sobre la tecnología como base para el cambio del modelo productivo.",
+                        "d": "Se han puesto en marcha las estrategias propias del pensamiento de diseño para detectar necesidades sociales y medioambientales.",
+                        "e": "Se han analizado los elementos del diseño de modelos de negocio ecosociales y/o de base tecnológica.",
+                        "f": "Se han alineado metas de desarrollo sostenible con el diseño de modelos de negocio ecosociales y/o de base tecnológica.",
+                        "g": "Se han aplicado las estrategias necesarias para analizar la viabilidad del proyecto emprendedor.",
+                        "h": "Se han investigado las opciones financieras socialmente responsables.",
+                        "i": "Se han definido los agentes implicados en el proyecto, así como su participación en el mismo."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Analiza la rentabilidad de la propuesta emprendedora valorando inversión, costes y beneficios y diseña una estrategia para la puesta en marcha de la misma teniendo en cuenta obligaciones administrativas, fiscales y contables.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado la inversión, los costes y beneficios y determinado si la propuesta emprendedora es rentable.",
+                        "b": "Se han consultado y comparado las diferentes formas jurídicas y asociativas que pueden aplicarse a la propuesta emprendedora y se ha tomado una decisión razonada sobre la más adecuada al supuesto concreto.",
+                        "c": "Se han identificado las diferentes obligaciones administrativas, fiscales y contables que se derivan de la propuesta emprendedora.",
+                        "d": "Se ha trazado un plan de acción para la puesta en marcha de la propuesta emprendedora."
+                    }
+                }
+            },
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
+            ]
+        },
+        "1665": {
+            "nombre": "Digitalización aplicada a los sectores productivos (GS)",
+            "creditos": "3",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (Information Technology: tecnología de la información) y OT (Operation Technology: tecnología de operación) característicos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito en qué consiste el concepto de digitalización.",
+                        "b": "Se ha relacionado la implantación de la tecnología digital con la organización de las empresas.",
+                        "c": "Se han establecido las diferencias y similitudes entre los entornos IT y OT.",
+                        "d": "Se han identificado los departamentos típicos de las empresas que pueden constituir entornos IT.",
+                        "e": "Se han seleccionado las tecnologías típicas de la digitalización en planta y en negocio.",
+                        "f": "Se ha analizado la importancia de la conexión entre entornos IT y OT.",
+                        "g": "Se han analizado las ventajas de digitalizar una empresa industrial de extremo a extremo."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las principales tecnologías habilitadoras digitales.",
+                        "b": "Se han relacionado las THD con el desarrollo de productos y servicios.",
+                        "c": "Se ha relacionado la importancia de las THD con la economía sostenible y eficiente.",
+                        "d": "Se han identificado nuevos mercados generados por las THD.",
+                        "e": "Se ha analizado la implicación de THD tanto en la parte de negocio como en la parte de planta.",
+                        "f": "Se han identificado las mejoras producidas debido a la implantación de las tecnologías habilitadoras en relación con los entornos IT y OT.",
+                        "g": "Se ha elaborado un informe que relacione, las tecnologías con sus características y áreas de aplicación."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Identifica sistemas basados en cloud/nube y su influencia en el desarrollo de los sistemas digitales.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los diferentes niveles de la cloud/nube.",
+                        "b": "Se han identificado las principales funciones de la cloud/nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros",
+                        "c": "Se ha descrito el concepto de edge computing y su relación con la cloud/nube.",
+                        "d": "Se han definido los conceptos de fog y mist y sus zonas de aplicación en el conjunto.",
+                        "e": "Se han identificado las ventajas que proporciona la utilización de la cloud/nube en los sistemas conectados."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la importancia de la IA en la automatización de procesos y su optimización.",
+                        "b": "Se ha relacionado la IA con la recogida masiva de datos (Big Data y su tratamiento)",
+                        "c": "Se ha valorado la importancia presente y futura de la IA.",
+                        "d": "Se han identificado los sectores con implantación más relevante de IA.",
+                        "e": "Se han identificado los lenguajes de programación en IA.",
+                        "f": "Se ha descrito como influye la IA en el sector del título."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha establecido la diferencia entre dato e información.",
+                        "b": "Se ha descrito el ciclo de vida del dato.",
+                        "c": "Se ha identificado la relación entre Big Data, análisis de datos, machine/ deep learning e inteligencia artificial.",
+                        "d": "Se han descrito las características que definen Big Data.",
+                        "e": "Se han descrito las etapas típicas de la ciencia de datos y su relación en el proceso.",
+                        "f": "Se han descrito los procedimientos de almacenaje de datos en la cloud/nube.",
+                        "g": "Se ha descrito la importancia del cloud computing.",
+                        "h": "Se han identificado los principales objetivos de la ciencia de datos en las diferentes empresas.",
+                        "i": "Se ha valorado la importancia de la seguridad y su regulación en relación con los datos."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los objetivos estratégicos de la empresa.",
+                        "b": "Se han identificado y alineado las áreas de producción/negocio y de comunicaciones.",
+                        "c": "Se han identificado las áreas susceptibles de ser digitalizadas.",
+                        "d": "Se ha analizado el encaje de AD (áreas digitalizadasentre sí y con las que no lo están.",
+                        "e": "Se han tenido en cuenta las necesidades presentes y futuras de la empresa.",
+                        "f": "Se han relacionado cada una de las áreas con la implantación de las tecnologías.",
+                        "g": "Se han analizado las posibles brechas de seguridad en cada una de las áreas.",
+                        "h": "Se ha definido el tratamiento de los datos y su análisis.",
+                        "i": "Se ha tenido en cuenta la integración entre datos, aplicaciones, plataformas que los soportan, entre otros.",
+                        "j": "Se han documentado los cambios realizados en función de la estrategia.",
+                        "k": "Se han tenido en cuenta la idoneidad de los recursos humanos."
+                    }
+                }
+            },
+            "horas": "34",
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [
+                "a",
+                "e",
+                "f",
+                "i",
+                "j",
+                "v",
+                "y",
+                "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
+            ]
+        },
+        "0370": {
+            "nombre": "Planificación y Administración de Redes",
+            "horas": "200",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales": [
+                "f",
+                "g",
+                "h",
+                "i",
+                "k",
+                "ñ",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "e",
+                "f",
+                "g",
+                "h",
+                "m",
+                "n",
+                "ñ",
+                "s"
+            ],
+            "creditos": "12",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos.",
+                        "b": "Se han diferenciado los distintos medios de transmisión utilizados en las redes.",
+                        "c": "Se han reconocido los distintos tipos de red y sus topologías.",
+                        "d": "Se han descrito las arquitecturas de red y los niveles que las componen.",
+                        "e": "Se ha descrito el concepto de protocolo de comunicación.",
+                        "f": "Se ha descrito el funcionamiento de las pilas de protocolos en las distintas arquitecturas de red.",
+                        "g": "Se han presentado y descrito los elementos funcionales, físicos y lógicos, de las redes de datos.",
+                        "h": "Se han diferenciado los dispositivos de interconexión de redes atendiendo al nivel funcional en el que se encuadran."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Integra ordenadores y periféricos en redes cableadas e inalámbricas, evaluando su funcionamiento y prestaciones.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los estándares para redes cableadas e inalámbricas.",
+                        "b": "Se han montado cables directos, cruzados y de consola.",
+                        "c": "Se han utilizado comprobadores para verificar la conectividad de distintos tipos de cables.",
+                        "d": "Se ha utilizado el sistema de direccionamiento lógico IP para asignar direcciones de red y máscaras de subred.",
+                        "e": "Se han configurado adaptadores de red cableados e inalámbricos bajo distintos sistemas operativos.",
+                        "f": "Se han integrado dispositivos en redes cableadas e inalámbricas.",
+                        "g": "Se ha comprobado la conectividad entre diversos dispositivos y adaptadores inalámbricos sobre distintas configuraciones.",
+                        "h": "Se han utilizado aplicaciones para representar el mapa físico y lógico de una red.",
+                        "i": "Se ha monitorizado la red mediante aplicaciones basadas en el protocolo SNMP."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Administra conmutadores estableciendo opciones de configuración para su integración en la red.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han conectado conmutadores entre sí y con las estaciones de trabajo.",
+                        "b": "Se ha interpretado la información que proporcionan los «leds» del conmutador.",
+                        "c": "Se han utilizado distintos métodos para acceder al modo de configuración del conmutador.",
+                        "d": "Se han identificado los archivos que guardan la configuración del conmutador.",
+                        "e": "Se ha administrado la tabla de direcciones MAC del conmutador.",
+                        "f": "Se ha configurado la seguridad del puerto.",
+                        "g": "Se ha actualizado el sistema operativo del conmutador.",
+                        "h": "Se han utilizado los comandos proporcionados por el sistema operativo del conmutador que permiten hacer el seguimiento de posibles incidencias.",
+                        "i": "Se ha verificado el funcionamiento del Spanning Tree Protocol en un conmutador.",
+                        "j": "Se han modificado los parámetros que determinan el proceso de selección del puente raíz."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Administra las funciones básicas de un «router» estableciendo opciones de configuración para su integración en la red.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha interpretado la información que proporcionan los «leds» del «router».",
+                        "b": "Se han utilizado distintos métodos para acceder al modo de configuración del «router».",
+                        "c": "Se han identificado las etapas de la secuencia de arranque del «router».",
+                        "d": "Se han utilizado los comandos para la configuración y administración básica del «router».",
+                        "e": "Se han identificado los archivos que guardan la configuración del «router» y se han gestionado mediante los comandos correspondientes.",
+                        "f": "Se han configurado rutas estáticas.",
+                        "g": "Se han utilizado los comandos proporcionados por el sistema operativo del «router» que permiten hacer el seguimiento de posibles incidencias.",
+                        "h": "Se ha configurado el «router» como servidor de direcciones IP dinámicas.",
+                        "i": "Se han descrito las capacidades de filtrado de tráfico del «router».",
+                        "j": "Se han utilizado comandos para gestionar listas de control de acceso."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Configura redes locales virtuales identificando su campo de aplicación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito las ventajas que presenta la utilización de redes locales virtuales (VLANs).",
+                        "b": "Se han implementado VLANs.",
+                        "c": "Se ha realizado el diagnóstico de incidencias en VLANs.",
+                        "d": "Se han configurado enlaces troncales.",
+                        "e": "Se ha utilizado un router para interconectar diversas VLANs.",
+                        "f": "Se han descrito las ventajas que aporta el uso de protocolos de administración centralizada de VLANs.",
+                        "g": "Se han configurado los conmutadores para trabajar de acuerdo con los protocolos de administración centralizada."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Realiza tareas avanzadas de administración de red analizando y utilizando protocolos dinámicos de encaminamiento.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha configurado el protocolo de enrutamiento RIPv1.",
+                        "b": "Se han configurado redes con el protocolo RIPv2.",
+                        "c": "Se ha realizado el diagnóstico de fallos en una red que utiliza RIP.",
+                        "d": "Se ha valorado la necesidad de utilizar máscaras de longitud variable en IPv4.",
+                        "e": "Se ha dividido una red principal en subredes de distintos tamaños con VLSM.",
+                        "f": "Se han realizado agrupaciones de redes con CIDR.",
+                        "g": "Se ha habilitado y configurado OSPF en un «router».",
+                        "h": "Se ha establecido y propagado una ruta por defecto usando OSPF."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Conecta redes privadas a redes públicas identificando y aplicando diferentes tecnologías.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito las ventajas e inconvenientes del uso de la traducción de direcciones de red (NAT).",
+                        "b": "Se ha utilizado NAT para realizar la traducción estática de direcciones de red.",
+                        "c": "Se ha utilizado NAT para realizar la traducción dinámica de direcciones de red.",
+                        "d": "Se han descrito las características de las tecnologías «Frame Relay», RDSI y ADSL.",
+                        "e": "Se han descrito las analogías y diferencias entre las tecnologías «Wifi» y «Wimax».",
+                        "f": "Se han descrito las características de las tecnologías UMTS y HSDPA."
+                    }
+                }
+            }
+        },
+        "0372": {
+            "nombre": "Gestión de Base de Datos",
+            "horas": "166",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0225_3": "Configurar y gestionar la base de datos."
+            },
+            "ObjetivosGenerales": [
+                "d",
+                "e",
+                "m"
+            ],
+            "CompetenciasTitulo": [
+                "c",
+                "d",
+                "m"
+            ],
+            "creditos": "11",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Reconoce los elementos de las bases de datos analizando sus funciones y valorando la utilidad de sistemas gestores.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado los distintos sistemas lógicos de almacenamiento y sus funciones.",
+                        "b": "Se han identificado los distintos tipos de bases de datos según el modelo de datos utilizado.",
+                        "c": "Se han identificado los distintos tipos de bases de datos en función de la ubicación de la información.",
+                        "d": "Se ha reconocido la utilidad de un sistema gestor de bases de datos.",
+                        "e": "Se ha descrito la función de cada uno de los elementos de un sistema gestor de bases de datos.",
+                        "f": "Se han clasificado los sistemas gestores de bases de datos."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Diseña modelos lógicos normalizados interpretando diagramas entidad/relación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado el significado de la simbología propia de los diagramas entidad/relación.",
+                        "b": "Se han utilizado herramientas gráficas para representar el diseño lógico.",
+                        "c": "Se han identificado las tablas del diseño lógico.",
+                        "d": "Se han identificado los campos que forman parte de las tablas del diseño lógico.",
+                        "e": "Se han identificado las relaciones entre las tablas del diseño lógico.",
+                        "f": "Se han definido los campos clave.",
+                        "g": "Se han aplicado las reglas de integridad.",
+                        "h": "Se han aplicado las reglas de normalización hasta un nivel adecuado.",
+                        "i": "Se han identificado y documentado las restricciones que no pueden plasmarse en el diseño lógico."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Realiza el diseño físico de bases de datos utilizando asistentes, herramientas gráficas y el lenguaje de definición de datos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han definido las estructuras físicas de almacenamiento.",
+                        "b": "Se han creado tablas.",
+                        "c": "Se han seleccionado los tipos de datos adecuados.",
+                        "d": "Se han definido los campos clave en las tablas.",
+                        "e": "Se han implantado todas las restricciones reflejadas en el diseño lógico.",
+                        "f": "Se ha verificado mediante un conjunto de datos de prueba que la implementación se ajusta al modelo.",
+                        "g": "Se han utilizado asistentes y herramientas gráficas.",
+                        "h": "Se ha utilizado el lenguaje de definición de datos.",
+                        "i": "Se ha definido y documentado el diccionario de datos."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Consulta la información almacenada manejando asistentes, herramientas gráficas y el lenguaje de manipulación de datos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las herramientas y sentencias para realizar consultas.",
+                        "b": "Se han realizado consultas simples sobre una tabla.",
+                        "c": "Se han realizado consultas que generan valores de resumen.",
+                        "d": "Se han realizado consultas sobre el contenido de varias tablas mediante composiciones internas.",
+                        "e": "Se han realizado consultas sobre el contenido de varias tablas mediante composiciones externas.",
+                        "f": "Se han realizado consultas con subconsultas.",
+                        "g": "Se han valorado las ventajas e inconvenientes de las distintas opciones válidas para llevar a cabo una consulta determinada."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Modifica la información almacenada utilizando asistentes, herramientas gráficas y el lenguaje de manipulación de datos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las herramientas y sentencias para modificar el contenido de la base de datos.",
+                        "b": "Se han insertado, borrado y actualizado datos en las tablas.",
+                        "c": "Se ha incluido en una tabla la información resultante de la ejecución de una consulta.",
+                        "d": "Se han adoptado medidas para mantener la integridad y consistencia de la información.",
+                        "e": "Se han diseñado guiones de sentencias para llevar a cabo tareas complejas.",
+                        "f": "Se ha reconocido el funcionamiento de las transacciones.",
+                        "g": "Se han anulado parcial o totalmente los cambios producidos por una transacción.",
+                        "h": "Se han identificado los efectos de las distintas políticas de bloqueo de registros."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Ejecuta tareas de aseguramiento de la información, analizándolas y aplicando mecanismos de salvaguarda y transferencia.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado herramientas gráficas y en línea de comandos para la administración de copias de seguridad.",
+                        "b": "Se han realizado copias de seguridad.",
+                        "c": "Se han restaurado copias de seguridad.",
+                        "d": "Se han identificado las herramientas para importar y exportar datos.",
+                        "e": "Se han exportado datos a diversos formatos.",
+                        "f": "Se han importado datos con distintos formatos.",
+                        "g": "Se ha interpretado correctamente la información suministrada por los mensajes de error y los ficheros de registro.",
+                        "h": "Se ha transferido información entre sistemas gestores."
+                    }
+                }
+            }
+        },
+        "0374": {
+            "nombre": "Administración de Sistemas Operativos",
+            "horas": "133",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0490_3": "Gestionar servicios en el sistema informático.",
+                "UC0485_3": "Instalar, configurar y administrar el software de base y de aplicación del sistema."
+            },
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "n",
+                "ñ",
+                "o",
+                "q"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "l",
+                "m",
+                "n",
+                "ñ",
+                "o",
+                "q",
+                "r",
+                "s"
+            ],
+            "creditos": "8",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Administra el servicio de directorio interpretando especificaciones e integrándolo en una red.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado la función, los elementos y las estructuras lógicas del servicio de directorio.",
+                        "b": "Se ha determinado y creado el esquema del servicio de directorio.",
+                        "c": "Se ha realizado la instalación del servicio de directorio en el servidor.",
+                        "d": "Se ha realizado la configuración y personalización del servicio de directorio.",
+                        "e": "Se ha integrado el servicio de directorio con otros servicios.",
+                        "f": "Se han aplicado filtros de búsqueda en el servicio de directorio.",
+                        "g": "Se ha utilizado el servicio de directorio como mecanismo de acreditación centralizada de los usuarios en una red.",
+                        "h": "Se ha realizado la configuración del cliente para su integración en el servicio de directorio.",
+                        "i": "Se han utilizado herramientas gráficas y comandos para la administración del servicio de directorio.",
+                        "j": "Se ha documentado la estructura e implantación del servicio de directorio."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Administra procesos del sistema describiéndolos y aplicando criterios de seguridad y eficiencia.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito el concepto de proceso del sistema, tipos, estados y ciclo de vida.",
+                        "b": "Se han utilizado interrupciones y excepciones para describir los eventos internos del procesador.",
+                        "c": "Se ha diferenciado entre proceso, hilo y trabajo.",
+                        "d": "Se han realizado tareas de creación, manipulación y terminación de procesos.",
+                        "e": "Se ha utilizado el sistema de archivos como medio lógico para el registro e identificación de los procesos del sistema.",
+                        "f": "Se han utilizado herramientas gráficas y comandos para el control y seguimiento de los procesos del sistema.",
+                        "g": "Se ha comprobado la secuencia de arranque del sistema, los procesos implicados y la relación entre ellos.",
+                        "h": "Se han tomado medidas de seguridad ante la aparición de procesos no identificados.",
+                        "i": "Se han documentado los procesos habituales del sistema, su función y relación entre ellos."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Gestiona la automatización de tareas del sistema, aplicando criterios de eficiencia y utilizando comandos y herramientas gráficas.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito las ventajas de la automatización de las tareas repetitivas en el sistema.",
+                        "b": "Se han utilizado los comandos del sistema para la planificación de tareas.",
+                        "c": "Se han establecido restricciones de seguridad.",
+                        "d": "Se han realizado planificaciones de tareas repetitivas o puntuales relacionadas con la administración del sistema.",
+                        "e": "Se ha automatizado la administración de cuentas.",
+                        "f": "Se han instalado y configurado herramientas gráficas para la planificación de tareas.",
+                        "g": "Se han utilizado herramientas gráficas para la planificación de tareas.",
+                        "h": "Se han documentado los procesos programados como tareas automáticas."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Administra de forma remota el sistema operativo en red valorando su importancia y aplicando criterios de seguridad.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito métodos de acceso y administración remota de sistemas.",
+                        "b": "Se ha diferenciado entre los servicios orientados a sesión y los no orientados a sesión.",
+                        "c": "Se han utilizado herramientas de administración remota suministradas por el propio sistema operativo.",
+                        "d": "Se han instalado servicios de acceso y administración remota.",
+                        "e": "Se han utilizado comandos y herramientas gráficas para gestionar los servicios de acceso y administración remota.",
+                        "f": "Se han creado cuentas de usuario para el acceso remoto.",
+                        "g": "Se han realizado pruebas de acceso y administración remota entre sistemas heterogéneos.",
+                        "h": "Se han utilizado mecanismos de encriptación de la información transferida.",
+                        "i": "Se han documentado los procesos y servicios del sistema administrados de forma remota."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Administra servidores de impresión describiendo sus funciones e integrándolos en una red.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito la funcionalidad de los sistemas y servidores de impresión.",
+                        "b": "Se han identificado los puertos y los protocolos utilizados.",
+                        "c": "Se han utilizado las herramientas para la gestión de impresoras integradas en el sistema operativo.",
+                        "d": "Se ha instalado y configurado un servidor de impresión en entorno Web.",
+                        "e": "Se han creado y clasificado impresoras lógicas.",
+                        "f": "Se han creado grupos de impresión.",
+                        "g": "Se han gestionado impresoras y colas de trabajos mediante comandos y herramientas gráficas.",
+                        "h": "Se han compartido impresoras en red entre sistemas operativos diferentes.",
+                        "i": "Se ha documentado la configuración del servidor de impresión y de las impresoras creadas."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Integra sistemas operativos libres y propietarios, justificando y garantizando su interoperabilidad.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la necesidad de compartir recursos en red entre diferentes sistemas operativos.",
+                        "b": "Se han establecido niveles de seguridad para controlar el acceso del cliente a los recursos compartidos en red.",
+                        "c": "Se ha comprobado la conectividad de la red en un escenario heterogéneo.",
+                        "d": "Se ha descrito la funcionalidad de los servicios que permiten compartir recursos en red.",
+                        "e": "Se han instalado y configurado servicios para compartir recursos en red.",
+                        "f": "Se ha comprobado el funcionamiento de los servicios instalados.",
+                        "g": "Se ha trabajado en grupo para acceder a sistemas de archivos e impresoras en red desde equipos con diferentes sistemas operativos.",
+                        "h": "Se ha documentado la configuración de los servicios instalados."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Utiliza lenguajes de guiones en sistemas operativos, describiendo su aplicación y administrando servicios del sistema operativo.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han utilizado y combinado las estructuras del lenguaje para crear guiones.",
+                        "b": "Se han utilizado herramientas para depurar errores sintácticos y de ejecución.",
+                        "c": "Se han interpretado guiones de configuración del sistema operativo.",
+                        "d": "Se han realizado cambios y adaptaciones de guiones del sistema.",
+                        "e": "Se han creado y probado guiones de administración de servicios.",
+                        "f": "Se han creado y probado guiones de automatización de tareas.",
+                        "g": "Se han implantado guiones en sistemas libres y propietarios.",
+                        "h": "Se han consultado y utilizado librerías de funciones.",
+                        "i": "Se han documentado los guiones creados."
+                    }
+                }
+            }
+        },
+        "0375": {
+            "nombre": "Servicios de Red e Internet",
+            "horas": "166",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0495_3": "Instalar, configurar y administrar el software para gestionar un entorno Web.",
+                "UC0496_3": "Instalar, configurar y administrar servicios de mensajería electrónica.",
+                "UC0497_3": "Instalar, configurar y administrar servicios de transferencia de archivos y multimedia."
+            },
+            "ObjetivosGenerales": [
+                "a",
+                "c",
+                "n",
+                "ñ",
+                "o",
+                "r",
+                "s"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "m",
+                "n",
+                "ñ",
+                "o",
+                "q"
+            ],
+            "creditos": "8",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Administra servicios de resolución de nombres, analizándolos y garantizando la seguridad del servicio.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado y descrito escenarios en los que surge la necesidad de un servicio de resolución de nombres.",
+                        "b": "Se han clasificado los principales mecanismos de resolución de nombres.",
+                        "c": "Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.",
+                        "d": "Se han instalado y configurado servicios jerárquicos de resolución de nombres.",
+                        "e": "Se ha preparado el servicio para reenviar consultas de recursos externos a otro servidor de nombres.",
+                        "f": "Se ha preparado el servicio para almacenar y distribuir las respuestas procedentes de otros servidores.",
+                        "g": "Se han añadido registros de nombres correspondientes a una zona nueva, con opciones relativas a servidores de correo y alias.",
+                        "h": "Se han implementado soluciones de servidores de nombres en direcciones «ip» dinámicas.",
+                        "i": "Se han realizado transferencias de zona entre dos o más servidores.",
+                        "j": "Se han documentado los procedimientos de instalación y configuración."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Administra servicios de configuración automática, identificándolos y verificando la correcta asignación de los parámetros.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han reconocido los mecanismos automatizados de configuración de los parámetros de red y las ventajas que proporcionan.",
+                        "b": "Se han ilustrado los procedimientos y pautas que intervienen en una solicitud de configuración de los parámetros de red.",
+                        "c": "Se han instalado servidores de configuración de los parámetros de red.",
+                        "d": "Se ha preparado el servicio para asignar la configuración básica a los equipos de una red local.",
+                        "e": "Se han configurado asignaciones estáticas y dinámicas.",
+                        "f": "Se han integrado en el servicio opciones adicionales de configuración.",
+                        "g": "Se han documentado los procedimientos realizados."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Administra servidores Web aplicando criterios de configuración y asegurando el funcionamiento del servicio.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor Web.",
+                        "b": "Se han instalado y configurado servidores Web.",
+                        "c": "Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.",
+                        "d": "Se han creado y configurado sitios virtuales.",
+                        "e": "Se han configurado los mecanismos de autenticación y control de acceso del servidor.",
+                        "f": "Se han obtenido e instalado certificados digitales.",
+                        "g": "Se han establecido mecanismos para asegurar las comunicaciones entre el cliente y el servidor.",
+                        "h": "Se han realizado pruebas de monitorización del servicio.",
+                        "i": "Se han analizado los registros del servicio para la elaboración de estadísticas y la resolución de incidencias.",
+                        "j": "Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Administra servicios de transferencia de archivos asegurando y limitando el acceso a la información.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha establecido la utilidad y modo de operación del servicio de transferencia de archivos.",
+                        "b": "Se han instalado y configurado servidores de transferencia de archivos.",
+                        "c": "Se han creado usuarios y grupos para acceso remoto al servidor.",
+                        "d": "Se ha configurado el acceso anónimo.",
+                        "e": "Se han establecido límites en los distintos modos de acceso.",
+                        "f": "Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.",
+                        "g": "Se han realizado pruebas con clientes en línea de comandos y con clientes en modo gráfico.",
+                        "h": "Se ha utilizado el navegador como cliente del servicio de transferencia de archivos.",
+                        "i": "Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Administra servidores de correo electrónico, aplicando criterios de configuración y garantizando la seguridad del servicio.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito los diferentes protocolos que intervienen en el envío y recogida del correo electrónico.",
+                        "b": "Se ha instalado y configurado un servidor de correo electrónico.",
+                        "c": "Se han creado cuentas de usuario y verificado el acceso de las mismas.",
+                        "d": "Se han establecido y aplicado métodos para impedir usos indebidos del servidor de correo electrónico.",
+                        "e": "Se han instalado servicios para permitir la recogida remota del correo existente en los buzones de usuario.",
+                        "f": "Se han usado clientes de correo electrónico para enviar y recibir correo desde las cuentas creadas en el servidor.",
+                        "g": "Se han utilizado la firma digital y el correo cifrado.",
+                        "h": "Se ha configurado el servidor de correo como un servicio seguro.",
+                        "i": "Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Administra servicios de mensajería instantánea, noticias y listas de distribución, verificando y asegurando el acceso de los usuarios.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito los servicios de mensajería instantánea, noticias y listas de distribución.",
+                        "b": "Se ha instalado y configurado el servicio de mensajería instantánea.",
+                        "c": "Se han utilizado clientes gráficos y de texto de mensajería instantánea.",
+                        "d": "Se ha instalado y configurado el servicio de noticias.",
+                        "e": "Se ha instalado y configurado el servicio de listas de distribución.",
+                        "f": "Se han determinado el tipo de lista y los modos de acceso permitidos.",
+                        "g": "Se han creado cuentas de usuario y verificado el acceso a los servicios de mensajería instantánea, noticias y listas de distribución.",
+                        "h": "Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso de los servicios de mensajería instantánea, noticias y listas de distribución."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Administra servicios de audio identificando las necesidades de distribución y adaptando los formatos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito la funcionalidad del servicio de audio.",
+                        "b": "Se ha instalado y configurado un servidor de distribución de audio.",
+                        "c": "Se ha instalado y configurado el cliente para el acceso al servidor de audio.",
+                        "d": "Se han reconocido y utilizado formatos de audio digital.",
+                        "e": "Se han utilizado herramientas de reproducción de audio en el cliente.",
+                        "f": "Se han utilizado servicios de audio a través del navegador.",
+                        "g": "Se han utilizado técnicas de sindicación y suscripción de audio.",
+                        "h": "Se ha elaborado documentación relativa a la instalación y administración del servidor de audio."
+                    }
+                },
+                "RA08": {
+                    "Resultado": " Administra servicios de vídeo identificando las necesidades de distribución y adaptando los formatos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito la funcionalidad del servicio de vídeo.",
+                        "b": "Se ha instalado y configurado un servidor de vídeo.",
+                        "c": "Se ha configurado el cliente para el acceso al servidor de vídeo.",
+                        "d": "Se han reconocido y utilizado formatos de compresión de vídeo digital.",
+                        "e": "Se han utilizado técnicas de sindicación y suscripción de vídeo.",
+                        "f": "Se han descrito las características y protocolos utilizados en el servicio de videoconferencia.",
+                        "g": "Se han instalado y configurado herramientas gráficas para realizar videoconferencia.",
+                        "h": "Se han utilizado herramientas gráficas y navegadores para realizar videoconferencias.",
+                        "i": "Se ha elaborado documentación relativa a la instalación y administración del servidor de vídeo y del servicio de videoconferencia."
+                    }
+                }
+            }
+        },
+        "0376": {
+            "nombre": "Implantación de Aplicaciones Web",
+            "horas": "133",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0493_3": "Implementar, verificar y documentar aplicaciones Web en entornos Internet, intranet y extranet."
+            },
+            "ObjetivosGenerales": [
+                "c",
+                "e",
+                "l",
+                "m",
+                "o",
+                "p",
+                "r",
+                "s"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "k",
+                "l",
+                "o",
+                "r",
+                "s"
+            ],
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Prepara el entorno de desarrollo y los servidores de aplicaciones Web instalando e integrando las funcionalidades necesarias.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado el software necesario para su funcionamiento.",
+                        "b": "Se han identificado las diferentes tecnologías empleadas.",
+                        "c": "Se han instalado y configurado servidores Web y de bases de datos.",
+                        "d": "Se han reconocido las posibilidades de procesamiento en los entornos cliente y servidor.",
+                        "e": "Se han añadido y configurado los componentes y módulos necesarios para el procesamiento de código en el servidor.",
+                        "f": "Se ha instalado y configurado el acceso a bases de datos.",
+                        "g": "Se ha establecido y verificado la seguridad en los accesos al servidor.",
+                        "h": "Se han utilizado plataformas integradas orientadas a la prueba y desarrollo de aplicaciones Web.",
+                        "i": "Se han documentado los procedimientos realizados."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Implanta gestores de contenidos seleccionándolos y estableciendo la configuración de sus parámetros.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha valorado el uso y utilidad de los gestores de contenidos.",
+                        "b": "Se han clasificado según la funcionalidad principal del sitio Web que permiten gestionar.",
+                        "c": "Se han instalado diferentes tipos de gestores de contenidos.",
+                        "d": "Se han diferenciado sus características (uso, licencia, entre otras)",
+                        "e": "Se han personalizado y configurado los gestores de contenidos.",
+                        "f": "Se han activado y configurado los mecanismos de seguridad proporcionados por los propios gestores de contenidos.",
+                        "g": "Se han realizado pruebas de funcionamiento.",
+                        "h": "Se han publicado los gestores de contenidos."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Administra gestores de contenidos adaptándolos a los requerimientos y garantizando la integridad de la información.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han adaptado y configurado los módulos del gestor de contenidos.",
+                        "b": "Se han creado y gestionado usuarios con distintos perfiles.",
+                        "c": "Se han integrado módulos atendiendo a requerimientos de funcionalidad.",
+                        "d": "Se han realizado copias de seguridad de los contenidos.",
+                        "e": "Se han importado y exportado contenidos en distintos formatos.",
+                        "f": "Se han gestionado plantillas.",
+                        "g": "Se han integrado funcionalidades de sindicación.",
+                        "h": "Se han realizado actualizaciones.",
+                        "i": "Se han obtenido informes de acceso."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Gestiona aplicaciones de ofimática Web integrando funcionalidades y asegurando el acceso a la información.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha reconocido la utilidad de las aplicaciones de ofimática Web.",
+                        "b": "Se han clasificado según su funcionalidad y prestaciones específicas.",
+                        "c": "Se han instalado aplicaciones de ofimática Web.",
+                        "d": "Se han configurado las aplicaciones para integrarlas en una intranet.",
+                        "e": "Se han gestionado las cuentas de usuario.",
+                        "f": "Se han aplicado criterios de seguridad en el acceso de los usuarios.",
+                        "g": "Se han utilizado las aplicaciones de forma cooperativa.",
+                        "h": "Se ha elaborado documentación relativa al uso y gestión de las aplicaciones."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Genera documentos Web utilizando lenguajes de guiones de servidor.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los lenguajes de guiones de servidor más relevantes.",
+                        "b": "Se ha reconocido la relación entre los lenguajes de guiones de servidor y los lenguajes de marcas utilizados en los clientes.",
+                        "c": "Se ha reconocido la sintaxis básica de un lenguaje de guiones concreto.",
+                        "d": "Se han utilizado estructuras de control del lenguaje.",
+                        "e": "Se han definido y utilizado funciones.",
+                        "f": "Se han utilizado formularios para introducir información.",
+                        "g": "Se han establecido y utilizado mecanismos para asegurar la persistencia de la información entre distintos documentos Web relacionados.",
+                        "h": "Se ha identificado y asegurado a los usuarios que acceden al documento Web.",
+                        "i": "Se ha verificado el aislamiento del entorno específico de cada usuario."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Genera documentos Web con acceso a bases de datos utilizando lenguajes de guiones de servidor.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los sistemas gestores de bases de datos más utilizados en entornos Web.",
+                        "b": "Se ha verificado la integración de los sistemas gestores de bases de datos con el lenguaje de guiones de servidor.",
+                        "c": "Se ha configurado en el lenguaje de guiones la conexión para el acceso al sistema gestor de base de datos.",
+                        "d": "Se han creado bases de datos y tablas en el gestor utilizando el lenguaje de guiones.",
+                        "e": "Se ha obtenido y actualizado la información almacenada en bases de datos.",
+                        "f": "Se han aplicado criterios de seguridad en el acceso de los usuarios.",
+                        "g": "Se ha verificado el funcionamiento y el rendimiento del sistema."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Realiza modificaciones en gestores de contenidos adaptando su apariencia y funcionalidades.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha identificado la estructura de directorios del gestor de contenidos.",
+                        "b": "Se ha reconocido la funcionalidad de los ficheros que utiliza y su naturaleza (código, imágenes, configuración, entre otros).",
+                        "c": "Se han seleccionado las funcionalidades que hay que adaptar e incorporar.",
+                        "d": "Se han identificado los recursos afectados por las modificaciones.",
+                        "e": "Se ha modificado el código de la aplicación para incorporar nuevas funcionalidades y adaptar otras existentes.",
+                        "f": "Se ha verificado el correcto funcionamiento de los cambios realizados.",
+                        "g": "Se han documentado los cambios realizados."
+                    }
+                }
+            }
+        },
+        "0377": {
+            "nombre": "Administración de Sistemas Gestores de Bases de Datos",
+            "horas": "67",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0224_3": "Configurar y gestionar un sistema gestor de bases de datos."
+            },
+            "ObjetivosGenerales": [
+                "d",
+                "e",
+                "j",
+                "n",
+                "ñ"
+            ],
+            "CompetenciasTitulo": [
+                "b",
+                "d",
+                "k",
+                "l",
+                "m"
+            ],
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Implanta sistemas gestores de bases de datos analizando sus características y ajustándose a los requerimientos del sistema.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha reconocido la utilidad y función de cada uno de los elementos de un sistema gestor de bases de datos.",
+                        "b": "Se han analizado las características de los principales sistemas gestores de bases de datos.",
+                        "c": "Se ha seleccionado el sistema gestor de bases de datos.",
+                        "d": "Se ha identificado el software necesario para llevar a cabo la instalación.",
+                        "e": "Se ha verificado el cumplimiento de los requisitos hardware.",
+                        "f": "Se han instalado sistemas gestores de bases de datos.",
+                        "g": "Se ha documentado el proceso de instalación.",
+                        "h": "Se ha interpretado la información suministrada por los mensajes de error y ficheros de registro.",
+                        "i": "Se han resuelto las incidencias de la instalación.",
+                        "j": "Se ha verificado el funcionamiento del sistema gestor de bases de datos."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Configura el sistema gestor de bases de datos interpretando las especificaciones técnicas y los requisitos de explotación.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito las condiciones de inicio y parada del sistema gestor.",
+                        "b": "Se ha seleccionado el motor de base de datos.",
+                        "c": "Se han asegurado las cuentas de administración.",
+                        "d": "Se han configurado las herramientas y software cliente del sistema gestor.",
+                        "e": "Se ha configurado la conectividad en red del sistema gestor.",
+                        "f": "Se han definido las características por defecto de las bases de datos.",
+                        "g": "Se han definido los parámetros relativos a las conexiones (tiempos de espera, número máximo de conexiones, entre otros).",
+                        "h": "Se ha documentado el proceso de configuración."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Implanta métodos de control de acceso utilizando asistentes, herramientas gráficas y comandos del lenguaje del sistema gestor.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han creado vistas personalizadas para cada tipo de usuario.",
+                        "b": "Se han creado sinónimos de tablas y vistas.",
+                        "c": "Se han definido y eliminado cuentas de usuario.",
+                        "d": "Se han identificado los privilegios sobre las bases de datos y sus elementos.",
+                        "e": "Se han agrupado y desagrupado privilegios.",
+                        "f": "Se han asignado y eliminado privilegios a usuarios.",
+                        "g": "Se han asignado y eliminado grupos de privilegios a usuarios.",
+                        "h": "Se ha garantizando el cumplimiento de los requisitos de seguridad."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Automatiza tareas de administración del gestor describiéndolas y utilizando guiones de sentencias.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha reconocido la importancia de automatizar tareas administrativas.",
+                        "b": "Se han descrito los distintos métodos de ejecución de guiones.",
+                        "c": "Se han identificado las herramientas disponibles para redactar guiones.",
+                        "d": "Se han definido y utilizado guiones para automatizar tareas.",
+                        "e": "Se han identificado los eventos susceptibles de activar disparadores.",
+                        "f": "Se han definido disparadores.",
+                        "g": "Se han utilizado estructuras de control de flujo.",
+                        "h": "Se han adoptado medidas para mantener la integridad y consistencia de la información."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Optimiza el rendimiento del sistema aplicando técnicas de monitorización y realizando adaptaciones.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado las herramientas de monitorización disponibles para el sistema gestor.",
+                        "b": "Se han descrito las ventajas e inconvenientes de la creación de índices.",
+                        "c": "Se han creado índices en tablas y vistas.",
+                        "d": "Se ha optimizado la estructura de la base de datos.",
+                        "e": "Se han optimizado los recursos del sistema gestor.",
+                        "f": "Se ha obtenido información sobre el rendimiento de las consultas para su optimización.",
+                        "g": "Se han programado alertas de rendimiento.",
+                        "h": "Se han realizado modificaciones en la configuración del sistema operativo para mejorar el rendimiento del gestor."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Aplica criterios de disponibilidad analizándolos y ajustando la configuración del sistema gestor.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha reconocido la utilidad de las bases de datos distribuidas.",
+                        "b": "Se han descrito las distintas políticas de fragmentación de la información.",
+                        "c": "Se ha implantado una base de datos distribuida homogénea.",
+                        "d": "Se ha creado una base de datos distribuida mediante la integración de un conjunto de bases de datos preexistentes.",
+                        "e": "Se ha configurado un «nodo» maestro y varios «esclavos» para llevar a cabo la replicación del primero.",
+                        "f": "Se ha configurado un sistema de replicación en cadena.",
+                        "g": "Se ha comprobado el efecto de la parada de determinados nodos sobre los sistemas distribuidos y replicados."
+                    }
+                }
+            }
+        },
+        "0378": {
+            "nombre": "Seguridad y Alta Disponibilidad",
+            "horas": "133",
+            "UnidadesCompetenciaAcreditadas": {
+                "UC0486_3": "Asegurar equipos informáticos."
+            },
+            "ObjetivosGenerales": [
+                "j",
+                "k",
+                "l",
+                "m",
+                "o",
+                "p"
+            ],
+            "CompetenciasTitulo": [
+                "e",
+                "f",
+                "i",
+                "j",
+                "k",
+                "m",
+                "n",
+                "o",
+                "r",
+                "s"
+            ],
+            "creditos": "6",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Adopta pautas y prácticas de tratamiento seguro de la información, reconociendo las vulnerabilidades de un sistema informático y la necesidad de asegurarlo.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha valorado la importancia de asegurar la privacidad, coherencia y disponibilidad de la información en los sistemas informáticos.",
+                        "b": "Se han descrito las diferencias entre seguridad física y lógica.",
+                        "c": "Se han clasificado las principales vulnerabilidades de un sistema informático, según su tipología y origen.",
+                        "d": "Se ha contrastado la incidencia de las técnicas de ingeniería social en los fraudes informáticos.",
+                        "e": "Se han adoptado políticas de contraseñas.",
+                        "f": "Se han valorado las ventajas que supone la utilización de sistemas biométricos.",
+                        "g": "Se han aplicado técnicas criptográficas en el almacenamiento y transmisión de la información.",
+                        "h": "Se ha reconocido la necesidad de establecer un plan integral de protección perimetral, especialmente en sistemas conectados a redes públicas.",
+                        "i": "Se han identificado las fases del análisis forense ante ataques a un sistema."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Implanta mecanismos de seguridad activa, seleccionando y ejecutando contramedidas ante amenazas o ataques al sistema.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han clasificado los principales tipos de amenazas lógicas contra un sistema informático.",
+                        "b": "Se ha verificado el origen y la autenticidad de las aplicaciones instaladas en un equipo, así como el estado de actualización del sistema operativo.",
+                        "c": "Se han identificado la anatomía de los ataques más habituales, así como las medidas preventivas y paliativas disponibles.",
+                        "d": "Se han analizado diversos tipos de amenazas, ataques y software malicioso, en entornos de ejecución controlados.",
+                        "e": "Se han implantado aplicaciones específicas para la detección de amenazas y la eliminación de software malicioso.",
+                        "f": "Se han utilizado técnicas de cifrado, firmas y certificados digitales en un entorno de trabajo basado en el uso de redes públicas.",
+                        "g": "Se han evaluado las medidas de seguridad de los protocolos usados en redes inalámbricas.",
+                        "h": "Se ha reconocido la necesidad de inventariar y controlar los servicios de red que se ejecutan en un sistema.",
+                        "i": "Se han descrito los tipos y características de los sistemas de detección de intrusiones."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Implanta técnicas seguras de acceso remoto a un sistema informático, interpretando y aplicando el plan de seguridad.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito escenarios típicos de sistemas con conexión a redes públicas en los que se precisa fortificar la red interna.",
+                        "b": "Se han clasificado las zonas de riesgo de un sistema, según criterios de seguridad perimetral.",
+                        "c": "Se han identificado los protocolos seguros de comunicación y sus ámbitos de utilización.",
+                        "d": "Se han configurado redes privadas virtuales mediante protocolos seguros a distintos niveles.",
+                        "e": "Se ha implantado un servidor como pasarela de acceso a la red interna desde ubicaciones remotas.",
+                        "f": "Se han identificado y configurado los posibles métodos de autenticación en el acceso de usuarios remotos a través de la pasarela.",
+                        "g": "Se ha instalado, configurado e integrado en la pasarela un servidor remoto de autenticación."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Implanta cortafuegos para asegurar un sistema informático, analizando sus prestaciones y controlando el tráfico hacia la red interna.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han descrito las características, tipos y funciones de los cortafuegos.",
+                        "b": "Se han clasificado los niveles en los que se realiza el filtrado de tráfico.",
+                        "c": "Se ha planificado la instalación de cortafuegos para limitar los accesos a determinadas zonas de la red.",
+                        "d": "Se han configurado filtros en un cortafuegos a partir de un listado de reglas de filtrado.",
+                        "e": "Se han revisado los registros de sucesos de cortafuegos, para verificar que las reglas se aplican correctamente.",
+                        "f": "Se han probado distintas opciones para implementar cortafuegos, tanto software como hardware.",
+                        "g": "Se han diagnosticado problemas de conectividad en los clientes provocados por los cortafuegos.",
+                        "h": "Se ha elaborado documentación relativa a la instalación, configuración y uso de cortafuegos."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Implanta servidores «proxy», aplicando criterios de configuración que garanticen el funcionamiento seguro del servicio.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los tipos de «proxy», sus características y funciones principales.",
+                        "b": "Se ha instalado y configurado un servidor «proxy-cache».",
+                        "c": "Se han configurado los métodos de autenticación en el «proxy».",
+                        "d": "Se ha configurado un «proxy» en modo transparente.",
+                        "e": "Se ha utilizado el servidor «proxy» para establecer restricciones de acceso Web.",
+                        "f": "Se han solucionado problemas de acceso desde los clientes al «proxy».",
+                        "g": "Se han realizado pruebas de funcionamiento del «proxy», monitorizando su actividad con herramientas gráficas.",
+                        "h": "Se ha configurado un servidor «proxy» en modo inverso.",
+                        "i": "Se ha elaborado documentación relativa a la instalación, configuración y uso de servidores «proxy»."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Implanta soluciones de alta disponibilidad empleando técnicas de virtualización y configurando los entornos de prueba.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han analizado supuestos y situaciones en las que se hace necesario implementar soluciones de alta disponibilidad.",
+                        "b": "Se han identificado soluciones hardware para asegurar la continuidad en el funcionamiento de un sistema.",
+                        "c": "Se han evaluado las posibilidades de la virtualización de sistemas para implementar soluciones de alta disponibilidad.",
+                        "d": "Se ha implantado un servidor redundante que garantice la continuidad de servicios en casos de caída del servidor principal.",
+                        "e": "Se ha implantado un balanceador de carga a la entrada de la red interna.",
+                        "f": "Se han implantado sistemas de almacenamiento redundante sobre servidores y dispositivos específicos.",
+                        "g": "Se ha evaluado la utilidad de los sistemas de «clusters» para aumentar la fiabilidad y productividad del sistema.",
+                        "h": "Se han analizado soluciones de futuro para un sistema con demanda creciente.",
+                        "i": "Se han esquematizado y documentado soluciones para diferentes supuestos con necesidades de alta disponibilidad."
+                    }
+                },
+                "RA07": {
+                    "Resultado": " Reconoce la legislación y normativa sobre seguridad y protección de datos valorando su importancia.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha descrito la legislación sobre protección de datos de carácter personal.",
+                        "b": "Se ha determinado la necesidad de controlar el acceso a la información personal almacenada.",
+                        "c": "Se han identificado las figuras legales que intervienen en el tratamiento y mantenimiento de los ficheros de datos.",
+                        "d": "Se ha contrastado el deber de poner a disposición de las personas los datos personales que les conciernen.",
+                        "e": "Se ha descrito la legislación actual sobre los servicios de la sociedad de la información y comercio electrónico.",
+                        "f": "Se han contrastado las normas sobre gestión de seguridad de la información.",
+                        "g": "Se ha comprendido la necesidad de conocer y respetar la normativa legal aplicable."
+                    }
+                }
+            }
+        },
+        "CVOPS190": {
+            "nombre": "Introducción a la Programación",
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales": [],
+            "CompetenciasTitulo": [],
+            "creditos": "-",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los bloques que componen la estructura de un programa informático.",
+                        "b": "Se han creado proyectos de desarrollo de aplicaciones",
+                        "c": "Se han utilizado entornos integrados de desarrollo.",
+                        "d": "Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.",
+                        "e": "Se ha modificado el código de un programa para crear y utilizar variables.",
+                        "f": "Se han creado y utilizado constantes y literales.",
+                        "g": "Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.",
+                        "h": "Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.",
+                        "i": "Se han introducido comentarios en el código."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han identificado los fundamentos de la programación orientada a objetos.",
+                        "b": "Se han escrito programas simples.",
+                        "c": "Se han instanciado objetos a partir de clases predefinidas.",
+                        "d": "Se han utilizado métodos y propiedades de los objetos.",
+                        "e": "Se han escrito llamadas a métodos estáticos.",
+                        "f": "Se han utilizado parámetros en la llamada a métodos.",
+                        "g": "Se han incorporado y utilizado librerías de objetos.",
+                        "h": "Se han utilizado constructores.",
+                        "i": "Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha escrito y probado código que haga uso de estructuras de selección.",
+                        "b": "Se han utilizado estructuras de repetición.",
+                        "c": "Se han reconocido las posibilidades de las sentencias de salto.",
+                        "d": "Se ha escrito código utilizando control de excepciones.",
+                        "e": "Se han creado programas ejecutables utilizando diferentes estructuras de control.",
+                        "f": "Se han probado y depurado los programas.",
+                        "g": "Se ha comentado y documentado el código.",
+                        "h": "Se han creado excepciones.",
+                        "i": "Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.",
+                        "b": "Se han definido clases.",
+                        "c": "Se han definido propiedades y métodos.",
+                        "d": "Se han creado constructores.",
+                        "e": "Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.",
+                        "f": "Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.",
+                        "g": "Se han definido y utilizado clases heredadas.",
+                        "h": "Se han creado y utilizado métodos estáticos.",
+                        "i": "Se han creado y utilizado conjuntos y librerías de clases."
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se ha utilizado la consola para realizar operaciones de entrada y salida de información.",
+                        "b": "Se han aplicado formatos en la visualización de la información.",
+                        "c": "Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.",
+                        "d": "Se han utilizado ficheros para almacenar y recuperar información.",
+                        "e": "Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.",
+                        "f": "Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.",
+                        "g": "Se han programado controladores de eventos.",
+                        "h": "Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información."
+                    }
+                },
+                "RA06": {
+                    "Resultado": " Escribe programas que manipulen información, seleccionando y utilizando tipos avanzados de datos.",
+                    "CriteriosEvaluacion": {
+                        "a": "Se han escrito programas que utilicen matrices (arrays)",
+                        "b": "Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.",
+                        "c": "Se han utilizado listas para almacenar y procesar información.",
+                        "d": "Se han utilizado iteradores para recorrer los elementos de las listas.",
+                        "e": "Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.",
+                        "f": "Se han creado clases y métodos genéricos.",
+                        "g": "Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.",
+                        "h": "Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.",
+                        "i": "Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.",
+                        "j": "Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones."
+                    }
+                }
+            }
+        }
+    }
+}

@@ -97,6 +97,7 @@
 
 
 **Notes:**
+
 - **X** indica que el mòdul contribueix a desenvolupar aquesta competència
 - Les competències professionals (a-s) estan relacionades amb les habilitats tècniques específiques del perfil professional  
 - Les competències per a l'ocupabilitat (t-y) estan relacionades amb habilitats transversals i d'inserció laboral

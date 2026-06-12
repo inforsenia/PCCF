@@ -70,20 +70,14 @@
     "CualificacionesINCUAL": {
         "Completas": {
             "NO APLICA": {
-                "NO APLICA": "NO APLICA",
                 "NO APLICA": {
-                    "NO APLICA": "NO APLICA",
-                    "NO APLICA": "NO APLICA",
                     "NO APLICA": "NO APLICA"
                 }
             }
         },
         "Incompletas": {
             "NO APLICA": {
-                "NO APLICA": "NO APLICA",
                 "NO APLICA": {
-                    "NO APLICA": "NO APLICA",
-                    "NO APLICA": "NO APLICA",
                     "NO APLICA": "NO APLICA"
                 }
             }
@@ -192,20 +186,6 @@
             },
             "horas": "40",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "j",
-                "k",
-                "m",
-                "n",
-                "ny",
-                "o",
-                "p"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -222,6 +202,20 @@
                 "q",
                 "r",
                 "s"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
             ]
         },
         "5072": {
@@ -307,22 +301,6 @@
             },
             "horas": "90",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f",
-                "g",
-                "j",
-                "k",
-                "m",
-                "n",
-                "ny",
-                "o",
-                "p"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "c",
@@ -340,6 +318,22 @@
                 "q",
                 "r",
                 "s"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "j",
+                "k",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
             ]
         },
         "5073": {
@@ -403,20 +397,6 @@
             },
             "horas": "210",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "j",
-                "k",
-                "m",
-                "n",
-                "f",
-                "o",
-                "p"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -433,6 +413,20 @@
                 "q",
                 "r",
                 "s"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "k",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
             ]
         },
         "5074": {
@@ -499,20 +493,6 @@
             },
             "horas": "55",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "b",
-                "c",
-                "h",
-                "i",
-                "j",
-                "k",
-                "l",
-                "m",
-                "n",
-                "f",
-                "o",
-                "p"
-            ],
             "CompetenciasTitulo": [
                 "b",
                 "c",
@@ -529,6 +509,20 @@
                 "q",
                 "r",
                 "s"
+            ],
+            "ObjetivosGenerales": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "f",
+                "o",
+                "p"
             ]
         },
         "5075": {
@@ -603,20 +597,6 @@
             },
             "horas": "75",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "b",
-                "c",
-                "h",
-                "i",
-                "j",
-                "k",
-                "l",
-                "m",
-                "n",
-                "ny",
-                "o",
-                "p"
-            ],
             "CompetenciasTitulo": [
                 "b",
                 "c",
@@ -633,6 +613,20 @@
                 "q",
                 "r",
                 "s"
+            ],
+            "ObjetivosGenerales": [
+                "b",
+                "c",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p"
             ]
         }
     }

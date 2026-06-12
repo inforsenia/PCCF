@@ -212,13 +212,6 @@
                 "UC1207_1": "Realitzar operacions auxiliars de muntatge d'equips microinformàtics.",
                 "UC1208_1": "Realitzar operacions auxiliars de manteniment de sistemes microinformàtics."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "d",
-                "e",
-                "f",
-                "i"
-            ],
             "CompetenciasTitulo": [
                 "c",
                 "f",
@@ -236,6 +229,13 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "d",
+                "e",
+                "f",
+                "i"
             ]
         },
         "3030": {
@@ -296,12 +296,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1209_1": "Realitzar operacions auxiliars amb tecnologies de la informació i la comunicació."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "i",
-                "j",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "j",
@@ -315,6 +309,12 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "i",
+                "j",
+                "w"
             ]
         },
         "3031": {
@@ -418,12 +418,6 @@
                 "UC0974_1": "Realitzar operacions bàsiques de tractament de dades i textos, i confecció de documentació.",
                 "UC0971_1": "Realitzar operacions auxiliars de reproducció i arxiu en suport convencional o informàtic."
             },
-            "ObjetivosGenerales ": [
-                "b",
-                "c",
-                "j",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -439,6 +433,12 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "b",
+                "c",
+                "j",
+                "w"
             ]
         },
         "3016": {
@@ -522,12 +522,6 @@
             },
             "horas": "332",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "g",
-                "h",
-                "i",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "c",
                 "d",
@@ -544,6 +538,12 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "g",
+                "h",
+                "i",
+                "w"
             ]
         },
         "3009": {
@@ -662,12 +662,6 @@
             },
             "horas": "90",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "k",
-                "l",
-                "m",
-                "n"
-            ],
             "CompetenciasTitulo": [
                 "k",
                 "l",
@@ -682,6 +676,12 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "k",
+                "l",
+                "m",
+                "n"
             ]
         },
         "3019": {
@@ -839,12 +839,6 @@
             },
             "horas": "90",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "k",
-                "l",
-                "m",
-                "n"
-            ],
             "CompetenciasTitulo": [
                 "k",
                 "l",
@@ -859,6 +853,12 @@
                 "x",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "k",
+                "l",
+                "m",
+                "n"
             ]
         },
         "3011": {
@@ -969,10 +969,12 @@
             },
             "horas": "120",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "n",
                 "ny",
                 "o",
                 "p",
+                "q",
                 "r",
                 "s",
                 "t",
@@ -980,12 +982,10 @@
                 "v",
                 "z"
             ],
-            "CompetenciasTitulo": [
-                "n",
+            "ObjetivosGenerales": [
                 "ny",
                 "o",
                 "p",
-                "q",
                 "r",
                 "s",
                 "t",
@@ -1104,7 +1104,8 @@
             },
             "horas": "120",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
+                "n",
                 "ny",
                 "o",
                 "p",
@@ -1116,8 +1117,7 @@
                 "v",
                 "z"
             ],
-            "CompetenciasTitulo": [
-                "n",
+            "ObjetivosGenerales": [
                 "ny",
                 "o",
                 "p",
@@ -1161,7 +1161,7 @@
             },
             "horas": "400",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a",
                 "b",
                 "c",
@@ -1190,7 +1190,7 @@
                 "y",
                 "z"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -1251,10 +1251,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         },
@@ -1289,10 +1289,10 @@
             },
             "horas": "1",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a"
             ]
         }

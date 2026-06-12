@@ -2,7 +2,7 @@
 
 Per tal de aconseguir un millor control sobre les aules d'informàtica des del Departament d'Informàtica hem decidit establir unes normes d'us.
 
-#### Identificació dels ordinadors dins de l'aula
+#### Identificació dels ordinadors dins de l'aula {#identificacio-ordinadors-aula}
 
 Per tal d'identificar els ordinadors dins de les aules d'informàtica etiquetarem els equips de manera visible. Com que les enganxines poden "desapareixer", marcarem un criteri comú per tal de conèixer quin és l'ordinador encara que desaparega la enganxina.
 
@@ -37,7 +37,7 @@ El docent haurà de:
 En cas de detectar alguna deficiència el docent encarregat de l'aula en eixe moment enviarà la incidència al següent enllaç, indicant:
 
 - L'aula
-- L'ordinador afectat (segons la nomenclatura del punt [anterior](#Identificació dels ordinadors dins de l'aula))
+- L'ordinador afectat (segons la nomenclatura del punt [anterior](#identificacio-ordinadors-aula))
 - L'hora en que ha detectat el problema.
 - Descripció de la incidència.
 

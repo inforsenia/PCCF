@@ -22,7 +22,7 @@ from pccf_utils import get_hoja_label
 # Si el libro no es autogenerado, convierto el nombre de la hoja a las siglas del módulo
 if not "autogenerado" in ruta_excel:
     hoja = get_hoja_label(hoja)
-print(" Trabajando con la hoja : "+hoja)
+print(" * [ Plan Formativo ] : "+hoja)
 
 def generar_tabla_markdown(ra_dict, hoja_orig):
     
@@ -33,7 +33,7 @@ def generar_tabla_markdown(ra_dict, hoja_orig):
         
         if es_nuevo:
             print("\\newpage\n", file=fichero)
-            print("# Plan de formación en empresa\n", file=fichero)
+            print("# Plà de Formació en Empresa\n", file=fichero)
             
         print("## "+hoja_orig, file=fichero)
         print("\n\n", file=fichero)

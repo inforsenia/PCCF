@@ -985,8 +985,8 @@
             },
             "horas": "30",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjectiusGenerals ": [],
-            "CompetenciasTitulo": []
+            "CompetenciasTitulo": [],
+            "ObjectiusGenerals": []
         },
         "1709": {
             "nombre": "Itinerari personal per a l'ocupabilitat I",
@@ -1238,11 +1238,6 @@
             },
             "horas": "32",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjectiusGenerals ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1252,6 +1247,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjectiusGenerals": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "MOPANGPROF": {

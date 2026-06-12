@@ -261,15 +261,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0223_3": "Configurar y explotar sistemas informáticos."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "t",
-                "u",
-                "v",
-                "w",
-                "x"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -280,6 +271,15 @@
                 "w",
                 "x",
                 "y"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x"
             ]
         },
         "0484": {
@@ -383,17 +383,17 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0226_3": "Programar bases de datos relacionales."
             },
-            "ObjetivosGenerales ": [
-                "c",
-                "e",
-                "f",
-                "p",
-                "t"
-            ],
             "CompetenciasTitulo": [
                 "b",
                 "c",
                 "e",
+                "p",
+                "t"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "e",
+                "f",
                 "p",
                 "t"
             ]
@@ -531,16 +531,16 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desarrollar componentes software en lenguajes de programación orientados a objetos."
             },
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "j",
                 "t",
+                "w"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q",
                 "w"
             ]
         },
@@ -643,16 +643,16 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "h",
-                "p",
-                "r"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "f",
                 "h",
                 "p"
+            ],
+            "ObjetivosGenerales": [
+                "h",
+                "p",
+                "r"
             ]
         },
         "0487": {
@@ -738,16 +738,16 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
-                "e",
+                "f",
                 "h",
                 "i",
                 "j"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
-                "f",
+                "e",
                 "h",
                 "i",
                 "j"
@@ -828,11 +828,6 @@
             },
             "horas": "68",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -842,6 +837,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "0613": {
@@ -964,20 +964,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0492_3": "Desarrollar elementos software en el entorno servidor."
             },
-            "ObjetivosGenerales ": [
-                "c",
-                "d",
-                "f",
-                "g",
-                "h",
-                "l",
-                "m",
-                "n",
-                "ñ",
-                "q",
-                "s",
-                "t"
-            ],
             "CompetenciasTitulo": [
                 "c",
                 "d",
@@ -991,6 +977,20 @@
                 "n",
                 "ñ",
                 "q"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "d",
+                "f",
+                "g",
+                "h",
+                "l",
+                "m",
+                "n",
+                "ñ",
+                "q",
+                "s",
+                "t"
             ]
         },
         "0614": {
@@ -1084,13 +1084,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0493_3": "Implementar, verificar y documentar aplicaciones web en entornos internet, intranet y extranet."
             },
-            "ObjetivosGenerales ": [
-                "c",
-                "d",
-                "o",
-                "p",
-                "r"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -1099,6 +1092,13 @@
                 "n",
                 "ñ",
                 "q"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "d",
+                "o",
+                "p",
+                "r"
             ]
         },
         "0615": {
@@ -1185,14 +1185,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0491_3": "Desarrollar elementos software en el entorno cliente."
             },
-            "ObjetivosGenerales ": [
-                "i",
-                "j",
-                "k",
-                "q",
-                "x",
-                "y"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "g",
@@ -1201,6 +1193,14 @@
                 "m",
                 "n",
                 "u"
+            ],
+            "ObjetivosGenerales": [
+                "i",
+                "j",
+                "k",
+                "q",
+                "x",
+                "y"
             ]
         },
         "0612": {
@@ -1305,19 +1305,19 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0491_3": "Desarrollar elementos software en el entorno cliente."
             },
-            "ObjetivosGenerales ": [
-                "f",
-                "g",
-                "i",
-                "q",
-                "r"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "k",
                 "m",
                 "n",
                 "p",
+                "r"
+            ],
+            "ObjetivosGenerales": [
+                "f",
+                "g",
+                "i",
+                "q",
                 "r"
             ]
         },
@@ -1392,8 +1392,8 @@
             },
             "horas": "34",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [],
-            "CompetenciasTitulo": []
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1709": {
             "nombre": "Itinerario personal para la empleabilidad I",
@@ -1478,11 +1478,6 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1492,6 +1487,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1710": {
@@ -1570,11 +1570,6 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1584,6 +1579,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1665190": {
@@ -1668,11 +1668,6 @@
             },
             "horas": "34",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1682,6 +1677,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         }
     }

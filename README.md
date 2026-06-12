@@ -133,6 +133,35 @@ Markdowns y las hojas de cálculo.
 También hay pequeñas utilidades (`tricky-tools`) que se han utilizado para ir construyendo los diferentes JSON que definen los
 datos de los Ciclos Formativos.
 
+#### `tools/preparar_excel.py`
+
+Convierte el Excel autogenerado (`PDFS/libro_autogenerado_{CICLO}.xlsx`) a su versión para `excels_{FAMILIA}/`,
+renombrando automáticamente las hojas (de nombre completo a códigos cortos como `SI`, `BBDD`, `PRG`, etc.).
+
+```sh
+python3 tools/preparar_excel.py -c DAM -f INF
+python3 tools/preparar_excel.py -c SMX -f INF
+python3 tools/preparar_excel.py -c APD -f SCO
+```
+
+Opciones: `-i` para especificar un Excel de entrada diferente, `--no-backup` para no crear respaldo.
+
+#### `tools/analizar_json.py`
+
+Analiza todos los archivos JSON de los ciclos y genera un reporte con los campos
+faltantes (ObjetivosGenerales, CompetenciasTitulo, ImportanciaCompetencias, etc.).
+
+Se ejecuta automáticamente al final de `make todos`/`make todos-inf`/`make todos-sco`,
+o manualmente:
+
+```sh
+make report
+# o directamente:
+python3 tools/analizar_json.py
+```
+
+El reporte se guarda en `PDFS/reporte_analisis.txt`.
+
 ## Construyendo Proyectos en Local
 
 Usando `Makefile` se han preparado una serie de reglas para faciliar la *compilación* a PDF de los diferentes Proyectos

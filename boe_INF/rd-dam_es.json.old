@@ -218,15 +218,6 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0223_3": "Configurar y explotar sistemas informáticos."
             },
-            "ObjetivosGenerales ": [
-                "a",
-                "b",
-                "t",
-                "u",
-                "v",
-                "w",
-                "x"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
@@ -237,6 +228,15 @@
                 "w",
                 "x",
                 "y"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x"
             ]
         },
         "0484": {
@@ -340,17 +340,17 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0226_3": "Programar bases de datos relacionales."
             },
-            "ObjetivosGenerales ": [
-                "c",
-                "e",
-                "f",
-                "p",
-                "t"
-            ],
             "CompetenciasTitulo": [
                 "b",
                 "c",
                 "e",
+                "p",
+                "t"
+            ],
+            "ObjetivosGenerales": [
+                "c",
+                "e",
+                "f",
                 "p",
                 "t"
             ]
@@ -488,16 +488,16 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desarrollar componentes software en lenguajes de programación orientados a objetos."
             },
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q",
-                "w"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "j",
                 "t",
+                "w"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q",
                 "w"
             ]
         },
@@ -600,16 +600,16 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "h",
-                "p",
-                "r"
-            ],
             "CompetenciasTitulo": [
                 "e",
                 "f",
                 "h",
                 "p"
+            ],
+            "ObjetivosGenerales": [
+                "h",
+                "p",
+                "r"
             ]
         },
         "0487": {
@@ -695,16 +695,16 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
-                "e",
+                "f",
                 "h",
                 "i",
                 "j"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
-                "f",
+                "e",
                 "h",
                 "i",
                 "j"
@@ -785,11 +785,6 @@
             },
             "horas": "68",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -799,6 +794,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "0486": {
@@ -887,7 +887,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desarrollar componentes software en lenguajes de programación orientados a objetos."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "b",
                 "c",
                 "e",
@@ -897,7 +897,7 @@
                 "r",
                 "t"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "b",
                 "c",
                 "e",
@@ -1018,7 +1018,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0494_3": "Desarrollar componentes software en lenguajes de programación estructurada."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
                 "e",
                 "f",
@@ -1034,7 +1034,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
                 "e",
                 "f",
@@ -1125,7 +1125,7 @@
             },
             "horas": "133",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "d",
                 "e",
                 "g",
@@ -1140,7 +1140,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "d",
                 "e",
                 "g",
@@ -1236,7 +1236,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC0964_3": "Crear elementos software para la gestión del sistema y sus recursos."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "b",
                 "e",
                 "i",
@@ -1247,7 +1247,7 @@
                 "t",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "b",
                 "e",
                 "i",
@@ -1332,7 +1332,7 @@
             "UnidadesCompetenciaAcreditadas": {
                 "UC1213_3": "Instalar y configurar sistemas de planificación de recursos empresariales y de gestión de relaciones con clientes."
             },
-            "ObjetivosGenerales ": [
+            "CompetenciasTitulo": [
                 "a",
                 "b",
                 "c",
@@ -1347,7 +1347,7 @@
                 "u",
                 "w"
             ],
-            "CompetenciasTitulo": [
+            "ObjetivosGenerales": [
                 "a",
                 "b",
                 "c",
@@ -1434,8 +1434,8 @@
             },
             "horas": "34",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [],
-            "CompetenciasTitulo": []
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1709": {
             "nombre": "Itinerario personal para la empleabilidad I",
@@ -1520,11 +1520,6 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1534,6 +1529,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1710": {
@@ -1612,11 +1612,6 @@
             },
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1626,6 +1621,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "1665": {
@@ -1710,11 +1710,6 @@
             },
             "horas": "34",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales ": [
-                "e",
-                "j",
-                "q"
-            ],
             "CompetenciasTitulo": [
                 "a",
                 "e",
@@ -1724,6 +1719,11 @@
                 "v",
                 "y",
                 "z"
+            ],
+            "ObjetivosGenerales": [
+                "e",
+                "j",
+                "q"
             ]
         },
         "CVOPS190": {
