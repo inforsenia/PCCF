@@ -37,8 +37,11 @@ def _generate_pie_chart(aprov, susp, filepath):
     fig, ax = plt.subplots(figsize=(2, 2))
     sizes = [aprov, susp]
     colors = ['#2ecc71', '#e74c3c']
-    wedges, texts = ax.pie(sizes, colors=colors, startangle=90)
-    ax.legend(wedges, ['Aprovats', 'Suspensos'], loc='best', fontsize=8)
+    wedges, texts, autotexts = ax.pie(
+        sizes, labels=['Aprovats', 'Suspensos'], colors=colors,
+        startangle=90, autopct='%1.0f%%',
+        textprops={'fontsize': 7}, pctdistance=0.5, labeldistance=0.7
+    )
     ax.axis('equal')
     fig.savefig(filepath, dpi=100, bbox_inches='tight', transparent=True, pad_inches=0)
     plt.close(fig)
@@ -53,7 +56,6 @@ def _add_stats_row(content, pie_key):
 
     susp_val = susp_match.group(1)
     aprov_val = aprov_match.group(1)
-    insert_pos = aprov_match.end()
 
     if susp_val.isdigit() and aprov_val.isdigit():
         susp_int = int(susp_val)
@@ -61,20 +63,21 @@ def _add_stats_row(content, pie_key):
         total = susp_int + aprov_int
         if total > 0:
             pct = aprov_int / total * 100
-            new_row = f"| Percentatge d'aprovats | {pct:.1f}% |"
-            content = content[:insert_pos] + "\n" + new_row + content[insert_pos:]
+            extra = f"| Percentatge d'aprovats | {pct:.1f}% |"
 
             if HAS_MATPLOTLIB and pie_key:
                 temp_dir = os.path.join(PROJECT_DIR, "temp")
                 os.makedirs(temp_dir, exist_ok=True)
                 pie_path = os.path.join(temp_dir, f"pie_{pie_key}.png")
                 _generate_pie_chart(aprov_int, susp_int, pie_path)
-                # Use relative path from temp/ dir where compiled markdown lives
-                content += f"\n\n![Distribució aprovats/suspensos](pie_{pie_key}.png)"
+                extra += f"\n\n![Distribució aprovats/suspensos]({pie_path})"
+
+            insert_pos = aprov_match.end()
+            content = content[:insert_pos] + "\n" + extra + content[insert_pos:]
             return content
 
-    new_row = "| Percentatge d'aprovats | [###] |"
-    content = content[:insert_pos] + "\n" + new_row + content[insert_pos:]
+    insert_pos = aprov_match.end()
+    content = content[:insert_pos] + "\n| Percentatge d'aprovats | [###] |" + content[insert_pos:]
     return content
 
 
@@ -255,15 +258,9 @@ def main():
                 with open(filepath, encoding="utf-8") as f:
                     content = f.read()
 
-                if content.startswith("\\newpage"):
-                    content = content[len("\\newpage"):].lstrip()
-
-                content = re.sub(
-                    r'> \*\*Instruccions per al docent:?\*\*.*?\n(?:>.*?\n)*',
-                    '',
-                    content,
-                    flags=re.DOTALL,
-                )
+                # Remove all blockquote lines (> ...) — used for instructions
+                # and any other meta-notes that should not appear in the final PDF
+                content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
 
                 lines = content.split('\n')
                 if lines and (lines[0].startswith('## ') or lines[0].startswith('# ')):
@@ -329,6 +326,8 @@ def main():
         "-V", "toc=true",
         "-V", "toc-title=Índex",
         "-V", "toc-depth=2",
+        "-V", "toc-own-page=true",
+        "-V", "include-before=\\newpage",
     ]
 
     if os.path.exists(mainfont):
@@ -336,9 +335,16 @@ def main():
     else:
         print(f"  (Font no trobada, usant font per defecte)")
 
+    # Fix \pandocbounded for pandoc >= 3.2 compatibility with older templates
+    header_bounded = os.path.join(PROJECT_DIR, "temp", "pandocbounded.tex")
+    os.makedirs(os.path.dirname(header_bounded), exist_ok=True)
+    with open(header_bounded, "w", encoding="utf-8") as f:
+        f.write(r"\providecommand{\pandocbounded}[1]{#1}%" + "\n")
+
     cmd = [
         "pandoc",
         "--template", template_tex,
+        "--include-in-header", header_bounded,
     ] + pandoc_opts + [
         f"--pdf-engine={pdf_engine}",
         "-o", pdf_path,
@@ -358,9 +364,10 @@ def main():
         sys.exit(1)
 
     # Clean up temp pie charts after pandoc run
-    for f in os.listdir(os.path.join(PROJECT_DIR, "temp")):
+    temp_dir = os.path.join(PROJECT_DIR, "temp")
+    for f in os.listdir(temp_dir):
         if f.startswith("pie_") and f.endswith(".png"):
-            os.remove(os.path.join(PROJECT_DIR, "temp", f))
+            os.remove(os.path.join(temp_dir, f))
 
 
 if __name__ == "__main__":

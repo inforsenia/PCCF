@@ -99,6 +99,8 @@ def get_expected(config):
 def check_placeholders(filepath):
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
+    # Ignore blockquote lines (> ...), they are stripped at compile time
+    content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
     remaining = re.findall(r"\[###\]|\[\.\.\.\]|\[NOMDELPROFESSOR", content)
     return remaining
 
