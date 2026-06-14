@@ -1,0 +1,100 @@
+{
+  "curs": "25-26",
+  "centre": "IES Eduardo Primo Marqués",
+  "departament": "d'Informàtica",
+  "cicles": {
+    "SMX": {
+      "nom": "Sistemes Microinformàtics i Xarxes",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "AOF", "nom": "Aplicacions Ofimàtiques"},
+            {"codi": "MME", "nom": "Muntatge i Manteniment d'Equips"},
+            {"codi": "XL",  "nom": "Xarxes Locals"},
+            {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"},
+            {"codi": "PI",  "nom": "Projecte Intermodular"}
+          ],
+          "grups": ["A", "B"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "SOX", "nom": "Sistemes Operatius en Xarxa"},
+            {"codi": "SIN", "nom": "Seguretat Informàtica"},
+            {"codi": "SEX", "nom": "Serveis en Xarxa"},
+            {"codi": "AW",  "nom": "Aplicacions Web"},
+            {"codi": "SOS", "nom": "Sostenibilitat aplicada al sistema productiu"},
+            {"codi": "DIG", "nom": "Digitalització aplicada als sectors productius (GM)"},
+            {"codi": "IPR", "nom": "Introducció a la Programació"},
+            {"codi": "PI",  "nom": "Projecte Intermodular"}
+          ],
+          "grups": ["A", "B"]
+        }
+      }
+    },
+    "DAM": {
+      "nom": "Desenvolupament d'Aplicacions Multiplataforma",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "SI",   "nom": "Sistemes Informàtics"},
+            {"codi": "BBDD", "nom": "Bases de Dades"},
+            {"codi": "PROGRAMACIO", "nom": "Programació"},
+            {"codi": "LMSGI","nom": "Llenguatges de Marques i SGI"},
+            {"codi": "ED",   "nom": "Entorns de Desenvolupament"},
+            {"codi": "PI",   "nom": "Projecte Intermodular"}
+          ],
+          "grups": ["", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "AD",    "nom": "Accés a Dades"},
+            {"codi": "DI",    "nom": "Desenvolupament d'Interfícies"},
+            {"codi": "PMDM",  "nom": "Programació Multimèdia i Dispositius Mòbils"},
+            {"codi": "PSP",   "nom": "Programació de Serveis i Processos"},
+            {"codi": "SGE",   "nom": "Sistemes de Gestió Empresarial"},
+            {"codi": "NUVOL", "nom": "Introducció al Núvol Públic"},
+            {"codi": "PI",    "nom": "Projecte Intermodular"},
+            {"codi": "SOS",   "nom": "Sostenibilitat aplicada al sistema productiu"},
+            {"codi": "DIG",   "nom": "Digitalització aplicada als sectors productius (GS)"}
+          ],
+          "grups": ["", "SEMI"]
+        }
+      }
+    },
+    "CEIABD": {
+      "nom": "Curs d'Especialització en IA i Big Data",
+      "cursos": {
+        "": {
+          "moduls": [
+            {"codi": "MIA", "nom": "Models d'Intel·ligència Artificial"},
+            {"codi": "SAA", "nom": "Sistemes d'Aprenentatge Automàtic"},
+            {"codi": "PIA", "nom": "Programació d'Intel·ligència Artificial"},
+            {"codi": "SBD", "nom": "Sistemes de Big Data"},
+            {"codi": "BDA", "nom": "Big Data Aplicat"}
+          ],
+          "grups": [""]
+        }
+      }
+    },
+    "FPBIIO": {
+      "nom": "FP Bàsica Informàtica d'Oficina",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "MMSCI", "nom": "Munt. i Mant. de Sistemes i Comp. Informàtics"},
+            {"codi": "OAD",   "nom": "Ofimàtica i Arxiu de Documents"}
+          ],
+          "grups": [""]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "OACE",  "nom": "Operacions Aux. Config. i Explotació"},
+            {"codi": "IMTD",  "nom": "Instal·lació i Mant. Xarxes Transmissió Dades"},
+            {"codi": "PIAC",  "nom": "Projecte Intermodular Aprenentatge Col·laboratiu"}
+          ],
+          "grups": [""]
+        }
+      }
+    }
+  }
+}
