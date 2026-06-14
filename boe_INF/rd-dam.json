@@ -1818,7 +1818,10 @@
                     }
                 }
             },
-            "horas": "100"
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales": [],
+            "CompetenciasTitulo": []
         },
         "MOPANGPROF": {
             "nombre": "Anglés oral en entorns professionals",

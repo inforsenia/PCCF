@@ -1,0 +1,97 @@
+\newpage
+
+## {{ cicle_codi }}{% if curs_str %} {{ curs_str }}{% endif %}{% if grup %} ({{ grup_label }}){% endif %} — {{ modul_nom }}
+
+> **Instruccions per al docent:**
+>
+> 1. Substituïu els camps marcats amb `[###]` o `[...]` per la informació real del vostre grup.
+> 2. Ompliu totes les seccions. Si alguna no escau, indiqueu "No escau" o "CAP".
+> 3. Quan la memòria estiga completada, canvieu `_BORRADOR` per `_OK` al nom del fitxer.
+>    Exemple: `25_26_1SMXA_AOF_BORRADOR.md` → `25_26_1SMXA_AOF_OK.md`
+> 4. No modifiqueu la resta del nom del fitxer (el sistema l'usa per identificar el mòdul i grup).
+> 5. Si un apartat no cap en una línia, podeu usar tantes línies com calga.
+> 6. Podeu usar formatatge Markdown estàndard (negreta, cursiva, llistes, enllaços, etc.) a les vostres respostes.
+> 7. Aquest bloc d'instruccions **s'esborrarà automàticament** en compilar el PDF final.
+
+- **Cicle**: {{ cicle_nom }}
+{% if curs_str %}
+- **Curs**: {{ curs_str }}
+{% endif %}
+- **Grup**: {{ grup_label }}
+
+- **Mòdul**: {{ modul_nom }} ({{ modul_codi }})
+
+- **Curs acadèmic**: {{ curs_academic }}
+
+- **Centre**: {{ centre }}
+
+---
+
+### DOCENT
+
+**Docent**: [###]
+
+---
+
+### CONTINGUTS
+
+#### Continguts estudiats a classe
+[###]
+
+(Indiqueu RA treballats, unitats didàctiques impartides o temes tractats)
+
+#### Continguts pendents o que no s'han arribat a veure
+[###]
+
+(Indiqueu "CAP" si s'ha impartit tot, o llisteu el que ha quedat pendent)
+
+---
+
+### RA's i/o CE enviats a FEE
+
+**Relació de RA i/o CE enviats a Formació en Empresa:**
+
+[###]
+
+(Indiqueu quins Resultats d'Aprenentatge o Criteris d'Avaluació s'han derivat a la FCT/FEE)
+
+---
+
+### VALORACIÓ
+
+**Valoració del grup i del mòdul per part del docent:**
+
+[###]
+
+(Ací podeu comentar el funcionament del grup, el seguiment del mòdul, dificultats trobades, etc.)
+
+---
+
+### ESTADÍSTIQUES
+
+| Concepte | Valor |
+|----------|-------|
+| Nº d'alumnes a inici de curs | [###] |
+| Nº d'alumnes a final de curs | [###] |
+| Suspensos | [###] |
+| Aprovats | [###] |
+
+(Anoteu també si hi ha hagut alumnes convalidats o amb alguna circumstància especial)
+
+---
+
+### ALUMNES PENDENTS
+
+**Llistat d'alumnes que tenen el mòdul pendent de cara al pròxim curs:**
+
+[###]
+
+(Indiqueu "CAP" si no n'hi ha)
+
+---
+
+### PROPOSTES PER AL CURS VINENT
+
+**Propostes de millora i canvis que caldria aplicar al mòdul:**
+
+[###]

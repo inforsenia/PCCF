@@ -8,7 +8,7 @@
 
 | Competència | 1664 | 1709 | 1710 | 0221 | 0222 | 0223 | 0224 | 0226 | 0227 | 0228 |
 |-------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **a** Determinar la logística associada a les operacions... | X |   |   | X | X | X | X | X | X |   |
+| **a** Determinar la logística associada a les operacions... | X |   |   | X | X | X | X | X | X | X |
 | **b** Muntar i configurar ordinadors i perifèrics, asseg... |   |   |   | X |   |   |   |   |   |   |
 | **c** Instal·lar i configurar programari bàsic i d'aplic... |   |   |   |   | X | X | X | X |   | X |
 | **d** Replantar el cablejat i l'electrònica de xarxes lo... |   |   |   |   |   |   |   |   | X |   |
@@ -25,26 +25,26 @@
 | **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |   |   |   |   |   |   |
 | **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |   |   |   | X |   |   |
 
-### Taula 2 (Mòduls 11-14)
+### Taula 2 (Mòduls 11-15)
 
-| Competència | 0225 | MOPANGPROF | MOPCOMPROF | PI |
-|-------------|:---:|:---:|:---:|:---:|
-| **a** Determinar la logística associada a les operacions... |   | X | X | X |
-| **b** Muntar i configurar ordinadors i perifèrics, asseg... |   |   |   |   |
-| **c** Instal·lar i configurar programari bàsic i d'aplic... | X |   |   |   |
-| **d** Replantar el cablejat i l'electrònica de xarxes lo... |   |   |   |   |
-| **e** Instal·lar i configurar xarxes locals cablejades, ... | X |   |   |   |
-| **f** Instal·lar, configurar i mantenir serveis multiusu... | X |   |   |   |
-| **g** Realitzar les proves funcionals en sistemes microi... | X |   |   |   |
-| **h** Mantenir sistemes microinformàtics i xarxes locals... | X |   |   |   |
-| **i** Executar procediments establerts de recuperació de... |   |   |   |   |
-| **j** Elaborar documentació tècnica i administrativa del... | X |   |   |   |
-| **k** Elaborar pressupostos de sistemes a mida complint ... |   |   |   |   |
-| **l** Assessorar i assistir al client, derivant a un niv... | X |   |   |   |
-| **m** Organitzar i desenvolupar el treball assignat mant... |   |   |   |   |
-| **n** Mantenir un esperit constant d'innovació i actuali... |   |   |   |   |
-| **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |
-| **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |
+| Competència | CVOPS190 | 0225 | MOPANGPROF | MOPCOMPROF | PI |
+|-------------|:---:|:---:|:---:|:---:|:---:|
+| **a** Determinar la logística associada a les operacions... |   |   | X | X | X |
+| **b** Muntar i configurar ordinadors i perifèrics, asseg... |   |   |   |   |   |
+| **c** Instal·lar i configurar programari bàsic i d'aplic... |   | X |   |   |   |
+| **d** Replantar el cablejat i l'electrònica de xarxes lo... |   |   |   |   |   |
+| **e** Instal·lar i configurar xarxes locals cablejades, ... |   | X |   |   |   |
+| **f** Instal·lar, configurar i mantenir serveis multiusu... |   | X |   |   |   |
+| **g** Realitzar les proves funcionals en sistemes microi... |   | X |   |   |   |
+| **h** Mantenir sistemes microinformàtics i xarxes locals... |   | X |   |   |   |
+| **i** Executar procediments establerts de recuperació de... |   |   |   |   |   |
+| **j** Elaborar documentació tècnica i administrativa del... |   | X |   |   |   |
+| **k** Elaborar pressupostos de sistemes a mida complint ... |   |   |   |   |   |
+| **l** Assessorar i assistir al client, derivant a un niv... |   | X |   |   |   |
+| **m** Organitzar i desenvolupar el treball assignat mant... |   |   |   |   |   |
+| **n** Mantenir un esperit constant d'innovació i actuali... |   |   |   |   |   |
+| **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |   |
+| **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |   |
 
 ## Competències per a l'Ocupabilitat
 
@@ -62,19 +62,19 @@
 | **u** Crear i gestionar una petita empresa, realitzant u... |   |   | X |   |   |   |   |   |   |   |
 | **v** Participar de forma activa en la vida econòmica, s... | X | X | X |   |   |   |   |   |   |   |
 
-### Taula 2 (Mòduls 11-14)
+### Taula 2 (Mòduls 11-15)
 
-| Competència | 0225 | MOPANGPROF | MOPCOMPROF | PI |
-|-------------|:---:|:---:|:---:|:---:|
-| **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |
-| **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |
-| **p** Complir amb els objectius de la producció, col·lab... |   |   |   |   |
-| **q** Adaptar-se a diferents llocs de treball i noves si... |   |   |   |   |
-| **r** Resoldre problemes i prendre decisions individuals... |   |   |   |   |
-| **s** Exercir els seus drets i complir amb les obligacio... |   |   |   |   |
-| **t** Gestionar la seua carrera professional, analitzant... |   |   |   |   |
-| **u** Crear i gestionar una petita empresa, realitzant u... |   |   |   |   |
-| **v** Participar de forma activa en la vida econòmica, s... |   |   |   |   |
+| Competència | CVOPS190 | 0225 | MOPANGPROF | MOPCOMPROF | PI |
+|-------------|:---:|:---:|:---:|:---:|:---:|
+| **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |   |
+| **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |   |
+| **p** Complir amb els objectius de la producció, col·lab... |   |   |   |   |   |
+| **q** Adaptar-se a diferents llocs de treball i noves si... |   |   |   |   |   |
+| **r** Resoldre problemes i prendre decisions individuals... |   |   |   |   |   |
+| **s** Exercir els seus drets i complir amb les obligacio... |   |   |   |   |   |
+| **t** Gestionar la seua carrera professional, analitzant... |   |   |   |   |   |
+| **u** Crear i gestionar una petita empresa, realitzant u... |   |   |   |   |   |
+| **v** Participar de forma activa en la vida econòmica, s... |   |   |   |   |   |
 
 ### Llegenda de Mòduls
 
@@ -88,6 +88,7 @@
 - **0226**: Seguretat informàtica
 - **0227**: Serveis en xarxa
 - **0228**: Aplicacions web
+- **CVOPS190**: Introducció al Núvol Públic
 - **0225**: Xarxes Locals
 - **MOPANGPROF**: Anglés oral en entorns professionals
 - **MOPCOMPROF**: Comunicació professional

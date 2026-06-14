@@ -125,6 +125,67 @@ Estos documentos se generan en la carpeta `src_{FAMILIA}_{CICLO}/` y se integran
 
 ---
 
+## Memòries del Departament
+
+Sistema per a generar i compilar les memòries finals de curs dels mòduls adscrits al Departament.
+
+### Estructura
+
+```
+memoria/                   # Plantilles comunes (INF + SCO)
+  ├── plantilla_memoria.md  # Template Jinja2 per a memòria individual
+  └── portada_memoria_compilada.md  # Portada per al PDF compilat
+
+memoria_INF/               # Configuració específica d'Informàtica
+  └── config_memories.json  # Cicles, mòduls, grups per al curs actual
+
+memories_md/               # Plantilles .md individuals (gitignored)
+  ├── 25_26_1SMXA_AOF_BORRADOR.md
+  ├── 25_26_1DAM_SEMI_SI_BORRADOR.md
+  └── 25_26_CEIABD_MIA_BORRADOR.md
+
+PDFS/                      # PDF compilat i report (gitignored)
+  └── Memories_INF_IESEPM_25_26.pdf
+```
+
+### Patró de noms dels fitxers
+
+```
+{CURS}_{CURS_CICLE}{CICLE}[{GRUP}]_{MODUL}_{ESTAT}.md
+  25_26    _1         SMX    A        AOF   BORRADOR
+  25_26    _1         DAM    _SEMI    SI    BORRADOR
+  25_26               CEIABD          MIA   BORRADOR
+```
+
+### Flux de treball
+
+1. **Generar plantilles**: cada mòdul/grup té un fitxer `*_BORRADOR.md`
+2. **El docent ompli** el seu fitxer i canvia `_BORRADOR` per `_OK`
+3. **Compilar**: l'script llig els `*_OK.md`, genera un PDF amb índex + report de mancances
+
+```bash
+# Generar les 60 plantilles per a INF
+./contenedor_lanza.sh "make generar-plantilles-memoria"
+
+# Compilar memòries completades
+./contenedor_lanza.sh "make compilar-memories"
+
+# Només report (sense generar PDF)
+./contenedor_lanza.sh "make report-memories"
+
+# Tot el procés
+./contenedor_lanza.sh "make memories"
+```
+
+### Report de l'estat de les memòries
+
+El report (`PDFS/report_memories_INF.txt`) detecta:
+- Mòduls en estat **BORRADOR** (el docent encara no ha completat)
+- Mòduls **FALTA** (no hi ha fitxer ni tan sols en BORRADOR)
+- Mòduls **OK** que encara contenen `[###]` o `[...]` (incomplets)
+
+---
+
 ## Descripción de las utilidades
 
 En la carpeta ~/tools~ podemos encontrar una serie de utilidades que se ha desarrollado para la generación de los diferentes
@@ -161,6 +222,41 @@ python3 tools/analizar_json.py
 ```
 
 El reporte se guarda en `PDFS/reporte_analisis.txt`.
+
+#### `tools/generar_plantilles_memoria.py`
+
+Genera les plantilles Markdown de les memòries del Departament a partir del fitxer de configuració `memoria_INF/config_memories.json` i la plantilla Jinja2 `memoria/plantilla_memoria.md`.
+
+```sh
+make generar-plantilles-memoria
+```
+
+Les plantilles es generen a `memories_md/` amb el patró `{CURS}_{CICLE}[_{GRUP}]_{MODUL}_BORRADOR.md`.
+
+#### `tools/compilar_memories.py`
+
+Compila les memòries completades (`*_OK.md`) en un únic PDF amb índex, i genera un report de l'estat de totes les memòries.
+
+```sh
+make compilar-memories
+```
+
+El PDF es genera a `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` i el report a `PDFS/report_memories_{FAMILIA}.txt`.
+
+Detecta:
+- Mòduls en estat **BORRADOR** (pendents de completar)
+- Mòduls **FALTA** (no hi ha fitxer ni BORRADOR ni OK)
+- Mòduls **OK** que encara contenen marcadors `[###]` o `[...]`
+
+#### `tools/report_memories.py`
+
+Genera només el report de l'estat de les memòries (sense compilar el PDF). Útil per a una verificació ràpida.
+
+```sh
+make report-memories
+```
+
+El report es guarda a `PDFS/report_memories_{FAMILIA}.txt` amb la mateixa informació que `compilar-memories` però sense demanar confirmació ni generar PDF.
 
 ## Construyendo Proyectos en Local
 
@@ -230,6 +326,11 @@ Targets disponibles:
     todos              Generar todos los proyectos
     todos-inf          Generar todos los proyectos INF
     todos-sco          Generar todos los proyectos SCO
+  Memòries:
+    generar-plantilles-memoria  Generar plantilles MD de memòria
+    compilar-memories           Compilar memòries OK en PDF + report
+    report-memories             Report de l'estat de les memòries (sense PDF)
+    memories                    Tot el procés (generar + compilar)
     clean              Limpiar archivos generados
     files              Crear estructura de directorios
     dependences        Instalar dependencias
@@ -238,6 +339,8 @@ Ejemplos:
   make proyecto-smx                 # Usa 'SENIA' por defecto
   make proyecto-asir                # Genera solo ASIR
   make todos                        # Genera todos los ciclos
+  make generar-plantilles-memoria   # Genera plantilles de memòria
+  make compilar-memories            # Compila memòries en PDF
   make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam
   make CENTRO_EDUCATIVO=IESEPM todos
 ```

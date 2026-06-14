@@ -19,12 +19,13 @@ def get_hoja_label(hoja):
     # SMX
     if hoja.startswith("Muntatge"): return "MME"
     if hoja.startswith("Sistemes operatius mono"): return "SOM"
-    if hoja.startswith("Aplicacions ofimátiques"): return "AOF"
+    if hoja.startswith("Aplicacions ofimàtiques"): return "AOF"
     if hoja.startswith("Sistemes operatius en xarxa"): return "SOX"
     if hoja.startswith("Seguretat informàtica"): return "SIN"
     if hoja.startswith("Serveis en xarxa"): return "SEX"
     if hoja.startswith("Aplicacions web"): return "AW"
-    if hoja.startswith("Xarxes locals"): return "XL"
+    if hoja.startswith("Xarxes Locals"): return "XL"
+    if hoja.startswith("Introducció a la Programació"): return "IPR"
 
     # DAM DAW
     if hoja.startswith("Entorns de"): return "ED"

@@ -12,6 +12,8 @@ import jinja2
 import warnings
 warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
 
+from pccf_utils import get_hoja_label
+
 
 def get_template_loader_and_env(familia, template_name):
     """
@@ -235,5 +237,16 @@ for codigo in data_box.ModulosProfesionales:
     #movemos el pdf a la carpeta del modulo, imprimimos la nueva ruta:
     print(" * [ PCCF ] - PDF generado: "+dir_modulo+"PD_9999_CuadroResumen.pdf")
     shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
-    
+
+# Guardar mapa código → siglas para shell-progs-didacticas-standalone.sh
+# get_hoja_label() devuelve el nombre completo si no encuentra patrón;
+# en ese caso guardamos string vacío para que el shell no añada nada.
+siglas_map = {}
+for codigo in data_box.ModulosProfesionales:
+    nombre = data_box.ModulosProfesionales[codigo].nombre
+    label = get_hoja_label(nombre)
+    siglas_map[str(codigo)] = label if label != nombre else ""
+with open(dir_ciclo+".module_siglas.json", "w", encoding="utf-8") as f:
+    json.dump(siglas_map, f, ensure_ascii=False)
+
 sys.exit(0)

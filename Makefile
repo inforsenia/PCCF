@@ -34,9 +34,9 @@ todo:
 
 dependences:
 	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
-	sudo apt update ; sudo apt install --yes make pandoc texlive-extra-utils texlive-lang-spanish texlive-latex-extra texlive-fonts-extra libreoffice poppler-utils
+	sudo apt update ; 	sudo apt install --yes make pandoc texlive-extra-utils texlive-lang-spanish texlive-latex-extra texlive-fonts-extra texlive-xetex libreoffice poppler-utils
 	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
-	sudo apt update ; sudo apt install --yes make python3-jinja2 python3-box python3-numpy python-openpyxl-doc python-pandas-doc python3-pandas
+	sudo apt update ; sudo apt install --yes make python3-jinja2 python3-box python3-numpy python-openpyxl-doc python-pandas-doc python3-pandas python3-matplotlib
 
 clean:
 	@echo " [${BLUE} * Step : Clean ${RESET}] "
@@ -149,6 +149,35 @@ report:
 	@echo " ${LIGHTYELLOW} [ Generando reporte de análisis... ] ${RESET}"
 	python3 tools/analizar_json.py
 
+## ----------------------------------------------------------------
+##  Memòries del Departament
+## ----------------------------------------------------------------
+
+# Generar plantilles de memòria en Markdown
+generar-plantilles-memoria genera-memories:
+	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria (INF) ] ${RESET}"
+	mkdir -p memories_md
+	python3 tools/generar_plantilles_memoria.py INF
+
+# Report de memòries (sense compilar PDF)
+report-memories:
+	@echo " ${LIGHTYELLOW} [ Generant report de memòries... ] ${RESET}"
+	python3 tools/report_memories.py INF $(CENTRO_EDUCATIVO)
+
+# Compilar memòries (demana confirmació, compila OK + BORRADOR)
+compila-memories:
+	@echo " ${LIGHTBLUE} [ Compilant memòries (INF) ] ${RESET}"
+	python3 tools/compilar_memories.py INF $(CENTRO_EDUCATIVO) --all
+
+# Compilar memòries (comportament original: només OK, demana BORRADOR)
+compilar-memories:
+	@echo " ${LIGHTBLUE} [ Compilant memòries (INF) ] ${RESET}"
+	python3 tools/compilar_memories.py INF $(CENTRO_EDUCATIVO)
+
+# Tot el procés de memòries: generar plantilles + compilar (amb confirmació)
+memories: generar-plantilles-memoria compila-memories
+	@echo " ${LIGHTGREEN} [ Procés de memòries completat ] ${RESET}"
+
 # Regla para mostrar ayuda
 help:
 	@echo "Uso: make [CENTRO_EDUCATIVO=nombre_del_centro] <target>"
@@ -170,6 +199,13 @@ help:
 	@echo "    todos-inf          Generar todos los proyectos INF"
 	@echo "    todos-sco          Generar todos los proyectos SCO"
 	@echo "    report             Generar reporte de análisis de JSONs"
+	@echo "  Memòries:"
+	@echo "    generar-plantilles-memoria  Generar plantilles MD de memòria (també: genera-memories)"
+	@echo "    genera-memories             Alias de generar-plantilles-memoria"
+	@echo "    report-memories             Report de l'estat de les memòries (sense PDF)"
+	@echo "    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)"
+	@echo "    compilar-memories           Versió antiga: només OK, demana BORRADOR"
+	@echo "    memories                    Tot el procés (genera + compila)"
 	@echo "    clean              Limpiar archivos generados"
 	@echo "    files              Crear estructura de directorios"
 	@echo "    dependences        Instalar dependencias"

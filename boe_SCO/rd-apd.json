@@ -986,7 +986,7 @@
             "horas": "30",
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
-            "ObjectiusGenerals": []
+            "ObjetivosGenerales": []
         },
         "1709": {
             "nombre": "Itinerari personal per a l'ocupabilitat I",
@@ -1248,7 +1248,7 @@
                 "y",
                 "z"
             ],
-            "ObjectiusGenerals": [
+            "ObjetivosGenerales": [
                 "e",
                 "j",
                 "q"

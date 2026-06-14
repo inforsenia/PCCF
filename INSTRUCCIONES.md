@@ -226,6 +226,102 @@ La generació final de les PD's es basa en el contingut de la carpeta `src_CICLE
 
 Si a la carpeta `src_FAMILIA_MODUL` trobem el fitxer corresponent a la PD del mòdul s'utilitzarà per a la generació del PDF, sino s'utilitzarà el genèric de la carpeta `temp_CICLE`.
 
+## Memòries del Departament
+
+Sistema per a generar i compilar les memòries finals de curs dels mòduls adscrits al Departament d'Informàtica.
+
+### 1. Configuració inicial (`memoria_INF/config_memories.json`)
+
+Defineix els cicles, cursos, mòduls (amb abreviacions) i grups per al curs actual.
+
+Cal actualitzar-lo cada curs:
+- Canviar el camp `"curs"` (ex: `"25-26"` → `"26-27"`)
+- Afegir o eliminar grups segons la matrícula real
+- Afegir o eliminar mòduls si canvia l'oferta
+
+### 2. Generar les plantilles
+
+```sh
+make generar-plantilles-memoria
+```
+
+Es generen a `memories_md/` amb nom `{CURS}_{CICLE}[_{GRUP}]_{MODUL}_BORRADOR.md`.
+Cada plantilla conté instruccions per al docent i marcadors `[###]` a omplir.
+
+### 3. El docent completa la seua memòria
+
+1. Obre el seu fitxer `.md` de `memories_md/`
+2. Substituïx els `[###]` i `[...]` per la informació real
+3. Si un apartat no escau, indica "CAP" o "No escau"
+4. Canvia `_BORRADOR` per `_OK` al nom del fitxer
+5. Les instruccions del principi **s'esborren automàticament** al compilar
+
+### 4. Compilar el PDF final
+
+```sh
+make compilar-memories
+```
+
+Genera:
+- `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` — PDF amb portada + índex + totes les memòries
+- `PDFS/report_memories_{FAMILIA}.txt` — Report amb:
+  - Mòduls en BORRADOR (pendents)
+  - Mòduls FALTA (no hi ha fitxer)
+  - Mòduls OK amb camps per omplir
+
+### 4b. Report ràpid (sense PDF)
+
+Si només vols comprovar l'estat de les memòries sense generar el PDF:
+
+```sh
+make report-memories
+```
+
+Genera el mateix report a `PDFS/report_memories_{FAMILIA}.txt` sense demanar confirmació ni executar pandoc.
+
+### 5. Exemple de configuració de grups
+
+```json
+"SMX": {
+  "cursos": {
+    "1": {
+      "moduls": [
+        {"codi": "AOF", "nom": "Aplicacions Ofimàtiques"},
+        {"codi": "MME", "nom": "Muntatge i Manteniment d'Equips"},
+        {"codi": "XL",  "nom": "Xarxes Locals"},
+        {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"}
+      ],
+      "grups": ["A", "B"]
+    },
+    "2": { "moduls": [...], "grups": ["A", "B"] }
+  }
+},
+"DAM": {
+  "cursos": {
+    "1": {
+      "moduls": [
+        {"codi": "SI", "nom": "Sistemes Informàtics"}, ...
+      ],
+      "grups": ["", "SEMI"]  // "" = grup presencial, "SEMI" = semipresencial
+    }
+  }
+},
+"CEIABD": {
+  "cursos": {
+    "": {  // curs d'especialització, sense número de curs
+      "moduls": [...],
+      "grups": [""]
+    }
+  }
+}
+```
+
+### 6. Afegir un nou cicle al sistema de memòries
+
+1. Afegir l'entrada al `memoria_{FAMILIA}/config_memories.json`
+2. Afegir el codi del cicle (`CICLES_CONEGUTS`) a `tools/memories_utils.py`
+3. Si cal, crear `memoria_{FAMILIA}/` si la família no existix
+
 ### Generació del PCCF:
 
 La generació final del PCCF es basa en el contingut de les carpetes `src` i `src_FAMILIA_CICLE` corresponent al cicle, tots els fitxers de dites carpetes (excepte els de les PD) es junten en una carpeta (temp) que després s'uniran en un únic document PDF.

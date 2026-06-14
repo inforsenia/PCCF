@@ -15,18 +15,23 @@ rm -f PDFS/PDs_$1/*
 
 cd ./temp_$1/
 
+# Leer mapa código → siglas (generado por json2pccf.py)
+SIGLAS_JSON=".module_siglas.json"
+
 for d in $(ls -1); do 
-    echo -n " * [ ProgsDidacticas ] Modulo - Codigo : $d -> "
+    # Obtener siglas si existe el mapa
+    siglas=""
+    if [ -f "$SIGLAS_JSON" ]; then
+        siglas=$(python3 -c "import json; m=json.load(open('$SIGLAS_JSON')); print(m.get('$d',''))" 2>/dev/null)
+    fi
+    [ -n "$siglas" ] && siglas="_$siglas"
+    echo -n " * [ ProgsDidacticas ] Modulo - Codigo : $d${siglas} -> "
     cd $d
-    pandoc --template ${TEMPLATE_TEX_PD} ${PANDOC_OPTIONS} -o ../../PDFS/PDs_$1/PD_$1_$d.pdf ./PD_*.md
+    pandoc --template ${TEMPLATE_TEX_PD} ${PANDOC_OPTIONS} -o ../../PDFS/PDs_$1/PD_$1_$d${siglas}.pdf ./PD_*.md
     if [ -f "./PD_9999_CuadroResumen.pdf" ]; then
         echo " Existe Cuadro Resumen, aplicando pdfunite"
-        #se lanza el comando pdfunite:
-        #echo " * [ ProgsDidacticas ] PDF unido: pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "./PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf"
-        pdfunite ../../PDFS/PDs_$1/PD_$1_$d.pdf "./PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d.pdf
-        #se han juntado los pdf en la ruta:
-        #echo " * [ ProgsDidacticas ] PDF generado: /temp/PD_$1_$d.pdf"
-        mv /tmp/PD_$1_$d.pdf ../../PDFS/PDs_$1/PD_$1_$d.pdf
+        pdfunite ../../PDFS/PDs_$1/PD_$1_$d${siglas}.pdf "./PD_9999_CuadroResumen.pdf" /tmp/PD_$1_$d${siglas}.pdf
+        mv /tmp/PD_$1_$d${siglas}.pdf ../../PDFS/PDs_$1/PD_$1_$d${siglas}.pdf
     else
         echo " No tiene Cuadro Resumen"
     fi

@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     texlive-lang-spanish \
     texlive-latex-extra \
     texlive-fonts-extra \
+    texlive-xetex \
     libreoffice \
     poppler-utils \
     python3-jinja2 \
@@ -15,4 +16,5 @@ RUN apt-get update && apt-get install -y \
     python3-numpy \
     python3-pandas \
     python3-openpyxl \
+    python3-matplotlib \
     && rm -rf /var/lib/apt/lists/*

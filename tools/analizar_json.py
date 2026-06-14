@@ -13,15 +13,47 @@ INFO_MSGS = []
 
 
 def _celda_vacia(valor):
-    """Comprueba si la celda del Excel quedaría sin letras (equivalente a vacía).
-    None → 'None' (no tiene sentido como dato), [] y "" → vacío."""
+    """Comprueba si un valor está vacío (None, [] o "").
+    Los números (int/float) o strings numéricos se consideran válidos."""
     if valor is None:
         return True
-    texto = str(valor)
-    return not any(c.isalpha() for c in texto)
+    if isinstance(valor, (int, float)):
+        return False
+    if isinstance(valor, str):
+        if valor.strip().lstrip('-').replace('.', '', 1).isdigit():
+            return False
+        return not any(c.isalpha() for c in valor)
+    if isinstance(valor, list):
+        return len(valor) == 0
+    return False
 
 
-def analizar_ciclo(ruta_json, ciclo, familia):
+# Claves esperadas en cada módulo
+CLAVES_MODULO = {
+    "nombre", "codigo", "horas", "creditos",
+    "ResultadosAprendizaje",
+    "UnidadesCompetenciaAcreditadas",
+    "ObjetivosGenerales",
+    "CompetenciasTitulo",
+}
+# Orden de presentación
+CLAVES_MODULO_ORDER = [
+    "nombre", "codigo", "horas", "creditos",
+    "ResultadosAprendizaje",
+    "UnidadesCompetenciaAcreditadas",
+    "ObjetivosGenerales",
+    "CompetenciasTitulo",
+]
+
+# Claves en valencià/català que haurien d'estar en castellà
+CLAVES_CATALAN = {
+    "credits": "creditos",
+    "ObjectiusGenerals": "ObjetivosGenerales",
+    "CompetènciesTitulo": "CompetenciasTitulo",
+}
+
+
+def analizar_ciclo(ruta_json, ciclo, familia, claves_globales):
     try:
         with open(ruta_json, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -37,12 +69,24 @@ def analizar_ciclo(ruta_json, ciclo, familia):
     modulos = data.get("ModulosProfesionales", {})
     for codigo, modulo in modulos.items():
         mod_name = modulo.get("nombre", codigo)
+        claves_modulo = set(modulo.keys())
 
-        if _celda_vacia(modulo.get("ObjetivosGenerales")):
-            INFO_MSGS.append(f"  ⚠ {codigo} - {mod_name}: falta ObjetivosGenerales")
+        # Reportar claus en valencià
+        for cat, esp in CLAVES_CATALAN.items():
+            if cat in claves_modulo:
+                INFO_MSGS.append(f"  ✗ {codigo} - {mod_name}: clau en valencià '{cat}' → hauria de ser '{esp}'")
 
-        if _celda_vacia(modulo.get("CompetenciasTitulo")):
-            INFO_MSGS.append(f"  ⚠ {codigo} - {mod_name}: falta CompetenciasTitulo")
+        # Reportar faltas de claves esperadas
+        for clave in CLAVES_MODULO_ORDER:
+            if clave in ("nombre", "codigo"):
+                continue
+            if clave not in claves_modulo or _celda_vacia(modulo.get(clave)):
+                INFO_MSGS.append(f"  ⚠ {codigo} - {mod_name}: falta {clave}")
+
+        # Reportar faltas de claves que existen en otros ciclos
+        for clave in sorted(claves_globales - CLAVES_MODULO - set(CLAVES_CATALAN.keys())):
+            if clave not in claves_modulo:
+                INFO_MSGS.append(f"  ⚠ {codigo} - {mod_name}: falta {clave} (presente en otros ciclos)")
 
     imp_comp = data.get("ImportanciaCompetencias")
     if imp_comp:
@@ -51,11 +95,32 @@ def analizar_ciclo(ruta_json, ciclo, familia):
         INFO_MSGS.append(f"  ⚠ ImportanciaCompetencias: NO definido")
 
 
+def _escanear_claves_globales():
+    """Primera pasada: recoge todas las claves de módulo de todos los JSONs."""
+    claves = set()
+    for familia, dirname in FAMILIAS.items():
+        if not os.path.isdir(dirname):
+            continue
+        for fname in sorted(os.listdir(dirname)):
+            if not (fname.startswith("rd-") and fname.endswith(".json")):
+                continue
+            try:
+                with open(os.path.join(dirname, fname), "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for mod in data.get("ModulosProfesionales", {}).values():
+                    claves.update(mod.keys())
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass
+    return claves
+
+
 def main():
     INFO_MSGS.append("=" * 60)
     INFO_MSGS.append("  REPORTE DE ANÁLISIS DE JSONs")
     INFO_MSGS.append("  Revisa campos faltantes en los ciclos formativos")
     INFO_MSGS.append("=" * 60)
+
+    claves_globales = _escanear_claves_globales()
 
     total = 0
     for familia, dirname in FAMILIAS.items():
@@ -66,7 +131,7 @@ def main():
             if fname.startswith("rd-") and fname.endswith(".json"):
                 ciclo = fname.replace("rd-", "").replace(".json", "").upper()
                 ruta = os.path.join(dirname, fname)
-                analizar_ciclo(ruta, ciclo, familia)
+                analizar_ciclo(ruta, ciclo, familia, claves_globales)
                 total += 1
 
     if total == 0:
