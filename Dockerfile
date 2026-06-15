@@ -17,4 +17,5 @@ RUN apt-get update && apt-get install -y \
     python3-pandas \
     python3-openpyxl \
     python3-matplotlib \
+    fonts-ubuntu \
     && rm -rf /var/lib/apt/lists/*

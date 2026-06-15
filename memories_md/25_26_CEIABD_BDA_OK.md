@@ -1,6 +1,6 @@
 \newpage
 
-## CEIABD — Models d'Intel·ligència Artificial
+## CEIABD — Big Data Aplicat
 
 > **Instruccions per al docent:**
 >
@@ -18,7 +18,7 @@
 
 - **Grup**: Grup únic
 
-- **Mòdul**: Models d'Intel·ligència Artificial (MIA)
+- **Mòdul**: Big Data Aplicat (BDA)
 
 - **Curs acadèmic**: 25-26
 
@@ -26,19 +26,25 @@
 
 ### DOCENT
 
-**Docent**: [###]
+**Docent**: Josep Garcia Garcia
 
 ### CONTINGUTS
 
 #### Continguts estudiats a classe
 
-[###]
+- Módulo 0: Conceptos generales
+- Módulo 1: Fundamentos y ecosistema Big Data
+- Módulo 2: Procesamiento avanzado con Spark
+- Módulo 2: Procesamiento avanzado con Kafka
+- Módulo 3: Almacenamiento
+- Módulo 4: Integración, orquestación y monitorización
+- PROYECTO
 
 > Indiqueu RA treballats, unitats didàctiques impartides o temes tractats
 
 #### Continguts pendents o que no s'han arribat a veure
 
-[###]
+- Bases de datos NoSQL, visto en otra asignatura (MIA)
 
 > (Indiqueu "CAP" si s'ha impartit tot, o llisteu el que ha quedat pendent)
 
@@ -46,7 +52,7 @@
 
 **Relació de RA i/o CE enviats a Formació en Empresa:**
 
-[###]
+CAP
 
 > Indiqueu quins Resultats d'Aprenentatge o Criteris d'Avaluació s'han derivat a la FCT/FEE
 
@@ -54,18 +60,20 @@
 
 **Valoració del grup i del mòdul per part del docent:**
 
-[###]
+Grup "treballador" i cohesionat, han portat a terme dos grans projectes amb èxit ⭐.
 
 > Ací podeu comentar el funcionament del grup, el seguiment del mòdul, dificultats trobades, etc.
 
 ### ESTADÍSTIQUES
 
 | Concepte | Valor |
-|----------|-------|
-| Nº d'alumnes a inici de curs | [###] |
-| Nº d'alumnes a final de curs | [###] |
-| Suspensos | [###] |
-| Aprovats | [###] |
+|----------|------:|
+| Nº d'alumnes a inici de curs | 16 |
+| Nº d'alumnes a final de curs | 16 |
+| Suspensos | 2 |
+| Aprovats | 14 |
+
+Un dels alumnes (ROIG PÉREZ, JESÚS) va deixar de vindre a gener, començà a treballar a Madrid.
 
 > El percentatge s'afegirà automàticament a la taula, i també un gràfic.
 >
@@ -75,7 +83,8 @@
 
 **Llistat d'alumnes que tenen el mòdul pendent de cara al pròxim curs:**
 
-[###]
+PÉREZ ALEPUZ, ÍKER
+ROIG PÉREZ, JESÚS
 
 > Indiqueu "CAP" si no n'hi ha
 
@@ -83,6 +92,6 @@
 
 **Propostes de millora i canvis que caldria aplicar al mòdul:**
 
-[###]
+Vaig a reorganitzar de nou els mòduls per a fer que el curs en general es parega mes a un procés ETL.
 
 > Indiqueu "CAP" si no n'hi ha

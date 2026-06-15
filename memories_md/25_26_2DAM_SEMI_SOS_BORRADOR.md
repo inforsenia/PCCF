@@ -9,7 +9,7 @@
 > 3. Quan la memòria estiga completada, canvieu `_BORRADOR` per `_OK` al nom del fitxer.
 >    Exemple: `25_26_1SMXA_AOF_BORRADOR.md` → `25_26_1SMXA_AOF_OK.md`
 > 4. No modifiqueu la resta del nom del fitxer (el sistema l'usa per identificar el mòdul i grup).
-> 5. Si un apartat no cap en una línia, podeu usar tantes línies com calga.
+> 5. Per a escriure textos llargs, podeu usar tantes línies com calga. Recordeu que en Markdown **un sol salt de línia concatena el text** (com si fóra un espai). Per a separar paràgrafs, deixeu **una línia en blanc** (dos Intros). Si voleu llistar elements línia a línia, feu servir una **llista amb vinyetes** (`- element`).
 > 6. Podeu usar formatatge Markdown estàndard (negreta, cursiva, llistes, enllaços, etc.) a les vostres respostes.
 > 7. **No utilitzeu encapçalaments ( #, ##, ### ) ni blocs de notes ( > )** al vostre contingut, perquè aquests elements podrien interferir amb la compilació del document final.
 > 8. Aquest bloc d'instruccions **s'esborrarà automàticament** en compilar el PDF final.
@@ -63,7 +63,7 @@
 ### ESTADÍSTIQUES
 
 | Concepte | Valor |
-|----------|-------|
+|----------|------:|
 | Nº d'alumnes a inici de curs | [###] |
 | Nº d'alumnes a final de curs | [###] |
 | Suspensos | [###] |

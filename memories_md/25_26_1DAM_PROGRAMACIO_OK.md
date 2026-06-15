@@ -82,7 +82,7 @@ Des del principi una gran part del grup no seguia el ritme de treball proposat, 
 ### ESTADÍSTIQUES
 
 | Concepte | Valor |
-|----------|-------|
+|----------|------:|
 | Nº d'alumnes a inici de curs | 22 |
 | Nº d'alumnes a final de curs | 16 |
 | Suspensos | 9 |

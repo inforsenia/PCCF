@@ -63,7 +63,7 @@ def _add_stats_row(content, pie_key):
         total = susp_int + aprov_int
         if total > 0:
             pct = aprov_int / total * 100
-            extra = f"| Percentatge d'aprovats | {pct:.1f}% |"
+            extra = f"| Percentatge d'aprovats | {pct:.0f}% |"
 
             if HAS_MATPLOTLIB and pie_key:
                 temp_dir = os.path.join(PROJECT_DIR, "temp")
@@ -117,6 +117,7 @@ def main():
 
     pdf_dir = os.path.join(PROJECT_DIR, "PDFS")
     os.makedirs(pdf_dir, exist_ok=True)
+    temp_dir = os.path.join(PROJECT_DIR, "temp")
 
     curs_academic = config["curs"]
     centre = config["centre"]
@@ -263,10 +264,16 @@ def main():
                 content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
 
                 lines = content.split('\n')
-                if lines and (lines[0].startswith('## ') or lines[0].startswith('# ')):
-                    heading_text = lines[0].lstrip('# ')
-                    lines = lines[1:]
-                    compiled_md_lines.append(f"## {heading_text}")
+                heading_idx = None
+                for i, line in enumerate(lines):
+                    if line.startswith('## ') or line.startswith('# '):
+                        heading_idx = i
+                        break
+                if heading_idx is not None:
+                    heading_text = lines[heading_idx].lstrip('# ')
+                    lines.pop(heading_idx)
+                    estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                    compiled_md_lines.append(f"## {heading_text}{estat_marker}")
                     compiled_md_lines.append("")
 
                 content = '\n'.join(lines).strip()
@@ -286,6 +293,34 @@ def main():
 
     compiled_md = "\n".join(compiled_md_lines)
 
+    # --- Emoji pre-processing: replace raw Unicode emoji with \emoji{name} ---
+    emoji_table = "/usr/share/texlive/texmf-dist/tex/latex/emoji/emoji-table.def"
+    char_to_name = {}
+    if os.path.exists(emoji_table):
+        with open(emoji_table, encoding="utf-8") as f:
+            for line in f:
+                m = re.match(r'\\__emoji_def:nnnnn \{([^}]+)\} \{([^}]+)\}', line)
+                if m:
+                    code_str = m.group(1).strip()
+                    name = m.group(2)
+                    parts = code_str.split("^^^^")
+                    for p in parts:
+                        if not p or len(p) not in (4, 6):
+                            continue
+                        cp = int(p, 16)
+                        char = chr(cp)
+                        if 0xFE00 <= cp <= 0xFE0F:
+                            continue
+                        if cp < 0x0080:
+                            continue
+                        char_to_name.setdefault(char, name)
+
+    if char_to_name:
+        emoji_re = re.compile('|'.join(map(re.escape, char_to_name)))
+        def _replace_emoji(text):
+            return emoji_re.sub(lambda m: '\\emoji{{{}}}'.format(char_to_name[m.group(0)]), text)
+        compiled_md = _replace_emoji(compiled_md)
+
     curs_academic_file = curs_academic.replace("-", "_")
     compiled_filename = f"compiled_memories_{familia}_{curs_academic_file}.md"
     compiled_path = os.path.join(project_dir := PROJECT_DIR, "temp", compiled_filename)
@@ -299,7 +334,6 @@ def main():
     pdf_path = os.path.join(pdf_dir, pdf_filename)
 
     template_tex = os.path.join(PROJECT_DIR, "rsrc/templates/eisvogel.latex")
-    mainfont = os.path.join(PROJECT_DIR, "rsrc/sorts-mill-goudy/OFLGoudyStM.otf")
 
     # Use absolute paths for backgrounds since pandoc resolves YAML paths
     # relative to the working directory
@@ -330,16 +364,14 @@ def main():
         "-V", "include-before=\\newpage",
     ]
 
-    if os.path.exists(mainfont):
-        pandoc_opts.extend(["-V", f"mainfont={mainfont}"])
-    else:
-        print(f"  (Font no trobada, usant font per defecte)")
-
     # Fix \pandocbounded for pandoc >= 3.2 compatibility with older templates
     header_bounded = os.path.join(PROJECT_DIR, "temp", "pandocbounded.tex")
     os.makedirs(os.path.dirname(header_bounded), exist_ok=True)
     with open(header_bounded, "w", encoding="utf-8") as f:
         f.write(r"\providecommand{\pandocbounded}[1]{#1}%" + "\n")
+        f.write(r"\usepackage{emoji}%" + "\n")
+        f.write(r"\setemojifont{NotoColorEmoji.ttf}[Path=/usr/share/fonts/truetype/noto/]%" + "\n")
+        f.write(r"\setmainfont[Path=/usr/share/fonts/truetype/lato/,UprightFont=Lato-Regular.ttf,BoldFont=Lato-Bold.ttf,ItalicFont=Lato-Italic.ttf,BoldItalicFont=Lato-BoldItalic.ttf]{Lato}" + "\n")
 
     cmd = [
         "pandoc",
@@ -354,7 +386,8 @@ def main():
     print(f"\nGenerant PDF: {pdf_filename}")
     print(f"Comanda: {' '.join(str(c) for c in cmd)}")
 
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    # Run pandoc from temp/ so LuaTeX creates luatex.XXXX dirs there, not in project root
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=temp_dir)
 
     if result.returncode == 0:
         print(f"\nPDF generat correctament: {pdf_path}")
@@ -364,7 +397,6 @@ def main():
         sys.exit(1)
 
     # Clean up temp pie charts after pandoc run
-    temp_dir = os.path.join(PROJECT_DIR, "temp")
     for f in os.listdir(temp_dir):
         if f.startswith("pie_") and f.endswith(".png"):
             os.remove(os.path.join(temp_dir, f))

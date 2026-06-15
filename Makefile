@@ -42,7 +42,7 @@ clean:
 	@echo " [${BLUE} * Step : Clean ${RESET}] "
 	@echo "${LIGHTBLUE} -- PDFS ${RESET}"
 	rm -f PDFS/*.pdf PDFS/*.odt
-	rm -rf temp/
+	rm -rf temp/ luatex.*/
 
 ## ----------------------------------------------------------------
 ##  JSON validation

@@ -3,3 +3,4 @@ temp/
 temp_*/
 boe/temp-txt.txt
 tools/__pycache__/
+luatex.*/
