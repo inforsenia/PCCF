@@ -38,7 +38,7 @@ def curs_display(curs):
 def main():
     familia = sys.argv[1].upper() if len(sys.argv) > 1 else "INF"
 
-    config_path = os.path.join(PROJECT_DIR, f"memoria_{familia}", "config_memories.json")
+    config_path = os.path.join(PROJECT_DIR, "memoria", f"memories_{familia}.json")
     if not os.path.exists(config_path):
         print(f"Error: no es troba {config_path}")
         sys.exit(1)
@@ -50,7 +50,7 @@ def main():
     env = Environment(loader=FileSystemLoader(template_dir), autoescape=False)
     template = env.get_template("plantilla_memoria.md")
 
-    output_dir = os.path.join(PROJECT_DIR, "memories_md")
+    output_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
     os.makedirs(output_dir, exist_ok=True)
 
     curs_academic = config["curs"]
@@ -96,7 +96,21 @@ def main():
                     print(f"  Creat: {filename}")
                     total += 1
 
-    print(f"\nTotal: {total} plantilles generades a memories_md/")
+    # Generar annex d'activitats extraescolars
+    annex_template = env.get_template("plantilla_annex.md")
+    annex_filename = f"{curs_academic_file}_AA_ACTIVITATS_EXTRAESCOLARS_BORRADOR.md"
+    annex_filepath = os.path.join(output_dir, annex_filename)
+    annex_rendered = annex_template.render(
+        curs_academic=curs_academic,
+        departament=departament,
+        centre=centre,
+    )
+    with open(annex_filepath, "w", encoding="utf-8") as f:
+        f.write(annex_rendered)
+    print(f"  Creat: {annex_filename}")
+    total += 1
+
+    print(f"\nTotal: {total} plantilles generades a memories_{familia}/")
 
 if __name__ == "__main__":
     main()

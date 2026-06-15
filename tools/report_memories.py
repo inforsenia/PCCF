@@ -23,7 +23,7 @@ def main():
     familia = sys.argv[1].upper() if len(sys.argv) > 1 else "INF"
     centre_educatiu = sys.argv[2] if len(sys.argv) > 2 else "SENIA"
 
-    config_path = os.path.join(PROJECT_DIR, f"memoria_{familia}", "config_memories.json")
+    config_path = os.path.join(PROJECT_DIR, "memoria", f"memories_{familia}.json")
     if not os.path.exists(config_path):
         print(f"Error: no es troba {config_path}")
         sys.exit(1)
@@ -31,7 +31,7 @@ def main():
     with open(config_path, encoding="utf-8") as f:
         config = json.load(f)
 
-    memories_dir = os.path.join(PROJECT_DIR, "memories_md")
+    memories_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
     if not os.path.exists(memories_dir):
         print(f"Error: no es troba el directori {memories_dir}")
         sys.exit(1)

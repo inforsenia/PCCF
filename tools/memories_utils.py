@@ -12,6 +12,12 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 CICLES_CONEGUTS = sorted(["SMX", "DAM", "CEIABD", "FPBIIO", "APD", "EI", "IS"], key=len, reverse=True)
+ANNEX_PREFIX = "AA_ACTIVITATS_EXTRAESCOLARS"
+
+
+def is_annex_file(filename):
+    """Check if filename is an annex file (extraescolars)."""
+    return "AA_ACTIVITATS_EXTRAESCOLARS" in filename and filename.endswith(".md")
 
 
 def parse_filename(filename):
@@ -105,6 +111,18 @@ def check_placeholders(filepath):
     return remaining
 
 
+def get_annex_status(familia):
+    """Check if annex file exists and its status for a given family."""
+    annex_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
+    if not os.path.isdir(annex_dir):
+        return None, []
+    annex_files = [f for f in os.listdir(annex_dir) if is_annex_file(f)]
+    if not annex_files:
+        return None, []
+    status = "OK" if any(f.endswith("_OK.md") for f in annex_files) else "BORRADOR"
+    return status, sorted(annex_files)
+
+
 def build_report_lines(familia, config, parsed, expected):
     curs_academic = config["curs"]
     centre = config["centre"]
@@ -138,7 +156,7 @@ def build_report_lines(familia, config, parsed, expected):
         if key in duplicated_keys and p["estat"] == "BORRADOR":
             duplicates.append(p)
 
-    report_lines.append(f"\n--- Llegits {len(parsed)} fitxers a memories_md/ ---")
+    report_lines.append(f"\n--- Llegits {len(parsed)} fitxers a memories_{familia}/ ---")
     report_lines.append(f"  Completats (OK): {len(ok_files)}")
     report_lines.append(f"  Pendents (BORRADOR): {len(borrador_files)}")
     if duplicates:
@@ -190,7 +208,7 @@ def build_report_lines(familia, config, parsed, expected):
 
     incomplete_ok = []
     for p in ok_files:
-        filepath = os.path.join(PROJECT_DIR, "memories_md", p["filename"])
+        filepath = os.path.join(PROJECT_DIR, f"memories_{familia}", p["filename"])
         remaining = check_placeholders(filepath)
         if remaining:
             incomplete_ok.append((p, remaining))
@@ -204,6 +222,16 @@ def build_report_lines(familia, config, parsed, expected):
                 label += f" {p['grup']}"
             label += f" - {p['modul']}"
             report_lines.append(f"  [INCOMPLET] {label} ({len(rem)} marcadors restants)")
+        report_lines.append("")
+
+    # Annex d'activitats extraescolars
+    annex_status, annex_files = get_annex_status(familia)
+    if annex_status:
+        report_lines.append("ANNEX ACTIVITATS EXTRAESCOLARS:")
+        report_lines.append("-" * 40)
+        for f in annex_files:
+            label = "OK" if f.endswith("_OK.md") else "BORRADOR"
+            report_lines.append(f"  [{label}] {f}")
         report_lines.append("")
 
     report_lines.append("=" * 60)

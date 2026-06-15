@@ -30,7 +30,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 sys.path.insert(0, SCRIPT_DIR)
-from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, check_placeholders, build_report_lines
+from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, check_placeholders, build_report_lines, is_annex_file
 
 
 def _generate_pie_chart(aprov, susp, filepath):
@@ -102,7 +102,7 @@ def main():
         print("=" * 60)
         sys.exit(1)
 
-    config_path = os.path.join(PROJECT_DIR, f"memoria_{familia}", "config_memories.json")
+    config_path = os.path.join(PROJECT_DIR, "memoria", f"memories_{familia}.json")
     if not os.path.exists(config_path):
         print(f"Error: no es troba {config_path}")
         sys.exit(1)
@@ -110,7 +110,7 @@ def main():
     with open(config_path, encoding="utf-8") as f:
         config = json.load(f)
 
-    memories_dir = os.path.join(PROJECT_DIR, "memories_md")
+    memories_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
     if not os.path.exists(memories_dir):
         print(f"Error: no es troba el directori {memories_dir}")
         sys.exit(1)
@@ -212,9 +212,12 @@ def main():
     for p in to_compile:
         compiled_by_cicle.setdefault(p["cicle"], []).append(p)
 
-    # Render portada
+    # Render portada (family-specific if exists, else generic)
     env = Environment(loader=FileSystemLoader(os.path.join(PROJECT_DIR, "memoria")), autoescape=False)
-    portada_template = env.get_template("portada_memoria_compilada.md")
+    portada_file = f"portada_memoria_compilada_{familia}.md"
+    if not os.path.exists(os.path.join(PROJECT_DIR, "memoria", portada_file)):
+        portada_file = "portada_memoria_compilada.md"
+    portada_template = env.get_template(portada_file)
 
     cicles_llista = list(compiled_by_cicle.keys())
     claus_cicles = ", ".join(cicles_llista)
@@ -249,8 +252,6 @@ def main():
             else:
                 group_heading = cicle_nom
 
-            compiled_md_lines.append(f"\\newpage")
-            compiled_md_lines.append("")
             compiled_md_lines.append(f"# {group_heading}")
             compiled_md_lines.append("")
 
@@ -273,10 +274,14 @@ def main():
                     heading_text = lines[heading_idx].lstrip('# ')
                     lines.pop(heading_idx)
                     estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                    compiled_md_lines.append("\\newpage")
+                    compiled_md_lines.append("")
                     compiled_md_lines.append(f"## {heading_text}{estat_marker}")
                     compiled_md_lines.append("")
 
                 content = '\n'.join(lines).strip()
+                # Remove leading \newpage since we already add it before the heading
+                content = re.sub(r'^\\newpage\s*', '', content)
 
                 # Build pie key and process stats
                 pie_parts = [p["cicle"]]
@@ -290,6 +295,41 @@ def main():
 
                 compiled_md_lines.append(content)
                 compiled_md_lines.append("")
+
+    # Append annex (Activitats Extra-Escolars) at the end
+    annex_files = sorted(f for f in os.listdir(memories_dir) if is_annex_file(f))
+    for annex_filename in annex_files:
+        annex_path = os.path.join(memories_dir, annex_filename)
+        with open(annex_path, encoding="utf-8") as f:
+            content = f.read()
+
+        # Strip blockquotes
+        content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
+
+        lines = content.split('\n')
+        heading_idx = None
+        for i, line in enumerate(lines):
+            if line.startswith('## ') or line.startswith('# '):
+                heading_idx = i
+                break
+
+        estat = "BORRADOR" if "_BORRADOR" in annex_filename else "OK"
+        estat_marker = " ✏️" if estat == "BORRADOR" else ""
+
+        if heading_idx is not None:
+            heading_text = lines[heading_idx].lstrip('# ')
+            lines.pop(heading_idx)
+            compiled_md_lines.append("\\newpage")
+            compiled_md_lines.append("")
+            compiled_md_lines.append(f"# {heading_text}{estat_marker}")
+            compiled_md_lines.append("")
+        else:
+            compiled_md_lines.append("\\newpage")
+
+        content = '\n'.join(lines).strip()
+        content = re.sub(r'^\\newpage\s*', '', content)
+        compiled_md_lines.append(content)
+        compiled_md_lines.append("")
 
     compiled_md = "\n".join(compiled_md_lines)
 
@@ -338,19 +378,15 @@ def main():
     # Use absolute paths for backgrounds since pandoc resolves YAML paths
     # relative to the working directory
     bg_dir = os.path.join(PROJECT_DIR, "rsrc/backgrounds")
-    bg_page = os.path.join(bg_dir, "bg_EPM.pdf")
-    bg_title = os.path.join(bg_dir, "pccf_EPM.pdf")
 
-    if os.path.exists(bg_page) and os.path.exists(bg_title):
-        # Fix paths in the compiled markdown to use absolute paths
+    if os.path.isdir(bg_dir):
+        # Fix any relative background paths in the compiled markdown
         with open(compiled_path, encoding="utf-8") as f:
             content = f.read()
-        content = content.replace(
-            '"../rsrc/backgrounds/bg_EPM.pdf"',
-            f'"{bg_page}"'
-        ).replace(
-            '"../rsrc/backgrounds/pccf_EPM.pdf"',
-            f'"{bg_title}"'
+        content = re.sub(
+            r'"\.\./rsrc/backgrounds/([^"]+)"',
+            lambda m: f'"{os.path.join(bg_dir, m.group(1))}"',
+            content
         )
         with open(compiled_path, "w", encoding="utf-8") as f:
             f.write(content)

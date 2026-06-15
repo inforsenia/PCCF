@@ -153,26 +153,28 @@ report:
 ##  Memòries del Departament
 ## ----------------------------------------------------------------
 
+FAMILIA ?= INF
+
 # Generar plantilles de memòria en Markdown
 generar-plantilles-memoria genera-memories:
-	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria (INF) ] ${RESET}"
-	mkdir -p memories_md
-	python3 tools/generar_plantilles_memoria.py INF
+	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria ($(FAMILIA)) ] ${RESET}"
+	mkdir -p memories_$(FAMILIA)
+	python3 tools/generar_plantilles_memoria.py $(FAMILIA)
 
 # Report de memòries (sense compilar PDF)
 report-memories:
-	@echo " ${LIGHTYELLOW} [ Generant report de memòries... ] ${RESET}"
-	python3 tools/report_memories.py INF $(CENTRO_EDUCATIVO)
+	@echo " ${LIGHTYELLOW} [ Generant report de memòries ($(FAMILIA)) ] ${RESET}"
+	python3 tools/report_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO)
 
 # Compilar memòries (demana confirmació, compila OK + BORRADOR)
 compila-memories:
-	@echo " ${LIGHTBLUE} [ Compilant memòries (INF) ] ${RESET}"
-	python3 tools/compilar_memories.py INF $(CENTRO_EDUCATIVO) --all
+	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA)) ] ${RESET}"
+	python3 tools/compilar_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO) --all
 
 # Compilar memòries (comportament original: només OK, demana BORRADOR)
 compilar-memories:
-	@echo " ${LIGHTBLUE} [ Compilant memòries (INF) ] ${RESET}"
-	python3 tools/compilar_memories.py INF $(CENTRO_EDUCATIVO)
+	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA)) ] ${RESET}"
+	python3 tools/compilar_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO)
 
 # Tot el procés de memòries: generar plantilles + compilar (amb confirmació)
 memories: generar-plantilles-memoria compila-memories
@@ -206,6 +208,7 @@ help:
 	@echo "    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)"
 	@echo "    compilar-memories           Versió antiga: només OK, demana BORRADOR"
 	@echo "    memories                    Tot el procés (genera + compila)"
+	@echo "    (per defecte FAMILIA=INF; useu FAMILIA=SCO per a Serveis Socioculturals)"
 	@echo "    clean              Limpiar archivos generados"
 	@echo "    files              Crear estructura de directorios"
 	@echo "    dependences        Instalar dependencias"
@@ -216,3 +219,5 @@ help:
 	@echo "  make todos                        # Genera todos los ciclos"
 	@echo "  make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam"
 	@echo "  make CENTRO_EDUCATIVO=IESEPM todos"
+	@echo "  make FAMILIA=INF memories        # Memòries d'Informàtica"
+	@echo "  make FAMILIA=SCO memories        # Memòries de Serveis Socioculturals"

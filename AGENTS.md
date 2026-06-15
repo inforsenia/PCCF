@@ -11,11 +11,12 @@ make todos                 # all cycles
 make todos-inf / todos-sco # family subset
 make validate-json         # validate all boe_{INF,SCO}/*.json
 make report                # missing-fields report → PDFS/reporte_analisis.txt
-make generar-plantilles-memoria  # generate dept memoria templates → memories_md/ (also: genera-memories)
+make generar-plantilles-memoria  # generate dept memoria templates → memories_{FAMILIA}/ (also: genera-memories)
 make report-memories             # report only (no PDF)
 make compila-memories            # report + confirm + compile ALL (OK + BORRADOR) → PDF
 make compilar-memories           # OLD: compile OK only, prompt for BORRADOR
 make memories                    # generar-plantilles-memoria + compila-memories
+make FAMILIA=SCO memories        # family override (default INF)
 make clean                 # rm -rf PDFS/ temp/
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
 ```
@@ -35,9 +36,8 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `templates/` or `templates_{FAMILIA}/` | Jinja2 templates for auto-generated markdown |
 | `excels_{INF,SCO}/` | Teacher-edited spreadsheets (after `preparar_excel.py`) |
 | `PDFS/` | All generated outputs (gitignored) |
-| `memoria/` | Common templates for dept memorias (plantilla_memoria.md, portada) |
-| `memoria_{FAMILIA}/` | Family-specific memoria config (config_memories.json) |
-| `memories_md/` | Per-module/per-group memoria markdown files (gitignored) |
+| `memoria/` | Common templates + config per family (plantilla_memoria.md, portada, memories_{FAMILIA}.json) |
+| `memories_{FAMILIA}/` | Per-module/per-group memoria markdown files, one dir per family (gitignored) |
 | `tools/` | Python scripts for build pipeline |
 | `contenedor_lanza.sh` | Docker wrapper (recommended to avoid dep issues) |
 
@@ -66,7 +66,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 
 ## Memoria conventions
 
-- **Config**: Edit `memoria_{FAMILIA}/config_memories.json` each academic year (curs, groups per cycle/course, modules).
+- **Config**: Edit `memoria/memories_{FAMILIA}.json` each academic year (curs, groups per cycle/course, modules).
 - **Group naming**: Single letter (A, B) → concatenated to cycle code (`SMXA`). Multi-letter (SEMI) → underscore-separated (`DAM_SEMI`). Empty → no group suffix (`DAM`).
 - **State tracking**: `_BORRADOR.md` = pending teacher review. Teacher renames to `_OK.md` when completed.
 - **Instructions block**: Automatically stripped from the compiled PDF (regex removes `> **Instruccions...` blocks).
@@ -89,6 +89,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM proyecto-smx"   # single cycle
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM todos"           # all cycles
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM memories"        # generate + report + compile dept memorias
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM FAMILIA=SCO memories"  # SCO family override
 ```
 
 Container image has all deps pre-installed (Pandoc, TeX Live, LibreOffice, Python libs).
