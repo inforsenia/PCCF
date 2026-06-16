@@ -1,0 +1,92 @@
+{
+  "curs": "25-26",
+  "centre": "IES Eduardo Primo Marqués",
+  "departament": "d'Anglés",
+  "cicles": {
+    "SMX": {
+      "nom": "Sistemes Microinformàtics i Xarxes",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "ANGPROFGM", "nom": "Anglés Professional (GM)"}
+          ],
+          "grups": ["A", "B"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
+          ],
+          "grups": ["A", "B"]
+        }
+      }
+    },
+    "DAM": {
+      "nom": "Desenvolupament d'Aplicacions Multiplataforma",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "ANGPROFGS", "nom": "Anglés Professional (GS)"}
+          ],
+          "grups": ["", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
+          ],
+          "grups": ["", "SEMI"]
+        }
+      }
+    },
+    "APD": {
+      "nom": "Atenció a Persones en Situació de Dependència",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "ANGPROFGM", "nom": "Anglés Professional (GM)"}
+          ],
+          "grups": ["A", "B", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
+          ],
+          "grups": ["A", "B", "SEMI"]
+        }
+      }
+    },
+    "EI": {
+      "nom": "Educació Infantil",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "ANGPROFGS", "nom": "Anglés Professional (GS)"}
+          ],
+          "grups": [""]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
+          ],
+          "grups": [""]
+        }
+      }
+    },
+    "IS": {
+      "nom": "Integració Social",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "ANGPROFGS", "nom": "Anglés Professional (GS)"}
+          ],
+          "grups": ["", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
+          ],
+          "grups": ["", "SEMI"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "curs": "25-26",
+  "centre": "IES Eduardo Primo Marqués",
+  "departament": "de Formació i Orientació Laboral",
+  "cicles": {
+    "SMX": {
+      "nom": "Sistemes Microinformàtics i Xarxes",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": ["A", "B"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": ["A", "B"]
+        }
+      }
+    },
+    "DAM": {
+      "nom": "Desenvolupament d'Aplicacions Multiplataforma",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": ["", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": ["", "SEMI"]
+        }
+      }
+    },
+    "FPBIIO": {
+      "nom": "FP Bàsica Informàtica d'Oficina",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": [""]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": [""]
+        }
+      }
+    },
+    "APD": {
+      "nom": "Atenció a Persones en Situació de Dependència",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": ["A", "B", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": ["A", "B", "SEMI"]
+        }
+      }
+    },
+    "EI": {
+      "nom": "Educació Infantil",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": [""]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": [""]
+        }
+      }
+    },
+    "IS": {
+      "nom": "Integració Social",
+      "cursos": {
+        "1": {
+          "moduls": [
+            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+          ],
+          "grups": ["", "SEMI"]
+        },
+        "2": {
+          "moduls": [
+            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"}
+          ],
+          "grups": ["", "SEMI"]
+        }
+      }
+    }
+  }
+}
