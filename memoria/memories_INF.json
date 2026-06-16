@@ -11,7 +11,7 @@
             {"codi": "AOF", "nom": "Aplicacions Ofimàtiques"},
             {"codi": "MME", "nom": "Muntatge i Manteniment d'Equips"},
             {"codi": "XL",  "nom": "Xarxes Locals"},
-            {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"},
+            {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"}
           ],
           "grups": ["A", "B"]
         },
