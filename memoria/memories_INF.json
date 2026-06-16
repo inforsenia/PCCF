@@ -12,7 +12,6 @@
             {"codi": "MME", "nom": "Muntatge i Manteniment d'Equips"},
             {"codi": "XL",  "nom": "Xarxes Locals"},
             {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"},
-            {"codi": "PI",  "nom": "Projecte Intermodular"}
           ],
           "grups": ["A", "B"]
         },

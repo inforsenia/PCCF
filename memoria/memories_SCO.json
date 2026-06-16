@@ -1,7 +1,7 @@
 {
   "curs": "25-26",
   "centre": "IES Eduardo Primo Marqués",
-  "departament": "de Serveis Socioculturals",
+  "departament": "de Serveis Socioculturals i a la comunitat",
   "cicles": {
     "APD": {
       "nom": "Atenció a Persones en Situació de Dependència",
@@ -13,8 +13,7 @@
             {"codi": "ASP",  "nom": "Atenció i suport psicosocial"},
             {"codi": "SD",   "nom": "Suport domiciliari"},
             {"codi": "AH",   "nom": "Atenció higiènica"},
-            {"codi": "PA",   "nom": "Primers auxilis"},
-            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+            {"codi": "PA",   "nom": "Primers auxilis"}
           ],
           "grups": ["A", "B", "SEMI"]
         },
@@ -24,11 +23,12 @@
             {"codi": "SC",   "nom": "Suport a la comunicació"},
             {"codi": "AS",   "nom": "Atenció sanitària"},
             {"codi": "TEL",  "nom": "Teleassistència"},
-            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"},
             {"codi": "SOS",  "nom": "Sostenibilitat aplicada al sistema productiu"},
             {"codi": "DIG",  "nom": "Digitalització aplicada als sectors productius (GM)"},
             {"codi": "PI",   "nom": "Projecte intermodular"},
-            {"codi": "COM",  "nom": "Comunicació professional"}
+            {"codi": "COM",  "nom": "Comunicació professional"},
+            {"codi": "OCI",  "nom": "Oci i temps lliure"}
+
           ],
           "grups": ["A", "B", "SEMI"]
         }
@@ -41,26 +41,27 @@
           "moduls": [
             {"codi": "DEI",  "nom": "Didàctica de l'educació infantil"},
             {"codi": "APSI", "nom": "Autonomia personal i salut infantil"},
-            {"codi": "JOC",  "nom": "El joc infantil i la seua metodologia"},
             {"codi": "EC",   "nom": "Expressió i comunicació"},
             {"codi": "DCM",  "nom": "Desenvolupament cognitiu i motor"},
-            {"codi": "DSA",  "nom": "Desenvolupament socioafectiu"},
-            {"codi": "HHSS", "nom": "Habilitats socials"},
-            {"codi": "IFAM", "nom": "Intervenció amb famílies i atenció a menors en risc social"},
             {"codi": "PA",   "nom": "Primers auxilis"},
-            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+            {"codi": "PI",   "nom": "Projecte intermodular"}
+
           ],
           "grups": [""]
         },
         "2": {
           "moduls": [
-            {"codi": "PAI",  "nom": "Projecte d'atenció a la infància"},
+            {"codi": "JOC",  "nom": "El joc infantil i la seua metodologia"},
+            {"codi": "DSA",  "nom": "Desenvolupament socioafectiu"},
+            {"codi": "HHSS", "nom": "Habilitats socials"},
+            {"codi": "IFAM", "nom": "Intervenció amb famílies i atenció a menors en risc social"},
+            {"codi": "PA",  "nom": "Primers auxilis"},
+            {"codi": "COM",  "nom": "Comunicació professional"},
+            {"codi": "OCI",  "nom": "Oci i temps lliure"},
+            {"codi": "APD",  "nom": "Acompanyament a persones depenents"},
             {"codi": "SOS",  "nom": "Sostenibilitat aplicada al sistema productiu"},
             {"codi": "DIG",  "nom": "Digitalització aplicada als sectors productius (GS)"},
-            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"},
-            {"codi": "NVL",  "nom": "Introducció al Núvol Públic"},
-            {"codi": "PI",   "nom": "Projecte intermodular"},
-            {"codi": "COM",  "nom": "Comunicació professional"}
+            {"codi": "PI",   "nom": "Projecte intermodular"}
           ],
           "grups": [""]
         }
@@ -73,23 +74,26 @@
           "moduls": [
             {"codi": "CIS",  "nom": "Context de la intervenció social"},
             {"codi": "ISL",  "nom": "Inserció sociolaboral"},
-            {"codi": "MC",   "nom": "Mediació comunitària"},
-            {"codi": "PAP",  "nom": "Promoció de l'autonomia personal"},
             {"codi": "MIS",  "nom": "Metodologia de la intervenció social"},
-            {"codi": "IPO1", "nom": "Itinerari personal per a l'ocupabilitat I"}
+            {"codi": "PAP",  "nom": "Promoció de l'autonomia personal"},
+            {"codi": "MC",   "nom": "Mediació comunitària"},
+            {"codi": "PI",   "nom": "Projecte intermodular"}
           ],
           "grups": ["", "SEMI"]
         },
         "2": {
           "moduls": [
-            {"codi": "HHSS", "nom": "Habilitats socials"},
-            {"codi": "PA",   "nom": "Primers auxilis"},
             {"codi": "AUC",  "nom": "Atenció a les unitats de convivència"},
             {"codi": "SIE",  "nom": "Suport a la intervenció educativa"},
             {"codi": "SAAC", "nom": "Sistemes augmentatius i alternatius de la comunicació"},
-            {"codi": "IPO2", "nom": "Itinerari personal per a l'ocupabilitat II"},
+            {"codi": "HHSS", "nom": "Habilitats socials"},
+            {"codi": "PA",   "nom": "Primers auxilis"},
             {"codi": "PI",   "nom": "Projecte intermodular"},
-            {"codi": "COM",  "nom": "Comunicació professional"}
+            {"codi": "COM",  "nom": "Comunicació professional"},
+            {"codi": "OCI",  "nom": "Oci i temps lliure"},
+            {"codi": "APD",  "nom": "Acompanyament a persones depenents"},
+            {"codi": "SOS",  "nom": "Sostenibilitat aplicada al sistema productiu"},
+            {"codi": "DIG",  "nom": "Digitalització aplicada als sectors productius (GS)"}
           ],
           "grups": ["", "SEMI"]
         }
