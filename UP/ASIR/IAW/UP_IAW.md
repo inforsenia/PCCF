@@ -17,13 +17,16 @@
 
 <!-- CONTINUAR! -->
 
-## UP01: Servidor DNS para hosting público
+## UP01: Introducción a las aplicaciones Web. Conceptos y tecnologías previas
 ### 1. Identificación
-*   **Código:** UP01 | **Módulo:** 0375
-*   **Duración:** 19 horas.
-*   **Temporalización:** 08/09/2025 – 30/09/2025.
+*   **Código:** UP01 | **Módulo:** 0376
+*   **Duración:** 10 horas.
+*   **Temporalización:** 08/09/2025 – 26/09/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
+
+REVISAR!!!!
+
 *   **Resultado de Aprendizaje:**
     *   **RA01:** Administra servicios de resolución de nombres, analizándolos y garantizando la seguridad del servicio.
 *   **Criterios de Evaluación:**
@@ -42,13 +45,22 @@
     *   **Empleabilidad:** 16. Innovación; 18. Resolución de problemas.
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** Sistemas de nombres planos y jerárquicos. Resolutores de nombres. Proceso de resolución de un nombre de dominio. Servidores raíz y dominios de primer nivel y sucesivos. Zonas primarias y secundarias. Transferencias de zona. Delegación. Tipos de registros. Servidores de nombres en direcciones «ip» dinámicas. Utilización de reenviadores. Comandos relativos a la resolución de nombres. El cliente del servicio de nombres de dominio. Configuración. El servidor de nombres de dominio. Configuración. Herramientas gráficas de configuración. Documentación de las configuraciones establecidas.
-*   **Teoría:** [Servicios en red: DNS](https://profesorjavi.github.io/SR//dns).
-*   **Metodología:** Metodologías activas basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
+*   **Contenidos (Orden 36/2012):** 
+    FALTA!!!!!
+*   **Teoría:** 
+    * El lenguaje de creación de documentación Markdown. Sintaxis básica y avanzada.
+    * Git como sistema de control de versiones y repositorio de proyectos. Uso básico de GitHub y GitLab. Ramas, commits, pull requests y merge. Resolución de conflictos. 
+    * Docker como herramienta de virtualización ligera. Contenedores y microservicios. Creación de imágenes y contenedores. Dockerfile y docker-compose. Docker Hub y repositorios privados.
+    * El lenguaje de marcado YAML como lenguaje principal de configuración de aplicaciones y servicios. Sintaxis básica y avanzada. Estructuras de datos y tipos de datos.
+*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión 2: Configuración del Servidor DNS en la Red Sentinel](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E2:** [Misión 3: Delegación de Zonas en el Servidor DNS](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E3:** [Misión: Actualización Dinámica de DNS](https://inforsenia.github.io/Terraformadores/v5/).
+    * (Tarea 1 - Introducción a la documentación con Markdown)[https://inforsenia.github.io/Terraformadores/v3/Markdown/Tarea1]
+    * (Tarea 2 - Introducción a Git y GitHub)[https://inforsenia.github.io/Terraformadores/v3/Git/Tarea1]
+    * (Tarea 3 - Git. Trabajando con Ramas)[https://inforsenia.github.io/Terraformadores/v3/Git/Tarea2]
+    * (Tarea 4 - Introducción a Docker)[https://inforsenia.github.io/Terraformadores/v3/Docker/Tarea1Docker]
+    * (Tarea 5 - YAML. Sintaxis y estructuras de datos)[https://inforsenia.github.io/Terraformadores/v3/YAML/Tarea1YAML]
+
+    
 
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** GNS3, VirtualBox, Sistema Operativo Linux (BIND9).
