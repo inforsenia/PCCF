@@ -235,8 +235,15 @@ for codigo in data_box.ModulosProfesionales:
     subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
     subprocess.run("./tools/excel-to-plan-formativo.py "+ruta_al_libro+" \""+modulo.nombre+"\" "+pdplanformativo+" ",shell=True,check=True)
     #movemos el pdf a la carpeta del modulo, imprimimos la nueva ruta:
-    print(" * [ PCCF ] - PDF generado: "+dir_modulo+"PD_9999_CuadroResumen.pdf")
-    shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
+    pdf_cuadro = "/tmp/cuadro-resumen.pdf"
+    if os.path.exists(pdf_cuadro):
+        print(" * [ PCCF ] - PDF generado: "+dir_modulo+"PD_9999_CuadroResumen.pdf")
+        shutil.copy(pdf_cuadro, dir_modulo+"PD_9999_CuadroResumen.pdf")
+        # Also copy to temp/ for compiled "Programaciones" PDF and embed image reference
+        compiled_pdf = "./temp/PD_9999_"+str(codigo)+"_CuadroResumen.pdf"
+        shutil.copy(pdf_cuadro, compiled_pdf)
+        with open(fmod, "a", encoding="utf-8") as f:
+            f.write("\n\n\\begin{center}\\includegraphics[width=\\textwidth,height=\\textheight,keepaspectratio]{./PD_9999_"+str(codigo)+"_CuadroResumen.pdf}\\end{center}\n")
 
 # Guardar mapa código → siglas para shell-progs-didacticas-standalone.sh
 # get_hoja_label() devuelve el nombre completo si no encuentra patrón;

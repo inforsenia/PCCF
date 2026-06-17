@@ -1383,7 +1383,7 @@
                 }
             }
         },
-        "CVOPS190": {
+        "IPR": {
             "nombre": "Introducció a la Programació",
             "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
@@ -1477,7 +1477,7 @@
                 }
             }
         },
-        "CVOPS190": {
+        "INP": {
             "nombre": "Introducció al Núvol Públic",
             "creditos": "10",
             "ResultadosAprendizaje": {

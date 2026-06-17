@@ -27,7 +27,7 @@
 
 ### Taula 2 (Mòduls 11-15)
 
-| Competència | CVOPS190 | 0225 | MOPANGPROF | MOPCOMPROF | PI |
+| Competència | INP | 0225 | MOPANGPROF | MOPCOMPROF | PI |
 |-------------|:---:|:---:|:---:|:---:|:---:|
 | **a** Determinar la logística associada a les operacions... |   |   | X | X | X |
 | **b** Muntar i configurar ordinadors i perifèrics, asseg... |   |   |   |   |   |
@@ -64,7 +64,7 @@
 
 ### Taula 2 (Mòduls 11-15)
 
-| Competència | CVOPS190 | 0225 | MOPANGPROF | MOPCOMPROF | PI |
+| Competència | INP | 0225 | MOPANGPROF | MOPCOMPROF | PI |
 |-------------|:---:|:---:|:---:|:---:|:---:|
 | **ny** Utilitzar els mitjans de consulta disponibles, sel... |   |   |   |   |   |
 | **o** Aplicar els protocols i normes de seguretat, quali... |   |   |   |   |   |
@@ -88,7 +88,7 @@
 - **0226**: Seguretat informàtica
 - **0227**: Serveis en xarxa
 - **0228**: Aplicacions web
-- **CVOPS190**: Introducció al Núvol Públic
+- **INP**: Introducció al Núvol Públic
 - **0225**: Xarxes Locals
 - **MOPANGPROF**: Anglés oral en entorns professionals
 - **MOPCOMPROF**: Comunicació professional
