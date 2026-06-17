@@ -68,7 +68,7 @@
 *   **A4:** Procesamiento de ficheros XML (lectura, escritura, modificación y borrado), control de excepciones y documentación.
 
 **Recursos**
-*   Equipos del aula de informática, IDE de Python (VS Code / PyCharm), intérprete de Python 3 y sus módulos estándar (`csv`, `pickle`, `xml.etree.ElementTree`, `os`), control de versiones (Git) y aula virtual (Aules).
+*   Equipos del aula de informática, IDE de Python (VS Code / VS Codium), intérprete de Python 3 y sus módulos estándar (`csv`, `pickle`, `xml.etree.ElementTree`, `os`), control de versiones (Git) y aula virtual (Aules).
 
 ### 4. Evaluación y adaptación
 
@@ -137,7 +137,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 *   **A4:** Gestión de transacciones (ACID), ejecución de procedimientos almacenados y liberación de recursos.
 
 **Recursos**
-*   Equipos del aula de informática, IDE de Python, SQLite, servidor MySQL/MariaDB (XAMPP o Docker), cliente de base de datos (DBeaver / DataGrip), librería `mysql-connector-python`, control de versiones (Git) y aula virtual (Aules).
+*   Equipos del aula de informática, IDE de Python, SQLite, servidor MySQL/MariaDB (XAMPP o Docker), librería `mysql-connector-python`, control de versiones (Git) y aula virtual (Aules).
 
 ### 4. Evaluación y adaptación
 
@@ -200,7 +200,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 *   **A4:** Consultas con el ORM y SQL, y gestión de transacciones.
 
 **Recursos**
-*   Equipos del aula de informática, IDE de Python, herramienta ORM (p. ej. SQLAlchemy), servidor MySQL/MariaDB (o SQLite), cliente de base de datos, control de versiones (Git) y aula virtual (Aules).
+*   Equipos del aula de informática, IDE de Python, herramienta ORM (SQLAlchemy), servidor MySQL/MariaDB, cliente de base de datos, control de versiones (Git) y aula virtual (Aules).
 
 ### 4. Evaluación y adaptación
 
@@ -265,7 +265,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 *   **A4:** Modificación de los objetos almacenados, gestión de transacciones, pruebas y documentación.
 
 **Recursos**
-*   Equipos del aula de informática, IDE de Python, librería de peticiones HTTP (`requests`), cliente de pruebas de API (Postman / Thunder Client), servicio REST de pruebas, control de versiones (Git) y aula virtual (Aules).
+*   Equipos del aula de informática, IDE de Python, librería de peticiones HTTP (`requests`), cliente de pruebas de API (Postman), servicio REST de pruebas, control de versiones (Git) y aula virtual (Aules).
 
 ### 4. Evaluación y adaptación
 
@@ -345,7 +345,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 *   **A5:** Pruebas, documentación e integración de los componentes en una aplicación final.
 
 **Recursos**
-*   Equipos del aula de informática, IDE de Python, MongoDB (contenedor Docker), cliente de base de datos (MongoDB Compass / DataGrip), librería `pymongo`, Docker, control de versiones (Git) y aula virtual (Aules).
+*   Equipos del aula de informática, IDE de Python, MongoDB (contenedor Docker), cliente de base de datos (MongoDB Compass), librería `pymongo`, Docker, control de versiones (Git) y aula virtual (Aules).
 
 ### 4. Evaluación y adaptación
 
