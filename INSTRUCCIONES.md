@@ -228,99 +228,79 @@ Si a la carpeta `src_FAMILIA_MODUL` trobem el fitxer corresponent a la PD del m�
 
 ## Memòries del Departament
 
-Sistema per a generar i compilar les memòries finals de curs dels mòduls adscrits al Departament d'Informàtica.
+Sistema per a generar i compilar les memòries finals de curs dels mòduls adscrits al departament. Suporta tant FP (cicles formatius) com ESO/BAT.
 
-### 1. Configuració inicial (`memoria_INF/config_memories.json`)
+### Estructura
 
-Defineix els cicles, cursos, mòduls (amb abreviacions) i grups per al curs actual.
+```
+memoriaFP/                 # Plantilles i config per a FP
+  ├── memories_*.json       # Config per departament (ANGLES, FOL, INF, SCO)
+  ├── plantilla_memoria.md  # Template Jinja2 per a memòria individual FP
+  ├── plantilla_annex.md
+  └── portada*.md
 
-Cal actualitzar-lo cada curs:
-- Canviar el camp `"curs"` (ex: `"25-26"` → `"26-27"`)
-- Afegir o eliminar grups segons la matrícula real
-- Afegir o eliminar mòduls si canvia l'oferta
+memoriaESOBAT/             # Plantilles i config per a ESO/BAT
+  ├── memories_*.json       # Config per departament (ANGLES, MATEMATIQUES...)
+  ├── plantilla_memoria.md  # Template Jinja2 (amb opcions ☐)
+  ├── plantilla_annex.md
+  └── portada*.md
 
-### 2. Generar les plantilles
+memories_FP/               # Plantilles .md generades per a FP (gitignored)
+  ├── INF/
+  ├── SCO/
+  ├── FOL/
+  └── ANGLES/
 
+memories_ESOBAT/           # Plantilles .md generades per a ESO/BAT (gitignored)
+  ├── ANGLES/
+  └── MATEMATIQUES/
+
+PDFS/                      # PDF compilats i reports (gitignored)
+```
+
+### Patró de noms dels fitxers
+
+**FP**: `{CURS_ACAD}_{CURS}{CICLE}[{GRUP}]_{MODUL}_{ESTAT}.md`
+```
+25_26_1SMXA_AOF_BORRADOR.md
+25_26_1DAM_SEMI_SI_BORRADOR.md
+25_26_CEIABD_MIA_BORRADOR.md
+```
+
+**ESO/BAT**: `{CURS_ACAD}_{CURS}{ETAPA}[{GRUP}]_{MATERIA}_{ESTAT}.md`
+```
+25_26_1ESOA_ANGLES_BORRADOR.md
+25_26_4ESOD_MATA_BORRADOR.md
+25_26_1BATA_ANGLESI_BORRADOR.md
+```
+
+### Ús
+
+**FP** (per defecte):
 ```sh
-make generar-plantilles-memoria
+make FAMILIA=INF generar-plantilles-memoria
+make FAMILIA=INF compila-memories
+make FAMILIA=INF report-memories
 ```
 
-Es generen a `memories_md/` amb nom `{CURS}_{CICLE}[_{GRUP}]_{MODUL}_BORRADOR.md`.
-Cada plantilla conté instruccions per al docent i marcadors `[###]` a omplir.
+**ESO/BAT** (cal `BASE_DIR=memoriaESOBAT`):
 
-### 3. El docent completa la seua memòria
-
-1. Obre el seu fitxer `.md` de `memories_md/`
-2. Substituïx els `[###]` i `[...]` per la informació real
-3. Si un apartat no escau, indica "CAP" o "No escau"
-4. Canvia `_BORRADOR` per `_OK` al nom del fitxer
-5. Les instruccions del principi **s'esborren automàticament** al compilar
-
-### 4. Compilar el PDF final
-
+Via make (recomanat):
 ```sh
-make compilar-memories
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES generar-plantilles-memoria
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES report-memories
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories                     # tot el procés
 ```
 
-Genera:
-- `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` — PDF amb portada + índex + totes les memòries
-- `PDFS/report_memories_{FAMILIA}.txt` — Report amb:
-  - Mòduls en BORRADOR (pendents)
-  - Mòduls FALTA (no hi ha fitxer)
-  - Mòduls OK amb camps per omplir
-
-### 4b. Report ràpid (sense PDF)
-
-Si només vols comprovar l'estat de les memòries sense generar el PDF:
-
+Via Docker:
 ```sh
-make report-memories
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES report-memories"
 ```
 
-Genera el mateix report a `PDFS/report_memories_{FAMILIA}.txt` sense demanar confirmació ni executar pandoc.
-
-### 5. Exemple de configuració de grups
-
-```json
-"SMX": {
-  "cursos": {
-    "1": {
-      "moduls": [
-        {"codi": "AOF", "nom": "Aplicacions Ofimàtiques"},
-        {"codi": "MME", "nom": "Muntatge i Manteniment d'Equips"},
-        {"codi": "XL",  "nom": "Xarxes Locals"},
-        {"codi": "SOM", "nom": "Sistemes Operatius Monolloc"}
-      ],
-      "grups": ["A", "B"]
-    },
-    "2": { "moduls": [...], "grups": ["A", "B"] }
-  }
-},
-"DAM": {
-  "cursos": {
-    "1": {
-      "moduls": [
-        {"codi": "SI", "nom": "Sistemes Informàtics"}, ...
-      ],
-      "grups": ["", "SEMI"]  // "" = grup presencial, "SEMI" = semipresencial
-    }
-  }
-},
-"CEIABD": {
-  "cursos": {
-    "": {  // curs d'especialització, sense número de curs
-      "moduls": [...],
-      "grups": [""]
-    }
-  }
-}
-```
-
-### 6. Afegir un nou cicle al sistema de memòries
-
-1. Afegir l'entrada al `memoria_{FAMILIA}/config_memories.json`
-2. Afegir el codi del cicle (`CICLES_CONEGUTS`) a `tools/memories_utils.py`
-3. Si cal, crear `memoria_{FAMILIA}/` si la família no existix
+`BASE_DIR=memoriaFP` (per defecte) o `BASE_DIR=memoriaESOBAT`.
 
 ### Generació del PCCF:
 

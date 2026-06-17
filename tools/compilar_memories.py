@@ -30,7 +30,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 sys.path.insert(0, SCRIPT_DIR)
-from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, check_placeholders, build_report_lines, is_annex_file
+from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent
 
 
 def _generate_pie_chart(aprov, susp, filepath):
@@ -48,11 +48,21 @@ def _generate_pie_chart(aprov, susp, filepath):
 
 
 def _add_stats_row(content, pie_key):
-    susp_match = re.search(r'^\|\s*Suspensos\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
-    aprov_match = re.search(r'^\|\s*Aprovats\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    susp_match = re.search(r'^\|\s*Suspensos(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    aprov_match = re.search(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
 
     if not susp_match or not aprov_match:
         return content
+
+    # Find the end of the stats table: last pipe-delimited row in the content
+    # Use [ \t]* instead of \s* to avoid consuming trailing newlines
+    all_rows = list(re.finditer(r'^\|.+\|[ \t]*$', content, re.MULTILINE))
+    # Filter out header (first row) and separator (contains only -, :, |)
+    data_rows = [r for r in all_rows if not re.match(r'^\|[-:| ]+\|[ \t]*$', r.group())]
+    if data_rows:
+        insert_pos = data_rows[-1].end()
+    else:
+        insert_pos = max(susp_match.end(), aprov_match.end())
 
     susp_val = susp_match.group(1)
     aprov_val = aprov_match.group(1)
@@ -63,27 +73,45 @@ def _add_stats_row(content, pie_key):
         total = susp_int + aprov_int
         if total > 0:
             pct = aprov_int / total * 100
-            extra = f"| Percentatge d'aprovats | {pct:.0f}% |"
+            row = f"| Percentatge d'aprovats | {pct:.0f}% |"
 
             if HAS_MATPLOTLIB and pie_key:
                 temp_dir = os.path.join(PROJECT_DIR, "temp")
                 os.makedirs(temp_dir, exist_ok=True)
                 pie_path = os.path.join(temp_dir, f"pie_{pie_key}.png")
                 _generate_pie_chart(aprov_int, susp_int, pie_path)
-                extra += f"\n\n![Distribució aprovats/suspensos]({pie_path})"
+                extra = row + "\n\n![Distribució aprovats/suspensos]({})".format(pie_path)
+            else:
+                extra = row
 
-            insert_pos = aprov_match.end()
-            content = content[:insert_pos] + "\n" + extra + content[insert_pos:]
+            # Remove leading newlines from tail to avoid double blank line
+            tail = content[insert_pos:].lstrip('\n')
+            # Ensure blank line before next section (after pie chart)
+            sep = "\n\n" if tail else ""
+            content = content[:insert_pos] + "\n" + extra + sep + tail
             return content
 
-    insert_pos = aprov_match.end()
-    content = content[:insert_pos] + "\n| Percentatge d'aprovats | [###] |" + content[insert_pos:]
+    extra = "| Percentatge d'aprovats | [###] |"
+    tail = content[insert_pos:].lstrip('\n')
+    sep = "\n\n" if tail else ""
+    content = content[:insert_pos] + "\n" + extra + sep + tail
     return content
 
 
 def main():
     all_flag = "--all" in sys.argv
+    base_dir = "memoriaFP"
     args = [a for a in sys.argv[1:] if a != "--all"]
+
+    if "--base-dir" in args:
+        idx = args.index("--base-dir")
+        if idx + 1 < len(args):
+            base_dir = args[idx + 1]
+            args = args[:idx] + args[idx+2:]
+        else:
+            print("Error: --base-dir requereix un argument")
+            sys.exit(1)
+
     familia = args[0].upper() if len(args) > 0 else "INF"
     centre_educatiu = args[1] if len(args) > 1 else "SENIA"
 
@@ -102,7 +130,7 @@ def main():
         print("=" * 60)
         sys.exit(1)
 
-    config_path = os.path.join(PROJECT_DIR, "memoria", f"memories_{familia}.json")
+    config_path = os.path.join(PROJECT_DIR, base_dir, f"memories_{familia}.json")
     if not os.path.exists(config_path):
         print(f"Error: no es troba {config_path}")
         sys.exit(1)
@@ -110,7 +138,8 @@ def main():
     with open(config_path, encoding="utf-8") as f:
         config = json.load(f)
 
-    memories_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
+    output_parent = get_output_parent(base_dir)
+    memories_dir = os.path.join(PROJECT_DIR, output_parent, familia)
     if not os.path.exists(memories_dir):
         print(f"Error: no es troba el directori {memories_dir}")
         sys.exit(1)
@@ -133,11 +162,14 @@ def main():
     ok_files = [p for p in parsed if p["estat"] == "OK"]
     borrador_files = [p for p in parsed if p["estat"] == "BORRADOR"]
 
-    expected = get_expected(config)
+    if "cicles" in config:
+        expected = get_expected(config)
+    else:
+        expected = get_expected_esobat(config)
 
     # Build report
     report_lines, ok_files, borrador_files, missing, incomplete_ok = build_report_lines(
-        familia, config, parsed, expected
+        familia, config, parsed, expected, output_parent
     )
 
     report_text = "\n".join(report_lines)
@@ -207,94 +239,169 @@ def main():
             print("\nNo hi ha memòries per compilar. El PDF no es generarà.")
             return
 
-    # Group files by cycle for the compiled document
-    compiled_by_cicle = {}
-    for p in to_compile:
-        compiled_by_cicle.setdefault(p["cicle"], []).append(p)
+    # Determine FP vs ESO/BAT
+    is_esobat = "cursos" in config
 
     # Render portada (family-specific if exists, else generic)
-    env = Environment(loader=FileSystemLoader(os.path.join(PROJECT_DIR, "memoria")), autoescape=False)
+    env = Environment(loader=FileSystemLoader(os.path.join(PROJECT_DIR, base_dir)), autoescape=False)
     portada_file = f"portada_memoria_compilada_{familia}.md"
-    if not os.path.exists(os.path.join(PROJECT_DIR, "memoria", portada_file)):
+    if not os.path.exists(os.path.join(PROJECT_DIR, base_dir, portada_file)):
         portada_file = "portada_memoria_compilada.md"
     portada_template = env.get_template(portada_file)
 
-    cicles_llista = list(compiled_by_cicle.keys())
-    claus_cicles = ", ".join(cicles_llista)
+    if is_esobat:
+        # ESO/BAT: group by (etapa, curs)
+        compiled_by_group = {}
+        for p in to_compile:
+            key = (p.get("etapa", ""), p.get("curs", ""))
+            compiled_by_group.setdefault(key, []).append(p)
+        claus_grup = ", ".join(f"{etapa} {curs}" for etapa, curs in compiled_by_group)
 
-    portada_rendered = portada_template.render(
-        curs_academic=curs_academic,
-        centre=centre,
-        departament=departament,
-        claus_cicles=claus_cicles,
-    )
+        portada_rendered = portada_template.render(
+            curs_academic=curs_academic,
+            centre=centre,
+            departament=departament,
+            claus_cicles=claus_grup,
+        )
 
-    # Build compiled markdown
-    compiled_md_lines = []
-    compiled_md_lines.append(portada_rendered)
-    compiled_md_lines.append("")
+        compiled_md_lines = []
+        compiled_md_lines.append(portada_rendered)
+        compiled_md_lines.append("")
 
-    compiled_by_cicle_sorted = sorted(compiled_by_cicle.items(), key=lambda x: x[0])
+        for (etapa, curs), mems in sorted(compiled_by_group.items(), key=lambda x: (x[0][0], x[0][1])):
+            # Get the full course name from config (key is curs+etapa, e.g. "1ESO")
+            curs_key = curs + etapa
+            curs_nom = config.get("cursos", {}).get(curs_key, {}).get("nom", curs_key)
+            group_heading = curs_nom if curs_nom else f"{curs} {etapa}"
 
-    for cicle_codi, mems in compiled_by_cicle_sorted:
-        # Group mems by grup within the cycle
-        groups = {}
-        for p in mems:
-            groups.setdefault(p["grup"], []).append(p)
+            # Sub-group by grup
+            sub_groups = {}
+            for p in mems:
+                sub_groups.setdefault(p.get("grup", ""), []).append(p)
 
-        cicle_nom = config["cicles"].get(cicle_codi, {}).get("nom", cicle_codi)
+            for grup in sorted(sub_groups.keys()):
+                group_mems = sorted(sub_groups[grup], key=lambda x: x.get("materia", ""))
+                heading = f"{group_heading} - Grup {grup}" if grup else group_heading
 
-        for grup in sorted(groups.keys()):
-            group_mems = sorted(groups[grup], key=lambda x: (x["curs"], x["modul"]))
-
-            if grup:
-                group_heading = f"{cicle_nom} ({grup})"
-            else:
-                group_heading = cicle_nom
-
-            compiled_md_lines.append(f"# {group_heading}")
-            compiled_md_lines.append("")
-
-            for p in group_mems:
-                filepath = os.path.join(memories_dir, p["filename"])
-                with open(filepath, encoding="utf-8") as f:
-                    content = f.read()
-
-                # Remove all blockquote lines (> ...) — used for instructions
-                # and any other meta-notes that should not appear in the final PDF
-                content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
-
-                lines = content.split('\n')
-                heading_idx = None
-                for i, line in enumerate(lines):
-                    if line.startswith('## ') or line.startswith('# '):
-                        heading_idx = i
-                        break
-                if heading_idx is not None:
-                    heading_text = lines[heading_idx].lstrip('# ')
-                    lines.pop(heading_idx)
-                    estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
-                    compiled_md_lines.append("\\newpage")
-                    compiled_md_lines.append("")
-                    compiled_md_lines.append(f"## {heading_text}{estat_marker}")
-                    compiled_md_lines.append("")
-
-                content = '\n'.join(lines).strip()
-                # Remove leading \newpage since we already add it before the heading
-                content = re.sub(r'^\\newpage\s*', '', content)
-
-                # Build pie key and process stats
-                pie_parts = [p["cicle"]]
-                if p["grup"]:
-                    pie_parts.append(p["grup"])
-                if p["curs"]:
-                    pie_parts.append(p["curs"])
-                pie_parts.append(p["modul"])
-                pie_key = "_".join(pie_parts)
-                content = _add_stats_row(content, pie_key)
-
-                compiled_md_lines.append(content)
+                compiled_md_lines.append(f"# {heading}")
                 compiled_md_lines.append("")
+
+                for p in group_mems:
+                    filepath = os.path.join(memories_dir, p["filename"])
+                    with open(filepath, encoding="utf-8") as f:
+                        content = f.read()
+
+                    content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
+
+                    lines = content.split('\n')
+                    heading_idx = None
+                    for i, line in enumerate(lines):
+                        if line.startswith('## ') or line.startswith('# '):
+                            heading_idx = i
+                            break
+                    if heading_idx is not None:
+                        heading_text = lines[heading_idx].lstrip('# ')
+                        lines.pop(heading_idx)
+                        estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                        compiled_md_lines.append("\\newpage")
+                        compiled_md_lines.append("")
+                        compiled_md_lines.append(f"## {heading_text}{estat_marker}")
+                        compiled_md_lines.append("")
+
+                    content = '\n'.join(lines).strip()
+                    content = re.sub(r'^\\newpage\s*', '', content)
+
+                    # Build pie key: etapa_curs_grup_materia
+                    pie_parts = [etapa, curs]
+                    if p.get("grup"):
+                        pie_parts.append(p["grup"])
+                    pie_parts.append(p.get("materia", ""))
+                    pie_key = "_".join(pie_parts)
+                    content = _add_stats_row(content, pie_key)
+
+                    compiled_md_lines.append(content)
+                    compiled_md_lines.append("")
+    else:
+        # FP: group by cycle
+        compiled_by_cicle = {}
+        for p in to_compile:
+            compiled_by_cicle.setdefault(p["cicle"], []).append(p)
+
+        cicles_llista = list(compiled_by_cicle.keys())
+        claus_cicles = ", ".join(cicles_llista)
+
+        portada_rendered = portada_template.render(
+            curs_academic=curs_academic,
+            centre=centre,
+            departament=departament,
+            claus_cicles=claus_cicles,
+        )
+
+        compiled_md_lines = []
+        compiled_md_lines.append(portada_rendered)
+        compiled_md_lines.append("")
+
+        compiled_by_cicle_sorted = sorted(compiled_by_cicle.items(), key=lambda x: x[0])
+
+        for cicle_codi, mems in compiled_by_cicle_sorted:
+            # Group mems by grup within the cycle
+            groups = {}
+            for p in mems:
+                groups.setdefault(p["grup"], []).append(p)
+
+            cicle_nom = config["cicles"].get(cicle_codi, {}).get("nom", cicle_codi)
+
+            for grup in sorted(groups.keys()):
+                group_mems = sorted(groups[grup], key=lambda x: (x["curs"], x["modul"]))
+
+                if grup:
+                    group_heading = f"{cicle_nom} ({grup})"
+                else:
+                    group_heading = cicle_nom
+
+                compiled_md_lines.append(f"# {group_heading}")
+                compiled_md_lines.append("")
+
+                for p in group_mems:
+                    filepath = os.path.join(memories_dir, p["filename"])
+                    with open(filepath, encoding="utf-8") as f:
+                        content = f.read()
+
+                    # Remove all blockquote lines (> ...) — used for instructions
+                    # and any other meta-notes that should not appear in the final PDF
+                    content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
+
+                    lines = content.split('\n')
+                    heading_idx = None
+                    for i, line in enumerate(lines):
+                        if line.startswith('## ') or line.startswith('# '):
+                            heading_idx = i
+                            break
+                    if heading_idx is not None:
+                        heading_text = lines[heading_idx].lstrip('# ')
+                        lines.pop(heading_idx)
+                        estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                        compiled_md_lines.append("\\newpage")
+                        compiled_md_lines.append("")
+                        compiled_md_lines.append(f"## {heading_text}{estat_marker}")
+                        compiled_md_lines.append("")
+
+                    content = '\n'.join(lines).strip()
+                    # Remove leading \newpage since we already add it before the heading
+                    content = re.sub(r'^\\newpage\s*', '', content)
+
+                    # Build pie key and process stats
+                    pie_parts = [p["cicle"]]
+                    if p["grup"]:
+                        pie_parts.append(p["grup"])
+                    if p["curs"]:
+                        pie_parts.append(p["curs"])
+                    pie_parts.append(p["modul"])
+                    pie_key = "_".join(pie_parts)
+                    content = _add_stats_row(content, pie_key)
+
+                    compiled_md_lines.append(content)
+                    compiled_md_lines.append("")
 
     # Append annex (Activitats Extra-Escolars) at the end
     annex_files = sorted(f for f in os.listdir(memories_dir) if is_annex_file(f))
@@ -370,7 +477,8 @@ def main():
         f.write(compiled_md)
 
     # Generate PDF with pandoc
-    pdf_filename = f"Memories_{familia}_{centre_educatiu}_{curs_academic_file}.pdf"
+    prefix = base_dir.replace("memoria", "Memories_")
+    pdf_filename = f"{prefix}_{familia}_{centre_educatiu}_{curs_academic_file}.pdf"
     pdf_path = os.path.join(pdf_dir, pdf_filename)
 
     template_tex = os.path.join(PROJECT_DIR, "rsrc/templates/eisvogel.latex")

@@ -11,14 +11,33 @@ make todos                 # all cycles
 make todos-inf / todos-sco # family subset
 make validate-json         # validate all boe_{INF,SCO}/*.json
 make report                # missing-fields report → PDFS/reporte_analisis.txt
-make generar-plantilles-memoria  # generate dept memoria templates → memories_{FAMILIA}/ (also: genera-memories)
+make generar-plantilles-memoria  # generate FP dept memoria templates → memories_FP/{FAMILIA}/
 make report-memories             # report only (no PDF)
 make compila-memories            # report + confirm + compile ALL (OK + BORRADOR) → PDF
 make compilar-memories           # OLD: compile OK only, prompt for BORRADOR
 make memories                    # generar-plantilles-memoria + compila-memories
 make FAMILIA=SCO memories        # family override (default INF)
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories  # ESO/BAT
 make clean                 # rm -rf PDFS/ temp/
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
+```
+
+## ESO/BAT memories
+
+Generate and compile ESO/BAT department memories using `BASE_DIR=memoriaESOBAT`:
+
+```sh
+# Via make (same interface as FP, just add BASE_DIR=memoriaESOBAT)
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES generar-plantilles-memoria
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories
+```
+
+Via Docker wrapper:
+
+```sh
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
 ```
 
 ## CI (`.github/workflows/makefile.yml`)
@@ -35,9 +54,11 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `src_{INF,SCO}_{CICLO}/` | Cycle-specific PCCF + PD markdown |
 | `templates/` or `templates_{FAMILIA}/` | Jinja2 templates for auto-generated markdown |
 | `excels_{INF,SCO}/` | Teacher-edited spreadsheets (after `preparar_excel.py`) |
+| `memoriaFP/` | FP department configs + templates (memories_{FAMILIA}.json, plantilla_memoria.md, portada) |
+| `memoriaESOBAT/` | ESO/BAT department configs + templates (same structure as memoriaFP) |
+| `memories_FP/{FAMILIA}/` | Per-module/per-group FP memoria markdown files (gitignored via `memories_*/`) |
+| `memories_ESOBAT/{FAMILIA}/` | Per-course/per-group ESO/BAT memoria markdown files (gitignored) |
 | `PDFS/` | All generated outputs (gitignored) |
-| `memoria/` | Common templates + config per family (plantilla_memoria.md, portada, memories_{FAMILIA}.json) |
-| `memories_{FAMILIA}/` | Per-module/per-group memoria markdown files, one dir per family (gitignored) |
 | `tools/` | Python scripts for build pipeline |
 | `contenedor_lanza.sh` | Docker wrapper (recommended to avoid dep issues) |
 
@@ -66,7 +87,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 
 ## Memoria conventions
 
-- **Config**: Edit `memoria/memories_{FAMILIA}.json` each academic year (curs, groups per cycle/course, modules).
+- **Config**: Edit `memoriaFP/memories_{FAMILIA}.json` each academic year (curs, groups per cycle/course, modules). For ESO/BAT, edit `memoriaESOBAT/memories_{DEPART}.json`.
 - **Group naming**: Single letter (A, B) → concatenated to cycle code (`SMXA`). Multi-letter (SEMI) → underscore-separated (`DAM_SEMI`). Empty → no group suffix (`DAM`).
 - **State tracking**: `_BORRADOR.md` = pending teacher review. Teacher renames to `_OK.md` when completed.
 - **Instructions block**: Automatically stripped from the compiled PDF (regex removes `> **Instruccions...` blocks).
@@ -90,6 +111,12 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM todos"           # all cycles
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM memories"        # generate + report + compile dept memorias
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM FAMILIA=SCO memories"  # SCO family override
+```
+
+For ESO/BAT department memories:
+```sh
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
 ```
 
 Container image has all deps pre-installed (Pandoc, TeX Live, LibreOffice, Python libs).

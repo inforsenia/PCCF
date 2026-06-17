@@ -2,11 +2,13 @@
 
 """
 Genera plantilles de memòria en Markdown a partir de la configuració
-i la plantilla Jinja2.
+i la plantilla Jinja2. Suporta FP (cicles/moduls) i ESO/BAT (cursos/materies).
 
-Ús: python3 tools/generar_plantilles_memoria.py [família]
+Ús:
+    python3 tools/generar_plantilles_memoria.py [--base-dir DIR] [família]
+    python3 tools/generar_plantilles_memoria.py --base-dir memoriaESOBAT ANGLES
 
-Per defecte: família = INF
+Per defecte: --base-dir = memoriaFP, família = INF
 """
 
 import sys
@@ -35,10 +37,27 @@ def curs_display(curs):
         return ""
     return f"{curs}r"
 
-def main():
-    familia = sys.argv[1].upper() if len(sys.argv) > 1 else "INF"
+def get_output_parent(base_dir):
+    # "memoriaFP" → "memories_FP", "memoriaESOBAT" → "memories_ESOBAT"
+    suffix = base_dir.replace("memoria", "", 1)
+    return f"memories_{suffix}"
 
-    config_path = os.path.join(PROJECT_DIR, "memoria", f"memories_{familia}.json")
+def main():
+    base_dir = "memoriaFP"
+    args = sys.argv[1:]
+
+    if "--base-dir" in args:
+        idx = args.index("--base-dir")
+        if idx + 1 < len(args):
+            base_dir = args[idx + 1]
+            args = args[:idx] + args[idx+2:]
+        else:
+            print("Error: --base-dir requereix un argument")
+            sys.exit(1)
+
+    familia = args[0].upper() if len(args) > 0 else "INF"
+
+    config_path = os.path.join(PROJECT_DIR, base_dir, f"memories_{familia}.json")
     if not os.path.exists(config_path):
         print(f"Error: no es troba {config_path}")
         sys.exit(1)
@@ -46,11 +65,12 @@ def main():
     with open(config_path, encoding="utf-8") as f:
         config = json.load(f)
 
-    template_dir = os.path.join(PROJECT_DIR, "memoria")
+    template_dir = os.path.join(PROJECT_DIR, base_dir)
     env = Environment(loader=FileSystemLoader(template_dir), autoescape=False)
     template = env.get_template("plantilla_memoria.md")
 
-    output_dir = os.path.join(PROJECT_DIR, f"memories_{familia}")
+    output_parent = get_output_parent(base_dir)
+    output_dir = os.path.join(PROJECT_DIR, output_parent, familia)
     os.makedirs(output_dir, exist_ok=True)
 
     curs_academic = config["curs"]
@@ -60,30 +80,69 @@ def main():
 
     total = 0
 
-    for cicle_codi, cicle_data in config["cicles"].items():
-        cicle_nom = cicle_data["nom"]
-        for curs, curs_data in cicle_data["cursos"].items():
+    is_fp = "cicles" in config
+
+    if is_fp:
+        for cicle_codi, cicle_data in config["cicles"].items():
+            cicle_nom = cicle_data["nom"]
+            for curs, curs_data in cicle_data["cursos"].items():
+                grups = curs_data.get("grups", [""])
+                for modul in curs_data["moduls"]:
+                    modul_codi = modul["codi"]
+                    modul_nom = modul["nom"]
+                    for grup in grups:
+                        suffix = build_grup_suffix(grup)
+                        prefix = f"{curs}{cicle_codi}{suffix}"
+
+                        filename = f"{curs_academic_file}_{prefix}_{modul_codi}_BORRADOR.md"
+                        filepath = os.path.join(output_dir, filename)
+
+                        context = {
+                            "curs_academic": curs_academic,
+                            "curs": curs,
+                            "curs_str": curs_display(curs),
+                            "cicle_codi": cicle_codi,
+                            "cicle_nom": cicle_nom,
+                            "grup": grup,
+                            "grup_label": get_grup_label(grup),
+                            "modul_codi": modul_codi,
+                            "modul_nom": modul_nom,
+                            "centre": centre,
+                            "departament": departament,
+                        }
+
+                        rendered = template.render(context)
+
+                        with open(filepath, "w", encoding="utf-8") as f:
+                            f.write(rendered)
+
+                        print(f"  Creat: {filename}")
+                        total += 1
+    else:
+        for curs_codi, curs_data in config["cursos"].items():
+            etapa = curs_data["etapa"]
+            curs_nom = curs_data["nom"]
             grups = curs_data.get("grups", [""])
-            for modul in curs_data["moduls"]:
-                modul_codi = modul["codi"]
-                modul_nom = modul["nom"]
+            for materia in curs_data["materies"]:
+                materia_codi = materia["codi"]
+                materia_nom = materia["nom"]
                 for grup in grups:
                     suffix = build_grup_suffix(grup)
-                    prefix = f"{curs}{cicle_codi}{suffix}"
+                    prefix = f"{curs_codi}{suffix}"
 
-                    filename = f"{curs_academic_file}_{prefix}_{modul_codi}_BORRADOR.md"
+                    filename = f"{curs_academic_file}_{prefix}_{materia_codi}_BORRADOR.md"
                     filepath = os.path.join(output_dir, filename)
 
                     context = {
                         "curs_academic": curs_academic,
-                        "curs": curs,
-                        "curs_str": curs_display(curs),
-                        "cicle_codi": cicle_codi,
-                        "cicle_nom": cicle_nom,
+                        "curs": curs_codi,
+                        "curs_str": curs_nom,
+                        "etapa": etapa,
+                        "curs_nom": curs_nom,
                         "grup": grup,
                         "grup_label": get_grup_label(grup),
-                        "modul_codi": modul_codi,
-                        "modul_nom": modul_nom,
+                        "materia_codi": materia_codi,
+                        "materia_nom": materia_nom,
                         "centre": centre,
                         "departament": departament,
                     }
@@ -110,7 +169,7 @@ def main():
     print(f"  Creat: {annex_filename}")
     total += 1
 
-    print(f"\nTotal: {total} plantilles generades a memories_{familia}/")
+    print(f"\nTotal: {total} plantilles generades a {output_parent}/{familia}/")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,55 @@
+{
+  "departament": "d'Anglés",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "ANGLES", "nom": "Anglés"}
+      ],
+      "grups": ["A", "B", "C", "D", "E", "F"]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "ANGLES", "nom": "Anglés"}
+      ],
+      "grups": ["A", "B", "C", "D", "E"]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "ANGLES", "nom": "Anglés"}
+      ],
+      "grups": ["A", "B", "C", "D"]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "ANGLES", "nom": "Anglés"}
+      ],
+      "grups": ["A", "B", "C", "D"]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "ANGLESI", "nom": "Anglés I"}
+      ],
+      "grups": ["A", "B", "C"]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "ANGLESII", "nom": "Anglés II"}
+      ],
+      "grups": ["A", "B", "C"]
+    }
+  }
+}

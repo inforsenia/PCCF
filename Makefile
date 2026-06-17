@@ -154,27 +154,27 @@ report:
 ## ----------------------------------------------------------------
 
 FAMILIA ?= INF
+BASE_DIR ?= memoriaFP
 
 # Generar plantilles de memòria en Markdown
 generar-plantilles-memoria genera-memories:
-	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria ($(FAMILIA)) ] ${RESET}"
-	mkdir -p memories_$(FAMILIA)
-	python3 tools/generar_plantilles_memoria.py $(FAMILIA)
+	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
+	python3 tools/generar_plantilles_memoria.py --base-dir $(BASE_DIR) $(FAMILIA)
 
 # Report de memòries (sense compilar PDF)
 report-memories:
-	@echo " ${LIGHTYELLOW} [ Generant report de memòries ($(FAMILIA)) ] ${RESET}"
-	python3 tools/report_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO)
+	@echo " ${LIGHTYELLOW} [ Generant report de memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
+	python3 tools/report_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO)
 
 # Compilar memòries (demana confirmació, compila OK + BORRADOR)
 compila-memories:
-	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA)) ] ${RESET}"
-	python3 tools/compilar_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO) --all
+	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
+	python3 tools/compilar_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO) --all
 
 # Compilar memòries (comportament original: només OK, demana BORRADOR)
 compilar-memories:
-	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA)) ] ${RESET}"
-	python3 tools/compilar_memories.py $(FAMILIA) $(CENTRO_EDUCATIVO)
+	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
+	python3 tools/compilar_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO)
 
 # Tot el procés de memòries: generar plantilles + compilar (amb confirmació)
 memories: generar-plantilles-memoria compila-memories
@@ -208,7 +208,8 @@ help:
 	@echo "    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)"
 	@echo "    compilar-memories           Versió antiga: només OK, demana BORRADOR"
 	@echo "    memories                    Tot el procés (genera + compila)"
-	@echo "    (per defecte FAMILIA=INF; useu FAMILIA=SCO per a Serveis Socioculturals)"
+	@echo "    (per defecte FAMILIA=INF, BASE_DIR=memoriaFP)"
+	@echo "    (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories)"
 	@echo "    clean              Limpiar archivos generados"
 	@echo "    files              Crear estructura de directorios"
 	@echo "    dependences        Instalar dependencias"

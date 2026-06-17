@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     texlive-latex-extra \
     texlive-fonts-extra \
     texlive-xetex \
+    texlive-luatex \
+    texlive-publishers \
     libreoffice \
     poppler-utils \
     python3-jinja2 \

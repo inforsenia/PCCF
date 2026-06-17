@@ -128,33 +128,46 @@ Estos documentos se generan en la carpeta `src_{FAMILIA}_{CICLO}/` y se integran
 ## Memòries del Departament
 
 Sistema per a generar i compilar les memòries finals de curs dels mòduls adscrits al Departament.
+Suporta FP (cicles formatius) i ESO/BAT.
 
 ### Estructura
 
 ```
-memoria/                   # Plantilles comunes (INF + SCO)
-  ├── plantilla_memoria.md  # Template Jinja2 per a memòria individual
-  └── portada_memoria_compilada.md  # Portada per al PDF compilat
+memoriaFP/                   # Plantilles i config FP
+  ├── plantilla_memoria.md   # Template Jinja2 per a memòria individual FP
+  └── portada_memoria_compilada.md
 
-memoria_INF/               # Configuració específica d'Informàtica
-  └── config_memories.json  # Cicles, mòduls, grups per al curs actual
+memoriaESOBAT/               # Plantilles i config ESO/BAT
+  ├── plantilla_memoria.md   # Template amb opcions múltiples (☐)
+  └── portada_memoria_compilada.md
 
-memories_md/               # Plantilles .md individuals (gitignored)
-  ├── 25_26_1SMXA_AOF_BORRADOR.md
-  ├── 25_26_1DAM_SEMI_SI_BORRADOR.md
-  └── 25_26_CEIABD_MIA_BORRADOR.md
+memories_FP/                 # Plantilles .md individuals FP (gitignored)
+  ├── INF/
+  │   └── 25_26_1SMXA_AOF_BORRADOR.md
+  └── SCO/
 
-PDFS/                      # PDF compilat i report (gitignored)
+memories_ESOBAT/             # Plantilles .md individuals ESO/BAT (gitignored)
+  └── ANGLES/
+      └── 25_26_1ESOA_ANGLES_BORRADOR.md
+
+PDFS/                        # PDF compilat i report (gitignored)
   └── Memories_INF_IESEPM_25_26.pdf
 ```
 
 ### Patró de noms dels fitxers
 
+**FP**: `{CURS_ACAD}_{CURS}{CICLE}[{GRUP}]_{MODUL}_{ESTAT}.md`
 ```
-{CURS}_{CURS_CICLE}{CICLE}[{GRUP}]_{MODUL}_{ESTAT}.md
-  25_26    _1         SMX    A        AOF   BORRADOR
-  25_26    _1         DAM    _SEMI    SI    BORRADOR
-  25_26               CEIABD          MIA   BORRADOR
+25_26_1SMXA_AOF_BORRADOR.md
+25_26_1DAM_SEMI_SI_BORRADOR.md
+25_26_CEIABD_MIA_BORRADOR.md
+```
+
+**ESO/BAT**: `{CURS_ACAD}_{CURS}{ETAPA}[{GRUP}]_{MATERIA}_{ESTAT}.md`
+```
+25_26_1ESOA_ANGLES_BORRADOR.md
+25_26_4ESOD_MATA_BORRADOR.md
+25_26_1BATA_ANGLESI_BORRADOR.md
 ```
 
 ### Flux de treball
@@ -164,17 +177,28 @@ PDFS/                      # PDF compilat i report (gitignored)
 3. **Compilar**: l'script llig els `*_OK.md`, genera un PDF amb índex + report de mancances
 
 ```bash
-# Generar les 60 plantilles per a INF
-./contenedor_lanza.sh "make generar-plantilles-memoria"
+# FP: generar les plantilles per a INF
+make FAMILIA=INF generar-plantilles-memoria
 
-# Compilar memòries completades
-./contenedor_lanza.sh "make compilar-memories"
+# FP: compilar memòries completades
+make FAMILIA=INF compilar-memories
 
-# Només report (sense generar PDF)
-./contenedor_lanza.sh "make report-memories"
+# ESO/BAT: tot el procés per a ANGLES
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories
 
-# Tot el procés
-./contenedor_lanza.sh "make memories"
+# ESO/BAT: només compilar
+make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
+```
+
+### Via Docker wrapper
+
+```sh
+# FP
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM FAMILIA=INF memories"
+
+# ESO/BAT
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
 ```
 
 ### Report de l'estat de les memòries

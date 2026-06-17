@@ -1,0 +1,58 @@
+{
+  "departament": "de Matemàtiques",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MAT", "nom": "Matemàtiques"}
+      ],
+      "grups": ["A", "B", "C", "D", "E", "F"]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MAT", "nom": "Matemàtiques"}
+      ],
+      "grups": ["A", "B", "C", "D", "E"]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MAT", "nom": "Matemàtiques"}
+      ],
+      "grups": ["A", "B", "C", "D"]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MATA", "nom": "Matemàtiques A (orientades a les ensenyances acadèmiques)"},
+        {"codi": "MATB", "nom": "Matemàtiques B (orientades a les ensenyances aplicades)"}
+      ],
+      "grups": ["A", "B", "C", "D"]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "MATI", "nom": "Matemàtiques I"},
+        {"codi": "MATCCSI", "nom": "Matemàtiques aplicades a les CCSS I"}
+      ],
+      "grups": ["A", "B", "C"]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "MATII", "nom": "Matemàtiques II"},
+        {"codi": "MATCCSSII", "nom": "Matemàtiques aplicades a les CCSS II"}
+      ],
+      "grups": ["A", "B", "C"]
+    }
+  }
+}
