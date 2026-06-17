@@ -3,17 +3,17 @@
 ### Resumen de Unidades de Programación (Curso 2025-2026)
 
 
-| Codigo | Titulo de la UP | Duracion | Temporalizacion | RA asociados (Descripcion breve) |
+| Código | Título de la UP | Duración | Temporalización | RA asociados (Descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **Fundamentos, adopcion y economia de la nube** | **9 h** | 10/09/2025 - 01/10/2025 | **RA01:** Fundamentos, adopcion, migracion y costes de la nube. |
-| **UP02** | **Infraestructura global y seguridad** | **9 h** | 01/10/2025 - 22/10/2025 | **RA02:** Infraestructura global, servicios principales y seguridad basica. |
-| **UP03** | **Redes, computo, escalado y monitorizacion**| **21 h** | 22/10/2025 - 10/12/2025 | **RA03:** Redes virtuales, computo, balanceo, escalado y servicios serverless. |
+| **UP01** | **Fundamentos, adopción y economía de la nube** | **9 h** | 10/09/2025 - 01/10/2025 | **RA01:** Fundamentos, adopción, migración y costes de la nube. |
+| **UP02** | **Infraestructura global y seguridad** | **9 h** | 01/10/2025 - 22/10/2025 | **RA02:** Infraestructura global, servicios principales y seguridad básica. |
+| **UP03** | **Redes, cómputo, escalado y monitorización**| **21 h** | 22/10/2025 - 10/12/2025 | **RA03:** Redes virtuales, cómputo, balanceo, escalado y servicios serverless. |
 | **UP04** | **Almacenamiento, bases de datos y arquitectura en la nube** | **17 h** | 10/12/2025 - 30/01/2026 | **RA04:** Almacenamiento, bases de datos y arquitecturas escalables y resilientes. |
 
 * La suma total de estas unidades es de **56 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo fuera del periodo dual.
 
 
-## UP01: FUNDAMENTOS, ADOPCION Y ECONOMIA DE LA NUBE
+## UP01: FUNDAMENTOS, ADOPCIÓN Y ECONOMÍA DE LA NUBE
 ### 1. Identificación
 | Campo | Detalle |
 | :--- | :--- |
@@ -132,7 +132,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 * **DUA:** se facilitarán instrucciones paso a paso, materiales visuales, ejemplos resueltos y alternativas de entrega cuando sea necesario.
 ---
 
-## UP03: REDES, COMPUTO, ESCALADO Y MONITORIZACION
+## UP03: REDES, CÓMPUTO, ESCALADO Y MONITORIZACIÓN
 ### 1. Identificación
 | Campo | Detalle |
 | :--- | :--- |
