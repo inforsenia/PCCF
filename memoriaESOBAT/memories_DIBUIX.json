@@ -1,0 +1,49 @@
+{
+  "departament": "de Dibuix",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LABCREAUDIO", "nom": "Laboratori de Creació Audiovisual", "grups": ["G1"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "EPV", "nom": "Educació Plàstica, Visual i Audiovisual", "grups": ["A","B","C","D"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "EPV", "nom": "Educació Plàstica, Visual i Audiovisual", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "EXPARTIS", "nom": "Expressió Artística", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "DIBTECI", "nom": "Dibuix Tècnic I", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "DIBTECII", "nom": "Dibuix Tècnic II", "grups": ["G1"]}
+      ]
+    }
+  }
+}

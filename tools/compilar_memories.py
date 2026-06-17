@@ -269,9 +269,9 @@ def main():
         compiled_md_lines.append("")
 
         for (etapa, curs), mems in sorted(compiled_by_group.items(), key=lambda x: (x[0][0], x[0][1])):
-            # Get the full course name from config (key is curs+etapa, e.g. "1ESO")
-            curs_key = curs + etapa
-            curs_nom = config.get("cursos", {}).get(curs_key, {}).get("nom", curs_key)
+            # Use curs_codi from first parsed file to look up config
+            first_curs_codi = mems[0].get("curs_codi", curs + etapa)
+            curs_nom = config.get("cursos", {}).get(first_curs_codi, {}).get("nom", first_curs_codi)
             group_heading = curs_nom if curs_nom else f"{curs} {etapa}"
 
             # Sub-group by grup

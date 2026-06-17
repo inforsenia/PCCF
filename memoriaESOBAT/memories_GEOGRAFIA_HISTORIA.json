@@ -1,0 +1,51 @@
+{
+  "departament": "de Geografia i Història",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "GEOHIS", "nom": "Geografia i Història", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "GEOHIS", "nom": "Geografia i Història", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "GEOHIS", "nom": "Geografia i Història", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "GEOHIS", "nom": "Geografia i Història", "grups": ["A","B","C","D"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "HISMONCONT", "nom": "Història del Món Contemporani", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "GEOGRAFIA", "nom": "Geografia", "grups": ["G1"]},
+        {"codi": "HISTESPANYA", "nom": "Història d'Espanya", "grups": ["A","B","C"]},
+        {"codi": "HISTART", "nom": "Història de l'Art", "grups": ["G1"]}
+      ]
+    }
+  }
+}

@@ -7,52 +7,50 @@
       "nom": "1r d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "MAT", "nom": "Matemàtiques"}
-      ],
-      "grups": ["A", "B", "C", "D", "E", "F"]
+        {"codi": "MAT", "nom": "Matemàtiques", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "REFMAT1", "nom": "Taller de Reforç de Matemàtiques", "grups": ["G1","G2"]}
+      ]
     },
     "2ESO": {
       "nom": "2n d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "MAT", "nom": "Matemàtiques"}
-      ],
-      "grups": ["A", "B", "C", "D", "E"]
+        {"codi": "MAT", "nom": "Matemàtiques", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "REFMAT2", "nom": "Taller de Reforç de Matemàtiques", "grups": ["G1"]}
+      ]
     },
     "3ESO": {
       "nom": "3r d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "MAT", "nom": "Matemàtiques"}
-      ],
-      "grups": ["A", "B", "C", "D"]
+        {"codi": "MAT", "nom": "Matemàtiques", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "REFMAT3", "nom": "Taller de Reforç de Matemàtiques", "grups": ["G1"]}
+      ]
     },
     "4ESO": {
       "nom": "4t d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "MATA", "nom": "Matemàtiques A (orientades a les ensenyances acadèmiques)"},
-        {"codi": "MATB", "nom": "Matemàtiques B (orientades a les ensenyances aplicades)"}
-      ],
-      "grups": ["A", "B", "C", "D"]
+        {"codi": "MATA", "nom": "Matemàtiques A", "grups": ["G1","G2"]},
+        {"codi": "MATB", "nom": "Matemàtiques B", "grups": ["G1","G2"]},
+        {"codi": "REFMAT4", "nom": "Taller de Reforç de Matemàtiques", "grups": ["G1"]}
+      ]
     },
     "1BAT": {
       "nom": "1r de Batxillerat",
       "etapa": "BAT",
       "materies": [
-        {"codi": "MATI", "nom": "Matemàtiques I"},
-        {"codi": "MATCCSI", "nom": "Matemàtiques aplicades a les CCSS I"}
-      ],
-      "grups": ["A", "B", "C"]
+        {"codi": "MATCCSI", "nom": "Matemàtiques Aplicades a les CCSS I", "grups": ["G1","G2"]},
+        {"codi": "MATI", "nom": "Matemàtiques I", "grups": ["G1","G2"]}
+      ]
     },
     "2BAT": {
       "nom": "2n de Batxillerat",
       "etapa": "BAT",
       "materies": [
-        {"codi": "MATII", "nom": "Matemàtiques II"},
-        {"codi": "MATCCSSII", "nom": "Matemàtiques aplicades a les CCSS II"}
-      ],
-      "grups": ["A", "B", "C"]
+        {"codi": "MATCCSSII", "nom": "Matemàtiques Aplicades a les CCSS II", "grups": ["G1"]},
+        {"codi": "MATII", "nom": "Matemàtiques II", "grups": ["G1","G2"]}
+      ]
     }
   }
 }

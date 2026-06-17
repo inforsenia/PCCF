@@ -1,0 +1,35 @@
+{
+  "departament": "de Francés",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FRANCES", "nom": "Francés 2n Idioma", "grups": ["G1"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FRANCES", "nom": "Francés 2n Idioma", "grups": ["G1"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FRANCES", "nom": "Francés 2n Idioma", "grups": ["G1"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FRANCES", "nom": "Francés 2n Idioma", "grups": ["G1"]}
+      ]
+    }
+  }
+}

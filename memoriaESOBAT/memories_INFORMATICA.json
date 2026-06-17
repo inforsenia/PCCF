@@ -1,0 +1,50 @@
+{
+  "departament": "d'Informàtica",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TALLRELDIG", "nom": "Taller de Relacions Digitals Responsables", "grups": ["G1","G2","G3"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "PROGINTROB", "nom": "Programació, Intel·ligència Artificial i Robòtica", "grups": ["G1","G2","G3"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "PROGINTROB", "nom": "Programació, Intel·ligència Artificial i Robòtica", "grups": ["G1","G2","G3"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "DIGITAL", "nom": "Digitalització", "grups": ["G1","G2","G3"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "PROGXARXES", "nom": "Programació, Xarxes i Sistemes Informàtics", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "PROGXARXES", "nom": "Programació, Xarxes i Sistemes Informàtics", "grups": ["G1"]},
+        {"codi": "PROJINVES", "nom": "Projecte d'Investigació", "grups": ["G1"]}
+      ]
+    }
+  }
+}

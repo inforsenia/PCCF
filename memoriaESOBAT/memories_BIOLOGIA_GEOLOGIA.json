@@ -1,0 +1,53 @@
+{
+  "departament": "de Biologia i Geologia",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "BIOGEO", "nom": "Biologia i Geologia", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "BIOGEO", "nom": "Biologia i Geologia", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3PDC": {
+      "nom": "3r de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "AMBCIENT3", "nom": "Àmbit Científic", "grups": ["PDC"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "BIOGEO4", "nom": "Biologia i Geologia", "grups": ["G1","G2"]},
+        {"codi": "PICULTCIENT", "nom": "PI-Cultura Científica", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "BIOHUMASAL", "nom": "Biologia Humana i Salut", "grups": ["G1"]},
+        {"codi": "BIOGEOCIEN", "nom": "Biologia, Geologia i Ciències Ambientals", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "BIOLOGIA", "nom": "Biologia", "grups": ["G1"]},
+        {"codi": "CIENCIESGEN", "nom": "Ciències Generals", "grups": ["G1"]},
+        {"codi": "GEOCIENAMB", "nom": "Geologia i Ciències Ambientals", "grups": ["G1"]}
+      ]
+    }
+  }
+}

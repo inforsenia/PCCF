@@ -134,11 +134,30 @@ Suporta FP (cicles formatius) i ESO/BAT.
 
 ```
 memoriaFP/                   # Plantilles i config FP
+  ├── memories_INF.json      # Config FP: SMX, DAM, CEIABD, FPBIIO
+  ├── memories_SCO.json      # Config FP: APD, EI, IS
   ├── plantilla_memoria.md   # Template Jinja2 per a memòria individual FP
   └── portada_memoria_compilada.md
 
-memoriaESOBAT/               # Plantilles i config ESO/BAT
-  ├── plantilla_memoria.md   # Template amb opcions múltiples (☐)
+memoriaESOBAT/               # Plantilles i config ESO/BAT (17 departaments)
+  ├── memories_ANGLES.json
+  ├── memories_BIOLOGIA_GEOLOGIA.json
+  ├── memories_DIBUIX.json
+  ├── memories_ECONOMIA.json
+  ├── memories_EDUCACIO_FISICA.json
+  ├── memories_FILOSOFIA.json
+  ├── memories_FISICA_QUIMICA.json
+  ├── memories_FRANCES.json
+  ├── memories_GEOGRAFIA_HISTORIA.json
+  ├── memories_INFORMATICA.json
+  ├── memories_LLATI.json
+  ├── memories_LLENGUA_CASTELLANA.json
+  ├── memories_LLENGUA_VALENCIANA.json
+  ├── memories_MATEMATIQUES.json
+  ├── memories_MUSICA.json
+  ├── memories_RELIGIO.json
+  ├── memories_TECNOLOGIA.json
+  ├── plantilla_memoria.md   # Template amb opcions ☐
   └── portada_memoria_compilada.md
 
 memories_FP/                 # Plantilles .md individuals FP (gitignored)
@@ -147,8 +166,9 @@ memories_FP/                 # Plantilles .md individuals FP (gitignored)
   └── SCO/
 
 memories_ESOBAT/             # Plantilles .md individuals ESO/BAT (gitignored)
-  └── ANGLES/
-      └── 25_26_1ESOA_ANGLES_BORRADOR.md
+  ├── ANGLES/
+  ├── MATEMATIQUES/
+  └── ... (17 departaments)
 
 PDFS/                        # PDF compilat i report (gitignored)
   └── Memories_INF_IESEPM_25_26.pdf
@@ -163,11 +183,14 @@ PDFS/                        # PDF compilat i report (gitignored)
 25_26_CEIABD_MIA_BORRADOR.md
 ```
 
-**ESO/BAT**: `{CURS_ACAD}_{CURS}{ETAPA}[{GRUP}]_{MATERIA}_{ESTAT}.md`
+**ESO/BAT**: `{CURS_ACAD}_{CURS_CODI}[_{GRUP}]_{MATERIA}_{ESTAT}.md`
 ```
-25_26_1ESOA_ANGLES_BORRADOR.md
-25_26_4ESOD_MATA_BORRADOR.md
-25_26_1BATA_ANGLESI_BORRADOR.md
+25_26_1ESOA_ANGLES_BORRADOR.md              # 1ESO, grup A
+25_26_4ESOD_MATA_BORRADOR.md                # 4ESO, grup D, Matemàtiques A
+25_26_3ESO_G1_COMPCOM_BORRADOR.md           # 3ESO, grup G1, Competència Comunicativa
+25_26_1BATA_ANGLESI_BORRADOR.md             # 1BAT, grup A
+25_26_3PDC_PDC_ANGLES3PDC_BORRADOR.md       # 3PDC, grup PDC
+25_26_4ESO_4APLI_TEC4APLI_BORRADOR.md       # 4t ESO Aplicades
 ```
 
 ### Flux de treball
@@ -188,6 +211,16 @@ make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories
 
 # ESO/BAT: només compilar
 make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
+
+# Tots els departaments ESO/BAT de cop
+make genera-tots-esobat                         # generar plantilles
+make report-tots-esobat                         # report (sense compilar)
+make compila-tots-esobat                        # compilar tots
+
+# Totes les famílies FP de cop
+make genera-tots-fp                             # generar plantilles
+make report-tots-fp                             # report
+make compila-tots-fp                            # compilar
 ```
 
 ### Via Docker wrapper
@@ -196,9 +229,17 @@ make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
 # FP
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM FAMILIA=INF memories"
 
-# ESO/BAT
+# ESO/BAT (un departament)
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
+
+# ESO/BAT (tots els departaments)
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT genera-tots-esobat"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT compila-tots-esobat"
+
+# FP (INF + SCO)
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM genera-tots-fp"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM compila-tots-fp"
 ```
 
 ### Report de l'estat de les memòries
@@ -351,10 +392,20 @@ Targets disponibles:
     todos-inf          Generar todos los proyectos INF
     todos-sco          Generar todos los proyectos SCO
   Memòries:
-    generar-plantilles-memoria  Generar plantilles MD de memòria
+    generar-plantilles-memoria  Generar plantilles MD de memòria (també: genera-memories)
+    genera-memories             Alias de generar-plantilles-memoria
     compilar-memories           Compilar memòries OK en PDF + report
     report-memories             Report de l'estat de les memòries (sense PDF)
-    memories                    Tot el procés (generar + compilar)
+    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)
+    memories                    Tot el procés (genera + compila)
+    (per defecte FAMILIA=INF, BASE_DIR=memoriaFP)
+    (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES ...)
+    genera-tots-esobat          Generar plantilles de TOTS els departaments ESO/BAT
+    report-tots-esobat          Report de TOTS els departaments ESO/BAT
+    compila-tots-esobat         Compilar memòries de TOTS els departaments ESO/BAT
+    genera-tots-fp              Generar plantilles de TOTES les famílies FP (INF + SCO)
+    report-tots-fp              Report de TOTES les famílies FP
+    compila-tots-fp             Compilar memòries de TOTES les famílies FP
     clean              Limpiar archivos generados
     files              Crear estructura de directorios
     dependences        Instalar dependencias
@@ -367,6 +418,7 @@ Ejemplos:
   make compilar-memories            # Compila memòries en PDF
   make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam
   make CENTRO_EDUCATIVO=IESEPM todos
+  make genera-tots-esobat           # Plantilles de TOTS els departaments ESO/BAT
 ```
 
 ## Dependencias

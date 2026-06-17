@@ -1,0 +1,60 @@
+{
+  "departament": "de Llengua Castellana",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "TALLREFCAST1", "nom": "Taller de Reforç de Llengües", "grups": ["G1"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "TALLALFCAST", "nom": "Taller d'Alfabetització", "grups": ["G1"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C","D","E","F"]},
+        {"codi": "TALLREFCAST3", "nom": "Taller de Reforç de Llengües", "grups": ["G1"]}
+      ]
+    },
+    "3PDC": {
+      "nom": "3r de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "AMBLINSOC3", "nom": "Àmbit Lingüístic i Social", "grups": ["PDC"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C","D"]},
+        {"codi": "TALLREFCAST4", "nom": "Taller de Reforç de Llengües", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "LLENCAST", "nom": "Llengua Castellana i Literatura", "grups": ["A","B","C"]}
+      ]
+    }
+  }
+}

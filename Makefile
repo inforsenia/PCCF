@@ -156,6 +156,52 @@ report:
 FAMILIA ?= INF
 BASE_DIR ?= memoriaFP
 
+DEPARTAMENTS_ESOBAT = ANGLES BIOLOGIA_GEOLOGIA DIBUIX ECONOMIA EDUCACIO_FISICA FILOSOFIA FISICA_QUIMICA FRANCES GEOGRAFIA_HISTORIA INFORMATICA LLATI LLENGUA_CASTELLANA LLENGUA_VALENCIANA MATEMATIQUES MUSICA RELIGIO TECNOLOGIA
+
+# Generar plantilles de memòria per a tots els departaments ESO/BAT
+genera-tots-esobat:
+	@for dep in $(DEPARTAMENTS_ESOBAT); do \
+		echo " ${LIGHTBLUE} [ Generant plantilles: $$dep ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep generar-plantilles-memoria; \
+	done
+
+# Report de memòries per a tots els departaments ESO/BAT
+report-tots-esobat:
+	@for dep in $(DEPARTAMENTS_ESOBAT); do \
+		echo " ${LIGHTYELLOW} [ Report: $$dep ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep report-memories; \
+	done
+
+# Compilar memòries per a tots els departaments ESO/BAT (demana confirmació per a cada un)
+compila-tots-esobat:
+	@for dep in $(DEPARTAMENTS_ESOBAT); do \
+		echo " ${LIGHTBLUE} [ Compilant: $$dep ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep compila-memories; \
+	done
+
+FAMILIES_FP = INF SCO
+
+# Generar plantilles de memòria per a totes les famílies FP
+genera-tots-fp:
+	@for fam in $(FAMILIES_FP); do \
+		echo " ${LIGHTBLUE} [ Generant plantilles FP: $$fam ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam generar-plantilles-memoria; \
+	done
+
+# Report de memòries per a totes les famílies FP
+report-tots-fp:
+	@for fam in $(FAMILIES_FP); do \
+		echo " ${LIGHTYELLOW} [ Report FP: $$fam ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam report-memories; \
+	done
+
+# Compilar memòries per a totes les famílies FP (demana confirmació per a cada una)
+compila-tots-fp:
+	@for fam in $(FAMILIES_FP); do \
+		echo " ${LIGHTBLUE} [ Compilant FP: $$fam ] ${RESET}"; \
+		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam compila-memories; \
+	done
+
 # Generar plantilles de memòria en Markdown
 generar-plantilles-memoria genera-memories:
 	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
@@ -209,7 +255,13 @@ help:
 	@echo "    compilar-memories           Versió antiga: només OK, demana BORRADOR"
 	@echo "    memories                    Tot el procés (genera + compila)"
 	@echo "    (per defecte FAMILIA=INF, BASE_DIR=memoriaFP)"
-	@echo "    (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories)"
+	@echo "    (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES ...)"
+	@echo "    genera-tots-esobat          Generar plantilles de TOTS els departaments ESO/BAT"
+	@echo "    report-tots-esobat          Report de TOTS els departaments ESO/BAT"
+	@echo "    compila-tots-esobat         Compilar memòries de TOTS els departaments ESO/BAT"
+	@echo "    genera-tots-fp              Generar plantilles de TOTES les famílies FP (INF + SCO)"
+	@echo "    report-tots-fp              Report de TOTES les famílies FP"
+	@echo "    compila-tots-fp             Compilar memòries de TOTES les famílies FP"
 	@echo "    clean              Limpiar archivos generados"
 	@echo "    files              Crear estructura de directorios"
 	@echo "    dependences        Instalar dependencias"
@@ -222,3 +274,7 @@ help:
 	@echo "  make CENTRO_EDUCATIVO=IESEPM todos"
 	@echo "  make FAMILIA=INF memories        # Memòries d'Informàtica"
 	@echo "  make FAMILIA=SCO memories        # Memòries de Serveis Socioculturals"
+	@echo "  make genera-tots-esobat          # Plantilles de TOTS els departaments ESO/BAT"
+	@echo "  ./contenedor_lanza.sh \"make BASE_DIR=memoriaESOBAT CENTRO_EDUCATIVO=IESEPM genera-tots-esobat\""
+	@echo "  make genera-tots-fp              # Plantilles de TOTES les famílies FP"
+	@echo "  ./contenedor_lanza.sh \"make CENTRO_EDUCATIVO=IESEPM genera-tots-fp\""

@@ -234,14 +234,31 @@ Sistema per a generar i compilar les memòries finals de curs dels mòduls adscr
 
 ```
 memoriaFP/                 # Plantilles i config per a FP
-  ├── memories_*.json       # Config per departament (ANGLES, FOL, INF, SCO)
-  ├── plantilla_memoria.md  # Template Jinja2 per a memòria individual FP
+  ├── memories_INF.json    # Config FP: SMX, DAM, CEIABD, FPBIIO
+  ├── memories_SCO.json    # Config FP: APD, EI, IS
+  ├── plantilla_memoria.md # Template Jinja2 per a memòria individual FP
   ├── plantilla_annex.md
   └── portada*.md
 
-memoriaESOBAT/             # Plantilles i config per a ESO/BAT
-  ├── memories_*.json       # Config per departament (ANGLES, MATEMATIQUES...)
-  ├── plantilla_memoria.md  # Template Jinja2 (amb opcions ☐)
+memoriaESOBAT/             # Plantilles i config per a ESO/BAT (17 departaments)
+  ├── memories_ANGLES.json
+  ├── memories_BIOLOGIA_GEOLOGIA.json
+  ├── memories_DIBUIX.json
+  ├── memories_ECONOMIA.json
+  ├── memories_EDUCACIO_FISICA.json
+  ├── memories_FILOSOFIA.json
+  ├── memories_FISICA_QUIMICA.json
+  ├── memories_FRANCES.json
+  ├── memories_GEOGRAFIA_HISTORIA.json
+  ├── memories_INFORMATICA.json
+  ├── memories_LLATI.json
+  ├── memories_LLENGUA_CASTELLANA.json
+  ├── memories_LLENGUA_VALENCIANA.json
+  ├── memories_MATEMATIQUES.json
+  ├── memories_MUSICA.json
+  ├── memories_RELIGIO.json
+  ├── memories_TECNOLOGIA.json
+  ├── plantilla_memoria.md # Template Jinja2 (amb opcions ☐)
   ├── plantilla_annex.md
   └── portada*.md
 
@@ -253,7 +270,8 @@ memories_FP/               # Plantilles .md generades per a FP (gitignored)
 
 memories_ESOBAT/           # Plantilles .md generades per a ESO/BAT (gitignored)
   ├── ANGLES/
-  └── MATEMATIQUES/
+  ├── MATEMATIQUES/
+  └── ... (17 departaments)
 
 PDFS/                      # PDF compilats i reports (gitignored)
 ```
@@ -267,11 +285,14 @@ PDFS/                      # PDF compilats i reports (gitignored)
 25_26_CEIABD_MIA_BORRADOR.md
 ```
 
-**ESO/BAT**: `{CURS_ACAD}_{CURS}{ETAPA}[{GRUP}]_{MATERIA}_{ESTAT}.md`
+**ESO/BAT**: `{CURS_ACAD}_{CURS_CODI}[_{GRUP}]_{MATERIA}_{ESTAT}.md`
 ```
-25_26_1ESOA_ANGLES_BORRADOR.md
-25_26_4ESOD_MATA_BORRADOR.md
-25_26_1BATA_ANGLESI_BORRADOR.md
+25_26_1ESOA_ANGLES_BORRADOR.md              # 1ESO, grup A
+25_26_4ESOD_MATA_BORRADOR.md                # 4ESO, grup D, Matemàtiques A
+25_26_3ESO_G1_COMPCOM_BORRADOR.md           # 3ESO, grup G1, Competència Comunicativa
+25_26_1BATA_ANGLESI_BORRADOR.md             # 1BAT, grup A
+25_26_3PDC_PDC_ANGLES3PDC_BORRADOR.md       # 3PDC, grup PDC
+25_26_4ESO_4APLI_TEC4APLI_BORRADOR.md       # 4t ESO Aplicades
 ```
 
 ### Ús
@@ -291,6 +312,11 @@ make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES generar-plantilles-memoria
 make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories
 make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES report-memories
 make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories                     # tot el procés
+
+# Tots els departaments de cop
+make genera-tots-esobat                         # generar plantilles
+make report-tots-esobat                         # report
+make compila-tots-esobat                        # compilar
 ```
 
 Via Docker:
@@ -298,9 +324,23 @@ Via Docker:
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories"
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES compila-memories"
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT FAMILIA=ANGLES report-memories"
+
+# Tots els departaments de cop
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT genera-tots-esobat"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM BASE_DIR=memoriaESOBAT compila-tots-esobat"
 ```
 
 `BASE_DIR=memoriaFP` (per defecte) o `BASE_DIR=memoriaESOBAT`.
+
+**FP** (totes les famílies de cop):
+```sh
+make genera-tots-fp                             # generar plantilles
+make report-tots-fp                             # report
+make compila-tots-fp                            # compilar
+
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM genera-tots-fp"
+./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM compila-tots-fp"
+```
 
 ### Generació del PCCF:
 

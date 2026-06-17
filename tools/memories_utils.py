@@ -95,10 +95,17 @@ def curs_display(curs):
     return f"{curs}r"
 
 
+CURSOS_ESPECIALS = sorted(["PDC", "APLI"], key=len, reverse=True)
+
+
 def parse_filename_esobat(filename):
-    """Parse ESO/BAT filename: {curs_acad}_{curs}{etapa}{grup}_{materia}_{estat}.md
+    """Parse ESO/BAT filename: {curs_acad}_{curs_codi}{grup}_{materia}_{estat}.md
     
-    Example: 25_26_1ESOA_ANGLES_BORRADOR.md → curs=1, etapa=ESO, grup=A, materia=ANGLES
+    Examples:
+      25_26_1ESOA_ANGLES_BORRADOR.md → curs_codi=1ESO, grup=A, materia=ANGLES
+      25_26_3ESO_PDC_ANGLES3PDC_BORRADOR.md → curs_codi=3ESO, grup=PDC, materia=ANGLES3PDC
+      25_26_3PDC_PDC_ANGLES3PDC_BORRADOR.md → curs_codi=3PDC, grup=PDC, materia=ANGLES3PDC
+      25_26_4BATA_ANGLESII_BORRADOR.md → curs_codi=4BAT, grup=A, materia=ANGLESII
     """
     if not filename.endswith(".md"):
         return None
@@ -114,28 +121,48 @@ def parse_filename_esobat(filename):
     materia = parts[-2]
 
     rest = "_".join(parts[:-2])
-    # rest = {curs_academic}_{curs}{etapa}{grup}
+    # rest = {curs_academic}_{curs_codi}{grup}
     if len(rest) < 6 or rest[2] != "_":
         return None
     curs_academic = rest[:5]
     after_academic = rest[6:]
 
+    curs_codi = ""
     curs = ""
     etapa = ""
     grup = ""
 
+    # Try ESO/BAT first (exact match)
     for etapa_candidat in CURSOS_ESOBAT:
         idx = after_academic.find(etapa_candidat)
         if idx == -1:
             continue
+        # Extract curs_codi: everything up to end of etapa_candidat
+        curs_codi = after_academic[:idx + len(etapa_candidat)]
         curs = after_academic[:idx]
-        rest_after_etapa = after_academic[idx + len(etapa_candidat):]
-        if rest_after_etapa.startswith("_"):
-            grup = rest_after_etapa[1:]
+        rest_after = after_academic[idx + len(etapa_candidat):]
+        if rest_after.startswith("_"):
+            grup = rest_after[1:]
         else:
-            grup = rest_after_etapa
+            grup = rest_after
         etapa = etapa_candidat
         break
+
+    # Try PDC/APLI if ESO/BAT not found
+    if not etapa:
+        for especial in CURSOS_ESPECIALS:
+            idx = after_academic.find(especial)
+            if idx == -1:
+                continue
+            curs_codi = after_academic[:idx + len(especial)]
+            curs = after_academic[:idx]
+            rest_after = after_academic[idx + len(especial):]
+            if rest_after.startswith("_"):
+                grup = rest_after[1:]
+            else:
+                grup = rest_after
+            etapa = "ESO"
+            break
 
     if not etapa:
         return None
@@ -143,6 +170,7 @@ def parse_filename_esobat(filename):
     return {
         "curs_academic": curs_academic,
         "curs": curs,
+        "curs_codi": curs_codi,
         "etapa": etapa,
         "grup": grup if grup else "",
         "materia": materia,
@@ -171,8 +199,10 @@ def get_expected(config):
 def get_expected_esobat(config):
     expected = []
     for curs_codi, curs_data in config["cursos"].items():
+        grups_curs = curs_data.get("grups", [""])
         for materia in curs_data["materies"]:
-            for grup in curs_data.get("grups", [""]):
+            grups = materia.get("grups", grups_curs)
+            for grup in grups:
                 expected.append({
                     "curs_codi": curs_codi,
                     "curs_nom": curs_data["nom"],
@@ -218,13 +248,12 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
 
     def parsed_key(p):
         if is_esobat:
-            # Combine curs + etapa to match curs_codi format (e.g. "1"+"ESO" → "1ESO")
-            return (p.get("curs", "") + p.get("etapa", ""), p.get("grup", ""), p.get("materia"))
+            return (p.get("curs_codi", p.get("curs", "") + p.get("etapa", "")), p.get("grup", ""), p.get("materia"))
         return (p["cicle"], p["curs"], p.get("grup", ""), p["modul"])
 
     def exp_label(e):
         if is_esobat:
-            return f"{e.get('etapa','')} {e.get('curs_codi','')} {e.get('grup','')} - {e['materia_codi']} ({e['materia_nom']})".strip()
+            return f"{e.get('curs_codi','')} {e.get('grup','')} - {e['materia_codi']} ({e['materia_nom']})".strip()
         label = f"{e['cicle']} {curs_display(e.get('curs',''))}"
         if e.get("grup"):
             label += f" {e['grup']}"
@@ -233,7 +262,7 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
 
     def parsed_label(p):
         if is_esobat:
-            return f"{p.get('etapa','')} {p.get('curs','')} {p.get('grup','')} - {p.get('materia','')}".strip()
+            return f"{p.get('curs_codi','')} {p.get('grup','')} - {p.get('materia','')}".strip()
         label = f"{p['cicle']} {curs_display(p.get('curs',''))}"
         if p.get("grup"):
             label += f" {p['grup']}"
@@ -263,7 +292,7 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
         if key in duplicated_keys and p["estat"] == "BORRADOR":
             duplicates.append(p)
 
-    report_lines.append(f"\n--- Llegits {len(parsed)} fitxers a {output_parent}/{familia}/ ---")
+    report_lines.append(f"\n--- Llegits {len(parsed)} fitxers a {output_parent}_{familia} ---")
     report_lines.append(f"  Completats (OK): {len(ok_files)}")
     report_lines.append(f"  Pendents (BORRADOR): {len(borrador_files)}")
     if duplicates:

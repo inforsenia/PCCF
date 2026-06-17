@@ -122,10 +122,10 @@ def main():
         for curs_codi, curs_data in config["cursos"].items():
             etapa = curs_data["etapa"]
             curs_nom = curs_data["nom"]
-            grups = curs_data.get("grups", [""])
             for materia in curs_data["materies"]:
                 materia_codi = materia["codi"]
                 materia_nom = materia["nom"]
+                grups = materia.get("grups", curs_data.get("grups", [""]))
                 for grup in grups:
                     suffix = build_grup_suffix(grup)
                     prefix = f"{curs_codi}{suffix}"

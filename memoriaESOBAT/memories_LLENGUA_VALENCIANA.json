@@ -1,0 +1,60 @@
+{
+  "departament": "de Llengua Valenciana",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TALLREFVAL1", "nom": "Taller de Reforç de Llengües", "grups": ["G1"]},
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TALLREFVAL2", "nom": "Taller de Reforç de Llengües", "grups": ["G1"]},
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TALLALFVAL", "nom": "Taller d'Alfabetització", "grups": ["G1"]},
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C","D"]}
+      ]
+    },
+    "4PDC": {
+      "nom": "4t de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "AMBLINSOC4", "nom": "Àmbit Lingüístic i Social", "grups": ["PDC"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "LITUNIVERSAL", "nom": "Literatura Universal", "grups": ["G1"]},
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C"]}
+      ]
+    }
+  }
+}

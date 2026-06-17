@@ -1,0 +1,49 @@
+{
+  "departament": "de Religió",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "RELIGIO", "nom": "Religió", "grups": ["G1"]}
+      ]
+    }
+  }
+}

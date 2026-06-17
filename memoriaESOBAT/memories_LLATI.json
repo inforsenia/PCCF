@@ -1,0 +1,38 @@
+{
+  "departament": "de Llatí",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "CULCLAS", "nom": "Cultura Clàssica", "grups": ["G1"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "LLATI4", "nom": "Llatí", "grups": ["G1","G2"]},
+        {"codi": "PICULCLAS", "nom": "PI-Cultura Clàssica", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "GREC", "nom": "Grec", "grups": ["G1"]},
+        {"codi": "LLATI1", "nom": "Llatí", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "GREC", "nom": "Grec", "grups": ["G1"]},
+        {"codi": "LLATI2", "nom": "Llatí", "grups": ["G1"]}
+      ]
+    }
+  }
+}

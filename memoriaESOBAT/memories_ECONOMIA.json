@@ -1,0 +1,50 @@
+{
+  "departament": "d'Economia",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FINCONSRESP", "nom": "Finances i Consum Responsable", "grups": ["G1"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "EMPRENSOST", "nom": "Emprenedoria Social i Sostenible", "grups": ["G1"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TALLECO", "nom": "Taller d'Economia", "grups": ["G1"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "ECOEMPRE", "nom": "Economia i Emprenedoria", "grups": ["G1","G2"]},
+        {"codi": "FORIORPER", "nom": "Formació i Orientació Personal", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "ECONOMIA", "nom": "Economia", "grups": ["G1","G2"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "EMPDISNEG", "nom": "Empresa i Disseny de Models de Negoci", "grups": ["G1"]}
+      ]
+    }
+  }
+}

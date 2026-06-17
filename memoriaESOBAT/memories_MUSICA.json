@@ -1,0 +1,35 @@
+{
+  "departament": "de Música",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MUSICA", "nom": "Música", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MUSICA", "nom": "Música", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MUSICA", "nom": "Música", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3PDC": {
+      "nom": "3r de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "MUSICA3PDC", "nom": "Música", "grups": ["PDC"]}
+      ]
+    }
+  }
+}

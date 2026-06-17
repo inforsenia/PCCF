@@ -1,0 +1,36 @@
+{
+  "departament": "de Filosofia",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "VALORS", "nom": "Educació en Valors Cívics i Ètics", "grups": ["A","B","C","D"]},
+        {"codi": "TALLALF4", "nom": "Taller d'Alfabetització", "grups": ["G1"]}
+      ]
+    },
+    "4PDC": {
+      "nom": "4t de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "VALORS", "nom": "Educació en Valors Cívics i Ètics", "grups": ["PDC"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "FILOSOFIA", "nom": "Filosofia", "grups": ["A","B","C"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "HIFILO", "nom": "Història de la Filosofia", "grups": ["A","B","C"]}
+      ]
+    }
+  }
+}

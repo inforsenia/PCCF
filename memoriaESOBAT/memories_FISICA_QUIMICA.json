@@ -1,0 +1,44 @@
+{
+  "departament": "de Física i Química",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FISQUI", "nom": "Física i Química", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FISQUI", "nom": "Física i Química", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "4ESO": {
+      "nom": "4t d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "FISQUI", "nom": "Física i Química", "grups": ["G1","G2"]},
+        {"codi": "PIFUNSOS", "nom": "PI-Fundició i Sostenibilitat", "grups": ["G1"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "FISQUI", "nom": "Física i Química", "grups": ["G1","G2"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "FISICA", "nom": "Física", "grups": ["G1"]},
+        {"codi": "QUIMICA", "nom": "Química", "grups": ["G1"]}
+      ]
+    }
+  }
+}

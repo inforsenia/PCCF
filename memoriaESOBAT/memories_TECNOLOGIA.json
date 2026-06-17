@@ -1,0 +1,65 @@
+{
+  "departament": "de Tecnologia",
+  "centre": "IES Eduardo Primo Marqués",
+  "curs": "25-26",
+  "cursos": {
+    "1ESO": {
+      "nom": "1r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TECDIG", "nom": "Tecnologia i Digitalització", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "2ESO": {
+      "nom": "2n d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "EPVTEC", "nom": "Educació Plàstica, Visual i Audiovisual", "grups": ["E","F"]},
+        {"codi": "PITEC", "nom": "PI-Tecnologia", "grups": ["G1"]}
+      ]
+    },
+    "3ESO": {
+      "nom": "3r d'ESO",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TECDIG", "nom": "Tecnologia i Digitalització", "grups": ["A","B","C","D","E","F"]}
+      ]
+    },
+    "3PDC": {
+      "nom": "3r de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "AMBPRA3", "nom": "Àmbit Pràctic", "grups": ["PDC"]}
+      ]
+    },
+    "4PDC": {
+      "nom": "4t de PDC",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "AMBCIENT4", "nom": "Àmbit Científic", "grups": ["PDC"]},
+        {"codi": "AMBPRA4", "nom": "Àmbit Pràctic", "grups": ["PDC"]}
+      ]
+    },
+    "4APLI": {
+      "nom": "4t d'ESO Aplicades",
+      "etapa": "ESO",
+      "materies": [
+        {"codi": "TEC4APLI", "nom": "Tecnologia", "grups": ["4APLI"]}
+      ]
+    },
+    "1BAT": {
+      "nom": "1r de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "TECENGI", "nom": "Tecnologia i Enginyeria I", "grups": ["G1"]}
+      ]
+    },
+    "2BAT": {
+      "nom": "2n de Batxillerat",
+      "etapa": "BAT",
+      "materies": [
+        {"codi": "TECINDII", "nom": "Tecnologia Industrial II", "grups": ["G1"]}
+      ]
+    }
+  }
+}

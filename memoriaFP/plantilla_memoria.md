@@ -4,7 +4,7 @@
 
 > **Instruccions per al docent:**
 >
-> 1. Substituïu els camps marcats amb `[###]` o `[...]` per la informació real del vostre grup.
+> 1. Substituïu els camps marcats amb `[###]` o `[...]` per la informació real del vostre grup. **Heu de llevar els claudàtors sencers** (`[###]` → text real), no només les # o els punts. Si deixeu `[]` o `[.]` buits, el sistema els detectarà com a pendents.
 > 2. Ompliu totes les seccions. Si alguna no escau, indiqueu "No escau" o "CAP".
 > 3. Quan la memòria estiga completada, canvieu `_BORRADOR` per `_OK` al nom del fitxer.
 >    Exemple: `25_26_1SMXA_AOF_BORRADOR.md` → `25_26_1SMXA_AOF_OK.md`
