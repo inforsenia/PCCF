@@ -70,7 +70,8 @@ def main():
     report_text = "\n".join(report_lines)
     print(report_text)
 
-    report_path = os.path.join(pdf_dir, f"report_memories_{familia}.txt")
+    report_prefix = base_dir.replace("memoria", "", 1)
+    report_path = os.path.join(pdf_dir, f"report_memories_{report_prefix}_{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report_text)
     print(f"\nReport guardat a: {report_path}")

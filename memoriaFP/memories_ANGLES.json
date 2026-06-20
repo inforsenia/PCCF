@@ -16,7 +16,7 @@
           "moduls": [
             {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
           ],
-          "grups": ["A", "B"]
+          "grups": ["B"]
         }
       }
     },
@@ -84,7 +84,7 @@
           "moduls": [
             {"codi": "MOPANGPROF", "nom": "Anglés oral en entorns professionals"}
           ],
-          "grups": ["", "SEMI"]
+          "grups": ["SEMI"]
         }
       }
     }

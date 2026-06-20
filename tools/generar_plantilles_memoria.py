@@ -35,7 +35,10 @@ def build_grup_suffix(grup):
 def curs_display(curs):
     if not curs:
         return ""
-    return f"{curs}r"
+    ordinals = {"1": "1r", "2": "2n", "3": "3r", "4": "4t"}
+    if curs in ordinals:
+        return ordinals[curs]
+    return f"{curs}è"
 
 def get_output_parent(base_dir):
     # "memoriaFP" → "memories_FP", "memoriaESOBAT" → "memories_ESOBAT"
@@ -155,19 +158,20 @@ def main():
                     print(f"  Creat: {filename}")
                     total += 1
 
-    # Generar annex d'activitats extraescolars
-    annex_template = env.get_template("plantilla_annex.md")
-    annex_filename = f"{curs_academic_file}_AA_ACTIVITATS_EXTRAESCOLARS_BORRADOR.md"
-    annex_filepath = os.path.join(output_dir, annex_filename)
-    annex_rendered = annex_template.render(
-        curs_academic=curs_academic,
-        departament=departament,
-        centre=centre,
-    )
-    with open(annex_filepath, "w", encoding="utf-8") as f:
-        f.write(annex_rendered)
-    print(f"  Creat: {annex_filename}")
-    total += 1
+    # Generar annex d'activitats extraescolars (només FP)
+    if is_fp:
+        annex_template = env.get_template("plantilla_annex.md")
+        annex_filename = f"{curs_academic_file}_AA_ACTIVITATS_EXTRAESCOLARS_BORRADOR.md"
+        annex_filepath = os.path.join(output_dir, annex_filename)
+        annex_rendered = annex_template.render(
+            curs_academic=curs_academic,
+            departament=departament,
+            centre=centre,
+        )
+        with open(annex_filepath, "w", encoding="utf-8") as f:
+            f.write(annex_rendered)
+        print(f"  Creat: {annex_filename}")
+        total += 1
 
     print(f"\nTotal: {total} plantilles generades a {output_parent}/{familia}/")
 

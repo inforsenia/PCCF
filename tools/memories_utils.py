@@ -92,7 +92,10 @@ def get_grup_label(grup):
 def curs_display(curs):
     if not curs:
         return ""
-    return f"{curs}r"
+    ordinals = {"1": "1r", "2": "2n", "3": "3r", "4": "4t"}
+    if curs in ordinals:
+        return ordinals[curs]
+    return f"{curs}è"
 
 
 CURSOS_ESPECIALS = sorted(["PDC", "APLI"], key=len, reverse=True)
@@ -220,7 +223,74 @@ def check_placeholders(filepath):
     # Ignore blockquote lines (> ...), they are stripped at compile time
     content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
     remaining = re.findall(r"\[###\]|\[\.\.\.\]|\[NOMDELPROFESSOR", content)
+
+    # Check for zero stats (aprovats i suspensos ambdós a 0)
+    aprov_zero = re.search(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*0\s*\|$', content, re.MULTILINE)
+    susp_zero = re.search(r'^\|\s*Suspensos(?:\s*/\s*[^|]*)?\s*\|\s*0\s*\|$', content, re.MULTILINE)
+    if aprov_zero and susp_zero:
+        remaining.append("[ZERO_STATS]")
+
     return remaining
+
+
+STATS_PATTERNS_ESOBAT = {
+    "inici": re.compile(r'^\|\s*Nº d\'alumnes a inici de curs\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "final": re.compile(r'^\|\s*Nº d\'alumnes a final de curs\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "avaluats": re.compile(r'^\|\s*Alumnat avaluat\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "aprovats": re.compile(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "suspensos": re.compile(r'^\|\s*Suspensos(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "absents": re.compile(r'^\|\s*No avaluable\s*/\s*absentisme\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+}
+
+STATS_PATTERNS_FP = {
+    "inici": re.compile(r'^\|\s*Nº d\'alumnes a inici de curs\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "final": re.compile(r'^\|\s*Nº d\'alumnes a final de curs\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "aprovats": re.compile(r'^\|\s*Aprovats\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "suspensos": re.compile(r'^\|\s*Suspensos\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+}
+
+
+def check_stats_consistency(filepath, is_esobat):
+    issues = []
+    with open(filepath, encoding="utf-8") as f:
+        content = f.read()
+    content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
+
+    patterns = STATS_PATTERNS_ESOBAT if is_esobat else STATS_PATTERNS_FP
+    stats = {}
+    for key, pat in patterns.items():
+        m = pat.search(content)
+        if m and m.group(1).isdigit():
+            stats[key] = int(m.group(1))
+
+    if not stats:
+        return issues
+
+    if is_esobat:
+        if "avaluats" in stats and "aprovats" in stats and "suspensos" in stats:
+            if stats["aprovats"] + stats["suspensos"] > stats["avaluats"]:
+                issues.append("aprovats + suspensos > alumnat avaluat")
+        if "final" in stats and "aprovats" in stats and "suspensos" in stats:
+            total_class = stats["aprovats"] + stats["suspensos"]
+            if "absents" in stats:
+                total_class += stats["absents"]
+            if total_class > stats["final"]:
+                issues.append("total alumnes (aprovats + suspensos + absents) > final de curs")
+        if "avaluats" in stats and "final" in stats:
+            if stats["avaluats"] > stats["final"]:
+                issues.append("alumnat avaluat > alumnes a final de curs")
+        if "inici" in stats and "final" in stats:
+            if stats["final"] > stats["inici"]:
+                issues.append("final de curs > inici de curs (possibles incorporacions)")
+    else:
+        if "final" in stats and "aprovats" in stats and "suspensos" in stats:
+            if stats["aprovats"] + stats["suspensos"] > stats["final"]:
+                issues.append("aprovats + suspensos > alumnes a final de curs")
+        if "inici" in stats and "final" in stats:
+            if stats["final"] > stats["inici"]:
+                issues.append("final de curs > inici de curs (possibles incorporacions)")
+
+    return issues
 
 
 def get_annex_status(familia, output_parent="memories_FP"):
@@ -334,25 +404,39 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
     for p in ok_files:
         filepath = os.path.join(PROJECT_DIR, output_parent, familia, p["filename"])
         remaining = check_placeholders(filepath)
-        if remaining:
-            incomplete_ok.append((p, remaining))
+        stats_issues = check_stats_consistency(filepath, is_esobat)
+        if remaining or stats_issues:
+            incomplete_ok.append((p, remaining, stats_issues))
 
     if incomplete_ok:
-        report_lines.append("MÒDULS OK AMB CAMPS PER OMPLIR (contenen [###] o [...]):")
+        report_lines.append("MÒDULS OK AMB CAMPS PER OMPLIR o INCONGRUÈNCIES:")
         report_lines.append("-" * 40)
-        for p, rem in incomplete_ok:
-            report_lines.append(f"  [INCOMPLET] {parsed_label(p)} ({len(rem)} marcadors restants)")
+        for p, rem, stats_issues in incomplete_ok:
+            parts = []
+            if "[ZERO_STATS]" in rem:
+                parts.append("estadístiques amb 0 aprovats i 0 suspensos")
+            else:
+                ph_count = len([r for r in rem if r != "[ZERO_STATS]"])
+                if ph_count:
+                    parts.append(f"{ph_count} marcadors pendents")
+            parts.extend(stats_issues)
+            msg = " — ".join(parts) if parts else f"{len(rem)} marcadors restants"
+            report_lines.append(f"  [INCOMPLET] {parsed_label(p)} — {msg}")
         report_lines.append("")
 
     # Annex d'activitats extraescolars
     annex_status, annex_files = get_annex_status(familia, output_parent)
+    report_lines.append("ANNEX ACTIVITATS EXTRAESCOLARS:")
+    report_lines.append("-" * 40)
     if annex_status:
-        report_lines.append("ANNEX ACTIVITATS EXTRAESCOLARS:")
-        report_lines.append("-" * 40)
         for f in annex_files:
             label = "OK" if f.endswith("_OK.md") else "BORRADOR"
             report_lines.append(f"  [{label}] {f}")
-        report_lines.append("")
+    else:
+        report_lines.append("  No present / No s'ha generat")
+    if is_esobat:
+        report_lines.append("  (ESO/BAT: no s'inclou en la compilació del PDF)")
+    report_lines.append("")
 
     report_lines.append("=" * 60)
     report_lines.append("FI DEL REPORT")

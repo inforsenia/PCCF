@@ -33,12 +33,22 @@ sys.path.insert(0, SCRIPT_DIR)
 from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent
 
 
-def _generate_pie_chart(aprov, susp, filepath):
+def _generate_pie_chart(aprov, susp, filepath, absents=None):
     fig, ax = plt.subplots(figsize=(2, 2))
-    sizes = [aprov, susp]
-    colors = ['#2ecc71', '#e74c3c']
+    if absents is not None and aprov == 0 and susp == 0:
+        sizes = [absents]
+        colors = ['#f39c12']
+        labels = ['Absents']
+    elif absents is not None:
+        sizes = [aprov, susp, absents]
+        colors = ['#2ecc71', '#e74c3c', '#f39c12']
+        labels = ['Aprovats', 'Suspensos', 'Absents']
+    else:
+        sizes = [aprov, susp]
+        colors = ['#2ecc71', '#e74c3c']
+        labels = ['Aprovats', 'Suspensos']
     wedges, texts, autotexts = ax.pie(
-        sizes, labels=['Aprovats', 'Suspensos'], colors=colors,
+        sizes, labels=labels, colors=colors,
         startangle=90, autopct='%1.0f%%',
         textprops={'fontsize': 7}, pctdistance=0.5, labeldistance=0.7
     )
@@ -50,6 +60,7 @@ def _generate_pie_chart(aprov, susp, filepath):
 def _add_stats_row(content, pie_key):
     susp_match = re.search(r'^\|\s*Suspensos(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
     aprov_match = re.search(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    absents_match = re.search(r'^\|\s*No avaluable\s*/\s*absentisme\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
 
     if not susp_match or not aprov_match:
         return content
@@ -66,30 +77,38 @@ def _add_stats_row(content, pie_key):
 
     susp_val = susp_match.group(1)
     aprov_val = aprov_match.group(1)
+    absents_val = absents_match.group(1) if absents_match else None
 
     if susp_val.isdigit() and aprov_val.isdigit():
         susp_int = int(susp_val)
         aprov_int = int(aprov_val)
+        absents_int = int(absents_val) if absents_val and absents_val.isdigit() else None
+
         total = susp_int + aprov_int
         if total > 0:
             pct = aprov_int / total * 100
             row = f"| Percentatge d'aprovats | {pct:.0f}% |"
+        else:
+            row = f"| Percentatge d'aprovats | N/D (0 avaluats) |"
 
-            if HAS_MATPLOTLIB and pie_key:
-                temp_dir = os.path.join(PROJECT_DIR, "temp")
-                os.makedirs(temp_dir, exist_ok=True)
-                pie_path = os.path.join(temp_dir, f"pie_{pie_key}.png")
-                _generate_pie_chart(aprov_int, susp_int, pie_path)
+        if HAS_MATPLOTLIB and pie_key:
+            temp_dir = os.path.join(PROJECT_DIR, "temp")
+            os.makedirs(temp_dir, exist_ok=True)
+            pie_path = os.path.join(temp_dir, f"pie_{pie_key}.png")
+            if total > 0 or (absents_int is not None and absents_int > 0):
+                _generate_pie_chart(aprov_int, susp_int, pie_path, absents=absents_int)
                 extra = row + "\n\n![Distribució aprovats/suspensos]({})".format(pie_path)
             else:
                 extra = row
+        else:
+            extra = row
 
-            # Remove leading newlines from tail to avoid double blank line
-            tail = content[insert_pos:].lstrip('\n')
-            # Ensure blank line before next section (after pie chart)
-            sep = "\n\n" if tail else ""
-            content = content[:insert_pos] + "\n" + extra + sep + tail
-            return content
+        # Remove leading newlines from tail to avoid double blank line
+        tail = content[insert_pos:].lstrip('\n')
+        # Ensure blank line before next section (after pie chart)
+        sep = "\n\n" if tail else ""
+        content = content[:insert_pos] + "\n" + extra + sep + tail
+        return content
 
     extra = "| Percentatge d'aprovats | [###] |"
     tail = content[insert_pos:].lstrip('\n')
@@ -176,7 +195,8 @@ def main():
     print(report_text)
 
     # Save report
-    report_path = os.path.join(pdf_dir, f"report_memories_{familia}.txt")
+    report_prefix = base_dir.replace("memoria", "", 1)
+    report_path = os.path.join(pdf_dir, f"report_memories_{report_prefix}_{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report_text)
     print(f"\nReport guardat a: {report_path}")
@@ -268,6 +288,7 @@ def main():
         compiled_md_lines.append(portada_rendered)
         compiled_md_lines.append("")
 
+        first_group = True
         for (etapa, curs), mems in sorted(compiled_by_group.items(), key=lambda x: (x[0][0], x[0][1])):
             # Use curs_codi from first parsed file to look up config
             first_curs_codi = mems[0].get("curs_codi", curs + etapa)
@@ -283,8 +304,21 @@ def main():
                 group_mems = sorted(sub_groups[grup], key=lambda x: x.get("materia", ""))
                 heading = f"{group_heading} - Grup {grup}" if grup else group_heading
 
-                compiled_md_lines.append(f"# {heading}")
+                if not first_group:
+                    compiled_md_lines.append("\\newpage")
+                    compiled_md_lines.append("")
+                compiled_md_lines.append("\\refstepcounter{section}")
+                compiled_md_lines.append("\\addcontentsline{toc}{section}{" + heading + "}")
                 compiled_md_lines.append("")
+                compiled_md_lines.append("\\vspace*{\\fill}")
+                compiled_md_lines.append("")
+                compiled_md_lines.append("\\begin{center}")
+                compiled_md_lines.append("{\\Large\\bfseries\\color{heading-color} " + heading + "}")
+                compiled_md_lines.append("\\end{center}")
+                compiled_md_lines.append("")
+                compiled_md_lines.append("\\vspace*{\\fill}")
+                compiled_md_lines.append("")
+                first_group = False
 
                 for p in group_mems:
                     filepath = os.path.join(memories_dir, p["filename"])
@@ -343,6 +377,7 @@ def main():
 
         compiled_by_cicle_sorted = sorted(compiled_by_cicle.items(), key=lambda x: x[0])
 
+        first_group = True
         for cicle_codi, mems in compiled_by_cicle_sorted:
             # Group mems by grup within the cycle
             groups = {}
@@ -359,8 +394,21 @@ def main():
                 else:
                     group_heading = cicle_nom
 
-                compiled_md_lines.append(f"# {group_heading}")
+                if not first_group:
+                    compiled_md_lines.append("\\newpage")
+                    compiled_md_lines.append("")
+                compiled_md_lines.append("\\refstepcounter{section}")
+                compiled_md_lines.append("\\addcontentsline{toc}{section}{" + group_heading + "}")
                 compiled_md_lines.append("")
+                compiled_md_lines.append("\\vspace*{\\fill}")
+                compiled_md_lines.append("")
+                compiled_md_lines.append("\\begin{center}")
+                compiled_md_lines.append("{\\Large\\bfseries\\color{heading-color} " + group_heading + "}")
+                compiled_md_lines.append("\\end{center}")
+                compiled_md_lines.append("")
+                compiled_md_lines.append("\\vspace*{\\fill}")
+                compiled_md_lines.append("")
+                first_group = False
 
                 for p in group_mems:
                     filepath = os.path.join(memories_dir, p["filename"])
@@ -403,40 +451,41 @@ def main():
                     compiled_md_lines.append(content)
                     compiled_md_lines.append("")
 
-    # Append annex (Activitats Extra-Escolars) at the end
-    annex_files = sorted(f for f in os.listdir(memories_dir) if is_annex_file(f))
-    for annex_filename in annex_files:
-        annex_path = os.path.join(memories_dir, annex_filename)
-        with open(annex_path, encoding="utf-8") as f:
-            content = f.read()
+    # Append annex (Activitats Extra-Escolars) at the end (only for FP)
+    if not is_esobat:
+        annex_files = sorted(f for f in os.listdir(memories_dir) if is_annex_file(f))
+        for annex_filename in annex_files:
+            annex_path = os.path.join(memories_dir, annex_filename)
+            with open(annex_path, encoding="utf-8") as f:
+                content = f.read()
 
-        # Strip blockquotes
-        content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
+            # Strip blockquotes
+            content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
 
-        lines = content.split('\n')
-        heading_idx = None
-        for i, line in enumerate(lines):
-            if line.startswith('## ') or line.startswith('# '):
-                heading_idx = i
-                break
+            lines = content.split('\n')
+            heading_idx = None
+            for i, line in enumerate(lines):
+                if line.startswith('## ') or line.startswith('# '):
+                    heading_idx = i
+                    break
 
-        estat = "BORRADOR" if "_BORRADOR" in annex_filename else "OK"
-        estat_marker = " ✏️" if estat == "BORRADOR" else ""
+            estat = "BORRADOR" if "_BORRADOR" in annex_filename else "OK"
+            estat_marker = " ✏️" if estat == "BORRADOR" else ""
 
-        if heading_idx is not None:
-            heading_text = lines[heading_idx].lstrip('# ')
-            lines.pop(heading_idx)
-            compiled_md_lines.append("\\newpage")
+            if heading_idx is not None:
+                heading_text = lines[heading_idx].lstrip('# ')
+                lines.pop(heading_idx)
+                compiled_md_lines.append("\\newpage")
+                compiled_md_lines.append("")
+                compiled_md_lines.append(f"# {heading_text}{estat_marker}")
+                compiled_md_lines.append("")
+            else:
+                compiled_md_lines.append("\\newpage")
+
+            content = '\n'.join(lines).strip()
+            content = re.sub(r'^\\newpage\s*', '', content)
+            compiled_md_lines.append(content)
             compiled_md_lines.append("")
-            compiled_md_lines.append(f"# {heading_text}{estat_marker}")
-            compiled_md_lines.append("")
-        else:
-            compiled_md_lines.append("\\newpage")
-
-        content = '\n'.join(lines).strip()
-        content = re.sub(r'^\\newpage\s*', '', content)
-        compiled_md_lines.append(content)
-        compiled_md_lines.append("")
 
     compiled_md = "\n".join(compiled_md_lines)
 
