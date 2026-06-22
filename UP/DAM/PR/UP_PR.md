@@ -10,7 +10,7 @@
 | **UP04** | **Clases en acción** | 46 h | 20/11/25 – 21/01/26 | **RA04:** POO avanzada. Herencia, interfaces, polimorfismo <br> **RA06 (parcial):** Arrays y tipos avanzados |
 | **UP05** | **Datos que persisten** | 48 h | 22/01/26 – 04/03/26 | **RA05:** E/S consola, ficheros e interfaces gráficas <br> **RA03 (resto):** Excepciones |
 | **UP06** | **Arquitectura de clases** | 44 h | 05/03/26 – 15/04/26 | **RA07:** Herencia avanzada, clases abstractas e interfaces <br> **RA06 (resto):** Colecciones, genéricos y expresiones regulares |
-| **UP07** | **Datos en la base** | 56 h | 16/04/26 – 03/05/26 | **RA08:** BBDD orientadas a objetos <br> **RA09:** Acceso a BBDD relacionales con JDBC |
+| **UP07** | **Datos en la base** | 56 h | 16/04/26 – 06/05/26 | **RA08:** BBDD orientadas a objetos <br> **RA09:** Acceso a BBDD relacionales con JDBC |
 
 *   La suma total de estas unidades es de **266 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo fuera del periodo dual.
 
@@ -24,7 +24,7 @@
 | **Código** | UP01 |
 | **Módulo** | Programación (0485) |
 | **Duración** | **18 Horas** |
-| **Temporalización** | Del **08/09/2025** al **30/09/2025** |
+| **Temporalización** | Del **08/09/2025** al **22/09/2025** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -90,7 +90,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 | **Código** | UP02 |
 | **Módulo** | Programación (0485) |
 | **Duración** | **26 Horas** (Parte de las 26 h totales del RA03) |
-| **Temporalización** | Del **01/10/2025** al **05/11/2025** |
+| **Temporalización** | Del **23/09/2025** al **20/10/2025** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -433,7 +433,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 | **Código** | UP07 |
 | **Módulo** | Programación (0485) |
 | **Duración** | **56 Horas** (24 h del RA08 + 32 h del RA09) |
-| **Temporalización** | Del **16/04/2026** al **03/05/2026** |
+| **Temporalización** | Del **16/04/2026** al **06/05/2026** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
