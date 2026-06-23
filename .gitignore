@@ -1,6 +1,7 @@
 PDFS/
 temp/
 temp_*/
+plantilles_*/
 boe/temp-txt.txt
 tools/__pycache__/
 luatex.*/

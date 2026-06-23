@@ -1,8 +1,9 @@
 #!/usr/bin/make -f
 
-# Version 0.4 - Refactorizada con reglas patrón
-# Probando si esto funciona.
-# A ver ahora
+SHELL := /bin/bash
+
+# Version 0.5 - Pipeline en dues fases: generar plantilles + compilar
+#               Plantilles persistents a plantilles_{FAMILIA}_{CICLO}/
 
 # Colors
 BLUE= \e[1;34m
@@ -14,9 +15,12 @@ RESET= \e[0m
 # Variables configurables
 CENTRO_EDUCATIVO ?= SENIA
 
-# Templates 
-TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.latex"
-PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="../rsrc/sorts-mill-goudy/OFLGoudyStM.otf" -V toc-title="Índex" --pdf-engine=xelatex"
+# Project root (absolute)
+PROJECT_ROOT:=$(shell readlink -f .)
+
+# Templates (absolute paths for pandoc, since we cd to plantilles dir)
+TEMPLATE_TEX_PD="$(PROJECT_ROOT)/rsrc/templates/eisvogel.latex"
+PANDOC_OPTIONS="-V fontsize=12pt -V mainfont=\"$(PROJECT_ROOT)/rsrc/sorts-mill-goudy/OFLGoudyStM.otf\" -V toc-title=\"Índex\" --pdf-engine=xelatex"
 
 # PDFS
 PDF_PATH:=$(shell readlink -f PDFS)
@@ -26,11 +30,14 @@ CICLOS_INF = smx dam ceiabd fpbiio
 CICLOS_SCO = apd ei is
 CICLOS_ALL = $(CICLOS_INF) $(CICLOS_SCO)
 
+# Helper per determinar familia a partir del ciclo
+check_ciclo = $(if $(filter $(1),$(CICLOS_INF)),INF,$(if $(filter $(1),$(CICLOS_SCO)),SCO,))
+
 # RULES
 
 todo:
 	@echo " [ ${BLUE} * Cosas por hacer ${RESET}]"
-	@rgrep "TODO" . | grep -v ".git" | grep -v "./temp/"
+	@rgrep "TODO" . | grep -v ".git" | grep -v "./temp/" | grep -v "./plantilles_"
 
 dependences:
 	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
@@ -42,112 +49,124 @@ clean:
 	@echo " [${BLUE} * Step : Clean ${RESET}] "
 	@echo "${LIGHTBLUE} -- PDFS ${RESET}"
 	rm -f PDFS/*.pdf PDFS/*.odt
+	@echo "${LIGHTBLUE} -- Plantilles ${RESET}"
+	rm -rf plantilles_INF_*/ plantilles_SCO_*/
 	rm -rf temp/ luatex.*/
 
-## ----------------------------------------------------------------
-##  JSON validation
-## ----------------------------------------------------------------
 .PHONY: validate-json
 validate-json:
 	@python3 tools/validate_json.py
-
-
 
 files:
 	@echo " [${BLUE} * Creando Espacio ${RESET}] "
 	@echo "${LIGHTBLUE} * Carpeta [ PDFS ]${RESET}"
 	mkdir -p PDFS
-	@echo "${LIGHTBLUE} * Carpeta [ temp/ ]${RESET}"
-	mkdir -p temp
-	@echo "${LIGHTBLUE} * Limpiando [ temp/ ]${RESET}"
-	rm -rf temp/*
 
 proyecto-base: files
 	@echo " [${BLUE} * Poblando el Proyecto Base ${RESET}"
-	# Se copiará el contenido base según la familia del ciclo específico
 
-# Regla patrón para todos los ciclos
-proyecto-%: files proyecto-base
-	@$(eval CICLO_RAW=$(subst proyecto-,,$@))
-	@$(eval CICLO=$(shell echo $(CICLO_RAW) | tr '[:upper:]' '[:lower:]'))
-	@$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
-	@$(eval FAMILIA=$(if $(filter $(CICLO),$(CICLOS_INF)),INF,$(if $(filter $(CICLO),$(CICLOS_SCO)),SCO,)))
-	@if [ -z "$(FAMILIA)" ]; then \
-		echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; \
-		echo " ${LIGHTYELLOW} Ciclos válidos INF: $(CICLOS_INF) ${RESET}"; \
-		echo " ${LIGHTYELLOW} Ciclos válidos SCO: $(CICLOS_SCO) ${RESET}"; \
-		exit 1; \
-	fi
-	
-	# Run JSON validation before any other steps
-	@$(MAKE) validate-json
+# ============================================================
+#  PCCF - PHASE 1: generate templates
+# ============================================================
+# Target-specific variables for generate
+generar-plantilles-pccf-%: validate-json
+	$(eval CICLO_RAW := $*)
+	$(eval CICLO := $(shell echo $* | tr '[:upper:]' '[:lower:]'))
+	$(eval CICLO_UPPER := $(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
+	$(eval FAMILIA := $(call check_ciclo,$(CICLO)))
+	$(eval PLANTILLES_DIR := plantilles_$(FAMILIA)_$(CICLO_UPPER))
+	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO)' ${RESET}"; exit 1; fi
+	@echo " ${LIGHTBLUE} [ Generant plantilles PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
+	mkdir -p "$(PLANTILLES_DIR)"
+	@echo " ${LIGHTBLUE} Copiant PD_*.md des de src/ (no sobreescriu)${RESET}"
+	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
+		[ -d "$$d" ] || continue; \
+		for f in $$d/PD_*.md; do \
+			[ -f "$$f" ] || continue; \
+			b=$$(basename "$$f"); \
+			[ -f "$(PLANTILLES_DIR)/$$b" ] || cp -n "$$f" "$(PLANTILLES_DIR)/"; \
+		done; \
+	done
+	@echo " ${LIGHTBLUE} Generant Excel (si no existeix)${RESET}"
+	@if [ ! -f "$(PLANTILLES_DIR)/libro_$(CICLO_UPPER).xlsx" ]; then \
+		./tools/json2excel.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)"; \
+		echo " ${LIGHTBLUE} Excel generat${RESET}"; \
+	else echo " ${LIGHTYELLOW} Excel conservat${RESET}"; fi
+	@echo " ${LIGHTBLUE} Generant PDs des de plantilles Jinja2${RESET}"
+	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)" --generate-only
+	@echo " ${LIGHTGREEN} [ Plantilles $(CICLO_UPPER) generades a $(PLANTILLES_DIR)/ ] ${RESET}"
 
-	@echo " [ ${BLUE} Proyecto Curricular : $(CICLO_UPPER) (Familia $(FAMILIA)) ${RESET}]"
-	@echo " ${LIGHTBLUE} Creando temp ${RESET}"
-	
-	# Asegurar que el directorio temporal existe (por si se borró en una ejecución anterior)
-	mkdir -p temp
+# ============================================================
+#  PCCF - PHASE 2: compile PDFs from templates
+# ============================================================
+compila-pccf-%:
+	$(eval CICLO_RAW=$*)
+	$(eval CICLO=$(shell echo $* | tr '[:upper:]' '[:lower:]'))
+	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
+	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
+	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
+	$(eval PLANTILLES_DIR=plantilles_$(FAMILIA)_$(CICLO_UPPER))
+	@if [ ! -d "$(PLANTILLES_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PLANTILLES_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	@echo " ${LIGHTBLUE} [ Compilant PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
+	mkdir -p PDFS
+	@echo " ${LIGHTBLUE} Generant PCCF_030/033 a .compila/ ${RESET}"
+	mkdir -p "$(PLANTILLES_DIR)/.compila"
+	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)/.compila" --generate-competences
+	@echo " ${LIGHTBLUE} Generant PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
+	@cd "$(PROJECT_ROOT)" && pandoc --resource-path src:src_$(FAMILIA):src_$(FAMILIA)_$(CICLO_UPPER):"$(PLANTILLES_DIR)"/.compila \
+		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
+		-o "$(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
+		src/PCCF_*.md \
+		src_$(FAMILIA)/PCCF_*.md \
+		src_$(FAMILIA)_$(CICLO_UPPER)/PCCF_*.md \
+		"$(PLANTILLES_DIR)"/.compila/PCCF_*.md
+	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
+	@cd "$(PLANTILLES_DIR)" && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
+	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
+	rm -rf "$(PLANTILLES_DIR)/.compila"
+	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
+	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PLANTILLES_DIR)" 2>&1 | tail -3
+	@echo " ${LIGHTGREEN} [ Compilacio $(CICLO_UPPER) completada ] ${RESET}"
 
-	# Copiar contenido base del centro educativo
-	@echo " ${LIGHTBLUE} Poblando generico de centro desde src ${RESET}"
-	cp -r src/* temp/
-	
-	@echo " ${LIGHTBLUE} Poblando específico desde src_$(CICLO_UPPER) ${RESET}"
-	# Copiar contenido base de la familia
-	cp -r src_$(FAMILIA)/* temp/
+# ============================================================
+#  PCCF - Backward compatible: generate + compile
+# ============================================================
+proyecto-%: generar-plantilles-pccf-% compila-pccf-%
+	@echo " ${LIGHTGREEN} [ Proyecto $(shell echo $* | tr '[:lower:]' '[:upper:]') Completado ] ${RESET}"
 
-	@echo " ${LIGHTBLUE} Poblando específico desde src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"
-	# Copiar archivos específicos del ciclo (si existen)
-	@if [ -n "$$(find src_$(FAMILIA)_$(CICLO_UPPER) -maxdepth 1 -name '*' -not -path 'src_$(FAMILIA)_$(CICLO_UPPER)' 2>/dev/null)" ]; then \
-		cp -r src_$(FAMILIA)_$(CICLO_UPPER)/* temp/; \
-		echo " ${LIGHTBLUE} Archivos específicos copiados desde src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"; \
-	else \
-		echo " ${LIGHTYELLOW} No hay archivos específicos en src_$(FAMILIA)_$(CICLO_UPPER) ${RESET}"; \
-	fi
-	
-	@echo " ${LIGHTBLUE} Libro de las Programaciones de $(CICLO_UPPER) ${RESET}"
-	./tools/json2excel.py $(CICLO_UPPER) $(FAMILIA)
-	@echo " ${LIGHTBLUE} Excel Generado para $(CICLO_UPPER) ${RESET}"
-	
-	@echo " ${LIGHTBLUE} Fuentes de las Programaciones de $(CICLO_UPPER) ${RESET}"
-	./tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA)
-	
-	@echo " ${LIGHTBLUE} Proyecto de $(CICLO_UPPER) ${RESET}"
-	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ./PCCF_*.md
-	@echo " ${LIGHTBLUE} PDF Generado para $(CICLO_UPPER) ${RESET}"
-	
-	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
-	
-	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ./PD_*.md
-	@echo " ${LIGHTBLUE} Programaciones Generadas para $(CICLO_UPPER) ${RESET}"
-	
-	@echo " ${LIGHTBLUE} Ahora recorro los diferentes módulos ${RESET}"
-	./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER)
-	
-	@echo " ${LIGHTBLUE} Limpiando carpetas temporales temp${RESET}"
-	rm -rf temp/
+# ============================================================
+#  Report: detect pending [###] placeholders in templates
+# ============================================================
+report-pccf-%:
+	$(eval CICLO_RAW=$*)
+	$(eval CICLO=$(shell echo $* | tr '[:upper:]' '[:lower:]'))
+	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
+	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
+	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
+	$(eval PLANTILLES_DIR=plantilles_$(FAMILIA)_$(CICLO_UPPER))
+	@if [ ! -d "$(PLANTILLES_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PLANTILLES_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	python3 tools/report_pccf.py $(CICLO_UPPER) "$(PLANTILLES_DIR)"
 
-	@echo " ${LIGHTBLUE} Limpiando carpetas temporales temp_$(CICLO_UPPER)${RESET}"
-	rm -rf temp_$(CICLO_UPPER)
-
-	@echo " ${LIGHTBLUE} [ Proyecto $(CICLO_UPPER) Completado ] ${RESET}"
-
-# Target para generar todos los ciclos
+# ============================================================
+#  Bulk targets (all cycles)
+# ============================================================
 todos: $(addprefix proyecto-,$(CICLOS_ALL)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos generados ] ${RESET}"
 
-# Target para generar solo familia INF
 todos-inf: $(addprefix proyecto-,$(CICLOS_INF)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos INF generados ] ${RESET}"
 
-# Target para generar solo familia SCO
 todos-sco: $(addprefix proyecto-,$(CICLOS_SCO)) report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos SCO generados ] ${RESET}"
 
-# Target para analizar los JSON y generar reporte
 report:
-	@echo " ${LIGHTYELLOW} [ Generando reporte de análisis... ] ${RESET}"
+	@echo " ${LIGHTYELLOW} [ Generando reporte de análisis de JSONs... ] ${RESET}"
 	python3 tools/analizar_json.py
+
+report-tots-pccf:
+	@for c in $(CICLOS_ALL); do \
+		$(MAKE) report-pccf-$$c; \
+	done
 
 ## ----------------------------------------------------------------
 ##  Memòries del Departament
@@ -158,21 +177,18 @@ BASE_DIR ?= memoriaFP
 
 DEPARTAMENTS_ESOBAT = ANGLES BIOLOGIA_GEOLOGIA DIBUIX ECONOMIA EDUCACIO_FISICA FILOSOFIA FISICA_QUIMICA FRANCES GEOGRAFIA_HISTORIA INFORMATICA LLATI LLENGUA_CASTELLANA LLENGUA_VALENCIANA MATEMATIQUES MUSICA RELIGIO TECNOLOGIA
 
-# Generar plantilles de memòria per a tots els departaments ESO/BAT
 genera-tots-esobat:
 	@for dep in $(DEPARTAMENTS_ESOBAT); do \
 		echo " ${LIGHTBLUE} [ Generant plantilles: $$dep ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep generar-plantilles-memoria; \
 	done
 
-# Report de memòries per a tots els departaments ESO/BAT
 report-tots-esobat:
 	@for dep in $(DEPARTAMENTS_ESOBAT); do \
 		echo " ${LIGHTYELLOW} [ Report: $$dep ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep report-memories; \
 	done
 
-# Compilar memòries per a tots els departaments ESO/BAT (demana confirmació per a cada un)
 compila-tots-esobat:
 	@for dep in $(DEPARTAMENTS_ESOBAT); do \
 		echo " ${LIGHTBLUE} [ Compilant: $$dep ] ${RESET}"; \
@@ -181,48 +197,40 @@ compila-tots-esobat:
 
 FAMILIES_FP = INF SCO
 
-# Generar plantilles de memòria per a totes les famílies FP
 genera-tots-fp:
 	@for fam in $(FAMILIES_FP); do \
 		echo " ${LIGHTBLUE} [ Generant plantilles FP: $$fam ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam generar-plantilles-memoria; \
 	done
 
-# Report de memòries per a totes les famílies FP
 report-tots-fp:
 	@for fam in $(FAMILIES_FP); do \
 		echo " ${LIGHTYELLOW} [ Report FP: $$fam ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam report-memories; \
 	done
 
-# Compilar memòries per a totes les famílies FP (demana confirmació per a cada una)
 compila-tots-fp:
 	@for fam in $(FAMILIES_FP); do \
 		echo " ${LIGHTBLUE} [ Compilant FP: $$fam ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam compila-memories; \
 	done
 
-# Generar plantilles de memòria en Markdown
 generar-plantilles-memoria genera-memories:
 	@echo " ${LIGHTBLUE} [ Generant plantilles de memòria ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
 	python3 tools/generar_plantilles_memoria.py --base-dir $(BASE_DIR) $(FAMILIA)
 
-# Report de memòries (sense compilar PDF)
 report-memories:
 	@echo " ${LIGHTYELLOW} [ Generant report de memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
 	python3 tools/report_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO)
 
-# Compilar memòries (demana confirmació, compila OK + BORRADOR)
 compila-memories:
 	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
 	python3 tools/compilar_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO) --all
 
-# Compilar memòries (comportament original: només OK, demana BORRADOR)
 compilar-memories:
 	@echo " ${LIGHTBLUE} [ Compilant memòries ($(FAMILIA), base=$(BASE_DIR)) ] ${RESET}"
 	python3 tools/compilar_memories.py --base-dir $(BASE_DIR) $(FAMILIA) $(CENTRO_EDUCATIVO)
 
-# Tot el procés de memòries: generar plantilles + compilar (amb confirmació)
 memories: generar-plantilles-memoria compila-memories
 	@echo " ${LIGHTGREEN} [ Procés de memòries completat ] ${RESET}"
 
@@ -231,50 +239,36 @@ help:
 	@echo "Uso: make [CENTRO_EDUCATIVO=nombre_del_centro] <target>"
 	@echo ""
 	@echo "Targets disponibles:"
-	@echo "  Familia INF:"
-	@echo "    proyecto-smx       Generar proyecto para SMX"
-	@echo "    proyecto-asir      Generar proyecto para ASIR"
-	@echo "    proyecto-daw       Generar proyecto para DAW"
-	@echo "    proyecto-dam       Generar proyecto para DAM"
-	@echo "    proyecto-ceiabd    Generar proyecto para CEIABD"
-	@echo "    proyecto-fpbiio    Generar proyecto para FPBIIO"
-	@echo "  Familia SCO:"
-	@echo "    proyecto-apd       Generar proyecto para APD"
-	@echo "    proyecto-ei        Generar proyecto para EI"
-	@echo "    proyecto-is        Generar proyecto para IS"
-	@echo "  Conjunto:"
+	@echo "  Families INF i SCO:"
+	@echo "    generar-plantilles-pccf-{ciclo}  Genera plantilles MD + Excel a plantilles_{FAMILIA}_{CICLO}/"
+	@echo "    compila-pccf-{ciclo}             Compila PDFs des de les plantilles"
+	@echo "    report-pccf-{ciclo}              Report de [###] pendents d'emplenar"
+	@echo "    proyecto-{ciclo}                 Equival a generar-plantilles + compila (compatible)"
+	@echo "    report-tots-pccf                 Report de [###] per a tots els cicles"
+	@echo "  Cicles disponibles:"
+	@echo "    Familia INF: smx, dam, ceiabd, fpbiio"
+	@echo "    Familia SCO: apd, ei, is"
+	@echo "  Conjunt:"
 	@echo "    todos              Generar todos los proyectos"
 	@echo "    todos-inf          Generar todos los proyectos INF"
 	@echo "    todos-sco          Generar todos los proyectos SCO"
 	@echo "    report             Generar reporte de análisis de JSONs"
 	@echo "  Memòries:"
-	@echo "    generar-plantilles-memoria  Generar plantilles MD de memòria (també: genera-memories)"
-	@echo "    genera-memories             Alias de generar-plantilles-memoria"
-	@echo "    report-memories             Report de l'estat de les memòries (sense PDF)"
-	@echo "    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)"
-	@echo "    compilar-memories           Versió antiga: només OK, demana BORRADOR"
+	@echo "    generar-plantilles-memoria  Generar plantilles MD de memòria"
+	@echo "    report-memories             Report de l'estat de les memòries"
+	@echo "    compila-memories            Report + confirmació + compila tot"
 	@echo "    memories                    Tot el procés (genera + compila)"
-	@echo "    (per defecte FAMILIA=INF, BASE_DIR=memoriaFP)"
-	@echo "    (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES ...)"
-	@echo "    genera-tots-esobat          Generar plantilles de TOTS els departaments ESO/BAT"
-	@echo "    report-tots-esobat          Report de TOTS els departaments ESO/BAT"
-	@echo "    compila-tots-esobat         Compilar memòries de TOTS els departaments ESO/BAT"
-	@echo "    genera-tots-fp              Generar plantilles de TOTES les famílies FP (INF + SCO)"
-	@echo "    report-tots-fp              Report de TOTES les famílies FP"
-	@echo "    compila-tots-fp             Compilar memòries de TOTES les famílies FP"
-	@echo "    clean              Limpiar archivos generados"
-	@echo "    files              Crear estructura de directorios"
+	@echo "    genera-tots-esobat / report-tots-esobat / compila-tots-esobat"
+	@echo "    genera-tots-fp / report-tots-fp / compila-tots-fp"
+	@echo "  Altres:"
+	@echo "    clean              Limpiar archivos generados (PDFS + plantilles)"
 	@echo "    dependences        Instalar dependencias"
+	@echo "    validate-json      Validar JSONs"
 	@echo ""
-	@echo "Ejemplos:"
-	@echo "  make proyecto-smx                 # Usa 'SENIA' por defecto"
-	@echo "  make proyecto-asir                # Genera solo ASIR"
-	@echo "  make todos                        # Genera todos los ciclos"
-	@echo "  make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam"
-	@echo "  make CENTRO_EDUCATIVO=IESEPM todos"
-	@echo "  make FAMILIA=INF memories        # Memòries d'Informàtica"
-	@echo "  make FAMILIA=SCO memories        # Memòries de Serveis Socioculturals"
-	@echo "  make genera-tots-esobat          # Plantilles de TOTS els departaments ESO/BAT"
-	@echo "  ./contenedor_lanza.sh \"make BASE_DIR=memoriaESOBAT CENTRO_EDUCATIVO=IESEPM genera-tots-esobat\""
-	@echo "  make genera-tots-fp              # Plantilles de TOTES les famílies FP"
-	@echo "  ./contenedor_lanza.sh \"make CENTRO_EDUCATIVO=IESEPM genera-tots-fp\""
+	@echo "Exemples:"
+	@echo "  make proyecto-dam                           # Genera plantilles + compila"
+	@echo "  make generar-plantilles-pccf-dam            # Només plantilles (per a docents)"
+	@echo "  make compila-pccf-dam                       # Compila des de plantilles existents"
+	@echo "  make report-pccf-dam                        # Què falta per emplenar?"
+	@echo "  make CENTRO_EDUCATIVO=IESEPM proyecto-smx   # Escolarització diferent"
+	@echo "  ./contenedor_lanza.sh \"make proyecto-dam\"   # Via Docker (recomanat)"

@@ -90,7 +90,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 - {{actividad}}
 {% endfor %}
 {% else %}
-*Pendiente de desarrollar.*
+[###]
 {% endif %}
 
 #### {{ct}}.5 Instrumentos y procedimientos de evaluación
@@ -100,7 +100,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 - {{instrumento}}
 {% endfor %}
 {% else %}
-*Pendiente de desarrollar.*
+[###]
 {% endif %}
 
 {% endfor %}
@@ -109,10 +109,12 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Evaluación | Temas | Sesiones | Horas |
 |------------|-------|----------|-------|{% for ct in modulo.ContenidosTemasRA %}
-| {% if modulo.ContenidosTemasRA[ct].Evaluacion_periodo %}{{modulo.ContenidosTemasRA[ct].Evaluacion_periodo}}{% else %}Por determinar{% endif %} | {{ct}} - {{modulo.ContenidosTemasRA[ct].Titulo}} | {% if modulo.ContenidosTemasRA[ct].Sesiones %}{{modulo.ContenidosTemasRA[ct].Sesiones}}{% else %}Por determinar{% endif %} | {% if modulo.ContenidosTemasRA[ct].Horas %}{{modulo.ContenidosTemasRA[ct].Horas}}{% else %}Por determinar{% endif %} |{% endfor %}
+| {% if modulo.ContenidosTemasRA[ct].Evaluacion_periodo %}{{modulo.ContenidosTemasRA[ct].Evaluacion_periodo}}{% else %}[###]{% endif %} | {{ct}} - {{modulo.ContenidosTemasRA[ct].Titulo}} | {% if modulo.ContenidosTemasRA[ct].Sesiones %}{{modulo.ContenidosTemasRA[ct].Sesiones}}{% else %}[###]{% endif %} | {% if modulo.ContenidosTemasRA[ct].Horas %}{{modulo.ContenidosTemasRA[ct].Horas}}{% else %}[###]{% endif %} |{% endfor %}
 |<img width=150/>|<img width=300/>|<img width=150/>|<img width=150/>|
 
 ## Metodología
+
+> **Instruccions per al docent:** Substituïu les marques `[###]` per la informació real del vostre mòdul. Si una secció no escau, indiqueu "No escau".
 
 ### Orientaciones pedagógicas
 

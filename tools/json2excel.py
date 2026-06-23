@@ -17,6 +17,7 @@ from openpyxl.styles import NamedStyle
 
 debug = False
 
+import argparse
 import warnings
 warnings.filterwarnings('ignore')  # Por ahora ignoro todos los warnings
 
@@ -28,15 +29,15 @@ import jinja2
 
 # Cargar el JSON desde un archivo
 
-if len(sys.argv) < 3:
-    print(" * No se ha indicado Ciclo y Familia ")
-    print(f" * Uso: {sys.argv[0]} <ciclo> <familia>")
-    print(" * Ejemplo: ./json2excel.py ASIR INF")
-    sys.exit(0)
+parser = argparse.ArgumentParser(description="Genera Excel de PCCF des de JSON")
+parser.add_argument("ciclo", help="Codi del cicle (ex: DAM, ASIR)")
+parser.add_argument("familia", help="Família (INF, SCO)")
+parser.add_argument("--outdir", help="Directori d'eixida (defecte: PDFS)")
+args = parser.parse_args()
 
-# Convertir el argumento a minúsculas
-ciclo = sys.argv[1].lower()
-familia = sys.argv[2].upper()
+ciclo = args.ciclo.lower()
+familia = args.familia.upper()
+outdir = args.outdir or "PDFS"
 nombre_archivo = f'./boe_{familia}/rd-{ciclo}.json'
 
 try:
@@ -55,7 +56,7 @@ data_box = Box(data)
 # Abrimos el excel
 #writer = pd.ExcelWriter("datos.xlsx", engine="openpyxl")
 
-libro="PDFS/libro_autogenerado_"+str(sys.argv[1])+".xlsx"
+libro = os.path.join(outdir, f"libro_{args.ciclo}.xlsx")
 wb = openpyxl.Workbook()
 
 # Algunas posiciones fijas

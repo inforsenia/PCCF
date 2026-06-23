@@ -24,6 +24,7 @@
             {"codi": "SOS", "nom": "Sostenibilitat aplicada al sistema productiu"},
             {"codi": "DIG", "nom": "Digitalització aplicada als sectors productius (GM)"},
             {"codi": "IPR", "nom": "Introducció a la Programació"},
+            {"codi": "COM", "nom": "Comunicacio professional"},
             {"codi": "PI",  "nom": "Projecte Intermodular"}
           ],
           "grups": ["A", "B"]
@@ -54,6 +55,7 @@
             {"codi": "NUVOL", "nom": "Introducció al Núvol Públic"},
             {"codi": "PI",    "nom": "Projecte Intermodular"},
             {"codi": "SOS",   "nom": "Sostenibilitat aplicada al sistema productiu"},
+            {"codi": "COM", "nom": "Comunicacio professional"},
             {"codi": "DIG",   "nom": "Digitalització aplicada als sectors productius (GS)"}
           ],
           "grups": ["", "SEMI"]

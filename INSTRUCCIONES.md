@@ -41,8 +41,8 @@ Dins de la carpeta trobarem la següent estructura:
 | `PCCF_001_IdentificacioFPBIIO.md`            | Plantilla per al primer punt del PCCF (Identificació)        |
 | `PCCF_006_MarcoNormativoEspecificoFPBIIO.md` | Marc normatiu específic del PCCF de FPBIIO                   |
 | `PCCF_110_AdecuacionYArreglo_FPBIIO.md`      | Context socioeconomic i competència general del cicle, el fitxer |
-| `PCCF_033_FPBIIO_ImportanciaCompetencies.md`            | Es generarà a la carpeta PDFS originalment, una vegada ens agrade com es genera, el podem moure ací i s'utilitzarà este en lloc de generar un de nou. |
-| `PCCF_030_FPBIIO_ContribucioModuls.md`            | Es generarà automàticament. Conté dues taules que mostren quins mòduls contribueixen a desenvolupar cada competència (professionals i d'ocupabilitat). |
+| `PCCF_033_FPBIIO_ImportanciaCompetencies.md`            | Es genera automàticament durant la compilació (`.compila/` dins plantilles). Si es col·loca ací, s'usa este en lloc de generar-lo. |
+| `PCCF_030_FPBIIO_ContribucioModuls.md`            | Es genera automàticament durant la compilació. Conté dues taules que mostren quins mòduls contribueixen a desenvolupar cada competència (professionals i d'ocupabilitat). |
 | `PCCF_150_OrganizacionDistribucion.md`       | En esta plantilla s'utilitza la imatge de `imgs/FPBIIO_horario.png` |
 | `PD_000_FPBIIO_Introduccion.md`              | Plantilla per a la portada de les PD dels mòduls de FPBIIO.<br />Especificar nom del cicle, centre, curs, portada, etc. |
 
@@ -68,16 +68,16 @@ Si el procés funciona correctament (i no es veu cap error pel mig) vorem al fin
 ========================================
 ```
 
-I tindrem 3 noves carpetes (o si ja existien s'afegiran a elles els nous arxius):
+I tindrem les següents eixides:
 
 | Ruta                                    | Descripció                                                   |
 | --------------------------------------- | ------------------------------------------------------------ |
-| `PDFS/PDs_FPBIIO/`                      | Esta carpeta conté un PDF amb la PD de cadascún dels mòduls  |
-| `PDFS/libro_autogenerado_FPBIIO.xlsx`   | Excel genèric generat a partir de la informació del rd-fpbiio.json i que posteriorment utilitzarà cada docent per a ajustar les ponderacions de cada RA i designar els CE o RA que van a FEE. |
-| `PDFS/PCCF_IESEPM_FPBIIO.pdf`           | PCCF preeliminar del cicle corresponent en PDF               |
+| `plantilles_INF_FPBIIO/`               | Carpeta de treball persistent del docent. Conté `PD_*_BORRADOR.md` (o `_OK.md`) + `libro_FPBIIO.xlsx`. |
+| `PDFS/PCCF_IESEPM_FPBIIO.pdf`          | PCCF del cicle corresponent en PDF                           |
 | `PDFS/Programaciones_IESEPM_FPBIIO.pdf` | PDF amb totes les PD's de tots els mòduls del cicle          |
-| `PDFS/PCCF_033_FPBIIO_ImportanciaCompetencies.md`       | Sols en cas que l'arxiu no es trobe a la carpeta `src_INF_FPBIIO` |
-| `PDFS/PCCF_030_FPBIIO_ContribucioModuls.md`       | Document generat automàticament amb taules de contribució de mòduls a competències |
+| `PDFS/PDs_FPBIIO/`                      | Un PDF per cada PD de cada mòdul                             |
+
+El `libro_FPBIIO.xlsx` es genera directament a `plantilles_INF_FPBIIO/` (no a `PDFS/`).
 
 ### 6. Afegir el nou cicle a l'script `pccf_utils.py`
 
@@ -92,7 +92,7 @@ if hoja.startswith("Sistemes de"): hoja = "SBD"
 if hoja.startswith("Big Data"): hoja = "BDA"
 ```
 
-i ho adaptem a FPBIIO, podem mirar les pestanyes de l'excel que s'ha generat en `PDFS/libro_autogenerado_FPBIIO.xlsx` i canviar-ho per les sigles del mòdul:
+i ho adaptem a FPBIIO, podem mirar les pestanyes de l'excel que s'ha generat en `plantilles_INF_FPBIIO/libro_FPBIIO.xlsx` i canviar-ho per les sigles del mòdul:
 
 ```python
 # FPBIIO
@@ -188,7 +188,7 @@ A continuació es detalla la correspondència entre el nom complet del mòdul (c
 
 ### 1. Revisar el contingut de l'excel
 
-Una vegada generat l'excel (`make proyecto-FPBIIO`), el trobarem a `PDFS/libro_autogenerado_FPBIIO.xlsx`. Cada docent ha de revisar el contingut per al seu mòdul:
+Una vegada generat l'excel (`make proyecto-FPBIIO` o `make generar-plantilles-pccf-fpbiio`), el trobarem a `plantilles_INF_FPBIIO/libro_FPBIIO.xlsx`. Cada docent ha de revisar el contingut per al seu mòdul:
 
 1. A la columna `C` s'indicarà el pes de cada RA en percentatge (tots junts hauran de sumar 100%)
 2. *La columna `D` no tinc clar per a que s'utilitza*
@@ -213,18 +213,35 @@ python3 tools/preparar_excel.py -c APD -f SCO
 ```
 
 El script:
-1. Llig l'excel des de `PDFS/libro_autogenerado_{CICLO}.xlsx` (o des d'una ruta personalitzada amb `-i`)
+1. Llig l'excel des de `plantilles_{FAMILIA}_{CICLO}/libro_{CICLO}.xlsx` (o des d'una ruta personalitzada amb `-i`)
 2. Renombra automàticament cada pestanya a les sigles curtes
 3. El guarda a `excels_{FAMILIA}/libro_{CICLO}.xlsx`
 4. Crea una còpia de seguretat del destí si ja existia
 
 > **Nota:** Si alguna pestanya no es renombra (perquè el nom no coincideix amb cap patró), caldrà afegir-la a `tools/pccf_utils.py` a la funció `get_hoja_label()`.
 
-### Generació de PD's:
+### Generació de PD's (pipeline bifàsica)
 
-La generació final de les PD's es basa en el contingut de la carpeta `src_CICLE` corresponent al cicle, tots els fitxers de dita carpeta (excepte els de les PCCF) es junten en una carpeta (temp) que després s'uniran en un únic document PDF per cada PD, i un altre que juntarà totes les PD's.
+El sistema actual utilitza una pipeline bifàsica amb persistència del treball docent:
 
-Si a la carpeta `src_FAMILIA_MODUL` trobem el fitxer corresponent a la PD del mòdul s'utilitzarà per a la generació del PDF, sino s'utilitzarà el genèric de la carpeta `temp_CICLE`.
+**Fase 1 — Generar plantilles** (`make generar-plantilles-pccf-{CICLO}`):
+1. Copia els `PD_*.md` de `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` a `plantilles_{FAMILIA}_{CICLO}/` (mai sobreescriu fitxers existents).
+2. Genera `libro_{CICLO}.xlsx` directament dins `plantilles_{FAMILIA}_{CICLO}/` via `json2excel.py --outdir`.
+3. Genera `PD_*_BORRADOR.md` a partir de les plantilles Jinja2 (només si no existeix ni `_BORRADOR` ni `_OK`).
+
+**Estat de les PDs**:
+- `PD_*_BORRADOR.md` = pendent de revisió docent
+- `PD_*_OK.md` = completat pel docent
+
+**Report** (`make report-pccf-{CICLO}`): mostra quants fitxers estan en BORRADOR vs OK, detecta `[###]` pendents i valida que la suma de pesos dels RA = 100% a l'excel.
+
+**Fase 2 — Compilar** (`make compila-pccf-{CICLO}`):
+1. Genera `PCCF_030/033` a una carpeta temporal `.compila/` dins plantilles.
+2. Compila el PCCF: pandoc des de `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` + `.compila/` → `PCCF_{CENTRO}_{CICLO}.pdf`.
+3. Compila les Programaciones: pandoc des de plantilles → `Programaciones_{CENTRO}_{CICLO}.pdf`.
+4. Neta `.compila/`.
+
+`make proyecto-{CICLO}` fa les dues fases en un sol pas.
 
 ## Memòries del Departament
 
@@ -344,4 +361,6 @@ make compila-tots-fp                            # compilar
 
 ### Generació del PCCF:
 
-La generació final del PCCF es basa en el contingut de les carpetes `src` i `src_FAMILIA_CICLE` corresponent al cicle, tots els fitxers de dites carpetes (excepte els de les PD) es junten en una carpeta (temp) que després s'uniran en un únic document PDF.
+La generació del PCCF es basa en el contingut de les carpetes `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` i els fitxers `PCCF_030/033` generats automàticament (durant la compilació). El compilador **Pandoc** llig tots estos fitxers directament des de les seues carpetes (no es fa cap còpia a `temp/`), usant `--resource-path` per a resoldre imatges.
+
+Els fitxers `PCCF_030_ContribucioModuls.md` i `PCCF_033_ImportanciaCompetencies.md` es generen dins `.compila/` a `plantilles_{FAMILIA}_{CICLO}/` exclusivament durant la compilació (`make compila-pccf-{CICLO}`) i es netegen automàticament en acabar. Si es vol conservar una còpia permanent, es pot copiar a `src_{FAMILIA}_{CICLO}/`.

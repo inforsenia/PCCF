@@ -5,6 +5,7 @@ import json
 import os
 import shutil
 from openpyxl import load_workbook
+from openpyxl.styles import Font
 import subprocess
 import os
 import warnings
@@ -53,6 +54,30 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
     for row in range(filas[0] - 1, 1, -1):
         ws.delete_rows(row)
 
+    # Reducir tamaño de fuente para que quepa mejor en la página
+    for row in ws.iter_rows():
+        for cell in row:
+            if cell.font and cell.font.size:
+                old_size = cell.font.size
+                new_size = max(old_size - 3, 7)
+                cell.font = Font(
+                    name=cell.font.name,
+                    size=new_size,
+                    bold=cell.font.bold,
+                    italic=cell.font.italic,
+                    color=cell.font.color,
+                    strike=cell.font.strike,
+                    outline=cell.font.outline,
+                    shadow=cell.font.shadow,
+                    condense=cell.font.condense,
+                    extend=cell.font.extend,
+                    charset=cell.font.charset,
+                    family=cell.font.family,
+                    vertAlign=cell.font.vertAlign,
+                    scheme=cell.font.scheme,
+                    underline=cell.font.underline,
+                )
+
     # Guardar archivo temporal
     # Configurar la página en apaisado y ajustar al contenido
     ws.page_setup.orientation = ws.ORIENTATION_LANDSCAPE
@@ -62,14 +87,15 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
     except Exception as e :
         print(str(e))
     ws.page_setup.fitToWidth = 1
-    ws.page_setup.fitToHeight = 1  # Ajustar automáticamente la altura
+    ws.page_setup.fitToHeight = 0  # Permitir varias páginas si hay muchas filas
     ws.page_margins.left = 0.1 
     ws.page_margins.right = 0.1
     ws.page_margins.top = 0.1
     ws.page_margins.bottom = 0.1
     ws.page_margins.header = 0.0
     ws.page_margins.footer = 0.0
-    ruta_temp = "temp_rango.xlsx"
+    ruta_temp = os.path.abspath("./temp/temp_rango.xlsx")
+    os.makedirs(os.path.dirname(ruta_temp), exist_ok=True)
     wb.save(ruta_temp)
 
     # Convertir a PDF con LibreOffice
@@ -100,7 +126,7 @@ if not "autogenerado" in ruta_excel:
     hoja = get_hoja_label(hoja)
 print(" * [ PDF Cuadro Resumen ] : "+hoja)
 
-rango = "B1:I64" 
+rango = "B1:I200" 
 ruta_pdf = "/tmp/cuadro-resumen.pdf"
 
 exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf)

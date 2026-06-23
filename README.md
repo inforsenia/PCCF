@@ -57,7 +57,15 @@ Sistemas Operativos que promuevan el Software Libre y Abierto, como Ubuntu o Deb
 ## Proyectos Curriculares de Ciclos Formativos
 
 Los Proyectos Curriculares (PCCF), se construyen usando varios niveles de construcción, la parte común a todos
-los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`, 
+los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
+
+**Pipeline bifàsica (PCCF)**:
+1. **Generació de plantilles** (`make generar-plantilles-pccf-dam`): copia `PD_*.md` a `plantilles_{FAMILIA}_{CICLO}/` + genera `libro_{CICLO}.xlsx`.
+2. **El docent ompli** les PDs (canvia `_BORRADOR` a `_OK`) i l'excel.
+3. **Report** (`make report-pccf-dam`): mostra estat BORRADOR/OK, `[###]` pendents, i coherència de l'excel.
+4. **Compilació** (`make compila-pccf-dam`): genera el `PCCF_{CENTRO}_{CICLO}.pdf` i el `Programaciones_{CENTRO}_{CICLO}.pdf`.
+
+`make proyecto-dam` fa (1) + (4) en un sol pas (compatible cap enrere).
 
 ---
 
@@ -68,12 +76,11 @@ los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
 Las Programaciones Didácticas de cada módulo se construyen en varias "etapas". 
 
 Por un lado tenemos la generación 
-automática ficheros a partir de las plantillas de los diferentes Ciclos Formativos que se generan en `./temp/` y 
-que son usadas por el *compilador* **Pandoc** en la siguiente etapa.
+automática de ficheros a partir de las plantillas Jinja2, que se generan en `plantilles_{FAMILIA}_{CICLO}/` (fitxers `PD_*_BORRADOR.md`).
 
-Y por otra parte podemos crear un fichero con el mismo nombre que el que se genera automáticamente, pero 
-ya en la carpeta del Ciclo correspondiente (`src_ASIR/`,`src_SMX/`,`src_DAW/`,`src_DAM/`). En ese caso, el constructor
-de las programaciones didácticas no generará el fichero automático y usará el que el/la docente haya establecido.
+Y por otra parte podemos crear un fichero con el mismo nombre en la carpeta del Ciclo correspondiente (`src_ASIR/`,`src_SMX/`,`src_DAW/`,`src_DAM/`). En ese caso, la generació automàtica no sobreescriurà el fitxer i usarà el que el/la docente haya establecido.
+
+A més, el/la docent pot editar directament el fitxer `PD_*_BORRADOR.md` dins `plantilles_{FAMILIA}_{CICLO}/` i, quan estiga complet, canviar-li el nom a `PD_*_OK.md`.
 
 ### Completado de la plantilla
 
@@ -121,7 +128,9 @@ El sistema genera automáticamente varios documentos a partir de los datos del J
 - **PCCF_033_ImportanciaCompetencies.md**: Tabla con todas las competencias del ciclo y su nivel de importancia (★, ★★, ★★★)
 - **PCCF_030_ContribucioModuls.md**: Tablas que muestran qué módulos contribuyen a desarrollar cada competencia (profesionales y de ocupabilidad)
 
-Estos documentos se generan en la carpeta `src_{FAMILIA}_{CICLO}/` y se integran automáticamente en el PCCF final.
+Estos documentos se generan **durante la compilación** (`make compila-pccf-{CICLO}`) en una carpeta temporal `.compila/` dins `plantilles_{FAMILIA}_{CICLO}/` i s'integren automàticament en el PCCF final. La carpeta `.compila/` es neteja automàticament després de la compilació.
+
+Si es vol tindre una còpia permanent d'estos fitxers, es poden copiar a `src_{FAMILIA}_{CICLO}/`.
 
 ---
 
@@ -261,7 +270,7 @@ datos de los Ciclos Formativos.
 
 #### `tools/preparar_excel.py`
 
-Convierte el Excel autogenerado (`PDFS/libro_autogenerado_{CICLO}.xlsx`) a su versión para `excels_{FAMILIA}/`,
+Convierte el Excel autogenerado (`plantilles_{FAMILIA}_{CICLO}/libro_{CICLO}.xlsx`) a su versión para `excels_{FAMILIA}/`,
 renombrando automáticamente las hojas (de nombre completo a códigos cortos como `SI`, `BBDD`, `PRG`, etc.).
 
 ```sh
@@ -368,7 +377,20 @@ make proyecto-ceiabd
 make proyecto-daw
 ```
 
-### Opción 4: Ver ayuda:
+#### Opción 4: Pipeline bifàsica (pas a pas):
+
+```bash
+# Fase 1: Generar plantilles (PDs + Excel) — mai sobreescriu treball docent
+make generar-plantilles-pccf-dam
+
+# Comprovar l'estat: què falta omplir, què està OK
+make report-pccf-dam
+
+# Fase 2: Compilar PDFs (PCCF + Programaciones)
+make compila-pccf-dam
+```
+
+### Opción 5: Ver ayuda:
 
 ```bash
 make help
@@ -376,6 +398,11 @@ make help
 
 ```bash
 Targets disponibles:
+  PCCF (bifàsica):
+    generar-plantilles-pccf-dam  Fase 1: generar PDs + Excel a plantilles_*/
+    report-pccf-dam              Report: BORRADOR/OK + [###] + Excel coherència
+    compila-pccf-dam             Fase 2: compilar PCCF + Programaciones PDF
+    proyecto-dam                 Fases 1+2 en un sol pas
   Familia INF:
     proyecto-smx       Generar proyecto para SMX
     proyecto-asir      Generar proyecto para ASIR
@@ -414,6 +441,10 @@ Ejemplos:
   make proyecto-smx                 # Usa 'SENIA' por defecto
   make proyecto-asir                # Genera solo ASIR
   make todos                        # Genera todos los ciclos
+  make generar-plantilles-pccf-dam  # Fase 1: plantilles (PDs + Excel)
+  make report-pccf-dam              # Report d'estat
+  make compila-pccf-dam             # Fase 2: PDFs
+  make report-tots-pccf             # Report de TOTS els cicles
   make generar-plantilles-memoria   # Genera plantilles de memòria
   make compilar-memories            # Compila memòries en PDF
   make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam
