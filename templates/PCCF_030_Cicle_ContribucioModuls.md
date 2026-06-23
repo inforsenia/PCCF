@@ -51,3 +51,13 @@
 {%- if modulos_con_competencias|length > 10 %}
 - Les taules s'han dividit per facilitar la lectura en format PDF
 {%- endif %}
+
+{%- set modulos_sense_comp = [] %}
+{%- for codigo, modulo in modulos.items() if not modulo.get('CompetenciasTitulo', []) -%}
+  {%- if modulos_sense_comp.append(modulo) -%}{%- endif -%}
+{%- endfor -%}
+
+{% if modulos_sense_comp %}
+
+**Mòduls no associats a estàndards de competència:** {% for modulo in modulos_sense_comp %}{{ modulo.nombre }}{% if not loop.last %}, {% endif %}{% endfor %}.
+{% endif %}
