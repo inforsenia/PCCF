@@ -2,6 +2,18 @@
 
 Curricular projects & teaching plans for vocational training at IES La Sénia. Build outputs: PDFs (Pandoc + XeLaTeX) and spreadsheets (openpyxl).
 
+## Optatives conventions
+
+- **Source of truth**: `optatives/optatives.json` — shared across all cycles.
+- **4 modules**: MOPCOMPROF, MOPANGPROF, INP (with `codis_alternatius` for CVOPS190), IPR.
+- **OG/CPSS are empty arrays**: shared optatives cannot reference cycle-specific objectives/competencies.
+- **`grups` field**: each module lists which cycles offer it (`{cicle, curs, familia}`).
+- **PD generation**: Jinja2 template `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md` skips OG/CPSS sections when empty.
+- **State tracking**: same as PCCF (`_BORRADOR.md` / `_OK.md`), shared across all cycles.
+- **Excel**: `optatives/libro_optatives.xlsx` (shared, one sheet per module).
+- **Pipeline**: `make generar-plantilles-optatives` → `make report-optatives` → `make compila-pccf-{CICLO}` copies matching optatives PDs automatically.
+- **Integration**: `tools/copy_optatives_pd.py` filters by `grups` field and copies PDs to `.compila/` during per-cycle compilation.
+
 ## Build commands
 
 ```sh
@@ -33,6 +45,10 @@ make compila-tots-esobat           # ESO/BAT all departments (compile)
 make genera-tots-fp                # FP all families INF+SCO (generate)
 make report-tots-fp                # FP all families (report)
 make compila-tots-fp               # FP all families (compile)
+make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
+make report-optatives             # report optatives BORRADOR/OK status + [###]
+make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
+make report-optatives             # report optatives BORRADOR/OK status + [###]
 make clean                 # rm -rf PDFS/ temp/ plantilles_*/
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
 ```
@@ -79,6 +95,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `templates/` or `templates_{FAMILIA}/` | Jinja2 templates for auto-generated markdown |
 | `excels_{INF,SCO}/` | Teacher-edited spreadsheets (after `preparar_excel.py`) |
 | `plantilles_{FAMILIA}_{CICLO}/` | Persistent teacher workspace (gitignored); contains PD_*.md + libro_*.xlsx |
+| `optatives/` | Shared optative modules JSON + plantilles/ (PDs) + libro_optatives.xlsx |
 | `memoriaFP/` | FP department configs + templates (memories_{FAMILIA}.json, plantilla_memoria.md, portada) |
 | `memoriaESOBAT/` | ESO/BAT department configs + templates (same structure as memoriaFP) |
 | `memories_FP/{FAMILIA}/` | Per-module/per-group FP memoria markdown files (gitignored via `memories_*/`) |
@@ -95,12 +112,13 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
    - `json2excel.py {CICLO} {FAMILIA} --outdir $(PLANTILLES_DIR)` — generates `libro_{CICLO}.xlsx` directly in plantilles
    - `json2pccf.py {CICLO} {FAMILIA} --generate-only` — generates `PD_*_BORRADOR.md` from Jinja2 templates (only if neither `_BORRADOR` nor `_OK` exist)
    - **Plantilles conté només PDs + Excel** (no PCCF framework files)
-3. Phase 2: `compila-pccf-{CICLO}`:
-   - `json2pccf.py --generate-competences` — genera `PCCF_030/033` a `.compila/` dins plantilles
-   - `pandoc` des de `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` + `.compila/` → `PCCF_{CENTRO}_{CICLO}.pdf`
-   - `pandoc` des de plantilles → `Programaciones_{CENTRO}_{CICLO}.pdf`
-   - `rm -rf .compila/`
-   - `shell-progs-didacticas-standalone.sh` — per-module PDFs a `PDFS/PDs_{CICLO}/`
+ 3. Phase 2: `compila-pccf-{CICLO}`:
+    - `json2pccf.py --generate-competences` — genera `PCCF_030/033` a `.compila/` dins plantilles
+    - `copy_optatives_pd.py` — copia PDs optatives que corresponguen al cicle des de `optatives/plantilles/`
+    - `pandoc` des de `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` + `.compila/` → `PCCF_{CENTRO}_{CICLO}.pdf`
+    - `pandoc` des de plantilles → `Programaciones_{CENTRO}_{CICLO}.pdf`
+    - `rm -rf .compila/`
+    - `shell-progs-didacticas-standalone.sh` — per-module PDFs a `PDFS/PDs_{CICLO}/`
 
 ## Report pipeline
 

@@ -184,6 +184,72 @@ A continuació es detalla la correspondència entre el nom complet del mòdul (c
 | | Sistemes augmentatius i alternatius de la comunicació | **SAAC** |
 | | Metodologia de la intervenció social | **MIS** |
 
+## Mòduls Optatius Compartits
+
+Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen de forma centralitzada a `optatives/optatives.json` i es compartixen entre tots els cicles que els oferten.
+
+### Estructura del JSON
+
+```json
+{
+    "MOPCOMPROF": {
+        "nombre": "Comunicació professional",
+        "horas": "96",
+        "creditos": "",
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Text del RA...",
+                "CriteriosEvaluacion": {
+                    "a": "CE 1.1...",
+                    "b": "CE 1.2..."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "SMX", "curs": "2", "familia": "INF"},
+            {"cicle": "DAM", "curs": "2", "familia": "INF"}
+        ]
+    }
+}
+```
+
+**Notes importants**:
+- `ObjetivosGenerales` i `CompetenciasTitulo` **sempre buits** (`[]`) perquè els optatius són compartits entre cicles i no poden referenciar objectius/competències d'un cicle concret.
+- El camp `grups` determina a quins cicles s'aplica cada optatiu.
+- `codis_alternatius` permet codis de mòdul diferents segons el cicle (p. ex. INP/CVOPS190).
+
+### Afegir/modificar un optatiu
+
+1. Editar `optatives/optatives.json`:
+   - Omplir `nombre`, `horas`, `creditos`, `ResultadosAprendizaje` (RAs i CEs).
+   - Afegir les entrades al camp `grups` per a cada cicle que l'ofereix.
+2. Regenerar Excel i PDs:
+   ```sh
+   make generar-plantilles-optatives
+   ```
+3. (Opcional) Comprovar l'estat:
+   ```sh
+   make report-optatives
+   ```
+
+### Plantilla de PD per a optatius
+
+La plantilla es troba a `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md`.
+- No inclou seccions d'Objectius Generals ni Competències del Títol (ja que no n'hi ha).
+- El sistema de BORRADOR/OK funciona igual que la resta de PDs.
+- Les PDs es generen a `optatives/plantilles/` (compartides).
+
+### Integració amb la compilació dels cicles
+
+Durant `make compila-pccf-{CICLO}`, l'script `tools/copy_optatives_pd.py`:
+1. Llig `optatives/optatives.json` i filtra els mòduls que tenen eixe cicle a `grups`.
+2. Copia les PDs corresponents (BORRADOR o OK) des de `optatives/plantilles/` a `.compila/` dins `plantilles_{FAMILIA}_{CICLO}/`.
+3. Les PDs s'inclouen automàticament al `Programaciones_{CENTRO}_{CICLO}.pdf`.
+
 ## Procediment per a generar correctament les PD's i PCCF de cada cicle
 
 ### 1. Revisar el contingut de l'excel

@@ -11,6 +11,9 @@ CICLES_INF = ["SMX", "DAM", "CEIABD", "FPBIIO"]
 CICLES_SCO = ["APD", "EI", "IS"]
 CICLES_CONEGUTS = sorted(CICLES_INF + CICLES_SCO, key=len, reverse=True)
 
+OPTATIVES_PATH = os.path.join(PROJECT_DIR, "optatives", "optatives.json")
+OPTATIVES_PLANTILLES = os.path.join(PROJECT_DIR, "optatives", "plantilles")
+
 # Pattern per a noms de fitxer PD:
 # PD_{CICLO}_{CODI}_{NOM}_{BORRADOR|OK}.md
 PD_FILE_RE = re.compile(
@@ -122,6 +125,47 @@ def get_moduls_del_cicle(cicle, familia=None):
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     return data.get("ModulosProfesionales", {})
+
+
+def get_optatives(cicle=None, familia=None):
+    """Carrega optatives/optatives.json i filtra per cicle/familia.
+
+    Si cicle i familia es donen, retorna només els mòduls optatius que
+    pertanyen a eixe cicle (segons el camp 'grups').
+    Si no, retorna tots.
+    """
+    if not os.path.exists(OPTATIVES_PATH):
+        return {}
+    with open(OPTATIVES_PATH, encoding="utf-8") as f:
+        optatives = json.load(f)
+
+    if cicle is None or familia is None:
+        return optatives
+
+    cicle = cicle.upper()
+    familia = familia.upper()
+    result = {}
+    for codi, modul in optatives.items():
+        for g in modul.get("grups", []):
+            if g.get("cicle", "").upper() == cicle and g.get("familia", "").upper() == familia:
+                # Si hi ha codi alternatiu per a este cicle, usem-lo
+                codi_real = modul.get("codis_alternatius", {}).get(cicle, codi)
+                result[codi_real] = modul
+                break
+    return result
+
+
+def get_moduls_merged(cicle, familia=None):
+    """Fusiona els mòduls del cicle + optatives que pertanyen al cicle.
+
+    Retorna un dict {codi: modul} on els codis alternatius es resolen
+    automàticament.
+    """
+    moduls = get_moduls_del_cicle(cicle, familia)
+    optatives = get_optatives(cicle, familia)
+    # Les optatives sobreescriuen si hi ha conflicte (no n'hi hauria)
+    moduls.update(optatives)
+    return moduls
 
 
 def parse_pd_filename(filename):

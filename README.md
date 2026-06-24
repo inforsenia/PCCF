@@ -67,6 +67,12 @@ los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
 
 `make proyecto-dam` fa (1) + (4) en un sol pas (compatible cap enrere).
 
+**Mòduls optatius compartits** (`make generar-plantilles-optatives`):
+- Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen desde `optatives/optatives.json` (compartit entre tots els cicles).
+- `make generar-plantilles-optatives` genera `optatives/libro_optatives.xlsx` i `optatives/plantilles/PD_*_BORRADOR.md`.
+- `make report-optatives` mostra l'estat BORRADOR/OK i `[###]` pendents.
+- Durant la compilació (`make compila-pccf-{CICLO}`), les PDs dels optatius que corresponguen al cicle es copien automàticament des de `optatives/plantilles/`.
+
 ---
 
 ## Programaciones Didácticas
@@ -131,6 +137,24 @@ El sistema genera automáticamente varios documentos a partir de los datos del J
 Estos documentos se generan **durante la compilación** (`make compila-pccf-{CICLO}`) en una carpeta temporal `.compila/` dins `plantilles_{FAMILIA}_{CICLO}/` i s'integren automàticament en el PCCF final. La carpeta `.compila/` es neteja automàticament després de la compilació.
 
 Si es vol tindre una còpia permanent d'estos fitxers, es poden copiar a `src_{FAMILIA}_{CICLO}/`.
+
+### Mòduls Optatius Compartits
+
+Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es defineixen una sola vegada a `optatives/optatives.json` i es compartixen entre tots els cicles que els oferten.
+
+**Característiques**:
+- Dades úniques (RAs, CEs, hores) al JSON centralitzat
+- Excel compartit: `optatives/libro_optatives.xlsx`
+- PDs compartides a `optatives/plantilles/PD_{CODI}_{MODUL}_{ESTAT}.md`
+- `ObjetivosGenerales` i `CompetenciasTitulo` buits al JSON (no apliquen a un cicle específic)
+
+**Generació**:
+```sh
+make generar-plantilles-optatives   # genera Excel + PDs
+make report-optatives               # report d'estat
+```
+
+**Integració en la compilació**: `make compila-pccf-{CICLO}` detecta quins optatius corresponen al cicle (segons el camp `grups` del JSON) i copia les PDs des de `optatives/plantilles/` cap a `.compila/` temporal dins `plantilles_{FAMILIA}_{CICLO}/`.
 
 ---
 
@@ -332,6 +356,32 @@ make report-memories
 
 El report es guarda a `PDFS/report_memories_{FAMILIA}.txt` amb la mateixa informació que `compilar-memories` però sense demanar confirmació ni generar PDF.
 
+#### `tools/json2optatives.py`
+
+Genera l'Excel compartit (`optatives/libro_optatives.xlsx`) i les PDs (`optatives/plantilles/PD_*_BORRADOR.md`) a partir del JSON `optatives/optatives.json`.
+
+```sh
+make generar-plantilles-optatives
+```
+
+Les PDs es generen amb Jinja2 a partir de la plantilla `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md`. No sobreescriu PDs existents (BORRADOR/OK).
+
+#### `tools/copy_optatives_pd.py`
+
+Copía les PDs dels mòduls optatius des de `optatives/plantilles/` cap al directori temporal de compilació d'un cicle. Utilitzat automàticament per `make compila-pccf-{CICLO}`.
+
+```sh
+python3 tools/copy_optatives_pd.py --cicle DAM --familia INF --plantilles-dir plantilles_INF_DAM
+```
+
+#### `tools/report_optatives.py`
+
+Genera un report de l'estat de les PDs optatives: fitxers en BORRADOR vs OK, detecció de `[###]` pendents.
+
+```sh
+make report-optatives
+```
+
 ## Construyendo Proyectos en Local
 
 Usando `Makefile` se han preparado una serie de reglas para faciliar la *compilación* a PDF de los diferentes Proyectos
@@ -403,6 +453,9 @@ Targets disponibles:
     report-pccf-dam              Report: BORRADOR/OK + [###] + Excel coherència
     compila-pccf-dam             Fase 2: compilar PCCF + Programaciones PDF
     proyecto-dam                 Fases 1+2 en un sol pas
+  Optatius compartits:
+    generar-plantilles-optatives  Generar Excel + PDs per a optatives a optatives/
+    report-optatives              Report d'estat de les PDs optatives
   Familia INF:
     proyecto-smx       Generar proyecto para SMX
     proyecto-asir      Generar proyecto para ASIR
@@ -445,6 +498,8 @@ Ejemplos:
   make report-pccf-dam              # Report d'estat
   make compila-pccf-dam             # Fase 2: PDFs
   make report-tots-pccf             # Report de TOTS els cicles
+  make generar-plantilles-optatives # Optatius: Excel + PDs compartides
+  make report-optatives             # Report d'estat dels optatius
   make generar-plantilles-memoria   # Genera plantilles de memòria
   make compilar-memories            # Compila memòries en PDF
   make CENTRO_EDUCATIVO=MIESCUELA proyecto-dam

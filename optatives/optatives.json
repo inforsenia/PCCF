@@ -1,0 +1,287 @@
+{
+    "MOPCOMPROF": {
+        "nombre": "Comunicació professional",
+        "creditos": "",
+        "horas": "96",
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Identifica les necessitats informatives de la comunitat, delimitant els processos d'informació i comunicació existents que faciliten la comunicació i difusió dels projectes i actuacions comunitàries.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han descrit els mètodes, tècniques i eines, valorant les necessitats informatives de la població de manera participativa.",
+                    "b": "En un supòsit pràctic d'anàlisi de les necessitats informatives d'una comunitat, s'han analitzat les accions i instruments de comunicació i difusió existents, valorant-ne la capacitat informativa i la influència en els nivells de participació.",
+                    "c": "S'han seleccionat eines i mètodes per detectar les necessitats informatives de la comunitat, col·laborant amb les persones responsables de comunicació i altres agents."
+                }
+            },
+            "RA02": {
+                "Resultado": "Identifica els diferents instruments de comunicació formal i informal existents en el territori d'actuació, analitzant-ne el potencial comunicatiu per delimitar-ne les possibles aplicacions.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han caracteritzat les fonts formals i informals de comunicació i les seues accions i instruments, analitzant-ne les possibilitats, limitacions i aplicacions en la difusió dels projectes comunitaris.",
+                    "b": "S'ha analitzat la informació transmesa a través de diferents canals de comunicació formals i informals, valorant-ne l'adequació a les característiques de les persones destinatàries i del projecte comunitari.",
+                    "c": "S'ha determinat la cobertura de la informació que rep la ciutadania del territori, analitzant els paràmetres rellevants.",
+                    "d": "S'han identificat els diferents elements i factors que intervenen en la transmissió de la informació, analitzant-ne el paper en l'eficàcia del procés comunicatiu.",
+                    "e": "S'han identificat les variables que cal tenir en compte per adequar els mitjans de transmissió i informació al missatge, valorant la importància de la coherència entre ambdós elements en el procés de comunicació.",
+                    "f": "S'han identificat llocs i espais per difondre la informació impresa, descrivint procediments per al seu manteniment, actualització i reposició.",
+                    "g": "S'ha analitzat la informació que es transmet a través dels diferents canals de comunicació, valorant-ne l'impacte en la comunitat."
+                }
+            },
+            "RA03": {
+                "Resultado": "Dinamitza la posada en marxa de les diferents accions de comunicació, adaptant-les a la realitat del territori i de la comunitat per afavorir la transmissió i recepció de la informació relativa a les actuacions comunitàries.",
+                "CriteriosEvaluacion": {
+                    "a": "En un supòsit pràctic d'una activitat de difusió d'un projecte o actuació comunitària, a partir d'un context i unes persones destinatàries:\n- S'han establit les accions de comunicació analitzant les característiques del projecte, del context i de la població destinatària.\n- S'ha determinat el missatge que cal transmetre, adequant-lo a la població a la qual s'adreça.\n- S'ha seleccionat el canal o mitjà de difusió, analitzant-ne la cobertura informativa.\n- S'han identificat els factors i criteris de gestió i control del mitjà seleccionat, valorant-ne la facilitat d'actualització.\n- S'han elaborat instruments de recollida d'informació sobre l'impacte aconseguit, valorant-ne l'objectivitat.",
+                    "b": "En un supòsit pràctic de difusió d'actuacions comunitàries a partir d'un context donat:\n- S'ha seleccionat la informació que cal transmetre, analitzant els projectes i actuacions comunitàries.\n- S'han elaborat protocols per a l'intercanvi i difusió d'informació, atenent a criteris d'eficiència, adequació i rendibilització dels instruments de comunicació.\n- S'han dissenyat els suports de transmissió de la informació tenint en compte les possibilitats d'actualització i les necessitats de manteniment.\n- S'han elaborat materials informatius analitzant la informació a transmetre i les característiques de la població destinatària.",
+                    "c": "S'han seleccionat recursos comunicatius propis de les diferents llengües i llenguatges, associant-los al context on s'utilitzaran."
+                }
+            },
+            "RA04": {
+                "Resultado": "Promou i manté canals de comunicació en l'entorn d'intervenció, incorporant la perspectiva de gènere i la interseccionalitat.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han diferenciat els tipus de discriminació (directa, indirecta, convergent, entre altres), caracteritzant-los.",
+                    "b": "S'han descrit aspectes o situacions de la vida comunitària on es puguen percebre discriminacions per raó de sexe, gènere, orientació o preferència sexual o qualsevol altre tipus de discriminació, aplicant una mirada interseccional.",
+                    "c": "S'han creat suports de comunicació en diferents formats (bibliogràfics, audiovisuals, digitals, entre altres), assegurant un ús no sexista ni discriminatori del llenguatge, seleccionant i elaborant la informació necessària i mantenint-los actualitzats per donar resposta a les necessitats informatives de l'entorn d'intervenció.",
+                    "d": "S'ha detectat i comunicat la reproducció d'estereotips sexistes i discriminatoris en el llenguatge, en el tractament de les imatges i en les accions de l'entorn d'intervenció, seguint els protocols i vies establerts, per erradicar qualsevol tipus de discriminació."
+                }
+            },
+            "RA05": {
+                "Resultado": "Avalua el grau d'utilitat de les accions i instruments de comunicació utilitzats, seguint els protocols establerts per l'equip de treball, per retroalimentar i millorar el procés de comunicació i difusió.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han identificat procediments i instruments, valorant l'impacte de les accions de comunicació.",
+                    "b": "En un supòsit pràctic d'anàlisi de l'impacte de les accions de comunicació i difusió de projectes i actuacions comunitàries a partir d'un context donat:\n- S'ha valorat l'adequació dels canals emprats per a la transmissió d'informació.\n- S'han seleccionat i aplicat les tècniques de recollida d'informació.\n- S'han definit, després de l'anàlisi de la informació recollida, nous procediments que milloren la qualitat de la transmissió.\n- S'han identificat els aspectes o situacions de la vida comunitària on es puguen percebre discriminacions (directes, indirectes, convergents, entre altres) o tractes no igualitaris per raó de sexe o qualsevol altre tipus de discriminació.\n- S'ha recollit informació de diverses fonts que permeta analitzar diversos punts de vista.\n- S'han utilitzat tècniques i instruments adequats a les situacions plantejades, analitzant els problemes i necessitats comunitàries.\n- S'ha valorat si la informació recollida és útil i suficient per dissenyar accions de millora.",
+                    "c": "S'han determinat processos de recollida d'informació útil i contrastada que permeten realitzar el diagnòstic de situacions de discriminació i desigualtat.",
+                    "d": "S'ha registrat la informació en el format establert, realitzant el diagnòstic inicial de les situacions de discriminació i desigualtat."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "SMX", "curs": "2", "familia": "INF"},
+            {"cicle": "DAM", "curs": "2", "familia": "INF"},
+            {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "EI",  "curs": "2", "familia": "SCO"},
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+        ]
+    },
+    "MOPANGPROF": {
+        "nombre": "Anglés oral en entorns professionals",
+        "creditos": "",
+        "horas": "100",
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Comprén informació d'índole professional continguda en tot tipus de discursos orals emesos per qualsevol mitjà de comunicació, interpretant amb precisió el contingut del missatge.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han emés missatges generals propis del sector utilitzant nexes i estratègies d'interacció.",
+                    "b": "S'han emés missatges relacionats amb la vida socioprofessional.",
+                    "c": "S'ha intercanviat amb fluïdesa informació específica i detallada utilitzant estructures d'una complexitat d'acord amb el nivell competencial.",
+                    "d": "S'ha expressat amb fluïdesa, precisió i eficàcia sobre temes professionals, marcant amb claredat la relació entre les idees.",
+                    "e": "S'han expressat i defés punts de vista amb claredat, proporcionant explicacions i arguments adequats.",
+                    "f": "S'han seleccionat i aplicat els registres adequats per a l'emissió del missatge, així com protocols i normes de relació social propis del país.",
+                    "g": "S'han realitzat presentacions, ben estructurades, sobre temes del seu àmbit professional, fent ús dels protocols establits.",
+                    "h": "S'ha descrit i seqüenciat oralment un procés de treball de la seua competència.",
+                    "i": "S'han utilitzat estratègies de mediació reformulant el discurs o part d'aquest per a facilitar la comprensió.",
+                    "j": "S'ha interaccionat adoptant un nivell de formalitat adequat a les circumstàncies.",
+                    "k": "S'ha utilitzat correctament la terminologia de la professió."
+                }
+            },
+            "RA02": {
+                "Resultado": "Produeix missatges orals clars i estructurats, participant com a agent actiu en converses professionals, analitzant el contingut de la situació i adaptant-se al registre lingüístic de l'interlocutor.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han emés missatges generals propis del sector utilitzant nexes i estratègies d'interacció.",
+                    "b": "S'han emés missatges relacionats amb la vida socioprofessional.",
+                    "c": "S'ha intercanviat amb fluïdesa informació específica i detallada utilitzant estructures d'una complexitat d'acord amb el nivell competencial.",
+                    "d": "S'han seleccionat i aplicat els registres adequats per a l'emissió del missatge, així com protocols i normes de relació social propis del país.",
+                    "e": "S'han realitzat presentacions, ben estructurades, sobre temes del seu àmbit professional, fent ús dels protocols establits.",
+                    "f": "S'ha utilitzat correctament la terminologia de la professió.",
+                    "g": "S'ha descrit i seqüenciat oralment un procés de treball de la seua competència.",
+                    "h": "S'han utilitzat estratègies de mediació reformulant el discurs o part d'aquest per a facilitar la comprensió.",
+                    "i": "S'ha interaccionat espontàniament, adoptant un nivell de formalitat adequat a les circumstàncies."
+                }
+            },
+            "RA03": {
+                "Resultado": "Aplica actituds i comportaments professionals en situacions de comunicació, descrivint les relacions típiques característiques del país de la llengua estrangera.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han definit els trets més significatius dels costums i usos de la comunitat on es parla la llengua estrangera.",
+                    "b": "S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera.",
+                    "c": "S'han identificat els aspectes socioprofessionals propis del sector, en qualsevol tipus de text.",
+                    "d": "S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+                    "e": "S'han identificat les oportunitats d'aprenentatge i ocupació a Europa.",
+                    "f": "S'han reconegut els marcadors lingüístics de la procedència regional.",
+                    "g": "S'ha utilitzat la llengua estrangera per a comunicar-se amb parlants o estudiants d'aquesta llengua."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "SMX", "curs": "2", "familia": "INF"},
+            {"cicle": "DAM", "curs": "2", "familia": "INF"},
+            {"cicle": "APD", "curs": "1", "familia": "SCO"},
+            {"cicle": "EI",  "curs": "2", "familia": "SCO"},
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+        ]
+    },
+    "INP": {
+        "nombre": "Introducció al Núvol Públic",
+        "creditos": "10",
+        "horas": "100",
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Comprèn els fonaments de la computació en el núvol, els seus avantatges davant sistemes tradicionals, el marc d'adopció, els principis de migració i els aspectes clau de facturació, com estimació i optimització de costos.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha comprès els conceptes fonamentals de la computació en el núvol.",
+                    "b": "S'ha demostrat la capacitat per a explicar els avantatges del núvol davant sistemes tradicionals",
+                    "c": "S'ha participat en activitats relacionades amb l'ecosistema de serveis en el núvol.",
+                    "d": "S'han identificat els principis bàsics de la facturació i costos en el núvol.",
+                    "e": "S'ha fet ús correcte d'eines per a estimar i gestionar pressupostos.",
+                    "f": "S'ha participat en activitats pràctiques sobre gestió de costos."
+                }
+            },
+            "RA02": {
+                "Resultado": "Identifica els components clau de la infraestructura global del núvol, diferenciant serveis principals, regions, zones de disponibilitat i aplicant mesures bàsiques de seguretat com el model de responsabilitat compartida, gestió d'accés i protecció de dades",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha adquirit coneixement dels components d'una infraestructura global en el núvol.",
+                    "b": "S'ha demostrat la capacitat per a explorar i descriure les principals categories de serveis disponibles",
+                    "c": "S'ha realitzat una avaluació de l'ús adequat de serveis bàsics en exercicis pràctics.",
+                    "d": "S'ha comprès el model de responsabilitat compartida en el núvol.",
+                    "e": "S'ha aplicat mesures de seguretat bàsiques mitjançant eines de gestió d'accés.",
+                    "f": "S'han realitzat exercicis sobre gestió d'usuaris i polítiques de seguretat."
+                }
+            },
+            "RA03": {
+                "Resultado": "Dissena i configura xarxes virtuals i serveis de còmput en el núvol, aplicant bones pràctiques de seguretat, estratègies de balanç de càrrega, escalat automàtic i aprofitant tecnologies serverless, contenidors i màquines virtuals segons casos d'ús específics.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha realitzat el disseny i configuració de xarxes virtuals privades.",
+                    "b": "S'ha aplicat bones pràctiques de seguretat en xarxes i arquitectures.",
+                    "c": "S'ha participat activament en la creació i configuració d'una xarxa funcional.",
+                    "d": "S'ha realitzat la selecció de serveis de computació adequats segons casos d'ús.",
+                    "e": "S'ha dut a terme la configuració i gestió de balanç de càrrega i escalat automàtic.",
+                    "f": "S'han desenvolupat pràctiques relacionades amb l'optimització de recursos computacionals."
+                }
+            },
+            "RA04": {
+                "Resultado": "Gestiona serveis d'emmagatzematge i bases de dades en el núvol, seleccionant tecnologies adequades per a casos específics, i dissenya arquitectures escalables i resilients utilitzant eines de monitoratge i optimització per a millorar el rendiment.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha realitzat la diferenciació entre tecnologies d'emmagatzematge en el núvol.",
+                    "b": "S'ha dut a terme la configuració i gestió de bases de dades en un entorn de núvol.",
+                    "c": "S'ha treballat en la resolució de problemes pràctics sobre emmagatzematge i bases de dades",
+                    "d": "S'ha dissenyat arquitectures escalables i resilients basades en les millors pràctiques.",
+                    "e": "S'ha fet ús d'eines de monitoratge i recomanacions d'optimització.",
+                    "f": "S'ha participat en activitats que simulen l'anàlisi i millora d'arquitectures existents."
+                }
+            }
+        },
+        "codis_alternatius": {
+            "DAM": "CVOPS190",
+            "EI": "CVOPS190"
+        },
+        "grups": [
+            {"cicle": "SMX", "curs": "2", "familia": "INF"},
+            {"cicle": "DAM", "curs": "2", "familia": "INF"},
+            {"cicle": "EI",  "curs": "2", "familia": "SCO"}
+        ]
+    },
+    "IPR": {
+        "nombre": "Introducció a la Programació",
+        "creditos": "-",
+        "horas": "100",
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Reconèix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han identificat els blocs que componen l'estructura d'un programa informàtic.",
+                    "b": "S'han creat projectes de desenvolupament d'aplicacions",
+                    "c": "S'han utilitzat entorns integrats de desenvolupament.",
+                    "d": "S'han identificat els diferents tipus de variables i la utilitat específica de cadascun.",
+                    "e": "S'ha modificat el codi d'un programa per a crear i utilitzar variables.",
+                    "f": "S'han creat i utilitzat constants i literals.",
+                    "g": "S'han classificat, reconegut i utilitzat en expressions els operadors del llenguatge.",
+                    "h": "S'ha comprovat el funcionament de les conversions de tipus explícites i implícites.",
+                    "i": "S'han introduït comentaris en el codi."
+                }
+            },
+            "RA02": {
+                "Resultado": "Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han identificat els fonaments de la programació orientada a objectes.",
+                    "b": "S'han escrit programes simples.",
+                    "c": "S'han instanciat objectes a partir de classes predefinides.",
+                    "d": "S'han utilitzat mètodes i propietats dels objectes.",
+                    "e": "S'han escrit trucades a mètodes estàtics.",
+                    "f": "S'han utilitzat paràmetres en la trucada a mètodes.",
+                    "g": "S'han incorporat i utilitzat llibreries d'objectes.",
+                    "h": "S'han utilitzat constructors.",
+                    "i": "S'ha utilitzat l'entorn integrat de desenvolupament en la creació i compilació de programes simples."
+                }
+            },
+            "RA03": {
+                "Resultado": "Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha escrit i provat codi que faça ús d'estructures de selecció.",
+                    "b": "S'han utilitzat estructures de repetició.",
+                    "c": "S'han reconegut les possibilitats de les sentències de salt.",
+                    "d": "S'ha escrit codi utilitzant control d'excepcions.",
+                    "e": "S'han creat programes executables utilitzant diferents estructures de control.",
+                    "f": "S'han provat i depurat els programes.",
+                    "g": "S'ha comentat i documentat el codi.",
+                    "h": "S'han creat excepcions.",
+                    "i": "S'han utilitzat asercions per a la detecció i correcció d'errors durant la fase de desenvolupament."
+                }
+            },
+            "RA04": {
+                "Resultado": "Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha reconegut la sintaxi, estructura i components típics d'una classe.",
+                    "b": "S'han definit classes.",
+                    "c": "S'han definit propietats i mètodes.",
+                    "d": "S'han creat constructors.",
+                    "e": "S'han desenvolupat programes que instancien i utilitzen objectes de les classes creades anteriorment.",
+                    "f": "S'han utilitzat mecanismes per a controlar la visibilitat de les classes i dels seus membres.",
+                    "g": "S'han definit i utilitzat classes heretades.",
+                    "h": "S'han creat i utilitzat mètodes estàtics.",
+                    "i": "S'han creat i utilitzat conjunts i llibreries de classes."
+                }
+            },
+            "RA05": {
+                "Resultado": "Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha utilitzat la consola per a realitzar operacions d'entrada i sortida d'informació.",
+                    "b": "S'han aplicat formats en la visualització de la informació.",
+                    "c": "S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades.",
+                    "d": "S'han utilitzat fitxers per a emmagatzemar i recuperar informació.",
+                    "e": "S'han creat programes que utilitzen diversos mètodes d'accés al contingut dels fitxers.",
+                    "f": "S'han utilitzat les eines de l'entorn de desenvolupament per a crear interfícies gràfics d'usuari simples.",
+                    "g": "S'han programat controladors d'esdeveniments.",
+                    "h": "S'han escrit programes que utilitzen interfícies gràfics per a l'entrada i sortida d'informació."
+                }
+            },
+            "RA06": {
+                "Resultado": "Escriu programes que manipulen informació, seleccionant i utilitzant tipus avançats de dades.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han escrit programes que utilitzen matrius (arrays)",
+                    "b": "S'han reconegut les llibreries de classes relacionades amb tipus de dades avançats.",
+                    "c": "S'han utilitzat llistes per a emmagatzemar i processar informació.",
+                    "d": "S'han utilitzat iteradors per a recórrer els elements de les llistes.",
+                    "e": "S'han reconegut les característiques i avantatges de cadascuna de les col·leccions de dades disponibles.",
+                    "f": "S'han creat classes i mètodes genèrics.",
+                    "g": "S'han utilitzat expressions regulars en la cerca de patrons en cadenes de text.",
+                    "h": "S'han identificat les classes relacionades amb el tractament de documents escrits en diferents llenguatges d'intercanvi de dades.",
+                    "i": "S'han realitzat programes que realitzen manipulacions sobre documents escrits en diferents llenguatges d'intercanvi de dades.",
+                    "j": "S'han utilitzat operacions agregades per al maneig d'informació emmagatzemada en col·leccions."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "SMX", "curs": "2", "familia": "INF"}
+        ]
+    }
+}

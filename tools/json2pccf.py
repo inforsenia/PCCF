@@ -12,7 +12,7 @@ import jinja2
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import get_hoja_label
+from pccf_utils import get_hoja_label, get_optatives
 
 
 def get_template_loader_and_env(familia, template_name):
@@ -79,6 +79,10 @@ if not args.generate_only:
 
 data_box = Box(data)
 
+# Load optatives for this cycle and merge into a single dict for PCCF_030
+optatives_moduls = get_optatives(ciclo, familia)
+moduls_merged = {**dict(data_box.ModulosProfesionales), **optatives_moduls}
+
 # -----------------------------------------------------------------------
 # Mode només competències: genera PCCF_030/033 a outdir i ix
 # -----------------------------------------------------------------------
@@ -111,7 +115,7 @@ if args.generate_competences:
             competencias_profesionales=data_box.CompetenciasProfesionales,
             competencias_sociales=data_box.CompetenciasSociales,
             cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
-            modulos=data_box.ModulosProfesionales,
+            modulos=moduls_merged,
         )
         fpath = os.path.join(outdir, f"PCCF_030_{s_ciclo}_ContribucioModuls.md")
         with open(fpath, "w", encoding="utf-8") as f:
@@ -156,7 +160,7 @@ if not args.generate_only:
             competencias_profesionales=data_box.CompetenciasProfesionales,
             competencias_sociales=data_box.CompetenciasSociales,
             cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
-            modulos=data_box.ModulosProfesionales,
+            modulos=moduls_merged,
         )
         contrib_file = os.path.join(outdir, f"PCCF_030_{s_ciclo}_ContribucioModuls.md")
         with open(contrib_file, "w", encoding="utf-8") as fc:

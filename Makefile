@@ -125,10 +125,18 @@ compila-pccf-%:
 			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
 			-o "$(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
 			$$FILES
+	@echo " ${LIGHTBLUE} Incluint PDs d'optatives (només les del cicle)${RESET}"
+	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PLANTILLES_DIR)"
 	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
-	@cd "$(PLANTILLES_DIR)" && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
+	@cd "$(PLANTILLES_DIR)" && \
+		OPT_PD_GLOB="./.optatives_pd/PD_*.md"; \
+		if [ -f "./.optatives_pd/.copied_count" ] && [ "$$(cat ./.optatives_pd/.copied_count)" -gt 0 ]; then \
+			pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md $$OPT_PD_GLOB; \
+		else \
+			pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md; \
+		fi
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
-	rm -rf "$(PLANTILLES_DIR)/.compila"
+	rm -rf "$(PLANTILLES_DIR)/.compila" "$(PLANTILLES_DIR)/.optatives_pd"
 	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
 	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PLANTILLES_DIR)" 2>&1 | tail -3
 	@echo " ${LIGHTGREEN} [ Compilacio $(CICLO_UPPER) completada ] ${RESET}"
@@ -151,6 +159,19 @@ report-pccf-%:
 	$(eval PLANTILLES_DIR=plantilles_$(FAMILIA)_$(CICLO_UPPER))
 	@if [ ! -d "$(PLANTILLES_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PLANTILLES_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	python3 tools/report_pccf.py $(CICLO_UPPER) "$(PLANTILLES_DIR)"
+
+# ============================================================
+#  OPTATIVES (shared transversal modules)
+# ============================================================
+generar-plantilles-optatives:
+	@echo " ${LIGHTBLUE} [ Generant plantilles optatives compartides ] ${RESET}"
+	@mkdir -p optatives/plantilles
+	python3 tools/json2optatives.py
+	@echo " ${LIGHTGREEN} [ Plantilles optatives generades a optatives/plantilles/ ] ${RESET}"
+
+report-optatives:
+	@echo " ${LIGHTYELLOW} [ Report optatives ] ${RESET}"
+	python3 tools/report_optatives.py
 
 # ============================================================
 #  Bulk targets (all cycles)
@@ -258,8 +279,11 @@ help:
 	@echo "    todos-inf          Generar todos los proyectos INF"
 	@echo "    todos-sco          Generar todos los proyectos SCO"
 	@echo "    report             Generar reporte de análisis de JSONs"
+	@echo "  Optatives (compartides):"
+	@echo "    generar-plantilles-optatives  Genera Excel + PDs dels mòduls optatius compartits"
+	@echo "    report-optatives               Report de l'estat de les optatives"
+	@echo ""
 	@echo "  Memòries:"
-	@echo "    generar-plantilles-memoria  Generar plantilles MD de memòria"
 	@echo "    report-memories             Report de l'estat de les memòries"
 	@echo "    compila-memories            Report + confirmació + compila tot"
 	@echo "    memories                    Tot el procés (genera + compila)"
