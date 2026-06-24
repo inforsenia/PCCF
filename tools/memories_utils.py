@@ -7,6 +7,7 @@ Funcions compartides per a la gestió de memòries (report i compilació).
 import os
 import re
 import json
+from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -27,6 +28,59 @@ def get_output_parent(base_dir):
     """
     suffix = base_dir.replace("memoria", "", 1)
     return f"memories_{suffix}"
+
+
+def get_report_dir(base_dir="memoriaFP"):
+    """Return the report dir path: PDFS/0_YYYYMMDD_report_memories/"""
+    today = datetime.now().strftime("%Y%m%d")
+    prefix = base_dir.replace("memoria", "", 1)
+    report_dir = os.path.join(PROJECT_DIR, "PDFS", f"0_{today}_report_memories")
+    return report_dir
+
+
+def normalitza_fitxers(memories_dir):
+    """
+    Normalitza noms de fitxer abans de parsejar:
+    - Renombra _ok.md  → _OK.md  (automàtic)
+    - Detecta _BORR.md → es reporta com a BORR_TRUNCAT
+    - Detecta fitxers sense sufix → es reporten com a SENSE_SUFIX
+    - Ignora *safeBackup*
+
+    Retorna (renamed, issues) on:
+      renamed = llista de (nom_antic, nom_nou)
+      issues  = llista de (nom_fitxer, tipus)
+    """
+    renamed = []
+    issues = []
+    if not os.path.isdir(memories_dir):
+        return renamed, issues
+
+    for fname in sorted(os.listdir(memories_dir)):
+        if not fname.endswith(".md"):
+            continue
+        if "safeBackup" in fname:
+            continue
+
+        # _ok.md → _OK.md
+        if fname.endswith("_ok.md"):
+            new_name = fname[:-6] + "_OK.md"
+            os.rename(
+                os.path.join(memories_dir, fname),
+                os.path.join(memories_dir, new_name)
+            )
+            renamed.append((fname, new_name))
+            continue
+
+        # _BORR.md (truncat, pero no _BORRADOR.md)
+        if re.search(r'_BORR\.md$', fname) and not fname.endswith("_BORRADOR.md"):
+            issues.append((fname, "BORR_TRUNCAT"))
+            continue
+
+        # Sense sufix (ni OK ni BORRADOR)
+        if not re.search(r'_(OK|ok|Ok|BORRADOR|borrador|BORR|borr)\.md$', fname):
+            issues.append((fname, "SENSE_SUFIX"))
+
+    return renamed, issues
 
 
 def parse_filename(filename):
@@ -383,7 +437,7 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
         report_lines.append("-" * 40)
         for p in sorted(duplicates, key=parsed_key):
             report_lines.append(f"  [DUPLICAT] {parsed_label(p)}")
-        report_lines.append("  (Conservau el fitxer OK i esborreu el BORRADOR)")
+        report_lines.append("  Reviseu els dos fitxers, conserveu el correcte amb sufix _OK i esborreu l'altre")
         report_lines.append("")
 
     if missing:

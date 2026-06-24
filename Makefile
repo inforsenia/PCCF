@@ -113,13 +113,18 @@ compila-pccf-%:
 	mkdir -p "$(PLANTILLES_DIR)/.compila"
 	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)/.compila" --generate-competences
 	@echo " ${LIGHTBLUE} Generant PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
-	@cd "$(PROJECT_ROOT)" && pandoc --resource-path src:src_$(FAMILIA):src_$(FAMILIA)_$(CICLO_UPPER):"$(PLANTILLES_DIR)"/.compila \
-		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
-		-o "$(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
-		src/PCCF_*.md \
-		src_$(FAMILIA)/PCCF_*.md \
-		src_$(FAMILIA)_$(CICLO_UPPER)/PCCF_*.md \
-		"$(PLANTILLES_DIR)"/.compila/PCCF_*.md
+	@cd "$(PROJECT_ROOT)" && \
+		FILES=$$(find src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER) "$(PLANTILLES_DIR)/.compila" \
+			-maxdepth 1 -name 'PCCF_*.md' -type f 2>/dev/null | \
+			while IFS= read -r f; do \
+				b=$$(basename "$$f"); \
+				n=$$(echo "$$b" | cut -d_ -f2); \
+				echo "$$n:$$f"; \
+			done | sort -t: -k1 -n | cut -d: -f2-); \
+		pandoc --resource-path src:src_$(FAMILIA):src_$(FAMILIA)_$(CICLO_UPPER):"$(PLANTILLES_DIR)"/.compila \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
+			-o "$(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
+			$$FILES
 	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
 	@cd "$(PLANTILLES_DIR)" && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"

@@ -16,7 +16,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 sys.path.insert(0, SCRIPT_DIR)
-from memories_utils import parse_filename, get_expected, get_expected_esobat, build_report_lines, get_output_parent
+from memories_utils import parse_filename, get_expected, get_expected_esobat, build_report_lines, get_output_parent, normalitza_fitxers, get_report_dir
 
 
 def main():
@@ -50,8 +50,10 @@ def main():
         print(f"Error: no es troba el directori {memories_dir}")
         sys.exit(1)
 
-    pdf_dir = os.path.join(PROJECT_DIR, "PDFS")
-    os.makedirs(pdf_dir, exist_ok=True)
+    # Normalitzar noms abans de parsejar
+    renamed, issues = normalitza_fitxers(memories_dir)
+    for old_n, new_n in renamed:
+        print(f"  Renombrat: {old_n} → {new_n}")
 
     all_files = sorted(os.listdir(memories_dir))
     parsed = []
@@ -67,11 +69,26 @@ def main():
 
     report_lines, _, _, _, _ = build_report_lines(familia, config, parsed, expected, output_parent)
 
+    # Afegir secció de noms incorrectes al report
+    if issues:
+        report_lines.insert(1, "")
+        report_lines.insert(1, f"  AVÍS: {len(issues)} fitxers amb nom incorrecte (revisau més avall)")
+        report_lines.append("")
+        report_lines.append("FITXERS AMB NOMS INCORRECTES (cal revisió del docent):")
+        report_lines.append("-" * 40)
+        for fname, tipus in issues:
+            if tipus == "BORR_TRUNCAT":
+                report_lines.append(f"  [BORR_TRUNCAT] {fname} — El nom hauria d'acabar en _BORRADOR.md")
+            elif tipus == "SENSE_SUFIX":
+                report_lines.append(f"  [SENSE_SUFIX] {fname} — Afegiu _OK o _BORRADOR al nom del fitxer")
+        report_lines.append("")
+
     report_text = "\n".join(report_lines)
     print(report_text)
 
-    report_prefix = base_dir.replace("memoria", "", 1)
-    report_path = os.path.join(pdf_dir, f"report_memories_{report_prefix}_{familia}.txt")
+    report_dir = get_report_dir(base_dir)
+    os.makedirs(report_dir, exist_ok=True)
+    report_path = os.path.join(report_dir, f"{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report_text)
     print(f"\nReport guardat a: {report_path}")

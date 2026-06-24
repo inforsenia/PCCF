@@ -1,6 +1,7 @@
 | PCCF                                                         | Document associat                                            | Observacions                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Portada                                                      | PCCF_000_DAM_Introduccion.md                                 |                                                              |
+| 0. Intro                                                     | PCCF_001_DAM_Introduccion.md                                 |                                                              |
 | 1. Marc normatiu                                             | PCCF_010_MarcNormatiuGeneralFP.md<br />PCCF_013_INF_MarcNormatiu.md<br />PCCF_016_DAM_MarcNormatiu.md |                                                              |
 | 2. Adequació i adaptació de les competències professionals del títol al context | PCCF_020_DAM_Context.md                                      |                                                              |
 | 3. Competències professionals del cicle                      | PCCF_030_DAM_ContribucioModuls.md<br />PCCF_033_DAM_ImportanciaCompetencies.md | S'hauria de generar automàticament a partir de la informació del json |

@@ -30,7 +30,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 sys.path.insert(0, SCRIPT_DIR)
-from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent
+from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent, normalitza_fitxers, get_report_dir
 
 
 def _generate_pie_chart(aprov, susp, filepath, absents=None):
@@ -195,8 +195,9 @@ def main():
     print(report_text)
 
     # Save report
-    report_prefix = base_dir.replace("memoria", "", 1)
-    report_path = os.path.join(pdf_dir, f"report_memories_{report_prefix}_{familia}.txt")
+    report_dir = get_report_dir(base_dir)
+    os.makedirs(report_dir, exist_ok=True)
+    report_path = os.path.join(report_dir, f"{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report_text)
     print(f"\nReport guardat a: {report_path}")
