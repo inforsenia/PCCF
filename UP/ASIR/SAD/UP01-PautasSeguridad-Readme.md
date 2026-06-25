@@ -23,7 +23,7 @@
 
 | RA02 | Criterios de Evaluación                              |
 |------|------------------------------------------------------|
-| a||Se han clasificado los principales tipos de amenazas lógicas contra un sistema informático.|
+| a|Se han clasificado los principales tipos de amenazas lógicas contra un sistema informático.|
 | c|Se han identificado la anatomía de los ataques más habituales, así como las medidas preventivas y paliativas disponibles.|
 
 
