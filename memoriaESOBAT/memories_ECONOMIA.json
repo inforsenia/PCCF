@@ -36,7 +36,9 @@
       "nom": "1r de Batxillerat",
       "etapa": "BAT",
       "materies": [
-        {"codi": "ECONOMIA", "nom": "Economia", "grups": ["G1","G2"]}
+        {"codi": "ECONOMIA", "nom": "Economia", "grups": ["G1","G2"]},
+        {"codi": "GESPROJ", "nom": "Gestio de projectes", "grups": ["G1"]}
+
       ]
     },
     "2BAT": {

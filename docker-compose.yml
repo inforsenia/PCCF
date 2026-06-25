@@ -10,6 +10,7 @@ services:
     # Variables de entorno útiles
     environment:
       - TERM=xterm-256color
+      - TZ=Europe/Madrid
     # Configuración TTY para modo interactivo
     tty: true
     stdin_open: true

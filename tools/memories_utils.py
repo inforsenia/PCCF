@@ -30,13 +30,17 @@ def get_output_parent(base_dir):
     return f"memories_{suffix}"
 
 
-def get_report_dir(base_dir="memoriaFP"):
-    """Return the report dir path: PDFS/0_YYYYMMDD_report_memories/"""
-    today = datetime.now().strftime("%Y%m%d")
-    prefix = base_dir.replace("memoria", "", 1)
-    report_dir = os.path.join(PROJECT_DIR, "PDFS", f"0_{today}_report_memories")
+def get_report_dir(base_dir="memoriaFP", is_esobat=False, timestamp=None):
+    """Return the report dir path: PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/
+    If timestamp is None, falls back to env REPORT_TIMESTAMP, then to datetime.now().
+    """
+    if timestamp is None:
+        timestamp = os.environ.get('REPORT_TIMESTAMP')
+    if timestamp is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    tipus = "ESOBAT" if is_esobat else "FP"
+    report_dir = os.path.join(PROJECT_DIR, "PDFS", f"0_{timestamp}_report_memories_{tipus}")
     return report_dir
-
 
 def normalitza_fitxers(memories_dir):
     """
@@ -284,6 +288,13 @@ def check_placeholders(filepath):
     if aprov_zero and susp_zero:
         remaining.append("[ZERO_STATS]")
 
+    # Detect non-standard checkbox fills: [ x ], [x ], [ x ], etc.
+    # Valid formats: [x] or [X] (with or without uppercase, no extra spaces)
+    all_filled = re.findall(r"\[\s*[xX]\s*\]", content)
+    non_standard = [m for m in all_filled if len(m) > 3]
+    if non_standard:
+        remaining.append("[CHECKBOX_FORMAT]")
+
     return remaining
 
 
@@ -465,14 +476,16 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
     if incomplete_ok:
         report_lines.append("MÒDULS OK AMB CAMPS PER OMPLIR o INCONGRUÈNCIES:")
         report_lines.append("-" * 40)
+        custom_markers = {"[ZERO_STATS]", "[CHECKBOX_FORMAT]"}
         for p, rem, stats_issues in incomplete_ok:
             parts = []
+            ph_count = len([r for r in rem if r not in custom_markers])
+            if ph_count:
+                parts.append(f"{ph_count} marcadors pendents")
             if "[ZERO_STATS]" in rem:
                 parts.append("estadístiques amb 0 aprovats i 0 suspensos")
-            else:
-                ph_count = len([r for r in rem if r != "[ZERO_STATS]"])
-                if ph_count:
-                    parts.append(f"{ph_count} marcadors pendents")
+            if "[CHECKBOX_FORMAT]" in rem:
+                parts.append("caselles marcades amb format incorrecte (useu [x] sense espais)")
             parts.extend(stats_issues)
             msg = " — ".join(parts) if parts else f"{len(rem)} marcadors restants"
             report_lines.append(f"  [INCOMPLET] {parsed_label(p)} — {msg}")

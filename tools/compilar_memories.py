@@ -34,19 +34,19 @@ from memories_utils import parse_filename, curs_display, get_grup_label, get_exp
 
 
 def _generate_pie_chart(aprov, susp, filepath, absents=None):
+    data = [(aprov, '#2ecc71', 'Aprovats')]
+    if susp > 0:
+        data.append((susp, '#e74c3c', 'Suspensos'))
+    if absents is not None and absents > 0:
+        data.append((absents, '#f39c12', 'Absents'))
+
+    if not data:
+        return
+
     fig, ax = plt.subplots(figsize=(2, 2))
-    if absents is not None and aprov == 0 and susp == 0:
-        sizes = [absents]
-        colors = ['#f39c12']
-        labels = ['Absents']
-    elif absents is not None:
-        sizes = [aprov, susp, absents]
-        colors = ['#2ecc71', '#e74c3c', '#f39c12']
-        labels = ['Aprovats', 'Suspensos', 'Absents']
-    else:
-        sizes = [aprov, susp]
-        colors = ['#2ecc71', '#e74c3c']
-        labels = ['Aprovats', 'Suspensos']
+    sizes = [d[0] for d in data]
+    colors = [d[1] for d in data]
+    labels = [d[2] for d in data]
     wedges, texts, autotexts = ax.pie(
         sizes, labels=labels, colors=colors,
         startangle=90, autopct='%1.0f%%',
@@ -84,7 +84,7 @@ def _add_stats_row(content, pie_key):
         aprov_int = int(aprov_val)
         absents_int = int(absents_val) if absents_val and absents_val.isdigit() else None
 
-        total = susp_int + aprov_int
+        total = susp_int + aprov_int + (absents_int if absents_int else 0)
         if total > 0:
             pct = aprov_int / total * 100
             row = f"| Percentatge d'aprovats | {pct:.0f}% |"
@@ -115,6 +115,67 @@ def _add_stats_row(content, pie_key):
     sep = "\n\n" if tail else ""
     content = content[:insert_pos] + "\n" + extra + sep + tail
     return content
+
+
+def _extract_stats(content):
+    """Extract (aprov, susp, absents) from module markdown content.
+    Returns (aprov_int, susp_int, absents_int_or_None) or None if not found.
+    """
+    susp_match = re.search(r'^\|\s*Suspensos(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    aprov_match = re.search(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    absents_match = re.search(r'^\|\s*No avaluable\s*/\s*absentisme\s*\|\s*(\d+|\[###\])\s*\|$', content, re.MULTILINE)
+    if not susp_match or not aprov_match:
+        return None
+    susp_val = susp_match.group(1)
+    aprov_val = aprov_match.group(1)
+    if not susp_val.isdigit() or not aprov_val.isdigit():
+        return None
+    susp_int = int(susp_val)
+    aprov_int = int(aprov_val)
+    absents_int = int(absents_match.group(1)) if absents_match and absents_match.group(1).isdigit() else None
+    return aprov_int, susp_int, absents_int
+
+
+def _generate_bar_chart(data, filepath):
+    """Generate a stacked vertical bar chart with per-module stats.
+    data: list of (label, aprovats, suspensos, absents_or_None)
+    """
+    fig, ax = plt.subplots(figsize=(8, 6))
+    num_bars = len(data)
+
+    if num_bars == 0:
+        ax.text(0.5, 0.5, 'No hi ha dades completes per al gràfic resum',
+                ha='center', va='center', transform=ax.transAxes, fontsize=14)
+        ax.set_title('Resum d\'estadístiques per mòdul')
+        ax.axis('off')
+    else:
+        fig.set_size_inches(max(10, num_bars * 1.2), 5)
+        labels = [d[0] for d in data]
+        aprovats = [d[1] for d in data]
+        suspensos = [d[2] for d in data]
+        absents = [d[3] if d[3] else 0 for d in data]
+
+        x_pos = range(num_bars)
+        bar_width = 0.6
+
+        ax.bar(x_pos, aprovats, bar_width, color='#2ecc71', label='Aprovats')
+        ax.bar(x_pos, suspensos, bar_width, bottom=aprovats, color='#e74c3c', label='Suspensos')
+        bottoms = [a + s for a, s in zip(aprovats, suspensos)]
+        ax.bar(x_pos, absents, bar_width, bottom=bottoms, color='#f39c12', label='No avaluables / Absents')
+
+        ax.set_xticks(x_pos)
+        ax.set_ylabel('Alumnes')
+        ax.set_title('Resum d\'estadístiques per mòdul')
+        ax.legend(loc='upper right')
+
+        max_label_len = 30
+        truncated = [l[:max_label_len] + '...' if len(l) > max_label_len else l for l in labels]
+        ax.set_xticklabels(truncated, rotation=45, ha='right', fontsize=8)
+        ax.set_ylim(0, max([a + s + ab for a, s, ab in zip(aprovats, suspensos, absents)]) * 1.15)
+
+    fig.tight_layout()
+    fig.savefig(filepath, dpi=150, bbox_inches='tight', transparent=False, pad_inches=0.3)
+    plt.close(fig)
 
 
 def main():
@@ -191,11 +252,14 @@ def main():
         familia, config, parsed, expected, output_parent
     )
 
-    report_text = "\n".join(report_lines)
+    legend_path = os.path.join(SCRIPT_DIR, "report_legend.txt")
+    legend = open(legend_path, encoding="utf-8").read() if os.path.exists(legend_path) else ""
+    report_text = "\n".join(report_lines) + legend
     print(report_text)
 
+    is_esobat = "cursos" in config
     # Save report
-    report_dir = get_report_dir(base_dir)
+    report_dir = get_report_dir(base_dir, is_esobat)
     os.makedirs(report_dir, exist_ok=True)
     report_path = os.path.join(report_dir, f"{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
@@ -221,14 +285,6 @@ def main():
             if incomplete_ok:
                 print(f"  - {len(incomplete_ok)} fitxers OK amb marcadors sense omplir")
             print(f"\nTotal a compilar: {len(to_compile)} memòries (OK + BORRADOR)")
-            try:
-                resp = input("Vols continuar amb la compilació? (s/N): ").strip().lower()
-                if resp != "s" and resp != "si":
-                    print("Compilació cancel·lada per l'usuari.")
-                    return
-            except (EOFError, KeyboardInterrupt):
-                print("\nCompilació cancel·lada.")
-                return
     else:
         to_compile = list(ok_files)
         if has_pending:
@@ -272,6 +328,7 @@ def main():
 
     if is_esobat:
         # ESO/BAT: group by (etapa, curs)
+        bar_data = []
         compiled_by_group = {}
         for p in to_compile:
             key = (p.get("etapa", ""), p.get("curs", ""))
@@ -354,8 +411,34 @@ def main():
                     pie_key = "_".join(pie_parts)
                     content = _add_stats_row(content, pie_key)
 
+                    # Collect stats for the summary bar chart
+                    stats = _extract_stats(content)
+                    if stats:
+                        label = f"{p.get('etapa', '')} {curs} {p.get('grup', '')} - {p.get('materia', '')}".strip()
+                        bar_data.append((label, stats[0], stats[1], stats[2]))
+
                     compiled_md_lines.append(content)
                     compiled_md_lines.append("")
+
+        # Generate summary bar chart (FP i ESO/BAT)
+        if HAS_MATPLOTLIB:
+            bar_filename = f"bar_resum_{familia}.png"
+            bar_path = os.path.join(PROJECT_DIR, "temp", bar_filename)
+            os.makedirs(os.path.dirname(bar_path), exist_ok=True)
+            _generate_bar_chart(bar_data, bar_path)
+            compiled_md_lines.append("")
+            compiled_md_lines.append("\\newgeometry{top=10mm, bottom=10mm}")
+            compiled_md_lines.append("\\begin{landscape}")
+            compiled_md_lines.append("\\thispagestyle{empty}")
+            compiled_md_lines.append("\\section*{Resum de resultats}")
+            compiled_md_lines.append("\\addcontentsline{toc}{section}{Resum de resultats}")
+            compiled_md_lines.append("\\vspace*{\\fill}")
+            compiled_md_lines.append("\\centering")
+            compiled_md_lines.append("\\includegraphics[width=1.0\\linewidth]{" + bar_path + "}")
+            compiled_md_lines.append("\\vspace*{\\fill}")
+            compiled_md_lines.append("\\end{landscape}")
+            compiled_md_lines.append("\\restoregeometry")
+            compiled_md_lines.append("")
     else:
         # FP: group by cycle
         compiled_by_cicle = {}
@@ -372,6 +455,7 @@ def main():
             claus_cicles=claus_cicles,
         )
 
+        bar_data = []
         compiled_md_lines = []
         compiled_md_lines.append(portada_rendered)
         compiled_md_lines.append("")
@@ -449,8 +533,34 @@ def main():
                     pie_key = "_".join(pie_parts)
                     content = _add_stats_row(content, pie_key)
 
+                    # Collect stats for the summary bar chart
+                    stats = _extract_stats(content)
+                    if stats:
+                        label = f"{p['cicle']} {p['curs']} {p['grup']} - {p['modul']}".strip()
+                        bar_data.append((label, stats[0], stats[1], stats[2]))
+
                     compiled_md_lines.append(content)
                     compiled_md_lines.append("")
+
+        # Generate summary bar chart (FP i ESO/BAT)
+        if HAS_MATPLOTLIB:
+            bar_filename = f"bar_resum_{familia}.png"
+            bar_path = os.path.join(PROJECT_DIR, "temp", bar_filename)
+            os.makedirs(os.path.dirname(bar_path), exist_ok=True)
+            _generate_bar_chart(bar_data, bar_path)
+            compiled_md_lines.append("")
+            compiled_md_lines.append("\\newgeometry{top=10mm, bottom=10mm}")
+            compiled_md_lines.append("\\begin{landscape}")
+            compiled_md_lines.append("\\thispagestyle{empty}")
+            compiled_md_lines.append("\\section*{Resum de resultats}")
+            compiled_md_lines.append("\\addcontentsline{toc}{section}{Resum de resultats}")
+            compiled_md_lines.append("\\vspace*{\\fill}")
+            compiled_md_lines.append("\\centering")
+            compiled_md_lines.append("\\includegraphics[width=1.0\\linewidth]{" + bar_path + "}")
+            compiled_md_lines.append("\\vspace*{\\fill}")
+            compiled_md_lines.append("\\end{landscape}")
+            compiled_md_lines.append("\\restoregeometry")
+            compiled_md_lines.append("")
 
     # Append annex (Activitats Extra-Escolars) at the end (only for FP)
     if not is_esobat:
@@ -566,6 +676,8 @@ def main():
         f.write(r"\usepackage{emoji}%" + "\n")
         f.write(r"\setemojifont{NotoColorEmoji.ttf}[Path=/usr/share/fonts/truetype/noto/]%" + "\n")
         f.write(r"\setmainfont[Path=/usr/share/fonts/truetype/lato/,UprightFont=Lato-Regular.ttf,BoldFont=Lato-Bold.ttf,ItalicFont=Lato-Italic.ttf,BoldItalicFont=Lato-BoldItalic.ttf]{Lato}" + "\n")
+        f.write(r"\RedeclareSectionCommand[afterskip=1.5ex plus .2ex]{paragraph}%" + "\n")
+        f.write(r"\usepackage{pdflscape}%" + "\n")
 
     cmd = [
         "pandoc",
@@ -590,9 +702,9 @@ def main():
         print(result.stderr)
         sys.exit(1)
 
-    # Clean up temp pie charts after pandoc run
+    # Clean up temp pie charts and bar charts after pandoc run
     for f in os.listdir(temp_dir):
-        if f.startswith("pie_") and f.endswith(".png"):
+        if (f.startswith("pie_") or f.startswith("bar_resum_")) and f.endswith(".png"):
             os.remove(os.path.join(temp_dir, f))
 
 

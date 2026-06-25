@@ -34,7 +34,7 @@ make report-tots-pccf              # report for all cycles
 # Memoria pipeline (existing):
 make generar-plantilles-memoria    # generate FP dept memoria templates → memories_FP/{FAMILIA}/
 make report-memories               # report only (no PDF)
-make compila-memories              # report + confirm + compile ALL (OK + BORRADOR) → PDF
+make compila-memories              # report + compile ALL (OK + BORRADOR) → PDF
 make compilar-memories             # OLD: compile OK only, prompt for BORRADOR
 make memories                      # generar-plantilles-memoria + compila-memories
 make FAMILIA=SCO memories          # family override (default INF)
@@ -102,6 +102,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `memories_ESOBAT/{FAMILIA}/` | Per-course/per-group ESO/BAT memoria markdown files (gitignored) |
 | `PDFS/` | All generated outputs (gitignored) |
 | `tools/` | Python scripts for build pipeline |
+| `tools/report_legend.txt` | Legend table appended to memoria reports |
 | `contenedor_lanza.sh` | Docker wrapper (recommended to avoid dep issues) |
 
 ## Build pipeline (what `make proyecto-{ciclo}` does)
@@ -122,10 +123,18 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 
 ## Report pipeline
 
-`make report-pccf-{CICLO}` → `tools/report_pccf.py`:
+### PCCF reports (`make report-pccf-{CICLO}` → `tools/report_pccf.py`):
 - Lists PD files: BORRADOR (pending) vs OK (completed)
 - Detects `[###]` placeholders in all markdown files
 - Validates Excel: RA weight sum = 100% per sheet
+
+### Memoria reports (`make report-memories`, `make compila-memories` → `tools/report_memories.py`, `tools/compilar_memories.py`):
+- Output directory: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/`
+- Detects: `[FALTA]`, `[BORRADOR]`, `[DUPLICAT]`, `[INCOMPLET]` (placeholders, malformed checkboxes, stats inconsistencies)
+- Detects malformed checkboxes: `[ x ]`, `[x ]`, `[ x]` reported as `[CHECKBOX_FORMAT]`
+- Detects stats inconsistencies: aprovats+suspensos > avaluats, total > final, etc.
+- Legend appended at end of each report (source: `tools/report_legend.txt`)
+- Report directory suffixed with `_ESOBAT` or `_FP` depending on config type
 
 ## Excel workflow
 
@@ -156,7 +165,14 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 - **CEIABD**: Specialization course → no course number in filename (curs = `""` in config).
 - **Cycle code list**: `tools/memories_utils.py::CICLES_CONEGUTS` must include any new cycle added to the config.
 - **Report only**: `make report-memories` generates the same report as `compilar-memories` without compiling the PDF.
-- **Compilation confirmation**: `compila-memories` shows report, then asks for confirmation before compiling ALL files (OK + BORRADOR).
+- **Compilation confirmation**: `compila-memories` shows report and compiles ALL (OK + BORRADOR) without prompting.
+- **Checkbox format**: Only `[x]` (or `[X]`) is valid. Variants like `[ x ]`, `[x ]`, `[ x]` are detected as `[CHECKBOX_FORMAT]` in reports.
+- **Empty checkboxes**: `[ ]` are optional and NOT reported.
+- **Summary bar chart (landscape)**: Generated at end of PDF via `compilar_memories.py`. Uses `width=1.0\linewidth` + `\newgeometry{top=10mm, bottom=10mm}` before landscape to fill full landscape page width (29.7cm), centered vertically with `\vspace*{\fill}`. Figsize: `max(10, num_bars*1.2), 5` (wider default to prevent tall charts with few modules). Uses absolute path in `\includegraphics{}` to avoid lualatex file-not-found issues. Works for both FP and ESO/BAT. When all stats contain `[###]`, shows "No hi ha dades completes" label.
+- **Pie chart**: matplotlib charts filter out zero-value categories (e.g. 0 suspensos → no wedge shown). Absents/no avaluables are shown as a pie wedge when present; the percentage shown in the table includes absents in the total.
+- **Paragraph spacing**: `####` headings in compiled PDFs now have proper line breaks via `\titlespacing` LaTeX patch.
+- **Report legend**: Appended from `tools/report_legend.txt` (external file, easy to maintain).
+- **Report dir naming**: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/` (includes timestamp + type suffix).
 
 ## Docker
 

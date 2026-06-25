@@ -1,0 +1,22 @@
+
+LLEGENDA - QUADRE RESUM DE CARÈNCIES DETECTABLES:
+====================================================
+  Codi              | Significat                                            | Què cal fer
+  ------------------|-------------------------------------------------------|----------------------------------------------------------
+  [FALTA]           | No existeix cap fitxer .md per a eixa matèria/grup    | Generar la memòria (make generar-plantilles-memoria)
+  [BORRADOR]        | Fitxer en _BORRADOR.md (pendent de revisió)           | Revisar el document i renombrar a _OK.md
+  [DUPLICAT]        | Hi ha _OK.md i _BORRADOR.md per a la mateixa matèria  | Quedar-se el correcte i esborrar l'altre
+  [INCOMPLET]       | El _OK.md encara té marcadors [###] per omplir        | Substituir tots els [###] per les dades reals
+  [ZERO_STATS]      | El _OK.md té aprovats=0 i suspensos=0                 | Omplir les xifres d'aprovats i suspensos a la taula
+  [CHECKBOX_FORMAT] | Caselles marcades amb espais de més: [ x ], [x ], etc | Usar [x] sense espais (majúscula/minúscula és igual)
+  aprov+susp >      | La suma d'aprovats i suspensos supera els avaluats    | Revisar les xifres: no pot haver-n'hi més que avaluats
+  alumnat aval.     |                                                       |
+  total > final     | aprovats+suspensos+absents supera final de curs       | Revisar: el total no pot superar els matriculats al final
+  avaluats >        | Alumnat avaluat supera els alumnes a final de curs    | Revisar: no es pot avaluar més alumnes dels que hi ha
+  final de curs     |                                                       |
+  final > inici     | Final de curs > inici de curs                         | Pot ser normal (incorporacions tardanes), verificar
+  SENSE_SUFIX       | El fitxer no acaba ni en _OK.md ni _BORRADOR.md       | Afegir _OK.md o _BORRADOR.md al nom
+  BORR_TRUNCAT      | El fitxer acaba en _BORR.md (en lloc de _BORRADOR)    | Canviar _BORR.md -> _BORRADOR.md
+  ANNEX NO          | No s'ha generat el fitxer d'extraescolars             | No cal fer res (ESO/BAT no l'inclou al PDF)
+  PRESENT           |                                                       |
+========================================================================================================================================

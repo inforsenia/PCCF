@@ -277,10 +277,21 @@ make compila-tots-fp                            # compilar
 
 ### Report de l'estat de les memòries
 
-El report (`PDFS/report_memories_INF.txt`) detecta:
-- Mòduls en estat **BORRADOR** (el docent encara no ha completat)
-- Mòduls **FALTA** (no hi ha fitxer ni tan sols en BORRADOR)
-- Mòduls **OK** que encara contenen `[###]` o `[...]` (incomplets)
+El report es genera a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt` i detecta:
+
+| Detecció | Descripció |
+|----------|------------|
+| **BORRADOR** | Mòduls pendents de completar (fitxer `_BORRADOR.md`) |
+| **FALTA** | No hi ha cap fitxer `.md` per a eixa matèria/grup |
+| **DUPLICAT** | Existeixen `_OK.md` i `_BORRADOR.md` per al mateix mòdul |
+| **INCOMPLET** | Fitxer `_OK.md` amb `[###]` pendents o estadístiques inconsistents |
+| **ZERO_STATS** | Aprovats=0 i suspensos=0 (dades no omplides) |
+| **CHECKBOX_FORMAT** | Caselles marcades amb espais de més: `[ x ]`, `[x ]` en lloc de `[x]` |
+| **SENSE_SUFIX** | Fitxer sense `_OK.md` ni `_BORRADOR.md` |
+| **BORR_TRUNCAT** | Fitxer acaba en `_BORR.md` en lloc de `_BORRADOR.md` |
+| **Stats inc.** | aprovats+suspensos > avaluats, total > final, avaluats > final, final > inici |
+
+El report inclou al final una **llegenda** amb tots estos codis i el seu significat (llegible des de `tools/report_legend.txt`).
 
 ---
 
@@ -339,12 +350,18 @@ Compila les memòries completades (`*_OK.md`) en un únic PDF amb índex, i gene
 make compilar-memories
 ```
 
-El PDF es genera a `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` i el report a `PDFS/report_memories_{FAMILIA}.txt`.
+El PDF es genera a `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` i el report a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt`.
 
 Detecta:
 - Mòduls en estat **BORRADOR** (pendents de completar)
 - Mòduls **FALTA** (no hi ha fitxer ni BORRADOR ni OK)
+- Mòduls **DUPLICAT** (OK i BORRADOR per al mateix mòdul)
 - Mòduls **OK** que encara contenen marcadors `[###]` o `[...]`
+- Caselles `[x]` amb format incorrecte (`[ x ]`, `[x ]`, etc.)
+- Estadístiques inconsistents (sumes que no quadren)
+- El report inclou llegenda explicativa al final
+
+**Gràfic resum**: Al final del PDF s'inserta un gràfic de barres apilades en pàgina apaisada que ocupa l'ample complet (`width=1.0\linewidth`) amb `\newgeometry{top=10mm, bottom=10mm}` abans del landscape per a maximitzar l'espai horitzontal, centrat verticalment amb `\vspace*{\fill}`. Figsize: `max(10, num_bars*1.2), 5` (ample per defecte per a evitar gràfics massa alts amb pocs mòduls). Usa path absolut en `\includegraphics{}` per a evitar errors de lualatex. Funciona tant per a FP com per a ESO/BAT. Quan totes les estadístiques contenen `[###]`, mostra l'etiqueta "No hi ha dades completes".
 
 #### `tools/report_memories.py`
 
@@ -354,7 +371,7 @@ Genera només el report de l'estat de les memòries (sense compilar el PDF). Út
 make report-memories
 ```
 
-El report es guarda a `PDFS/report_memories_{FAMILIA}.txt` amb la mateixa informació que `compilar-memories` però sense demanar confirmació ni generar PDF.
+El report es guarda a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt` amb la mateixa informació que `compilar-memories` però sense demanar confirmació ni generar PDF.
 
 #### `tools/json2optatives.py`
 
@@ -476,7 +493,7 @@ Targets disponibles:
     genera-memories             Alias de generar-plantilles-memoria
     compilar-memories           Compilar memòries OK en PDF + report
     report-memories             Report de l'estat de les memòries (sense PDF)
-    compila-memories            Report + confirmació + compila tot (OK i BORRADOR)
+    compila-memories            Report + compila tot (OK i BORRADOR)
     memories                    Tot el procés (genera + compila)
     (per defecte FAMILIA=INF, BASE_DIR=memoriaFP)
     (per a ESO/BAT: make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES ...)

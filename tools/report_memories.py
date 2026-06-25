@@ -83,10 +83,13 @@ def main():
                 report_lines.append(f"  [SENSE_SUFIX] {fname} — Afegiu _OK o _BORRADOR al nom del fitxer")
         report_lines.append("")
 
-    report_text = "\n".join(report_lines)
+    legend_path = os.path.join(SCRIPT_DIR, "report_legend.txt")
+    legend = open(legend_path, encoding="utf-8").read() if os.path.exists(legend_path) else ""
+    report_text = "\n".join(report_lines) + legend
     print(report_text)
 
-    report_dir = get_report_dir(base_dir)
+    is_esobat = "cursos" in config
+    report_dir = get_report_dir(base_dir, is_esobat)
     os.makedirs(report_dir, exist_ok=True)
     report_path = os.path.join(report_dir, f"{familia}.txt")
     with open(report_path, "w", encoding="utf-8") as f:

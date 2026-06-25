@@ -6,11 +6,11 @@ SHELL := /bin/bash
 #               Plantilles persistents a plantilles_{FAMILIA}_{CICLO}/
 
 # Colors
-BLUE= \e[1;34m
-LIGHTBLUE= \e[94m
-LIGHTGREEN= \e[92m
-LIGHTYELLOW= \e[93m
-RESET= \e[0m
+BLUE := $(shell printf '\033[1;34m')
+LIGHTBLUE := $(shell printf '\033[94m')
+LIGHTGREEN := $(shell printf '\033[92m')
+LIGHTYELLOW := $(shell printf '\033[93m')
+RESET := $(shell printf '\033[0m')
 
 # Variables configurables
 CENTRO_EDUCATIVO ?= SENIA
@@ -210,13 +210,15 @@ genera-tots-esobat:
 	done
 
 report-tots-esobat:
-	@for dep in $(DEPARTAMENTS_ESOBAT); do \
+	@REPORT_TIMESTAMP=$$(date +%Y%m%d_%H%M); export REPORT_TIMESTAMP; \
+	for dep in $(DEPARTAMENTS_ESOBAT); do \
 		echo " ${LIGHTYELLOW} [ Report: $$dep ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep report-memories; \
 	done
 
 compila-tots-esobat:
-	@for dep in $(DEPARTAMENTS_ESOBAT); do \
+	@REPORT_TIMESTAMP=$$(date +%Y%m%d_%H%M); export REPORT_TIMESTAMP; \
+	for dep in $(DEPARTAMENTS_ESOBAT); do \
 		echo " ${LIGHTBLUE} [ Compilant: $$dep ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep compila-memories; \
 	done
@@ -230,13 +232,15 @@ genera-tots-fp:
 	done
 
 report-tots-fp:
-	@for fam in $(FAMILIES_FP); do \
+	@REPORT_TIMESTAMP=$$(date +%Y%m%d_%H%M); export REPORT_TIMESTAMP; \
+	for fam in $(FAMILIES_FP); do \
 		echo " ${LIGHTYELLOW} [ Report FP: $$fam ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam report-memories; \
 	done
 
 compila-tots-fp:
-	@for fam in $(FAMILIES_FP); do \
+	@REPORT_TIMESTAMP=$$(date +%Y%m%d_%H%M); export REPORT_TIMESTAMP; \
+	for fam in $(FAMILIES_FP); do \
 		echo " ${LIGHTBLUE} [ Compilant FP: $$fam ] ${RESET}"; \
 		$(MAKE) BASE_DIR=memoriaFP FAMILIA=$$fam compila-memories; \
 	done

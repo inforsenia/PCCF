@@ -27,4 +27,14 @@ El Marc Normatiu vigent que s' ha tingut en compte per al desenvolupament del pr
 | [Orden 32/2011](https://dogv.gva.es/datos/2011/12/28/pdf/2011_13033.pdf)| Regula el dret de l' alumnat a l' objectivitat en l' avaluació, i s' estableix el procediment de reclamació de qualificacions obtingudes i de les decisions de promoció, de certificació o d' obtenció del títol acadèmic que corresponga |
 | [Resolució de 17 de juliol de 2025](https://dogv.gva.es/es/resultat-dogv?signatura=2025/28562) | per la qual es dicten instruccions sobre ordenació acadèmica i d'organització dels centres que imparteixin els graus D i E de Formació Professional durant el curs 2025-2026 a la Comunitat Valenciana. |
 | [Resolució de 27 de juny de 2025](https://www.boe.es/boe/dias/2025/07/12/pdfs/BOE-A-2025-14430.pdf) | Mòduls optatius |
+| [Resolució de 2 de desembre de 2022](https://dogv.gva.es/datos/2022/12/09/pdf/2022_11618.pdf) | relació d'especialitats de professorat per cicles formatius la dedicació de la qual és susceptible de desdoblament en centres públics |
+| [Resolució de 19 de juny de 2023](https://dogv.gva.es/datos/2023/06/22/pdf/2023_7061.pdf) | actualització de la relació d'especialitats de professorat per cicles formatius de Formació Professional la dedicació de la qual és susceptible de desdoblament en centres públics |
+| [Resolució de 16 de novembre de 2023](https://dogv.gva.es/datos/2023/11/23/pdf/2023_11612.pdf) | autorització de nous desdoblaments a centres docents públics de la Comunitat Valenciana que impartixen cicles formatius en el curs 2023-2024 |
+
+**Documents del centre**
+
+| Nom | Descripció |
+|--------|-------------|
+| NOF | Normes d'organització i funcionament del centre |
+| PEC | Projecte educatiu de centre |
 

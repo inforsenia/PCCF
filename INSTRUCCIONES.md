@@ -415,6 +415,16 @@ Via Docker:
 
 `BASE_DIR=memoriaFP` (per defecte) o `BASE_DIR=memoriaESOBAT`.
 
+### Reports de memòries
+
+El report es guarda a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt`. Inclou:
+- Detecció de **BORRADOR**, **FALTA**, **DUPLICAT**, **INCOMPLET**
+- Detecció de caselles marcades amb format incorrecte: `[ x ]`, `[x ]` (només `[x]` és correcte)
+- Detecció d'inconsistències a les estadístiques (sumes que no quadren, zeros sospitosos)
+- **Gràfic resum** al final del PDF: barres apilades en pàgina apaisada amb `width=1.0\linewidth` i `\newgeometry{top=10mm, bottom=10mm}` *abans* del landscape per a ocupar tota l'amplada del full (29.7cm), centrat verticalment amb `\vspace*{\fill}`. Figsize: `max(10, num_bars*1.2), 5` (ample per defecte per a evitar gràfics massa alts amb pocs mòduls). Usa path absolut en `\includegraphics{}` per a evitar errors de lualatex. Funciona tant per a FP com per a ESO/BAT. Quan totes les estadístiques contenen `[###]`, mostra l'etiqueta "No hi ha dades completes".
+- Gràfic circular que **no mostra porcions amb valor 0** (ex: 0 suspensos → no ix "0%")
+- **Llegenda explicativa** al final del fitxer (llegible des de `tools/report_legend.txt`)
+
 **FP** (totes les famílies de cop):
 ```sh
 make genera-tots-fp                             # generar plantilles
