@@ -41,6 +41,17 @@
 |-------------|--------------------------------------|
 | 18 Sesiones | 30/09/2025 $\rightarrow$ 26/11/2025  |
 
+# Contenidos
+
+* Continuación de Shell Scripting.
+* Variables.
+* Estructuras de control.
+* Bucles `for` y `while`.
+* Conceptos de Argumentos y `exit status`.
+* Redirecciones.
+
+
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.

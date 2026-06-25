@@ -53,6 +53,14 @@
 |-------------|--------------------------------------|
 | 8 Sesiones | 30/11/2025 $\rightarrow$ 17/12/2025  |
 
+# Contenidos 
+
+* Instalación de Sistemas Operativos.
+* Conceptos sobre Imágenes de Instalación.
+* Máquinas Virtuales.
+* Gestores de Arranque.
+* Crontab y tareas programadas.
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.

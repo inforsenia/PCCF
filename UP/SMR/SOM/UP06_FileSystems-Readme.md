@@ -43,6 +43,16 @@
 |-------------|--------------------------------------|
 | 20 Sesiones  | 22/03/2026 $\rightarrow$ 13/05/2026  |
 
+# Contenidos
+
+* Conceptos sobre sistemas de ficheros.
+* Tipos de sistemas de ficheros.
+* Sistemas de Ficheros especiales.
+* Puntos de montaje.
+* Estructura de Directorios y Repaso de montaje.
+* Copias de ficheros.
+
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.

@@ -41,6 +41,16 @@
 |------------|-------------------------------------|
 | 8 Sesiones | 08/09/2025 $\rightarrow$ 29/09/2025 |
 
+# Contenidos
+
+* Introducción a los Sistemas Operativos.
+* Introducción a la Virtualización.
+* Conceptos básicos sobre Licencias.
+* Conceptos básicos sobre PATHS absolutos y relativos.
+* Conceptos básicos sobre Expresiones Regulares.
+* Conceptos básicos sobre entrada y salida.
+* Presentación de la Shell.
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.

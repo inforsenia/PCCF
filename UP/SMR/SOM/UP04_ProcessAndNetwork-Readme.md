@@ -53,6 +53,20 @@
 |--------------|---------------------------------------|
 | 10 Sesiones  | 06/01/2026 $\rightarrow$ 12/02/2026  |
 
+# Contenidos
+
+* Configuración de la red.
+* Netplan y renderizadores.
+* Abstracciones y puntos de control.
+* Direcciones estáticas.
+* Puertas de enlace.
+* Resolutores de Nombres.
+* Lenguaje Yaml.
+* Monitorización de procesos.
+* Filtrado.
+* Uso de recursos.
+
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.

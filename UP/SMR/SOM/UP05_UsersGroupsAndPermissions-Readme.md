@@ -44,6 +44,14 @@
 |-------------|--------------------------------------|
 | 8 Sesiones  | 17/02/2026 $\rightarrow$ 04/03/2026  |
 
+# Contenido
+
+* Conceptos sobre Usuarios y Grupos.
+* Permisos en Octal.
+* Propiedades de ficheros.
+* Permisos especiales.
+* Propiedades de permisos.
+
 # Evaluación
 
 * Pruebas escritas objetivas que ponen en juego los conceptos explicados en clase.
