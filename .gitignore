@@ -6,3 +6,5 @@ boe/temp-txt.txt
 tools/__pycache__/
 luatex.*/
 memories_*/
+*.bak
+*.kate-swp
