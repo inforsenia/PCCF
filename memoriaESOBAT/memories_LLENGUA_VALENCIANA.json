@@ -23,7 +23,6 @@
       "nom": "3r d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "TALLALFVAL", "nom": "Taller d'Alfabetització", "grups": ["G1"]},
         {"codi": "VALENCIA", "nom": "Valencià: Llengua i Literatura", "grups": ["A","B","C","D","E","F"]}
       ]
     },
