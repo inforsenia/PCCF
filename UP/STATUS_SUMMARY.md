@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **25/06/2026 a las 13:20:39 UTC**
+> 🕒 Última actualización: **25/06/2026 a las 13:27:13 UTC**
 
 ---
 
@@ -41,7 +41,7 @@
 | OPS190 | **completado** |
 | PMDM | pendiente |
 | PR | **completado** |
-| PSP | pendiente |
+| PSP | **completado** |
 | SASP | **completado** |
 | SGE | **completado** |
 | SI | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 25/06/2026 a las 13:20:39 UTC_
+_Generado automáticamente el 25/06/2026 a las 13:27:13 UTC_
