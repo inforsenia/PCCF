@@ -41,5 +41,5 @@
 ## Ejercicios realizados durante la Unidad
 
 * Instalación de un keylogger.
-* Copias con **rsync**.
+* Copias con *rsync*.
 
