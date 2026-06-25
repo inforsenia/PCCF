@@ -14,9 +14,6 @@
 | **UP07** | Implantación de aplicaciones de ofimática web | 0,5h | 13/02/2026 | **RA04** |
 
 
-
-<!-- CONTINUAR! -->
-
 ## UP01: Introducción a las aplicaciones Web. Conceptos y tecnologías previas
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 0376
@@ -25,28 +22,19 @@
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
-REVISAR!!!!
-
 *   **Resultado de Aprendizaje:**
-    *   **RA01:** Administra servicios de resolución de nombres, analizándolos y garantizando la seguridad del servicio.
+    <!-- RELLENAR -->
 *   **Criterios de Evaluación:**
-    *   a) Se han identificado y descrito escenarios en los que surge la necesidad de un servicio de resolución de nombres.
-    *   b) Se han clasificado los principales mecanismos de resolución de nombres.
-    *   c) Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.
-    *   d) Se han instalado y configurado servicios jerárquicos de resolución de nombres.
-    *   e) Se ha preparado el servicio para reenviar consultas de recursos externos a otro servidor de nombres.
-    *   f) Se ha preparado el servicio para almacenar y distribuir las respuestas procedentes de otros servidores.
-    *   g) Se han añadido registros de nombres correspondientes a una zona nueva, con opciones relativas a servidores de correo y alias.
-    *   h) Se han implementado soluciones de servidores de nombres en direcciones «ip» dinámicas.
-    *   i) Se han realizado transferencias de zona entre dos o más servidores.
-    *   j) Se han documentado los procedimientos de instalación y configuración.
+    *   a) <!-- RELLENAR -->
 *   **Competencias:**
-    *   **Profesionales:** b) Administrar servicios de red instalando y configurando el software, en condiciones de calidad.
-    *   **Empleabilidad:** 16. Innovación; 18. Resolución de problemas.
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    FALTA!!!!!
+    <!-- RELLENAR -->
 *   **Teoría:** 
     * El lenguaje de creación de documentación Markdown. Sintaxis básica y avanzada.
     * Git como sistema de control de versiones y repositorio de proyectos. Uso básico de GitHub y GitLab. Ramas, commits, pull requests y merge. Resolución de conflictos. 
@@ -54,163 +42,239 @@ REVISAR!!!!
     * El lenguaje de marcado YAML como lenguaje principal de configuración de aplicaciones y servicios. Sintaxis básica y avanzada. Estructuras de datos y tipos de datos.
 *   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    * (Tarea 1 - Introducción a la documentación con Markdown)[https://inforsenia.github.io/Terraformadores/v3/Markdown/Tarea1]
-    * (Tarea 2 - Introducción a Git y GitHub)[https://inforsenia.github.io/Terraformadores/v3/Git/Tarea1]
-    * (Tarea 3 - Git. Trabajando con Ramas)[https://inforsenia.github.io/Terraformadores/v3/Git/Tarea2]
-    * (Tarea 4 - Introducción a Docker)[https://inforsenia.github.io/Terraformadores/v3/Docker/Tarea1Docker]
-    * (Tarea 5 - YAML. Sintaxis y estructuras de datos)[https://inforsenia.github.io/Terraformadores/v3/YAML/Tarea1YAML]
+    * [Tarea 1 - Introducción a la documentación con Markdown](https://inforsenia.github.io/Terraformadores/v3/Markdown/Tarea1)
+    * [Tarea 2 - Introducción a Git y GitHub](https://inforsenia.github.io/Terraformadores/v3/Git/Tarea1)
+    * [Tarea 3 - Git. Trabajando con Ramas](https://inforsenia.github.io/Terraformadores/v3/Git/Tarea2)
+    * [Tarea 4 - Introducción a Docker](https://inforsenia.github.io/Terraformadores/v3/Docker/Tarea1Docker)
+    * [Tarea 5 - YAML. Sintaxis y estructuras de datos](https://inforsenia.github.io/Terraformadores/v3/YAML/Tarea1YAML)
 
     
 
 ### 4. Recursos Tecnológicos
-*   **Base Tecnológica:** GNS3, VirtualBox, Sistema Operativo Linux (BIND9).
+*   **Base Tecnológica:** 
+    * Docker
+    * Entorno de Desarrollo Codium
+    * git, GitHub, GitLab
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** 20% parte práctica (Misiones de Venus) y 80% prueba objetiva teórica.
-*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas.
+*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
 
 ---
 
-## UP02: DHCP en alta disponibilidad
+## UP02: Instalación y configuración de un entorno web
 ### 1. Identificación
-*   **Código:** UP02 | **Módulo:** 0375
-*   **Duración:** 19 horas.
+*   **Código:** UP02 | **Módulo:** 0376
+*   **Duración:** 16 horas.
 *   **Temporalización:** 01/10/2025 – 31/10/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 *   **Resultado de Aprendizaje:**
-    *   **RA02:** Administra servicios de configuración automática, identificándolos y verificando la correcta asignación de los parámetros.
+    <!-- RELLENAR -->
 *   **Criterios de Evaluación:**
-    *   a) Se han reconocido los mecanismos automatizados de configuración de los parámetros de red y las ventajas que proporcionan.
-    *   b) Se han ilustrado los procedimientos y pautas que intervienen en una solicitud de configuración de los parámetros de red.
-    *   c) Se han instalado servidores de configuración de los parámetros de red.
-    *   d) Se ha preparado el servicio para asignar la configuración básica a los equipos de una red local.
-    *   e) Se han configurado asignaciones estáticas y dinámicas.
-    *   f) Se han integrado en el servicio opciones adicionales de configuración.
-    *   g) Se han documentado los procedimientos realizados.
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** Funcionamiento del servicio DHCP. Características. Mensajes. Asignaciones. Tipos. Utilización de un cliente de DHCP. Autoconfiguración de red sin el servicio. Instalación y configuración de un servidor DHCP en sistemas operativos libres y propietarios. Parámetros y declaraciones de configuración. Servidor autorizado. Comandos utilizados para el funcionamiento del servicio. Herramientas gráficas de configuración. Diagnóstico y resolución de incidencias en el servicio. Documentación de las configuraciones establecidas.
-*   **Teoría:** [Servicios en red: DHCP](https://profesorjavi.github.io/SR//dhcp).
-*   **Metodología:** Aprendizaje basado en retos técnicos de la infraestructura de Venus.
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    La pila LAMP (Linux, Apache, MySQL/MariaDB, PHP) y su variante WAMP (Windows, Apache, MySQL/MariaDB, PHP). Instalación y configuración de servidores web (Apache y Nginx). Instalación y configuración de bases de datos (MySQL, MariaDB y PostgreSQL). Configuración de entornos de desarrollo con Docker. Configuración de entornos virtuales con Docker Compose. Configuración de entornos de desarrollo con Entorno de Desarrollo Codium.
+
+*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Configuración de un Servidor DHCP en Lobezno](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E2:** [Misión: Alta Disponibilidad de DHCP](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E3:** [Misión: Actualización Dinámica de DNS - Integración DHCP](https://inforsenia.github.io/Terraformadores/v5/).
+    * Tarea 1: LAMP Básico. Instalación y configuración de Apache, MySQL/MariaDB y PHP como servicios en una máquina local.
+    * Tarea 2: LAMP con Docker en una máquina local. Instalación y configuración de Apache, MySQL/MariaDB y PHP como servicios en contenedores Docker.
+    * Tarea 3: LAMP en AWS en una máquina: Instalación y configuración de Apache, MySQL/MariaDB y PHP como servicios en una máquina virtual en la nube de AWS.
 
 ### 4. Recursos Tecnológicos
-*   **Equipamiento:** MikroTik (Relay DHCP), Kea DHCP, Docker, Linux.
+*    Docker, Entorno de Desarrollo Codium, git, GitHub, GitLab, Nginx, Apache, MySQL, MariaDB, PostgreSQL, PHP.
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Práctica de configuración en Venus (20%) y examen RA02 (80%).
+*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP03: PROGRAMACIÓN BÁSICA DE APLICACIONES CON PHP
+### 1. Identificación
+*   **Código:** UP03 | **Módulo:** 0376
+*   **Duración:** 12 horas.
+*   **Temporalización:** 01/11/2025 – 21/11/2025.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+*   **Resultado de Aprendizaje:**
+    <!-- RELLENAR -->
+*   **Criterios de Evaluación:**
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    Lenguaje PHP Básico. Sintaxis básica y avanzada. Tipos de datos, variables, constantes, operadores, estructuras de control, funciones, arrays.
+*   **Metodología:** Metodologías activas con tareas y actividades
+*   **Secuencia (Fases):**
+    * Tarea 1: Boletin de ejercicios de PHP. Sintaxis básica y avanzada. Tipos de datos, variables, constantes, operadores, estructuras de control, funciones, arrays, arrays asociativos, manejo de formularios y validación de datos.
+    * Tarea 2: Programa PHP completo. Desarrollo de un programa básico y completo en PHP que integre todos los conceptos aprendidos en la tarea 1. Manejo de formularios, validación de datos, arrays y funciones.
+
+### 4. Recursos Tecnológicos
+*    PHP, Docker, Entorno de Desarrollo Codium, git, GitHub, GitLab, Nginx, Apache.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Prueba objetiva (100%).
 *   **Adaptaciones:** Flexibilización de tiempos y materiales de apoyo en Aules.
 
 ---
 
-## UP03: Servidor de Hosting
+## UP04: NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP
 ### 1. Identificación
-*   **Código:** UP03 | **Módulo:** 0375
-*   **Duración:** 26 horas.
-*   **Temporalización:** 01/11/2025 – 14/12/2025.
-
-### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultados de Aprendizaje:**
-    *   **RA03:** Administra servidores Web aplicando criterios de configuración y asegurando el funcionamiento del servicio.
-    *   **RA04:** Administra servicios de transferencia de archivos asegurando y limitando el acceso a la información.
-*   **Criterios de Evaluación (RA03):** a) Fundamentos y protocolos; b) Instalación y configuración; c) Módulos; d) Sitios virtuales; e) Autenticación y control de acceso; f) Certificados digitales; g) Seguridad en comunicaciones; h) Monitorización; i) Análisis de registros; j) Documentación.
-*   **Criterios de Evaluación (RA04):** a) Utilidad y modo de operación; b) Instalación y configuración; c) Usuarios y grupos; d) Acceso anónimo; e) Límites de acceso; f) Acceso activo y pasivo; g) Pruebas con clientes; h) Navegador como cliente; i) Documentación.
-
-### 3. Organización
-*   **Contenidos (Orden 36/2012):** Web: Protocolo HTTP. Tipos MIME. Instalación y configuración. Módulos. Amfitriones virtuales. Autenticación. HTTPS. Certificados. Registro y monitorización. FTP: Servidores y clientes. Permisos y cuotas. Tipos de usuarios. Modes de conexión. Transferencias.
-*   **Teoría:** [HTTP](https://profesorjavi.github.io/SR//http) y [FTP](https://profesorjavi.github.io/SR//ftp).
-*   **Metodología:** Proyecto de infraestructura de nube pública para startups.
-*   **Secuencia (Fases):**
-    *   **E1:** [Proyecto: Infraestructura Hosting - Servidor Apache y Seguridad HTTPS (Let's Encrypt)](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E2:** [Proyecto: Infraestructura Hosting - Servidor Nginx y Hosting Especializado para Clientes](https://inforsenia.github.io/Terraformadores/v5/).
-    *   **E3:** [Proyecto: Infraestructura Hosting - Servidor FTP seguro FTPS, SFTP y File Browser](https://inforsenia.github.io/Terraformadores/v5/).
-
-### 4. Recursos Tecnológicos
-*   **Infraestructura:** AWS (EC2, IP elástica), Let's Encrypt, Apache, Nginx, vsftpd, Docker.
-
-### 5. Evaluación y Adaptación
-*   **Instrumentos:** Resolución del Proyecto Integral de Hosting (20%) y prueba objetiva (80%).
-*   **Adaptaciones:** Uso de guías visuales y laboratorios remotos para atención individualizada.
-
----
-
-## UP04: Servidor de Correo
-### 1. Identificación
-*   **Código:** UP04 | **Módulo:** 0375
-*   **Duración:** 6 horas.
-*   **Temporalización:** 15/12/2025 – 19/12/2025.
-
-### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    *   **RA05:** Administra servidores de correo electrónico, aplicando criterios de configuración y garantizando la seguridad del servicio.
-*   **Criterios de Evaluación:** a) Protocolos de envío/recogida; b) Instalación; c) Cuentas de usuario; d) Impedir usos indebidos; e) Recogida remota; f) Clientes de correo; g) Firma digital y cifrado; h) Servicio seguro; i) Documentación.
-
-### 3. Organización
-*   **Contenidos (Orden 36/2012):** Agentes (MTA, MDA, MUA). Estructura de missatges. Protocol de transferència. Clients. Comptes, àlies i bústies. Webmail. Correu segur. Reenviament. Tècniques antispam. Protocols de descàrrega.
-*   **Teoría:** [Servicios en red: EMAIL](https://profesorjavi.github.io/SR//email).
-*   **Secuencia (Fases):**
-    *   **E1:** [Misión: Instalación y configuración del servicio de correo electrónico (Index Misiones)](https://inforsenia.github.io/Terraformadores/v5/).
-
-### 4. Recursos Tecnológicos
-*   **Sistemas:** Servidores Linux, Postfix, Dovecot, Roundcube.
-
-### 5. Evaluación y Adaptación
-*   **Instrumentos:** Práctica de configuración de correo seguro (20%) y examen RA05 (80%).
-*   **Adaptaciones:** DUA y materiales de consulta permanente en la plataforma.
-
----
-
-## UP05: Servidor de streaming
-### 1. Identificación
-*   **Código:** UP05 | **Módulo:** 0375
+*   **Código:** UP04 | **Módulo:** 0376
 *   **Duración:** 12 horas.
-*   **Temporalización:** 20/12/2025 – 23/01/2026.
-
-### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultados de Aprendizaje:**
-    *   **RA07:** Administra servicios de audio identificando las necesidades de distribución y adaptando los formatos.
-    *   **RA08:** Administra servicios de vídeo identificando las necesidades de distribución y adaptando los formatos.
-*   **Criterios de Evaluación (RA07 y RA08):** a) Funcionalidad; b) Instalación de servidores; c) Configuración de clientes; d) Formatos y códecs; e) Sindicación (Podcasts); f) Videoconferencia; g) Herramientas gráficas; h) Documentación.
-
-### 3. Organización
-*   **Contenidos (Orden 36/2012):** Audio: Formats. Servidors de streaming. VoIP. Sindicació (Podcast). Vídeo: Formats. Servidors de vídeo. Còdecs. Videoconferència. Servidors de jocs en línia.
-*   **Teoría:** [Servicios en red: STREAMING](https://inforsenia.github.io/Terraformadores/v5/).
-*   **Secuencia (Fases):**
-    *   **E1:** [Misión: Configuración de un Servidor de Streaming con Nginx y RTMP y AWS](https://inforsenia.github.io/Terraformadores/v5/).
-
-### 4. Recursos Tecnológicos
-*   **Herramientas:** Nginx (Módulo RTMP), OBS Studio, VLC Media Player, Video.js, AWS.
-
-### 5. Evaluación y Adaptación
-*   **Instrumentos:** Retransmisión en vivo y página web del evento (20%) y prueba objetiva (80%).
-*   **Adaptaciones:** Tutorías de refuerzo para la captura de señal multimedia.
-
----
-
-## UP06: Mensajería
-### 1. Identificación
-*   **Código:** UP06 | **Módulo:** 0375
-*   **Duración:** 10 horas.
-*   **Temporalización:** 24/01/2026 – 06/02/2026.
+*   **Temporalización:** 25/11/2025 – 12/12/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 *   **Resultado de Aprendizaje:**
-    *   **RA06:** Administra servicios de mensajería instantánea, noticias y listas de distribución, verificando y asegurando el acceso de los usuarios.
-*   **Criterios de Evaluación:** a) Descripción servicios; b) Instalación mensajería; c) Clientes; d) Servicio noticias; e) Listas distribución; f) Tipos lista; g) Cuentas usuario; h) Documentación.
+    <!-- RELLENAR -->
+*   **Criterios de Evaluación:**
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** Missatgeria instantània. Protocols. Clients. Normes de respecte. Servici de notícies. Llistes de distribució.
-*   **Teoría:** [Servicios en red: Monitorización/Mensajería](https://profesorjavi.github.io/SR//monitorizacion).
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    * El lenguaje PHP Avanzado. Sintaxis avanzada. Programación orientada a objetos, clases. Manejo de excepciones y errores. Manejo de sesiones y cookies. Seguridad en aplicaciones web con PHP.
+*   **Metodología:** Metodologías activas con tareas y actividades
 *   **Secuencia (Fases):**
-    *   **E1:** [Misión: Implementar un sistema de mensajería con Matrix (Synapse) para alertas automáticas](https://inforsenia.github.io/Terraformadores/v5/).
+    * Tarea 1: POO en PHP. Ejercicios básicos.
+    * Tarea 2: Acceso a datos. CRUD en PHP. Desarrollo de un programa PHP con acceso a base de datos MySQL/MariaDB. Creación de tablas, inserción, actualización y eliminación de datos. Manejo de consultas y resultados.
 
 ### 4. Recursos Tecnológicos
-*   **Base Tecnológica:** Docker, Matrix (Synapse), Prometheus (Alertmanager).
+*    PHP, Docker, Entorno de Desarrollo Codium, git, GitHub, GitLab, Nginx, Apache, MySQL, MariaDB, PostgreSQL.
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Configuración del servidor de mensajería y alertas (20%) y examen RA06 (80%).
-*   **Adaptaciones:** Documentación técnica simplificada y ejemplos prácticos de sintaxis.
+*   **Instrumentos:** Prueba objetiva (100%).
+*   **Adaptaciones:** Flexibilización de tiempos y materiales de apoyo en Aules.
+
+---
+
+## UP05: Introducción a la integración continua y despliegue continuo
+### 1. Identificación
+*   **Código:** UP05 | **Módulo:** 0376
+*   **Duración:** 12 horas.
+*   **Temporalización:** 16/12/2025 – 23/01/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+*   **Resultado de Aprendizaje:**
+    <!-- RELLENAR -->
+*   **Criterios de Evaluación:**
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    Introducción a la integración continua y despliegue continuo. Conceptos y herramientas. Configuración de pipelines de integración continua y despliegue continuo con Jenkins. Automatización de pruebas y despliegues. Monitoreo y notificaciones.
+*   **Metodología:** Metodologías activas con tareas y actividades
+*   **Secuencia (Fases):**
+    * Tarea 1: Introducción a la integración continua con Jenkins. Instalación y configuración de Jenkins. Creación de jobs bñasicos.
+    * Tarea 2: Job de integración continua con Jenkins. Configuración de un job de integración continua para un proyecto PHP. Automatización de desplijegue.
+    * Tarea 3: Pipeline de integración continua y despliegue continuo con Jenkins. Configuración de un pipeline completo para un proyecto PHP. Automatización de despliegues.
+    * Tarea 4: Creación de nodos en Jenkins. Configuración de nodos para la ejecución de jobs y pipelines. Distribución de cargas y escalabilidad.
+    * Tarea final: Proyecto final de integración continua y despliegue continuo. Desarrollo de un proyecto completo con integración continua y despliegue continuo utilizando Jenkins.
+
+### 4. Recursos Tecnológicos
+*   **Herramientas:** Jenkins, Docker, Entorno de Desarrollo Codium, PHP, git, GitHub, GitLab, Nginx, Apache, MySQL, MariaDB, PostgreSQL.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Tareas realizadas en Aules (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+
+---
+
+## UP06: Implantación y administración de gestores de contenidos
+### 1. Identificación
+*   **Código:** UP06 | **Módulo:** 0376
+*   **Duración:** 16 horas.
+*   **Temporalización:** 24/01/2026 – 13/02/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+*   **Resultado de Aprendizaje:**
+    <!-- RELLENAR -->
+*   **Criterios de Evaluación:**
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    Introducción a los gestores de contenidos (CMS). Instalación y configuración de gestores de contenidos. Administración y gestión de contenidos. Seguridad y mantenimiento de gestores de contenidos.
+*   **Metodología:** Metodologías activas con tareas y actividades
+*   **Secuencia (Fases):**
+    * Tarea 1: Instalación y configuración de un gestor de contenidos (WordPress, Joomla, Drupal). Instalación y configuración de un gestor de contenidos en un entorno local o en la nube. Configuración de temas y plugins. Creación de usuarios y roles.
+    * Tarea 2: Administración y gestión de contenidos. Creación y edición de contenidos. Gestión de medios y archivos. Configuración de menús y widgets. Gestión de comentarios y usuarios.
+    * Tarea 3: Seguridad y mantenimiento de gestores de contenidos. Configuración de copias de seguridad y actualizaciones. Gestión de permisos y roles. Monitoreo y auditoría de seguridad.
+
+### 4. Recursos Tecnológicos
+*   **Herramientas:** WordPress, Joomla, Drupal, Docker, Nginx, Apache, MySQL, MariaDB, PostgreSQL, PHP, git, GitHub, GitLab.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+
+---
+
+## UP07: Implantación de aplicaciones de ofimática web
+
+### 1. Identificación
+*   **Código:** UP07 | **Módulo:** 0376
+*   **Duración:** 0,5 horas.
+*   **Temporalización:** 13/02/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+*   **Resultado de Aprendizaje:**
+    <!-- RELLENAR -->
+*   **Criterios de Evaluación:**
+    *   a) <!-- RELLENAR -->
+*   **Competencias:**
+    *   **Profesionales:** 
+    <!-- RELLENAR -->
+    *   **Empleabilidad:** 
+    <!-- RELLENAR -->
+
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+*   **Teoría:**  
+    Implantación de aplicaciones de ofimática web. Instalación y configuración de aplicaciones de ofimática web (Nextcloud, OnlyOffice, Collabora Online). Integración con gestores de contenidos y servicios en la nube.
+*   **Metodología:** Clase magistral breve con una demostración y una actividad práctica.
+*   **Secuencia (Fases):**
+    * Tarea 1 - Instalación y configuración de una aplicación de ofimática web (Nextcloud, OnlyOffice, Collabora Online).
+
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** Office 365, Nextcloud,Apache.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Adaptaciones:** Flexibilización de tiempos y materiales de apoyo en Aules.
