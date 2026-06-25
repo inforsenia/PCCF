@@ -6,7 +6,7 @@ header-includes: |
 lang: ca-ES
 keywords: [memòries, {{ claus_cicles }}]
 abstract: |
-          Memòries finals de curs dels mòduls professionals adscrits al Departament {{ departament }}
+          Memòries finals de curs de les assignatures adscrites al Departament {{ departament }}
 
           {{ centre }}
 
