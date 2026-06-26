@@ -133,6 +133,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 - Detects: `[FALTA]`, `[BORRADOR]`, `[DUPLICAT]`, `[INCOMPLET]` (placeholders, malformed checkboxes, stats inconsistencies)
 - Detects malformed checkboxes: `[ x ]`, `[x ]`, `[ x]` reported as `[CHECKBOX_FORMAT]`
 - Detects stats inconsistencies: aprovats+suspensos > avaluats, total > final, etc.
+- **Automatic cleanup**: `[]` → `[ ]` (fix empty checkbox), strips brackets from non-checkbox content (`[24]`→`24`, `[CAP]`→`CAP`). Preserves `[###]` and `[...]` for report detection. Runs on OK files during report generation.
 - Legend appended at end of each report (source: `tools/report_legend.txt`)
 - Report directory suffixed with `_ESOBAT` or `_FP` depending on config type
 

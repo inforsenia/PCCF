@@ -290,6 +290,7 @@ El report es genera a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA
 | **SENSE_SUFIX** | Fitxer sense `_OK.md` ni `_BORRADOR.md` |
 | **BORR_TRUNCAT** | Fitxer acaba en `_BORR.md` en lloc de `_BORRADOR.md` |
 | **Stats inc.** | aprovats+suspensos > avaluats, total > final, avaluats > final, final > inici |
+| **Neteja automàtica** | `[]` → `[ ]`, i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`). Es conserven `[###]` i `[...]`. |
 
 El report inclou al final una **llegenda** amb tots estos codis i el seu significat (llegible des de `tools/report_legend.txt`).
 
@@ -359,6 +360,7 @@ Detecta:
 - Mòduls **OK** que encara contenen marcadors `[###]` o `[...]`
 - Caselles `[x]` amb format incorrecte (`[ x ]`, `[x ]`, etc.)
 - Estadístiques inconsistents (sumes que no quadren)
+- **Neteja automàtica**: `[]` → `[ ]` i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`, `[PEPE]`→`PEPE`) durant el report
 - El report inclou llegenda explicativa al final
 
 **Gràfic resum**: Al final del PDF s'inserta un gràfic de barres apilades en pàgina apaisada que ocupa l'ample complet (`width=1.0\linewidth`) amb `\newgeometry{top=10mm, bottom=10mm}` abans del landscape per a maximitzar l'espai horitzontal, centrat verticalment amb `\vspace*{\fill}`. Figsize: `max(10, num_bars*1.2), 5` (ample per defecte per a evitar gràfics massa alts amb pocs mòduls). Usa path absolut en `\includegraphics{}` per a evitar errors de lualatex. Funciona tant per a FP com per a ESO/BAT. Quan totes les estadístiques contenen `[###]`, mostra l'etiqueta "No hi ha dades completes".

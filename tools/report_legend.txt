@@ -19,4 +19,7 @@ LLEGENDA - QUADRE RESUM DE CARÈNCIES DETECTABLES:
   BORR_TRUNCAT      | El fitxer acaba en _BORR.md (en lloc de _BORRADOR)    | Canviar _BORR.md -> _BORRADOR.md
   ANNEX NO          | No s'ha generat el fitxer d'extraescolars             | No cal fer res (ESO/BAT no l'inclou al PDF)
   PRESENT           |                                                       |
+--------------------+-------------------------------------------------------+----------------------------------------------------------
+NOTA: Neteja automàtica en generar el report: []→[ ] i es lleven claudàtors sobrants
+      ([24]→24, [CAP]→CAP, [PEPE]→PEPE). Es conserven [###] i [...] per a la seua detecció.
 ========================================================================================================================================

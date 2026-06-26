@@ -278,6 +278,45 @@ def get_expected_esobat(config):
 def check_placeholders(filepath):
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
+
+    # Clean up: remove [###] from lines with unchecked checkboxes.
+    # If the checkbox is not marked ([ ]), the placeholder is irrelevant;
+    # only [x] + [###] indicates a real missing value.
+    cleaned = []
+    modified = False
+    for line in content.split('\n'):
+        if re.match(r'^\s*-\s*\[\s\]\s', line):
+            new_line = re.sub(r'\s*\[###\]', '', line)
+            if new_line != line:
+                line = new_line
+                modified = True
+        cleaned.append(line)
+    if modified:
+        cleaned_content = '\n'.join(cleaned)
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(cleaned_content)
+        content = cleaned_content
+
+    # Clean up: fix [] → [ ], strip non-checkbox/non-placeholder brackets.
+    # Checkboxes ([X], [x], [ ], [ x ], [x ], [ x], []) and known
+    # placeholders ([###], [...]) are preserved — everything else gets
+    # brackets stripped: [17]→17, [CAP]→CAP, [PEPE]→PEPE.
+    def _fix_brackets(m):
+        text = m.group(0)
+        if text == "[]":
+            return "[ ]"
+        if re.match(r'^\[\s*[xX]?\s*\]$', text):
+            return text
+        if text in ("[###]", "[...]"):
+            return text
+        return text[1:-1]
+
+    old_content = content
+    content = re.sub(r'\[([^\[\]]*?)\]', _fix_brackets, content)
+    if content != old_content:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(content)
+
     # Ignore blockquote lines (> ...), they are stripped at compile time
     content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
     remaining = re.findall(r"\[###\]|\[\.\.\.\]|\[NOMDELPROFESSOR", content)
