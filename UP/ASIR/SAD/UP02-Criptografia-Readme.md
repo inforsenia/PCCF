@@ -1,4 +1,4 @@
-# UP01: Adopción de Pautas de Seguridad Informática.
+# UP02: Criptografía.
 
 ## Resultados y Criterios
 
@@ -14,24 +14,18 @@
 | RA01 | Criterios de Evaluación                              |
 |------|------------------------------------------------------|
 | a|Se ha valorado la importancia de asegurar la privacidad, coherencia y disponibilidad de la información en los sistemas informáticos.|
-| b|Se han descrito las diferencias entre seguridad física y lógica.|
-| c|Se han clasificado las principales vulnerabilidades de un sistema informático, según su tipología y origen.|
-| d|Se ha contrastado la incidencia de las técnicas de ingeniería social en los fraudes informáticos.|
 | e|Se han adoptado políticas de contraseñas.|
-| f|Se han valorado las ventajas que supone la utilización de sistemas biométricos.|
-
+| g|Se han aplicado técnicas criptográficas en el almacenamiento y transmisión de la información.|
 
 | RA02 | Criterios de Evaluación                              |
 |------|------------------------------------------------------|
-| a|Se han clasificado los principales tipos de amenazas lógicas contra un sistema informático.|
-| c|Se han identificado la anatomía de los ataques más habituales, así como las medidas preventivas y paliativas disponibles.|
-
+| f|Se han utilizado técnicas de cifrado, firmas y certificados digitales en un entorno de trabajo basado en el uso de redes públicas.|
 
 # Duración y Temporalización
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 8 Sesiones | 08/09/2025 - 19/09/2025 |
+| 8 Sesiones | 19/09/2025 - 03/10/2025 |
 
 # Evaluación
 
@@ -40,6 +34,8 @@
 
 ## Ejercicios realizados durante la Unidad
 
-* Instalación de un keylogger.
-* Copias con *rsync*.
+* Criptografía simétrica
+* Criptografía asimétrica y Firma digital
+* *rsync* con certificados
+* SSH
 
