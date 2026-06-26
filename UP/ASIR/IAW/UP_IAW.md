@@ -22,24 +22,27 @@
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+* **Resultado de Aprendizaje:** 
+    * **RA1:** Instala servidores web, analizando sus características y configurando sus parámetros funcionales *(enfocado aquí en la preparación del entorno, control de versiones y virtualización ligera necesaria para el despliegue)*.
+* **Criterios de Evaluación:**
+    * **a)** Se han identificado las tecnologías de desarrollo y despliegue de aplicaciones web, así como la arquitectura cliente-servidor.
+    * **b)** Se han utilizado sistemas de control de versiones para la gestión, seguimiento y documentación del código fuente del proyecto.
+    * **c)** Se han configurado contenedores virtuales mediante tecnologías de virtualización ligera para preparar el entorno base de implantación.
+
+
+* **Competencias:**
+    * **Profesionales:** Configurar e implantar entornos de desarrollo y despliegue web aislados, garantizando la trazabilidad del código mediante sistemas de control de versiones descentralizados.
+    * **Empleabilidad:** Capacidad de autoaprendizaje ante herramientas tecnológicas emergentes, rigor en la documentación técnica y destreza en la organización de flujos de trabajo colaborativos.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
     <!-- RELLENAR -->
 *   **Teoría:** 
-    * El lenguaje de creación de documentación Markdown. Sintaxis básica y avanzada.
-    * Git como sistema de control de versiones y repositorio de proyectos. Uso básico de GitHub y GitLab. Ramas, commits, pull requests y merge. Resolución de conflictos. 
-    * Docker como herramienta de virtualización ligera. Contenedores y microservicios. Creación de imágenes y contenedores. Dockerfile y docker-compose. Docker Hub y repositorios privados.
-    * El lenguaje de marcado YAML como lenguaje principal de configuración de aplicaciones y servicios. Sintaxis básica y avanzada. Estructuras de datos y tipos de datos.
+    * Conceptos básicos de la arquitectura web cliente-servidor.
+    * Sistemas de control de versiones distribuidos (Git): estructura de repositorios, gestión de ramas, confirmaciones (`commits`), fusión (`merges`) y resolución manual de conflictos.
+    * Introducción a la contenedorización y virtualización ligera (Docker) aplicada al aislamiento de microservicios.
+    * Lenguajes de marcado y formatos de serialización de datos para configuración (Markdown y YAML).
+
 *   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
     * [Tarea 1 - Introducción a la documentación con Markdown](https://inforsenia.github.io/Terraformadores/v3/Markdown/Tarea1)
@@ -69,20 +72,30 @@
 *   **Temporalización:** 01/10/2025 – 31/10/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+* **Resultado de Aprendizaje:**
+    * **RA1:** Instala servidores web, analizando sus características y configurando sus parámetros funcionales.
+
+
+* **Criterios de Evaluación:**
+    * **a)** Se ha instalado el servidor web y sus módulos asociados en sistemas locales y entornos virtuales.
+    * **b)** Se han configurado los parámetros funcionales del servidor (puertos de escucha, directorios base, hosts virtuales y niveles de seguridad).
+    * **c)** Se han desplegado entornos web multi-servicio utilizando herramientas de orquestación de contenedores y plataformas de infraestructura en la nube.
+
+
+* **Competencias:**
+    * **Profesionales:** Desplegar, configurar y administrar servidores web y motores de bases de datos relacionales, garantizando la interconectividad de servicios tanto en infraestructuras locales como virtuales o cloud.
+    * **Empleabilidad:** Adaptabilidad a plataformas de computación en la nube (Cloud Computing), optimización de recursos lógicos y capacidad de resolución autónoma de problemas de red y conectividad.
+
+
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
-*   **Teoría:**  
-    La pila LAMP (Linux, Apache, MySQL/MariaDB, PHP) y su variante WAMP (Windows, Apache, MySQL/MariaDB, PHP). Instalación y configuración de servidores web (Apache y Nginx). Instalación y configuración de bases de datos (MySQL, MariaDB y PostgreSQL). Configuración de entornos de desarrollo con Docker. Configuración de entornos virtuales con Docker Compose. Configuración de entornos de desarrollo con Entorno de Desarrollo Codium.
+
+* **Contenidos (Orden 36/2012):**
+    * Servidores web (Apache y Nginx): instalación, estructura de directorios, configuración de directivas y hosts virtuales.
+    * Arquitectura multi-capa de servicios web (pila LAMP/WAMP): integración del servidor web, motor de datos y el intérprete de lenguaje de servidor.
+    * Configuración y despliegue automatizado de entornos multi-contenedor mediante herramientas de orquestación (Docker Compose).
+    * Despliegue de infraestructura web y aprovisionamiento en la nube bajo el modelo IaaS (Amazon Web Services - AWS).
+
 
 *   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
@@ -106,18 +119,32 @@
 *   **Temporalización:** 01/11/2025 – 21/11/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+
+* **Resultado de Aprendizaje:**
+    * **RA5:** Programa scripts de servidor, analizando la sintaxis del lenguaje y las tecnologías integradas.
+
+
+* **Criterios de Evaluación:**
+    * **a)** Se ha reconocido la estructura básica de un script de servidor, sus etiquetas de integración y las herramientas de depuración de código.
+    * **b)** Se han utilizado variables, constantes, operadores y tipos de datos simples en la resolución de problemas lógicos y aritméticos.
+    * **c)** Se han empleado estructuras de control condicionales y bucles de repetición para guiar el flujo de ejecución del programa.
+    * **d)** Se han desarrollado funciones de usuario y manipulado arrays asociativos para procesar y validar los datos enviados a través de formularios web.
+
+
+* **Competencias:**
+    * **Profesionales:** Desarrollar scripts de programación del lado del servidor para procesar peticiones HTTP, capturar datos de formularios web y ejecutar la lógica de negocio básica de una aplicación.
+    * **Empleabilidad:** Pensamiento analítico y resolución de problemas algorítmicos, rigor lógico y atención al detalle en la traza y depuración de errores lógicos de software.
+
+
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+
+* **Contenidos (Orden 36/2012):**
+    * Introducción a los lenguajes de programación del lado del servidor: características y bloques de código integrados en código de marcas.
+    * Sintaxis básica del lenguaje (PHP): tipos de datos, variables, constantes y operadores aritmético-lógicos.
+    * Estructuras de control de flujo: bifurcaciones condicionales y bucles iterativos.
+    * Estructuras de datos complejas: arrays indexados, arrays asociativos y funciones de manipulación.
+    * Captura y tratamiento de la información de entrada: procesamiento seguro de formularios web utilizando métodos de transferencia HTTP.
 *   **Teoría:**  
     Lenguaje PHP Básico. Sintaxis básica y avanzada. Tipos de datos, variables, constantes, operadores, estructuras de control, funciones, arrays.
 *   **Metodología:** Metodologías activas con tareas y actividades
@@ -141,18 +168,33 @@
 *   **Temporalización:** 25/11/2025 – 12/12/2025.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+
+* **Resultado de Aprendizaje:**
+    * **RA6:** Desarrolla aplicaciones web dinámicas con acceso a bases de datos, utilizando técnicas de programación seguras.
+
+
+* **Criterios de Evaluación:**
+    * **a)** Se han aplicado los principios del paradigma de la programación orientada a objetos (clases, objetos, métodos y propiedades) en scripts de servidor.
+    * **b)** Se ha establecido la conexión entre la aplicación web y el gestor de bases de datos utilizando capas de abstracción seguras (PDO).
+    * **c)** Se han desarrollado scripts interactivos capaces de realizar operaciones completas de manipulación de datos (CRUD: altas, bajas, modificaciones y consultas).
+    * **d)** Se han implementado mecanismos de control de estado y acceso (sesiones y cookies) aplicando criterios estrictos de validación y sanitización de datos.
+
+
+* **Competencias:**
+    * **Profesionales:** Desarrollar aplicaciones web dinámicas conectadas de forma robusta y segura a sistemas de gestión de bases de datos relacionales, garantizando la persistencia de los datos y blindando el software contra ataques maliciosos.
+    * **Empleabilidad:** Compromiso con la seguridad de la información y la protección de datos, diseño técnico estructurado y visión integradora de sistemas multi-tecnología.
+
+
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+
+* **Contenidos (Orden 36/2012):**
+    * Programación Orientada a Objetos avanzada del lado del servidor (clases, instanciación, métodos y encapsulamiento).
+    * Mecanismos de conectividad con gestores de bases de datos relacionales mediante objetos de datos de PHP (PDO).
+    * Desarrollo práctico de operaciones persistentes (CRUD) sobre tablas relacionales.
+    * Gestión del estado en entornos web desinteresados: configuración y administración de sesiones de usuario y cookies.
+    * Programación web segura: técnicas de validación en servidor, sanitización de cadenas y uso obligatorio de sentencias preparadas para mitigar inyecciones SQL y ataques XSS.
+
 *   **Teoría:**  
     * El lenguaje PHP Avanzado. Sintaxis avanzada. Programación orientada a objetos, clases. Manejo de excepciones y errores. Manejo de sesiones y cookies. Seguridad en aplicaciones web con PHP.
 *   **Metodología:** Metodologías activas con tareas y actividades
@@ -176,18 +218,30 @@
 *   **Temporalización:** 16/12/2025 – 23/01/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+
+* **Resultado de Aprendizaje:** 
+    * **RA1:** Instala servidores web, analizando sus características y configurando sus parámetros funcionales.
+
+* **Criterios de Evaluación:**
+    * **a)** Se han analizado los conceptos fundamentales de la Integración Continua y el Despliegue Continuo (CI/CD) dentro del ciclo de vida del software.
+    * **b)** Se ha instalado, configurado y administrado un servidor de automatización (Jenkins) y su infraestructura distribuidora de nodos de ejecución.
+    * **c)** Se han desarrollado flujos de despliegue automatizados mediante archivos de configuración (`Jenkinsfile`), integrando etapas secuenciales de descarga de código, copia física de producción y pruebas automáticas de conectividad (`health check`).
+
+
+* **Competencias:**
+    * **Profesionales:** Automatizar por completo el ciclo de puesta en producción de aplicaciones web mediante herramientas de integración continua, minimizando la manipulación manual de ficheros y controlando la calidad del servicio.
+    * **Empleabilidad:** Mentalidad y cultura DevOps, enfoque proactivo hacia la eficiencia y la automatización de procesos industriales repetitivos, y resiliencia en la resolución de fallos críticos de despliegue en cadena.
+
+
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+
+* **Contenidos (Orden 36/2012):**
+    * Fundamentos de Integración Continua (CI) y Despliegue Continuo (CD). El flujo de entrega de software.
+    * Servidores de automatización (Jenkins): instalación, gestión del espacio de trabajo (`workspace`), plugins esenciales y arquitectura distribuida máster-nodo.
+    * Configuración de pipelines declarativos a través de scripts de control (`Jenkinsfile`): etapas (`stages`), tareas (`steps`) y bloques condicionales pos-ejecución (`post-actions`).
+    * Mecanismos automatizados de monitorización básica del estado del servicio y auditoría de conectividad (`health checks` mediante comandos nativos como `curl`).
+
 *   **Teoría:**  
     Introducción a la integración continua y despliegue continuo. Conceptos y herramientas. Configuración de pipelines de integración continua y despliegue continuo con Jenkins. Automatización de pruebas y despliegues. Monitoreo y notificaciones.
 *   **Metodología:** Metodologías activas con tareas y actividades
@@ -215,18 +269,36 @@
 *   **Temporalización:** 24/01/2026 – 13/02/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+
+* **Resultado de Aprendizaje:**
+    * **RA2:** Instala gestores de contenidos, analizando sus características y adaptándolos a las especificaciones recibidas.
+    * **RA3:** Gestiona gestores de contenidos, configurando sus parámetros y garantizando la integridad de la información.
+    * **RA7:** *(O el código de RA complementario que use vuestro decreto autonómico para la auditoría y mantenimiento de portales web).*
+
+
+* **Criterios de Evaluación:**
+    * **a)** Se han analizado los requerimientos técnicos y se ha realizado la instalación de sistemas de gestión de contenidos (CMS) sobre la infraestructura web.
+    * **b)** Se han adaptado e instalado extensiones, complementos (`plugins`) y temas para personalizar la apariencia y la funcionalidad del gestor de contenidos.
+    * **c)** Se han configurado y administrado los perfiles de usuario, estableciendo roles, permisos y políticas de control de acceso al sistema.
+    * **d)** Se han planificado y ejecutado operaciones periódicas de mantenimiento correctivo, actualizaciones del núcleo corporativo y políticas de copias de seguridad de los datos.
+
+
+* **Competencias:**
+    * **Profesionales:** Desplegar, parametrizar y administrar gestores de contenidos web (CMS), garantizando la seguridad del portal, el control granular de usuarios y la integridad de las bases de datos asociadas mediante copias de seguridad sistemáticas.
+    * **Empleabilidad:** Orientación al cliente y al usuario final, capacidad organizativa en planes de mantenimiento preventivo y rigor técnico en la protección y salvaguarda de activos digitales.
+
+
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+
+* **Contenidos (Orden 36/2012):**
+    * Sistemas de gestión de contenidos (CMS): tipologías, arquitectura interna, requisitos del sistema y criterios de selección (WordPress, Joomla, Drupal).
+    * Procesos de implantación y despliegue del CMS: configuración del instalador, conexión de la base de datos y estructura de ficheros en el servidor.
+    * Técnicas de personalización y extensibilidad: instalación y administración avanzada de módulos, componentes, complementos y plantillas estéticas.
+    * Gestión de usuarios: control de accesos, creación de roles, asignación de privilegios y moderación del entorno corporativo.
+    * Tareas de administración del sistema: actualización del núcleo y componentes, monitorización de la seguridad del sitio y automatización de procesos de copia de seguridad (`backup`) y restauración catastrófica.
+
+
 *   **Teoría:**  
     Introducción a los gestores de contenidos (CMS). Instalación y configuración de gestores de contenidos. Administración y gestión de contenidos. Seguridad y mantenimiento de gestores de contenidos.
 *   **Metodología:** Metodologías activas con tareas y actividades
@@ -253,19 +325,31 @@
 *   **Temporalización:** 13/02/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
-*   **Resultado de Aprendizaje:**
-    <!-- RELLENAR -->
-*   **Criterios de Evaluación:**
-    *   a) <!-- RELLENAR -->
-*   **Competencias:**
-    *   **Profesionales:** 
-    <!-- RELLENAR -->
-    *   **Empleabilidad:** 
-    <!-- RELLENAR -->
+
+* **Resultado de Aprendizaje:**
+    * **RA4:** Instala y configura aplicaciones de ofimática web, garantizando su funcionalidad y la integración con otras aplicaciones.
+
+
+* **Criterios de Evaluación:**
+    * **a)** Se han identificado las características, tipologías y ventajas operativas de las plataformas de ofimática web y soluciones de almacenamiento en la nube privada.
+    * **b)** Se ha implantado una solución integrada de ofimática web en un servidor corporativo asegurando la accesibilidad a los recursos.
+    * **c)** Se han integrado servidores de edición de documentos en tiempo real y configurado las directivas de uso compartido seguro y cuotas de almacenamiento de los usuarios.
+
+
+* **Competencias:**
+    * **Profesionales:** Desplegar y administrar suites de ofimática web colaborativa y soluciones de almacenamiento virtual alojadas en servidores propios, integrando herramientas de productividad remota y asegurando la soberanía del dato empresarial.
+    * **Empleabilidad:** Fomento del trabajo colaborativo en entornos corporativos, visión estratégica en soluciones tecnológicas centralizadas y optimización de flujos de productividad digital empresarial.
+
 
 
 ### 3. Organización
-*   **Contenidos (Orden 36/2012):** <!-- RELLENAR -->
+
+* **Contenidos (Orden 36/2012):**
+    * Modelos de servicios en la nube aplicados al almacenamiento virtual (*cloud storage*) y la productividad ofimática web.
+    * Instalación y configuración de suites de ofimática web auto-alojadas (*self-hosted* como Nextcloud).
+    * Integración y acoplamiento de servidores de procesamiento de documentos y edición colaborativa en tiempo real (OnlyOffice o Collabora Online).
+    * Administración avanzada de recursos compartidos: cuotas de almacenamiento en disco, gestión de enlaces públicos de descarga, permisos de edición y control de accesos corporativos.
+    
 *   **Teoría:**  
     Implantación de aplicaciones de ofimática web. Instalación y configuración de aplicaciones de ofimática web (Nextcloud, OnlyOffice, Collabora Online). Integración con gestores de contenidos y servicios en la nube.
 *   **Metodología:** Clase magistral breve con una demostración y una actividad práctica.
