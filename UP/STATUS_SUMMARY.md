@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **26/06/2026 a las 10:13:11 UTC**
+> 🕒 Última actualización: **26/06/2026 a las 10:15:14 UTC**
 
 ---
 
@@ -60,7 +60,7 @@
 | IP | pendiente |
 | IPEI | pendiente |
 | IPEII | pendiente |
-| LMSGI | pendiente |
+| LMSGI | **completado** |
 | OPS190 | **completado** |
 | PR | pendiente |
 | SASP | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 26/06/2026 a las 10:13:11 UTC_
+_Generado automáticamente el 26/06/2026 a las 10:15:14 UTC_
