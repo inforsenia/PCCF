@@ -119,6 +119,9 @@ def parse_filename(filename):
         if idx == -1:
             continue
         curs = after_academic[:idx]
+        # Normalize ordinal incorrecte (2r → 2, 4r → 4, 1n → 1, 3n → 3, etc.)
+        # curs_display() posarà el sufix correcte (1r, 2n, 3r, 4t)
+        curs = re.sub(r'^(\d+)[rnt]$', r'\1', curs)
         rest_after_cicle = after_academic[idx + len(cicle_candidat):]
         if rest_after_cicle.startswith("_"):
             grup = rest_after_cicle[1:]
@@ -201,6 +204,7 @@ def parse_filename_esobat(filename):
         # Extract curs_codi: everything up to end of etapa_candidat
         curs_codi = after_academic[:idx + len(etapa_candidat)]
         curs = after_academic[:idx]
+        curs = re.sub(r'^(\d+)[rnt]$', r'\1', curs)
         rest_after = after_academic[idx + len(etapa_candidat):]
         if rest_after.startswith("_"):
             grup = rest_after[1:]
@@ -217,6 +221,7 @@ def parse_filename_esobat(filename):
                 continue
             curs_codi = after_academic[:idx + len(especial)]
             curs = after_academic[:idx]
+            curs = re.sub(r'^(\d+)[rnt]$', r'\1', curs)
             rest_after = after_academic[idx + len(especial):]
             if rest_after.startswith("_"):
                 grup = rest_after[1:]
@@ -319,7 +324,7 @@ def check_placeholders(filepath):
 
     # Ignore blockquote lines (> ...), they are stripped at compile time
     content = re.sub(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*', '', content)
-    remaining = re.findall(r"\[###\]|\[\.\.\.\]|\[NOMDELPROFESSOR", content)
+    remaining = re.findall(r"\[###\]|\[\.\.\.\]", content)
 
     # Check for zero stats (aprovats i suspensos ambdós a 0)
     aprov_zero = re.search(r'^\|\s*Aprovats(?:\s*/\s*[^|]*)?\s*\|\s*0\s*\|$', content, re.MULTILINE)
@@ -351,6 +356,7 @@ STATS_PATTERNS_FP = {
     "final": re.compile(r'^\|\s*Nº d\'alumnes a final de curs\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
     "aprovats": re.compile(r'^\|\s*Aprovats\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
     "suspensos": re.compile(r'^\|\s*Suspensos\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
+    "absents": re.compile(r'^\|\s*No avaluable\s*/\s*absentisme\s*\|\s*(\d+|\[###\])\s*\|$', re.MULTILINE),
 }
 
 
@@ -372,14 +378,19 @@ def check_stats_consistency(filepath, is_esobat):
 
     if is_esobat:
         if "avaluats" in stats and "aprovats" in stats and "suspensos" in stats:
-            if stats["aprovats"] + stats["suspensos"] > stats["avaluats"]:
+            suma = stats["aprovats"] + stats["suspensos"]
+            if suma > stats["avaluats"]:
                 issues.append("aprovats + suspensos > alumnat avaluat")
+            if suma < stats["avaluats"]:
+                issues.append("aprovats + suspensos < alumnat avaluat")
         if "final" in stats and "aprovats" in stats and "suspensos" in stats:
-            total_class = stats["aprovats"] + stats["suspensos"]
+            total = stats["aprovats"] + stats["suspensos"]
             if "absents" in stats:
-                total_class += stats["absents"]
-            if total_class > stats["final"]:
+                total += stats["absents"]
+            if total > stats["final"]:
                 issues.append("total alumnes (aprovats + suspensos + absents) > final de curs")
+            if total < stats["final"]:
+                issues.append("total alumnes (aprovats + suspensos + absents) < final de curs")
         if "avaluats" in stats and "final" in stats:
             if stats["avaluats"] > stats["final"]:
                 issues.append("alumnat avaluat > alumnes a final de curs")
@@ -388,8 +399,13 @@ def check_stats_consistency(filepath, is_esobat):
                 issues.append("final de curs > inici de curs (possibles incorporacions)")
     else:
         if "final" in stats and "aprovats" in stats and "suspensos" in stats:
-            if stats["aprovats"] + stats["suspensos"] > stats["final"]:
-                issues.append("aprovats + suspensos > alumnes a final de curs")
+            total = stats["aprovats"] + stats["suspensos"]
+            if "absents" in stats:
+                total += stats["absents"]
+            if total > stats["final"]:
+                issues.append("total alumnes (aprovats + suspensos + absents) > final de curs")
+            if total < stats["final"]:
+                issues.append("total alumnes (aprovats + suspensos + absents) < final de curs")
         if "inici" in stats and "final" in stats:
             if stats["final"] > stats["inici"]:
                 issues.append("final de curs > inici de curs (possibles incorporacions)")
@@ -549,3 +565,39 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
     report_lines.append("=" * 60)
 
     return report_lines, ok_files, borrador_files, missing, incomplete_ok
+
+
+def te_incidencies_per_marcar(filepath, is_esobat, te_duplicat=False):
+    """
+    Comprova si un fitxer de memòria té incidències que meriten la marca ❌
+    a l'índex del PDF compilat.
+
+    Incidències que es marquen:
+      - [###], [...] (placeholders sense substituir)
+      - [ZERO_STATS] (aprovats i suspensos ambdós a 0)
+      - [CHECKBOX_FORMAT] (caselles malformatejades)
+      - Deficiències de càlcul estadístic (excepte 'possibles incorporacions')
+      - Fitxer duplicat (existeix OK i BORRADOR)
+
+    NO es marquen:
+      - Claudàtors autoreparables (ex: [MARIA] → ja els neteja check_placeholders)
+      - "possibles incorporacions" (final > inici)
+      - Mòduls no presents (FALTA)
+    """
+    remaining = check_placeholders(filepath)
+    stats_issues = check_stats_consistency(filepath, is_esobat)
+
+    # Excloure "possibles incorporacions"
+    stats_issues = [i for i in stats_issues if "possibles incorporacions" not in i]
+
+    # Excloure placeholders no rellevants
+    remaining = [r for r in remaining if r not in ("[NOMDELPROFESSOR",)]
+
+    if remaining:
+        return True
+    if stats_issues:
+        return True
+    if te_duplicat:
+        return True
+
+    return False

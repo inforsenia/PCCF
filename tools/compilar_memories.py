@@ -30,7 +30,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 sys.path.insert(0, SCRIPT_DIR)
-from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent, normalitza_fitxers, get_report_dir
+from memories_utils import parse_filename, curs_display, get_grup_label, get_expected, get_expected_esobat, check_placeholders, build_report_lines, is_annex_file, get_output_parent, normalitza_fitxers, get_report_dir, te_incidencies_per_marcar
 
 
 def _generate_pie_chart(aprov, susp, filepath, absents=None):
@@ -319,6 +319,16 @@ def main():
     # Determine FP vs ESO/BAT
     is_esobat = "cursos" in config
 
+    # Build set of duplicated module keys (both OK and BORRADOR exist)
+    def _module_key(p):
+        if is_esobat:
+            return (p.get("curs_codi", ""), p.get("grup", ""), p.get("materia", ""))
+        return (p["cicle"], p["curs"], p.get("grup", ""), p["modul"])
+
+    ok_keys = {_module_key(p) for p in ok_files}
+    borrador_keys = {_module_key(p) for p in borrador_files}
+    duplicated_keys = ok_keys & borrador_keys
+
     # Render portada (family-specific if exists, else generic)
     env = Environment(loader=FileSystemLoader(os.path.join(PROJECT_DIR, base_dir)), autoescape=False)
     portada_file = f"portada_memoria_compilada_{familia}.md"
@@ -393,11 +403,16 @@ def main():
                             break
                     if heading_idx is not None:
                         heading_text = lines[heading_idx].lstrip('# ')
+                        # Normalize ordinals en el heading del fitxer (2r→2n, 4r→4t, etc.)
+                        heading_text = re.sub(r'\b(\d+)[rnt]\b', lambda m: curs_display(m.group(1)), heading_text)
                         lines.pop(heading_idx)
                         estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                        incidencia_marker = " ❌" if te_incidencies_per_marcar(
+                            filepath, is_esobat, _module_key(p) in duplicated_keys
+                        ) else ""
                         compiled_md_lines.append("\\newpage")
                         compiled_md_lines.append("")
-                        compiled_md_lines.append(f"## {heading_text}{estat_marker}")
+                        compiled_md_lines.append(f"## {heading_text}{estat_marker}{incidencia_marker}")
                         compiled_md_lines.append("")
 
                     content = '\n'.join(lines).strip()
@@ -512,11 +527,16 @@ def main():
                             break
                     if heading_idx is not None:
                         heading_text = lines[heading_idx].lstrip('# ')
+                        # Normalize ordinals en el heading del fitxer (2r→2n, 4r→4t, etc.)
+                        heading_text = re.sub(r'\b(\d+)[rnt]\b', lambda m: curs_display(m.group(1)), heading_text)
                         lines.pop(heading_idx)
                         estat_marker = " ✏️" if p["estat"] == "BORRADOR" else ""
+                        incidencia_marker = " ❌" if te_incidencies_per_marcar(
+                            filepath, is_esobat, _module_key(p) in duplicated_keys
+                        ) else ""
                         compiled_md_lines.append("\\newpage")
                         compiled_md_lines.append("")
-                        compiled_md_lines.append(f"## {heading_text}{estat_marker}")
+                        compiled_md_lines.append(f"## {heading_text}{estat_marker}{incidencia_marker}")
                         compiled_md_lines.append("")
 
                     content = '\n'.join(lines).strip()
