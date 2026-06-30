@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **30/06/2026 a las 16:39:24 UTC**
+> 🕒 Última actualización: **30/06/2026 a las 16:41:14 UTC**
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Módulo | Estado |
 |--------|--------|
-| ASGBD | pendiente |
+| ASGBD | **completado** |
 | ASO | **completado** |
 | DASP | pendiente |
 | FH | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 30/06/2026 a las 16:39:24 UTC_
+_Generado automáticamente el 30/06/2026 a las 16:41:14 UTC_
