@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **30/06/2026 a las 16:41:54 UTC**
+> 🕒 Última actualización: **30/06/2026 a las 16:43:29 UTC**
 
 ---
 
@@ -39,7 +39,7 @@
 | IPEII | pendiente |
 | LMSGI | **completado** |
 | OPS190 | **completado** |
-| PMDM | pendiente |
+| PMDM | **completado** |
 | PR | **completado** |
 | PSP | **completado** |
 | SASP | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 30/06/2026 a las 16:41:54 UTC_
+_Generado automáticamente el 30/06/2026 a las 16:43:29 UTC_
