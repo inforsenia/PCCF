@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **30/06/2026 a las 11:15:36 UTC**
+> 🕒 Última actualización: **30/06/2026 a las 16:39:24 UTC**
 
 ---
 
@@ -81,10 +81,10 @@
 | RL | pendiente |
 | SASP | **completado** |
 | SER | **completado** |
-| SI | pendiente |
+| SI | **completado** |
 | SOM | **completado** |
 | SOR | **completado** |
 
 ---
 
-_Generado automáticamente el 30/06/2026 a las 11:15:36 UTC_
+_Generado automáticamente el 30/06/2026 a las 16:39:24 UTC_
