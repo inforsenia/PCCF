@@ -29,8 +29,10 @@
 * **Resultado de Aprendizaje:** 
     * **RA1:** Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
-
+    * **CE1.a:** Se han identificado los bloques componentes y las estructuras básicas de un programa informático.
+    * **CE1.b:** Se han reconocido los distintos paradigmas de programación, analizando sus ventajas e inconvenientes operativos.
+    * **CE1.c:** Se ha analizado la diferencia entre lenguajes interpretados y compilados en entornos de ejecución.
+    * **CE1.d:** Se han relacionado los lenguajes de alto nivel con sus propósitos generales y específicos en el desarrollo de software.
 
 * **Competencias:**
     * **Profesionales:** <!-- RELLENAR -->
@@ -38,13 +40,16 @@
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Identificación de la estructura fundamental de un programa informático.
+    * Paradigmas de programación: caracterización de la programación estructurada, orientada a objetos, funcional y declarativa.
+    * Tipos de lenguajes: lenguajes de alto y bajo nivel, interpretados y compilados.
+    * El lenguaje Python: origen, filosofía de diseño y ámbitos de aplicación.
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Los lenguajes de programación y sus paradigmas. Tipos de lenguajes de programación. Paradigmas de programación. Lenguajes interpretados y compilados. Lenguajes de bajo y alto nivel. Lenguajes de propósito general y específico. Lenguajes de programación estructurada, orientada a objetos, funcional, lógica y declarativa.
 
 *   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tipos de lenguajes de programación y paradigmas: Hola mundo en varios lenguajes.
     
 
 ### 4. Recursos Tecnológicos
@@ -72,7 +77,10 @@ control del lenguaje.
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE3.a:** Se han utilizado variables y tipos de datos básicos aplicando las reglas de estilo y nomenclatura del lenguaje.
+    * **CE3.b:** Se han diseñado estructuras condicionales simples, compuestas y anidadas para bifurcar el flujo del programa según las condiciones del problema.
+    * **CE3.c:** Se han aplicado estructuras iterativas y condicionales (bucles) para controlar la repetición de bloques de código de manera eficiente.
+    * **CE3.d:** Se han empleado colecciones de datos complejas para organizar, almacenar y manipular conjuntos de información en memoria volátil.
 
 
 * **Competencias:**
@@ -81,13 +89,27 @@ control del lenguaje.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Sintaxis elemental de Python: variables, asignaciones y tipos de datos simples.
+    * Utilización de funciones integradas nativas para la entrada y salida estándar de datos.
+    * Estructuras de control de flujo distribuidas en condicionales y bucles iterativos.
+    * Colecciones elementales de datos: indexación y uso de listas, tuplas, diccionarios y conjuntos (sets).
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * El lenguaje Python: 
+        * Tipos de datos
+        * Variables
+        * Funciones integradas
+        * Estructuras de control (condicionales, bucles)
+        * Listas
+        * Diccionarios
+        * Tuplas
+        * Sets
 
 *   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tarea 1: Introducción a la programación y Python (tipos de datos, variables, funciones integradas)
+    * Tarea 2: Estructuras de control (condicionales, bucles), Listas
+    * Tarea 3: Diccionarios, Tuplas, Sets
+    
     
 
 ### 4. Recursos Tecnológicos
@@ -116,7 +138,11 @@ control del lenguaje.
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE3.e:** Se han diseñado y codificado funciones modulares orientadas a la resolución de subtareas específicas dentro de un problema global.
+    * **CE3.f:** Se ha analizado la diferencia entre parámetros y argumentos, aplicando correctamente el paso por valor y por referencia.
+    * **CE3.g:** Se han utilizado parámetros por defecto y opcionales para crear funciones más adaptables y reutilizables.
+    * **CE3.h:** Se ha acotado de manera segura el ámbito de las variables, evitando conflictos de visibilidad entre entornos locales y globales.
+    * **CE3.i:** Se han estructurado aplicaciones mediante la importación y segmentación de módulos y paquetes lógicos.
 
 
 * **Competencias:**
@@ -125,15 +151,27 @@ control del lenguaje.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Conceptos de modularización y diseño descendente de aplicaciones informáticas.
+    * Definición de funciones, paso de parámetros (posicionales y nominales) y mecanismos de retorno de valores útiles.
+    * Gestión del alcance y ciclo de vida de las variables: visibilidad local frente a global.
+    * Flexibilización de interfaces: parámetros por defecto y opcionales.
+    * Organización del código en el sistema de archivos: reutilización mediante módulos y paquetes.
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Programación modular y funciones en Python: 
+        * Definición de funciones
+        * Parámetros y argumentos
+        * Valores de retorno
+        * Alcance de variables (locales y globales)
+        * Parametros por defecto y optionales
+        * Módulos y paquetes
 
 *   **Metodología:** Metodologías activas con tareas y actividades.
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
-    
+    * Tarea 1: Boletín ejercicios de funciones I
+    * Tarea 2: Boletín ejercicios de funciones II
+    * Tarea 3: Ejercicios finales (tipo examen)
 
+    
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** 
     * Lenguaje Python
@@ -164,7 +202,11 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE3.j:** Se han identificado las excepciones más comunes del entorno, analizando sus causas en tiempo de ejecución.
+    * **CE3.k:** Se han implementado bloques robustos de captura y control de excepciones para asegurar la continuidad del programa ante fallos de usuario o de entorno.
+    * **CE5.a:** Se han utilizado los procedimientos y modos específicos de apertura para leer y escribir información en ficheros planos de manera segura.
+    * **CE5.b:** Se han aplicado bloques de control de contexto para asegurar la liberación y cierre de recursos de almacenamiento físico.
+    * **CE5.c:** Se han capturado y gestionado los errores críticos asociados al sistema de archivos (como la ausencia del archivo o denegación de permisos).
 
 
 * **Competencias:**
@@ -173,13 +215,25 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Gestión de anomalías en tiempo de ejecución: el mecanismo de excepciones de Python (`try`, `except`, `finally`).
+    * Jerarquía de excepciones estándar y técnicas de diseño para excepciones personalizadas.
+    * Mecanismos de persistencia plana: operaciones de apertura, lectura, escritura y cierre seguro de ficheros informáticos.
+    * Modos de acceso al sistema de archivos e integración de codificaciones normalizadas (`utf-8`).
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Las excepciones en Python: 
+        * Manejo de excepciones con try, except, finally
+        * Tipos de excepciones
+        * Creación de excepciones personalizadas
+    * Los ficheros en Python: 
+        * Apertura y cierre de ficheros
+        * Lectura y escritura de ficheros
+        * Modos de apertura de ficheros
+        * Manejo de errores al trabajar con ficheros
 
 *   **Metodología:** Metodologías activas con tareas y actividades
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tarea 1: Boletín ejercicios de Excepciones
+    * Tarea 2: Boletín ejercicios de Ficheros
     
 
 ### 4. Recursos Tecnológicos
@@ -210,7 +264,11 @@ principios de la programación orientada a objetos.
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE2.a:** Se han diseñado clases personalizadas definiendo sus atributos de estado y sus métodos de acción asociados.
+    * **CE2.b:** Se han instanciado y probado objetos interactuando con sus propiedades a través de interfaces controladas.
+    * **CE4.a:** Se ha aplicado el principio de encapsulamiento mediante el uso explícito de modificadores de acceso para proteger el estado interno del objeto.
+    * **CE4.b:** Se ha implementado el mecanismo de herencia para extender la funcionalidad de clases base y reutilizar código de forma jerárquica.
+    * **CE4.c:** Se han sobrescrito métodos especiales mágicos para homogeneizar la representación textual y la inicialización semántica de los objetos en la aplicación.
 
 
 * **Competencias:**
@@ -219,13 +277,23 @@ principios de la programación orientada a objetos.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * El paradigma orientado a objetos: abstracción, clases, instancias, estado y comportamiento.
+    * Modelado de entidades: definición de atributos protegidos y métodos públicos.
+    * Principios de la POO: encapsulamiento, ocultación de datos y métodos de acceso seguro (`getters/setters`).
+    * Mecanismos de especialización: herencia simple, relaciones entre clases y sobrescritura de comportamiento.
+    * Métodos especiales y mágicos del ciclo de vida del objeto (`__init__`, `__str__`).
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Programación orientada a objetos (POO) en Python: 
+        * Clases y objetos
+        * Atributos y métodos
+        * Encapsulamiento
+        * Herencia
+        * Métodos especiales (__init__, __str__, etc.)
 
 *   **Metodología:** Metodologías activas con tareas y actividades
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tarea 1: Introducción a la programación orientada a objetos (POO)
+    * Tarea 2: Ejercicio completo de POO (tipo examen)
     
 
 ### 4. Recursos Tecnológicos
@@ -256,7 +324,12 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE5.d:** Se han configurado diccionarios de credenciales y establecido conexiones estables con motores de bases de datos relacionales locales y remotos.
+    * **CE5.e:** Se han ejecutado de forma segura operaciones de inserción, actualización, consulta y borrado de registros relacionales desde código de programación.
+    * **CE5.f:** Se han blindado las consultas SQL delegando la inyección dinámica de variables en marcadores de posición y tuplas de datos parametrizadas.
+    * **CE5.g:** Se han procesado colecciones multitabla mapeando de manera óptima las filas devuelvas por un cursor en objetos lógicos del dominio de la aplicación.
+    * **CE5.h:** Se ha implementado la arquitectura DAO separando físicamente la lógica de negocio, el modelo de datos y la persistencia SQL en archivos independientes.
+    * **CE5.i:** Se ha garantizado la liberación crítica de recursos e infraestructura del servidor asegurando el cierre de cursores y conexiones en bloques indestructibles.
 
 
 * **Competencias:**
@@ -265,13 +338,26 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Conectividad externa con sistemas gestores de bases de datos relacionales independientes (SQLite y MySQL).
+    * Ejecución controlada de sentencias de manipulación y consulta de datos (CRUD: `SELECT`, `INSERT`, `UPDATE`, `DELETE`).
+    * Mecanismos de seguridad informática: uso imperativo de consultas parametrizadas contra la inyección SQL.
+    * Procesamiento de resultados en memoria mediante la manipulación técnica de cursores relacionales.
+    * Arquitectura de software: desacoplamiento y persistencia mediante el patrón de diseño DAO (Data Access Object).
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Acceso a bases de datos con Python: 
+        * Introducción a bases de datos
+        * Conexión a bases de datos con Python
+        * Operaciones básicas (SELECT, INSERT, UPDATE, DELETE)
+        * Uso de SQLite y MySQL
+        * Manejo de errores y excepciones en el acceso a BBDD
+    * Arquitectura DAO (Data Access Object) y su implementación en Python
 
 *   **Metodología:** Metodologías activas con tareas y actividades
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tarea 1: Introducción a acceso a BBDD con Python y SQLite
+    * Tarea 2: Introducción a acceso a BBDD con Python y Mysql- Select
+    * Tarea 3: Introducción a acceso a BBDD con Python y Mysql- Insert, Update, Delete
+    * Tarea 4: Tarea completa de acceso a BBDD con DAO (tipo examen)
     
 
 ### 4. Recursos Tecnológicos
@@ -302,7 +388,10 @@ utilizando tipos avanzados de datos
 
 
 * **Criterios de Evaluación:**
-    <!-- RELLENAR -->
+    * **CE6.a:** Se han identificado y analizado las ventajas de los formatos estandarizados de intercambio de datos en la administración de redes y aplicaciones.
+    * **CE6.b:** Se han utilizado herramientas nativas para transformar diccionarios y listas en cadenas estructuradas JSON y viceversa.
+    * **CE6.c:** Se han procesado y recorrido de manera jerárquica las estructuras de archivos XML mediante librerías de parseo elemental.
+    * **CE6.d:** Se han leído y generado archivos tabulares de texto plano CSV para la automatización e importación masiva de métricas.
 
 
 * **Competencias:**
@@ -311,13 +400,17 @@ utilizando tipos avanzados de datos
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
-    <!-- RELLENAR -->
+    * Formatos normalizados de almacenamiento e intercambio de información entre plataformas: JSON, XML y CSV.
+    * Serialización y deserialización de colecciones complejas utilizando librerías específicas del lenguaje.
+    * Procesamiento estructurado de árboles de datos jerárquicos y tablas de texto delimitadas por caracteres.
 *   **Teoría:** 
-    * <!-- RELLENAR -->
+    * Intercambio de datos: JSON, XML, CSV. Librerías de Python para el manejo de estos formatos (json, xml.etree.ElementTree, csv).
 
 *   **Metodología:** Metodologías activas con tareas y actividades
 *   **Secuencia (Fases):**
-    * <!-- RELLENAR -->
+    * Tarea 1: Introduccion al intercambio de datos (JSON, XML, CSV)
+    * Tarea 2: Ejercicio completo de intercambio de datos
+
     
 
 ### 4. Recursos Tecnológicos
@@ -327,9 +420,103 @@ utilizando tipos avanzados de datos
     * git, GitHub, GitLab
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Observación directa de la participación en las actividades y tareas. Prueba final de la UP (90%).
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
 *   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
 
 
 
-<!-- ACABAR!! -->
+## UP08: Frameworks de Python: Django
+
+### 1. Identificación
+*   **Código:** UP08 | **Módulo:** 0190
+*   **Duración:** 5 horas.
+*   **Temporalización:** 30/01/2026 - 13/02/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:**
+    * **RA1:** Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado
+
+
+* **Criterios de Evaluación:**
+    * Arquitectura web monolítica y frameworks de desarrollo rápido de aplicaciones web en Python.
+    * El patrón de diseño Modelo-Vista-Plantilla (MVT): componentes, responsabilidades y acoplamiento técnico.
+    * Abstracción de persistencia avanzada: el mapeador de objetos relacionales (Django ORM) para la manipulación abstracta de bases de datos.
+    * Mecanismos de enrutamiento URL, controladores lógicos de peticiones HTTP y renderizado dinámico de vistas.
+
+
+* **Competencias:**
+    * **Profesionales:** <!-- RELLENAR -->
+    * **Empleabilidad:** <!-- RELLENAR -->
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** 
+    * Arquitectura web monolítica y frameworks de desarrollo rápido de aplicaciones web en Python.
+    * El patrón de diseño Modelo-Vista-Plantilla (MVT): componentes, responsabilidades y acoplamiento técnico.
+    * Abstracción de persistencia avanzada: el mapeador de objetos relacionales (Django ORM) para la manipulación abstracta de bases de datos.
+    * Mecanismos de enrutamiento URL, controladores lógicos de peticiones HTTP y renderizado dinámico de vistas.
+*   **Teoría:** 
+    * Introducción a Django: Instalación, configuración y estructura de un proyecto Django. Creación de aplicaciones, modelos, vistas y plantillas. Manejo de URLs y formularios. Administración de la base de datos con Django ORM.
+
+*   **Metodología:** Metodologías activas con tareas y actividades
+*   **Secuencia (Fases):**
+    * Tarea 1: Introducción a Django y creación de un proyecto básico
+    * Tarea 2: Desarrollo de una aplicación web simple con Django
+    
+
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Lenguaje Python
+    * Entorno de Desarrollo Codium
+    * git, GitHub, GitLab
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+
+## UP09: Python en la administración de sistemas
+
+### 1. Identificación
+*   **Código:** UP09 | **Módulo:** 0190
+*   **Duración:** 2 horas.
+*   **Temporalización:** 13/02/2026 - 13/02/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:**
+    * **RA1:** Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado
+
+
+* **Criterios de Evaluación:**
+    * **CE1.i:** Se han programado scripts compactos orientados a la automatización de tareas administrativas rutinarias del sistema operativo.
+    * **CE1.j:** Se han manipulado elementos del sistema de archivos, permisos y rutas físicas de almacenamiento mediante utilidades internas del lenguaje.
+    * **CE1.k:** Se han ejecutado comandos nativos del shell de comandos del sistema operativo desde scripts de Python, capturando de forma segura sus flujos de salida de datos (`stdout`) y códigos de error (`stderr`).
+
+
+* **Competencias:**
+    * **Profesionales:** <!-- RELLENAR -->
+    * **Empleabilidad:** <!-- RELLENAR -->
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** 
+    * El lenguaje Python orientado al scripting de infraestructura operativa y automatización de sistemas informáticos.
+    * Interacción con las API del sistema operativo host mediante la manipulación de directorios, rutas de archivos y variables de entorno (módulo `os`).
+    * Invocación, monitorización y control avanzado de subprocesos externos de consola y scripts del sistema operativo (módulo `subprocess`).
+*   **Teoría:** 
+    * Introducción a la administración de sistemas con Python: Librerías os y subprocess. Ejemplos prácticos de automatización de tareas del sistema operativo.
+
+*   **Metodología:** Metodologías activas con tareas y actividades
+*   **Secuencia (Fases):**
+    * Tarea 1: Administración de sistemas con Python: Libreria os y subprocess. 
+    
+
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Lenguaje Python
+    * Entorno de Desarrollo Codium
+    * git, GitHub, GitLab
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Tarea práctica y evaluación continua.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
