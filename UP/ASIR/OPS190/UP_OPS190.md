@@ -35,8 +35,13 @@
     * **CE1.d:** Se han relacionado los lenguajes de alto nivel con sus propósitos generales y específicos en el desarrollo de software.
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Desarrollar scripts de automatización elementales y estructurar código modular reutilizable para la optimización de procesos lógicos rutinarios en sistemas informáticos.
+        * Identificar y relacionar los elementos propios de un lenguaje de alto nivel para interactuar de forma óptima con el sistema operativo host.
+    * **Empleabilidad:**
+        * Capacidad de análisis crítico, abstracción mental y resolución sistemática de problemas técnicos mediante el desarrollo del pensamiento algorítmico.
+        * Autonomía y disciplina en la depuración de errores lógicos y en la autoorganización del trabajo individual.
+
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -84,8 +89,12 @@ control del lenguaje.
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Desarrollar scripts de automatización elementales y estructurar código modular reutilizable para la optimización de procesos lógicos rutinarios en sistemas informáticos.
+        * Identificar y relacionar los elementos propios de un lenguaje de alto nivel para interactuar de forma óptima con el sistema operativo host.
+    * **Empleabilidad:**
+        * Capacidad de análisis crítico, abstracción mental y resolución sistemática de problemas técnicos mediante el desarrollo del pensamiento algorítmico.
+        * Autonomía y disciplina en la depuración de errores lógicos y en la autoorganización del trabajo individual.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -146,8 +155,12 @@ control del lenguaje.
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Desarrollar scripts de automatización elementales y estructurar código modular reutilizable para la optimización de procesos lógicos rutinarios en sistemas informáticos.
+        * Identificar y relacionar los elementos propios de un lenguaje de alto nivel para interactuar de forma óptima con el sistema operativo host.
+    * **Empleabilidad:**
+        * Capacidad de análisis crítico, abstracción mental y resolución sistemática de problemas técnicos mediante el desarrollo del pensamiento algorítmico.
+        * Autonomía y disciplina en la depuración de errores lógicos y en la autoorganización del trabajo individual.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -210,8 +223,13 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Configurar y gestionar el almacenamiento persistente de datos de configuración, monitorización y auditoría del sistema informático, garantizando la seguridad, integridad y disponibilidad de la información.
+        * Desacoplar la persistencia de datos relacionales mediante arquitecturas de software estándar (DAO), previniendo activamente vulnerabilidades de inyección de código.
+    * **Empleabilidad:**
+        * Rigor técnico y responsabilidad en el manejo de recursos críticos de infraestructura de servidores y sistemas gestores de bases de datos.
+        * Capacidad de resiliencia y gestión del riesgo ante contingencias lógicas mediante el control exhaustivo de excepciones en entornos de producción.
+
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -272,8 +290,11 @@ principios de la programación orientada a objetos.
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Modelar entidades e infraestructura virtualizada de red aplicando principios avanzados de abstracción y encapsulamiento orientados al diseño de aplicaciones escalables.
+        * Organizar y estructurar componentes lógicos complejos aprovechando la reutilización de código mediante jerarquías de especialización técnica.
+    * **Empleabilidad:**
+        * Capacidad para asimilar nuevos paradigmas tecnológicos y estructurar de manera ordenada y documentada flujos masivos de información técnica.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -333,8 +354,13 @@ procedimientos específicos del lenguaje y librerías de clases.
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Configurar y gestionar el almacenamiento persistente de datos de configuración, monitorización y auditoría del sistema informático, garantizando la seguridad, integridad y disponibilidad de la información.
+        * Desacoplar la persistencia de datos relacionales mediante arquitecturas de software estándar (DAO), previniendo activamente vulnerabilidades de inyección de código.
+    * **Empleabilidad:**
+        * Rigor técnico y responsabilidad en el manejo de recursos críticos de infraestructura de servidores y sistemas gestores de bases de datos.
+        * Capacidad de resiliencia y gestión del riesgo ante contingencias lógicas mediante el control exhaustivo de excepciones en entornos de producción.
+
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -395,8 +421,11 @@ utilizando tipos avanzados de datos
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Automatizar tareas de administración de sistemas y coordinar la migración masiva de métricas informáticas mediante el uso de librerías nativas y formatos estandarizados de serialización (JSON, XML y CSV).
+        * Controlar e invocar subprocesos del shell del sistema operativo de manera síncrona y asíncrona desde código de programación seguro.
+    * **Empleabilidad:**
+        * Orientación a la interoperabilidad de sistemas heterogéneos y eficiencia en la optimización del tiempo de respuesta ante mantenimientos en caliente.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -446,8 +475,11 @@ utilizando tipos avanzados de datos
 
 
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:**
+        * Integrar, desplegar y mantener servicios y consolas web de administración de datos utilizando frameworks de desarrollo ágil y mapeadores abstractos de bases de datos (ORM).
+        * Configurar enrutamientos operativos y vistas dinámicas para la visualización unificada del estado de la infraestructura tecnológica de la organización.
+    * **Empleabilidad:** 
+        * Adaptación proactiva y flexibilidad ante la evolución constante de los frameworks de software y visión integradora de la arquitectura de servicios distribuidos de red.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
@@ -493,10 +525,12 @@ utilizando tipos avanzados de datos
     * **CE1.j:** Se han manipulado elementos del sistema de archivos, permisos y rutas físicas de almacenamiento mediante utilidades internas del lenguaje.
     * **CE1.k:** Se han ejecutado comandos nativos del shell de comandos del sistema operativo desde scripts de Python, capturando de forma segura sus flujos de salida de datos (`stdout`) y códigos de error (`stderr`).
 
-
 * **Competencias:**
-    * **Profesionales:** <!-- RELLENAR -->
-    * **Empleabilidad:** <!-- RELLENAR -->
+    * **Profesionales:** 
+        * Automatizar tareas de administración de sistemas y coordinar la migración masiva de métricas informáticas mediante el uso de librerías nativas y formatos estandarizados de serialización (JSON, XML y CSV).
+        * Controlar e invocar subprocesos del shell del sistema operativo de manera síncrona y asíncrona desde código de programación seguro.
+    * **Empleabilidad:**
+        * Orientación a la interoperabilidad de sistemas heterogéneos y eficiencia en la optimización del tiempo de respuesta ante mantenimientos en caliente.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
