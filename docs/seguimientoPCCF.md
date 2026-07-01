@@ -65,7 +65,7 @@
 # Evaluación de los acuerdos.
 
 
-* ¿Qué acuerdos del PCCF se han cumplido íntegramente?
+¿Qué acuerdos del PCCF se han cumplido íntegramente?
 
 ¿Qué acuerdos se han cumplido solo de forma parcial?
 
