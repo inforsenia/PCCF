@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **02/07/2026 a las 18:18:08 UTC**
+> 🕒 Última actualización: **02/07/2026 a las 18:19:06 UTC**
 
 ---
 
@@ -73,7 +73,7 @@
 | AOF | **completado** |
 | AW | **completado** |
 | DASP | **completado** |
-| IP | pendiente |
+| IP | **completado** |
 | IPEI | pendiente |
 | IPEII | pendiente |
 | MME | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 02/07/2026 a las 18:18:08 UTC_
+_Generado automáticamente el 02/07/2026 a las 18:19:06 UTC_
