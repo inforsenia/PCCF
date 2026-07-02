@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **02/07/2026 a las 09:36:35 UTC**
+> 🕒 Última actualización: **02/07/2026 a las 09:37:39 UTC**
 
 ---
 
@@ -33,7 +33,7 @@
 | BD | pendiente |
 | DASP | pendiente |
 | DI | **completado** |
-| ED | pendiente |
+| ED | **completado** |
 | IP | pendiente |
 | IPEI | pendiente |
 | IPEII | pendiente |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 02/07/2026 a las 09:36:35 UTC_
+_Generado automáticamente el 02/07/2026 a las 09:37:39 UTC_
