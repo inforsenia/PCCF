@@ -17,7 +17,6 @@
 
 
 
-<!-- continuar -->
 ## UP01: Introducción a la programación y Python
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 0190
@@ -479,7 +478,7 @@ utilizando tipos avanzados de datos
         * Integrar, desplegar y mantener servicios y consolas web de administración de datos utilizando frameworks de desarrollo ágil y mapeadores abstractos de bases de datos (ORM).
         * Configurar enrutamientos operativos y vistas dinámicas para la visualización unificada del estado de la infraestructura tecnológica de la organización.
     * **Empleabilidad:** 
-        * Adaptación proactiva y flexibilidad ante la evolución constante de los frameworks de software y visión integradora de la arquitectura de servicios distribuidos de red.
+        * Adaptación pr     oactiva y flexibilidad ante la evolución constante de los frameworks de software y visión integradora de la arquitectura de servicios distribuidos de red.
 
 ### 3. Organización
 *   **Contenidos (Orden 36/2012):** 
