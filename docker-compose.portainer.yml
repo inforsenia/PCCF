@@ -17,3 +17,9 @@ services:
     environment:
       - TERM=xterm-256color
       - TZ=Europe/Madrid
+    networks:
+      - internal_pccf
+
+networks:
+  internal_pccf:
+    external: true
