@@ -34,10 +34,11 @@ while true; do
 done &
 ONEDRIVE_PID=$!
 
-# TODO (pendent, tasca #11 del pla): llançar ací el poller que detecta
-# fitxers de disparador (Verificar/Compilar) i crida report_memories.py /
-# compilar_memories.py / publish_memories_output.py. De moment, el
-# contenidor només manté la sincronització viva; el report/compila es
-# continua llançant manualment via `docker exec`.
+echo "Engegant el poller de compilació automàtica (sync-root=$MEMORIES_SYNC_ROOT)..."
+# Sense fitxer disparador: sondeja les dates de modificació dels .md reals
+# contra les de l'últim report publicat, i compila+publica sol quan detecta
+# un canvi (vore tools/local_sync_poller.py).
+python3 /home/PCCF/tools/local_sync_poller.py --sync-root "$MEMORIES_SYNC_ROOT" &
+POLLER_PID=$!
 
-wait "$ONEDRIVE_PID"
+wait -n "$ONEDRIVE_PID" "$POLLER_PID"
