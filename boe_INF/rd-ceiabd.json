@@ -529,6 +529,18 @@
             "nombre": "Big Data aplicat",
             "creditos": "8",
             "ResultadosAprendizaje": {
+                "RA00": {
+                    "Resultado": "Fa servir el terminal de Linux per a l'administració i automatització de sistemes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han utilitzat comandaments bàsics i avançats del terminal per a la gestió de fitxers, directoris, processos i permisos.",
+                        "b": "S'han realitzat tasques administratives des del terminal, com ara la gestió d'usuaris, la configuració de serveis i la supervisió de recursos del sistema.",
+                        "c": "S'han programat scripts de shell per a automatitzar processos repetitius i seqüències de tasques administratives.",
+                        "d": "S'ha comprovat el funcionament correcte dels scripts mitjançant proves i depuració d'errors.",
+                        "e": "S'han aplicat bones pràctiques en l'escriptura de scripts, incloent-hi comentaris, control d'errors i ús de variables.",
+                        "f": "S'ha comprovat el funcionament correcte dels scripts mitjançant proves i depuració d'errors.",
+                        "g": "S'han aplicat bones pràctiques en l'escriptura de scripts, incloent-hi comentaris, control d'errors i ús de variables."
+                    }
+                },
                 "RA01": {
                     "Resultado": "Gestiona solucions a problemes proposats, utilitzant sistemes d'emmagatzematge i eines associades al centre de dades.",
                     "CriteriosEvaluacion": {

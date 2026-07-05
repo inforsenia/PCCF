@@ -390,7 +390,7 @@
                         "d": "S'han realitzat les tasques de neteja i manteniment d'útils d'enquadernació, i els ajustaments pertinents per a un adequat funcionament.",
                         "e": "S'han identificat els diferents recursos consumibles tints i líquids, paper, cintes i cartutxos d'impressió, tòner o altres-relacionant-los amb els equips de reproducció i informàtics.",
                         "f": "S'ha manejat els equips, assumint el compromís de mantenir i cuidar aquests, i obtenint el màxim profit als mitjans utilitzats en el procés, evitant costos i desgasts innecessaris.",
-                        "g": "S'ha realitzat les següents consideracions durant l'activitat: - Posar a punt i netejar les màquines. - Detectar petites averies mecàniques solucionant, si és possible, les contigències observades. - Aprovisionar amb els materials necessaris les màquines. - Realitzar les proves de funcionament bàsic dels equips informàtics i de reproducció. - Realitzar labors de manteniment bàsic dels equips informàtics i d'oficina. - Substituir consumibles, d'entre diversos tipus facilitats, en l'equip que corresponga. - Adoptar les mesures de seguretat necessàries per a comprovar el funcionament bàsic en mode segur. - Utilitzar els equips de protecció d’acord amb els connectors i terminals implicats.",
+                        "g": "S'ha realitzat les següents consideracions durant l'activitat: - Posar a punt i netejar les màquines. - Detectar petites averies mecàniques solucionant, si és possible, les contigències observades. - Aprovisionar amb els materials necessaris les màquines. - Realitzar les proves de funcionament bàsic dels equips informàtics i de reproducció. - Realitzar labors de manteniment bàsic dels equips informàtics i d'oficina. - Substituir consumibles, d'entre diversos tipus facilitats, en l'equip que corresponga. - Adoptar les mesures de seguretat necessàries per a comprovar el funcionament bàsic en mode segur. - Utilitzar els equips de protecció d'acord amb els connectors i terminals implicats.",
                         "h": "S'ha realitzat les següents consideracions durant l'activitat: - Tomar les mesures de seguretat necessàries per comprovar el funcionament bàsic en mode segur. - Utilitzar els equips de protecció d'acord amb els connectors i terminals implicats."
                     }
                 },
@@ -1224,28 +1224,51 @@
             "nombre": "IPO1",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "RA1",
+                "RA1": {
+                    "Resultado": "Identifica els conceptes bàsics sobre seguretat i salut en el treball en el sector productiu associat al perfil professional.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'ha valorat la relació entre treball i la salut amb especial atenció als conceptes clau de risc i mal derivat del treball.",
+                        "b": "S'ha reflexionat sobre els danys derivats del treball i les seues diferents formes: accidents de treball, malalties professionals i altres patologies derivades del treball.",
+                        "c": "S'ha determinat el marc normatiu bàsic, així com els drets i deures en matèria de prevenció de riscos laborals."
                     }
                 },
-                "RA02": {
-                    "Resultado": "RA2",
+                "RA2": {
+                    "Resultado": "Avalua els riscos derivats de la seua activitat, analitza les condicions de treball i els factors de risc presents en el seu entorn laboral.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'han classificat els factors de risc en l'activitat i els danys derivats d'estos.",
+                        "b": "S'han identificat les situacions de risc més habituals en els entorns de treball de l'activitat professional relacionada amb el títol professional bàsic.",
+                        "c": "S'ha valorat la importància de l'avaluació de riscos en l'empresa.",
+                        "d": "S'han classificat i descrit els tipus de danys professionals, amb referència especial a accidents de treball i malalties professionals, relacionats amb el perfil professional del títol professional bàsic.",
+                    }
+                },
+                "RA3": {
+                    "Resultado": "Aplica les mesures de prevenció i protecció, i analitza les situacions de risc en l'entorn laboral del títol professional bàsic.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit les tècniques de prevenció i de protecció individual i col·lectiva que han d'aplicarse per a evitar els danys a l'origen i minimitzar les seues conseqüències en cas que siguen inevitables.",
+                        "b": "S'ha analitzat el significat i abast dels diferents tipus de senyalització de seguretat.",
+                        "c": "S'han analitzat els protocols d'actuació en cas d'emergència.",
+                        "d": "S'han identificat les tècniques bàsiques de primers auxilis que s'han d'aplicar en el lloc de l'accident davant de diferents tipus de danys i la composició i l'ús de la farmaciola.",
+                    }
+                },
+                "RA4": {
+                    "Resultado": "Desenrotlla activitats d'autoconeixement que li permeten orientar-se a camps professionals motivadors en els quals pot desplegar totes les seues capacitats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han avaluat els interessos propis, motivacions, habilitats i destreses en el marc d'un procés d'autoconeixement.",
+                        "b": "S'han determinat les competències personals i socials amb valor per a l'ocupació.",
+                        "c": "S'ha valorat el concepte d'autoestima en el procés de busca d'ocupació.",
+                        "d": "S'han identificat les fortaleses, debilitats, amenaces i oportunitats pròpies per a la inserció professional, així com les estratègies per a traure'ls el major aprofitament.",
+                        "e": "S'han identificat expectatives de futur per a inserció professional i s'han analitzat competències, interessos i destreses personals.",
+                        "f": "S'han realitzat accions d'autoavaluació i autoregulació per a millorar la professionalització i l'ocupabilitat."
+                    }
+                },
+                "RA5": {
+                    "Resultado": "Desenrotlla habilitats socials concretes que s'han demostrat com a fonamentals a l'hora de trobar un lloc de treball i mantindre'l.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha valorat la importància de les competències personals i socials en l'ocupabilitat.",
+                        "b": "S'han aplicat estratègies per a canalitzar les emocions de manera assertiva en les relacions amb altres persones, diferenciant-les de conductes agressives i/o passives.",
+                        "c": "S'han posat en pràctica tècniques de presentació, orals i escrites, per a una comunicació efectiva i afectiva valorant la seua importància com a recurs personal per a l'ocupabilitat.",
+                        "d": "S'han identificat els beneficis del treball en equip, així com les diferents maneres de dur-lo a terme.",
+                        "e": "S'ha reaccionat de manera flexible i positiva davant de conflictes i situacions noves i s'han aprofitat les oportunitats i s'han gestionat les dificultats fent ús d'estratègies relacionades amb la intel·ligència emocional."
                     }
                 }
             },
@@ -1262,28 +1285,38 @@
             "nombre": "IPO2",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "RA1",
+                "RA6": {
+                    "Resultado": "Accedix a la informació dels possibles itineraris acadèmics i/o professionals que té al seu abast a través de la investigació i la reflexió lliure d'estereotips vocacionals.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'ha determinat la realitat de l'entorn sociolaboral actual.",
+                        "b": "S'han identificat els itineraris acadèmics i professionals afins als seus interessos i s'han valorat les opcions que millor s'ajusten als seus perfils professionals i les seues preferències.",
+                        "c": "S'ha valorat la importància de la formació permanent com a factor clau per a l'ocupació i l'adaptació al canvi.",
                     }
                 },
-                "RA02": {
-                    "Resultado": "RA2",
+                "RA7": {
+                    "Resultado": "Posa en marxa un itinerari propi analitzant les diferents opcions educatives i professionals, valora els avantatges i inconvenients de cada una d'elles i examina aquelles que millor s'ajusten a les seues possibilitats i preferències.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'han valorat els avantatges i inconvenients de cada una de les opcions possibles.",
+                        "b": "S'han analitzat i seleccionat les opcions que més s'ajusten als seus perfils professionals.",
+                        "c": "S'ha realitzat un procés de presa de decisions identificant l'itinerari acadèmic i professional personal, a partir de les seues preferències professionals, interessos i metes en el marc d'un projecte professional.",
+                    }
+                },
+                "RA8": {
+                    "Resultado": "Coneix les estratègies d'accés al mercat de treball per compte d'altri i utilitza les ferramentes necessàries per al procés d'inserció laboral.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat la busca d'ocupació com un procés.",
+                        "b": "S'han identificat les diferents fonts d'informació d'accés a l'ocupació.",
+                        "c": "S'han analitzat les diferents tècniques utilitzades per a la busca d'ocupació per compte d'altri.",
+                        "d": "S'han posat en pràctica les diferents ferramentes que permeten una busca d'ocupació òptima.",
+                    }
+                },
+                "RA9": {
+                    "Resultado": "Coneix els drets fonamentals i els drets laborals vinculats al seu sector professional.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat l'Estatut dels treballadors.",
+                        "b": "S'ha analitzat els drets fonamentals vinculats al treball, el dret de sindicació i vaga.",
+                        "c": "S'ha valorat la importància de la negociació col·lectiva i el conveni col·lectiu.",
+                        "d": "S'han identificat els aspectes bàsics de la jornada laboral i de la nòmina"
                     }
                 }
             },

@@ -156,13 +156,11 @@
                     "Resultado": "Avalua sistemes informàtics, identificant els seus components i característiques.",
                     "CriteriosEvaluacion": {
                         "a": "S'han reconegut els components físics d'un sistema informàtic i els seus mecanismes d'interconexió.",
-                        "b": "S'han classificat els tipus de memòries, assenyalant les seves característiques i identificant les seues prestacions i la funció que desenvolupen en el conjunt del sistema.",
-                        "c": "S'ha verificat el procés de posada en marxa d'un equip.",
-                        "d": "S'han classificat, instal·lat i configurat diferents tipus de dispositius perifèrics.",
-                        "e": "S'han identificat els tipus de xarxes i sistemes de comunicació.",
-                        "f": "S'han identificat els components d'una xarxa informàtica.",
-                        "g": "S'han interpretat mapes físics i lògics d'una xarxa informàtica.",
-                        "h": "S'han reconegut les normes de seguretat i prevenció de riscos laborals en l'ús dels sistemes informàtics."
+                        "b": "S'ha verificat el procés de posada en marxa d'un equip.",
+                        "c": "S'han classificat, instal·lat i configurat diferents tipus de dispositius perifèrics.",
+                        "d": "S'han identificat els tipus de xarxes i sistemes de comunicació.",
+                        "e": "S'han identificat els components d'una xarxa informàtica.",
+                        "f": "S'han interpretat mapes físics i lògics d'una xarxa informàtica.",
                     }
                 },
                 "RA02": {
@@ -171,12 +169,10 @@
                         "a": "S'han identificat els elements funcionals d'un sistema informàtic.",
                         "b": "S'han analitzat les característiques, funcions i arquitectura d'un sistema operatiu.",
                         "c": "S'han comparat sistemes operatius en base als seus requisits, característiques, camps d'aplicació i llicències d'ús.",
-                        "d": "S'ha planificat el procés de la instal·lació de sistemes operatius.",
-                        "e": "S'han instal·lat i actualitzat sistemes operatius lliures i propietaris.",
-                        "f": "S'han aplicat tècniques d'actualització i recuperació del sistema.",
-                        "g": "S'han utilitzat tecnologies de virtualització per a instal·lar i provar sistemes operatius.",
-                        "h": "S'han instal·lat, desinstal·lat i actualitzat aplicacions.",
-                        "i": "S'han documentat els processos realitzats."
+                        "d": "S'han instal·lat diferents sistemes operatius.",
+                        "e": "S'han aplicat tècniques d'actualització i recuperació del sistema.",
+                        "f": "S'han utilitzat màquines virtuals per a instal·lar i provar sistemes operatius.",
+                        "g": "S'han documentat els processos realitzats."
                     }
                 },
                 "RA03": {
@@ -242,7 +238,7 @@
                     }
                 }
             },
-            "horas": "160",
+            "horas": "166",
             "UnidadesCompetenciaAcreditadas": {
                 "UC0223_3": "Configurar y explotar sistemas informáticos."
             },
@@ -336,7 +332,7 @@
                         "f": "S'han definit procediments i funcions d'usuari.",
                         "g": "S'han utilitzat estructures de control de flux.",
                         "h": "S'han definit esdeveniments i disparadors.",
-                        "i": "S'han utilitzat cursos.",
+                        "i": "S'han utilitzat cursors.",
                         "j": "S'han utilitzat excepcions."
                     }
                 },
@@ -346,9 +342,9 @@
                         "a": "S'han utilitzat eines gràfiques per a representar el disseny lògic i conceptual.",
                         "b": "S'ha extret l'esquema entitat-relació estès a partir dels requeriments d'un model donat, reconeixent les entitats, atributs i relacions del mateix.",
                         "c": "S'ha aplicat la simbologia normalitzada en l'elaboració del diagrama entitat-relació.",
-                        "d": "Se han identificat els tabals del disseny lògic.",
+                        "d": "Se han identificat els taules del disseny lògic.",
                         "e": "Se han identificat els camps que forman part dels tauls del disseny lògic.",
-                        "f": "S'han analitzat les relacions entre els tauls del disseny lògic.",
+                        "f": "S'han analitzat les relacions entre els taules del disseny lògic.",
                         "g": "Se han identificat els camps clau.",
                         "h": "S'han aplicat regles d'integritat.",
                         "i": "S'han aplicat regles de normalització.",
@@ -448,14 +444,14 @@
                 "RA05": {
                     "Resultado": "Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha utilitzat la consola per a realitzar operacions d'entrada i sortida d'informació.",
+                        "a": "S'ha utilitzat la consola per a realitzar operacions d'entrada i eixida d'informació.",
                         "b": "S'han aplicat formats en la visualització de la informació.",
-                        "c": "S'han reconegut les possibilitats d'entrada / sortida del llenguatge i les llibreries associades.",
+                        "c": "S'han reconegut les possibilitats d'entrada/eixida del llenguatge i les llibreries associades.",
                         "d": "S'han utilitzat fitxers per a emmagatzemar i recuperar informació.",
                         "e": "S'han creat programes que utilitzen diversos mètodes d'accés al contingut dels fitxers.",
-                        "f": "S'han utilitzat les eines de l'entorn de desenvolupament per a crear interfícies gràfics d'usuari simples.",
+                        "f": "S'han utilitzat les eines de l'entorn de desenvolupament per a crear interfícies gràfiques d'usuari simples.",
                         "g": "S'han programat controladors d'esdeveniments.",
-                        "h": "S'han escrit programes que utilitzen interfícies gràfics per a l'entrada i sortida d'informació."
+                        "h": "S'han escrit programes que utilitzen interfícies gràfiques per a l'entrada i eixida d'informació."
                     }
                 },
                 "RA06": {
@@ -726,7 +722,7 @@
                     }
                 }
             },
-            "horas": "96",
+            "horas": "100",
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "d",
@@ -1127,7 +1123,7 @@
                         "b": "S'han reconegut les classes que permeten la captura, processament i emmagatzematge de dades multimèdia.",
                         "c": "S'han utilitzat classes per a la conversió de dades multimèdia d'un format a un altre.",
                         "d": "S'han utilitzat classes per a processar dades multimèdia.",
-                        "e": "S'han utilitzat classes per al control d'esdeveniments, tipus de mitjana i excepcions, entre altres.",
+                        "e": "S'han utilitzat classes per al control d'esdeveniments, tipus de media i excepcions, entre altres.",
                         "f": "S'han utilitzat classes per a la creació i control d'animacions.",
                         "g": "S'han utilitzat classes per a reproduir continguts multimèdia.",
                         "h": "S'han depurat i documentat els programes desenvolupats."
@@ -1439,7 +1435,7 @@
                         "a": "S'ha caracteritzat el model de producció i consum actual.",
                         "b": "S'han identificat els principis de l'economia verda i circular.",
                         "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
-                        "d": "S'han aplicat principis de ecodisseny.",
+                        "d": "S'han aplicat principis d'ecodisseny.",
                         "e": "S'ha analitzat el cicle de vida del producte.",
                         "f": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
                     }
@@ -1451,7 +1447,7 @@
                         "b": "S'han identificat els principis de l'economia verda i circular.",
                         "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
                         "d": "S'ha avaluat l'impacte de les activitats personals i professionals.",
-                        "e": "S'han aplicat principis de ecodisseny.",
+                        "e": "S'han aplicat principis d'ecodisseny.",
                         "f": "S'han aplicat estratègies sostenibles.",
                         "g": "S'ha analitzat el cicle de vida del producte.",
                         "h": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
@@ -1499,14 +1495,14 @@
                         "d": "S'han identificat nous mercats generats per les THD.",
                         "e": "S'ha analitzat la implicació de THD tant en la part de negoci com en la part de planta.",
                         "f": "S'han identificat les millores produïdes a causa de la implantació de les tecnologies habilitadores en relació amb els entorns IT i OT.",
-                        "g": "S'ha elaborat un informe que relacione, les tecnologies amb les seues característiques i àrees d'aplicació."
+                        "g": "S'ha elaborat un informe que relacione les tecnologies amb les seues característiques i àrees d'aplicació."
                     }
                 },
                 "RA03": {
                     "Resultado": "Identifica sistemes basats en cloud/núvol i la seua influència en el desenvolupament dels sistemes digitals.",
                     "CriteriosEvaluacion": {
                         "a": "S'han identificat els diferents nivells del cloud/núvol.",
-                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres",
+                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres)",
                         "c": "S'ha descrit el concepte d'edge computing i la seua relació amb el cloud/núvol.",
                         "d": "S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
                         "e": "S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
@@ -1534,7 +1530,11 @@
                         "f": "S'han descrit els procediments d'emmagatzematge de dades en el cloud/núvol.",
                         "g": "S'ha descrit la importància del cloud computing.",
                         "h": "S'han identificat els principals objectius de la ciència de dades en les diferents empreses.",
-                        "i": "S'ha valorat la importància de la seguretat i la seua regulació en relació amb les dades."
+                        "i": "S'ha valorat la importància de la seguretat i la seua regulació en relació amb les dades.",
+                        "j": "S'ha definit tipus de mètodes d’autenticació segurs (contrasenyes, biomètrics, entre altres).",
+                        "k": "S’han procedimentat plans de restauració davant de desastres (còpies de seguretat, desconnexió d’equips importants, entre altres).",
+                        "l": "S’han identificat les amenaces més importants dins dels llocs de treball com ara phishing, ransomware i smishing, entre altres.",
+                        "m": "S’han definit mesures de prevenció i protecció com ara antivirus o tallafocs, entre altres."
                     }
                 },
                 "RA06": {
@@ -1543,14 +1543,14 @@
                         "a": "S'han identificat els objectius estratègics de l'empresa.",
                         "b": "S'han identificat i alineat les àrees de producció/negoci i de comunicacions.",
                         "c": "S'han identificat les àrees susceptibles de ser digitalitzades.",
-                        "d": "S'ha analitzat l'encaix de AD (àrees digitalitzades entre si i amb les que no ho estan.",
+                        "d": "S'ha analitzat l'encaix de AD (àrees digitalitzades entre si i amb les que no ho estan).",
                         "e": "S'han tingut en compte les necessitats presents i futures de l'empresa.",
                         "f": "S'han relacionat cadascuna de les àrees amb la implantació de les tecnologies.",
                         "g": "S'han analitzat les possibles bretxes de seguretat en cadascuna de les àrees.",
                         "h": "S'ha definit el tractament de les dades i la seua anàlisi.",
-                        "i": "S'ha tingut en compte la integració entre dades, aplicacions, plataformes que els suporten, entre altres.",
+                        "i": "S'ha tingut en compte la integració entre dades, aplicacions, plataformes que les suporten, entre altres.",
                         "j": "S'han documentat els canvis realitzats en funció de l'estratègia.",
-                        "k": "S'han tingut en compte la idoneïtat dels recursos humans."
+                        "k": "S'ha tingut en compte la idoneïtat dels recursos humans."
                     }
                 }
             },

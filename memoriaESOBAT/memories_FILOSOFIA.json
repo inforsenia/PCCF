@@ -7,8 +7,7 @@
       "nom": "4t d'ESO",
       "etapa": "ESO",
       "materies": [
-        {"codi": "VALORS", "nom": "Educació en Valors Cívics i Ètics", "grups": ["A","B","C","D"]},
-        {"codi": "TALLALF4", "nom": "Taller d'Alfabetització", "grups": ["G1"]}
+        {"codi": "VALORS", "nom": "Educació en Valors Cívics i Ètics", "grups": ["A","B","C","D"]}
       ]
     },
     "4PDC": {

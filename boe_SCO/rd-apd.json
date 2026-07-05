@@ -381,7 +381,6 @@
                 "p",
                 "r",
                 "s",
-                "e",
                 "y"
             ],
             "CompetenciasTitulo": [
@@ -872,7 +871,7 @@
                 "a",
                 "i",
                 "n",
-                "f",
+                "ñ",
                 "o",
                 "p",
                 "r",
@@ -1254,43 +1253,183 @@
                 "q"
             ]
         },
-        "PI": {
+        "1713": {
             "nombre": "Projecte intermodular",
             "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "RA1",
+                    "Resultado": "Caracteritza les empreses del sector atenent la seua organització i al tipus de producte o servici que oferixen.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'han identificat les empreses tipus més representatives del sector.",
+                        "b": "S'ha descrit l'estructura organitzativa de les empreses.",
+                        "c": "S'han caracteritzat els principals departaments.",
+                        "d": "S'han determinat les funcions de cada departament.",
+                        "e": "S'ha avaluat el volum de negoci d'acord amb les necessitats dels clients.",
+                        "f": "S'ha definit l'estratègia per a donar resposta a les demandes.",
+                        "g": "S'han valorat els recursos humans i materials necessaris.",
+                        "h": "S'ha realitzat el seguiment dels resultats d'acord amb l'estratègia aplicada.",
+                        "i": "S'han relacionat els productes o servicis amb la seua possible contribució als ODS (Objectius de Desenrotllament Sostenible)."
                     }
                 },
                 "RA02": {
-                    "Resultado": "RA2",
+                    "Resultado": "Planteja solucions a les necessitats del sector tenint en compte la viabilitat d'estes , els costos associats i elaborant un xicotet projecte.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'han identificat les necessitats.",
+                        "b": "S'han plantejat en grup possibles solucions.",
+                        "c": "S'ha obtingut la informació relativa a les solucions plantejades.",
+                        "d": "S'han identificat aspectes innovadors que puguen ser aplicable.",
+                        "e": "S'ha realitzat l'estudi de viabilitat tècnica.",
+                        "f": "S'han identificat les parts que componen el projecte.",
+                        "g": "S'han previst els recursos materials i humans per a realitzar-ho.",
+                        "h": "S'ha realitzat el pressupost econòmic corresponent.",
+                        "i": "S'ha definit i elaborat la documentació per al seu disseny.",
+                        "j": "S'han identificat els aspectes relacionats amb la qualitat del projecte.",
+                        "k": "S'han presentat en públic les idees més rellevants dels projectes proposats."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Planifica l'execució de les activitats proposades a la solució plantejada, determinant el pla d'intervenció i elaborant la documentació corresponent.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han temporitzat les seqüències de les activitats.",
+                        "b": "S'han determinat els recursos i la logística de cada activitat.",
+                        "c": "S'han identificat permisos i autoritzacions en cas de ser necessaris.",
+                        "d": "S'han identificat les activitats que impliquen riscos en la seua execució.",
+                        "e": "S'ha tingut en compte el pla de prevenció de riscos i els mitjans i equips necessaris.",
+                        "f": "S'han assignat recursos materials i humans a cada activitat.",
+                        "g": "S'han tingut en compte possibles imprevistos.",
+                        "h": "S'han proposat solucions als possibles imprevistos.",
+                        "i": "S'ha elaborat la documentació necessària."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Realitza el seguiment de l'execució de les activitats plantejades, verificant que es complix amb la planificació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha definit el procediment de seguiment de les activitats.",
+                        "b": "S'ha verificat la qualitat dels resultats de les activitats.",
+                        "c": "S'han identificat possibles desviacions de la planificació i/o els resultats esperats.",
+                        "d": "S'ha informat de les desviacions en cas de ser necessari.",
+                        "e": "S'han solucionat les desviacions i s'han documentat les intervencions.",
+                        "f": "S'ha definit i elaborat la documentació necessària per a l'avaluació de les activitats i del projecte en el seu conjunt."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Transmet informació amb claredat, de manera ordenada i estructurada.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha mantingut una actitud ordenada i metòdica en la transmissió de la informació.",
+                        "b": "S'han utilitzat els mitjans tècnics més adequats per a la transmissió de la informació.",
+                        "c": "S'han estructurat les idees de manera coherent i lògica.",
+                        "d": "S'ha mantingut una actitud respectuosa i col·laboradora amb els companys i el professorat.",
+                        "e": "S'han exposat idees de manera argumentada.",
+                        "f": "S'ha demostrat interès i creativitat en la proposta d'idees.",
+                        "g": "S'han respectat les opinions dels companys i s'han acceptat els punts de vista diferents al propi.",
+                        "h": "S'han realitzat tasques de suport a la docència i al grup de treball.",
+                        "i": "S'han dut a terme accions per al suport dels companys en la resolució de dubtes."
                     }
                 }
             },
-            "horas": "1",
+            "horas": "32",
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales": [
-                "a"
-            ],
             "CompetenciasTitulo": [
-                "a"
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+            ],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "e",
+                "f",
+                "g",
+                "h",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v"
             ]
         }
     }
+}
+
+g) S'han tingut en compte possibles imprevistos. h) S'han proposat solucions als possibles imprevistos.  
+
+i) S'ha elaborat la documentació necessària.  
+
+ 
+ 
+
+RA4. Realitza el seguiment de l'execució de les activitats plantejades, verificant que es complix amb la planificació.  
+
+ 
+
+Criteris d'avaluació:  
+
+a) S'ha definit el procediment de seguiment de les activitats. 
+
+b) S'ha verificat la qualitat dels resultats de les activitats.  
+
+c) S'han identificat possibles desviacions de la planificació i/o els resultats esperats.  
+
+d) S'ha informat de les desviacions en cas de ser necessari.  
+
+e) S'han solucionat les desviacions i s'han documentat les intervencions.  
+
+f) S'ha definit i elaborat la documentació necessària per a l'avaluació de les activitats i del projecte en el seu conjunt.  
+
+ 
+
+RA5. Transmet informació amb claredat, de manera ordenada i estructurada.  
+
+ 
+
+Criteris d'avaluació:  
+
+a) S'ha mantingut una actitud ordenada i metòdica en la transmissió de la informació.  
+
+b) S'ha transmés informació verbal tant horitzontal com verticalment.  
+
+c) S'ha transmés informació entre els membres del grup utilitzant mitjans informàtics.  
+
+d) S'han conegut els termes tècnics en altres llengües que siguen estàndard del sector.
+},
+"horas": "65",
+"UnidadesCompetenciaAcreditadas": {},
+"ObjetivosGenerales": [
+"a"
+],
+"CompetenciasTitulo": [
+"a"
+]
+}
+}
 }
