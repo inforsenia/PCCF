@@ -2,7 +2,7 @@
 
 ## CICLO FORMATIVO Sistemas Microinformáticos y Redes CURSO 2
 
-## MÓDULO 0228 – APLICACIONES WEB 100 3
+## MÓDULO 0228 – APLICACIONES WEB 100 horas 3 horas/semana
 
 | Código | Nombre | Duración (centro) | DUAL | Temporalización | RA’s Asoc. |
 |----|----|----|----|----|----|
