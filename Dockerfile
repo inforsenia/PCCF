@@ -1,7 +1,16 @@
 FROM ubuntu:latest
 WORKDIR /home/PCCF
+
+# Zona horària fixada a nivell de sistema (no només la variable d'entorn TZ
+# de docker-compose, que no totes les eines respecten) -- evita que noms de
+# fitxer amb data/hora (p. ex. els timestamps de report/PDF) isquen en UTC
+# en compte de l'hora local.
+ENV TZ=Europe/Madrid
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Actualizar el sistema e instalar dependencias
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    tzdata \
     make \
     pandoc \
     texlive-extra-utils \
