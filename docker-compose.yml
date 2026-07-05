@@ -5,6 +5,9 @@ services:
     user: "1000:1000"
     volumes:
       - ../PCCF:/home/PCCF
+      # Carpeta sincronitzada d'OneDrive (memòries de departament) -- mateix path
+      # absolut dins i fora del contenidor perquè els symlinks (memories_ESOBAT) funcionen igual
+      - /media/DADES/OneDriveGVA-Memories:/media/DADES/OneDriveGVA-Memories
     # Por defecto, mantener el contenedor vivo para modo detached
     command: tail -f /dev/null
     # Variables de entorno útiles

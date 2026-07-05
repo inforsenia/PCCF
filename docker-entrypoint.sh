@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Entrypoint per al desplegament autònom (Portainer/git). NO s'usa en el
+# desenvolupament local interactiu (docker-compose.yml hi manté `tail -f /dev/null`).
+set -euo pipefail
+
+ONEDRIVE_CONFDIR="${ONEDRIVE_CONFDIR:-/home/PCCF/.config/onedrive}"
+MEMORIES_SYNC_ROOT="${MEMORIES_SYNC_ROOT:-/media/DADES/OneDriveGVA-Memories}"
+MEMORIES_ESOBAT_SUBPATH="${MEMORIES_ESOBAT_SUBPATH:-General/Memòries ESO-BAT}"
+
+if [ ! -f "$ONEDRIVE_CONFDIR/refresh_token" ]; then
+    echo "ERROR: no hi ha refresh_token a $ONEDRIVE_CONFDIR"
+    echo "Cal fer el bootstrap manual una vegada (vore README/pla) abans de desplegar."
+    exit 1
+fi
+
+# Symlink perquè tools/report_memories.py i tools/compilar_memories.py trobin
+# les dades sincronitzades on ja les esperen (memories_ESOBAT/{DEPART}/).
+ln -sfn "$MEMORIES_SYNC_ROOT/$MEMORIES_ESOBAT_SUBPATH" /home/PCCF/memories_ESOBAT
+
+echo "Engegant onedrive --monitor (confdir=$ONEDRIVE_CONFDIR)..."
+# NOTA important (lliçó apresa): mai --resync automàtic ací. --resync només
+# s'ha de fer manualment i de manera supervisada durant el bootstrap o davant
+# d'un problema conegut -- fer-ho a cada arrancada del contenidor és el que
+# va causar un incident real amb fitxers renombrats.
+while true; do
+    onedrive --confdir="$ONEDRIVE_CONFDIR" --monitor --monitor-interval=300 \
+        || echo "onedrive --monitor ha fallat, reintentant en 30s..."
+    sleep 30
+done &
+ONEDRIVE_PID=$!
+
+# TODO (pendent, tasca #11 del pla): llançar ací el poller que detecta
+# fitxers de disparador (Verificar/Compilar) i crida report_memories.py /
+# compilar_memories.py / publish_memories_output.py. De moment, el
+# contenidor només manté la sincronització viva; el report/compila es
+# continua llançant manualment via `docker exec`.
+
+wait "$ONEDRIVE_PID"

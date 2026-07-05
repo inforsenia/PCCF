@@ -20,4 +20,11 @@ RUN apt-get update && apt-get install -y \
     python3-openpyxl \
     python3-matplotlib \
     fonts-ubuntu \
+    onedrive \
     && rm -rf /var/lib/apt/lists/*
+
+# Codi del repositori (per al desplegament autònom des de GitHub/Portainer).
+# En desenvolupament local, docker-compose.yml el sobreescriu amb un bind mount.
+COPY . .
+
+RUN chmod +x docker-entrypoint.sh

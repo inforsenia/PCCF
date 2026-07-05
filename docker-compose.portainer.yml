@@ -1,0 +1,21 @@
+services:
+  pccf:
+    container_name: pccf
+    build: .
+    user: "1000:1000"
+    # El codi ve de la imatge (COPY al Dockerfile, construïda pel propi
+    # Portainer des del repositori de GitHub) -- NO hi ha bind mount del codi.
+    # Només persisteixen dades/estat que no han de venir de git ni perdre's
+    # en cada redesplegament:
+    volumes:
+      - onedrive_confdir:/home/PCCF/.config/onedrive
+      - onedrive_memories:/media/DADES/OneDriveGVA-Memories
+    entrypoint: ["/home/PCCF/docker-entrypoint.sh"]
+    restart: unless-stopped
+    environment:
+      - TERM=xterm-256color
+      - TZ=Europe/Madrid
+
+volumes:
+  onedrive_confdir:
+  onedrive_memories:

@@ -223,7 +223,7 @@ compila-tots-esobat:
 		$(MAKE) BASE_DIR=memoriaESOBAT FAMILIA=$$dep compila-memories; \
 	done
 
-FAMILIES_FP = INF SCO
+FAMILIES_FP = ANG FOL INF SCO
 
 genera-tots-fp:
 	@for fam in $(FAMILIES_FP); do \
