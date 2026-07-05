@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **05/07/2026 a las 11:45:37 UTC**
+> 🕒 Última actualización: **05/07/2026 a las 11:50:30 UTC**
 
 ---
 
@@ -18,7 +18,7 @@
 | IPEI | pendiente |
 | IPEII | pendiente |
 | ISO | **completado** |
-| LMSI | pendiente |
+| LMSI | **completado** |
 | OPS190 | **completado** |
 | PAR | **completado** |
 | SAD | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 05/07/2026 a las 11:45:37 UTC_
+_Generado automáticamente el 05/07/2026 a las 11:50:30 UTC_
