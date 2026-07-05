@@ -436,6 +436,44 @@ make compila-tots-fp                            # compilar
 ./contenedor_lanza.sh "make CENTRO_EDUCATIVO=IESEPM compila-tots-fp"
 ```
 
+### Automatització: sincronització OneDrive i desplegament a Portainer
+
+En compte de descarregar/pujar manualment els fitxers de SharePoint, `memories_ESOBAT`/`memories_FP` poden ser **enllaços simbòlics** cap a una carpeta sincronitzada pel client `onedrive` (Linux, paquet `onedrive` d'apt — no cal cap Graph API propi ni Power Automate).
+
+**Configuració del perfil de sincronització** (una vegada, amb l'autenticació ja feta per al compte personal):
+```sh
+mkdir -p ~/.config/onedrive/accounts/DavidGVA-Memories
+# config amb sync_dir + drive_id del lloc SharePoint, i sync_list amb:
+#   General/Memòries ESO-BAT
+#   General/Memòries FP
+onedrive --confdir=~/.config/onedrive/accounts/DavidGVA-Memories --sync --resync --resync-auth
+```
+
+**⚠️ Important abans de fer res més**: mai llançar `onedrive --monitor` sense abans fer un `--sync` (sense `--monitor`) manual i revisar el log buscant `"Deleting item from Microsoft OneDrive"` inesperats. Mai matar un procés `onedrive` a mig `--resync` (corromp la base de dades local i pot renombrar fitxers reals dels docents amb sufix `-safeBackup-` al SharePoint compartit). Mai col·locar fitxers dins la carpeta sincronitzada per fora del propi client (p. ex. baixant-los a mà via API) — el següent sync ho tracta com a conflicte i genera el mateix problema.
+
+**Enllaçar les carpetes del repositori**:
+```sh
+mv memories_ESOBAT memories_ESOBAT.backup   # si ja existia com a directori real
+ln -s "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" memories_ESOBAT
+ln -s "/media/DADES/OneDriveGVA-Memories/General/Memòries FP" memories_FP
+```
+
+**Publicar els resultats de tornada a SharePoint** (després de `compila-memories`):
+```sh
+python3 tools/publish_memories_output.py --base-dir memoriaESOBAT \
+    --dest "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" --centre IESEPM
+```
+Genera/actualitza `0_report_memories_ESOBAT/` i `1_esborrany_memories_ESOBAT/` (una sola carpeta fixa per tipus, substituint automàticament la versió anterior de cada departament).
+
+**Desplegament autònom a Portainer** (des del repositori de GitHub, `docker-compose.portainer.yml`):
+1. Crear l'stack a Portainer amb "Build method: Repository" apuntant a este repositori.
+2. Primer desplegament fallarà (esperat, falta el token) — copiar `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil ja autenticat cap al bind mount del servidor (`/docker/pccf/onedrive_confdir/`, després de fer-hi `chown 1000:1000`).
+3. `docker exec -it pccf onedrive --confdir=/home/PCCF/.config/onedrive --sync --resync --resync-auth` — manual i supervisat, revisant el log.
+4. `docker restart pccf` — l'entrypoint normal pren el control (`--monitor` en bucle, sense `--resync`).
+5. Redesplegaments posteriors (`git push` + "Pull and redeploy") actualitzen el codi reutilitzant els mateixos volums, sense repetir el bootstrap.
+
+Detalls tècnics complets (permisos `--chown`, xarxa `internal_pccf`, totes les lliçons apreses) a `AGENTS.md`.
+
 ### Generació del PCCF:
 
 La generació del PCCF es basa en el contingut de les carpetes `src/`, `src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` i els fitxers `PCCF_030/033` generats automàticament (durant la compilació). El compilador **Pandoc** llig tots estos fitxers directament des de les seues carpetes (no es fa cap còpia a `temp/`), usant `--resource-path` per a resoldre imatges.

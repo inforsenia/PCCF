@@ -42,7 +42,7 @@ make BASE_DIR=memoriaESOBAT FAMILIA=ANGLES memories  # ESO/BAT single dept
 make genera-tots-esobat            # ESO/BAT all 17 departments (generate)
 make report-tots-esobat            # ESO/BAT all departments (report)
 make compila-tots-esobat           # ESO/BAT all departments (compile)
-make genera-tots-fp                # FP all families INF+SCO (generate)
+make genera-tots-fp                # FP all families ANG+FOL+INF+SCO (generate)
 make report-tots-fp                # FP all families (report)
 make compila-tots-fp               # FP all families (compile)
 make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
@@ -174,6 +174,39 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 - **Paragraph spacing**: `####` headings in compiled PDFs now have proper line breaks via `\titlespacing` LaTeX patch.
 - **Report legend**: Appended from `tools/report_legend.txt` (external file, easy to maintain).
 - **Report dir naming**: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/` (includes timestamp + type suffix).
+
+## Sincronització OneDrive de memòries + desplegament autònom (Docker/Portainer)
+
+Sistema per a eliminar la baixada/pujada manual de fitxers OneDrive/SharePoint del coordinador. En compte de Graph API propi o Power Automate (bloquejats en este tenant EDU centralitzat sense rol d'Entra ID disponible), s'usa el client de sincronització OneDrive per a Linux (`abraunegg/onedrive`, paquet `onedrive` d'apt), que ja s'autentica amb una app pre-consentida sense necessitar cap acció d'administrador.
+
+**Mecanisme**:
+- Un perfil `onedrive` separat (propi `--confdir`) sincronitza només `General/Memòries ESO-BAT` i `General/Memòries FP` del lloc SharePoint compartit del centre (via `sync_list`, no tota la biblioteca).
+- `memories_ESOBAT` i `memories_FP` al arrel del repo són **symlinks** (no directoris reals) cap a eixa carpeta sincronitzada — `tools/report_memories.py`/`tools/compilar_memories.py` operen sobre ells sense cap canvi de codi.
+- **FP té 4 departaments**: ANG, FOL, INF, SCO (`FAMILIES_FP = ANG FOL INF SCO` al Makefile) — ANG (no ANGLES) per a coincidir amb la convenció de sigles de la resta.
+
+**Publicació de resultats** (`tools/publish_memories_output.py`): després de `compila-memories`, copia el report i el PDF cap a una **única carpeta fixa per tipus** a l'arrel de la carpeta sincronitzada corresponent:
+```
+General/Memòries {ESO-BAT|FP}/0_report_memories_{ESOBAT|FP}/{FAMILIA}_{timestamp}.txt
+General/Memòries {ESO-BAT|FP}/1_esborrany_memories_{ESOBAT|FP}/Memories_{ESOBAT|FP}_{FAMILIA}_{CENTRE}_{CURS}_{timestamp}.pdf
+```
+Cada publicació esborra automàticament la versió anterior d'eixe mateix departament (mateix nom base, timestamp diferent) — només queda l'última. Ús:
+```sh
+python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" --centre IESEPM
+# --familia OMÉS per a un sol departament; sense --familia publica tots els presents al report
+```
+
+**Desplegament autònom a Portainer (des del repositori de GitHub)**:
+- `Dockerfile`: afig el paquet `onedrive`; `COPY --chown=1000:1000 . .` + `RUN chown 1000:1000 /home/PCCF` (necessari perquè el contenidor corre com a usuari no-root `1000:1000` — sense el `chown` explícit de la carpeta, `WORKDIR` la deixa de `root` i qualsevol `ln`/escriptura falla amb "Permission denied", encara que `--chown` de `COPY` ja haja corregit el contingut).
+- `docker-entrypoint.sh`: crea els symlinks `memories_ESOBAT`/`memories_FP`, i llança `onedrive --monitor` en bucle (reinicia si mor). **Mai `--resync` automàtic ací.**
+- `docker-compose.portainer.yml` (diferent del `docker-compose.yml` de desenvolupament local, que no es toca): bind mounts a `${PCCF_DATA_DIR:-/docker/pccf}/onedrive_{confdir,memories}` (mateix conveni que la resta d'stacks), xarxa externa `internal_pccf` (`external: true`, ha d'existir prèviament a Portainer).
+- **Bootstrap manual, una sola vegada**: `scp` dels fitxers `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil d'escriptori cap al bind mount del servidor (amb `chown 1000:1000` fet primer sobre la carpeta), seguit d'un `--sync --resync --resync-auth` manual i supervisat via `docker exec` abans de reiniciar i deixar l'entrypoint normal prendre el control.
+- El **token mai va per git** — viu només al bind mount del servidor; `.gitignore` té una xarxa de seguretat explícita (`refresh_token`, `onedrive_confdir/`, `.config/onedrive/`).
+
+**⚠️ Lliçons apreses (incidents reals, 2026-07-05) — crítiques per a evitar repetir-les**:
+1. **Mai matar un procés `onedrive` a mig `--resync`.** Corromp la base de dades local de seguiment, i el següent `--monitor`/`--sync` pot interpretar fitxers reals com "conflicte" i renombrar-los amb sufix `-pubuntusb-safeBackup-0001.md` al SharePoint compartit (contingut no es perd, però cal detectar-ho i restaurar el nom manualment — ja ha passat dos vegades).
+2. **Mai col·locar/baixar fitxers dins la carpeta sincronitzada per fora del client `onedrive`** (p. ex. via crides pròpies a Graph API). La seua base de dades no se n'assabenta, i el següent sync ho tracta com a conflicte, generant el mateix problema de sufix `-safeBackup-`.
+3. **`--resync` només manual i supervisat**, revisant el log línia a línia buscant `"Deleting item from Microsoft OneDrive"` inesperats abans de confiar-hi. Mai `--resync` automàtic en cap script/entrypoint que córrega sense supervisió.
+4. Si apareix algun fitxer `*-safeBackup-*`: comprovar primer que l'original (sense sufix) existeix — si és així, és un duplicat inofensiu, esborrar-lo (local + remot via Graph API); si NO existeix l'original, cal renombrar el `-safeBackup-` de tornada al nom correcte (mai esborrar-lo sense comprovar-ho abans).
 
 ## Docker
 

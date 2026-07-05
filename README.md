@@ -296,6 +296,18 @@ El report inclou al final una **llegenda** amb tots estos codis i el seu signifi
 
 ---
 
+## Automatització: sincronització OneDrive i desplegament autònom
+
+Per a no dependre de la descàrrega/pujada manual de fitxers des de SharePoint, el repositori inclou un mecanisme de sincronització automàtica basat en el client `onedrive` per a Linux ([abraunegg/onedrive](https://github.com/abraunegg/onedrive)):
+
+- La carpeta compartida de SharePoint (`Documentos/General/Memòries ESO-BAT` i `Memòries FP`) es manté sincronitzada en local, i `memories_ESOBAT`/`memories_FP` al repositori són enllaços simbòlics cap a eixa carpeta — la resta del pipeline (`report-memories`, `compila-memories`) no necessita cap canvi.
+- `tools/publish_memories_output.py` publica el report i el PDF compilats de tornada a SharePoint, mantenint només l'última versió per departament.
+- Es pot desplegar de manera autònoma en un contenidor Docker gestionat des de Portainer, construït directament des d'este repositori de GitHub (`docker-compose.portainer.yml`), perquè un `git push` + redesplegament actualitze el codi sense perdre l'autenticació ni les dades ja sincronitzades.
+
+Detalls tècnics complets (bootstrap del token, permisos, xarxes, lliçons apreses) a `AGENTS.md`.
+
+---
+
 ## Descripción de las utilidades
 
 En la carpeta ~/tools~ podemos encontrar una serie de utilidades que se ha desarrollado para la generación de los diferentes

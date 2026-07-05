@@ -29,3 +29,4 @@ See `AGENTS.md` → "Build commands", "Docker", and "Testing" sections for the f
 - Generated/teacher-workspace directories are gitignored: `plantilles_*/`, `memories_FP/`, `memories_ESOBAT/`, `PDFS/`, `temp/`. Don't treat their absence as broken state.
 - `boe_{INF,SCO}/rd-{ciclo}.json` is the single source of truth for curriculum data; everything else (Excel, PDs, PCCF sections) derives from it.
 - CI (`.github/workflows/makefile.yml`) only builds on `main` when the commit message contains `[build]`.
+- `memories_ESOBAT`/`memories_FP` may be **symlinks** to a OneDrive-synced folder (not plain generated directories) — see `AGENTS.md` → "Sincronització OneDrive de memòries" for the sync mechanism, `tools/publish_memories_output.py`, Portainer deployment, and critical safety lessons (never kill `onedrive` mid-`--resync`, never `--resync` unsupervised) before touching anything related to it.
