@@ -25,6 +25,11 @@ RUN apt-get update && apt-get install -y \
 
 # Codi del repositori (per al desplegament autònom des de GitHub/Portainer).
 # En desenvolupament local, docker-compose.yml el sobreescriu amb un bind mount.
-COPY . .
+# --chown és necessari: el contenidor corre com a usuari 1000:1000 (no root),
+# i sense això /home/PCCF quedaria de root, impedint crear-hi els symlinks
+# (docker-entrypoint.sh) -- causa exacta d'un "ln: Permission denied" real.
+COPY --chown=1000:1000 . .
 
-RUN chmod +x docker-entrypoint.sh
+# --chown de COPY només afecta el contingut, no la pròpia carpeta /home/PCCF
+# (creada per WORKDIR, propietat de root) -- cal canviar-ho explícitament.
+RUN chown 1000:1000 /home/PCCF && chmod +x docker-entrypoint.sh
