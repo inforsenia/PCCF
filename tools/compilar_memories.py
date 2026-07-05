@@ -195,9 +195,11 @@ def main():
     familia = args[0].upper() if len(args) > 0 else "INF"
     centre_educatiu = args[1] if len(args) > 1 else "SENIA"
 
-    # Detect available PDF engine
+    # Detect available PDF engine. lualatex FIRST: el document usa el paquet
+    # "emoji" (marcador ❌ d'incidències a l'índex), que requereix LuaTeX --
+    # amb xelatex falla amb "Critical Package emoji Error: requires LuaTeX".
     pdf_engine = None
-    for engine in ["xelatex", "lualatex", "pdflatex"]:
+    for engine in ["lualatex", "xelatex", "pdflatex"]:
         if shutil.which(engine):
             pdf_engine = engine
             break
