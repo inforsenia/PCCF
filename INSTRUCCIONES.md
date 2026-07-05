@@ -451,14 +451,19 @@ onedrive --confdir=~/.config/onedrive/accounts/DavidGVA-Memories --sync --resync
 
 **⚠️ Important abans de fer res més**: mai llançar `onedrive --monitor` sense abans fer un `--sync` (sense `--monitor`) manual i revisar el log buscant `"Deleting item from Microsoft OneDrive"` inesperats. Mai matar un procés `onedrive` a mig `--resync` (corromp la base de dades local i pot renombrar fitxers reals dels docents amb sufix `-safeBackup-` al SharePoint compartit). Mai col·locar fitxers dins la carpeta sincronitzada per fora del propi client (p. ex. baixant-los a mà via API) — el següent sync ho tracta com a conflicte i genera el mateix problema.
 
-**Enllaçar les carpetes del repositori**:
+**Enllaçar les carpetes del repositori** (desenvolupament local; a Portainer ho fa sol l'entrypoint):
 ```sh
 mv memories_ESOBAT memories_ESOBAT.backup   # si ja existia com a directori real
 ln -s "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" memories_ESOBAT
 ln -s "/media/DADES/OneDriveGVA-Memories/General/Memòries FP" memories_FP
 ```
 
-**Publicar els resultats de tornada a SharePoint** (després de `compila-memories`):
+**Poller automàtic** (`tools/local_sync_poller.py`): ja fa este pas sol, sense cap acció manual — compara la data de modificació dels `.md` reals de cada departament contra la de l'últim report publicat, i si detecta un canvi, compila i publica. Corre en bucle des de `docker-entrypoint.sh` en producció. Ús manual/proves:
+```sh
+python3 tools/local_sync_poller.py --once --sync-root "/media/DADES/OneDriveGVA-Memories"
+```
+
+**Publicar els resultats de tornada a SharePoint manualment** (si cal, encara que normalment ja ho fa el poller):
 ```sh
 python3 tools/publish_memories_output.py --base-dir memoriaESOBAT \
     --dest "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" --centre IESEPM
@@ -467,12 +472,18 @@ Genera/actualitza `0_report_memories_ESOBAT/` i `1_esborrany_memories_ESOBAT/` (
 
 **Desplegament autònom a Portainer** (des del repositori de GitHub, `docker-compose.portainer.yml`):
 1. Crear l'stack a Portainer amb "Build method: Repository" apuntant a este repositori.
-2. Primer desplegament fallarà (esperat, falta el token) — copiar `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil ja autenticat cap al bind mount del servidor (`/docker/pccf/onedrive_confdir/`, després de fer-hi `chown 1000:1000`).
-3. `docker exec -it pccf onedrive --confdir=/home/PCCF/.config/onedrive --sync --resync --resync-auth` — manual i supervisat, revisant el log.
-4. `docker restart pccf` — l'entrypoint normal pren el control (`--monitor` en bucle, sense `--resync`).
-5. Redesplegaments posteriors (`git push` + "Pull and redeploy") actualitzen el codi reutilitzant els mateixos volums, sense repetir el bootstrap.
+2. Crear les carpetes del bind mount amb el propietari correcte abans de desplegar: `sudo mkdir -p /docker/pccf/onedrive_{confdir,memories} && sudo chown -R 1000:1000 /docker/pccf`.
+3. Primer desplegament fallarà (esperat, falta el token) — copiar `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil ja autenticat cap a `/docker/pccf/onedrive_confdir/` del servidor.
+4. **Comprovar que `config` apunta al path correcte dins del contenidor** (`sync_dir = "/data/onedrive-memories"`, NO el path de cap màquina de desenvolupament) — corregir amb `sed` si cal.
+5. `docker exec -it pccf onedrive --confdir=/home/PCCF/.config/onedrive --sync --resync --resync-auth` — manual i supervisat, revisant el log línia a línia buscant `"Deleting item from Microsoft OneDrive"` inesperats.
+6. `docker restart pccf` — l'entrypoint normal pren el control (`--monitor` + el poller, tots dos en bucle, sense `--resync`).
+7. Redesplegaments posteriors (`git push` + "Pull and redeploy") actualitzen el codi reutilitzant els mateixos volums, sense repetir el bootstrap.
 
-Detalls tècnics complets (permisos `--chown`, xarxa `internal_pccf`, totes les lliçons apreses) a `AGENTS.md`.
+**Notes pràctiques**:
+- Si el `config` es modifica per qualsevol motiu (p. ex. afegir `threads = "4"` si el servidor té pocs nuclis), el client tornarà a exigir un `--resync` — repetir el pas 5.
+- El motor LaTeX prioritza `lualatex` (necessari pel paquet `emoji` dels marcadors ❌ d'incidències); si algun dia falla amb un error d'"emoji requires LuaTeX", comprovar l'ordre a `tools/compilar_memories.py`.
+
+Detalls tècnics complets (permisos `--chown`, xarxa `internal_pccf`, zona horària, totes les lliçons apreses, i les propostes de futur de notificacions per correu) a `AGENTS.md`.
 
 ### Generació del PCCF:
 

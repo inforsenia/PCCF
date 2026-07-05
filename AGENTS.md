@@ -184,22 +184,24 @@ Sistema per a eliminar la baixada/pujada manual de fitxers OneDrive/SharePoint d
 - `memories_ESOBAT` i `memories_FP` al arrel del repo són **symlinks** (no directoris reals) cap a eixa carpeta sincronitzada — `tools/report_memories.py`/`tools/compilar_memories.py` operen sobre ells sense cap canvi de codi.
 - **FP té 4 departaments**: ANG, FOL, INF, SCO (`FAMILIES_FP = ANG FOL INF SCO` al Makefile) — ANG (no ANGLES) per a coincidir amb la convenció de sigles de la resta.
 
+**Poller automàtic** (`tools/local_sync_poller.py`): sondeja cada departament (17 ESOBAT + 4 FP) comparant la data de modificació més recent dels seus `.md` reals contra la de l'últim report ja publicat (`0_report_memories_{TIPUS}/{FAMILIA}_*.txt`). Si detecta un canvi, executa sol `compila-memories` + `publish_memories_output.py` — **sense cap fitxer disparador ni acció manual** del docent/cap de departament (disseny deliberat: es va descartar un disseny amb fitxer "COMPILAR_ARA" perquè calia minimitzar accions manuals al màxim). S'executa en bucle des de `docker-entrypoint.sh`, en paral·lel a `onedrive --monitor` (`wait -n` entre tots dos: si un dels dos processos mor inesperadament, el contenidor sencer es reinicia via `restart: unless-stopped`).
+
 **Publicació de resultats** (`tools/publish_memories_output.py`): després de `compila-memories`, copia el report i el PDF cap a una **única carpeta fixa per tipus** a l'arrel de la carpeta sincronitzada corresponent:
 ```
 General/Memòries {ESO-BAT|FP}/0_report_memories_{ESOBAT|FP}/{FAMILIA}_{timestamp}.txt
 General/Memòries {ESO-BAT|FP}/1_esborrany_memories_{ESOBAT|FP}/Memories_{ESOBAT|FP}_{FAMILIA}_{CENTRE}_{CURS}_{timestamp}.pdf
 ```
-Cada publicació esborra automàticament la versió anterior d'eixe mateix departament (mateix nom base, timestamp diferent) — només queda l'última. Ús:
+Cada publicació esborra automàticament la versió anterior d'eixe mateix departament (mateix nom base, timestamp diferent) — només queda l'última. Ús manual (poc habitual ja, el poller ho fa sol):
 ```sh
-python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/media/DADES/OneDriveGVA-Memories/General/Memòries ESO-BAT" --centre IESEPM
+python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/data/onedrive-memories/General/Memòries ESO-BAT" --centre IESEPM
 # --familia OMÉS per a un sol departament; sense --familia publica tots els presents al report
 ```
 
 **Desplegament autònom a Portainer (des del repositori de GitHub)**:
-- `Dockerfile`: afig el paquet `onedrive`; `COPY --chown=1000:1000 . .` + `RUN chown 1000:1000 /home/PCCF` (necessari perquè el contenidor corre com a usuari no-root `1000:1000` — sense el `chown` explícit de la carpeta, `WORKDIR` la deixa de `root` i qualsevol `ln`/escriptura falla amb "Permission denied", encara que `--chown` de `COPY` ja haja corregit el contingut).
-- `docker-entrypoint.sh`: crea els symlinks `memories_ESOBAT`/`memories_FP`, i llança `onedrive --monitor` en bucle (reinicia si mor). **Mai `--resync` automàtic ací.**
-- `docker-compose.portainer.yml` (diferent del `docker-compose.yml` de desenvolupament local, que no es toca): bind mounts a `${PCCF_DATA_DIR:-/docker/pccf}/onedrive_{confdir,memories}` (mateix conveni que la resta d'stacks), xarxa externa `internal_pccf` (`external: true`, ha d'existir prèviament a Portainer).
-- **Bootstrap manual, una sola vegada**: `scp` dels fitxers `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil d'escriptori cap al bind mount del servidor (amb `chown 1000:1000` fet primer sobre la carpeta), seguit d'un `--sync --resync --resync-auth` manual i supervisat via `docker exec` abans de reiniciar i deixar l'entrypoint normal prendre el control.
+- `Dockerfile`: afig el paquet `onedrive`; `COPY --chown=1000:1000 . .` + `RUN chown 1000:1000 /home/PCCF` (necessari perquè el contenidor corre com a usuari no-root `1000:1000` — sense el `chown` explícit de la carpeta, `WORKDIR` la deixa de `root` i qualsevol `ln`/escriptura falla amb "Permission denied", encara que `--chown` de `COPY` ja haja corregit el contingut). També fixa la zona horària a nivell de sistema (`ENV TZ=Europe/Madrid` + `tzdata` + `/etc/localtime`, no només la variable d'entorn de docker-compose, que no totes les eines respecten).
+- `docker-entrypoint.sh`: crea els symlinks `memories_ESOBAT`/`memories_FP` cap a `$MEMORIES_SYNC_ROOT` (per defecte `/data/onedrive-memories`, un path **net dins del contenidor que no coincideix amb cap màquina concreta** — diferent del `docker-compose.yml` de desenvolupament local, on el path SÍ ha de coincidir amb l'amfitrió perquè els symlinks es creen allí, no dins del contenidor), llança `onedrive --monitor` en bucle i el poller en bucle. **Mai `--resync` automàtic ací.**
+- `docker-compose.portainer.yml` (diferent del `docker-compose.yml` de desenvolupament local, que no es toca): bind mounts a `${PCCF_DATA_DIR:-/docker/pccf}/onedrive_confdir` i `.../onedrive_memories:/data/onedrive-memories` (mateix conveni `/docker/<contenidor>/` que la resta d'stacks), xarxa externa `internal_pccf` (`external: true`, ha d'existir prèviament a Portainer, el contenidor només necessita eixida a Internet).
+- **Bootstrap manual, una sola vegada**: crear les carpetes del bind mount amb `chown 1000:1000` abans del primer desplegament; `scp` dels fitxers `config`/`sync_list`/`refresh_token` (mai `items.sqlite3`) del perfil d'escriptori cap al bind mount del servidor; `--sync --resync --resync-auth` manual i supervisat via `docker exec` abans de reiniciar i deixar l'entrypoint normal prendre el control.
 - El **token mai va per git** — viu només al bind mount del servidor; `.gitignore` té una xarxa de seguretat explícita (`refresh_token`, `onedrive_confdir/`, `.config/onedrive/`).
 
 **⚠️ Lliçons apreses (incidents reals, 2026-07-05) — crítiques per a evitar repetir-les**:
@@ -207,6 +209,13 @@ python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/media
 2. **Mai col·locar/baixar fitxers dins la carpeta sincronitzada per fora del client `onedrive`** (p. ex. via crides pròpies a Graph API). La seua base de dades no se n'assabenta, i el següent sync ho tracta com a conflicte, generant el mateix problema de sufix `-safeBackup-`.
 3. **`--resync` només manual i supervisat**, revisant el log línia a línia buscant `"Deleting item from Microsoft OneDrive"` inesperats abans de confiar-hi. Mai `--resync` automàtic en cap script/entrypoint que córrega sense supervisió.
 4. Si apareix algun fitxer `*-safeBackup-*`: comprovar primer que l'original (sense sufix) existeix — si és així, és un duplicat inofensiu, esborrar-lo (local + remot via Graph API); si NO existeix l'original, cal renombrar el `-safeBackup-` de tornada al nom correcte (mai esborrar-lo sense comprovar-ho abans).
+5. **Qualsevol canvi al fitxer `config` d'onedrive** (fins i tot afegir una línia com `threads`) fa que el client exigisca un nou `--resync` abans de continuar en `--monitor` — comportament normal del client, cal repetir el `--resync` supervisat cada vegada que s'edite `config`.
+6. `tools/compilar_memories.py` prova motors LaTeX en l'ordre `lualatex` → `xelatex` → `pdflatex` (no a l'inrevés): el document usa el paquet `emoji` (marcador ❌ d'incidències a l'índex), que **requereix LuaTeX específicament** — amb `xelatex` falla amb "Critical Package emoji Error".
+7. El `threads` del client `onedrive` per defecte és 8; si el servidor/contenidor té menys nuclis, afig `threads = "N"` (N = nuclis disponibles o menys) al `config` per evitar l'avís de sobrecàrrega (i recorda el punt 5: això dispararà un `--resync` necessari).
+
+**Propostes de futur (no construïdes encara, a reprendre junt amb l'extensió al PCCF)**:
+- **Notificacions per correu**: (A) avisar el cap de departament quan el poller publica una memòria nova (necessita un camp d'email nou als JSON `memoriaESOBAT/memories_{DEPART}.json` / `memoriaFP/memories_{FAMILIA}.json`, un per departament) — més senzill, sense fricció per als docents; (B) avisar el propi docent del resultat de la seua última modificació (necessita un camp d'email dins de cada `.md`, reutilitzant `check_placeholders`/`check_stats_consistency` sobre eixe fitxer concret quan el poller detecta el seu canvi) — més útil individualment, però amb fricció d'adopció. Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA. Prioritat suggerida: (A) primer.
+- **Estendre el mateix patró (sincronització OneDrive + poller, ja provat i funcionant) a la generació del PCCF i les Programacions Didàctiques** — quina estructura de `src_*/plantilles_*/PDFS` cal moure a OneDrive perquè els canvis dels docents disparen la regeneració automàtica.
 
 ## Docker
 
