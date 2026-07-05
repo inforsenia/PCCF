@@ -1,93 +1,68 @@
 # UNIDAD DE PROGRAMACIÓN
 
-## CICLO FORMATIVO Sistemas Microinformáticos y Redes CURSO 2
+## CICLO FORMATIVO Técnico en Administración de Sistemas Informáticos y Redes - CFGS CURSO 1
 
-## MÓDULO 0228 -- APLICACIONES WEB 100 3
+## MÓDULO 0373 – LENGUAJES DE MARCAS Y SISTEMAS DE GESTIÓN DE INFORMACIÓN 100 horas 3 horas/semana
 
-  -------- -------------------------------------- ------------------- ------ -------------------------- ------------
-  Código   Nombre                                 Duración (centro)   DUAL   Temporalización            RA's Asoc.
-  UP1      HTML. CSS. CMS                         30                  12     08/09/2025 -- 28/11/2025   RA01
-  UP2      LMS                                    12                  3      04/12/2025 -- 16/01/2026   RA02
-  UP3      ALMACENAMIENTO EN LA NUBE. NextCloud   10                  8      23/01/2023 -- 06/02/2026   RA03
-  UP4      APLICACIONES OFIMÁTICAS EN LA NUBE     2                   10     06/02/2026 -- 12/02/2026   RA04
-  UP5      APLICACIONES WEB DE ESCRITORIO         3                   10     12/02/2026 -- 13/02/2026   RA05
-                                                  57                  43     100                        
-  -------- -------------------------------------- ------------------- ------ -------------------------- ------------
+| Código | Nombre | Duración (centro) | Dual | Temporalización | RA’s Asoc. |
+|----|----|----|----|----|----|
+| UP01 | CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS | 9 | 0 | 16/09/2025 - 30/09/2025 | RA1 |
+| UP02 | LENGUAJES DE MARCAS: EN EDICIÓN DE TEXTOS (MARKDOWN) Y EN LA ADMINISTRACIÓN DE SISTEMAS (YAML) | 8 | 0 | 07/10/2025 - 21/10/2025 | RA1 |
+| UP03 | XML | 6 | 3 | 21/10/2025 - 28/10/2025 | RA1 |
+| UP04 | 4.1 - VALIDACIÓN XML: DTD | 11 | 0 | 28/10/2025 - 18/11/2025 | RA4 |
+| UP05 | 4.2 VALIDACIÓN XML: XML SCHEMA - XSD | 15 | 0 | 18/11/2025 - 09/12/2025 | RA4 |
+| UP06 | RECORRER UN XML - XPath | 4 | 0 | 09/12/2025 - 16/12/2025 | RA5 |
+| UP07 | TRANSFORMAR UN XML - XSLT | 6 | 0 | 13/01/2026 - 20/01/2026 | RA5 |
+| UP08 | CONSULTAR UN XML - XQUERY | 3 | 0 | 27/01/2026 - 03/02/2026 | RA6 |
+| UP09 | HTML - Hiper Text Markup Language + CSS - Hojas de Estilo en Cascada | 24 | 5 | 10/02/2026 - 24/03/2026 | RA2 |
+| UP10 | SISTEMAS DE GESTIÓN DE LA INFORMACIÓN | 6 | 0 | 14/04/2026 - 21/04/2026 | RA7 |
+|  |  | 92 | 8 | 100 |  |
 
-### UP1 -- HTML.CSS. CMS
+### UP01 – CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS
 
 #### 1. Identificación
 
-\- Código: UP1: HTM. CSS. Sistema de gestión de contenidos CMS \|
-Módulo: 0228
+\- Código: UP01 – CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS \| Módulo: 0373
 
-\- Duración: 30 horas
+\- Duración: 9
 
-\- Temporalización: 08/09/2025 -- 28/11/2025
+\- Temporalización: 16/09/2025 - 30/09/2025
 
-#### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
-\- Resultado de Aprendizaje
+\- Resultado de Aprendizaje:
 
- - **RA1**: Instala gestores de contenidos, identificando sus
-aplicaciones y configurándolos según requerimientos.
+\- **RA1**: Reconoce las características de lenguajes de marcas, analizando e interpretando fragmentos de código.
 
-\- Criterios de Evaluación
+\- Criterios de Evaluación:
 
-a\) Se han identificado los requerimientos necesarios para instalar
-gestores de contenidos.
-
-b\) Se han gestionado usuarios con roles diferentes.
-
-c\) Se ha personalizado la interfaz del gestor de contenidos.
-
-d\) Se han realizado pruebas de funcionamiento.
-
-e\) Se han realizado tareas de actualización del gestor de contenidos,
-especialmente las de seguridad.
-
-f\) Se han instalado y configurado los módulos y menús necesarios.
-
-g\) Se han activado y configurado los mecanismos de seguridad
-proporcionados por el propio gestor de contenidos.
-
-h\) Se han habilitado foros y establecido reglas de acceso.
-
-i\) Se han realizado pruebas de funcionamiento.
-
-j\) Se han realizado copias de seguridad de los contenidos del gestor.
+> a\) Se han identificado las características generales de los lenguajes de marcas.
+>
+> b\) Se han reconocido las ventajas que proporcionan en el tratamiento de la información.
+>
+> c\) Se han clasificado los lenguajes de marcas e identificado los más relevantes.
 
 \- Competencias
 
- - Profesionales: c. f. j. l
+\- Profesionales: 1, 3, 6, 7
 
- - Ocupación: m. ñ. q. r
+\- Ocupación: 16, 18
 
 #### 3. Organización
 
 Contenidos
 
-\- Etiquetas HTML5
-
-\- Estilos: Sentencias CSS3
-
-\- Introducción al CMS WordPress
+> \- Clasificación y características comunes de los lenguajes de marcas. Ejemplos de lenguajes de marcas. Ejemplo de fichero XML
+>
+> \- Origen del XML
 
 Metodología
 
- - Clases de introducción de conceptos y aplicación práctica de los
-mismos con aprendizaje basado en tareas. Documentación del trabajo.
-
- - Uso del HTML5 y CSS3 para la creación y alojamiento de una página web
-estática (*con la finalidad de aquirir destrezas suficientes para
-personalizar visualmente temas de WordPress)*.
-
- - Alojamiento y personalización de un CMS
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
 
 Recursos
 
- - Ordenador con conexión a Internet, Sistema Operativo Linux,
-VirtualBox.
+\- Ordenador con conexión a Internet.
 
 #### 4. Evaluación y adaptación
 
@@ -97,343 +72,63 @@ Observación directa
 
 Prácticas evaluadas mediante rúbricas (20%)
 
-Pruebas objetivas (test) (80%) sobre los conceptos explicados y
-aplicados en clase.
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
 
 Prácticas en la unidad:
 
- - Elaboración y alojamiento web de una página estática con HTML5 y CSS3
+\- Lista de alumnos en distintos lenguajes de marcas.
 
- - Creación y alojamiento web con el CMS WordPress de una publicación
-tipo Periódico, configurando todos los aspectos profesionalmente
-necesarios.
+\- XML de mamíferos
 
- - Creación y alojamiento web con el CMS WordPress de una tienda online,
-configurando todos los mecanismos profesionalmente necesarios,
-incluyendo pasarela de pagos.
+\- XML bien formado
 
 Adaptaciones
 
-\- De ser necesarias, de manera flexible tras la evaluación inicial y el
-seguimiento por observación del progreso del alumnado.
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
 
-### UP2 -- LMS -- Moodle
+### UP02 – LENGUAJES DE MARCAS: EN EDICIÓN DE TEXTOS (MARKDOWN) Y EN LA ADMINISTRACIÓN DE SISTEMAS (YAML)
 
 #### 1. Identificación
 
-\- Código: UP2: Sistema de Gestión de Aprendizaje LMS -- Moodle\|
-Módulo: 0228
+\- Código: UP02 – LENGUAJES DE MARCAS: EN EDICIÓN DE TEXTOS (MARKDOWN) Y EN LA ADMINISTRACIÓN DE SISTEMAS (YAML) \| Módulo: 0373
 
-\- Duración: 12 horas
+\- Duración: 8
 
-\- Temporalización: 04/12/2025 -- 16/01/2026
+\- Temporalización: 07/10/2025 - 21/10/2025
 
-#### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
-
-\- Resultado de Aprendizaje:
-
- - **RA2**: Instala sistemas de gestión de aprendizaje a distancia,
-describiendo la estructura del sitio y la jerarquía de directorios
-generada.
-
-\- Criterios de evaluación:
-
-a\) Se ha reconocido la estructura del sitio y la jerarquía de
-directorios generada.
-
-b\) Se han realizado modificaciones en la estética o aspecto del sitio.
-
-c\) Se han manipulado y generado perfiles personalizados.
-
-d\) Se ha comprobado la funcionalidad de las comunicaciones mediante
-foros, consultas, entre otros.
-
-e\) Se han importado y exportado contenidos en distintos formatos.
-
-f\) Se han realizado copias de seguridad y restauraciones.
-
-g\) Se han realizado informes de acceso y utilización del sitio.
-
-h\) Se ha comprobado la seguridad del sitio.
-
-\- **Competencias**
-
- - Profesionales: c, f, j
-
- - Ocupación: m, ñ, q, r
-
-#### 3. Organización
-
-Contenidos
-
- - Introducción a los Sistemas de Gestión de Aprendizaje LMS. LMS Moodle
-
-Metodología
-
- - Sesiones de introducción de conceptos y aplicación práctica de los
-mismos con aprendizaje basado en tareas. Documentación del trabajo.
-
- - Alojamiento y personalización de un LMS
-
-Recursos
-
- - Ordenador con conexión a Internet, Sistema Operativo Linux,
-VirtualBox.
-
-#### 4. Evaluación y adaptación
-
-Instrumentos de evaluación
-
-Observación directa
-
-Prácticas evaluadas mediante rúbricas (20%)
-
-Pruebas objetivas (test) (80%) sobre los conceptos explicados y
-aplicados en clase.
-
-Prácticas en la unidad:
-
- - Instalación y gestión de Moodle en máquina virtual.
-
- - Registro y alojamiento en [MooDIY](https://portal.moodiycloud.com/)
-\| [gnomio](https://www.gnomio.com/) o
-[milaulas](https://www.milaulas.com/) para comprobación de las
-funcionalidades en línea necesarias en este tipo de sistema.
-
- - Alojamiento web, puesta en funcionamiento y personalización de Moodle
-para una institución educativa.
-
-Adaptaciones
-
-\- De ser necesarias y de manera flexible, tras seguimiento por
-observación del progreso del alumnado
-
-### UP3 -- Almacenamiento en la nube -- NextCloud
-
-#### 1. Identificación
-
-\- Código: UP3: Almacenamiento en la nube -- NextCloud\| Módulo: 0228
-
-\- Duración: 10 horas
-
-\- Temporalización: 23/01/2023 -- 06/02/2026
-
-#### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
 \- Resultado de Aprendizaje:
 
- - **RA3**: Instala servicios de gestión de archivos web, identificando
-sus aplicaciones y verificando su integridad.
+\- **RA1**: Reconoce las características de lenguajes de marcas, analizando e interpretando fragmentos de código.
 
-\- Criterios de evaluación:
+\- Criterios de Evaluación:
 
-a\) Se ha establecido la utilidad de un servicio de gestión de archivos
-web.
-
-b\) Se han descrito diferentes aplicaciones de gestión de archivos web.
-
-c\) Se ha instalado y adaptado una herramienta de gestión de archivos
-web.
-
-d\) Se han creado y clasificado cuentas de usuario en función de sus
-permisos.
-
-e\) Se han gestionado archivos y directorios.
-
-f\) Se han utilizado archivos de información adicional.
-
-g\) Se han aplicado criterios de indexación sobre los archivos y
-directorios.
-
-h\) Se ha comprobado la seguridad del gestor de archivos.
-
-\- **Competencias**
-
- - Profesionales: f, g, i, j, o
-
- - Ocupación: m, ñ, q, r
-
-#### 3. Organización
-
-Contenidos
-
- - Almacenamiento en la nube -- NextCloud como plataforma de
-colaboración en línea autoalojada.
-
-Metodología
-
- - Sesiones de introducción de conceptos y aplicación práctica de los
-mismos con aprendizaje basado en tareas. Documentación de la práctica.
-
- - Instalación y personalización de la Plataforma NextCloud
-
-Recursos
-
- - Ordenador con conexión a Internet, Sistema Operativo Linux,
-VirtualBox.
-
-#### 4. Evaluación y adaptación
-
-Instrumentos de evaluación
-
-Observación directa
-
-Prácticas evaluadas mediante rúbricas (20%)
-
-Pruebas objetivas (test) (80%) sobre los conceptos explicados y
-aplicados en clase.
-
-Prácticas en la unidad:
-
- - Instalación y gestión de NextCloud en máquina virtual.
-
- - Configuraciones/ajustes finales de NextCloud e instalación de
-aplicaciones según requisitos indicados para conocer el funcionamiento y
-posibilidades de la plataforma. Documentación del trabajo.
-
-Adaptaciones
-
-\- De ser necesarias y de manera flexible, tras seguimiento por
-observación del progreso del alumnado
-
-### UP4 -- Aplicaciones Ofimáticas en la Nube. Suites en línea.
-
-### 1. Identificación
-
-\- Código: UP5: Aplicaciones Ofimáticas en la Nube. Suites en línea.\|
-Módulo: 0228
-
-\- Duración: 2 horas
-
-\- Temporalización: 06/02/2026 -- 12/02/2026
-
-#### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
-
-\- Resultado de Aprendizaje:
-
- - RA4: Instala aplicaciones de ofimática web, describiendo sus
-características y entornos de uso.
-
-\- Criterios de evaluación:
-
-a\) Se ha establecido la utilidad de las aplicaciones de ofimática web.
-
-b\) Se han descrito diferentes aplicaciones de ofimática web (procesador
-de textos, hoja de cálculo, entre otras).
-
-c\) Se han instalado aplicaciones de ofimática web.
-
-d\) Se han gestionado las cuentas de usuario.
-
-e\) Se han aplicado criterios de seguridad en el acceso de los usuarios.
-
-f\) Se han reconocido las prestaciones específicas de cada una de las
-aplicaciones instaladas.
-
-g\) Se han utilizado las aplicaciones de forma colaborativa.
-
-\- **Competencias**
-
- - Profesionales: c, f, l
-
- - Ocupación: m, p, q
-
-#### 3. Organización
-
-Contenidos
-
- - Aplicaciones Ofimáticas colaborativas en la nube. Suites en línea.
-
-Metodología
-
- - Sesión de introducción de conceptos y suites ofimáticas más
-populares.
-
- - Aplicaciones en las suites ofimáticas en línea más habituales
-estableciendo ventajas e inconvenientes. Aprendizaje basado en tareas.
-
-Recursos
-
- - Ordenador con conexión a Internet.
-
-#### 4. Evaluación y adaptación
-
-Instrumentos de evaluación
-
-Observación directa
-
-Pruebas objetivas (test) (100%) sobre los conceptos explicados y
-aplicados en clase.
-
-Prácticas en la unidad:
-
- - Visita a las plataformas web de las suites ofimáticas Google,
-MsOffice, Zoho, \...
-
-Adaptaciones
-
-\- De ser necesarias y de manera flexible, por observación del progreso
-del alumnado en este apartado.
-
-### UP5 -- Aplicaciones Web de Escritorio.
-
-#### 1. Identificación
-
-\- Código: UP5: Aplicaciones Web de Escritorio.\| Módulo: 0228
-
-\- Duración: 3 horas
-
-\- Temporalización: 12/02/2026 -- 13/02/2026
-
-#### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
-
-\- **Resultado de Aprendizaje:**
-
- - **RA5**: Instala aplicaciones web de escritorio, describiendo sus
-características y entornos de uso
-
-\- Criterios de evaluación:
-
-a\) Se han descrito diferentes aplicaciones web de escritorio.
-
-b\) Se han instalado aplicaciones para proveer de acceso web al servicio
-de correo electrónico.
-
-c\) Se han configurado las aplicaciones para integrarlas con un servidor
-de correo.
-
-d\) Se han gestionado las cuentas de usuario.
-
-e\) Se ha verificado el acceso al correo electrónico.
-
-f\) Se han instalado aplicaciones de calendario web.
-
-g\) Se han reconocido las prestaciones específicas de las aplicaciones
-instaladas (citas, tareas, entre otras).
+> d\) Se han diferenciado sus ámbitos de aplicación.
+>
+> e\) Se han reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.
 
 \- Competencias
 
- - Profesionales: c, f, j, o
+\- Profesionales: 1, 3, 6, 7
 
- - Ocupación: m, ñ, r
+\- Ocupación: 16, 18
 
 #### 3. Organización
 
 Contenidos
 
- - Aplicaciones Web de Escritorio -- Cliente de correo Thunderbird.
+\- Markdown – Introducción
+
+\- YAML . Introducción
 
 Metodología
 
- - Sesión de introducción de conceptos y aplicaciones web más populares.
-
- - Aplicaciones web de escritorio más habituales: Clientes de correo.
-Aprendizaje basado en tareas.
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas (ABT). Documentación del trabajo.
 
 Recursos
 
- - Ordenador con conexión a Internet, Sistema Operativo Linux,
-VirtualBox.
+\- Ordenador con conexión a Internet
 
 #### 4. Evaluación y adaptación
 
@@ -441,20 +136,626 @@ Instrumentos de evaluación
 
 Observación directa
 
-Práctica evaluadas mediante rúbrica (20%)
+Prácticas evaluadas mediante rúbricas (20%)
 
-Prueba objetiva (test) (80%) sobre los conceptos explicados y aplicados
-en clase.
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
 
-Práctica en la unidad:
+Prácticas en la unidad:
 
- - Instalación y gestión de Thunderbird en máquina virtual. Comprobación
-del funcionamiento mediante intercambio de correos con Gmail.
+\- Documentación de prácticas en Markdown.
+
+\- YAML: Configuración de redes con NetPlan
 
 Adaptaciones
 
-\- De ser necesarias y de manera flexible, por observación del progreso
-del alumnado en este apartado.
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
 
-\- Ampliación con correo web *eclipso.eu*. Tratamiento del correo en el
-servidor según distintos protocolos (SMTP/POP3).
+### UP03 – XML
+
+#### 1. Identificación
+
+\- Código: UP03 – XML \| Módulo: 0373
+
+\- Duración: 6
+
+\- Temporalización: 17/12/2025 - 30/01/2026
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA1**: Administra conmutadores estableciendo opciones de configuración para su integración en la red.
+
+\- Criterios de Evaluación:
+
+> f\) Se han analizado las características propias del lenguaje XML.
+>
+> g\) Se han identificado la estructura de un documento XML y sus reglas sintácticas.
+>
+> h\) Se han contrastado la necesidad de crear documentos XML bien formados y la influencia en su procesamiento.
+>
+> i\) Se han identificado las ventajas que aportan los espacios de nombres.
+
+\- Competencias
+
+\- Profesionales: 1, 3, 6, 7
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+\- XML. Documentos estructura. Bien Formado. Válido. Espacio de nombres
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet.
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- Conversión de una tabla a XML
+
+\- XML bien formados
+
+\- Conversión de distintos tipos de texto a XML para posibilitar búsquedas
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP04 – 4.1 - VALIDACIÓN XML: DTD
+
+#### 1. Identificación
+
+\- Código: UP4 – 4.1 - VALIDACIÓN XML: DTD \| Módulo: 0373
+
+\- Duración: 11
+
+\- Temporalización: 28/10/2025 - 18/11/2025
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA4**: Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.
+
+\- Criterios de Evaluación:
+
+> a\) Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.
+>
+> b\) Se han identificado las tecnologías relacionadas con la definición de documentos XML.
+>
+> c\) Se ha analizado la estructura y sintaxis específica utilizada en la descripción.
+>
+> d\) Se han creado descripciones de documentos XML.
+>
+> e\) Se han utilizado descripciones en la elaboración y validación de documentos XML.
+>
+> f\) Se han asociado las descripciones con los documentos.
+>
+> g\) Se han utilizado herramientas específicas.
+>
+> h\) Se han documentado las descripciones.
+
+\- Competencias
+
+\- Profesionales: 4, 8, 11, 13
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+\- DTD – Validación de XML. Atributos, entidades, notaciones, secciones
+
+\- Problemas de las DTD
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet.
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- Ejercicios de DTD basados en la creación de forma incremental de un fichero XML sobre una Inmobiliaria aumentando la complejidad sucesivamente, a la vez que se crea la DTD necesaria en cada paso que valide cada nueva ampliación del XML.
+
+\- Corrección de errores en DTD
+
+\- Elaboración de DTD para un catálogo de productos
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP05 – 4.2 VALIDACIÓN XML: XML SCHEMA - XSD.
+
+#### 1. Identificación
+
+\- Código: UP05 – ENCAMINADORES (ROUTERS) – PROTOCOLOS DE ENCAMINAMIENTO DINÁMICO \| Módulo: 0373
+
+\- Duración: 15
+
+\- Temporalización: 18/11/2025 - 09/12/2025
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA4**: Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.
+
+\- Criterios de Evaluación:
+
+> a\) Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.
+>
+> b\) Se han identificado las tecnologías relacionadas con la definición de documentos XML.
+>
+> c\) Se ha analizado la estructura y sintaxis específica utilizada en la descripción.
+>
+> d\) Se han creado descripciones de documentos XML.
+>
+> e\) Se han utilizado descripciones en la elaboración y validación de documentos XML.
+>
+> f\) Se han asociado las descripciones con los documentos.
+>
+> g\) Se han utilizado herramientas específicas.
+>
+> h\) Se han documentado las descripciones.
+
+\- Competencias
+
+\- Profesionales: 4, 8, 11, 13
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+\- Introducción y justificación de XSD
+
+\- Características de XSD: tipos simples, facetas y restricciones, elementos complejos, indicadores de elementos, tipos de datos
+
+\- Ejemplos de patrones de diseño XSD
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- XSD a XML básicos
+
+\- Varios ejercicios de complejidad creciente de XML a XSD, desde XML a XSD elementos simples hasta el XSD de la Inmobiliaria usada con anterioridad.
+
+\- Varios ejercicios XSD simple, restricciones, complejo.
+
+Adaptaciones
+
+### - De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP06 – RECORRER UN XML - XPath
+
+#### 1. Identificación
+
+\- Código: UP06 – RECORRER UN XML - XPath \| Módulo: 0373
+
+\- Duración: 4
+
+\- Temporalización: 09/12/2025 - 16/12/2025
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA5**: Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.
+
+\- Criterios de Evaluación:
+
+> a\) Se ha identificado la necesidad de la conversión de documentos XML.
+>
+> b\) Se han establecido ámbitos de aplicación.
+>
+> c\) Se han analizado las tecnologías implicadas y su modo de funcionamiento.
+>
+> d\) Se ha descrito la sintaxis específica utilizada en la conversión y adaptación de documentos XML.
+
+\- Competencias
+
+\- Profesionales: 3, 5, 8, 13
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+\- Modelo de datos.
+
+\- Expresiones. Ejes. Nodo-comprobación. Predicados. [Ejemplos aplicados](https://sergiocanales.com/xpath/)
+
+\- Funciones integradas.
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- XPATH – Partiendo de un amplio XML de una inmobiliaria, realizar varias consultas de recorrido del XPATH simple
+
+\- XPATH – Universidad. Similar al anterior pero con universidades.
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP07 – TRANSFORMAR UN XML - XSLT
+
+#### 1. Identificación
+
+\- Código: UP07 – TRANSFORMAR UN XML - XSLT \| Módulo: 0373
+
+\- Duración: 6
+
+\- Temporalización: 13/01/2026 - 20/01/2026
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA5**: Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.
+
+\- Criterios de Evaluación:
+
+> d\) Se ha descrito la sintaxis específica utilizada en la conversión y adaptación de documentos XML.
+>
+> e\) Se han creado especificaciones de conversión.
+>
+> f\) Se han identificado y caracterizado herramientas específicas relacionadas con la conversión de documentos XML.
+>
+> g\) Se han realizado conversiones con distintos formatos de salida.
+>
+> h\) Se han documentado y depurado las especificaciones de conversión.
+
+\- Competencias
+
+\- Profesionales: 3, 5, 8, 13
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+\- Lenguaje de transformación basado en hojas de estilo
+
+\- Elementos y Etiquetas XSLT: raíz, salida, plantillas, elementos, atributos, nodos de texto. Filtrado de valores. Instrucciones de control. Condicionales. Variables. Parámetros
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet.
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- 10 ejercicios de transformación del xml de inmobiliaria empleado con anterioridad
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### 
+
+### UP08 – CONSULTAR UN XML - XQUERY
+
+#### 1. Identificación
+
+\- Código: UP08 – CONSULTAR UN XML - XQUERY\| Módulo: 0373
+
+\- Duración: 3
+
+\- Temporalización: 27/01/2026 - 03/02/2026
+
+### 2. Fundamentación
+
+\- Resultado de Aprendizaje:
+
+\- RA6 .
+
+#### 3. Organización
+
+Contenidos
+
+\- XQUERY – Consultas FLWOR
+
+\- Estructura de las consultas. Opciones at / in
+
+\- Condicionales en FLWOR. Uso de {}. Conversión de tipos. Cuantificadores. Operadores.
+
+\- Funciones predefinidas y funciones definidas por el usuario
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas.
+
+Recursos
+
+\- Ordenador con conexión a Internet.
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- Consultas Xquery propuestas para su prueba y corrección.
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP09 – HTML - Hiper Text Markup Language + CSS - Hojas de Estilo en Cascada
+
+#### 1. Identificación
+
+\- Código: UP09 – HTML - Hiper Text Markup Language + CSS - Hojas de Estilo en Cascada \| Módulo: 0373
+
+\- Duración: 24
+
+\- Temporalización: 10/02/2026 - 24/03/2026
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA2**: Utiliza lenguajes de marcas para la transmisión de información a través de la web, analizando la estructura de los documentos e identificando sus elementos.
+
+\- Criterios de Evaluación:
+
+> a\) a) Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones.
+>
+> b\) Se ha analizado la estructura de un documento HTML y se han identificado las secciones que lo componen.
+>
+> c\) Se han reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.
+>
+> d\) Se han establecido las semejanzas y diferencias entre los lenguajes HTML y XHTML.
+>
+> e\) Se ha reconocido la utilidad de XHTML en los sistemas de gestión de información.
+>
+> f\) Se han utilizado herramientas en la creación de documentos web.
+>
+> g\) Se han identificado las ventajas que aporta la utilización de hojas de estilo.
+>
+> h\) Se han aplicado hojas de estilo.
+
+\- Competencias
+
+\- Profesionales: 3, 11, 12
+
+\- Ocupación: 16, 18
+
+#### 3. Organización
+
+Contenidos
+
+> \- Introducción al HTML. HTML5 y XHTML.
+>
+> \- HTML5: Etiquetas semánticas. Elementos. Listas. Formularios. Elementos contenedores. Audio y vídeo. Formularios.
+>
+> \- Dentro del elemento HEAD
+>
+> \- CSS. Modelo de caja. Selectores. Clases. Identificadores. Pseudo-clases. Pseudo-elementos.
+>
+> \- Z-Index. Diseño y posicionamiento de elementos. Propiedad display.
+>
+> \- Unidades de medida. Diseño adaptativo y responsive (receptivo)
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas.
+
+\- Alojamiento web.
+
+\- Sitio web adaptativo/responsivo
+
+Recursos
+
+\- Ordenador con conexión a Internet, consola/terminal, VS Codium, Phoenix Code.
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- Registro en alojamiento web gratuito con PHP.
+
+\- Entendiento las tablas y sus atributos con CSS
+
+\- Estructura semántica mínima de un web-site con cinco páginas. Documentación y estructura del website
+
+\- Formulario funcional con PHP basado en una plantilla proporcionada.
+
+\- Valoración de website propio y del resto del grupo según rúbrica.
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
+
+### UP10 – SISTEMAS DE GESTIÓN DE LA INFORMACIÓN
+
+#### 1. Identificación
+
+\- Código: UP10 – SISTEMAS DE GESTIÓN DE LA INFORMACIÓN \| Módulo: 0373
+
+\- Duración: 6
+
+\- Temporalización: 14/04/2026 - 21/04/2026
+
+### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
+
+\- Resultado de Aprendizaje:
+
+\- **RA7**: Trabaja con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.
+
+\- Criterios de Evaluación:
+
+> a\) Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.
+>
+> b\) Se han evaluado las características de las principales aplicaciones de gestión empresarial.
+>
+> c\) Se han instalado aplicaciones de gestión empresarial.
+>
+> d\) Se han configurado y adaptado las aplicaciones.
+>
+> e\) Se ha establecido y verificado el acceso seguro a la información.
+>
+> f\) Se han generado informes.
+>
+> g\) Se han realizado tareas de integración con aplicaciones ofimáticas.
+>
+> h\) Se han realizado procedimientos de extracción de información para su tratamiento e incorporación a diversos sistemas.
+>
+> i\) Se han realizado tareas de asistencia y resolución de incidencias.
+>
+> j\) Se han elaborado documentos relativos a la explotación de la aplicación.
+
+\- Competencias
+
+\- Profesionales: 3, 4, 12, 13, 14
+
+\- Ocupación: 17,18
+
+#### 3. Organización
+
+Contenidos
+
+\- Sistemas de Gestión Empresarial (SGE): plan de recursos empresariales (ERP) sobre todos las áreas de una empresa, incluyendo relación con el cliente (CRM).
+
+\- ERP en la nube: SaaS
+
+\- Implantación, adaptación y administración de un ERP: ODOO
+
+\- Importación, gestión y exportación de información: CSV, XML, Bases de datos
+
+\- Minería de datos.
+
+\- Procesamiento en línea analítico OLAP. Ejemplo con Iberdrola.
+
+\- Dashboard y Scorecard: Bussines Intelligence e Informes.
+
+\- Seguridad en los SGE
+
+Metodología
+
+\- Clases de introducción de conceptos y fijación práctica de los mismos con aprendizaje basado en tareas. Investigación en línea. Documentación del trabajo.
+
+Recursos
+
+\- Ordenador con conexión a Internet, VirtualBox, ODOO
+
+#### 4. Evaluación y adaptación
+
+Instrumentos de evaluación
+
+Observación directa
+
+Prácticas evaluadas mediante rúbricas (20%)
+
+Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en clase.
+
+Prácticas en la unidad:
+
+\- Investigación sobre Big Data.
+
+\- Investigación sbore ERP más usados en empresa
+
+\- Documentación de los pasos seguido en minería de datos para la obtención de modelos y patrones y su apliación en toma de decisiones.
+
+\- Instalación de ODOO Community edition en máquina virtual/Docker. Adaptación y gestión de usuarios por niveles. Importación y exportación de información. Instalación de módulos. Creación de informes en PDF. Docmentación del proceso completo.
+
+Adaptaciones
+
+\- De ser necesarias, de manera flexible tras la evaluación inicial y el seguimiento por observación del progreso del alumnado.
