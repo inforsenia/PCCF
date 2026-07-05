@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **03/07/2026 a las 17:36:24 UTC**
+> 🕒 Última actualización: **05/07/2026 a las 11:45:37 UTC**
 
 ---
 
@@ -20,7 +20,7 @@
 | ISO | **completado** |
 | LMSI | pendiente |
 | OPS190 | **completado** |
-| PAR | pendiente |
+| PAR | **completado** |
 | SAD | **completado** |
 | SASP | **completado** |
 | SRI | **completado** |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 03/07/2026 a las 17:36:24 UTC_
+_Generado automáticamente el 05/07/2026 a las 11:45:37 UTC_
