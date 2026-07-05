@@ -6,7 +6,11 @@ services:
     volumes:
       - ../PCCF:/home/PCCF
       # Carpeta sincronitzada d'OneDrive (memòries de departament) -- mateix path
-      # absolut dins i fora del contenidor perquè els symlinks (memories_ESOBAT) funcionen igual
+      # absolut dins i fora del contenidor. A diferència de Portainer (on
+      # l'entrypoint crea els symlinks memories_* dins del contenidor cada
+      # vegada), ací els symlinks ja existeixen sobre l'amfitrió i s'usen
+      # tant en directe com des del contenidor -- el path ha de coincidir
+      # amb el real de l'amfitrió, no pot ser un path "net" inventat.
       - /media/DADES/OneDriveGVA-Memories:/media/DADES/OneDriveGVA-Memories
     # Por defecto, mantener el contenedor vivo para modo detached
     command: tail -f /dev/null

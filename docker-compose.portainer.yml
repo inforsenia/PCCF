@@ -11,7 +11,7 @@ services:
     # d'stacks de Portainer -- ajustable amb PCCF_DATA_DIR si mai cal.
     volumes:
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_confdir:/home/PCCF/.config/onedrive
-      - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_memories:/media/DADES/OneDriveGVA-Memories
+      - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_memories:/data/onedrive-memories
     entrypoint: ["/home/PCCF/docker-entrypoint.sh"]
     restart: unless-stopped
     environment:

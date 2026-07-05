@@ -4,7 +4,10 @@
 set -euo pipefail
 
 ONEDRIVE_CONFDIR="${ONEDRIVE_CONFDIR:-/home/PCCF/.config/onedrive}"
-MEMORIES_SYNC_ROOT="${MEMORIES_SYNC_ROOT:-/media/DADES/OneDriveGVA-Memories}"
+# Path DINS del contenidor (no té per què coincidir amb cap path real de cap
+# màquina concreta) -- el path real a l'amfitrió es defineix al bind mount
+# del docker-compose corresponent (portainer: /docker/pccf/onedrive_memories).
+MEMORIES_SYNC_ROOT="${MEMORIES_SYNC_ROOT:-/data/onedrive-memories}"
 MEMORIES_ESOBAT_SUBPATH="${MEMORIES_ESOBAT_SUBPATH:-General/Memòries ESO-BAT}"
 MEMORIES_FP_SUBPATH="${MEMORIES_FP_SUBPATH:-General/Memòries FP}"
 
