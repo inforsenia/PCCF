@@ -6,6 +6,7 @@ set -euo pipefail
 ONEDRIVE_CONFDIR="${ONEDRIVE_CONFDIR:-/home/PCCF/.config/onedrive}"
 MEMORIES_SYNC_ROOT="${MEMORIES_SYNC_ROOT:-/media/DADES/OneDriveGVA-Memories}"
 MEMORIES_ESOBAT_SUBPATH="${MEMORIES_ESOBAT_SUBPATH:-General/Memòries ESO-BAT}"
+MEMORIES_FP_SUBPATH="${MEMORIES_FP_SUBPATH:-General/Memòries FP}"
 
 if [ ! -f "$ONEDRIVE_CONFDIR/refresh_token" ]; then
     echo "ERROR: no hi ha refresh_token a $ONEDRIVE_CONFDIR"
@@ -13,9 +14,10 @@ if [ ! -f "$ONEDRIVE_CONFDIR/refresh_token" ]; then
     exit 1
 fi
 
-# Symlink perquè tools/report_memories.py i tools/compilar_memories.py trobin
-# les dades sincronitzades on ja les esperen (memories_ESOBAT/{DEPART}/).
+# Symlinks perquè tools/report_memories.py i tools/compilar_memories.py trobin
+# les dades sincronitzades on ja les esperen (memories_{ESOBAT,FP}/{DEPART}/).
 ln -sfn "$MEMORIES_SYNC_ROOT/$MEMORIES_ESOBAT_SUBPATH" /home/PCCF/memories_ESOBAT
+ln -sfn "$MEMORIES_SYNC_ROOT/$MEMORIES_FP_SUBPATH" /home/PCCF/memories_FP
 
 echo "Engegant onedrive --monitor (confdir=$ONEDRIVE_CONFDIR)..."
 # NOTA important (lliçó apresa): mai --resync automàtic ací. --resync només
