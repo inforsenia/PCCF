@@ -250,7 +250,7 @@ def main():
         expected = get_expected_esobat(config)
 
     # Build report
-    report_lines, ok_files, borrador_files, missing, incomplete_ok = build_report_lines(
+    report_lines, ok_files, borrador_files, missing, incomplete_ok, no_impartit_files = build_report_lines(
         familia, config, parsed, expected, output_parent
     )
 
@@ -286,6 +286,8 @@ def main():
                 print(f"  - {len(missing)} mòduls sense cap fitxer (FALTA)")
             if incomplete_ok:
                 print(f"  - {len(incomplete_ok)} fitxers OK amb marcadors sense omplir")
+            if no_impartit_files:
+                print(f"  - {len(no_impartit_files)} mòduls marcats NO IMPARTIT (no compten com a incidència)")
             print(f"\nTotal a compilar: {len(to_compile)} memòries (OK + BORRADOR)")
     else:
         to_compile = list(ok_files)
@@ -299,6 +301,8 @@ def main():
                 print(f"  - {len(missing)} mòduls sense cap fitxer (FALTA)")
             if incomplete_ok:
                 print(f"  - {len(incomplete_ok)} fitxers OK amb marcadors sense omplir")
+            if no_impartit_files:
+                print(f"  - {len(no_impartit_files)} mòduls marcats NO IMPARTIT (no compten com a incidència)")
             print(f"\nEs compilaran {len(ok_files)} memòries en estat OK")
             if borrador_files:
                 print(f"  + {len(borrador_files)} en estat BORRADOR (si confirmes)")
@@ -334,7 +338,10 @@ def main():
     # Marca d'aigua "ESBORRANY": s'activa si qualsevol mòdul/matèria porta
     # el marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls
     # sense cap fitxer (FALTA) -- reflecteix exactament el que el lector veu
-    # al PDF, no un llindar separat.
+    # al PDF, no un llindar separat. Els mòduls marcats _NOIMPARTIT.md ja
+    # han sigut exclosos de `missing` per build_report_lines (el cap de
+    # departament n'és conscient: no ha hagut alumnat), per tant no activen
+    # la marca d'aigua.
     document_has_draft_marker = bool(missing)
 
     # Render portada (family-specific if exists, else generic)

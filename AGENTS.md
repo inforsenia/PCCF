@@ -131,7 +131,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 
 ### Memoria reports (`make report-memories`, `make compila-memories` → `tools/report_memories.py`, `tools/compilar_memories.py`):
 - Output directory: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/`
-- Detects: `[FALTA]`, `[BORRADOR]`, `[DUPLICAT]`, `[INCOMPLET]` (placeholders, malformed checkboxes, stats inconsistencies)
+- Detects: `[FALTA]`, `[BORRADOR]`, `[DUPLICAT]`, `[INCOMPLET]`, `[NO IMPARTIT]`, `[CONFLICTE]` (placeholders, malformed checkboxes, stats inconsistencies)
 - Detects malformed checkboxes: `[ x ]`, `[x ]`, `[ x]` reported as `[CHECKBOX_FORMAT]`
 - Detects stats inconsistencies: aprovats+suspensos > avaluats, total > final, etc.
 - **Automatic cleanup**: `[]` → `[ ]` (fix empty checkbox), strips brackets from non-checkbox content (`[24]`→`24`, `[CAP]`→`CAP`). Preserves `[###]` and `[...]` for report detection. Runs on OK files during report generation.
@@ -162,6 +162,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 - **Special course types (ESO/BAT)**: PDC and APLI courses are automatically detected and treated as ESO etapa for filename parsing.
 - **17 ESO/BAT departments**: Config files in `memoriaESOBAT/memories_{DEPART}.json` for ANGLES, BIOLOGIA_GEOLOGIA, DIBUIX, ECONOMIA, EDUCACIO_FISICA, FILOSOFIA, FISICA_QUIMICA, FRANCES, GEOGRAFIA_HISTORIA, INFORMATICA, LLATI, LLENGUA_CASTELLANA, LLENGUA_VALENCIANA, MATEMATIQUES, MUSICA, RELIGIO, TECNOLOGIA.
 - **State tracking** (same as PCCF): `_BORRADOR.md` = pending teacher review. Teacher renames to `_OK.md` when completed.
+- **`_NOIMPARTIT.md` state**: third file state (besides `_OK`/`_BORRADOR`) for a module/subject that ends up with no enrolled students and is therefore never taught. The teacher/head of department renames the `_BORRADOR.md` to `_NOIMPARTIT.md` without filling it in. `tools/memories_utils.py::build_report_lines()` treats these as resolved — excluded from `missing`, listed in their own report section `[NO IMPARTIT]` — so they do **not** trigger the ESBORRANY watermark (see below). A module with both an `_NOIMPARTIT.md` and an `_OK`/`_BORRADOR` file is reported as `[CONFLICTE]` (contradictory state, must be resolved manually). If neither state nor `_NOIMPARTIT` exists, behavior is unchanged: reported as `[FALTA]` and still triggers the watermark.
 - **Instructions block**: Automatically stripped from the compiled PDF (regex removes `> **Instruccions...` blocks).
 - **Module-only scope**: Memorias are per-department; only modules assigned to the dept should be in the config JSON (e.g. no IPO, Anglés, Comunicació professional unless they belong to the dept).
 - **CEIABD**: Specialization course → no course number in filename (curs = `""` in config).
@@ -228,7 +229,7 @@ Extensió del mateix patró de sincronització OneDrive de la secció anterior a
 **Marca d'aigua "ESBORRANY"** (PCCF, Programaciones i Memòries): substitueix la idea d'un llindar de verificació que bloqueja alguna cosa — el PDF simplement porta una marca d'aigua visible quan queden incidències pendents, i no la porta quan tot està net:
 - `rsrc/templates/eisvogel.latex`: bloc `$if(draft)$\usepackage{draftwatermark}...$endif$` (paquet ja disponible via `texlive-latex-extra`), activat amb `-V draft=true`.
 - PCCF: `tools/report_pccf.py::is_verified()` torna `False` si queda algun PD en BORRADOR, algun placeholder `[###]`/`[...]`, o l'Excel de pesos RA és incoherent. El Makefile calcula això a `compila-pccf-%` (variable `DRAFT_OPT`) abans de cridar `pandoc`.
-- Memòries: `tools/compilar_memories.py` activa `draft=true` si apareix qualsevol marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls `[FALTA]` (variable `document_has_draft_marker`).
+- Memòries: `tools/compilar_memories.py` activa `draft=true` si apareix qualsevol marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls `[FALTA]` (variable `document_has_draft_marker`). Els mòduls marcats `_NOIMPARTIT.md` (sense alumnat, confirmat pel cap de departament) NO compten com a `[FALTA]` i per tant no activen esta marca d'aigua.
 
 **Poller de PCCF** (`tools/pccf_sync_poller.py`, anàleg a `tools/local_sync_poller.py`): per a cada cicle, quan detecta un canvi de mtime als `.md`/`.xlsx` de `plantilles_{FAMILIA}_{CICLO}/`:
 1. Bootstrap idempotent (`generar-plantilles-pccf-{cicle}`).

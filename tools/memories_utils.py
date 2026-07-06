@@ -80,8 +80,8 @@ def normalitza_fitxers(memories_dir):
             issues.append((fname, "BORR_TRUNCAT"))
             continue
 
-        # Sense sufix (ni OK ni BORRADOR)
-        if not re.search(r'_(OK|ok|Ok|BORRADOR|borrador|BORR|borr)\.md$', fname):
+        # Sense sufix (ni OK ni BORRADOR ni NOIMPARTIT)
+        if not re.search(r'_(OK|ok|Ok|BORRADOR|borrador|BORR|borr|NOIMPARTIT|noimpartit)\.md$', fname):
             issues.append((fname, "SENSE_SUFIX"))
 
     return renamed, issues
@@ -96,7 +96,7 @@ def parse_filename(filename):
         return None
 
     estat = parts[-1]
-    if estat not in ("BORRADOR", "OK"):
+    if estat not in ("BORRADOR", "OK", "NOIMPARTIT"):
         return None
 
     modul = parts[-2]
@@ -179,7 +179,7 @@ def parse_filename_esobat(filename):
         return None
 
     estat = parts[-1]
-    if estat not in ("BORRADOR", "OK"):
+    if estat not in ("BORRADOR", "OK", "NOIMPARTIT"):
         return None
 
     materia = parts[-2]
@@ -461,6 +461,7 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
 
     ok_files = [p for p in parsed if p["estat"] == "OK"]
     borrador_files = [p for p in parsed if p["estat"] == "BORRADOR"]
+    no_impartit_files = [p for p in parsed if p["estat"] == "NOIMPARTIT"]
 
     report_lines = []
     report_lines.append("=" * 60)
@@ -470,9 +471,11 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
 
     ok_keys = {parsed_key(p) for p in ok_files}
     borrador_keys = {parsed_key(p) for p in borrador_files}
+    no_impartit_keys = {parsed_key(p) for p in no_impartit_files}
 
     missing = []
     complete_pending_list = []
+    no_impartit_list = []
 
     # Detect duplicates: same module with both OK and BORRADOR
     duplicated_keys = ok_keys & borrador_keys
@@ -482,11 +485,18 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
         if key in duplicated_keys and p["estat"] == "BORRADOR":
             duplicates.append(p)
 
+    # Detect conflicts: same module marked NOIMPARTIT and also OK/BORRADOR
+    conflict_keys = no_impartit_keys & (ok_keys | borrador_keys)
+    conflicts = [p for p in no_impartit_files if parsed_key(p) in conflict_keys]
+
     report_lines.append(f"\n--- Llegits {len(parsed)} fitxers a {output_parent}_{familia} ---")
     report_lines.append(f"  Completats (OK): {len(ok_files)}")
     report_lines.append(f"  Pendents (BORRADOR): {len(borrador_files)}")
+    report_lines.append(f"  No impartits (sense alumnat): {len(no_impartit_files)}")
     if duplicates:
         report_lines.append(f"  AVÍS: {len(duplicates)} mòduls tenen fitxer OK i BORRADOR (possible còpia en lloc de renombrar)")
+    if conflicts:
+        report_lines.append(f"  AVÍS: {len(conflicts)} mòduls marcats NO IMPARTIT però també tenen fitxer OK/BORRADOR")
     report_lines.append("")
 
     for exp in expected:
@@ -495,6 +505,8 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
             continue
         if key in borrador_keys and key not in duplicated_keys:
             complete_pending_list.append(exp)
+        elif key in no_impartit_keys and key not in conflict_keys:
+            no_impartit_list.append(exp)
         elif key not in borrador_keys:
             missing.append(exp)
 
@@ -506,11 +518,26 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
         report_lines.append("  Reviseu els dos fitxers, conserveu el correcte amb sufix _OK i esborreu l'altre")
         report_lines.append("")
 
+    if conflicts:
+        report_lines.append("MÒDULS AMB CONFLICTE (marcat NO IMPARTIT però també OK/BORRADOR):")
+        report_lines.append("-" * 40)
+        for p in sorted(conflicts, key=parsed_key):
+            report_lines.append(f"  [CONFLICTE] {parsed_label(p)}")
+        report_lines.append("  Esborreu el fitxer _NOIMPARTIT.md si finalment el mòdul s'ha impartit, o el fitxer OK/BORRADOR si no s'ha impartit")
+        report_lines.append("")
+
     if missing:
         report_lines.append("MÒDULS NO PRESENTS (ni OK ni BORRADOR):")
         report_lines.append("-" * 40)
         for exp in sorted(missing, key=exp_key):
             report_lines.append(f"  [FALTA] {exp_label(exp)}")
+        report_lines.append("")
+
+    if no_impartit_list:
+        report_lines.append("MÒDULS NO IMPARTITS (sense alumnat, marcats conscientment pel cap de departament):")
+        report_lines.append("-" * 40)
+        for exp in sorted(no_impartit_list, key=exp_key):
+            report_lines.append(f"  [NO IMPARTIT] {exp_label(exp)}")
         report_lines.append("")
 
     if complete_pending_list:
@@ -564,7 +591,7 @@ def build_report_lines(familia, config, parsed, expected, output_parent="memorie
     report_lines.append("FI DEL REPORT")
     report_lines.append("=" * 60)
 
-    return report_lines, ok_files, borrador_files, missing, incomplete_ok
+    return report_lines, ok_files, borrador_files, missing, incomplete_ok, no_impartit_files
 
 
 def te_incidencies_per_marcar(filepath, is_esobat, te_duplicat=False):

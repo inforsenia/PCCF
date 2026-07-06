@@ -67,7 +67,7 @@ def main():
     else:
         expected = get_expected_esobat(config)
 
-    report_lines, _, _, _, _ = build_report_lines(familia, config, parsed, expected, output_parent)
+    report_lines, _, _, _, _, _ = build_report_lines(familia, config, parsed, expected, output_parent)
 
     # Afegir secció de noms incorrectes al report
     if issues:
@@ -80,7 +80,7 @@ def main():
             if tipus == "BORR_TRUNCAT":
                 report_lines.append(f"  [BORR_TRUNCAT] {fname} — El nom hauria d'acabar en _BORRADOR.md")
             elif tipus == "SENSE_SUFIX":
-                report_lines.append(f"  [SENSE_SUFIX] {fname} — Afegiu _OK o _BORRADOR al nom del fitxer")
+                report_lines.append(f"  [SENSE_SUFIX] {fname} — Afegiu _OK, _BORRADOR o _NOIMPARTIT al nom del fitxer")
         report_lines.append("")
 
     legend_path = os.path.join(SCRIPT_DIR, "report_legend.txt")

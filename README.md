@@ -226,6 +226,8 @@ PDFS/                        # PDF compilat i report (gitignored)
 25_26_4ESO_4APLI_TEC4APLI_BORRADOR.md       # 4t ESO Aplicades
 ```
 
+`{ESTAT}` = `BORRADOR` (pendent) | `OK` (completat) | `NOIMPARTIT` (el mòdul/matèria no ha tingut alumnat este curs: es renombra `_BORRADOR.md` a `_NOIMPARTIT.md` sense omplir-lo, i no compta com a `[FALTA]` ni activa la marca d'aigua ESBORRANY).
+
 ### Flux de treball
 
 1. **Generar plantilles**: cada mòdul/grup té un fitxer `*_BORRADOR.md`
@@ -283,11 +285,13 @@ El report es genera a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA
 |----------|------------|
 | **BORRADOR** | Mòduls pendents de completar (fitxer `_BORRADOR.md`) |
 | **FALTA** | No hi ha cap fitxer `.md` per a eixa matèria/grup |
+| **NO IMPARTIT** | Fitxer `_NOIMPARTIT.md`: el mòdul/matèria no ha tingut alumnat este curs (confirmat pel cap de departament). No compta com a FALTA ni activa la marca d'aigua ESBORRANY |
+| **CONFLICTE** | Un mòdul té `_NOIMPARTIT.md` i també `_OK.md`/`_BORRADOR.md` alhora (cal esborrar el que no corresponga) |
 | **DUPLICAT** | Existeixen `_OK.md` i `_BORRADOR.md` per al mateix mòdul |
 | **INCOMPLET** | Fitxer `_OK.md` amb `[###]` pendents o estadístiques inconsistents |
 | **ZERO_STATS** | Aprovats=0 i suspensos=0 (dades no omplides) |
 | **CHECKBOX_FORMAT** | Caselles marcades amb espais de més: `[ x ]`, `[x ]` en lloc de `[x]` |
-| **SENSE_SUFIX** | Fitxer sense `_OK.md` ni `_BORRADOR.md` |
+| **SENSE_SUFIX** | Fitxer sense `_OK.md`, `_BORRADOR.md` ni `_NOIMPARTIT.md` |
 | **BORR_TRUNCAT** | Fitxer acaba en `_BORR.md` en lloc de `_BORRADOR.md` |
 | **Stats inc.** | aprovats+suspensos > avaluats, total > final, avaluats > final, final > inici |
 | **Neteja automàtica** | `[]` → `[ ]`, i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`). Es conserven `[###]` i `[...]`. |
@@ -368,6 +372,8 @@ El PDF es genera a `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` i el report a `
 Detecta:
 - Mòduls en estat **BORRADOR** (pendents de completar)
 - Mòduls **FALTA** (no hi ha fitxer ni BORRADOR ni OK)
+- Mòduls **NO IMPARTIT** (fitxer `_NOIMPARTIT.md`: sense alumnat este curs, no compta com a FALTA ni activa la marca d'aigua)
+- Mòduls **CONFLICTE** (`_NOIMPARTIT.md` i `_OK`/`_BORRADOR.md` alhora)
 - Mòduls **DUPLICAT** (OK i BORRADOR per al mateix mòdul)
 - Mòduls **OK** que encara contenen marcadors `[###]` o `[...]`
 - Caselles `[x]` amb format incorrecte (`[ x ]`, `[x ]`, etc.)

@@ -4,6 +4,9 @@ LLEGENDA - QUADRE RESUM DE CARÈNCIES DETECTABLES:
   Codi              | Significat                                            | Què cal fer
   ------------------|-------------------------------------------------------|----------------------------------------------------------
   [FALTA]           | No existeix cap fitxer .md per a eixa matèria/grup    | Generar la memòria (make generar-plantilles-memoria)
+  [NO IMPARTIT]     | Fitxer _NOIMPARTIT.md: el cap de departament confirma| No cal fer res. No activa la marca d'aigua ESBORRANY
+                    | que eixe mòdul/grup no ha tingut alumnat este curs    |
+  [CONFLICTE]       | Un mòdul té fitxer _NOIMPARTIT.md i també _OK/_BORR.  | Esborrar el fitxer que no corresponga a la situació real
   [BORRADOR]        | Fitxer en _BORRADOR.md (pendent de revisió)           | Revisar el document i renombrar a _OK.md
   [DUPLICAT]        | Hi ha _OK.md i _BORRADOR.md per a la mateixa matèria  | Quedar-se el correcte i esborrar l'altre
   [INCOMPLET]       | El _OK.md encara té marcadors [###] per omplir        | Substituir tots els [###] per les dades reals
@@ -15,7 +18,7 @@ LLEGENDA - QUADRE RESUM DE CARÈNCIES DETECTABLES:
   avaluats >        | Alumnat avaluat supera els alumnes a final de curs    | Revisar: no es pot avaluar més alumnes dels que hi ha
   final de curs     |                                                       |
   final > inici     | Final de curs > inici de curs                         | Pot ser normal (incorporacions tardanes), verificar
-  SENSE_SUFIX       | El fitxer no acaba ni en _OK.md ni _BORRADOR.md       | Afegir _OK.md o _BORRADOR.md al nom
+  SENSE_SUFIX       | El fitxer no acaba en _OK/_BORRADOR/_NOIMPARTIT.md    | Afegir _OK.md, _BORRADOR.md o _NOIMPARTIT.md al nom
   BORR_TRUNCAT      | El fitxer acaba en _BORR.md (en lloc de _BORRADOR)    | Canviar _BORR.md -> _BORRADOR.md
   ANNEX NO          | No s'ha generat el fitxer d'extraescolars             | No cal fer res (ESO/BAT no l'inclou al PDF)
   PRESENT           |                                                       |

@@ -378,6 +378,11 @@ PDFS/                      # PDF compilats i reports (gitignored)
 25_26_4ESO_4APLI_TEC4APLI_BORRADOR.md       # 4t ESO Aplicades
 ```
 
+`{ESTAT}` pot ser:
+- `BORRADOR` — pendent d'omplir/revisar pel docent.
+- `OK` — completat i revisat.
+- `NOIMPARTIT` — el mòdul/matèria **no s'ha impartit** este curs (no ha tingut alumnat matriculat). El docent/cap de departament renombra el `_BORRADOR.md` a `_NOIMPARTIT.md` sense omplir-lo, per a deixar constància conscient que no hi ha memòria per a este grup. A diferència d'un mòdul simplement absent (`[FALTA]`), este no activa la marca d'aigua ESBORRANY. Si un mòdul acaba tenint alhora un fitxer `_NOIMPARTIT.md` i un `_OK`/`_BORRADOR.md`, el report ho marca com `[CONFLICTE]` i cal esborrar el que no corresponga.
+
 ### Ús
 
 **FP** (per defecte):
@@ -418,7 +423,7 @@ Via Docker:
 ### Reports de memòries
 
 El report es guarda a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt`. Inclou:
-- Detecció de **BORRADOR**, **FALTA**, **DUPLICAT**, **INCOMPLET**
+- Detecció de **BORRADOR**, **FALTA**, **DUPLICAT**, **INCOMPLET**, **NO IMPARTIT** (mòdul marcat `_NOIMPARTIT.md`, sense alumnat), **CONFLICTE** (mòdul amb `_NOIMPARTIT.md` i `_OK`/`_BORRADOR.md` alhora)
 - Detecció de caselles marcades amb format incorrecte: `[ x ]`, `[x ]` (només `[x]` és correcte)
 - Detecció d'inconsistències a les estadístiques (sumes que no quadren, zeros sospitosos)
 - **Neteja automàtica**: `[]` → `[ ]` i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`, `[PEPE]`→`PEPE`). Es conserven `[###]` i `[...]` per a la seua detecció al report.

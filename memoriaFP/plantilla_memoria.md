@@ -12,7 +12,8 @@
 > 5. Per a escriure textos llargs, podeu usar tantes línies com calga. Recordeu que en Markdown **un sol salt de línia concatena el text** (com si fóra un espai). Per a separar paràgrafs, deixeu **una línia en blanc** (dos Intros). Si voleu llistar elements línia a línia, feu servir una **llista amb vinyetes** (`- element`).
 > 6. Podeu usar formatatge Markdown estàndard (negreta, cursiva, llistes, enllaços, etc.) a les vostres respostes.
 > 7. **No utilitzeu encapçalaments ( #, ##, ### ) ni blocs de notes ( > )** al vostre contingut, perquè aquests elements podrien interferir amb la compilació del document final.
-> 8. Aquest bloc d'instruccions **s'esborrarà automàticament** en compilar el PDF final.
+> 8. Si finalment este mòdul/grup **no s'ha impartit** (no ha tingut alumnat matriculat), no ompliu la memòria: canvieu `_BORRADOR` per `_NOIMPARTIT` al nom del fitxer, sense omplir cap camp. Això indica que sou conscients de l'absència i evita que el PDF es marque com a esborrany per este motiu.
+> 9. Aquest bloc d'instruccions **s'esborrarà automàticament** en compilar el PDF final.
 
 - **Cicle**: {{ cicle_nom }}
 {% if curs_str %}
