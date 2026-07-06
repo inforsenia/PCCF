@@ -14,13 +14,21 @@ regenera automàticament el report + PDF d'eixe departament.
 
 import argparse
 import glob
+import json
 import os
 import subprocess
 import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from memories_utils import PROJECT_DIR
+from memories_utils import PROJECT_DIR, check_placeholders, check_stats_consistency, get_teacher_email
+from mailer import smtp_configured, send_report_email
+
+# Estat intern del poller (últim mtime de cada .md ja avaluat per a
+# notificació al docent). MAI dins la carpeta sincronitzada: és bookkeeping
+# del poller, no contingut per als docents. Es perd sense risc si
+# s'esborra (pitjor cas: es reavalua/reenvia un avís de més).
+TEACHER_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "memories_teacher_notify_state.json")
 
 DEPARTMENTS = {
     "memoriaESOBAT": {
@@ -59,6 +67,92 @@ def latest_report_mtime(dept_root, tipus, familia):
     return max(os.path.getmtime(m) for m in matches)
 
 
+def load_teacher_state():
+    if not os.path.exists(TEACHER_STATE_PATH):
+        return {}
+    try:
+        with open(TEACHER_STATE_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_teacher_state(state):
+    os.makedirs(os.path.dirname(TEACHER_STATE_PATH), exist_ok=True)
+    with open(TEACHER_STATE_PATH, "w", encoding="utf-8") as f:
+        json.dump(state, f)
+
+
+def format_deficiencies(remaining, stats_issues):
+    parts = []
+    custom_markers = {"[ZERO_STATS]", "[CHECKBOX_FORMAT]"}
+    ph_count = len([r for r in remaining if r not in custom_markers])
+    if ph_count:
+        parts.append(f"{ph_count} marcadors pendents ([###]/[...] sense substituir)")
+    if "[ZERO_STATS]" in remaining:
+        parts.append("estadístiques amb 0 aprovats i 0 suspensos")
+    if "[CHECKBOX_FORMAT]" in remaining:
+        parts.append("caselles marcades amb format incorrecte (useu [x] sense espais)")
+    parts.extend(stats_issues)
+    return parts
+
+
+def notify_teachers(base_dir, familia, tipus, dept_dir, is_esobat):
+    """Avisa cada docent per correu de les deficiències de la seua pròpia
+    memòria (no del report sencer del departament), si el seu fitxer .md
+    conté una línia "correu-e: adreça" (vore memories_utils.get_teacher_email).
+
+    No invasiu: sense SMTP configurat no fa absolutament res (ni tan sols
+    llig l'estat). Un fitxer sense el camp "correu-e" o sense deficiències
+    detectades tampoc genera cap enviament. Cada versió (mtime) d'un
+    fitxer es processa com a màxim una vegada -- si l'enviament falla
+    (SMTP caigut), l'estat no es guarda i es reintenta a la propera passada.
+    """
+    if not smtp_configured():
+        return
+
+    state = load_teacher_state()
+
+    for fname in sorted(os.listdir(dept_dir)):
+        if not fname.endswith(".md") or "safeBackup" in fname:
+            continue
+        filepath = os.path.join(dept_dir, fname)
+        state_key = f"{base_dir}/{familia}/{fname}"
+        mtime_before = os.path.getmtime(filepath)
+        if mtime_before <= state.get(state_key, 0.0):
+            continue
+
+        to_addr = get_teacher_email(filepath)
+        if not to_addr:
+            state[state_key] = mtime_before
+            save_teacher_state(state)
+            continue
+
+        # check_placeholders() pot reescriure el fitxer (auto-fix de
+        # claudàtors) -- es captura el mtime final després de cridar-lo.
+        remaining = check_placeholders(filepath)
+        stats_issues = check_stats_consistency(filepath, is_esobat)
+        deficiencies = format_deficiencies(remaining, stats_issues)
+        mtime_final = os.path.getmtime(filepath)
+
+        if not deficiencies:
+            state[state_key] = mtime_final
+            save_teacher_state(state)
+            continue
+
+        subject = f"[Memòries {tipus}] Incidències pendents - {fname}"
+        body = (
+            f"S'han detectat les següents incidències a la vostra memòria "
+            f"({fname}, departament {familia}):\n\n"
+            + "\n".join(f"- {d}" for d in deficiencies)
+            + "\n\nReviseu i corregiu-les directament al fitxer.\n"
+        )
+        if send_report_email(to_addr, subject, body):
+            print(f"    correu enviat al docent ({to_addr}) per {fname}", flush=True)
+            state[state_key] = mtime_final
+            save_teacher_state(state)
+
+
 def poll_once(sync_root, centre):
     processed = []
     for base_dir, info in DEPARTMENTS.items():
@@ -70,6 +164,8 @@ def poll_once(sync_root, centre):
             dept_dir = os.path.join(dept_root, familia)
             if not os.path.isdir(dept_dir):
                 continue
+
+            notify_teachers(base_dir, familia, tipus, dept_dir, tipus == "ESOBAT")
 
             source_mtime = latest_source_mtime(dept_dir)
             if source_mtime == 0.0:

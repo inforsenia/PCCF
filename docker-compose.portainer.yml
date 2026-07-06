@@ -14,11 +14,30 @@ services:
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_memories:/data/onedrive-memories
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_confdir_pccf:/home/PCCF/.config/onedrive-pccf
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_pccf:/data/onedrive-pccf
+      # Emails dels caps de departament (dades personals, repositori PÚBLIC):
+      # mai en git, exclusivament en este fitxer al servidor. Ha d'existir
+      # ABANS del primer desplegament amb este bind mount (si Docker no
+      # troba el fitxer origen, crea un directori en el seu lloc i el
+      # contenidor falla en llegir-lo) -- vore AGENTS.md.
+      - ${PCCF_DATA_DIR:-/docker/pccf}/department_emails.json:/data/department_emails.json:ro
     entrypoint: ["/home/PCCF/docker-entrypoint.sh"]
     restart: unless-stopped
     environment:
       - TERM=xterm-256color
       - TZ=Europe/Madrid
+      # Notificacions per correu (opcional, no invasiu): si SMTP_HOST o
+      # SMTP_FROM queden buits, tools/mailer.py no envia res -- mateix
+      # comportament que sense estes variables. Configurar els valors reals
+      # a l'apartat "Environment variables" de l'stack a Portainer, mai
+      # aci en git.
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
+      - SMTP_FROM=${SMTP_FROM:-}
+      - SMTP_REPLY_TO=${SMTP_REPLY_TO:-}
+      - SMTP_USE_TLS=${SMTP_USE_TLS:-1}
+      - DEPARTMENT_EMAILS_FILE=/data/department_emails.json
     networks:
       - internal_pccf
 

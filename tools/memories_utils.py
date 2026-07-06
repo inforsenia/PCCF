@@ -16,6 +16,24 @@ CICLES_CONEGUTS = sorted(["SMX", "DAM", "CEIABD", "FPBIIO", "APD", "EI", "IS"], 
 ANNEX_PREFIX = "AA_ACTIVITATS_EXTRAESCOLARS"
 CURSOS_ESOBAT = sorted(["ESO", "BAT"], key=len, reverse=True)
 
+# Camp opcional que el docent pot afegir a la secció "### DOCENT" del seu
+# fitxer .md, p.ex. "**correu-e**: nom@edu.gva.es". Mai en git -- el
+# contingut d'estos .md viu exclusivament a la carpeta sincronitzada
+# (OneDrive), no al repositori.
+CORREU_E_RE = re.compile(r'(?im)^\s*\**\s*correu-e\s*\**\s*:\s*\**\s*([^\s*]+@[^\s*]+)')
+
+
+def get_teacher_email(filepath):
+    """Torna l'adreça de correu del docent si el fitxer la conté, o None.
+
+    Camp opcional -- si no hi és, torna None (comportament actual, sense
+    canvis) enlloc de llançar excepció.
+    """
+    with open(filepath, encoding="utf-8") as f:
+        content = f.read()
+    m = CORREU_E_RE.search(content)
+    return m.group(1) if m else None
+
 
 def is_annex_file(filename):
     """Check if filename is an annex file (extraescolars)."""

@@ -13,12 +13,14 @@ departament (timestamp diferent) ja present a la carpeta de destinació.
 
 import argparse
 import glob
+import json
 import os
 import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from memories_utils import get_report_dir, PROJECT_DIR
+from mailer import smtp_configured, get_department_email, send_report_email
 
 
 def latest_timestamp(tipus):
@@ -53,6 +55,39 @@ def publish_one(dest_dir, familia, src_path, new_name):
     print(f"    publicat: {new_name}")
 
 
+def notify_department(base_dir, familia, tipus, report_path, pdf_path):
+    """Avisa el cap de departament per correu, si està configurat.
+
+    No invasiu: si SMTP no està configurat (variables d'entorn) o el
+    departament no té email a `department_emails.json` (fitxer fora de
+    git -- vore tools/mailer.py), no fa res -- mateix comportament que
+    abans d'existir esta funció. El JSON de currículum del departament
+    (`memories_{familia}.json`) no es toca mai per a este propòsit.
+    """
+    if not smtp_configured():
+        return
+    if not report_path and not pdf_path:
+        return
+
+    to_addr = get_department_email(tipus, familia)
+    if not to_addr:
+        return
+
+    config_path = os.path.join(PROJECT_DIR, base_dir, f"memories_{familia}.json")
+    departament = familia
+    if os.path.isfile(config_path):
+        with open(config_path, encoding="utf-8") as f:
+            departament = json.load(f).get("departament", familia)
+
+    subject = f"[Memòries {tipus}] Nou report disponible - {departament}"
+    body = (
+        f"S'ha generat un nou report de memòries per al departament {departament}.\n\n"
+        "S'adjunten el report d'incidències i, si ja està disponible, el PDF compilat.\n"
+    )
+    if send_report_email(to_addr, subject, body, attachments=[report_path, pdf_path]):
+        print(f"    correu enviat a {to_addr}")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--base-dir", default="memoriaESOBAT", choices=["memoriaFP", "memoriaESOBAT"])
@@ -84,17 +119,25 @@ def main():
     for familia in families:
         print(f"- {familia}")
         report_src = os.path.join(report_src_dir, f"{familia}.txt")
-        if os.path.isfile(report_src):
+        report_published = os.path.isfile(report_src)
+        if report_published:
             publish_one(report_dest_dir, familia, report_src, f"{familia}_{timestamp}.txt")
         else:
             print(f"    AVÍS: no existeix {report_src}")
 
         pdf_src = os.path.join(PROJECT_DIR, "PDFS", f"{prefix}_{familia}_{args.centre}_25_26.pdf")
-        if os.path.isfile(pdf_src):
+        pdf_published = os.path.isfile(pdf_src)
+        if pdf_published:
             pdf_new_name = f"{prefix}_{familia}_{args.centre}_25_26_{timestamp}.pdf"
             publish_one(esborrany_dest_dir, familia, pdf_src, pdf_new_name)
         else:
             print(f"    AVÍS: no existeix PDF {pdf_src}")
+
+        notify_department(
+            args.base_dir, familia, tipus,
+            report_src if report_published else None,
+            pdf_src if pdf_published else None,
+        )
 
 
 if __name__ == "__main__":

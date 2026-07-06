@@ -215,8 +215,34 @@ python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/data/
 6. `tools/compilar_memories.py` prova motors LaTeX en l'ordre `lualatex` → `xelatex` → `pdflatex` (no a l'inrevés): el document usa el paquet `emoji` (marcador ❌ d'incidències a l'índex), que **requereix LuaTeX específicament** — amb `xelatex` falla amb "Critical Package emoji Error".
 7. El `threads` del client `onedrive` per defecte és 8; si el servidor/contenidor té menys nuclis, afig `threads = "N"` (N = nuclis disponibles o menys) al `config` per evitar l'avís de sobrecàrrega (i recorda el punt 5: això dispararà un `--resync` necessari).
 
-**Propostes de futur (no construïdes encara)**:
-- **Notificacions per correu**: (A) avisar el cap de departament quan el poller publica una memòria nova (necessita un camp d'email nou als JSON `memoriaESOBAT/memories_{DEPART}.json` / `memoriaFP/memories_{FAMILIA}.json`, un per departament) — més senzill, sense fricció per als docents; (B) avisar el propi docent del resultat de la seua última modificació (necessita un camp d'email dins de cada `.md`, reutilitzant `check_placeholders`/`check_stats_consistency` sobre eixe fitxer concret quan el poller detecta el seu canvi) — més útil individualment, però amb fricció d'adopció. Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA. Prioritat suggerida: (A) primer. Mateixa proposta aplica al PCCF (vore secció següent).
+**Notificacions per correu al cap de departament (`tools/mailer.py`)**: implementació de l'opció (A) descrita més avall — quan `publish_memories_output.py` publica un report/PDF nou, `notify_department()` envia un correu al cap de departament corresponent. Disseny explícitament **no invasiu**: el mecanisme només s'activa si es compleixen totes dues condicions, i si en falta qualsevol el comportament és idèntic al d'abans que existira (cap error, cap canvi):
+1. Variables d'entorn `SMTP_HOST` i `SMTP_FROM` configurades (vore `docker-compose.portainer.yml` → secció "Environment variables" de l'stack a Portainer; mai en git). Opcionals: `SMTP_PORT` (defecte `587`), `SMTP_USER`/`SMTP_PASSWORD` (login SMTP), `SMTP_USE_TLS` (defecte `1`, `starttls`), `SMTP_REPLY_TO` (capçalera `Reply-To` independent del remitent, p. ex. per a enviar amb un compte `notreply@...` i rebre respostes a una bústia vigilada).
+2. El departament apareix a `department_emails.json`.
+
+**Les adreces mai van en git** (el repositori és **públic** a GitHub): a diferència de la resta de configuració de departament (`memoriaESOBAT/memories_{DEPART}.json` / `memoriaFP/memories_{FAMILIA}.json`, que sí és pública i no conté dades personals), els emails viuen en un fitxer separat, exclusivament al bind mount del servidor:
+```json
+{"ESOBAT": {"ECONOMIA": "cap.economia@..."}, "FP": {"INF": "cap.informatica@..."}}
+```
+- Path per defecte: `DEPARTMENT_EMAILS_FILE` (Portainer: `/data/department_emails.json`, bind mount `${PCCF_DATA_DIR:-/docker/pccf}/department_emails.json`; en local sense la variable: `temp/department_emails.json`, ja gitignorat). **Ha d'existir al host ABANS del primer desplegament amb este bind mount** — si Docker no troba el fitxer origen en muntar-lo, crea un directori buit en son lloc i el contenidor falla en llegir-lo.
+- `tools/mailer.py::get_department_email(tipus, familia)` llig eixe fitxer; qualsevol departament absent (o el fitxer sencer absent/malformat) es tracta com "sense email", mai llança excepció.
+- Deliberadament **no** s'ha triat mesclar l'email dins del JSON de currículum via bind mount fitxer-a-fitxer: crearia una còpia duplicada de l'estructura de currículum al servidor que es desincronitzaria silenciosament de la versió en git cada volta que canviara un mòdul/curs.
+- `tools/mailer.py::smtp_configured()` comprova la condició 1; `send_report_email()` fa l'enviament real (adjunta el `.txt` del report i el PDF si existeixen) i capça qualsevol excepció (SMTP caigut, credencials incorrectes) registrant-la per stdout sense interrompre el poller/publicació.
+- Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA.
+
+**Notificacions al propi docent (opció B, `tools/local_sync_poller.py::notify_teachers()`)**: avisa el docent de les deficiències de la seua pròpia memòria (no el report sencer del departament) quan el fitxer `.md` conté una línia opcional `correu-e` a la secció `### DOCENT`, p. ex.:
+```
+### DOCENT
+
+**Docent**: Nom Cognoms
+
+**correu-e**: nom.cognoms@edu.gva.es
+```
+- El camp és **opcional i el posa el propi docent dins del seu fitxer** — mai en git (el contingut dels `.md` viu exclusivament a la carpeta sincronitzada OneDrive, mai al repositori) i mai als JSON de departament.
+- `memories_utils.py::get_teacher_email()` (regex `CORREU_E_RE`) l'extrau; accepta variants de negreta Markdown al voltant de `correu-e` (`**correu-e**:`, `correu-e:`, etc.), sensible a majúscules/minúscules.
+- Reutilitza `check_placeholders()`/`check_stats_consistency()` (les mateixes funcions que ja usa el report) **sobre eixe fitxer en concret**, no sobre tot el departament — el correu només conté les deficiències d'eixa memòria individual.
+- Executat des de `poll_once()` a cada passada del poller, per a cada fitxer `.md` de cada departament, **independentment** de si el departament dispara compilació/publicació (evita acoblament amb eixe flux).
+- Estat persistent per fitxer (mtime ja notificat) a `temp/memories_teacher_notify_state.json` (mateix patró que `temp/pccf_poller_state.json`, mai dins la carpeta sincronitzada). Cada versió (mtime) d'un fitxer es processa com a màxim una vegada: si no té `correu-e` o no té deficiències, es marca com a vista i no es reavalua fins que canvie el fitxer; si l'enviament SMTP falla, l'estat NO es guarda i es reintenta a la propera passada.
+- No invasiu en tots els nivells: sense `SMTP_HOST`/`SMTP_FROM` la funció no fa absolutament res (ni llig l'estat); sense el camp `correu-e` al fitxer, comportament idèntic a abans que existira esta funció.
 
 ## Sincronització OneDrive de PCCF/Programacions Didàctiques + marca d'aigua ESBORRANY
 
