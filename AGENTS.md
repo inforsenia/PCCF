@@ -26,10 +26,11 @@ make report                # missing-fields report → PDFS/reporte_analisis.txt
 
 # PCCF two-phase pipeline (new):
 make generar-plantilles-pccf-dam   # Phase 1: gen templates (persistent, never overwrites teacher work)
-make report-pccf-dam               # Report: BORRADOR/OK status + [###] + Excel coherence
+make report-pccf-dam               # Report: BORRADOR/OK status + [###] + Excel coherence + verified (draft watermark)
 make compila-pccf-dam              # Phase 2: compile PDFs from plantilles templates
 make proyecto-dam                  # backward compat: generate + compile in one step
 make report-tots-pccf              # report for all cycles
+make PLANTILLES_ROOT=/path proyecto-dam  # plantilles_* under an alternate root (OneDrive sync, see below)
 
 # Memoria pipeline (existing):
 make generar-plantilles-memoria    # generate FP dept memoria templates → memories_FP/{FAMILIA}/
@@ -213,9 +214,39 @@ python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/data/
 6. `tools/compilar_memories.py` prova motors LaTeX en l'ordre `lualatex` → `xelatex` → `pdflatex` (no a l'inrevés): el document usa el paquet `emoji` (marcador ❌ d'incidències a l'índex), que **requereix LuaTeX específicament** — amb `xelatex` falla amb "Critical Package emoji Error".
 7. El `threads` del client `onedrive` per defecte és 8; si el servidor/contenidor té menys nuclis, afig `threads = "N"` (N = nuclis disponibles o menys) al `config` per evitar l'avís de sobrecàrrega (i recorda el punt 5: això dispararà un `--resync` necessari).
 
-**Propostes de futur (no construïdes encara, a reprendre junt amb l'extensió al PCCF)**:
-- **Notificacions per correu**: (A) avisar el cap de departament quan el poller publica una memòria nova (necessita un camp d'email nou als JSON `memoriaESOBAT/memories_{DEPART}.json` / `memoriaFP/memories_{FAMILIA}.json`, un per departament) — més senzill, sense fricció per als docents; (B) avisar el propi docent del resultat de la seua última modificació (necessita un camp d'email dins de cada `.md`, reutilitzant `check_placeholders`/`check_stats_consistency` sobre eixe fitxer concret quan el poller detecta el seu canvi) — més útil individualment, però amb fricció d'adopció. Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA. Prioritat suggerida: (A) primer.
-- **Estendre el mateix patró (sincronització OneDrive + poller, ja provat i funcionant) a la generació del PCCF i les Programacions Didàctiques** — quina estructura de `src_*/plantilles_*/PDFS` cal moure a OneDrive perquè els canvis dels docents disparen la regeneració automàtica.
+**Propostes de futur (no construïdes encara)**:
+- **Notificacions per correu**: (A) avisar el cap de departament quan el poller publica una memòria nova (necessita un camp d'email nou als JSON `memoriaESOBAT/memories_{DEPART}.json` / `memoriaFP/memories_{FAMILIA}.json`, un per departament) — més senzill, sense fricció per als docents; (B) avisar el propi docent del resultat de la seua última modificació (necessita un camp d'email dins de cada `.md`, reutilitzant `check_placeholders`/`check_stats_consistency` sobre eixe fitxer concret quan el poller detecta el seu canvi) — més útil individualment, però amb fricció d'adopció. Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA. Prioritat suggerida: (A) primer. Mateixa proposta aplica al PCCF (vore secció següent).
+
+## Sincronització OneDrive de PCCF/Programacions Didàctiques + marca d'aigua ESBORRANY
+
+Extensió del mateix patró de sincronització OneDrive de la secció anterior a la generació del PCCF i les Programacions Didàctiques, mantenint el pipeline de dues fases (`generar-plantilles-pccf-%` / `compila-pccf-%`) intacte. Perfil `onedrive` i poller **separats** dels de memòries (aïlla els riscos de `--resync`/bugs entre els dos sistemes).
+
+**Diferència clau amb memòries**: allà el docent crea els fitxers de zero; ací cal generar contingut previ (BORRADOR + Excel des del JSON del BOE) abans que hi haja res a editar. Com que la Fase 1 ja és idempotent per disseny (`cp -n`, mai sobreescriu `_BORRADOR`/`_OK` existent, Excel només si no existeix), el poller de PCCF reexecuta `generar-plantilles-pccf-{cicle}` a cada passada com a "bootstrap" sense risc — així un cicle nou queda disponible a OneDrive sense cap pas manual.
+
+**`PLANTILLES_ROOT` (Makefile)**: nova variable (`?= .`, sense canvis en local) que substitueix el `plantilles_$(FAMILIA)_$(CICLO_UPPER)` hardcoded per `$(PLANTILLES_ROOT)/plantilles_$(FAMILIA)_$(CICLO_UPPER)` a `generar-plantilles-pccf-%`, `compila-pccf-%` i `report-pccf-%`. Al contenidor l'entrypoint la fixa a un symlink (`pccf_sync`) cap a la carpeta sincronitzada.
+
+**Marca d'aigua "ESBORRANY"** (PCCF, Programaciones i Memòries): substitueix la idea d'un llindar de verificació que bloqueja alguna cosa — el PDF simplement porta una marca d'aigua visible quan queden incidències pendents, i no la porta quan tot està net:
+- `rsrc/templates/eisvogel.latex`: bloc `$if(draft)$\usepackage{draftwatermark}...$endif$` (paquet ja disponible via `texlive-latex-extra`), activat amb `-V draft=true`.
+- PCCF: `tools/report_pccf.py::is_verified()` torna `False` si queda algun PD en BORRADOR, algun placeholder `[###]`/`[...]`, o l'Excel de pesos RA és incoherent. El Makefile calcula això a `compila-pccf-%` (variable `DRAFT_OPT`) abans de cridar `pandoc`.
+- Memòries: `tools/compilar_memories.py` activa `draft=true` si apareix qualsevol marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls `[FALTA]` (variable `document_has_draft_marker`).
+
+**Poller de PCCF** (`tools/pccf_sync_poller.py`, anàleg a `tools/local_sync_poller.py`): per a cada cicle, quan detecta un canvi de mtime als `.md`/`.xlsx` de `plantilles_{FAMILIA}_{CICLO}/`:
+1. Bootstrap idempotent (`generar-plantilles-pccf-{cicle}`).
+2. Regenera i publica **sempre** el report (`compute_status`/`format_report`, barat: regex + `openpyxl`, sense LaTeX) a `0_report_pccf/{FAMILIA}_{CICLO}.txt`.
+3. Només compila i publica els PDFs (car: pandoc+xelatex) quan l'estat `is_verified()` **canvia** respecte de l'última vegada (estat intern a `temp/pccf_poller_state.json`, mai dins la carpeta sincronitzada). Si la compilació o publicació fallen, l'estat NO es guarda, per a que la propera passada ho reintente encara que el docent no haja tornat a editar res.
+
+**Publicació** (`tools/publish_pccf_output.py`, anàleg a `publish_memories_output.py` però sense timestamp perquè els noms de PDF ja són fixos):
+```
+General/PCCF i Programacions/0_report_pccf/{FAMILIA}_{CICLO}.txt
+General/PCCF i Programacions/1_esborrany_pccf/PCCF_{CENTRE}_{CICLO}.pdf
+General/PCCF i Programacions/1_esborrany_pccf/Programaciones_{CENTRE}_{CICLO}.pdf
+```
+
+**Desplegament**: `docker-entrypoint.sh` llança un segon `onedrive --monitor` (confdir `PCCF_ONEDRIVE_CONFDIR`, per defecte `/home/PCCF/.config/onedrive-pccf`) i `tools/pccf_sync_poller.py` (sync-root `$PCCF_SYNC_ROOT/$PCCF_SUBPATH`, per defecte `/data/onedrive-pccf/General/PCCF i Programacions`), en paral·lel als de memòries (`wait -n` ara amb 4 PIDs). `docker-compose.portainer.yml` afig els bind mounts `onedrive_confdir_pccf`/`onedrive_pccf`. Bootstrap manual del nou perfil: mateix procediment que memòries (token, `sync_list`, `--resync` únic i supervisat), repetit per a aquest segon `--confdir`.
+
+**Seguretat de `make clean`**: com que `plantilles_*/` pot viure ara sota `PLANTILLES_ROOT` sincronitzat amb OneDrive, `clean` avorta si `PLANTILLES_ROOT != .` (esborrar-ho esborraria treball real dels docents i es replicaria com a esborrat a SharePoint).
+
+**Nota tècnica**: les Portada `PD_000_*.md` referencien fons amb path relatiu `../rsrc/backgrounds/...`, assumint que `plantilles_{FAMILIA}_{CICLO}/` és germana de `rsrc/` a l'arrel del projecte — fals quan `PLANTILLES_ROOT` apunta fora. `compila-pccf-%` ho resol compilant les Programaciones des d'una còpia de muntatge a `temp/compila_pd_{CICLO}/` amb eixe path reescrit a absolut (mai es toquen els fitxers originals dels docents).
 
 ## Docker
 

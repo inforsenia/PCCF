@@ -331,6 +331,12 @@ def main():
     borrador_keys = {_module_key(p) for p in borrador_files}
     duplicated_keys = ok_keys & borrador_keys
 
+    # Marca d'aigua "ESBORRANY": s'activa si qualsevol mòdul/matèria porta
+    # el marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls
+    # sense cap fitxer (FALTA) -- reflecteix exactament el que el lector veu
+    # al PDF, no un llindar separat.
+    document_has_draft_marker = bool(missing)
+
     # Render portada (family-specific if exists, else generic)
     env = Environment(loader=FileSystemLoader(os.path.join(PROJECT_DIR, base_dir)), autoescape=False)
     portada_file = f"portada_memoria_compilada_{familia}.md"
@@ -412,6 +418,8 @@ def main():
                         incidencia_marker = " ❌" if te_incidencies_per_marcar(
                             filepath, is_esobat, _module_key(p) in duplicated_keys
                         ) else ""
+                        if estat_marker or incidencia_marker:
+                            document_has_draft_marker = True
                         compiled_md_lines.append("\\newpage")
                         compiled_md_lines.append("")
                         compiled_md_lines.append(f"## {heading_text}{estat_marker}{incidencia_marker}")
@@ -536,6 +544,8 @@ def main():
                         incidencia_marker = " ❌" if te_incidencies_per_marcar(
                             filepath, is_esobat, _module_key(p) in duplicated_keys
                         ) else ""
+                        if estat_marker or incidencia_marker:
+                            document_has_draft_marker = True
                         compiled_md_lines.append("\\newpage")
                         compiled_md_lines.append("")
                         compiled_md_lines.append(f"## {heading_text}{estat_marker}{incidencia_marker}")
@@ -604,6 +614,8 @@ def main():
 
             estat = "BORRADOR" if "_BORRADOR" in annex_filename else "OK"
             estat_marker = " ✏️" if estat == "BORRADOR" else ""
+            if estat_marker:
+                document_has_draft_marker = True
 
             if heading_idx is not None:
                 heading_text = lines[heading_idx].lstrip('# ')
@@ -689,6 +701,8 @@ def main():
         "-V", "toc-own-page=true",
         "-V", "include-before=\\newpage",
     ]
+    if document_has_draft_marker:
+        pandoc_opts += ["-V", "draft=true"]
 
     # Fix \pandocbounded for pandoc >= 3.2 compatibility with older templates
     header_bounded = os.path.join(PROJECT_DIR, "temp", "pandocbounded.tex")

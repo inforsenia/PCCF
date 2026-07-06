@@ -8,6 +8,7 @@ luatex.*/
 memories_*
 # (sense barra final: memories_ESOBAT/memories_FP ara poden ser symlinks
 # a la carpeta sincronitzada d'OneDrive, i "memories_*/" no els cobria)
+pccf_sync
 *.bak
 *.kate-swp
 
@@ -16,3 +17,4 @@ memories_*
 refresh_token
 onedrive_confdir/
 .config/onedrive/
+.config/onedrive-pccf/

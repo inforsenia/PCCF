@@ -575,6 +575,16 @@ $endif$
 $endif$
 
 %
+% marca d'aigua "ESBORRANY" quan el document té incidències pendents
+%
+$if(draft)$
+\usepackage{draftwatermark}
+\SetWatermarkText{ESBORRANY}
+\SetWatermarkScale{1}
+\SetWatermarkColor[gray]{0.85}
+$endif$
+
+%
 % break urls
 %
 \PassOptionsToPackage{hyphens}{url}

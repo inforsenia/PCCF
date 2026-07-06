@@ -12,6 +12,8 @@ services:
     volumes:
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_confdir:/home/PCCF/.config/onedrive
       - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_memories:/data/onedrive-memories
+      - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_confdir_pccf:/home/PCCF/.config/onedrive-pccf
+      - ${PCCF_DATA_DIR:-/docker/pccf}/onedrive_pccf:/data/onedrive-pccf
     entrypoint: ["/home/PCCF/docker-entrypoint.sh"]
     restart: unless-stopped
     environment:
