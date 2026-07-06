@@ -1,6 +1,6 @@
 \newpage
 
-# Programación didáctica: Módulo {{ modulo.nombre }}
+# Programació didàctica: Mòdul {{ modulo.nombre }}
 
 ## Datos identificativos y contextualización del módulo.
 
