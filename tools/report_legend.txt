@@ -4,7 +4,7 @@ LLEGENDA - QUADRE RESUM DE CARÈNCIES DETECTABLES:
   Codi              | Significat                                            | Què cal fer
   ------------------|-------------------------------------------------------|----------------------------------------------------------
   [FALTA]           | No existeix cap fitxer .md per a eixa matèria/grup    | Generar la memòria (make generar-plantilles-memoria)
-  [NO IMPARTIT]     | Fitxer _NOIMPARTIT.md: el cap de departament confirma| No cal fer res. No activa la marca d'aigua ESBORRANY
+  [NO IMPARTIT]     | Fitxer _NOIMPARTIT.md: el cap de departament confirma | No cal fer res. No activa la marca d'aigua ESBORRANY
                     | que eixe mòdul/grup no ha tingut alumnat este curs    |
   [CONFLICTE]       | Un mòdul té fitxer _NOIMPARTIT.md i també _OK/_BORR.  | Esborrar el fitxer que no corresponga a la situació real
   [BORRADOR]        | Fitxer en _BORRADOR.md (pendent de revisió)           | Revisar el document i renombrar a _OK.md
