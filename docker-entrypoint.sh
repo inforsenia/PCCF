@@ -60,8 +60,8 @@ python3 /home/PCCF/tools/local_sync_poller.py --sync-root "$MEMORIES_SYNC_ROOT" 
 PIDS+=("$!")
 
 if [ "$PCCF_SYNC_ENABLED" = "1" ]; then
-    # Symlink perquè el Makefile (PLANTILLES_ROOT=pccf_sync) trobe les
-    # plantilles_{FAMILIA}_{CICLO}/ dels docents dins la carpeta sincronitzada.
+    # Symlink perquè el Makefile (PCCF_ROOT=pccf_sync) trobe l'estructura
+    # pccf/ + programacions/ + 0_report_pccf/ + 1_esborrany_pccf/.
     ln -sfn "$PCCF_SYNC_ROOT/$PCCF_SUBPATH" /home/PCCF/pccf_sync
 
     echo "Engegant onedrive --monitor PCCF (confdir=$PCCF_ONEDRIVE_CONFDIR)..."
@@ -73,11 +73,10 @@ if [ "$PCCF_SYNC_ENABLED" = "1" ]; then
     PIDS+=("$!")
 
     echo "Engegant el poller de compilació automàtica de PCCF (sync-root=$PCCF_SYNC_ROOT/$PCCF_SUBPATH)..."
-    # Mateix disseny (sense fitxer disparador), però ací el report es regenera
-    # sempre i el PDF (car: pandoc+LaTeX) només es recompila quan l'estat
-    # verificat canvia -- vore tools/pccf_sync_poller.py. A diferència del de
-    # memòries, ací el --sync-root ja inclou el subpath: dins hi viuen
-    # directament plantilles_{FAMILIA}_{CICLO}/, 0_report_pccf/ i 1_esborrany_pccf/.
+    # Mateix disseny (sense fitxer disparador). El poller sondeja pccf/src*/
+    # per a PCCF (auto-compila) i programacions/ per a PD (report only, manual).
+    # Dins del sync-root hi viuen: pccf/, programacions/, 0_report_pccf/ i
+    # 1_esborrany_pccf/.
     python3 /home/PCCF/tools/pccf_sync_poller.py --sync-root "$PCCF_SYNC_ROOT/$PCCF_SUBPATH" &
     PIDS+=("$!")
 fi

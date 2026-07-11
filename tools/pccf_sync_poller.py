@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Sondeja plantilles_{FAMILIA}_{CICLO}/ ja sincronitzades (OneDrive) i, per a
-cada cicle, regenera SEMPRE el report (barat: regex + openpyxl, sense
-LaTeX) quan detecta un canvi de mtime. Només compila i publica els PDFs
-(car: pandoc + xelatex) quan l'estat "verificat" (sense incidències
-pendents) canvia respecte de l'última vegada -- sense cap fitxer disparador
-ni acció manual del docent/cap de departament.
+Sondeja les carpetes sincronitzades OneDrive i, per a cada cicle, regenera
+el report sempre que detecta un canvi (PCCF o PD). Compila automàticament
+el PCCF PDF (pccf/src*/) pero NO les Programaciones (programacions/) --
+això es fa manualment pel cap de departament (compila-pd-pccf-{cicle}).
 
-Diferència amb tools/local_sync_poller.py (memòries): ací cal un "bootstrap"
-(generar-plantilles-pccf-{cicle}) abans que hi haja res per editar, perquè el
-docent no parteix de zero (calen BORRADOR + Excel generats des del JSON del
-BOE). Com que eixe pas ja és idempotent per disseny (mai sobreescriu feina
-existent), es reexecuta a cada passada sense risc.
+Estructura esperada dins de sync-root:
+  pccf/                    → PCCF framework (src*, src_{FAMILIA}*, src_{FAMILIA}_{CICLO}*)
+  programacions/{CICLO}/  → PD_*.md + libro_{CICLO}.xlsx
+  0_report_pccf/           → reports (auto)
+  1_esborrany_pccf/        → PDFs (PCCF auto, PD manual)
 
 Ús:
     python3 tools/pccf_sync_poller.py --once             # una sola passada
@@ -57,8 +55,15 @@ def save_state(state):
         json.dump(state, f)
 
 
-def plantilles_dir(sync_root, familia, cicle):
-    return os.path.join(sync_root, f"plantilles_{familia}_{cicle}")
+def pccf_tree_mtime(pccf_dir):
+    """Últim mtime de qualsevol .md dins de pccf/src* recursivament."""
+    mtimes = []
+    if os.path.isdir(pccf_dir):
+        for root, _dirs, files in os.walk(pccf_dir):
+            for f in files:
+                if f.endswith(".md"):
+                    mtimes.append(os.path.getmtime(os.path.join(root, f)))
+    return max(mtimes) if mtimes else 0.0
 
 
 def latest_source_mtime(pdir):
@@ -78,10 +83,14 @@ def poll_once(sync_root, centre, cicle=None):
     for cicle in cicles_a_processar:
         familia = get_familia(cicle)
         key = f"{familia}_{cicle}"
-        pdir = plantilles_dir(sync_root, familia, cicle)
 
+        # Directoris dins del sync_root (OneDrive)
+        pdir = os.path.join(sync_root, "programacions", cicle)
+        pccf_dir = os.path.join(sync_root, "pccf")
+
+        # Bootstrap (idempotent)
         bootstrap = subprocess.run(
-            ["make", f"PLANTILLES_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
+            ["make", f"PCCF_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
              f"generar-plantilles-pccf-{cicle.lower()}"],
             cwd=PROJECT_DIR, capture_output=True, text=True,
         )
@@ -89,58 +98,47 @@ def poll_once(sync_root, centre, cicle=None):
             print(f"[pccf-poller] ERROR bootstrap {key}:\n{bootstrap.stdout[-2000:]}\n{bootstrap.stderr[-2000:]}", flush=True)
             continue
 
-        source_mtime = latest_source_mtime(pdir)
-        if source_mtime == 0.0:
+        # Comprovar mtimes per separat
+        pd_mtime = latest_source_mtime(pdir)
+        pccf_mtime = pccf_tree_mtime(pccf_dir)
+
+        if pd_mtime == 0.0 and pccf_mtime == 0.0:
             continue
 
-        last_mtime = state.get(key, {}).get("mtime", 0.0)
-        if source_mtime <= last_mtime:
+        last_pd_mtime = state.get(key, {}).get("mtime_pd", 0.0)
+        last_pccf_mtime = state.get(key, {}).get("mtime_pccf", 0.0)
+
+        pd_canviat = pd_mtime > last_pd_mtime
+        pccf_canviat = pccf_mtime > last_pccf_mtime
+        if not pd_canviat and not pccf_canviat:
             continue
 
-        print(f"[pccf-poller] {key}: canvi detectat, regenerant report...", flush=True)
+        print(f"[pccf-poller] {key}: canvi {'PCCF' if pccf_canviat else ''}{' i ' if pd_canviat and pccf_canviat else ''}{'PD' if pd_canviat else ''} detectat, regenerant report...", flush=True)
+
+        # Sempre regenerar report (tant si canvia PCCF com PD)
         status = compute_status(cicle, familia, pdir)
         verified = is_verified(status)
-
         report_dir = os.path.join(sync_root, "0_report_pccf")
         os.makedirs(report_dir, exist_ok=True)
         with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
             f.write(format_report(status))
 
-        prev_verified = state.get(key, {}).get("verified")
+        # Compilar PCCF només si els PCCF han canviat (sempre, no només si canvia verified)
+        if pccf_canviat:
+            print(f"[pccf-poller] {key}: compilant PCCF (pccf/src* ha canviat)...", flush=True)
+            compile_result = subprocess.run(
+                ["make", f"PCCF_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
+                 f"compila-pccf-{cicle.lower()}"],
+                cwd=PROJECT_DIR, capture_output=True, text=True,
+            )
+            if compile_result.returncode != 0:
+                print(f"[pccf-poller] ERROR compilant PCCF {key}:\n{compile_result.stdout[-3000:]}\n{compile_result.stderr[-3000:]}", flush=True)
+                continue
+            print(f"[pccf-poller] {key}: PCCF compilat correctament.", flush=True)
 
-        if verified == prev_verified:
-            # Report ja regenerat i publicat: no queda cap operació que
-            # puga fallar, es pot fixar l'estat ja mateix.
-            state[key] = {"mtime": source_mtime, "verified": verified}
-            save_state(state)
-            print(f"[pccf-poller] {key}: estat verificat sense canvis ({verified}), no recompilo el PDF.", flush=True)
-            processed.append(key)
-            continue
+        # No compilar PD automàticament (manual: compila-pd-pccf-{cicle})
 
-        # NOTA: no es guarda l'estat fins que compilació+publicació ixen bé.
-        # Si falla ací, la propera passada ho torna a intentar (encara que
-        # el docent no haja tornat a editar res).
-        print(f"[pccf-poller] {key}: estat verificat ha passat a {verified}, compilant...", flush=True)
-        compile_result = subprocess.run(
-            ["make", f"PLANTILLES_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
-             f"compila-pccf-{cicle.lower()}"],
-            cwd=PROJECT_DIR, capture_output=True, text=True,
-        )
-        if compile_result.returncode != 0:
-            print(f"[pccf-poller] ERROR compilant {key}:\n{compile_result.stdout[-3000:]}\n{compile_result.stderr[-3000:]}", flush=True)
-            continue
-
-        publish_result = subprocess.run(
-            [sys.executable, os.path.join(PROJECT_DIR, "tools", "publish_pccf_output.py"),
-             "--dest", sync_root, "--centre", centre, "--cicle", cicle],
-            cwd=PROJECT_DIR, capture_output=True, text=True,
-        )
-        print(publish_result.stdout, flush=True)
-        if publish_result.returncode != 0:
-            print(f"[pccf-poller] ERROR publicant {key}: {publish_result.stderr[-2000:]}", flush=True)
-            continue
-
-        state[key] = {"mtime": source_mtime, "verified": verified}
+        state[key] = {"mtime_pccf": pccf_mtime, "mtime_pd": pd_mtime, "verified": verified}
         save_state(state)
         processed.append(key)
 
@@ -150,7 +148,8 @@ def poll_once(sync_root, centre, cicle=None):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--once", action="store_true", help="Una sola passada (per a proves)")
-    parser.add_argument("--sync-root", default=os.environ.get("PCCF_SYNC_ROOT", "/data/onedrive-pccf"))
+    parser.add_argument("--sync-root", default=os.environ.get("PCCF_SYNC_ROOT", "/data/onedrive-pccf"),
+                        help="Arrel de la carpeta sincronitzada (conté pccf/, programacions/, ...)")
     parser.add_argument("--cicle", help="Limitar a un sol cicle (ex: APD)")
     parser.add_argument("--centre", default=os.environ.get("CENTRO_EDUCATIVO", "IESEPM"))
     parser.add_argument("--interval", type=int, default=int(os.environ.get("POLLER_INTERVAL", "300")))

@@ -132,23 +132,25 @@ def report(cicle, familia, plantilles_dir):
 
 def main():
     if len(sys.argv) < 2:
-        print("Ús: python3 tools/report_pccf.py <CICLO> [plantilles_dir]")
-        print("  Si no es dona plantilles_dir, es dedueix: plantilles_{FAMILIA}_{CICLO}/")
+        print("Ús: python3 tools/report_pccf.py <CICLO> [pd_dir] [pccf_root]")
+        print("  pccf_root: directori arrel que conté 0_report_pccf/ (per defecte '.')")
         sys.exit(1)
 
     cicle = sys.argv[1].upper()
     familia = get_familia(cicle) or "INF"
     if len(sys.argv) > 2:
-        plantilles_dir = sys.argv[2]
+        pd_dir = sys.argv[2]
     else:
-        plantilles_dir = f"plantilles_{familia}_{cicle}"
+        pd_dir = f"programacions/{cicle}"
 
-    report_text = report(cicle, familia, plantilles_dir)
+    pccf_root = sys.argv[3] if len(sys.argv) > 3 else "."
+
+    report_text = report(cicle, familia, pd_dir)
     print(report_text)
 
-    pdf_dir = "PDFS"
-    os.makedirs(pdf_dir, exist_ok=True)
-    report_path = os.path.join(pdf_dir, f"report_pccf_{familia}_{cicle}.txt")
+    report_dir = os.path.join(pccf_root, "0_report_pccf")
+    os.makedirs(report_dir, exist_ok=True)
+    report_path = os.path.join(report_dir, f"{familia}_{cicle}.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report_text)
     print(f"Report guardat a: {report_path}")

@@ -15,10 +15,13 @@ RESET := $(shell printf '\033[0m')
 # Variables configurables
 CENTRO_EDUCATIVO ?= SENIA
 
-# Arrel on viuen plantilles_{FAMILIA}_{CICLO}/. Per defecte "." (comportament
-# local d'avui, sense canvis). Al contenidor, l'entrypoint la fixa a un
-# symlink cap a la carpeta sincronitzada amb OneDrive (p. ex. "pccf_sync"),
-# perquè els docents puguen editar les seues PD/Excel des d'allà.
+# Arrel on viu l'estructura completa del PCCF+PD dins de OneDrive (o localment).
+# Conté: pccf/ (src*), programacions/, 0_report_pccf/, 1_esborrany_pccf/.
+# Per defecte "." = project root (comportament local). Al contenidor, l'entrypoint
+# la fixa al path de la carpeta sincronitzada amb OneDrive (pccf_sync).
+PCCF_ROOT ?= .
+
+# Anomen antic, mantingut per compatibilitat. Deprecat.
 PLANTILLES_ROOT ?= .
 
 # Project root (absolute)
@@ -55,14 +58,15 @@ clean:
 	@echo " [${BLUE} * Step : Clean ${RESET}] "
 	@echo "${LIGHTBLUE} -- PDFS ${RESET}"
 	rm -f PDFS/*.pdf PDFS/*.odt
-	@echo "${LIGHTBLUE} -- Plantilles ${RESET}"
-	@if [ "$(PLANTILLES_ROOT)" != "." ]; then \
-		echo " ${LIGHTYELLOW} Error: PLANTILLES_ROOT=$(PLANTILLES_ROOT) (no és '.'): probablement apunta a la carpeta sincronitzada amb OneDrive.${RESET}"; \
+	@echo "${LIGHTBLUE} -- Plantilles antigues (deprecades) ${RESET}"
+	@if [ "$(PCCF_ROOT)" != "." ]; then \
+		echo " ${LIGHTYELLOW} Error: PCCF_ROOT=$(PCCF_ROOT) (no és '.'): probablement apunta a la carpeta sincronitzada amb OneDrive.${RESET}"; \
 		echo " ${LIGHTYELLOW} 'make clean' esborraria treball real dels docents i es replicaria com a esborrat a SharePoint. Avortant.${RESET}"; \
-		echo " ${LIGHTYELLOW} Si de veres cal netejar plantilles dins d'eixa carpeta, fes-ho manualment i amb compte.${RESET}"; \
+		echo " ${LIGHTYELLOW} Si de veres cal netejar dins d'eixa carpeta, fes-ho manualment i amb compte.${RESET}"; \
 		exit 1; \
 	fi
 	rm -rf plantilles_INF_*/ plantilles_SCO_*/
+	rm -rf pccf/ programacions/ 0_report_pccf/ 1_esborrany_pccf/
 	rm -rf temp/ luatex.*/
 
 .PHONY: validate-json
@@ -86,27 +90,39 @@ generar-plantilles-pccf-%: validate-json
 	$(eval CICLO := $(shell echo $* | tr '[:upper:]' '[:lower:]'))
 	$(eval CICLO_UPPER := $(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA := $(call check_ciclo,$(CICLO)))
-	$(eval PLANTILLES_DIR := $(PLANTILLES_ROOT)/plantilles_$(FAMILIA)_$(CICLO_UPPER))
+	$(eval PCCF_DIR := $(PCCF_ROOT)/pccf)
+	$(eval PD_DIR := $(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO)' ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Generant plantilles PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
-	mkdir -p "$(PLANTILLES_DIR)"
-	@echo " ${LIGHTBLUE} Copiant PD_*.md des de src/ (no sobreescriu)${RESET}"
+
+	@echo " ${LIGHTBLUE} Copiant PCCF_*.md des de src/ a pccf/ (no sobreescriu)${RESET}"
+	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
+		[ -d "$$d" ] || continue; \
+		mkdir -p "$(PCCF_DIR)/$$d" && \
+		for f in $$d/*.md; do \
+			[ -f "$$f" ] || continue; \
+			b=$$(basename "$$f"); \
+			[ -f "$(PCCF_DIR)/$$d/$$b" ] || cp -n "$$f" "$(PCCF_DIR)/$$d/"; \
+		done; \
+	done
+	@echo " ${LIGHTBLUE} Copiant PD_*.md a programacions/$(CICLO_UPPER)/ (no sobreescriu)${RESET}"
+	mkdir -p "$(PD_DIR)"
 	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
 		[ -d "$$d" ] || continue; \
 		for f in $$d/PD_*.md; do \
 			[ -f "$$f" ] || continue; \
 			b=$$(basename "$$f"); \
-			[ -f "$(PLANTILLES_DIR)/$$b" ] || cp -n "$$f" "$(PLANTILLES_DIR)/"; \
+			[ -f "$(PD_DIR)/$$b" ] || cp -n "$$f" "$(PD_DIR)/"; \
 		done; \
 	done
 	@echo " ${LIGHTBLUE} Generant Excel (si no existeix)${RESET}"
-	@if [ ! -f "$(PLANTILLES_DIR)/libro_$(CICLO_UPPER).xlsx" ]; then \
-		./tools/json2excel.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)"; \
+	@if [ ! -f "$(PD_DIR)/libro_$(CICLO_UPPER).xlsx" ]; then \
+		./tools/json2excel.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PD_DIR)"; \
 		echo " ${LIGHTBLUE} Excel generat${RESET}"; \
 	else echo " ${LIGHTYELLOW} Excel conservat${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant PDs des de plantilles Jinja2${RESET}"
-	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)" --generate-only
-	@echo " ${LIGHTGREEN} [ Plantilles $(CICLO_UPPER) generades a $(PLANTILLES_DIR)/ ] ${RESET}"
+	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PD_DIR)" --generate-only
+	@echo " ${LIGHTGREEN} [ Plantilles $(CICLO_UPPER) generades a $(PD_DIR)/ ] ${RESET}"
 
 # ============================================================
 #  PCCF - PHASE 2: compile PDFs from templates
@@ -117,54 +133,92 @@ compila-pccf-%:
 	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
-	$(eval PLANTILLES_DIR=$(PLANTILLES_ROOT)/plantilles_$(FAMILIA)_$(CICLO_UPPER))
-	@if [ ! -d "$(PLANTILLES_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PLANTILLES_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	$(eval PCCF_DIR:=$(PCCF_ROOT)/pccf)
+	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
+	$(eval COMPILA_DIR:=$(PCCF_ROOT)/.compila_$(CICLO_UPPER))
+	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/1_esborrany_pccf)
+	@if [ ! -d "$(PCCF_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PCCF_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
-	mkdir -p PDFS
-	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PLANTILLES_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
+	mkdir -p "$(OUTPUT_DIR)"
+	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
 	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant PCCF_030/033 a .compila/ ${RESET}"
-	mkdir -p "$(PLANTILLES_DIR)/.compila"
-	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(PLANTILLES_DIR)/.compila" --generate-competences
+	mkdir -p "$(COMPILA_DIR)"
+	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(COMPILA_DIR)" --generate-competences
 	@echo " ${LIGHTBLUE} Generant PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
+	@# Staging: copiar PCCF_*.md a .compila per a resoldre paths de fons
+	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
+		[ -d "$(PCCF_DIR)/$$d" ] || continue; \
+		for f in "$(PCCF_DIR)/$$d"/PCCF_*.md; do \
+			[ -f "$$f" ] || continue; \
+			b=$$(basename "$$f"); \
+			[ -f "$(COMPILA_DIR)/$$b" ] || cp -n "$$f" "$(COMPILA_DIR)/"; \
+		done; \
+	done
+	@# Si el fitxer es troba a programacions/ (optatives, etc.), també s'inclou
+	@for f in "$(PD_DIR)"/PCCF_*.md; do \
+		[ -f "$$f" ] || continue; \
+		b=$$(basename "$$f"); \
+		[ -f "$(COMPILA_DIR)/$$b" ] || cp -n "$$f" "$(COMPILA_DIR)/"; \
+	done
 	@cd "$(PROJECT_ROOT)" && \
-		FILES=$$(find src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER) "$(PLANTILLES_DIR)/.compila" \
-			-maxdepth 1 -name 'PCCF_*.md' -type f 2>/dev/null | \
+		FILES=$$(find "$(COMPILA_DIR)" -maxdepth 1 -name 'PCCF_*.md' -type f 2>/dev/null | \
 			while IFS= read -r f; do \
 				b=$$(basename "$$f"); \
 				n=$$(echo "$$b" | cut -d_ -f2); \
 				echo "$$n:$$f"; \
 			done | sort -t: -k1 -n | cut -d: -f2-); \
 		mapfile -t FILES_ARR <<< "$$FILES"; \
-		pandoc --resource-path src:src_$(FAMILIA):src_$(FAMILIA)_$(CICLO_UPPER):"$(PLANTILLES_DIR)"/.compila \
+		pandoc --resource-path "$(COMPILA_DIR)" \
 			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $(DRAFT_OPT) \
-			-o "$(PDF_PATH)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
+			-o "$(OUTPUT_DIR)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
 			"$${FILES_ARR[@]}"
 	@echo " ${LIGHTBLUE} Incluint PDs d'optatives (només les del cicle)${RESET}"
-	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PLANTILLES_DIR)"
+	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PD_DIR)"
+	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
+	rm -rf "$(COMPILA_DIR)" "$(PD_DIR)/.optatives_pd"
+	@echo " ${LIGHTGREEN} [ Compilacio PCCF $(CICLO_UPPER) completada ] ${RESET}"
+
+# ============================================================
+#  PD (Programacions) - compile manually (disparat per cap de departament)
+# ============================================================
+compila-pd-pccf-%:
+	$(eval CICLO_RAW=$*)
+	$(eval CICLO=$(shell echo $* | tr '[:upper:]' '[:lower:]'))
+	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
+	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
+	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
+	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
+	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/1_esborrany_pccf)
+	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) ] ${RESET}"
+	mkdir -p "$(OUTPUT_DIR)"
+	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
+	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
 	@# Es compila des d'un directori de muntatge local (temp/), no directament
-	@# des de PLANTILLES_DIR: les Portada.md referencien fons amb path relatiu
+	@# des de PD_DIR: les Portada.md referencien fons amb path relatiu
 	@# "../rsrc/backgrounds/..." assumint que la plantilla és germana de rsrc/
-	@# a l'arrel del projecte -- fals quan PLANTILLES_ROOT apunta fora (OneDrive).
+	@# a l'arrel del projecte -- fals quan PCCF_ROOT apunta fora (OneDrive).
 	@# Reescrivim eixe path a absolut en una còpia, mai als fitxers dels docents.
 	@STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; \
 		rm -rf "$$STAGE" && mkdir -p "$$STAGE" && \
-		cp "$(PLANTILLES_DIR)"/PD_*.md "$$STAGE/" && \
-		if [ -f "$(PLANTILLES_DIR)/.optatives_pd/.copied_count" ] && [ "$$(cat "$(PLANTILLES_DIR)/.optatives_pd/.copied_count")" -gt 0 ]; then \
-			cp "$(PLANTILLES_DIR)"/.optatives_pd/PD_*.md "$$STAGE/"; \
+		cp "$(PD_DIR)"/PD_*.md "$$STAGE/" && \
+		if [ -f "$(PD_DIR)/.optatives_pd/.copied_count" ] && [ "$$(cat "$(PD_DIR)/.optatives_pd/.copied_count")" -gt 0 ]; then \
+			cp "$(PD_DIR)"/.optatives_pd/PD_*.md "$$STAGE/"; \
 		fi && \
 		sed -i "s#\.\./rsrc/backgrounds/#$(PROJECT_ROOT)/rsrc/backgrounds/#g" "$$STAGE"/*.md && \
 		cd "$$STAGE" && \
-		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $(DRAFT_OPT) -o "$(PDF_PATH)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
-	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
-	rm -rf "$(PLANTILLES_DIR)/.compila" "$(PLANTILLES_DIR)/.optatives_pd" "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
+		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $(DRAFT_OPT) \
+			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
 	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
-	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PLANTILLES_DIR)" 2>&1 | tail -3
-	@echo " ${LIGHTGREEN} [ Compilacio $(CICLO_UPPER) completada ] ${RESET}"
+	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PD_DIR)" 2>&1 | tail -3
+	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
+	rm -rf "$(PD_DIR)/.optatives_pd" "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
+	@echo " ${LIGHTGREEN} [ Compilacio Programaciones $(CICLO_UPPER) completada ] ${RESET}"
 
 # ============================================================
-#  PCCF - Backward compatible: generate + compile
+#  PCCF - Backward compatible: generate + compile (només PCCF)
 # ============================================================
 proyecto-%: generar-plantilles-pccf-% compila-pccf-%
 	@echo " ${LIGHTGREEN} [ Proyecto $(shell echo $* | tr '[:lower:]' '[:upper:]') Completado ] ${RESET}"
@@ -178,9 +232,9 @@ report-pccf-%:
 	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
-	$(eval PLANTILLES_DIR=$(PLANTILLES_ROOT)/plantilles_$(FAMILIA)_$(CICLO_UPPER))
-	@if [ ! -d "$(PLANTILLES_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PLANTILLES_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
-	python3 tools/report_pccf.py $(CICLO_UPPER) "$(PLANTILLES_DIR)"
+	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
+	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	python3 tools/report_pccf.py $(CICLO_UPPER) "$(PD_DIR)" "$(PCCF_ROOT)"
 
 # ============================================================
 #  OPTATIVES (shared transversal modules)
@@ -292,10 +346,11 @@ help:
 	@echo ""
 	@echo "Targets disponibles:"
 	@echo "  Families INF i SCO:"
-	@echo "    generar-plantilles-pccf-{ciclo}  Genera plantilles MD + Excel a plantilles_{FAMILIA}_{CICLO}/"
-	@echo "    compila-pccf-{ciclo}             Compila PDFs des de les plantilles"
+	@echo "    generar-plantilles-pccf-{ciclo}  Genera PCCF + PDs + Excel a pccf/ i programacions/"
+	@echo "    compila-pccf-{ciclo}             Compila PCCF PDF (auto si canvia pccf/src*)"
+	@echo "    compila-pd-pccf-{ciclo}          Compila Programaciones PDF (manual, cap dept)"
 	@echo "    report-pccf-{ciclo}              Report de [###] pendents d'emplenar"
-	@echo "    proyecto-{ciclo}                 Equival a generar-plantilles + compila (compatible)"
+	@echo "    proyecto-{ciclo}                 Equival a generar-plantilles + compila-pccf"
 	@echo "    report-tots-pccf                 Report de [###] per a tots els cicles"
 	@echo "  Cicles disponibles:"
 	@echo "    Familia INF: smx, dam, ceiabd, fpbiio"
@@ -321,9 +376,10 @@ help:
 	@echo "    validate-json      Validar JSONs"
 	@echo ""
 	@echo "Exemples:"
-	@echo "  make proyecto-dam                           # Genera plantilles + compila"
+	@echo "  make proyecto-dam                           # Genera + compila PCCF"
+	@echo "  make compila-pd-pccf-apd                    # Compila Programaciones (manual)"
 	@echo "  make generar-plantilles-pccf-dam            # Només plantilles (per a docents)"
-	@echo "  make compila-pccf-dam                       # Compila des de plantilles existents"
+	@echo "  make compila-pccf-dam                       # Compila PCCF des de plantilles"
 	@echo "  make report-pccf-dam                        # Què falta per emplenar?"
 	@echo "  make CENTRO_EDUCATIVO=IESEPM proyecto-smx   # Escolarització diferent"
 	@echo "  ./contenedor_lanza.sh \"make proyecto-dam\"   # Via Docker (recomanat)"

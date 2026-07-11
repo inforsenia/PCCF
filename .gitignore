@@ -2,6 +2,10 @@ PDFS/
 temp/
 temp_*/
 plantilles_*/
+pccf/
+programacions/
+0_report_pccf/
+1_esborrany_pccf/
 boe/temp-txt.txt
 tools/__pycache__/
 luatex.*/
