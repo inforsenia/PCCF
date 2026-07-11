@@ -50,7 +50,7 @@ make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs 
 make report-optatives             # report optatives BORRADOR/OK status + [###]
 make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
 make report-optatives             # report optatives BORRADOR/OK status + [###]
-make clean                 # rm -rf PDFS/ temp/ plantilles_*/ pccf/ programacions/ 0_report_pccf/ 1_esborrany_pccf/
+make clean                 # rm -rf PDFS/ temp/ plantilles_*/ programacions/ (local only)
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
 ```
 
@@ -96,8 +96,10 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `templates/` or `templates_{FAMILIA}/` | Jinja2 templates for auto-generated markdown |
 | `excels_{INF,SCO}/` | Teacher-edited spreadsheets (after `preparar_excel.py`) |
 | `programacions/` (gitignored) | PD_*.md + libro_*.xlsx per cycle, teacher-editable in OneDrive |
-| `0_report_pccf/` (gitignored) | Auto-generated coherence reports |
-| `1_esborrany_pccf/` (gitignored) | Generated PDFs (PCCF auto, Programaciones manual) |
+| `pccf/0_report/` (gitignored) | Reports del framework PCCF |
+| `pccf/1_esborrany/` (gitignored) | PCCF PDFs (auto) |
+| `programacions/*/0_report/` (gitignored) | Reports de les PD per cicle |
+| `programacions/*/1_esborrany/` (gitignored) | Programaciones PDFs per cicle (manual) |
 | `optatives/` | Shared optative modules JSON + plantilles/ (PDs) + libro_optatives.xlsx |
 | `memoriaFP/` | FP department configs + templates (memories_{FAMILIA}.json, plantilla_memoria.md, portada) |
 | `memoriaESOBAT/` | ESO/BAT department configs + templates (same structure as memoriaFP) |
@@ -122,20 +124,27 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 3. Phase 2a: `compila-pccf-{CICLO}` (auto, triggered by poller):
    - `json2pccf.py --generate-competences` → `.compila_{CICLO}/` dins `$(PCCF_ROOT)`
    - Staging: copia `PCCF_*.md` de `pccf/src*/` a `.compila_{CICLO}/`
-   - `pandoc` des de `.compila_{CICLO}/` → `1_esborrany_pccf/PCCF_{CENTRO}_{CICLO}.pdf`
-   - `copy_optatives_pd.py` — copia PDs optatives a `programacions/{CICLO}/`
-   - `rm -rf .compila_{CICLO}/`
+    - `pandoc` des de `.compila_{CICLO}/` → `pccf/1_esborrany/PCCF_{CENTRO}_{CICLO}.pdf`
+    - `copy_optatives_pd.py` — copia PDs optatives a `programacions/{CICLO}/`
+    - `rm -rf .compila_{CICLO}/`
 4. Phase 2b: `compila-pd-pccf-{CICLO}` (manual, cap de departament):
-   - `pandoc` des de `programacions/{CICLO}/` (staging per a paths de fons)
-   - → `1_esborrany_pccf/Programaciones_{CENTRO}_{CICLO}.pdf`
-   - `shell-progs-didacticas-standalone.sh` — per-module PDFs
+    - `pandoc` des de `programacions/{CICLO}/` (staging per a paths de fons)
+    - → `programacions/{CICLO}/1_esborrany/Programaciones_{CENTRO}_{CICLO}.pdf`
+    - `shell-progs-didacticas-standalone.sh` — per-module PDFs
+    - Després genera el report de PD a `programacions/{CICLO}/0_report/`
 
 ## Report pipeline
 
-### PCCF reports (`make report-pccf-{CICLO}` → `tools/report_pccf.py`):
+### PD reports (`make report-pccf-{CICLO}` → `tools/report_pccf.py --type pd`):
 - Lists PD files: BORRADOR (pending) vs OK (completed)
 - Detects `[###]` placeholders in all markdown files
 - Validates Excel: RA weight sum = 100% per sheet
+- Guarda a `programacions/{CICLO}/0_report/{FAMILIA}_{CICLO}.txt`
+
+### PCCF framework reports (auto, per poller):
+- Checks that all expected `src*` directories exist
+- Detects `[###]` placeholders in PCCF_*.md files
+- Guarda a `pccf/0_report/{FAMILIA}_{CICLO}.txt`
 
 ### Memoria reports (`make report-memories`, `make compila-memories` → `tools/report_memories.py`, `tools/compilar_memories.py`):
 - Output directory: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/`
@@ -258,23 +267,27 @@ Extensió del mateix patró de sincronització OneDrive de la secció anterior a
 
 **Diferència clau amb memòries**: allà el docent crea els fitxers de zero; ací cal generar contingut previ (BORRADOR + Excel des del JSON del BOE) abans que hi haja res a editar. Com que la Fase 1 ja és idempotent per disseny (`cp -n`, mai sobreescriu `_BORRADOR`/`_OK` existent, Excel només si no existeix), el poller de PCCF reexecuta `generar-plantilles-pccf-{cicle}` a cada passada com a "bootstrap" sense risc — així un cicle nou queda disponible a OneDrive sense cap pas manual.
 
-**`PCCF_ROOT` (Makefile)**: variable (`?= .`, sense canvis en local) que apunta a l'arrel de l'estructura `pccf/` + `programacions/` + `0_report_pccf/` + `1_esborrany_pccf/`. Al contenidor, el poller la fixa a la carpeta sincronitzada amb OneDrive. `PLANTILLES_ROOT` es manté per compatibilitat però està deprecat.
+**`PCCF_ROOT` (Makefile)**: variable (`?= .`, sense canvis en local) que apunta a l'arrel de l'estructura `pccf/` (src* + 0_report/ + 1_esborrany/) + `programacions/{CICLO}/` (PDs + 0_report/ + 1_esborrany/). Al contenidor, el poller la fixa a la carpeta sincronitzada amb OneDrive. `PLANTILLES_ROOT` es manté per compatibilitat però està deprecat.
 
 **Marca d'aigua "ESBORRANY"** (PCCF, Programaciones i Memòries): substitueix la idea d'un llindar de verificació que bloqueja alguna cosa — el PDF simplement porta una marca d'aigua visible quan queden incidències pendents, i no la porta quan tot està net:
 - `rsrc/templates/eisvogel.latex`: bloc `$if(draft)$\usepackage{draftwatermark}...$endif$` (paquet ja disponible via `texlive-latex-extra`), activat amb `-V draft=true`.
-- PCCF: `tools/report_pccf.py::is_verified()` torna `False` si queda algun PD en BORRADOR, algun placeholder `[###]`/`[...]`, o l'Excel de pesos RA és incoherent. El Makefile calcula això a `compila-pccf-%` (variable `DRAFT_OPT`) abans de cridar `pandoc`.
+- PCCF: `tools/report_pccf.py::is_pccf_verified()` torna `False` si queda algun placeholder `[###]`/`[...]` als fitxers PCCF. El Makefile usa `compute_pccf_status` a `compila-pccf-%` (variable `DRAFT_OPT`) abans de cridar `pandoc`.
+- PD: `tools/report_pccf.py::is_pd_verified()` torna `False` si queda algun PD en BORRADOR, algun placeholder o Excel incoherent. S'usa a `compila-pd-pccf-%`.
 - Memòries: `tools/compilar_memories.py` activa `draft=true` si apareix qualsevol marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls `[FALTA]` (variable `document_has_draft_marker`). Els mòduls marcats `_NOIMPARTIT.md` (sense alumnat, confirmat pel cap de departament) NO compten com a `[FALTA]` i per tant no activen esta marca d'aigua.
 
-**Poller de PCCF** (`tools/pccf_sync_poller.py`, anàleg a `tools/local_sync_poller.py`): per a cada cicle, quan detecta un canvi de mtime als `.md`/`.xlsx` de `plantilles_{FAMILIA}_{CICLO}/`:
+**Poller de PCCF** (`tools/pccf_sync_poller.py`, anàleg a `tools/local_sync_poller.py`): per a cada cicle, quan detecta un canvi de mtime als `.md` de `pccf/src*/` o als `.md`/`.xlsx` de `programacions/{CICLO}/`:
 1. Bootstrap idempotent (`generar-plantilles-pccf-{cicle}`).
-2. Regenera i publica **sempre** el report (`compute_status`/`format_report`, barat: regex + `openpyxl`, sense LaTeX) a `0_report_pccf/{FAMILIA}_{CICLO}.txt`.
-3. Només compila i publica els PDFs (car: pandoc+xelatex) quan l'estat `is_verified()` **canvia** respecte de l'última vegada (estat intern a `temp/pccf_poller_state.json`, mai dins la carpeta sincronitzada). Si la compilació o publicació fallen, l'estat NO es guarda, per a que la propera passada ho reintente encara que el docent no haja tornat a editar res.
+2. Regenera i publica els reports (`compute_pccf_status`/`format_pccf_report` per a PCCF, `compute_pd_status`/`format_pd_report` per a PD, barat: regex + `openpyxl`, sense LaTeX):
+   - PCCF change → `pccf/0_report/{FAMILIA}_{CICLO}.txt`
+   - PD change → `programacions/{CICLO}/0_report/{FAMILIA}_{CICLO}.txt`
+3. Compila PCCF PDF (car: pandoc+xelatex) només si `pccf/src*/` ha canviat (`pccf/1_esborrany/PCCF_{CENTRE}_{CICLO}.pdf`). No compila PD automàticament (manual: `compila-pd-pccf-{cicle}`).
+4. Estat persistent a `temp/pccf_poller_state.json` (mtime separat per PCCF i PD). Si la compilació o publicació fallen, l'estat NO es guarda, per a que la propera passada ho reintente.
 
-**Publicació** (`tools/publish_pccf_output.py`, anàleg a `publish_memories_output.py` però sense timestamp perquè els noms de PDF ja són fixos):
+**Publicació** (integrat al Makefile, sense script separat):
 ```
-General/PCCF i Programacions/0_report_pccf/{FAMILIA}_{CICLO}.txt
-General/PCCF i Programacions/1_esborrany_pccf/PCCF_{CENTRE}_{CICLO}.pdf
-General/PCCF i Programacions/1_esborrany_pccf/Programaciones_{CENTRE}_{CICLO}.pdf
+General/PCCF i Programacions/pccf/0_report/{FAMILIA}_{CICLO}.txt
+General/PCCF i Programacions/pccf/1_esborrany/PCCF_{CENTRE}_{CICLO}.pdf
+General/PCCF i Programacions/programacions/{CICLO}/1_esborrany/Programaciones_{CENTRE}_{CICLO}.pdf
 ```
 
 **Desplegament**: `docker-entrypoint.sh` llança un segon `onedrive --monitor` (confdir `PCCF_ONEDRIVE_CONFDIR`, per defecte `/home/PCCF/.config/onedrive-pccf`) i `tools/pccf_sync_poller.py` (sync-root `$PCCF_SYNC_ROOT/$PCCF_SUBPATH`, per defecte `/data/onedrive-pccf/General/PCCF i Programacions`), en paral·lel als de memòries (`wait -n` ara amb 4 PIDs). `docker-compose.portainer.yml` afig els bind mounts `onedrive_confdir_pccf`/`onedrive_pccf`. Bootstrap manual del nou perfil: mateix procediment que memòries (token, `sync_list`, `--resync` únic i supervisat), repetit per a aquest segon `--confdir`.

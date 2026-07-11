@@ -7,10 +7,14 @@ el PCCF PDF (pccf/src*/) pero NO les Programaciones (programacions/) --
 això es fa manualment pel cap de departament (compila-pd-pccf-{cicle}).
 
 Estructura esperada dins de sync-root:
-  pccf/                    → PCCF framework (src*, src_{FAMILIA}*, src_{FAMILIA}_{CICLO}*)
-  programacions/{CICLO}/  → PD_*.md + libro_{CICLO}.xlsx
-  0_report_pccf/           → reports (auto)
-  1_esborrany_pccf/        → PDFs (PCCF auto, PD manual)
+  pccf/
+    src*, src_{FAMILIA}*, src_{FAMILIA}_{CICLO}*  → PCCF framework MDs
+    0_report/   → reports del framework PCCF
+    1_esborrany/ → PCCF_{CENTRO}_{CICLO}.pdf (auto)
+  programacions/{CICLO}/
+    PD_*.md + libro_{CICLO}.xlsx
+    0_report/   → reports de les PD
+    1_esborrany/ → Programaciones_{CENTRO}_{CICLO}.pdf (manual)
 
 Ús:
     python3 tools/pccf_sync_poller.py --once             # una sola passada
@@ -27,15 +31,11 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import CICLES_INF, CICLES_SCO, get_familia
-from report_pccf import compute_status, format_report, is_verified
+from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CICLES_ALL = CICLES_INF + CICLES_SCO
 
-# Estat intern del poller (últim mtime processat + últim booleà verificat per
-# cicle). MAI dins la carpeta sincronitzada: és bookkeeping del poller, no
-# contingut per als docents. Es perd sense risc si s'esborra (pitjor cas:
-# una recompilació de més al següent cicle).
 STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
 
 
@@ -56,7 +56,6 @@ def save_state(state):
 
 
 def pccf_tree_mtime(pccf_dir):
-    """Últim mtime de qualsevol .md dins de pccf/src* recursivament."""
     mtimes = []
     if os.path.isdir(pccf_dir):
         for root, _dirs, files in os.walk(pccf_dir):
@@ -84,7 +83,6 @@ def poll_once(sync_root, centre, cicle=None):
         familia = get_familia(cicle)
         key = f"{familia}_{cicle}"
 
-        # Directoris dins del sync_root (OneDrive)
         pdir = os.path.join(sync_root, "programacions", cicle)
         pccf_dir = os.path.join(sync_root, "pccf")
 
@@ -98,7 +96,6 @@ def poll_once(sync_root, centre, cicle=None):
             print(f"[pccf-poller] ERROR bootstrap {key}:\n{bootstrap.stdout[-2000:]}\n{bootstrap.stderr[-2000:]}", flush=True)
             continue
 
-        # Comprovar mtimes per separat
         pd_mtime = latest_source_mtime(pdir)
         pccf_mtime = pccf_tree_mtime(pccf_dir)
 
@@ -113,17 +110,29 @@ def poll_once(sync_root, centre, cicle=None):
         if not pd_canviat and not pccf_canviat:
             continue
 
-        print(f"[pccf-poller] {key}: canvi {'PCCF' if pccf_canviat else ''}{' i ' if pd_canviat and pccf_canviat else ''}{'PD' if pd_canviat else ''} detectat, regenerant report...", flush=True)
+        what = []
+        if pccf_canviat:
+            what.append("PCCF")
+        if pd_canviat:
+            what.append("PD")
+        print(f"[pccf-poller] {key}: canvi {'+'.join(what)} detectat", flush=True)
 
-        # Sempre regenerar report (tant si canvia PCCF com PD)
-        status = compute_status(cicle, familia, pdir)
-        verified = is_verified(status)
-        report_dir = os.path.join(sync_root, "0_report_pccf")
-        os.makedirs(report_dir, exist_ok=True)
-        with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
-            f.write(format_report(status))
+        # --- Regenerar reports ---
+        if pd_canviat:
+            status = compute_pd_status(cicle, familia, pdir)
+            report_dir = os.path.join(pdir, "0_report")
+            os.makedirs(report_dir, exist_ok=True)
+            with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
+                f.write(format_pd_report(status))
 
-        # Compilar PCCF només si els PCCF han canviat (sempre, no només si canvia verified)
+        if pccf_canviat:
+            status = compute_pccf_status(cicle, familia, pccf_dir)
+            report_dir = os.path.join(pccf_dir, "0_report")
+            os.makedirs(report_dir, exist_ok=True)
+            with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
+                f.write(format_pccf_report(status))
+
+        # --- Compilar PCCF només si els PCCF han canviat ---
         if pccf_canviat:
             print(f"[pccf-poller] {key}: compilant PCCF (pccf/src* ha canviat)...", flush=True)
             compile_result = subprocess.run(
@@ -136,9 +145,7 @@ def poll_once(sync_root, centre, cicle=None):
                 continue
             print(f"[pccf-poller] {key}: PCCF compilat correctament.", flush=True)
 
-        # No compilar PD automàticament (manual: compila-pd-pccf-{cicle})
-
-        state[key] = {"mtime_pccf": pccf_mtime, "mtime_pd": pd_mtime, "verified": verified}
+        state[key] = {"mtime_pccf": pccf_mtime, "mtime_pd": pd_mtime}
         save_state(state)
         processed.append(key)
 

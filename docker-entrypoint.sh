@@ -61,7 +61,7 @@ PIDS+=("$!")
 
 if [ "$PCCF_SYNC_ENABLED" = "1" ]; then
     # Symlink perquè el Makefile (PCCF_ROOT=pccf_sync) trobe l'estructura
-    # pccf/ + programacions/ + 0_report_pccf/ + 1_esborrany_pccf/.
+    # pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/{CICLO}/ (PDs + 0_report/ + 1_esborrany/).
     ln -sfn "$PCCF_SYNC_ROOT/$PCCF_SUBPATH" /home/PCCF/pccf_sync
 
     echo "Engegant onedrive --monitor PCCF (confdir=$PCCF_ONEDRIVE_CONFDIR)..."

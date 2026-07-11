@@ -16,7 +16,7 @@ RESET := $(shell printf '\033[0m')
 CENTRO_EDUCATIVO ?= SENIA
 
 # Arrel on viu l'estructura completa del PCCF+PD dins de OneDrive (o localment).
-# Conté: pccf/ (src*), programacions/, 0_report_pccf/, 1_esborrany_pccf/.
+# Conté: pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/{CICLO}/ (PDs + 0_report/ + 1_esborrany/).
 # Per defecte "." = project root (comportament local). Al contenidor, l'entrypoint
 # la fixa al path de la carpeta sincronitzada amb OneDrive (pccf_sync).
 PCCF_ROOT ?= .
@@ -66,7 +66,8 @@ clean:
 		exit 1; \
 	fi
 	rm -rf plantilles_INF_*/ plantilles_SCO_*/
-	rm -rf pccf/ programacions/ 0_report_pccf/ 1_esborrany_pccf/
+	@# programacions/ es genera i es gitignored, nomes es neteja en local
+	@if [ "$(PCCF_ROOT)" = "." ]; then rm -rf programacions/; else echo " ${LIGHTYELLOW} (programacions/ no es neteja: es dins de OneDrive) ${RESET}"; fi
 	rm -rf temp/ luatex.*/
 
 .PHONY: validate-json
@@ -139,11 +140,11 @@ compila-pccf-%:
 	$(eval PCCF_SRC:=$(PCCF_ROOT)/pccf)
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	$(eval COMPILA_DIR:=$(PCCF_ROOT)/.compila_$(CICLO_UPPER))
-	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/1_esborrany_pccf)
+	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/pccf/1_esborrany)
 	@if [ ! -d "$(PCCF_SRC)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PCCF_SRC)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
-	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
+	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_pccf_status, is_pccf_verified; c=compute_pccf_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PCCF_SRC)'); sys.exit(0 if is_pccf_verified(c) else 1)" && echo "" || echo "-V draft=true"))
 	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant PCCF_030/033 a .compila/ ${RESET}"
 	mkdir -p "$(COMPILA_DIR)"
@@ -192,11 +193,11 @@ compila-pd-pccf-%:
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
-	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/1_esborrany_pccf)
+	$(eval OUTPUT_DIR:=$(PD_DIR)/1_esborrany)
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
-	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
+	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_pd_status, is_pd_verified; s=compute_pd_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)'); sys.exit(0 if is_pd_verified(s) else 1)" && echo "" || echo "-V draft=true"))
 	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
 	@# Es compila des d'un directori de muntatge local (temp/), no directament
@@ -216,6 +217,8 @@ compila-pd-pccf-%:
 			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
 	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
 	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PD_DIR)" 2>&1 | tail -3
+	@echo " ${LIGHTBLUE} Generant report de PD a $(PD_DIR)/0_report/${RESET}"
+	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
 	rm -rf "$(PD_DIR)/.optatives_pd" "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
 	@echo " ${LIGHTGREEN} [ Compilacio Programaciones $(CICLO_UPPER) completada ] ${RESET}"
@@ -237,7 +240,7 @@ report-pccf-%:
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
-	python3 tools/report_pccf.py $(CICLO_UPPER) "$(PD_DIR)" "$(PCCF_ROOT)"
+	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
 
 # ============================================================
 #  OPTATIVES (shared transversal modules)

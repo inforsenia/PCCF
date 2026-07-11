@@ -3,8 +3,8 @@ temp/
 temp_*/
 plantilles_*/
 programacions/
-0_report_pccf/
-1_esborrany_pccf/
+pccf/0_report/
+pccf/1_esborrany/
 boe/temp-txt.txt
 tools/__pycache__/
 luatex.*/
