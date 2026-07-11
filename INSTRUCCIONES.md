@@ -186,7 +186,7 @@ A continuació es detalla la correspondència entre el nom complet del mòdul (c
 
 ## Mòduls Optatius Compartits
 
-Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen de forma centralitzada a `optatives/optatives.json` i es compartixen entre tots els cicles que els oferten.
+Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen de forma centralitzada a `boe_OPTATIVES/optatives.json` i es compartixen entre tots els cicles que els oferten.
 
 ### Estructura del JSON
 
@@ -224,7 +224,7 @@ Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen d
 
 ### Afegir/modificar un optatiu
 
-1. Editar `optatives/optatives.json`:
+1. Editar `boe_OPTATIVES/optatives.json`:
    - Omplir `nombre`, `horas`, `creditos`, `ResultadosAprendizaje` (RAs i CEs).
    - Afegir les entrades al camp `grups` per a cada cicle que l'ofereix.
 2. Regenerar Excel i PDs:
@@ -241,13 +241,13 @@ Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen d
 La plantilla es troba a `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md`.
 - No inclou seccions d'Objectius Generals ni Competències del Títol (ja que no n'hi ha).
 - El sistema de BORRADOR/OK funciona igual que la resta de PDs.
-- Les PDs es generen a `optatives/plantilles/` (compartides).
+- Les PDs es generen a `programacions/OPTATIVES/` (compartides).
 
 ### Integració amb la compilació dels cicles
 
 Durant `make compila-pccf-{CICLO}`, l'script `tools/copy_optatives_pd.py`:
-1. Llig `optatives/optatives.json` i filtra els mòduls que tenen eixe cicle a `grups`.
-2. Copia les PDs corresponents (BORRADOR o OK) des de `optatives/plantilles/` a `.compila/` dins `plantilles_{FAMILIA}_{CICLO}/`.
+1. Llig `boe_OPTATIVES/optatives.json` i filtra els mòduls que tenen eixe cicle a `grups`.
+2. Copia les PDs corresponents (BORRADOR o OK) des de `programacions/OPTATIVES/` a `programacions/{CICLO}/.optatives_pd/`.
 3. Les PDs s'inclouen automàticament al `Programaciones_{CENTRO}_{CICLO}.pdf`.
 
 ## Procediment per a generar correctament les PD's i PCCF de cada cicle

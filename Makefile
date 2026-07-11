@@ -144,8 +144,6 @@ compila-pccf-%:
 	@if [ ! -d "$(PCCF_SRC)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PCCF_SRC)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
-	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_pccf_status, is_pccf_verified; c=compute_pccf_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PCCF_SRC)'); sys.exit(0 if is_pccf_verified(c) else 1)" && echo "" || echo "-V draft=true"))
-	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant PCCF_030/033 a .compila/ ${RESET}"
 	mkdir -p "$(COMPILA_DIR)"
 	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(COMPILA_DIR)" --generate-competences
@@ -174,11 +172,11 @@ compila-pccf-%:
 			done | sort -t: -k1 -n | cut -d: -f2-); \
 		mapfile -t FILES_ARR <<< "$$FILES"; \
 		pandoc --resource-path "$(COMPILA_DIR)" \
-			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $(DRAFT_OPT) \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
 			-o "$(OUTPUT_DIR)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
 			"$${FILES_ARR[@]}"
 	@echo " ${LIGHTBLUE} Incluint PDs d'optatives (només les del cicle)${RESET}"
-	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PD_DIR)"
+	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PD_DIR)" "$(PCCF_ROOT)/programacions/OPTATIVES"
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
 	rm -rf "$(COMPILA_DIR)" "$(PD_DIR)/.optatives_pd"
 	@echo " ${LIGHTGREEN} [ Compilacio PCCF $(CICLO_UPPER) completada ] ${RESET}"
@@ -197,8 +195,6 @@ compila-pd-pccf-%:
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
-	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_pd_status, is_pd_verified; s=compute_pd_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)'); sys.exit(0 if is_pd_verified(s) else 1)" && echo "" || echo "-V draft=true"))
-	@if [ -n "$(DRAFT_OPT)" ]; then echo " ${LIGHTYELLOW} [ Queden incidències pendents: el PDF portarà la marca d'aigua ESBORRANY ] ${RESET}"; fi
 	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
 	@# Es compila des d'un directori de muntatge local (temp/), no directament
 	@# des de PD_DIR: les Portada.md referencien fons amb path relatiu
@@ -213,7 +209,7 @@ compila-pd-pccf-%:
 		fi && \
 		sed -i "s#\.\./rsrc/backgrounds/#$(PROJECT_ROOT)/rsrc/backgrounds/#g" "$$STAGE"/*.md && \
 		cd "$$STAGE" && \
-		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $(DRAFT_OPT) \
+		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
 			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
 	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
 	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PD_DIR)" 2>&1 | tail -3
@@ -247,13 +243,13 @@ report-pccf-%:
 # ============================================================
 generar-plantilles-optatives:
 	@echo " ${LIGHTBLUE} [ Generant plantilles optatives compartides ] ${RESET}"
-	@mkdir -p optatives/plantilles
-	python3 tools/json2optatives.py
-	@echo " ${LIGHTGREEN} [ Plantilles optatives generades a optatives/plantilles/ ] ${RESET}"
+	@mkdir -p "$(PCCF_ROOT)/programacions/OPTATIVES"
+	python3 tools/json2optatives.py --outdir "$(PCCF_ROOT)/programacions/OPTATIVES"
+	@echo " ${LIGHTGREEN} [ Plantilles optatives generades a $(PCCF_ROOT)/programacions/OPTATIVES/ ] ${RESET}"
 
 report-optatives:
 	@echo " ${LIGHTYELLOW} [ Report optatives ] ${RESET}"
-	python3 tools/report_optatives.py
+	python3 tools/report_optatives.py --pd-dir "$(PCCF_ROOT)/programacions/OPTATIVES"
 
 # ============================================================
 #  Bulk targets (all cycles)
@@ -367,7 +363,7 @@ help:
 	@echo "    todos-sco          Generar todos los proyectos SCO"
 	@echo "    report             Generar reporte de análisis de JSONs"
 	@echo "  Optatives (compartides):"
-	@echo "    generar-plantilles-optatives  Genera Excel + PDs dels mòduls optatius compartits"
+	@echo "    generar-plantilles-optatives  Genera Excel + PDs dels mòduls optatius compartits a programacions/OPTATIVES"
 	@echo "    report-optatives               Report de l'estat de les optatives"
 	@echo ""
 	@echo "  Memòries:"

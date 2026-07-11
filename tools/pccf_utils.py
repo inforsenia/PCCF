@@ -11,8 +11,7 @@ CICLES_INF = ["SMX", "DAM", "CEIABD", "FPBIIO"]
 CICLES_SCO = ["APD", "EI", "IS"]
 CICLES_CONEGUTS = sorted(CICLES_INF + CICLES_SCO, key=len, reverse=True)
 
-OPTATIVES_PATH = os.path.join(PROJECT_DIR, "optatives", "optatives.json")
-OPTATIVES_PLANTILLES = os.path.join(PROJECT_DIR, "optatives", "plantilles")
+OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 
 # Pattern per a noms de fitxer PD:
 # PD_{CICLO}_{CODI}_{NOM}_{BORRADOR|OK}.md
@@ -128,7 +127,7 @@ def get_moduls_del_cicle(cicle, familia=None):
 
 
 def get_optatives(cicle=None, familia=None):
-    """Carrega optatives/optatives.json i filtra per cicle/familia.
+    """Carrega boe_OPTATIVES/optatives.json i filtra per cicle/familia.
 
     Si cicle i familia es donen, retorna només els mòduls optatius que
     pertanyen a eixe cicle (segons el camp 'grups').

@@ -8,15 +8,16 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 
-from pccf_utils import get_optatives, OPTATIVES_PLANTILLES
+from pccf_utils import get_optatives
 
-if len(sys.argv) < 4:
-    print("Usage: copy_optatives_pd.py CICLO FAMILIA PLANTILLES_DIR")
+if len(sys.argv) < 5:
+    print("Usage: copy_optatives_pd.py CICLO FAMILIA PLANTILLES_DIR OPTATIVES_DIR")
     sys.exit(1)
 
 ciclo = sys.argv[1].upper()
 familia = sys.argv[2].upper()
 plantilles_dir = sys.argv[3]
+optatives_source = sys.argv[4]
 
 dest = os.path.join(plantilles_dir, ".optatives_pd")
 os.makedirs(dest, exist_ok=True)
@@ -24,7 +25,7 @@ os.makedirs(dest, exist_ok=True)
 opts = get_optatives(ciclo, familia)
 copied = 0
 for codi in opts:
-    for f in glob.glob(os.path.join(OPTATIVES_PLANTILLES, f"PD_{codi}_*.md")):
+    for f in glob.glob(os.path.join(optatives_source, f"PD_{codi}_*.md")):
         shutil.copy(f, dest)
         copied += 1
         print(f"  \u2022 {os.path.basename(f)}")

@@ -55,13 +55,15 @@ def save_state(state):
         json.dump(state, f)
 
 
-def pccf_tree_mtime(pccf_dir):
+def dir_mtime(base, subpath):
+    d = os.path.join(base, subpath)
+    if not os.path.isdir(d):
+        return 0.0
     mtimes = []
-    if os.path.isdir(pccf_dir):
-        for root, _dirs, files in os.walk(pccf_dir):
-            for f in files:
-                if f.endswith(".md"):
-                    mtimes.append(os.path.getmtime(os.path.join(root, f)))
+    for root, _dirs, files in os.walk(d):
+        for f in files:
+            if f.endswith(".md"):
+                mtimes.append(os.path.getmtime(os.path.join(root, f)))
     return max(mtimes) if mtimes else 0.0
 
 
@@ -97,16 +99,20 @@ def poll_once(sync_root, centre, cicle=None):
             continue
 
         pd_mtime = latest_source_mtime(pdir)
-        pccf_mtime = pccf_tree_mtime(pccf_dir)
+        mtime_src = dir_mtime(pccf_dir, "src")
+        mtime_familia = dir_mtime(pccf_dir, f"src_{familia}")
+        mtime_cicle = dir_mtime(pccf_dir, f"src_{familia}_{cicle}")
 
-        if pd_mtime == 0.0 and pccf_mtime == 0.0:
+        if pd_mtime == 0.0 and mtime_src == 0.0 and mtime_familia == 0.0 and mtime_cicle == 0.0:
             continue
 
         last_pd_mtime = state.get(key, {}).get("mtime_pd", 0.0)
-        last_pccf_mtime = state.get(key, {}).get("mtime_pccf", 0.0)
+        last_src = state.get(key, {}).get("mtime_src", 0.0)
+        last_familia = state.get(key, {}).get("mtime_familia", 0.0)
+        last_cicle = state.get(key, {}).get("mtime_cicle", 0.0)
 
         pd_canviat = pd_mtime > last_pd_mtime
-        pccf_canviat = pccf_mtime > last_pccf_mtime
+        pccf_canviat = mtime_src > last_src or mtime_familia > last_familia or mtime_cicle > last_cicle
         if not pd_canviat and not pccf_canviat:
             continue
 
@@ -145,7 +151,7 @@ def poll_once(sync_root, centre, cicle=None):
                 continue
             print(f"[pccf-poller] {key}: PCCF compilat correctament.", flush=True)
 
-        state[key] = {"mtime_pccf": pccf_mtime, "mtime_pd": pd_mtime}
+        state[key] = {"mtime_src": mtime_src, "mtime_familia": mtime_familia, "mtime_cicle": mtime_cicle, "mtime_pd": pd_mtime}
         save_state(state)
         processed.append(key)
 

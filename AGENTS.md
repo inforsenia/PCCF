@@ -4,15 +4,15 @@ Curricular projects & teaching plans for vocational training at IES La Sénia. B
 
 ## Optatives conventions
 
-- **Source of truth**: `optatives/optatives.json` — shared across all cycles.
+- **Source of truth**: `boe_OPTATIVES/optatives.json` — shared across all cycles.
 - **4 modules**: MOPCOMPROF, MOPANGPROF, INP (with `codis_alternatius` for CVOPS190), IPR.
 - **OG/CPSS are empty arrays**: shared optatives cannot reference cycle-specific objectives/competencies.
 - **`grups` field**: each module lists which cycles offer it (`{cicle, curs, familia}`).
 - **PD generation**: Jinja2 template `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md` skips OG/CPSS sections when empty.
 - **State tracking**: same as PCCF (`_BORRADOR.md` / `_OK.md`), shared across all cycles.
-- **Excel**: `optatives/libro_optatives.xlsx` (shared, one sheet per module).
-- **Pipeline**: `make generar-plantilles-optatives` → `make report-optatives` → `make compila-pccf-{CICLO}` copies matching optatives PDs automatically.
-- **Integration**: `tools/copy_optatives_pd.py` filters by `grups` field and copies PDs to `.compila/` during per-cycle compilation.
+- **Excel**: `programacions/OPTATIVES/libro_optatives.xlsx` (shared, one sheet per module).
+- **Pipeline**: `make generar-plantilles-optatives` → `make report-optatives` → `make compila-pccf-{CICLO}` copies matching optatives PDs from `programacions/OPTATIVES/` automatically.
+- **Integration**: `tools/copy_optatives_pd.py` filters by `grups` field and copies PDs from `programacions/OPTATIVES/` to `programacions/{CICLO}/` during per-cycle compilation.
 
 ## Build commands
 
@@ -46,9 +46,9 @@ make compila-tots-esobat           # ESO/BAT all departments (compile)
 make genera-tots-fp                # FP all families ANG+FOL+INF+SCO (generate)
 make report-tots-fp                # FP all families (report)
 make compila-tots-fp               # FP all families (compile)
-make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
+make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → programacions/OPTATIVES/
 make report-optatives             # report optatives BORRADOR/OK status + [###]
-make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → optatives/plantilles/
+make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → programacions/OPTATIVES/
 make report-optatives             # report optatives BORRADOR/OK status + [###]
 make clean                 # rm -rf PDFS/ temp/ plantilles_*/ programacions/ (local only)
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
@@ -100,7 +100,7 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | `pccf/1_esborrany/` (gitignored) | PCCF PDFs (auto) |
 | `programacions/*/0_report/` (gitignored) | Reports de les PD per cicle |
 | `programacions/*/1_esborrany/` (gitignored) | Programaciones PDFs per cicle (manual) |
-| `optatives/` | Shared optative modules JSON + plantilles/ (PDs) + libro_optatives.xlsx |
+| `boe_OPTATIVES/` | Source JSON for shared optatives (optatives.json), generated PDs → programacions/OPTATIVES/ |
 | `memoriaFP/` | FP department configs + templates (memories_{FAMILIA}.json, plantilla_memoria.md, portada) |
 | `memoriaESOBAT/` | ESO/BAT department configs + templates (same structure as memoriaFP) |
 | `memories_FP/{FAMILIA}/` | Per-module/per-group FP memoria markdown files (gitignored via `memories_*/`) |

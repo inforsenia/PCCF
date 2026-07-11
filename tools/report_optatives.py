@@ -4,13 +4,18 @@
 import os
 import sys
 import re
+import argparse
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
-from pccf_utils import OPTATIVES_PLANTILLES
+from pccf_utils import PROJECT_DIR
 
-pd_dir = OPTATIVES_PLANTILLES
+parser = argparse.ArgumentParser()
+parser.add_argument("--pd-dir", help="Directori de les PDs optatives")
+args = parser.parse_args()
+
+pd_dir = args.pd_dir or os.path.join(PROJECT_DIR, "programacions", "OPTATIVES")
 if not os.path.isdir(pd_dir):
-    print("  No existeix optatives/plantilles/")
+    print(f"  No existeix {pd_dir}/")
     sys.exit(0)
 
 # Pattern: PD_{CODI}_{NOM}_{BORRADOR|OK}.md

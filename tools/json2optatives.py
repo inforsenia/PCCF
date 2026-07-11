@@ -11,17 +11,17 @@ from openpyxl.styles import Alignment, Font, PatternFill, NamedStyle
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import OPTATIVES_PATH, OPTATIVES_PLANTILLES, PROJECT_DIR
+from pccf_utils import OPTATIVES_PATH, PROJECT_DIR
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
 
 parser = argparse.ArgumentParser(description="Genera Excel i PDs per als mòduls optatius compartits")
-parser.add_argument("--outdir", help="Directori d'eixida (defecte: optatives/)")
+parser.add_argument("--outdir", help="Directori d'eixida (defecte: programacions/OPTATIVES)")
 args = parser.parse_args()
 
-outdir = args.outdir or os.path.join(PROJECT_DIR, "optatives")
+outdir = args.outdir or os.path.join(PROJECT_DIR, "programacions", "OPTATIVES")
 libro_path = os.path.join(outdir, "libro_optatives.xlsx")
-plantilles_dir = os.path.join(outdir, "plantilles")
+plantilles_dir = outdir
 
 os.makedirs(plantilles_dir, exist_ok=True)
 
