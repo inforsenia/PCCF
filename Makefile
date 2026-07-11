@@ -251,16 +251,19 @@ report-optatives:
 	@echo " ${LIGHTYELLOW} [ Report optatives ] ${RESET}"
 	python3 tools/report_optatives.py --pd-dir "$(PCCF_ROOT)/programacions/OPTATIVES"
 
+proyecto-optatives: generar-plantilles-optatives report-optatives
+	@echo " ${LIGHTGREEN} [ Optatives completades ] ${RESET}"
+
 # ============================================================
 #  Bulk targets (all cycles)
 # ============================================================
-todos: $(addprefix proyecto-,$(CICLOS_ALL)) report
+todos: $(addprefix proyecto-,$(CICLOS_ALL)) proyecto-optatives report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos generados ] ${RESET}"
 
-todos-inf: $(addprefix proyecto-,$(CICLOS_INF)) report
+todos-inf: $(addprefix proyecto-,$(CICLOS_INF)) proyecto-optatives report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos INF generados ] ${RESET}"
 
-todos-sco: $(addprefix proyecto-,$(CICLOS_SCO)) report
+todos-sco: $(addprefix proyecto-,$(CICLOS_SCO)) proyecto-optatives report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos SCO generados ] ${RESET}"
 
 report:
@@ -363,8 +366,9 @@ help:
 	@echo "    todos-sco          Generar todos los proyectos SCO"
 	@echo "    report             Generar reporte de análisis de JSONs"
 	@echo "  Optatives (compartides):"
-	@echo "    generar-plantilles-optatives  Genera Excel + PDs dels mòduls optatius compartits a programacions/OPTATIVES"
-	@echo "    report-optatives               Report de l'estat de les optatives"
+	@echo "    proyecto-optatives            Genera + report de les optatives compartides"
+	@echo "    generar-plantilles-optatives  Fase 1: Excel + PDs a programacions/OPTATIVES"
+	@echo "    report-optatives              Report de l'estat de les optatives"
 	@echo ""
 	@echo "  Memòries:"
 	@echo "    report-memories             Report de l'estat de les memòries"
