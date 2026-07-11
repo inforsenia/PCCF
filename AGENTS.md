@@ -53,6 +53,14 @@ make genera-totes-plantilles      # Phase 1 only: all cycles + optatives (no com
 make genera-plantilles-inf        # Phase 1 only: INF cycles + optatives
 make genera-plantilles-sco        # Phase 1 only: SCO cycles + optatives
 make clean                 # rm -rf PDFS/ temp/ plantilles_*/ programacions/ (local only)
+```
+
+> **⚠️ Important — OneDrive / producció**: Si executes `make` directament al contenidor de Portainer (Exec Console), recorda que el Makefile té `PCCF_ROOT ?= .` per defecte, i escriuria fora del volum sincronitzat. **Sempre cal prefixar** `PCCF_ROOT=/home/PCCF/pccf_sync`:
+> ```sh
+> make PCCF_ROOT=/home/PCCF/pccf_sync CENTRO_EDUCATIVO=IESEPM genera-totes-plantilles
+> make PCCF_ROOT=/home/PCCF/pccf_sync CENTRO_EDUCATIVO=IESEPM todos
+> ```
+> El symlink `pccf_sync` (creat per `docker-entrypoint.sh`) apunta a la carpeta OneDrive real (`/data/onedrive-pccf/General/PCCF i Programacions`). Sense `PCCF_ROOT`, els fitxers acaben dins la imatge del contenidor i mai arriben a OneDrive. El poller automàtic ja passa `PCCF_ROOT` correctament; este avís és només per a execucions manuals.<!-- crwd-ref -->
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
 ```
 
