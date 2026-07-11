@@ -90,13 +90,11 @@ Only runs on `main` when commit message contains `[build]`. Generates only INF c
 | Path | Purpose |
 |---|---|
 | `boe_{INF,SCO}/rd-{ciclo}.json` | Curriculum data from BOE (single source of truth) |
-| `src/` | Base/shared PCCF markdown files |
-| `src_{INF,SCO}/` | Family-specific PCCF files |
-| `src_{INF,SCO}_{CICLO}/` | Cycle-specific PCCF + PD markdown |
+| `pccf/src/` | Base/shared PCCF markdown files |
+| `pccf/src_{INF,SCO}/` | Family-specific PCCF files |
+| `pccf/src_{INF,SCO}_{CICLO}/` | Cycle-specific PCCF + PD markdown |
 | `templates/` or `templates_{FAMILIA}/` | Jinja2 templates for auto-generated markdown |
 | `excels_{INF,SCO}/` | Teacher-edited spreadsheets (after `preparar_excel.py`) |
-| `plantilles_{FAMILIA}_{CICLO}/` | **Deprecated** — replaced by `pccf/` + `programacions/` |
-| `pccf/` (gitignored) | PCCF framework copies (mirror of `src/*`); teacher-editable in OneDrive |
 | `programacions/` (gitignored) | PD_*.md + libro_*.xlsx per cycle, teacher-editable in OneDrive |
 | `0_report_pccf/` (gitignored) | Auto-generated coherence reports |
 | `1_esborrany_pccf/` (gitignored) | Generated PDFs (PCCF auto, Programaciones manual) |
@@ -116,11 +114,11 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 
 1. `validate-json` — validates JSONs first
 2. Phase 1: `generar-plantilles-pccf-{CICLO}`:
-   - Copies `*.md` from `src/` → `pccf/src/`, `src_{FAMILIA}/` → `pccf/src_{FAMILIA}/`, `src_{FAMILIA}_{CICLO}/` → `pccf/src_{FAMILIA}_{CICLO}/` (never overwrites existing)
-   - Copies `PD_*.md` from all src dirs → `programacions/{CICLO}/`
+   - If `$(PCCF_ROOT) != $(PROJECT_ROOT)` (OneDrive mode): copies `pccf/` tree from git to `$(PCCF_ROOT)/pccf/` (first bootstrap, never overwrites)
+   - Copies `PD_*.md` from `pccf/src*` dirs → `programacions/{CICLO}/`
    - `json2excel.py {CICLO} {FAMILIA} --outdir programacions/{CICLO}` — generates `libro_{CICLO}.xlsx`
    - `json2pccf.py {CICLO} {FAMILIA} --generate-only` — generates `PD_*_BORRADOR.md` from Jinja2 templates
-   - **pccf/src* conté els PCCF framework; programacions/ conté PDs + Excel**
+   - **pccf/src* conté els PCCF framework (editable); programacions/ conté PDs + Excel (editable)**
 3. Phase 2a: `compila-pccf-{CICLO}` (auto, triggered by poller):
    - `json2pccf.py --generate-competences` → `.compila_{CICLO}/` dins `$(PCCF_ROOT)`
    - Staging: copia `PCCF_*.md` de `pccf/src*/` a `.compila_{CICLO}/`

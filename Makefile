@@ -90,24 +90,27 @@ generar-plantilles-pccf-%: validate-json
 	$(eval CICLO := $(shell echo $* | tr '[:upper:]' '[:lower:]'))
 	$(eval CICLO_UPPER := $(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA := $(call check_ciclo,$(CICLO)))
-	$(eval PCCF_DIR := $(PCCF_ROOT)/pccf)
+	$(eval PCCF_SRC := $(PCCF_ROOT)/pccf)
 	$(eval PD_DIR := $(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO)' ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Generant plantilles PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
 
-	@echo " ${LIGHTBLUE} Copiant PCCF_*.md des de src/ a pccf/ (no sobreescriu)${RESET}"
-	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
-		[ -d "$$d" ] || continue; \
-		mkdir -p "$(PCCF_DIR)/$$d" && \
-		for f in $$d/*.md; do \
-			[ -f "$$f" ] || continue; \
-			b=$$(basename "$$f"); \
-			[ -f "$(PCCF_DIR)/$$d/$$b" ] || cp -n "$$f" "$(PCCF_DIR)/$$d/"; \
+	@# Si PCCF_ROOT != project root, copiar pccf/ al sync root (bootstrap OneDrive)
+	@if [ "$(shell readlink -f $(PCCF_ROOT))" != "$(PROJECT_ROOT)" ]; then \
+		echo " ${LIGHTBLUE} Copiant pccf/ a $(PCCF_ROOT)/ (no sobreescriu)${RESET}"; \
+		for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
+			[ -d "$(PROJECT_ROOT)/pccf/$$d" ] || continue; \
+			mkdir -p "$(PCCF_SRC)/$$d" && \
+			for f in "$(PROJECT_ROOT)/pccf/$$d"/*.md; do \
+				[ -f "$$f" ] || continue; \
+				b=$$(basename "$$f"); \
+				[ -f "$(PCCF_SRC)/$$d/$$b" ] || cp -n "$$f" "$(PCCF_SRC)/$$d/"; \
+			done; \
 		done; \
-	done
+	fi
 	@echo " ${LIGHTBLUE} Copiant PD_*.md a programacions/$(CICLO_UPPER)/ (no sobreescriu)${RESET}"
 	mkdir -p "$(PD_DIR)"
-	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
+	@for d in $(PCCF_SRC)/src $(PCCF_SRC)/src_$(FAMILIA) $(PCCF_SRC)/src_$(FAMILIA)_$(CICLO_UPPER); do \
 		[ -d "$$d" ] || continue; \
 		for f in $$d/PD_*.md; do \
 			[ -f "$$f" ] || continue; \
@@ -133,11 +136,11 @@ compila-pccf-%:
 	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
-	$(eval PCCF_DIR:=$(PCCF_ROOT)/pccf)
+	$(eval PCCF_SRC:=$(PCCF_ROOT)/pccf)
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	$(eval COMPILA_DIR:=$(PCCF_ROOT)/.compila_$(CICLO_UPPER))
 	$(eval OUTPUT_DIR:=$(PCCF_ROOT)/1_esborrany_pccf)
-	@if [ ! -d "$(PCCF_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PCCF_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
+	@if [ ! -d "$(PCCF_SRC)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PCCF_SRC)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant PCCF: $(CICLO_UPPER) (Familia $(FAMILIA)) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
 	$(eval DRAFT_OPT := $(shell python3 -c "import sys; sys.path.insert(0, 'tools'); from report_pccf import compute_status, is_verified; sys.exit(0 if is_verified(compute_status('$(CICLO_UPPER)', '$(FAMILIA)', '$(PD_DIR)')) else 1)" && echo "" || echo "-V draft=true"))
@@ -146,16 +149,16 @@ compila-pccf-%:
 	mkdir -p "$(COMPILA_DIR)"
 	python3 tools/json2pccf.py $(CICLO_UPPER) $(FAMILIA) --outdir "$(COMPILA_DIR)" --generate-competences
 	@echo " ${LIGHTBLUE} Generant PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
-	@# Staging: copiar PCCF_*.md a .compila per a resoldre paths de fons
+	@# Staging: copiar PCCF_*.md de pccf/src* a .compila, després compilar
 	@for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
-		[ -d "$(PCCF_DIR)/$$d" ] || continue; \
-		for f in "$(PCCF_DIR)/$$d"/PCCF_*.md; do \
+		[ -d "$(PCCF_SRC)/$$d" ] || continue; \
+		for f in "$(PCCF_SRC)/$$d"/PCCF_*.md; do \
 			[ -f "$$f" ] || continue; \
 			b=$$(basename "$$f"); \
 			[ -f "$(COMPILA_DIR)/$$b" ] || cp -n "$$f" "$(COMPILA_DIR)/"; \
 		done; \
 	done
-	@# Si el fitxer es troba a programacions/ (optatives, etc.), també s'inclou
+	@# PCCF_*.md des de programacions/ (optatives, etc.)
 	@for f in "$(PD_DIR)"/PCCF_*.md; do \
 		[ -f "$$f" ] || continue; \
 		b=$$(basename "$$f"); \
