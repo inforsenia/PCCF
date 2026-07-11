@@ -15,8 +15,9 @@ BOE). Com que eixe pas ja és idempotent per disseny (mai sobreescriu feina
 existent), es reexecuta a cada passada sense risc.
 
 Ús:
-    python3 tools/pccf_sync_poller.py --once   # una sola passada
-    python3 tools/pccf_sync_poller.py          # bucle continu
+    python3 tools/pccf_sync_poller.py --once             # una sola passada
+    python3 tools/pccf_sync_poller.py --once --cicle APD # només un cicle
+    python3 tools/pccf_sync_poller.py                    # bucle continu
 """
 
 import argparse
@@ -69,11 +70,12 @@ def latest_source_mtime(pdir):
     return max(mtimes) if mtimes else 0.0
 
 
-def poll_once(sync_root, centre):
+def poll_once(sync_root, centre, cicle=None):
     processed = []
     state = load_state()
 
-    for cicle in CICLES_ALL:
+    cicles_a_processar = [cicle] if cicle else CICLES_ALL
+    for cicle in cicles_a_processar:
         familia = get_familia(cicle)
         key = f"{familia}_{cicle}"
         pdir = plantilles_dir(sync_root, familia, cicle)
@@ -149,13 +151,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--once", action="store_true", help="Una sola passada (per a proves)")
     parser.add_argument("--sync-root", default=os.environ.get("PCCF_SYNC_ROOT", "/data/onedrive-pccf"))
+    parser.add_argument("--cicle", help="Limitar a un sol cicle (ex: APD)")
     parser.add_argument("--centre", default=os.environ.get("CENTRO_EDUCATIVO", "IESEPM"))
     parser.add_argument("--interval", type=int, default=int(os.environ.get("POLLER_INTERVAL", "300")))
     args = parser.parse_args()
 
+    if args.cicle and args.cicle.upper() not in CICLES_ALL:
+        print(f"ERROR: cicle desconegut '{args.cicle}'. Valors vàlids: {', '.join(CICLES_ALL)}", file=sys.stderr)
+        sys.exit(1)
+    if args.cicle:
+        args.cicle = args.cicle.upper()
+
     while True:
         try:
-            processed = poll_once(args.sync_root, args.centre)
+            processed = poll_once(args.sync_root, args.centre, args.cicle)
             if not processed:
                 print("[pccf-poller] cap canvi pendent.", flush=True)
         except Exception as e:
