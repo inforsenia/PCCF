@@ -48,8 +48,10 @@ make report-tots-fp                # FP all families (report)
 make compila-tots-fp               # FP all families (compile)
 make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → programacions/OPTATIVES/
 make report-optatives             # report optatives BORRADOR/OK status + [###]
-make generar-plantilles-optatives  # Phase 1b: gen shared optatives Excel + PDs → programacions/OPTATIVES/
-make report-optatives             # report optatives BORRADOR/OK status + [###]
+make proyecto-optatives           # generate + report optatives (one step)
+make genera-totes-plantilles      # Phase 1 only: all cycles + optatives (no compile, nou)
+make genera-plantilles-inf        # Phase 1 only: INF cycles + optatives
+make genera-plantilles-sco        # Phase 1 only: SCO cycles + optatives
 make clean                 # rm -rf PDFS/ temp/ plantilles_*/ programacions/ (local only)
 make dependences           # apt install pandoc, texlive-*, libreoffice, python deps
 ```

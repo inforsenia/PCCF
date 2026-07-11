@@ -266,6 +266,15 @@ todos-inf: $(addprefix proyecto-,$(CICLOS_INF)) proyecto-optatives report
 todos-sco: $(addprefix proyecto-,$(CICLOS_SCO)) proyecto-optatives report
 	@echo " ${LIGHTGREEN} [ Todos los proyectos SCO generados ] ${RESET}"
 
+genera-totes-plantilles: $(addprefix generar-plantilles-pccf-,$(CICLOS_ALL)) generar-plantilles-optatives
+	@echo " ${LIGHTGREEN} [ Plantilles de tots els cicles + optatives generades ] ${RESET}"
+
+genera-plantilles-inf: $(addprefix generar-plantilles-pccf-,$(CICLOS_INF)) generar-plantilles-optatives
+	@echo " ${LIGHTGREEN} [ Plantilles INF + optatives generades ] ${RESET}"
+
+genera-plantilles-sco: $(addprefix generar-plantilles-pccf-,$(CICLOS_SCO)) generar-plantilles-optatives
+	@echo " ${LIGHTGREEN} [ Plantilles SCO + optatives generades ] ${RESET}"
+
 report:
 	@echo " ${LIGHTYELLOW} [ Generando reporte de análisis de JSONs... ] ${RESET}"
 	python3 tools/analizar_json.py
@@ -361,9 +370,12 @@ help:
 	@echo "    Familia INF: smx, dam, ceiabd, fpbiio"
 	@echo "    Familia SCO: apd, ei, is"
 	@echo "  Conjunt:"
-	@echo "    todos              Generar todos los proyectos"
-	@echo "    todos-inf          Generar todos los proyectos INF"
-	@echo "    todos-sco          Generar todos los proyectos SCO"
+	@echo "    todos              Generar todos los proyectos (INF+SCO+optatives)"
+	@echo "    todos-inf          Generar todos los proyectos INF + optatives"
+	@echo "    todos-sco          Generar todos los proyectos SCO + optatives"
+	@echo "    genera-totes-plantilles  Fase 1: plantilles tots els cicles + optatives (no compila)"
+	@echo "    genera-plantilles-inf    Fase 1: plantilles INF + optatives"
+	@echo "    genera-plantilles-sco    Fase 1: plantilles SCO + optatives"
 	@echo "    report             Generar reporte de análisis de JSONs"
 	@echo "  Optatives (compartides):"
 	@echo "    proyecto-optatives            Genera + report de les optatives compartides"

@@ -491,7 +491,8 @@ Targets disponibles:
     compila-pccf-dam             Fase 2: compilar PCCF + Programaciones PDF
     proyecto-dam                 Fases 1+2 en un sol pas
   Optatius compartits:
-    generar-plantilles-optatives  Generar Excel + PDs per a optatives a programacions/OPTATIVES/
+    proyecto-optatives            Fase 1+2: generar + report de les optatives compartides
+    generar-plantilles-optatives  Fase 1: Excel + PDs a programacions/OPTATIVES/
     report-optatives              Report d'estat de les PDs optatives
   Familia INF:
     proyecto-smx       Generar proyecto para SMX
@@ -505,9 +506,12 @@ Targets disponibles:
     proyecto-ei        Generar proyecto para EI
     proyecto-is        Generar proyecto para IS
   Conjunto:
-    todos              Generar todos los proyectos
-    todos-inf          Generar todos los proyectos INF
-    todos-sco          Generar todos los proyectos SCO
+    todos              Generar todos los proyectos (INF + SCO + optatives)
+    todos-inf          Generar todos los proyectos INF + optatives
+    todos-sco          Generar todos los proyectos SCO + optatives
+    genera-totes-plantilles  Fase 1: plantilles de tots els cicles + optatives (sense compilar)
+    genera-plantilles-inf    Fase 1: plantilles INF + optatives
+    genera-plantilles-sco    Fase 1: plantilles SCO + optatives
   Memòries:
     generar-plantilles-memoria  Generar plantilles MD de memòria (també: genera-memories)
     genera-memories             Alias de generar-plantilles-memoria
