@@ -1,6 +1,6 @@
 ---
 title: Programaciones Didacticas - Desarrollo Aplicaciones Web 
-subtitle: "Curso 2025-2026"
+subtitle: "Curso 2026-2027"
 author: Programaciones Didácticas del Departamento de Informática
 header-includes: |
 lang: es-ES
@@ -8,7 +8,7 @@ keywords: [SMX]
 abstract: |
           Programaciones Didacticas del Ciclo Formativo para el Grado Superior de Desarrollo de Aplicaciones Web
           Impartido en el IES La Sénia.
-          Curso 2025-2026.
+          Curso 2026-2027.
 titlepage: true,
 page-background: "../rsrc/backgrounds/background5.pdf"
 page-background-opacity: 0.4
