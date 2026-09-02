@@ -1,6 +1,6 @@
 ---
 title: PCCF - Desarrollo de Aplicaciones Web
-subtitle: "Curso 2025-2026"
+subtitle: "Curso 2026-2027"
 author: Departamento de Informática
 header-includes: |
 lang: es-ES
@@ -8,7 +8,7 @@ keywords: [SMX]
 abstract: |
           Proyecto Curricular de Ciclo Formativo para el Grado Superior de Desarrollo de Aplicaciones Web
           Impartido en el IES La Sénia.
-          Curso 2025-2026.
+          Curso 2026-2027.
 titlepage: true,
 page-background: "../rsrc/backgrounds/background5.pdf"
 page-background-opacity: 0.4
