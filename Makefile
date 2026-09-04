@@ -83,6 +83,33 @@ proyecto-smx: files proyecto-base
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh SMX
 
+
+
+proyecto-rsn: files proyecto-base
+	@echo " [ ${BLUE} Proyecto Curricular : RSN ${RESET}]"
+	@echo " ${LIGHTBLUE} Poblando desde RSN ${RESET}"
+
+	cp -r src_RSN/* temp/
+
+	@echo " ${LIGHTBLUE} Libro de las Programaciones de RSN ${RESET}"
+	./tools/json2excel.py RSN
+	@echo " ${LIGHTBLUE} Excel Generado para RSN ${RESET}"
+
+	@echo " ${LIGHTBLUE} Fuentes de las Programaciones de RSN ${RESET}"
+	./tools/json2pccf.py RSN
+
+	@echo " ${LIGHTBLUE} Proyecto de RSN ${RESET}"
+	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
+	@echo " ${LIGHTBLUE} PDF Generado para RSN ${RESET}"
+
+
+	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ${RESET}"
+	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ./PD_*.md
+	@echo " ${LIGHTBLUE} Programaciones Generadas para RSN ${RESET}"
+	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
+	#./tools/shell-progs-didacticas-standalone.sh RSN
+
+
 proyecto-asir: files proyecto-base
 
 	@echo " [ ${BLUE} Proyecto Curricular : ASIR ${RESET}]"
