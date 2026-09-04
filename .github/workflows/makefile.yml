@@ -34,6 +34,9 @@ jobs:
     - name: ASIR - Proyecto
       run: make proyecto-asir
       
+    - name: RSN - Proyecto
+      run: make proyecto-rsn
+      
     - uses: actions/upload-artifact@v4
       with:
         name: PDFs-PCCFs
