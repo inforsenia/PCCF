@@ -81,10 +81,13 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducció als sistemes informàtics  | 09/09/2026| 05/10/2026|
-| 02     | UP02: SO Linux     | 06/10/2026| 30/11/2026|
-| 03     | UP03: SO Windows   | 01/12/2026| 08/03/2027|
-| 04     | UP04: Serveis en xarxa   | 09/03/2027| 08/06/2027|
+| 01     | UP01: Aplicaciones de propósito general  | 09/09/2026| 11/09/2026|
+| 02     | UP02: Componentes y características de un sistema informático     | 16/09/2026| 25/09/2026|
+| 03     | UP03: Instalación de Sistemas Operativos   | 30/09/2026| 16/10/2026|
+| 04     | UP04: Almacenamiento e integridad de los datos   | 21/10/2026| 02/12/2026|
+| 05     | UP05: Aplicación de las redes para los sistemas operativos   | 09/03/2027| 08/04/2027|
+| 06     | UP06: Gestión y administración de Sistemas Operativos   | 08/04/2027| 08/05/2027|
+| 07     | UP07: Sistemas Operativos en Red   | 08/05/2027| 08/06/2027|
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
