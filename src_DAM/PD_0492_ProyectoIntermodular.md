@@ -8,10 +8,6 @@ Es un módulo de 100 horas.
 
 ## Secuenciación de las Unidades de Programación. 
 
-A RELLENAR POR DOCENTE
-
-Se propone esta tabla
-
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
 | 01     | UP01: Análisis | 09/09/2026| 01/12/2026|
