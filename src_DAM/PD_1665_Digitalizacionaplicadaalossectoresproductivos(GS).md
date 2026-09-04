@@ -65,12 +65,12 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
  Número | Título                                        | Inicio    | Fin       |
 |--------|-----------------------------------------------|-----------|-----------|
-| 01     | UP01: El reto de la Digitalización            | 08/09/2025| 30/09/2025|
-| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 01/10/2025| 31/10/2025|
-| 03     | UP03: La Computación en la Nube               | 01/11/2025| 30/11/2025|
-| 04     | UP04: La Inteligencia Artificial              | 01/12/2025| 19/12/2025|
-| 05     | UP05: Los Datos y su Protección               | 20/12/2025| 25/01/2025|
-| 06     | UP06: La Transformación Digital               | 26/01/2025| 16/02/2025|
+| 01     | UP01: El reto de la Digitalización            | 09/09/2026| 30/09/2026|
+| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 01/10/2026| 31/10/2026|
+| 03     | UP03: La Computación en la Nube               | 01/11/2026| 30/11/2026|
+| 04     | UP04: La Inteligencia Artificial              | 01/12/2026| 19/12/2026|
+| 05     | UP05: Los Datos y su Protección               | 20/12/2026| 25/01/2027|
+| 06     | UP06: La Transformación Digital               | 26/01/2027| 16/02/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
