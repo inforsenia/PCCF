@@ -4,9 +4,9 @@ subtitle: "Curso 2026-2027"
 author: Departamento de Informática
 header-includes: |
 lang: es-ES
-keywords: [SMX]
+keywords: [RSN]
 abstract: |
-          Programaciones Didacticas del Ciclo Formativo para el Curso de Especialización de Recursos y Servicios en la Nube impartido en el IES La Sénia.
+          Proyecto Curricular del Curso de Especializacion de Recursos y Servicios en la Nube 
           Curso 2026-2027.
 titlepage: true,
 page-background: "../rsrc/backgrounds/background5.pdf"

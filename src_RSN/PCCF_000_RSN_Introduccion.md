@@ -1,12 +1,12 @@
 ---
-title: PCCF - Recursos y Servicios en la Nube
+title: PCCE - Recursos y Servicios en la Nube
 subtitle: "Curso 2026-2027"
 author: Departamento de Informática
 header-includes: |
 lang: es-ES
 keywords: [RSN]
 abstract: |
-          Proyecto Curricular de Ciclo Formativo para el Curso de Especialización de Recursos y Servicios en la Nube 
+          Proyecto Curricular del Curso de Especializacion de Recursos y Servicios en la Nube 
           Impartido en el IES La Sénia.
           Curso 2026-2027.
 titlepage: true,

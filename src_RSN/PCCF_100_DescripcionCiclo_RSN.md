@@ -16,21 +16,15 @@ e) 5164. Despliegue de servicios administrados en la nube.
 
 ## Algunos datos
 
-a) Denominación: Recursos y servicios en la nube.
+* Denominación: Recursos y servicios en la nube.
+* Nivel: Formación Profesional de grado superior.
+* Duración: 700 horas.
+* Familia Profesional: Informática y Comunicaciones.
+* Equivalencia en créditos ECTS: 41.
+* Referente en la Clasificación Internacional Normalizada de la Educación: P-5.5.4.
+* Referencia del Marco Español de Cualificaciones para el aprendizaje permanente: 5 C.
 
-b) Nivel: Formación Profesional de grado superior.
-
-c) Duración: 700 horas.
-
-d) Familia Profesional: Informática y Comunicaciones.
-
-e) Equivalencia en créditos ECTS: 41.
-
-f) Referente en la Clasificación Internacional Normalizada de la Educación: P-5.5.4.
-
-g) Referencia del Marco Español de Cualificaciones para el aprendizaje permanente: 5 C.
-
-
+---
 
 Las ocupaciones que podrían desempeñar (a modo de ejemplo) son:
 
@@ -40,5 +34,3 @@ Las ocupaciones que podrían desempeñar (a modo de ejemplo) son:
 * Administradores y administradoras de redes en la nube.
 * Técnicos y técnicas de soluciones en la nube.
 * Administradores y administradoras de operaciones en la nube.
-
-
