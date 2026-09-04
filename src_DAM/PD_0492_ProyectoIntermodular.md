@@ -14,10 +14,9 @@ Se propone esta tabla
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a vim  | 08/09/2025| 10/10/2025|
-| 02     | UP02: Más allá de :wq     | 11/10/2025| 21/10/2025|
-| 03     | UP03: El poder de RegEx   | 11/10/2025| 21/10/2025|
-| 04     | UP04: El camino del zen   | 22/10/2025| 20/12/2025|
+| 01     | UP01: Análisis | 09/09/2026| 01/12/2026|
+| 02     | UP02: Diseño     | 04/12/2026| 09/03/2027|
+| 03     | UP03: Implementación   | 12/03/2027| 07/06/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
