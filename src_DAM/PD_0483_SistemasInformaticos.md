@@ -81,10 +81,10 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducció als sistemes informàtics  | 08/09/2025| 05/10/2025|
-| 02     | UP02: SO Linux     | 06/10/2025| 30/11/2025|
-| 03     | UP03: SO Windows   | 01/12/2025| 08/03/2026|
-| 04     | UP04: Serveis en xarxa   | 09/03/2026| 08/06/2026|
+| 01     | UP01: Introducció als sistemes informàtics  | 09/09/2026| 05/10/2026|
+| 02     | UP02: SO Linux     | 06/10/2026| 30/11/2026|
+| 03     | UP03: SO Windows   | 01/12/2026| 08/03/2027|
+| 04     | UP04: Serveis en xarxa   | 09/03/2027| 08/06/2027|
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
