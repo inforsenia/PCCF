@@ -35,6 +35,12 @@ elif sys.argv[1] == "ASIR":
     with open('./boe/rd-asir.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
+elif sys.argv[1] == "RSN":
+
+    with open('./boe/rd-rsn.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+
 else:
     print(" * No se ha indicado Ciclo ")
     sys.exit(0)

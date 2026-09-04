@@ -47,6 +47,11 @@ elif sys.argv[1] == "SMX":
 
     with open('./boe/rd-smx.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
+elif sys.argv[1] == "RSN":
+
+    with open('./boe/rd-rsn.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
 else:
     print(" * No se ha indicado Ciclo ")
     sys.exit(0)
