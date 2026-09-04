@@ -107,6 +107,8 @@ proyecto-rsn: files proyecto-base
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Programaciones Generadas para RSN ${RESET}"
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
+
+	# Falta esto
 	#./tools/shell-progs-didacticas-standalone.sh RSN
 
 
