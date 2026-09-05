@@ -107,7 +107,7 @@ proyecto-rsn: files proyecto-base
 	./tools/json2pccf.py RSN
 
 	@echo " ${LIGHTBLUE} Proyecto de RSN ${RESET}"
-	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
+	cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para RSN ${RESET}"
 
 
