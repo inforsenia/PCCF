@@ -102,19 +102,19 @@ Las adaptaciones específicas, tanto metodológicas como organizativas, se concr
 
 ## Evaluación del aprendizaje. 
 
-@@@PCCE_200_ProcesoDeEvaluacion.md
-@@@PCCE_201_TiposEvaluacion.md
-@@@PCCE_202_Calificaciones.md
+@@@PCCF_200_ProcesoDeEvaluacion.md
+@@@PCCF_201_TiposEvaluacion.md
+@@@PCCF_202_Calificaciones.md
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
 !!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
 
-@@@PCCE_203_EvaluacionRA_FormacionEmpresa.md
+@@@PCCF_203_EvaluacionRA_FormacionEmpresa.md
 
 !!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
 
-@@@PCCE_206_Recuperacion.md
+@@@PCCF_206_Recuperacion.md
 
 
 

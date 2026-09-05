@@ -14,8 +14,9 @@ LIGHTYELLOW= \e[93m
 RESET= \e[0m
 
 # Templates 
-TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.latex"
+TEMPLATE_TEX_PD="../rsrc/templates/eisvogel-2026.latex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="../rsrc/sorts-mill-goudy/OFLGoudyStM.otf" --pdf-engine=xelatex "
+PANDOC_OPTIONS_FEDORA="-V fontsize=12pt "
 TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.latex"
 
 # PDFS
@@ -36,7 +37,7 @@ dependences:
 
 dependences-fedora:
 	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
-	sudo dnf install  make pandoc libreoffice poppler-utils texlive.noarch texlive-background.noarch texlive-pagecolor.noarch texlive-csquotes.noarch texlive-sourcesanspro.noarch texlive-fontsextra.noarch texlive-collection-fontsextra.noarch texlive-titling.noarch texlive-titlecaps.noarch texlive-lm.noarch texlive-lm-math.noarch texlive-variablelm.noarch
+	sudo dnf install  make pandoc libreoffice poppler-utils texlive.noarch texlive-background.noarch texlive-pagecolor.noarch texlive-csquotes.noarch texlive-sourcesanspro.noarch texlive-fontsextra.noarch texlive-collection-fontsextra.noarch texlive-titling.noarch texlive-titlecaps.noarch texlive-lm.noarch texlive-lm-math.noarch texlive-variablelm.noarch texlive-babel-spanish
 
 	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
 	sudo dnf install  make python3-jinja2 python3-numpy python3-openpyxl.noarch python3-pandas
@@ -107,7 +108,7 @@ proyecto-rsn: files proyecto-base
 	./tools/json2pccf.py RSN
 
 	@echo " ${LIGHTBLUE} Proyecto de RSN ${RESET}"
-	cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
+	cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para RSN ${RESET}"
 
 
