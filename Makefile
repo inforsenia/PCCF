@@ -34,6 +34,14 @@ dependences:
 	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
 	sudo apt update ; sudo apt install --yes make python3-jinja2 python3-box python3-numpy python-openpyxl-doc python-pandas-doc python3-pandas
 
+dependences-fedora:
+	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
+	sudo dnf install  make pandoc libreoffice poppler-utils texlive.noarch texlive-background.noarch texlive-pagecolor.noarch texlive-csquotes.noarch texlive-sourcesanspro.noarch
+
+	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
+	sudo dnf install  make python3-jinja2 python3-numpy python3-openpyxl.noarch python3-pandas
+	python -m pip install python-box
+
 
 
 
