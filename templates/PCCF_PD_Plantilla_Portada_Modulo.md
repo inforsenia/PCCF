@@ -1,6 +1,6 @@
 ---
 title: Programación Didáctica - {{modulo.nombre}}
-subtitle: "Curso 2025-2026"
+subtitle: "Curso 2026-2027"
 author: Departamento de Informática
 header-includes: |
 lang: es-ES

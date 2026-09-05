@@ -66,9 +66,9 @@
                 "RA01": {
                     "Resultado": " Evalúa la localización de la infraestructura física de Tecnologías de la Información (TI), diferenciando entre su ubicación en instalaciones propias (on premise) y en la nube (cloud).",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha definido el concepto de infraestructura de nube, diferenciándolo del de infraestructura propia (on premise": ".",
+                                "a": " Se ha definido el concepto de infraestructura de nube, diferenciándolo del de infraestructura propia (on premise)",
                                 "b": " Se ha descrito el funcionamiento de la infraestructura de nube, vinculándolo con su modelo de negocio.",
-                                "c": " Se han analizado los beneficios de la infraestructura de nube con respecto a la infraestructura propia (on premise": ".",
+                                "c": " Se han analizado los beneficios de la infraestructura de nube con respecto a la infraestructura propia (on premise)",
                                 "d": " Se ha diferenciado entre la infraestructura de nube y la arquitectura de nube, relacionándolos con los recursos de computación y la ejecución de aplicaciones web.",
                                 "e": " Se ha determinado el conjunto de componentes hardware y software básico de la infraestructura en la nube, relacionándolo con el aprovisionamiento de recursos virtuales y la implementación de cargas de trabajo en la nube.",
                                 "f": " Se han caracterizado los componentes de la infraestructura de nube, especificando lo relativo a servidores, redes, almacenamiento y software."
@@ -86,10 +86,10 @@
                 "RA03": {
                     "Resultado": " Reconoce los principales modelos de servicio en la arquitectura de nube en función de los recursos requeridos para alcanzar objetivos y necesidades a cubrir.",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha descrito el software como servicio (Software as aService, en adelante SaaS": ", identificando su estructura y explicando su funcionamiento.",
-                                "b": " Se ha descrito la plataforma como servicio (Plattform as aService, en adelante PaaS": ", identificando su estructura y explicando su funcionamiento.",
-                                "c": " Se ha descrito la infraestructura como servicio (Infraestructure as aService, en adelante IaaS": ", identificando su estructura y explicando su funcionamiento.",
-                                "d": " Se ha descrito el servicio de arquitectura sin servidor (en adelante,Serverless": ", identificando su estructura y explicando su funcionamiento.",
+                                "a": " Se ha descrito el software como servicio (Software as aService, en adelante SaaS),identificando su estructura y explicando su funcionamiento.",
+                                "b": " Se ha descrito la plataforma como servicio (Plattform as aService, en adelante PaaS) identificando su estructura y explicando su funcionamiento.",
+                                "c": " Se ha descrito la infraestructura como servicio (Infraestructure as aService, en adelante IaaS) identificando su estructura y explicando su funcionamiento.",
+                                "d": " Se ha descrito el servicio de arquitectura sin servidor (en adelante,Serverless) identificando su estructura y explicando su funcionamiento.",
                                 "e": " Se han comparado los principales servicios en la arquitectura de nube, identificando el alcance de cada uno de ellos."
                     }},
                 "RA04": {
@@ -97,7 +97,7 @@
                         "CriteriosEvaluacion": {
                                 "a": " Se han efectuado conexiones a plataformas en la nube para el uso de interfaces gráficas mediante un navegador, autenticándose para acceder a los servicios de la plataforma.",
                                 "b": " Se han configurado elementos tales como el idioma, aspecto gráfico y preferencias, entre otros, en la interfaz gráfica de la plataforma en la nube.",
-                                "c": " Se han descargado e instalado interfaces de líneas de comandos en el entorno a utilizar (en local, en un servidor o en una plataforma administrada": ", inicializando la interfaz y autenticándose.",
+                                "c": " Se han descargado e instalado interfaces de líneas de comandos en el entorno a utilizar (en local, en un servidor o en una plataforma administrada), inicializando la interfaz y autenticándose.",
                                 "d": " Se han administrado las configuraciones almacenadas en plataforma a través de la interfaz de línea de comandos previamente instalada.",
                                 "e": " Se han descargado librerías de cliente para los lenguajes de computación a utilizar, usando los gestores de dependencias."
                     }},
@@ -107,7 +107,7 @@
                                 "a": " Se han creado nodos que representan una entidad o empresa, siguiendo unas directrices, administrando su configuración para asegurar el funcionamiento de los recursos dependientes de los mismos.",
                                 "b": " Se han creado unos niveles intermedios de agrupación de recursos, estableciendo una jerarquía en los mismos y configurando unas políticas en función de unas directrices respecto a la arquitectura.",
                                 "c": " Se han creado contenedores de recursos de bajo nivel, gestionando las configuraciones de seguridad y control de accesos, facturación y restricciones para permitir el posterior despliegue de recursos.",
-                                "d": " Se han implementado políticas de configuraciones comunes a todos o parte de los recursos de la entidad (restricciones, configuraciones de seguridad o etiquetado de recursos, entre otras": " en cada uno de los niveles de la jerarquía.",
+                                "d": " Se han implementado políticas de configuraciones comunes a todos o parte de los recursos de la entidad (restricciones, configuraciones de seguridad o etiquetado de recursos, entre otras) en cada uno de los niveles de la jerarquía.",
                                 "e": " Se han asignado parámetros de configuración para que las configuraciones comunes se hereden y apliquen automáticamente en los recursos y faciliten la gobernanza de los recursos en la nube y la autonomía y productividad de cada individuo o grupo de trabajo."
                         }},
 
@@ -118,7 +118,7 @@
                                 "b": " Se han creado identidades para las personas usuarias, administrándolas para permitir su autenticación en los servicios, agrupándolas en grupos y/o dominios.",
                                 "c": " Se han ubicado las identidades en el entorno de nube, sincronizándolas con otro entorno externo a la entidad proveedora o delegando la validación a otro entorno físico o nube.",
                                 "d": " Se han implementado prácticas de seguridad digital en la creación y administración de identidades para las personas usuarias tales como políticas de contraseñas, doble factor de autenticación, entre otras.",
-                                "e": " Se ha aplicado el principio JIT (Just in Time": " en la creación de cuentas de servicio para hacerlo exactamente en el momento en que se requieran, asignándolas a cada programa o recurso que requiera autenticación.",
+                                "e": " Se ha aplicado el principio JIT (Just in Time) en la creación de cuentas de servicio para hacerlo exactamente en el momento en que se requieran, asignándolas a cada programa o recurso que requiera autenticación.",
                                 "f": " Se han administrado unos roles personalizados para cada caso en que no se ajusten las operaciones previstas, por tener asignados más o menos permisos individuales de los que requiere para su actividad.",
                                 "g": " Se han asignado roles para cada identidad según los principios de «mínimo privilegio» y «continuidad de negocio», para permitir acceder o administrar los recursos y aplicaciones a unas personas y programas.",
                                 "h": " Se han aplicado los principios de «mínimo privilegio» y «continuidad de negocio» en la configuración de identidades, roles y los permisos asignados.",
@@ -129,7 +129,7 @@
                         "CriteriosEvaluacion": {
                                 "a": " Se ha diferenciado entre la seguridad «de la nube» y la seguridad «en la nube», atribuyendo las responsabilidades de su protección a la entidad proveedora y a la clientela, respectivamente.",
                                 "b": " Se ha reconocido el alcance de la responsabilidad de la entidad proveedora sobre la protección de la infraestructura que ejecuta los servicios en la nube, identificando los componentes hardware y software, las redes e instalaciones que hacen posible el servicio, entre otros.",
-                                "c": " Se ha reconocido el alcance de la responsabilidad de la clientela respecto a las tareas de configuración a su cargo (infraestructura, sistema operativo huésped, aplicaciones, firewall, plataformas, datos, recursos o herramientas de IAM, entre otras": ".",
+                                "c": " Se ha reconocido el alcance de la responsabilidad de la clientela respecto a las tareas de configuración a su cargo (infraestructura, sistema operativo huésped, aplicaciones, firewall, plataformas, datos, recursos o herramientas de IAM, entre otras)",
                                 "d": " Se han reconocido los factores que determinan la distribución de la responsabilidad en función del caso de uso específico.",
                                 "e": " Se ha reconocido la distribución de responsabilidades entre la entidad proveedora y la clientela acerca del funcionamiento del entorno de TI y de la administración, el funcionamiento y la verificación de los controles de TI, diferenciando entre controles heredados, compartidos y específicos de la clientela."
                         }},
@@ -139,7 +139,7 @@
                                 "a": " Se han enumerado las posibilidades de identificación de recursos para facilitar la gestión, control y análisis de costes entre otros, explicando cómo etiquetarlos según esa nomenclatura.",
                                 "b": " Se han creado cuentas de gasto estableciendo los términos y métodos de pago, vinculando los recursos a un centro de gasto.",
                                 "c": " Se han enumerado herramientas de planificación de gastos, explicando sus características, ventajas e inconvenientes.",
-                                "d": " Se han establecido previsiones de gastos, según las métricas de los recursos a utilizar (carga, número de usuarios/as, datos almacenados, entre otros": ".",
+                                "d": " Se han establecido previsiones de gastos, según las métricas de los recursos a utilizar (carga, número de usuarios/as, datos almacenados, entre otros)",
                                 "e": " Se han configurado las alertas de gastos, estableciendo canales de notificación a las personas responsables y/o acciones automáticas que reaccionen a dichos eventos.",
                                 "f": " Se han identificado costes relativos a cada recurso y/o aplicación en conjunto, analizando costes mensuales o diarios y utilizando las técnicas y servicios disponibles para ello."
                         }},
@@ -150,15 +150,15 @@
                                 "b": " Se han respetado los límites y contemplado las recomendaciones de buenas prácticas a la hora de distribuir las cuotas indicadas por fábrica, tanto a efectos de coste como de limitaciones generales que pudieran afectar a todo el entorno de nube.",
                                 "c": " Se han establecido las cuotas de despliegue de recursos y utilización de servicios, configurándolas una a una.",
                                 "d": " Se han ampliado o reducido las cuotas de despliegue de recursos y utilización de servicios cuando se requiera incrementar o restringir un número máximo de recursos posible en un entorno concreto.",
-                                "e": " Se han habilitado las API de cada servicio, deshabilitando aquellas correspondientes a servicios que no se prevean utilizar.",
+                                "e": " Se han habilitado las API de cada servicio, deshabilitando aquellas correspondientes a servicios que no se prevean utilizar."
                                 }
         }
 
         },
                 "horas": "70",
                 "UnidadesCompetenciaAcreditadas": {},
-                "ObjetivosGenerales ": ["e","j","q"],
-                "CompetenciasTitulo" : ["a","e","f","i","j","v","y","z" ]
+                "ObjetivosGenerales ": ["e","j"],
+                "CompetenciasTitulo" : ["a","e","f","i","j"]
         },
     "CVOPS190":{
             "nombre":"Introducción a la Programación",
