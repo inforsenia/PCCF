@@ -36,7 +36,7 @@ dependences:
 
 dependences-fedora:
 	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
-	sudo dnf install  make pandoc libreoffice poppler-utils texlive.noarch texlive-background.noarch texlive-pagecolor.noarch texlive-csquotes.noarch texlive-sourcesanspro.noarch texlive-fontsextra.noarch
+	sudo dnf install  make pandoc libreoffice poppler-utils texlive.noarch texlive-background.noarch texlive-pagecolor.noarch texlive-csquotes.noarch texlive-sourcesanspro.noarch texlive-fontsextra.noarch texlive-collection-fontsextra.noarch texlive-titling.noarch texlive-titlecaps.noarch
 
 	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
 	sudo dnf install  make python3-jinja2 python3-numpy python3-openpyxl.noarch python3-pandas

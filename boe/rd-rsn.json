@@ -41,30 +41,27 @@
 	}
     },
     "ObjetivosGenerales":{
-        "a" : "Organizar los componentes físicos y lógicos que forman un sistema microinformático, interpretando su documentación técnica, para aplicar los medios y métodos adecuados a su instalación, montaje y mantenimiento.",
-        "b" : "Identificar, ensamblar y conectar componentes y periféricos utilizando las herramientas adecuadas, aplicando procedimientos, normas y protocolos de calidad y seguridad, para montar y configurar ordenadores y periféricos.",
-        "c" : "Reconocer y ejecutar los procedimientos de instalación de sistemas operativos y programas de aplicación, aplicando protocolos de calidad, para instalar y configurar sistemas microinformáticos.",
-        "d" : "Representar la posición de los equipos, líneas de transmisión y demás elementos de una red local, analizando la morfología, condiciones y características del despliegue, para replantear el cableado y la electrónica de la red.",
-        "e" : "Ubicar y fijar equipos, líneas, canalizaciones y demás elementos de una red local cableada, inalámbrica o mixta, aplicando procedimientos de montaje y protocolos de calidad y seguridad, para instalar y configurar redes locales.",
-        "f" : "Interconectar equipos informáticos, dispositivos de red local y de conexión con redes de área extensa, ejecutando los procedimientos para instalar y configurar redes locales.",
-        "g" : "Localizar y reparar averías y disfunciones en los componentes físicos y lógicos para mantener sistemas microinformáticos y redes locales.",
-        "h" : "Sustituir y ajustar componentes físicos y lógicos para mantener sistemas microinformáticos y redes locales.",
-        "i" : "Interpretar y seleccionar información para elaborar documentación técnica y administrativa.",
-        "j" : "Valorar el coste de los componentes físicos, lógicos y la mano de obra, para elaborar presupuestos.",
-        "k" : "Reconocer características y posibilidades de los componentes físicos y lógicos, para asesorar y asistir a clientes.",
-        "l" : "Detectar y analizar cambios tecnológicos para elegir nuevas alternativas y mantenerse actualizado dentro del sector.",
-        "m" : "Reconocer y valorar incidencias, determinando sus causas y describiendo las acciones correctoras para resolverlas.",
-        "n" : "Analizar y describir procedimientos de calidad, prevención de riesgos laborales y medioambientales, señalando las acciones a realizar en los casos definidos para actuar de acuerdo con las normas estandarizadas.",
-        "ñ" : "Valorar las actividades de trabajo en un proceso productivo, identificando su aportación al proceso global para conseguir los objetivos de la producción.",
-        "o" : "Identificar y valorar las oportunidades de aprendizaje y empleo, analizando las ofertas y demandas del mercado laboral para gestionar su carrera profesional.",
-        "p" : "Reconocer las oportunidades de negocio, identificando y analizando demandas del mercado para crear y gestionar una pequeña empresa.",
-        "q" : "Reconocer sus derechos y deberes como agente activo en la sociedad, analizando el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático."
+        "a":"Preparar las interfaces de acceso y uso, configurándolas para acceder a los servicios de la plataforma en la nube.",
+        "b" : "Gestionar recursos en la nube, organizándolos mediante jerarquías, así como administrar las identidades y controles de acceso a dichos recursos, manteniendo la seguridad digital mediante la autenticación y autorización.",
+        "c" : "Configurar la facturación de los recursos desplegados en la nube, que permita la imputación de costes a los centros de gastos, así como la predicción de costes futuros.",
+        "d" : "Desplegar y administrar la infraestructura de red asociada a las aplicaciones, teniendo en cuenta los requerimientos de privacidad, seguridad de sistemas y disponibilidad para permitir la conectividad entre recursos de la nube y entornos on-premises o multinube.",
+        "e" : "Monitorizar los recursos en la nube, con el fin de detectar y resolver problemas, o bien identificar oportunidades de mejora.",
+        "f" : "Automatizar el despliegue de infraestructura en la nube mediante servicios de infraestructura como código.",
+        "g" : "Diseñar soluciones arquitectónicas que empleen servicios administrados, con el fin de reducir la sobrecarga administrativa de dicha solución.",
+        "h" : "Diseñar soluciones que utilicen los servicios de cómputo, almacenamiento, redes, bases de datos que estén alineados con las buenas prácticas desde los pilares de la resiliencia, optimización de costes, seguridad y rendimiento.",
+        "i" : "Generar entornos seguros en el desarrollo de su trabajo y el de su equipo, supervisando y aplicando la normativa vigente en materia de prevención de riesgos laborales y medioambientales, de acuerdo con lo establecido y los objetivos de la empresa.",
+        "j" : "Adaptarse a las nuevas situaciones laborales originadas por cambios tecnológicos y organizativos en su actividad laboral.",
+        "k" : "Cumplir las tareas propias de su nivel con autonomía y responsabilidad, efectuándolas de forma individual o como miembro de un equipo de trabajo.",
+        "l" : "Comunicarse eficazmente, respetando la autonomía y competencia de las personas que intervienen en su ámbito de trabajo.",
+        "m" : "Cumplir las normas de calidad, de accesibilidad universal y diseño para todas las personas que afectan a su actividad profesional.",
+        "n" : "Actuar con espíritu emprendedor e iniciativa personal en la elección o aplicación de los procedimientos de su actividad profesional.",
+        "ñ" : "Ejercer sus derechos y cumplir con las obligaciones derivadas de su actividad profesional, de acuerdo con lo establecido en la legislación vigente, participando activamente en la vida económica, social y cultural."
     },
     "ModulosProfesionales":{
 	"5160":{
 	    "nombre":"Fundamentos y configuración inicial de servicios en la nube.",
 		"acronimo":"FUN",
-	    "creditos":"70",
+	    "creditos":"8",
 	    "ResultadosAprendizaje":{
                 "RA01": {
                     "Resultado": " Evalúa la localización de la infraestructura física de Tecnologías de la Información (TI), diferenciando entre su ubicación en instalaciones propias (on premise) y en la nube (cloud).",
