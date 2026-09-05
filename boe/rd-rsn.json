@@ -64,189 +64,342 @@
 	    "creditos":"8",
 	    "ResultadosAprendizaje":{
                 "RA01": {
-                    "Resultado": " Evalúa la localización de la infraestructura física de Tecnologías de la Información (TI), diferenciando entre su ubicación en instalaciones propias (on premise) y en la nube (cloud).",
+                    "Resultado": " Evalúa la localización de la infraestructura física de Tecnologías de la Información (TI), diferenciando entre su ubicación en instalaciones propias (on premise) y en la nube (cloud).",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha definido el concepto de infraestructura de nube, diferenciándolo del de infraestructura propia (on premise)",
-                                "b": " Se ha descrito el funcionamiento de la infraestructura de nube, vinculándolo con su modelo de negocio.",
-                                "c": " Se han analizado los beneficios de la infraestructura de nube con respecto a la infraestructura propia (on premise)",
-                                "d": " Se ha diferenciado entre la infraestructura de nube y la arquitectura de nube, relacionándolos con los recursos de computación y la ejecución de aplicaciones web.",
-                                "e": " Se ha determinado el conjunto de componentes hardware y software básico de la infraestructura en la nube, relacionándolo con el aprovisionamiento de recursos virtuales y la implementación de cargas de trabajo en la nube.",
-                                "f": " Se han caracterizado los componentes de la infraestructura de nube, especificando lo relativo a servidores, redes, almacenamiento y software."
+                                "a": " Se ha definido el concepto de infraestructura de nube, diferenciándolo del de infraestructura propia (on premise)",
+                                "b": " Se ha descrito el funcionamiento de la infraestructura de nube, vinculándolo con su modelo de negocio.",
+                                "c": " Se han analizado los beneficios de la infraestructura de nube con respecto a la infraestructura propia (on premise)",
+                                "d": " Se ha diferenciado entre la infraestructura de nube y la arquitectura de nube, relacionándolos con los recursos de computación y la ejecución de aplicaciones web.",
+                                "e": " Se ha determinado el conjunto de componentes hardware y software básico de la infraestructura en la nube, relacionándolo con el aprovisionamiento de recursos virtuales y la implementación de cargas de trabajo en la nube.",
+                                "f": " Se han caracterizado los componentes de la infraestructura de nube, especificando lo relativo a servidores, redes, almacenamiento y software."
                     }},
                 "RA02": {
-                    "Resultado": " Escoge el modelo de implementación o despliegue de infraestructura de nube más apropiado para la organización en función de las necesidades de funcionalidad, seguridad, escalabilidad o costes, valorando las opciones disponibles en el mercado.",
+                    "Resultado": " Escoge el modelo de implementación o despliegue de infraestructura de nube más apropiado para la organización en función de las necesidades de funcionalidad, seguridad, escalabilidad o costes, valorando las opciones disponibles en el mercado.",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha descrito el modelo de nube pública, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
-                                "b": " Se ha descrito el modelo de nube privada, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
-                                "c": " Se ha descrito el modelo de nube híbrida, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
-                                "d": " Se ha diferenciado entre nubes públicas y privadas, valorando la configuración más adecuada en función de las necesidades de la organización.",
-                                "e": " Se ha diferenciado entre servicios de nube híbrida y entornos multinube, identificando requisitos y casos de uso específicos.",
-                                "f": " Se han analizado entornos híbridos y de multinube, identificando sus respectivas necesidades de administración y gobernanza."
+                                "a": " Se ha descrito el modelo de nube pública, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
+                                "b": " Se ha descrito el modelo de nube privada, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
+                                "c": " Se ha descrito el modelo de nube híbrida, esquematizándolo y relacionándolo con la propiedad de los recursos y su uso compartido.",
+                                "d": " Se ha diferenciado entre nubes públicas y privadas, valorando la configuración más adecuada en función de las necesidades de la organización.",
+                                "e": " Se ha diferenciado entre servicios de nube híbrida y entornos multinube, identificando requisitos y casos de uso específicos.",
+                                "f": " Se han analizado entornos híbridos y de multinube, identificando sus respectivas necesidades de administración y gobernanza."
                     }},
                 "RA03": {
-                    "Resultado": " Reconoce los principales modelos de servicio en la arquitectura de nube en función de los recursos requeridos para alcanzar objetivos y necesidades a cubrir.",
+                    "Resultado": " Reconoce los principales modelos de servicio en la arquitectura de nube en función de los recursos requeridos para alcanzar objetivos y necesidades a cubrir.",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha descrito el software como servicio (Software as aService, en adelante SaaS),identificando su estructura y explicando su funcionamiento.",
-                                "b": " Se ha descrito la plataforma como servicio (Plattform as aService, en adelante PaaS) identificando su estructura y explicando su funcionamiento.",
-                                "c": " Se ha descrito la infraestructura como servicio (Infraestructure as aService, en adelante IaaS) identificando su estructura y explicando su funcionamiento.",
-                                "d": " Se ha descrito el servicio de arquitectura sin servidor (en adelante,Serverless) identificando su estructura y explicando su funcionamiento.",
-                                "e": " Se han comparado los principales servicios en la arquitectura de nube, identificando el alcance de cada uno de ellos."
+                                "a": " Se ha descrito el software como servicio (Software as aService, en adelante SaaS),identificando su estructura y explicando su funcionamiento.",
+                                "b": " Se ha descrito la plataforma como servicio (Plattform as aService, en adelante PaaS) identificando su estructura y explicando su funcionamiento.",
+                                "c": " Se ha descrito la infraestructura como servicio (Infraestructure as aService, en adelante IaaS) identificando su estructura y explicando su funcionamiento.",
+                                "d": " Se ha descrito el servicio de arquitectura sin servidor (en adelante,Serverless) identificando su estructura y explicando su funcionamiento.",
+                                "e": " Se han comparado los principales servicios en la arquitectura de nube, identificando el alcance de cada uno de ellos."
                     }},
                 "RA04": {
-                    "Resultado": " Prepara los interfaces de acceso y uso, configurándolos para acceder a los servicios de la plataforma en la nube:",
+                    "Resultado": " Prepara los interfaces de acceso y uso, configurándolos para acceder a los servicios de la plataforma en la nube:",
                         "CriteriosEvaluacion": {
-                                "a": " Se han efectuado conexiones a plataformas en la nube para el uso de interfaces gráficas mediante un navegador, autenticándose para acceder a los servicios de la plataforma.",
-                                "b": " Se han configurado elementos tales como el idioma, aspecto gráfico y preferencias, entre otros, en la interfaz gráfica de la plataforma en la nube.",
-                                "c": " Se han descargado e instalado interfaces de líneas de comandos en el entorno a utilizar (en local, en un servidor o en una plataforma administrada), inicializando la interfaz y autenticándose.",
-                                "d": " Se han administrado las configuraciones almacenadas en plataforma a través de la interfaz de línea de comandos previamente instalada.",
-                                "e": " Se han descargado librerías de cliente para los lenguajes de computación a utilizar, usando los gestores de dependencias."
+                                "a": " Se han efectuado conexiones a plataformas en la nube para el uso de interfaces gráficas mediante un navegador, autenticándose para acceder a los servicios de la plataforma.",
+                                "b": " Se han configurado elementos tales como el idioma, aspecto gráfico y preferencias, entre otros, en la interfaz gráfica de la plataforma en la nube.",
+                                "c": " Se han descargado e instalado interfaces de líneas de comandos en el entorno a utilizar (en local, en un servidor o en una plataforma administrada), inicializando la interfaz y autenticándose.",
+                                "d": " Se han administrado las configuraciones almacenadas en plataforma a través de la interfaz de línea de comandos previamente instalada.",
+                                "e": " Se han descargado librerías de cliente para los lenguajes de computación a utilizar, usando los gestores de dependencias."
                     }},
                 "RA05": {
-                    "Resultado": " Establece jerarquías de recursos para organizarlos, utilizando los niveles de organización disponibles según la entidad proveedora utilizada, siguiendo las prácticas recomendadas por la entidad proveedora.",
+                    "Resultado": " Establece jerarquías de recursos para organizarlos, utilizando los niveles de organización disponibles según la entidad proveedora utilizada, siguiendo las prácticas recomendadas por la entidad proveedora.",
                         "CriteriosEvaluacion": {
-                                "a": " Se han creado nodos que representan una entidad o empresa, siguiendo unas directrices, administrando su configuración para asegurar el funcionamiento de los recursos dependientes de los mismos.",
-                                "b": " Se han creado unos niveles intermedios de agrupación de recursos, estableciendo una jerarquía en los mismos y configurando unas políticas en función de unas directrices respecto a la arquitectura.",
-                                "c": " Se han creado contenedores de recursos de bajo nivel, gestionando las configuraciones de seguridad y control de accesos, facturación y restricciones para permitir el posterior despliegue de recursos.",
-                                "d": " Se han implementado políticas de configuraciones comunes a todos o parte de los recursos de la entidad (restricciones, configuraciones de seguridad o etiquetado de recursos, entre otras) en cada uno de los niveles de la jerarquía.",
-                                "e": " Se han asignado parámetros de configuración para que las configuraciones comunes se hereden y apliquen automáticamente en los recursos y faciliten la gobernanza de los recursos en la nube y la autonomía y productividad de cada individuo o grupo de trabajo."
+                                "a": " Se han creado nodos que representan una entidad o empresa, siguiendo unas directrices, administrando su configuración para asegurar el funcionamiento de los recursos dependientes de los mismos.",
+                                "b": " Se han creado unos niveles intermedios de agrupación de recursos, estableciendo una jerarquía en los mismos y configurando unas políticas en función de unas directrices respecto a la arquitectura.",
+                                "c": " Se han creado contenedores de recursos de bajo nivel, gestionando las configuraciones de seguridad y control de accesos, facturación y restricciones para permitir el posterior despliegue de recursos.",
+                                "d": " Se han implementado políticas de configuraciones comunes a todos o parte de los recursos de la entidad (restricciones, configuraciones de seguridad o etiquetado de recursos, entre otras) en cada uno de los niveles de la jerarquía.",
+                                "e": " Se han asignado parámetros de configuración para que las configuraciones comunes se hereden y apliquen automáticamente en los recursos y faciliten la gobernanza de los recursos en la nube y la autonomía y productividad de cada individuo o grupo de trabajo."
                         }},
 
                 "RA06": {
-                    "Resultado": " Administra identidades y controles de acceso (en adelante, IAM), manteniendo la seguridad respecto a la autenticación y permisos y facilitando la realización de acciones de forma simple, rápida y eficiente para permitir la gestión de los recursos y servicios por personas y programas.",
+                    "Resultado": " Administra identidades y controles de acceso (en adelante, IAM), manteniendo la seguridad respecto a la autenticación y permisos y facilitando la realización de acciones de forma simple, rápida y eficiente para permitir la gestión de los recursos y servicios por personas y programas.",
                         "CriteriosEvaluacion": {
-                                "a": " Se han reconocido componentes administrativos relacionados con la gestión de identidades y controles de acceso, definiendo su utilidad y objetivos.",
-                                "b": " Se han creado identidades para las personas usuarias, administrándolas para permitir su autenticación en los servicios, agrupándolas en grupos y/o dominios.",
-                                "c": " Se han ubicado las identidades en el entorno de nube, sincronizándolas con otro entorno externo a la entidad proveedora o delegando la validación a otro entorno físico o nube.",
-                                "d": " Se han implementado prácticas de seguridad digital en la creación y administración de identidades para las personas usuarias tales como políticas de contraseñas, doble factor de autenticación, entre otras.",
-                                "e": " Se ha aplicado el principio JIT (Just in Time) en la creación de cuentas de servicio para hacerlo exactamente en el momento en que se requieran, asignándolas a cada programa o recurso que requiera autenticación.",
-                                "f": " Se han administrado unos roles personalizados para cada caso en que no se ajusten las operaciones previstas, por tener asignados más o menos permisos individuales de los que requiere para su actividad.",
-                                "g": " Se han asignado roles para cada identidad según los principios de «mínimo privilegio» y «continuidad de negocio», para permitir acceder o administrar los recursos y aplicaciones a unas personas y programas.",
-                                "h": " Se han aplicado los principios de «mínimo privilegio» y «continuidad de negocio» en la configuración de identidades, roles y los permisos asignados.",
-                                "i": " Se han almacenado en repositorios de secretos las credenciales, certificados, claves e información sensible en general, asegurando su acceso sólo a las personas y programas autorizados."
+                                "a": " Se han reconocido componentes administrativos relacionados con la gestión de identidades y controles de acceso, definiendo su utilidad y objetivos.",
+                                "b": " Se han creado identidades para las personas usuarias, administrándolas para permitir su autenticación en los servicios, agrupándolas en grupos y/o dominios.",
+                                "c": " Se han ubicado las identidades en el entorno de nube, sincronizándolas con otro entorno externo a la entidad proveedora o delegando la validación a otro entorno físico o nube.",
+                                "d": " Se han implementado prácticas de seguridad digital en la creación y administración de identidades para las personas usuarias tales como políticas de contraseñas, doble factor de autenticación, entre otras.",
+                                "e": " Se ha aplicado el principio JIT (Just in Time) en la creación de cuentas de servicio para hacerlo exactamente en el momento en que se requieran, asignándolas a cada programa o recurso que requiera autenticación.",
+                                "f": " Se han administrado unos roles personalizados para cada caso en que no se ajusten las operaciones previstas, por tener asignados más o menos permisos individuales de los que requiere para su actividad.",
+                                "g": " Se han asignado roles para cada identidad según los principios de «mínimo privilegio» y «continuidad de negocio», para permitir acceder o administrar los recursos y aplicaciones a unas personas y programas.",
+                                "h": " Se han aplicado los principios de «mínimo privilegio» y «continuidad de negocio» en la configuración de identidades, roles y los permisos asignados.",
+                                "i": " Se han almacenado en repositorios de secretos las credenciales, certificados, claves e información sensible en general, asegurando su acceso sólo a las personas y programas autorizados."
                         }},
                 "RA07": {
-                    "Resultado": " Reconoce el modelo de responsabilidad compartida de la entidad proveedora de nube, teniendo en cuenta la distribución de responsabilidades en relación con la seguridad digital y la conformidad y cómo se aplica en general a la operación en la nube, determinando cómo se aplica a su caso de uso específico.",
+                    "Resultado": " Reconoce el modelo de responsabilidad compartida de la entidad proveedora de nube, teniendo en cuenta la distribución de responsabilidades en relación con la seguridad digital y la conformidad y cómo se aplica en general a la operación en la nube, determinando cómo se aplica a su caso de uso específico.",
                         "CriteriosEvaluacion": {
-                                "a": " Se ha diferenciado entre la seguridad «de la nube» y la seguridad «en la nube», atribuyendo las responsabilidades de su protección a la entidad proveedora y a la clientela, respectivamente.",
-                                "b": " Se ha reconocido el alcance de la responsabilidad de la entidad proveedora sobre la protección de la infraestructura que ejecuta los servicios en la nube, identificando los componentes hardware y software, las redes e instalaciones que hacen posible el servicio, entre otros.",
-                                "c": " Se ha reconocido el alcance de la responsabilidad de la clientela respecto a las tareas de configuración a su cargo (infraestructura, sistema operativo huésped, aplicaciones, firewall, plataformas, datos, recursos o herramientas de IAM, entre otras)",
-                                "d": " Se han reconocido los factores que determinan la distribución de la responsabilidad en función del caso de uso específico.",
-                                "e": " Se ha reconocido la distribución de responsabilidades entre la entidad proveedora y la clientela acerca del funcionamiento del entorno de TI y de la administración, el funcionamiento y la verificación de los controles de TI, diferenciando entre controles heredados, compartidos y específicos de la clientela."
+                                "a": " Se ha diferenciado entre la seguridad «de la nube» y la seguridad «en la nube», atribuyendo las responsabilidades de su protección a la entidad proveedora y a la clientela, respectivamente.",
+                                "b": " Se ha reconocido el alcance de la responsabilidad de la entidad proveedora sobre la protección de la infraestructura que ejecuta los servicios en la nube, identificando los componentes hardware y software, las redes e instalaciones que hacen posible el servicio, entre otros.",
+                                "c": " Se ha reconocido el alcance de la responsabilidad de la clientela respecto a las tareas de configuración a su cargo (infraestructura, sistema operativo huésped, aplicaciones, firewall, plataformas, datos, recursos o herramientas de IAM, entre otras)",
+                                "d": " Se han reconocido los factores que determinan la distribución de la responsabilidad en función del caso de uso específico.",
+                                "e": " Se ha reconocido la distribución de responsabilidades entre la entidad proveedora y la clientela acerca del funcionamiento del entorno de TI y de la administración, el funcionamiento y la verificación de los controles de TI, diferenciando entre controles heredados, compartidos y específicos de la clientela."
                         }},
                 "RA08": {
-                    "Resultado": " Configura la facturación de los recursos desplegados para gestionar su pago y controlar y analizar los costes incurridos, siguiendo indicaciones contables e imputando los costes a los centros de gastos establecidos.",
+                    "Resultado": " Configura la facturación de los recursos desplegados para gestionar su pago y controlar y analizar los costes incurridos, siguiendo indicaciones contables e imputando los costes a los centros de gastos establecidos.",
                         "CriteriosEvaluacion": {
-                                "a": " Se han enumerado las posibilidades de identificación de recursos para facilitar la gestión, control y análisis de costes entre otros, explicando cómo etiquetarlos según esa nomenclatura.",
-                                "b": " Se han creado cuentas de gasto estableciendo los términos y métodos de pago, vinculando los recursos a un centro de gasto.",
-                                "c": " Se han enumerado herramientas de planificación de gastos, explicando sus características, ventajas e inconvenientes.",
-                                "d": " Se han establecido previsiones de gastos, según las métricas de los recursos a utilizar (carga, número de usuarios/as, datos almacenados, entre otros)",
-                                "e": " Se han configurado las alertas de gastos, estableciendo canales de notificación a las personas responsables y/o acciones automáticas que reaccionen a dichos eventos.",
-                                "f": " Se han identificado costes relativos a cada recurso y/o aplicación en conjunto, analizando costes mensuales o diarios y utilizando las técnicas y servicios disponibles para ello."
+                                "a": " Se han enumerado las posibilidades de identificación de recursos para facilitar la gestión, control y análisis de costes entre otros, explicando cómo etiquetarlos según esa nomenclatura.",
+                                "b": " Se han creado cuentas de gasto estableciendo los términos y métodos de pago, vinculando los recursos a un centro de gasto.",
+                                "c": " Se han enumerado herramientas de planificación de gastos, explicando sus características, ventajas e inconvenientes.",
+                                "d": " Se han establecido previsiones de gastos, según las métricas de los recursos a utilizar (carga, número de usuarios/as, datos almacenados, entre otros)",
+                                "e": " Se han configurado las alertas de gastos, estableciendo canales de notificación a las personas responsables y/o acciones automáticas que reaccionen a dichos eventos.",
+                                "f": " Se han identificado costes relativos a cada recurso y/o aplicación en conjunto, analizando costes mensuales o diarios y utilizando las técnicas y servicios disponibles para ello."
                         }},
                 "RA09": {
-                    "Resultado": " Configura un entorno para el posterior despliegue de recursos, administrando las cuotas de uso y habilitando las interfaces de programación de aplicaciones (Application Programming Interface, en adelante API) requeridas en su caso, según los servicios a utilizar y el uso o número de recursos a desplegar previsto.",
+                    "Resultado": " Configura un entorno para el posterior despliegue de recursos, administrando las cuotas de uso y habilitando las interfaces de programación de aplicaciones (Application Programming Interface, en adelante API) requeridas en su caso, según los servicios a utilizar y el uso o número de recursos a desplegar previsto.",
                         "CriteriosEvaluacion": {
-                                "a": " Se han planificado los valores para las cuotas de despliegue de recursos y utilización de servicios y API, asegurándose de tener suficiente cuota disponible para el despliegue y funcionamiento de los recursos que hay que desplegar.",
-                                "b": " Se han respetado los límites y contemplado las recomendaciones de buenas prácticas a la hora de distribuir las cuotas indicadas por fábrica, tanto a efectos de coste como de limitaciones generales que pudieran afectar a todo el entorno de nube.",
-                                "c": " Se han establecido las cuotas de despliegue de recursos y utilización de servicios, configurándolas una a una.",
-                                "d": " Se han ampliado o reducido las cuotas de despliegue de recursos y utilización de servicios cuando se requiera incrementar o restringir un número máximo de recursos posible en un entorno concreto.",
-                                "e": " Se han habilitado las API de cada servicio, deshabilitando aquellas correspondientes a servicios que no se prevean utilizar."
+                                "a": " Se han planificado los valores para las cuotas de despliegue de recursos y utilización de servicios y API, asegurándose de tener suficiente cuota disponible para el despliegue y funcionamiento de los recursos que hay que desplegar.",
+                                "b": " Se han respetado los límites y contemplado las recomendaciones de buenas prácticas a la hora de distribuir las cuotas indicadas por fábrica, tanto a efectos de coste como de limitaciones generales que pudieran afectar a todo el entorno de nube.",
+                                "c": " Se han establecido las cuotas de despliegue de recursos y utilización de servicios, configurándolas una a una.",
+                                "d": " Se han ampliado o reducido las cuotas de despliegue de recursos y utilización de servicios cuando se requiera incrementar o restringir un número máximo de recursos posible en un entorno concreto.",
+                                "e": " Se han habilitado las API de cada servicio, deshabilitando aquellas correspondientes a servicios que no se prevean utilizar."
                                 }
         }
 
         },
-                "horas": "70",
+                "horas": "130",
                 "UnidadesCompetenciaAcreditadas": {},
                 "ObjetivosGenerales ": ["e","j"],
                 "CompetenciasTitulo" : ["a","e","f","i","j"]
         },
-    "CVOPS190":{
-            "nombre":"Introducción a la Programación",
-		    "acronimo":"OPS190",
-            "horas": "100",
+    "5161":{
+            "nombre":"Administración de recursos de computación en la nube",
+		    "acronimo":"ADM",
+            "horas": "180",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : [],
             "CompetenciasTitulo" : [],
             "creditos":"-",
             "ResultadosAprendizaje":{
-            "RA01": {
-                    "Resultado": " Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.",
+"RA01": {
+                    "Resultado": "  Utiliza técnicas de despliegue de instancias de computación y grupos de cómputo para usar los recursos, aplicando las características definidas previamente y proporcionando capacidades de autoescalado, para obtener un entorno de trabajo sobre el que configurar la capacidad de procesamiento según las necesidades.",
                         "CriteriosEvaluacion": {
-                                "a": "Se han identificado los bloques que componen la estructura de un programa informático.",
-                                "b": "Se han creado proyectos de desarrollo de aplicaciones",
-                                "c": "Se han utilizado entornos integrados de desarrollo.",
-                                "d": "Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.",
-                                "e": "Se ha modificado el código de un programa para crear y utilizar variables.",
-                                "f": "Se han creado y utilizado constantes y literales.",
-                                "g": "Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.",
-                                "h": "Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.",
-                                "i": "Se han introducido comentarios en el código."}},
-            "RA02": {
-                    "Resultado": " Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.",
+                                "a": "  Se han elegido una región y zona de disponibilidad, interpretando las necesidades de una arquitectura, tales como alta disponibilidad, localización de la plataforma o requisitos de red, entre otras.",
+                                "b": "  Se ha creado una plantilla de ejecución de cómputo, en el caso de grupos de escalado o para definir instancias homogéneas, incluyendo el tipo de instancia, sus características de CPU, memoria, reserva de recursos en la plataforma y almacenamiento.",
+                                "c": "  Se ha seleccionado una opción de computación del listado proporcionado por la entidad proveedora de nube, tomando el elemento cuyas características de CPU, memoria y modo de virtualización se correspondan con unos criterios funcionales, económicos y operativos.",
+                                "d": "  Se han reservado los recursos en la plataforma según la opción de computación seleccionada.",
+                                "e": "  Se han usado plantillas para homogeneizar el proceso de selección de la opción de computación, en caso de disponer de ellas.",
+                                "f": "  Se han modificado recursos de computación, en su caso, en la configuración de la instancia de cómputo, analizando requisitos de tamaño, velocidad, memoria y características especiales de replicación.",
+                                "g": "  Se ha definido un comportamiento automatizado asociado al grupo de escalado asegurando que, ante cambios de las cargas de trabajo, los recursos se crean y destruyen de la forma solicitada.",
+                                "h": "  Se han seleccionado los recursos de monitorización entre los disponibles en la entidad proveedora de nube, para supervisar el estado y rendimiento de la instancia.",
+                                "i": "  Se ha administrado la configuración de seguridad en la instancia, garantizando exclusivamente los accesos a puertos, protocolos y personas usuarias.",
+                                "j": "  Se han creado etiquetas que identifiquen las instancias de computación dentro de una plataforma, asignándolas de forma unívoca, indicando proyecto asociado y rol dentro del mismo, entre otra información."}},
+"RA02": {
+                    "Resultado": "  Aplica técnicas de despliegue de contenedores, partiendo de imágenes almacenadas en un registro al efecto (hub), para ejecutar aplicaciones basadas en estos recursos según las necesidades.",
                         "CriteriosEvaluacion": {
-                                "a": "Se han identificado los fundamentos de la programación orientada a objetos.",
-                                "b": "Se han escrito programas simples.",
-                                "c": "Se han instanciado objetos a partir de clases predefinidas.",
-                                "d": "Se han utilizado métodos y propiedades de los objetos.",
-                                "e": "Se han escrito llamadas a métodos estáticos.",
-                                "f": "Se han utilizado parámetros en la llamada a métodos.",
-                                "g": "Se han incorporado y utilizado librerías de objetos.",
-                                "h": "Se han utilizado constructores.",
-                                "i": "Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples."}},
-            "RA03": {
-                    "Resultado": " Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.",
+                                "a": "  Se ha elegido una región y zona de disponibilidad, interpretando las necesidades de la arquitectura, tales como alta disponibilidad, localización de la plataforma o requisitos de red.",
+                                "b": "  Se han administrado las imágenes para el despliegue de los componentes de las aplicaciones sobre contenedores, incluyendo localización y descarga, configuración y almacenaje en el registro de imágenes.",
+                                "c": "  Se han configurado características del despliegue del contenedor, mediante variables de entorno o ficheros de configuración que se aplican en el momento de inicio del contenedor.",
+                                "d": "  Se han parametrizado los recursos a cada componente (límites de CPU, privilegios de la persona usuaria de ejecución, requisitos de almacenamiento persistente, DNS e integración con otros contenedores)",
+                                "e": "  Se han organizado nodos de cómputo, haciendo uso de los grupos de cómputo o autoescalado, orquestación de balanceo y enrutado de los contenedores en la red.",
+                                "f": "  Se han añadido las opciones de monitorización del estado y rendimiento de los contenedores, bien las de la entidad proveedora de nube o bien mediante la solución de monitorización particular."}},
+"RA03": {
+                    "Resultado": "  Aplica técnicas de despliegue de la infraestructura de funciones como servicio, ejecutando componentes de aplicaciones basados en funciones desplegadas sobre cómputo.",
                         "CriteriosEvaluacion": {
-                                "a": "Se ha escrito y probado código que haga uso de estructuras de selección.",
-                                "b": "Se han utilizado estructuras de repetición.",
-                                "c": "Se han reconocido las posibilidades de las sentencias de salto.",
-                                "d": "Se ha escrito código utilizando control de excepciones.",
-                                "e": "Se han creado programas ejecutables utilizando diferentes estructuras de control.",
-                                "f": "Se han probado y depurado los programas.",
-                                "g": "Se ha comentado y documentado el código.",
-                                "h": "Se han creado excepciones.",
-                                "i": "Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo."}},
-            "RA04": {
-                    "Resultado": " Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.",
+                                "a": "  Se ha elegido la región y zona de disponibilidad, interpretando las necesidades de la arquitectura, tales como alta disponibilidad, localización de la plataforma o requisitos de red.",
+                                "b": "  Se han creado funciones como servicio, mediante codificación, utilizando funciones existentes en la plataforma, ejecutando el contenedor de cómputo con el servicio o desplegando aplicaciones ya preparadas por la entidad proveedora de la nube.",
+                                "c": "  Se han asociado permisos que posibiliten ejecutar la función como servicio, bien seleccionando un rol existente con los permisos, bien creando uno nuevo.",
+                                "d": "  Se han configurado requisitos de almacenamiento persistente para la ejecución de la función como servicio, asignando parámetros según necesidades (contenedores, almacenamiento, redes, máquinas virtuales, componentes de arquitectura, entre otros)",
+                                "e": "  Se han añadido recursos de monitorización y gestión de eventos a los ficheros de creación automatizada de infraestructura, incluyendo las configuraciones de dichos recursos y las etiquetas que identifiquen unívocamente los elementos descritos en la documentación del proyecto.",
+                                "f": "  Se ha configurado el despliegue de la función como servicio, garantizando la procedencia de los orígenes definidos.",
+                                "g": "  Se han añadido etiquetas que identifiquen unívocamente las funciones como servicio dentro de la plataforma."}},
+"RA04": {
+                    "Resultado": "  Aplica procedimientos de preparación y de automatización del backup de infraestructuras de cómputo en plataforma de la entidad proveedora de nube, asegurando los datos y el estado de los recursos desplegados según las necesidades del proyecto.",
                         "CriteriosEvaluacion": {
-                                "a": "Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.",
-                                "b": "Se han definido clases.",
-                                "c": "Se han definido propiedades y métodos.",
-                                "d": "Se han creado constructores.",
-                                "e": "Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.",
-                                "f": "Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.",
-                                "g": "Se han definido y utilizado clases heredadas.",
-                                "h": "Se han creado y utilizado métodos estáticos.",
-                                "i": "Se han creado y utilizado conjuntos y librerías de clases."}},
-            "RA05": {
-                    "Resultado": " Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.",
-                        "CriteriosEvaluacion": {
-                                "a": "Se ha utilizado la consola para realizar operaciones de entrada y salida de información.",
-                                "b": "Se han aplicado formatos en la visualización de la información.",
-                                "c": "Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.",
-                                "d": "Se han utilizado ficheros para almacenar y recuperar información.",
-                                "e": "Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.",
-                                "f": "Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.",
-                                "g": "Se han programado controladores de eventos.",
-                                "h": "Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información."}},
-            "RA06": {
-                    "Resultado": " Escribe programas que manipulen información, seleccionando y utilizando tipos avanzados de datos.",
-                        "CriteriosEvaluacion": {
-                                "a": "Se han escrito programas que utilicen matrices (arrays)",
-                                "b": "Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.",
-                                "c": "Se han utilizado listas para almacenar y procesar información.",
-                                "d": "Se han utilizado iteradores para recorrer los elementos de las listas.",
-                                "e": "Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.",
-                                "f": "Se han creado clases y métodos genéricos.",
-                                "g": "Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.",
-                                "h": "Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.",
-                                "i": "Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.",
-                                "j": "Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones."
+                                "a": "  Se ha elegido la región y zona de disponibilidad, interpretando las necesidades de la arquitectura, tales como alta disponibilidad, localización de la plataforma o requisitos de red.",
+                                "b": "  Se han creado los planes de copias de seguridad, teniendo en cuenta directrices respecto a retenciones, frecuencias de ejecución y las regiones y zonas en las que pudieran estar desplegados los recursos.",
+                                "c": "  Se ha configurado la disponibilidad de los datos, velocidad de recuperación y retención de las copias de seguridad junto con las directrices de seguridad encriptado, metainformación y duplicados a otros entornos, teniendo en cuenta las necesidades del contexto.",
+                                "d": "  Se han asociado los planes de seguridad digital a los recursos definidos en la plataforma, usando las etiquetas asociadas; asignando los recursos de forma directa o agrupando por tipo de servicio de la entidad proveedora de nube."
                                 }
-                    }
+        }
+
+    }
+    },
+    "5162":{
+            "nombre":"Administración de bases de datos y almacenamiento en la nube",
+		    "acronimo":"BDN",
+            "horas": "150",
+            "UnidadesCompetenciaAcreditadas" : {},
+            "ObjetivosGenerales" : [],
+            "CompetenciasTitulo" : [],
+            "creditos":"8",
+            "ResultadosAprendizaje":{
+                "RA01": {
+                    "Resultado": " Selecciona el tipo de almacenamiento para los datos del sistema según requisitos funcionales y criterios de durabilidad, seguridad, fiabilidad, rendimiento y coste, asegurando un almacenamiento eficiente en el entorno o proyecto.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha comprobado que las operaciones de almacenamiento de objetos y de ficheros de la entidad proveedora, cumplen unos determinados requisitos funcionales y no funcionales.",
+                                "b": "Se han consultado los tipos de almacenamiento proporcionados por la entidad proveedora, a partir de la documentación del mismo, para verificar cuáles ofrecen garantías según criterios de durabilidad, fiabilidad y rendimiento especificados.",
+                                "c": "Se han descartado tipos de almacenamiento proporcionados por la entidad proveedora no disponibles en la región o regiones donde el sistema vaya a desplegarse, consultando la documentación de la entidad proveedora sobre disponibilidad geográfica.",
+                                "d": "Se ha seleccionado el tipo de almacenamiento que resulte más económico, consultando las tablas de precios de la entidad proveedora de nube.",
+                                "e": "Se han ajustado los parámetros de almacenamiento que afecten a los costes de uso del servicio (tamaño, acceso, transferencia, operaciones de lectura y escritura, replicación, copia de respaldo y recuperación, entre otros)"}},
+                    "RA02": {
+                    "Resultado": " Administra sistemas de almacenamiento de objetos en nube, configurando y monitorizando los mismos, para garantizar el almacenamiento, la seguridad digital, y los patrones de uso que mejor se ajusten a unos requisitos.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han definido nombres de contenedores (también conocidos como depósitos o buckets) y de etiquetas para metadatos, teniendo en cuenta las limitaciones técnicas de la entidad proveedora de nube.",
+                                "b": "Se ha definido una clase de almacenamiento y en su caso, un objeto para cada contenedor, teniendo en cuenta los requisitos funcionales y de costes de almacenamiento y recuperación y las limitaciones impuestas en la entidad proveedora de nube.",
+                                "c": "Se ha escogido una región geográfica de almacenamiento de objetos, seleccionándola de entre todas las soportadas por la entidad proveedora de nube, para asegurar los requisitos de latencia y coste, teniendo en cuenta las restricciones de residencia de los datos.",
+                                "d": "Se han configurado los parámetros de sistema relativos a cifrado, incluyendo en su caso la creación de claves de cifrado específicas, mediante herramientas gráficas, y/o de línea de comandos, y/o interfaces de programación (API), y/o infraestructura como código (IaC)",
+                                "e": "Se han configurado parámetros del sistema relativos a visibilidad, acceso, seguridad, monitorización, observabilidad y auditoría, para garantizar el acceso a la información únicamente a unos perfiles y/o aplicaciones definidas.",
+                                "f": "Se han configurado los parámetros de acceso público, en caso de que los requisitos especifiquen acceso HTTP o HTTPS usando un dominio personalizado, utilizando en su caso un certificado SSL proporcionado por la entidad proveedora de nube.",
+                                "g": "Se han configurado las políticas de ciclo de vida de los objetos, mediante las herramientas proporcionadas por la entidad proveedora de nube o vía IaC, para soportar cambios de clase, de versión o borrado y, en su caso, se versionen o se borren, garantizando así unas políticas de retención de datos.",
+                                "h": "Se ha configurado una política de replicación y copia de seguridad de los objetos, asegurando el proceso de recuperación en forma y tiempo."}},
+"RA03": {
+                    "Resultado": " Administra sistemas de almacenamiento de ficheros en nube, tanto en dispositivos de bloque como en sistemas de almacenamiento en red, utilizando tanto herramientas gráficas como de línea de comandos, API (Application Programming Interface), y/o IaC, garantizando el almacenamiento, la ciberseguridad, y los patrones de uso que mejor se ajusten a los requisitos.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha escogido una clase de almacenamiento teniendo en cuenta requisitos funcionales, patrones de acceso, durabilidad, costes asociados de almacenamiento y de recuperación y cualquier otra limitación.",
+                                "b": "Se ha escogido una región geográfica –y en su caso la replicación entre múltiples zonas o regiones–, para asegurar la eficiencia de latencia y coste.",
+                                "c": "Se han configurado los parámetros del sistema relativos a cifrado, mediante herramientas proporcionadas por la entidad proveedora de nube vía IaC.",
+                                "d": "Se han configurado los parámetros del sistema relativos a visibilidad, acceso, seguridad digital, monitorización, observabilidad y auditoría.",
+                                "e": "Se ha montado un dispositivo de almacenamiento o un sistema de ficheros garantizando el acceso desde los puntos de origen y estableciendo la modalidad (sólo lectura o bien lectura/escritura)",
+                                "f": "Se han aplicado cambios durante el ciclo de vida del dispositivo o sistema de ficheros, tales como cambios de tamaño reservado, cambios en la clase de almacenamiento, modificaciones en la configuración, desmontaje del sistema de ficheros y/o borrado, entre otros.",
+                                "g": "Se han configurado los mecanismos de replicación y copia de seguridad de los dispositivos y/o ficheros, asegurando que se puede recuperar en la forma y tiempo que se especifique."}},
+"RA04": {
+                    "Resultado": " Administra los sistemas de bases de datos, utilizando tanto herramientas gráficas como de línea de comandos, API, y/o IaC, garantizando el almacenamiento, la seguridad digital, y los patrones de uso que mejor se ajusten a los requisitos.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha escogido la región geográfica y, en su caso, la replicación entre múltiples zonas o regiones, para asegurar la latencia y costes eficientes, teniendo en cuenta las restricciones de residencia de los datos.",
+                                "b": "Se han configurado parámetros relativos al cifrado, incluyendo en su caso la creación de claves de cifrado específicas, mediante las herramientas proporcionadas por la entidad proveedora de nube vía IaC.",
+                                "c": "Se han configurado parámetros del sistema relativos a visibilidad, acceso, seguridad, monitorización, observabilidad y auditoría, garantizando que la información almacenada en el sistema solo es accesible por los perfiles y/o aplicaciones autorizadas.",
+                                "d": "Se han aplicado cambios propios del ciclo de vida de la base de datos (BBDD) relativos a modificación de tamaño, de capacidad de computación o de configuración, entre otros.",
+                                "e": "Se han configurado políticas o mecanismos de replicación y copia de seguridad de la BBDD, asegurando que se puede recuperar en tiempo y forma.",
+                                "f": "Se ha monitorizado activamente el rendimiento de las operaciones de inserción, actualización y consulta, mediante las herramientas proporcionadas por la entidad proveedora de nube o por la propia BBDD.",
+                                "g": "Se han efectuado optimizaciones no complejas, modificando a nivel de configuración o a nivel de rediseño del esquema o de la distribución de los datos, para garantizar unos requisitos de rendimiento y coste."}},
+"RA05": {
+                    "Resultado": " Gestiona los datos tanto desde el exterior, como entre sistemas de almacenamiento y bases de datos soportados por la entidad proveedora de nube, utilizando tanto herramientas gráficas, como de línea de comandos, API y/o IaC, para facilitar el flujo de información en el sistema.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha seleccionado una opción de transferencia y sincronización de datos teniendo en cuenta los requisitos funcionales, de latencia y de seguridad.",
+                                "b": "Se han consultado tablas detalladas de precios de la entidad proveedora de nube sobre transferencia y sincronización de datos, asegurando que se están teniendo en cuenta todos los costes de uso del servicio.",
+                                "c": "Se han configurado conexiones, utilizando las herramientas proporcionadas por la entidad proveedora de nube, para permitir el flujo de datos entre origen y destino de manera segura y eficiente.",
+                                "d": "Se han provisionado los dispositivos, en el caso de transferencia de datos offline, mediante el mecanismo establecido por la entidad proveedora de nube para que se envíe el dispositivo físico entre la entidad proveedora y la clientela, de cara a realizar la copia local de datos y el posterior envío al punto de destino, prestando especial atención a la seguridad y cifrado de los datos.",
+                                "e": "Se han configurado los parámetros del sistema relativos a visibilidad, acceso, seguridad, monitorización, observabilidad y auditoría, para garantizar que la información transferida solo se envía entre los orígenes y destinos especificados.",
+                                "f": "Se han configurado los parámetros de sincronización de datos, unidireccional y bidireccional, para que ésta se realice de forma automática y desatendida, cumpliendo requisitos de latencia.",
+                                "g": "Se han completado una importación y/o exportación de datos de manera manual o supervisada, para aquellos casos en los que los requisitos no impliquen replicación periódica.",
+                                "h": "Se ha monitorizado el proceso de importación, exportación, y/o sincronización de datos, tanto automático como manual, para identificar problemas de conectividad o integridad de las transferencias."}},
+"RA06": {
+                    "Resultado": " Administra la infraestructura de datos de nube híbrida, utilizando tanto herramientas gráficas, como de líneas de comandos, API, y/o IaC, para permitir la interoperabilidad de la nube con otros entornos, conforme a los criterios de patrones de acceso, seguridad digital, durabilidad, fiabilidad y rendimiento.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha verificado una implementación de una configuración definida, según la documentación de referencia e instrucciones sobre transferencia y sincronización de datos.",
+                                "b": "Se ha verificado la disponibilidad de mecanismos avanzados de conexión segura entre los sistemas implicados, tales como VPN o conexiones dedicadas.",
+                                "c": "Se han configurado conexiones seguras y eficientes usando SSH o VPN, en caso de conexión con el exterior, o bien mediante mecanismos de red privada proporcionados por las entidades proveedoras de nube.",
+                                "d": "Se ha configurado la visibilidad, acceso, seguridad, monitorización, observabilidad y auditoría, para garantizar que la información transferida solo se envía entre los orígenes y destinos especificados.",
+                                "e": "Se ha configurado la sincronización de datos, tanto unidireccional como bidireccional, asignando parámetros para que ésta se realice de forma automática y desatendida, cumpliendo unos requisitos de latencia.",
+                                "f": "Se ha completado la importación y/o exportación de datos de manera manual o supervisada, para aquellos casos en los que los requisitos no impliquen replicación periódica.",
+                                "g": "Se han monitorizado los procesos de importación, exportación, y/o sincronización de datos, tanto automáticos como manuales."}},
+"RA07": {
+                    "Resultado": " Administra sistemas de transformación y análisis de datos (OLAP), utilizando tanto herramientas gráficas como de línea de comandos y/o API y garantizando el almacenamiento, la seguridad, y los patrones de uso.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha seleccionado una región geográfica y en su caso, la replicación entre múltiples zonas o regiones, asegurando requisitos de latencia y coste eficientes, teniendo en cuenta las restricciones de residencia de los datos.",
+                                "b": "Se han configurado parámetros del sistema relativos a cifrado, incluyendo en su caso la creación de claves de cifrado, vía IaC.",
+                                "c": "Se han configurado parámetros del sistema relativos a visibilidad, acceso, seguridad, monitorización, observabilidad y auditoría, garantizando que la información almacenada en el sistema solo es accesible por unos perfiles y/o aplicaciones concretas.",
+                                "d": "Se ha configurado la retención y/o particionado y/o compactación de datos, asignando los parámetros del sistema OLAP relativos, para mantener el equilibrio entre la información disponible para análisis y el coste de almacenamiento.",
+                                "e": "Se han supervisado trabajos de carga y transformación de datos (ETL), validando que no existen errores en los archivos log del sistema y que el tiempo de ejecución no se degrada.",
+                                "f": "Se han configurado las políticas o mecanismos de replicación y copia de seguridad de los datos en el sistema OLAP, verificando que, en caso de pérdida accidental de la información, ésta se puede recuperar en una forma y tiempo concretos.",
+                                "g": "Se ha monitorizado activamente el rendimiento de las operaciones y el espacio de almacenamiento ocupado, mediante las herramientas proporcionadas por la entidad proveedora de nube, para detectar potenciales problemas."
+                                }
+        }
+
+            }
+    },
+    "5163":{
+            "nombre":"Administración de redes en la nube",
+		    "acronimo":"ARN",
+            "horas": "150",
+            "UnidadesCompetenciaAcreditadas" : {},
+            "ObjetivosGenerales" : [],
+            "CompetenciasTitulo" : [],
+            "creditos":"8",
+            "ResultadosAprendizaje":{
+"RA01": {
+                    "Resultado": " Aplica procedimientos de despliegue de una infraestructura de red asociada a las aplicaciones de unos sistemas, configurando la privacidad, ciberseguridad y disponibilidad, para permitir la conectividad entre recursos de la nube y otras instalaciones propias (on premise) o en otras nubes.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han configurado las redes virtuales con los rangos de direcciones IP en las zonas de disponibilidad y/o regiones, estableciendo el rango de direccionamiento privado, gestión del direccionamiento público, puertas de enlace, cortafuegos y/o grupos de seguridad, y la delegación de subredes con otros servicios de nube definidos.",
+                                "b": "Se han creado reglas de cortafuegos y/o grupos de seguridad digital para los recursos y destinos, en función de las conexiones permitidas.",
+                                "c": "Se ha configurado la resolución de nombres de zonas DNS privadas o públicas enlazadas con las redes virtuales definidas, asignando los parámetros de tipo clave‐valor, para rutas entre los recursos internos y externos.",
+                                "d": "Se han creado métodos de acceso privado a los recursos internos o en la nube de la red tales como proxies, túneles VPN (Virtual Private Network o Red Privada Virtual), enlaces privados (Private‐public endpoints) o emparejamiento (peering) entre redes virtuales, configurando el cifrado y la seguridad de la conexión, la autenticación y autorización del usuario, así como su supervisión.",
+                                "e": "Se han creado recursos de inspección, ubicándolos en determinadas localizaciones de la topología de red, para registrar y analizar el tráfico por motivos de seguridad o para la resolución de problemas.",
+                                "f": "Se ha establecido el enrutado y conexión entre sistemas locales y servicios WAN de redes, asignando los parámetros relacionados con dicha tarea, para los escenarios que lo requieran."}},
+"RA02": {
+                    "Resultado": " Configura recursos de red, asignando parámetros de balanceo y escalado horizontal y vertical, desde orígenes externos o internos, en condiciones de ciberseguridad, direccionando y enrutando el tráfico a los recursos desplegados en la nube.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han configurado los balanceadores de carga con las reglas y parámetros que permitan el tráfico hacia aplicaciones externas o internas de una hipotética organización, permitiendo el escalado de los recursos de computación.",
+                                "b": "Se han creado los recursos de resolución de nombres DNS (Sistema de nombres de dominio), permitiendo varias zonas y subzonas con registros internos o externos en las aplicaciones desplegadas.",
+                                "c": "Se han configurado las opciones de caché perimetral distribuido de la nube, estableciendo punto de conexión, host de origen, encabezado y protocolo, entre otros.",
+                                "d": "Se han establecido opciones de traducción de direccionamiento público, para compartir un pequeño número de direcciones públicas entre varios recursos.",
+                                "e": "Se ha establecido el direccionamiento público y privado para cada uno de los recursos de red que lo requieran, reservando direcciones IP estáticas tanto internas como externas teniendo en cuenta las necesidades de conectividad que tenga cada aplicación.",
+                                "f": "Se han habilitado servicios de nube para el control perimetral, cortafuegos, enrutamiento y puertas de enlace, configurando los parámetros de conectividad, protección, autorización y auditoría."}},
+"RA03":{
+                    "Resultado": " Administra redes privadas físicas y virtuales mediante herramientas de una entidad proveedora de nube y de empresas de dispositivos de conectividad, disponiendo de un entorno híbrido con conexiones privadas, directas y de alta capacidad entre los recursos locales y de nube.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han configurado redes virtuales, a través de métodos como emparejamiento de redes o redes compartidas, para permitir la conexión interna y directa entre recursos desplegados en la nube.",
+                                "b": "Se han establecido conexiones privadas a través de túneles VPN entre las redes de instalaciones locales y redes virtuales en la nube, o entre redes virtuales en la nube en varias entidades proveedoras, en condiciones de calidad, ciberseguridad y coste.",
+                                "c": "Se han establecido conexiones directas y privadas entre redes locales y las entidades proveedoras de nube, configurando el enrutamiento de los dispositivos físicos entre el entorno nube y los equipos de la organización locales.",
+                                "d": "Se han establecido las conexiones directas y de emparejamiento público de redes a través de conectividad física, permitiendo un direccionamiento de tráfico público a través de puntos de emparejamiento, garantizando calidad de servicio, latencia y coste.",
+                                "e": "Se han definido rutas dinámicas en los dispositivos de enrutamiento físicos o virtuales, permitiendo la detección automática de cambios en la topología de red.",
+                                "f": "Se han configurado las conexiones VPN site‐to‐site o point‐to‐site, siguiendo los parámetros sobre autenticación, seguridad digital, cifrado, conexión y configuración de clientes VPN."}},
+"RA04": {
+                    "Resultado": " Aplica procedimientos de configuración de la seguridad digital de los recursos, monitorizando sus conexiones, para registrar los accesos e identificar su potencial de riesgo en los sistemas.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han configurado las políticas de seguridad digital sobre los recursos de una nube, creando las reglas que permitan identificar accesos desde los orígenes y destinos de las comunicaciones para su supervisión y control.",
+                                "b": "Se han configurado los servicios de cortafuegos para los servicios de nube, especificando las reglas, políticas e integración de servicios de terceros definidos.",
+                                "c": "Se han activado las herramientas para la administración y protección de aplicaciones o servicios web, identificando y previniendo posibles ataques y amenazas en capa 7 de comunicaciones, utilizando herramientas WAF (Web Application Firewall) y/o IPS (Sistema de prevención de intrusos), entre otras, para minimizar los riesgos.",
+                                "d": "Se ha configurado la autorización, autenticación y auditoría de ciberseguridad, entre otros, empleando mecanismos de automatización tales como plantillas declarativas del servicio o hardware, línea de comandos (CLI), las API (Application programming interface) o lenguajes de programación.",
+                                "e": "Se ha configurado la monitorización de los recursos de red y la conectividad del resto de recursos desplegados, comprobando mediante alertas su estado de salud, estado de conexión, log y análisis del tráfico que permitan anticipar problemas o identificar incidencias."
+                                }
+        }
+
+
+            }
+},
+"5164":{
+            "nombre":"Despliegue de servicios administrados en la nube",
+		    "acronimo":"DSAN",
+            "horas": "90",
+            "UnidadesCompetenciaAcreditadas" : {},
+            "ObjetivosGenerales" : [],
+            "CompetenciasTitulo" : [],
+            "creditos":"5",
+            "ResultadosAprendizaje":{
+            "RA01": {
+                    "Resultado": " Aplica procedimientos de despliegue de recursos en la nube de manera automática a través de plantillas de ficheros para estandarizar el aprovisionamiento mediante infraestructura como código (IaC).",
+                        "CriteriosEvaluacion": {
+                                "a": "Se han determinado los recursos para desplegar conjuntamente en la nube, tales como tipo de servicios, arquitectura, configuración y entidad proveedora, entre otros, donde realizar el despliegue, analizando el estado final que se desea alcanzar.",
+                                "b": "Se ha seleccionado un servicio de motor de despliegue de infraestructura como código y conectores, configurando permisos de acceso y parámetros funcionales.",
+                                "c": "Se han creado unas plantillas y ficheros, asignando valores a parámetros, referencias, variables de configuración y estado final de los recursos a desplegar.",
+                                "d": "Se han validado las plantillas y sintaxis de los ficheros, creando el plan de despliegue con el motor de despliegue de infraestructura como código.",
+                                "e": "Se ha comparado el estado de la infraestructura actual y el estado deseado final, validando los pasos y tareas que se requieren llevar a cabo para dejar la infraestructura en el estado solicitado.",
+                                "f": "Se ha ejecutado un plan de despliegue, creando y configurando los recursos en la nube de acuerdo con las plantillas y ficheros generados.",
+                                "g": "Se han revisado los resultados de aprovisionamiento de los recursos en la nube, validando que el estado final de los recursos a desplegar en la entidad proveedora de nube es el deseado.",
+                                "h": "Se han documentado las plantillas y ficheros creados, incluyendo procedimientos de actualización, compartiéndolos en un repositorio de código para su reutilización."}},
+"RA02": {
+                    "Resultado": " Aplica procedimientos de despliegue de servicios de mensajería asíncrona, optimizando la transmisión y el procesamiento de los flujos de datos que se intercambian entre múltiples fuentes y distribuirlos a múltiples receptores, monitorizando los resultados.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha aprovisionado un servicio de mensajería asíncrona, habilitándolo en la consola.",
+                                "b": "Se han verificado los permisos necesarios para el servicio de mensajería asíncrona.",
+                                "c": "Se ha configurado un servicio de mensajería asíncrona, incluyendo el tema –recurso al que las personas que publican envían mensajes–, subscripciones para la entrega de mensajes, tipo de entrega y parámetros de reintento y eliminación de los mensajes.",
+                                "d": "Se ha monitorizado el proceso de almacenamiento y entrega de un servicio de mensajería asíncrona.",
+                                "e": "Se ha verificado que los mensajes son entregados a las personas suscriptoras del tema."}},
+"RA03": {
+                    "Resultado": " Aplica procedimientos de despliegue de ejecución de trabajos por lotes, para la ejecución de manera repetitiva de trabajos sin supervisión directa de las personas usuarias, monitorizando los resultados.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha aprovisionado un servicio de automatización de ejecución de trabajos por lotes, habilitándolo en la consola en caso necesario.",
+                                "b": "Se ha configurado el trabajo por lotes que hay que automatizar, incluyendo información de nombre, frecuencia de ejecución, reintentos ante fallos y objetivos.",
+                                "c": "Se ha activado la planificación de la ejecución, estableciendo su periodicidad u otras condiciones de lanzamiento.",
+                                "d": "Se monitorizado la ejecución de un trabajo automatizado, validando que el trabajo se ha ejecutado según una planificación supuesta y en los tiempos de ejecución requeridos en ella."}},
+"RA04": {
+                    "Resultado": " Aplica procedimientos de despliegue de soluciones de terceros, seleccionándolas desde el marketplace para automatizar el despliegue de paquetes de software.",
+                        "CriteriosEvaluacion": {
+                                "a": "Se ha revisado un catálogo de soluciones del marketplace, interpretando las especificaciones de despliegue, los costes estimados o manuales de fabricantes, licenciamiento y los requisitos recogidos en la documentación técnica de las soluciones.",
+                                "b": "Se ha seleccionado una solución a desplegar del catálogo, configurando los parámetros tales como nombre, zona y red dónde se realizará el despliegue, claves de autenticación, parámetros de capacidad de cómputo y almacenamiento según las necesidades de uso, y asignando permisos para el aprovisionamiento de los servicios a utilizar.",
+                                "c": "Se ha solicitado, desde el catálogo, el despliegue automático de la solución, monitorizando las fases llevadas a cabo.",
+                                "d": "Se ha verificado la instalación y configuración de la solución desplegada, mediante la ejecución de una serie de pruebas como la revisión de logs de despliegue, acceso a recursos y test de funcionamiento de la solución.",
+                                "e": "Se han documentado los procedimientos de operación y mantenimiento de la solución, incluyendo tareas de monitorización, revisión de logs, actualización de nuevas versiones, y borrado.",
+                                "f": "Se han comprobado los datos finales de configuración de la solución, ubicación, las URL de acceso, operación y seguridad digital, verificando que quedan documentados en la plataforma."
+                                }
+        }
+
+
+
 
             }
     }
 
+}
 
-    }
 }

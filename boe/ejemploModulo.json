@@ -1,0 +1,12 @@
+{
+"DEMO":{
+            "nombre":"DEMO",
+		    "acronimo":"DEMO",
+            "horas": "100",
+            "UnidadesCompetenciaAcreditadas" : {},
+            "ObjetivosGenerales" : [],
+            "CompetenciasTitulo" : [],
+            "creditos":"-",
+            "ResultadosAprendizaje":{  }
+    }
+}

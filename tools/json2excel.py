@@ -89,8 +89,8 @@ for codigo in data_box.ModulosProfesionales:
     p_ra_titulo_col=2
     p_ra_titulo_row=8
 
-    ws = wb.create_sheet(title=modulo.nombre)
-    wb.active = wb.sheetnames.index(modulo.nombre)
+    ws = wb.create_sheet(title=modulo.acronimo)
+    wb.active = wb.sheetnames.index(modulo.acronimo)
 
     ws['B1'].value="Código"
     ws['B1'].alignment = Alignment(horizontal='center',vertical='center')
@@ -252,6 +252,7 @@ for codigo in data_box.ModulosProfesionales:
 
 
     for ra in modulo.ResultadosAprendizaje:
+        #print(str(ra))
         listaCriterios=modulo.ResultadosAprendizaje[ra].CriteriosEvaluacion
         numCriterios=len(listaCriterios)
 
