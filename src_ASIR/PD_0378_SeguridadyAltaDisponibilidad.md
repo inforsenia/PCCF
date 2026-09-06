@@ -68,14 +68,13 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                                                     | Inicio    | Fin       |
 |--------|------------------------------------------------------------|-----------|-----------|
-| 01     | UP01: Adopción de pautas de seguridad informática          | 08/09/2025| 19/09/2025|
-| 02     | UP02: Criptografía                                         | 19/09/2025| 03/10/2025|
-| 03     | UP03: Seguridad activa y Hacking Ético                     | 03/10/2025| 24/11/2025|
-| 04     | UP04: Técnicas de acceso remoto                            | 24/10/2025| 13/11/2025|
-| 05     | UP05: Instalación y configuración de cortafuegos           | 13/11/2025| 07/01/2026|
-| 06     | UP06: Instalación y configuración de proxies               | 07/11/2025| 19/01/2026|
-| 07     | UP07: Implantación de soluciones de alta disponibilidad    | 19/01/2026| 25/02/2026|
-| 08     | UP08: Legislación                                          | 25/02/2026| 06/03/2026|
+| 01     | UP01: Tratamiento Seguro de la Información                 | 14/09/2026| 21/10/2026|
+| 02     | UP02: Seguridad Activa                                     | 26/10/2026| 11/11/2026|
+| 03     | UP03: Acceso Remoto Seguro y Seguridad Perimetral          | 16/11/2026| 02/12/2026|
+| 04     | UP04: Cortafuegos                                          | 07/12/2026| 20/01/2027|
+| 05     | UP05: Servidores Proxy                                     | 25/01/2027| 03/02/2027|
+| 06     | UP06: Alta Disponibilidad                                  | 10/02/2027| 22/02/2027|
+| 07     | UP07: Legislación                                          | 24/02/2027| 01/03/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -160,7 +159,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje (RA) se detalla en el Esquema General:
 
-Nota final = 0,1 × RA1 + 0,1 x RA2 + 0,2 × RA3 + 0,3 × RA4 + 0,1 × RA5 + 0,15 x RA6 + 0,05 x RA7 
+Nota final = 0,15 × RA1 + 0,1 x RA2 + 0,15 × RA3 + 0,3 × RA4 + 0,1 × RA5 + 0,15 x RA6 + 0,05 x RA7 
 
 En cada unidad de programación se especificará cómo se evaluarán los Resultados de Aprendizaje correspondientes. De forma general, el 100% de la calificación se obtendrá a partir de pruebas objetivas. Además, se realizarán actividades prácticas de entrega obligatoria que permitirán al alumnado la comprensión y preparación de los contenidos que compondrán las pruebas objetivas ya que siempre estarán basadas en estas actividades. La falta de entrega de estas actividades supondrá la reducción de la nota proporcionalmente al número de actividades no entregadas.
 
