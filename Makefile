@@ -15,6 +15,7 @@ RESET= \e[0m
 
 # Templates 
 TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.latex"
+TEMPLATE_CONFIG_A4="../rsrc/templates/config-a4.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="../rsrc/sorts-mill-goudy/OFLGoudyStM.otf" --pdf-engine=xelatex "
 PANDOC_OPTIONS_FEDORA="-V fontsize=12pt "
 TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.latex"
@@ -135,13 +136,13 @@ proyecto-rsn-test: files proyecto-base
 
 	@echo " ${LIGHTBLUE} Proyecto de RSN ${RESET}"
 	#cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
-	cd temp/ && pandoc -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
+	cd temp/ && pandoc  -o $(PDF_PATH)/PCCF_SENIA_RSN.pdf ./PCCF_*.md
 	@echo " ${LIGHTBLUE} PDF Generado para RSN ${RESET}"
 
 
 	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ${RESET}"
 	#@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ./PD_*.md
-	@cd temp/ && pandoc -o $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ./PD_*.md
+	@cd temp/ && pandoc  -o $(PDF_PATH)/Programaciones_SENIA_RSN.pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Programaciones Generadas para RSN ${RESET}"
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 
