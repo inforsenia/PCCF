@@ -15,8 +15,6 @@ Técnico en Sistemas Microinformáticos y Redes.
 |-----------------------|-------------|
 | UC0958_2 | Ejecutar procedimientos de administración y mantenimiento en el software base y de aplicación de cliente. |
 | UC0959_2 | Mantener la seguridad de los subsistemas físicos y lógicos en sistemas informáticos. |
-|<img width=200/>|<img width=500/>|
-
 
 
 ## Resultados de Aprendizaje
@@ -30,8 +28,6 @@ Los **Resultados de Aprendizaje** relativos al módulo de Seguridad informática
 | RA03 |  Aplica mecanismos de seguridad activa describiendo sus características y relacionándolas con las necesidades de uso del sistema informático. |
 | RA04 |  Asegura la privacidad de la información transmitida en redes informáticas describiendo vulnerabilidades e instalando software especifico. |
 | RA05 |  Reconoce la legislación y normativa sobre seguridad y protección de datos analizando las repercusiones de su incumplimiento. |
-|<img width=200/>|<img width=500/>|
-
 
 
 ## Objetivos Generales 
@@ -47,10 +43,6 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 | g | Localizar y reparar averías y disfunciones en los componentes físicos y lógicos para mantener sistemas microinformáticos y redes locales. |
 | k | Reconocer características y posibilidades de los componentes físicos y lógicos, para asesorar y asistir a clientes. |
 | l | Detectar y analizar cambios tecnológicos para elegir nuevas alternativas y mantenerse actualizado dentro del sector. |
-|<img width=100/>|<img width=500/>|
-
-
-
 
 
 ## Competencias del Título 
@@ -68,26 +60,18 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | o |  Aplicar los protocolos y normas de seguridad, calidad y respeto al medio ambiente en las intervenciones realizadas. |
 | p |  Cumplir con los objetivos de la producción, colaborando con el equipo de trabajo y actuando conforme a los principios de responsabilidad y tolerancia. |
 | t |  Gestionar su carrera profesional, analizando las oportunidades de empleo, autoempleo y aprendizaje. |
-|<img width=100/>|<img width=500/>|
-
 
 
 ## Secuenciación de las Unidades de Programación. 
 
-| Número | Título                                                   |Trimestre|
-|--------|----------------------------------------------------------|---------|
-| 01     | UP01: Introducción a la seguridad Informática.           |Primero  |
-| 02     | UP02: Seguridad pasiva.                                  |Primero  |
+| Número | Título                                              | Inicio    | Fin       |
+|--------|-----------------------------------------------------|-----------|-----------|
+| 01     | UP01: Seguridad Pasiva                              | 11/09/2026| 16/10/2026|
+| 02     | UP02: Gestión de Dispositivos de Almacenamiento     | 20/10/2026| 20/11/2026|
+| 03     | UP03: Seguridad Activa                              | 24/11/2026| 14/01/2027|
+| 04     | UP04: Privacidad de la Información en Redes         | 19/01/2027| 23/02/2027|
+| 05     | UP05: Legislación y Normativa de Seguridad          | 26/02/2027| 05/03/2027|
 
-| 03     | UP03: Almacenamiento.                                    |Primero  |
-| 04     | UP04: Copias de seguridad.                               |Primero  |
-
-| 05     | UP05: Criptografía.                                      |Segundo  |
-| 06     | UP06: Herramientas de seguridad en el sistema operativo. |Segundo  |
-
-| 07     | UP07: Seguridad Activa en redes.                         |Segundo  |
-
-| 08     | UP08: Legislación europea y española.                    |Segundo  |
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -173,14 +157,14 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-El cálculo ponderado de la nota de los RAs será:
+La ponderación de cada Resultado de Aprendizaje (RA) se detalla en el Esquema General:
 
-| Prueba objetiva                                    | Porcentaje|
-|----------------------------------------------------|-----------|
-| Nota obtenida en el examen.                        |     95%   |
-| Nota obtenida en las prácticas obligatorias.       |     5%    |
+Nota final = 0,1 × RA1 + 0,35 x RA2 + 0,1 × RA3 + 0,4 × RA4 + 0,05 × RA5
 
-La nota media del módulo será la obtenida del cálculo de los porcentajes de cada RA.
+En cada unidad de programación se especificará cómo se evaluarán los Resultados de Aprendizaje correspondientes. De forma general, el 100% de la calificación se obtendrá a partir de pruebas objetivas. Además, se realizarán actividades prácticas de entrega obligatoria que permitirán al alumnado la comprensión y preparación de los contenidos que compondrán las pruebas objetivas ya que siempre estarán basadas en estas actividades. La falta de entrega de estas actividades supondrá la reducción de la nota proporcionalmente al número de actividades no entregadas.
+
+En la convocatoria ordinaria, si el alumno ha mantenido el proceso de evaluación continua, se tendrá en cuenta este sistema de calificación. En caso contrario, así como en la evaluación extraordinaria, el 100% de cada RA se calificará a través de una prueba objetiva.
+
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -250,9 +234,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
-**Actividad: Asistencia a un scape room.**
-Objetivo: Desarrollar habilidades de colaboración y comunicación efectiva en situaciones de presión; aplicar el razonamiento deductivo e inductivo para resolver retos secuenciales y conectar pistas; aprender a mantener la calma y priorizar tareas con eficacia en un entorno limitado temporalmente; fortalecer la relación entre compañeros y mejorar el clima del aula.
-Fecha: finales de noviembre.
+Se propondrá al alumnado la asistencia a las jornadas *Inf0rSenia 2027*.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 

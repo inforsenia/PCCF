@@ -240,7 +240,7 @@ descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
-Se propondrá al alumnado la asistencia a las jornadas *Inf0rSenia 2026*.
+Se propondrá al alumnado la asistencia a las jornadas *Inf0rSenia 2027*.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
