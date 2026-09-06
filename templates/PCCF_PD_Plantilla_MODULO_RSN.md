@@ -103,33 +103,87 @@ Las adaptaciones específicas, tanto metodológicas como organizativas, se concr
 ## Evaluación del aprendizaje. 
 
 @@@PCCF_200_ProcesoDeEvaluacion.md
-@@@PCCF_201_TiposEvaluacion.md
-@@@PCCF_202_Calificaciones.md
+
+### Tipos de evaluación 
+
+La evaluación de un módulo será realizada por el profesor titular del correspondiente módulo profesional y, en su caso, teniendo en cuenta el informe de la empresa tras la Formación en Empresa.
+
+Durante el curso se llevarán a cabo varias sesiones de evaluación, que serán las siguientes:
+
+- **Parcial**: se realizarán un mínimo de dos por curso (primer y segundo trimestre). Incluyen calificaciones numéricas orientativas sobre la progresión del alumnado.
+- **Formación en Empresa (FE)**: antes del inicio de la FE. Evalúa la situación e idoneidad del alumnado para realizar esta fase.
+- **Ordinaria**: al final del curso. Se decide la promoción y titulación del alumnado.
+- **Extraordinaria**: destinada a la recuperación de módulos no superados.
+
+En cada sesión de evaluación, el tutor elaborará un acta que refleje los acuerdos y decisiones adoptadas de forma colegiada con el equipo docente.
+
+### Calificaciones 
+
+El alumnado podrá obtener las siguientes calificaciones:
+
+* **Escala del 1 al 10 sin decimales**: el redondeo o truncamiento de los decimales será a discreción del profesor que evalúa el módulo.
+* **Resultados de Aprendizaje (RA) en empresa**: serán calificados por la empresa como **“superado”** o **“no superado”**. En caso de “no superado”, el módulo podrá ser calificado por el profesor como **aprobado** o **suspenso**. Si se califica como suspenso, el informe deberá reflejar los RA en empresa que han sido superados y los que no.
+* **Nota final del Curso**: se calculará como la **media aritmética** de los módulos, excluyendo las convalidaciones sin nota.
+* **Mención honorífica**: se otorga a quienes obtienen un **10 en un módulo**, con un máximo del **10% del grupo**.
+* **Matrícula de honor**: se concede a quienes obtienen una **nota final de Ciclo igual o superior a 9** teniendo en cuenta el límite establecido por la normativa.
+
+- **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
 !!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación.
 
-@@@PCCF_203_EvaluacionRA_FormacionEmpresa.md
+### Evaluación por RA
+
+Cada módulo se divide en **Unidades de Programación** que agrupan Resultados de Aprendizaje y sus criterios de evaluación. A cada RA se le asigna un **peso evaluativo** y una **carga horaria** proporcional. 
+
+Las Unidades de Programación/Situaciones de Aprendizaje deben: 
+
+- Estar alineadas con las competencias del curso de especialización. 
+- Incluir actividades significativas y metodologías activas. 
+- Incorporar competencias para la empleabilidad (trabajo en equipo, comunicación, etc.). 
+- Incluir los contenidos necesarios alineados con los CE para conseguir los RA. 
+
+El equipo docente se compromente a facilitar en Aules un seguimiento del progreso de los RA por parte del alumnado.
+
+### Formación en empresa 
+
+En el caso de que el alumnado no supere los Resultados de Aprendizaje, se elaborará un programa educativo especifico
+para la recuperación de los RA no superados. Este programa se llevará a cabo en el periodo que el alumnado debería estar realizando la Formación en Empresa y **antes de la Convocatoria Ordinaria**.
+
+Cuando un estudiante de **no se incorpore a Formación en Empresa (FE)** por causa 
+justificada y acreditada, permanecerá en el centro educativo realizando actividades complementarias, 
+extraescolares y/o de refuerzo que le permitan acercarse al ámbito socio-laboral. 
+
+La fase de Formación en Empresa podrá acogerse a las condiciones que cada empresa 
+tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora del mismo.
+
+### Superación de los RA's asociados a la FE
+
+Respecto a la evaluación, el tutor recabará el parecer de los instructores, que compartirá con los profesores del equipo docente. 
+
+Además, se reservarán unos días a final de curso, finalizado el período de Formación en Empresa, para que el alumnado muestre el trabajo realizado en la empresa al profesorado, y pueda responder a las cuestiones que se le planteen desde cada módulo. Permitiendo una vía para que quede constancia de que cada estudiante ha adquirido todos los conocimientos requeridos en los diversos módulos. 
+
+Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
+
 
 !!! OBLIGATORIO ]: A RELLENAR POR EL DOCENTE -> Cálculo de la calificación de un RA Dualizado.
 
-@@@PCCF_206_Recuperacion.md
+### Recuperación
 
+Para el alumnado que **no haya superado algún módulo o RA** se establecerá un **programa de recuperación individual** que se diseñará de forma diferenciada según periodos:
 
+Los RA o módulos no superados en la **evaluación ordinaria**: se podrán recuperar en la **convocatoria extraordinaria** .
 
 ### Convocatoria Ordinaria
 
-1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs 
-   durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo 
-   de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará
-   al calendario propuesto por el centro.
+1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
+2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará al calendario propuesto por el centro.
 
 ### Convocatoria Extraordinaria
 
 La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
-descrito en el Proyecto Curricular de Ciclo Formativo.
+descrito en el Proyecto Curricular del Curso de Especialización.
 
 ## Actividades complementarias y extraescolares. 
 
