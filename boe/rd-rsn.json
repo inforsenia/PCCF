@@ -60,7 +60,7 @@
     "ModulosProfesionales":{
 	"5160":{
 	    "nombre":"Fundamentos y configuración inicial de servicios en la nube.",
-		"acronimo":"FUN",
+		"acronimo":"FCIS",
 	    "creditos":"8",
 	    "ResultadosAprendizaje":{
                 "RA01": {
@@ -162,7 +162,7 @@
         },
     "5161":{
             "nombre":"Administración de recursos de computación en la nube",
-		    "acronimo":"ADM",
+		    "acronimo":"ARCN",
             "horas": "180",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : [],
@@ -215,7 +215,7 @@
     },
     "5162":{
             "nombre":"Administración de bases de datos y almacenamiento en la nube",
-		    "acronimo":"BDN",
+		    "acronimo":"ABDN",
             "horas": "150",
             "UnidadesCompetenciaAcreditadas" : {},
             "ObjetivosGenerales" : [],
