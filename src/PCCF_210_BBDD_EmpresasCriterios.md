@@ -3,7 +3,6 @@
 # Base de datos de empresas u organismos equiparados que colaboran con el PCCF y criterios de asignación del alumnado
 
 
-
 Preliminarmente y salvo cambios sobrevenidos, el departamento velará por mantener un registro de las empresas con las que se contacte, donde figurarán aspectos como: 
 
 - Datos de la persona de contacto en la empresa. 

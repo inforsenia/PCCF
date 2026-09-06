@@ -4,7 +4,7 @@ Cada módulo se divide en **Unidades de Programación (UP) o Situaciones de Apre
 
 Las Unidades de Programación/Situaciones de Aprendizaje deben: 
 
-- Estar alineadas con las competencias del ciclo. 
+- Estar alineadas con las competencias del ciclo o curso de especialización. 
 - Incluir actividades significativas y metodologías activas. 
 - Incorporar competencias para la empleabilidad (trabajo en equipo, comunicación, etc.). 
 - Incluir los contenidos necesarios alineados con los CE para conseguir los RA. 
