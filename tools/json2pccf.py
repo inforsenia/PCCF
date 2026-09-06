@@ -133,7 +133,7 @@ for codigo in data_box.ModulosProfesionales:
     shutil.move("./temp/out.txt", fmod)
 
     # Creamos la PD Individual
-    print("  - Generando PD Standalone para "+modulo.nombre.replace(" ",""))
+    print("  - Generando PD Standalone para "+modulo.acronimo.replace(" ",""))
     templateLoader = jinja2.FileSystemLoader(searchpath="./templates/")
     templateEnv = jinja2.Environment(loader=templateLoader)
     TEMPLATE_TITULO = "PCCF_PD_Plantilla_Portada_Modulo.md"
@@ -154,8 +154,8 @@ for codigo in data_box.ModulosProfesionales:
         ruta_al_libro="PDFS/"+s_ciclo+"_libro_autogenerado.xlsx"
         
     #print(" Obtenemos el PDF desde el Excel ")
-    subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.nombre+"\"",shell=True,check=True)
-    subprocess.run("./tools/excel-to-plan-formativo.py "+ruta_al_libro+" \""+modulo.nombre+"\" "+pdplanformativo+" ",shell=True,check=True)
+    subprocess.run("./tools/excel-to-pdfs.py "+ruta_al_libro+" \""+modulo.acronimo+"\"",shell=True,check=True)
+    subprocess.run("./tools/excel-to-plan-formativo.py "+ruta_al_libro+" \""+modulo.acronimo+"\" "+pdplanformativo+" ",shell=True,check=True)
     shutil.copy("/tmp/cuadro-resumen.pdf",dir_modulo+"PD_9999_CuadroResumen.pdf")
     
 sys.exit(0)

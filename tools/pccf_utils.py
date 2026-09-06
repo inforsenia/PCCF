@@ -18,6 +18,13 @@ def get_hoja_label(hoja):
     if hoja.startswith("Aplicaciones web"): hoja="AW"
     if hoja.startswith("Redes Locales"): hoja="Redes"
 
+    # RSN
+    if hoja.startswith("FCIS"): hoja="FCIS"
+    if hoja.startswith("ARCN"): hoja="ARCN"
+    if hoja.startswith("ARN"): hoja="ARN"
+    if hoja.startswith("ABDN"): hoja="ABDN"
+    if hoja.startswith("DSAN"): hoja="DSAN"
+
     # DAM DAW
     
     if hoja.startswith("Entornos de"): hoja = "ED"
@@ -37,10 +44,6 @@ def get_hoja_label(hoja):
     if hoja.startswith("Programación multimedia y dispo"): hoja="PMDM"
     if hoja.startswith("Programación de servicios y pro"): hoja="PSP"
     if hoja.startswith("Sistemas de gestión empresarial"): hoja="SGE"
-
-    
-    
-    
 
     # ASIR
     if hoja.startswith("Implantación de Siste"): hoja = "ISO"
