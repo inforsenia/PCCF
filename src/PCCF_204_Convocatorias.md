@@ -15,7 +15,7 @@ Además, el alumnado dispone de una **convocatoria extraordinaria de gracia** po
 Se realizará al finalizar las actividades lectivas del curso académico, para:
 
 - Asignar la calificación final a cada uno de los módulos cursados o RA en caso de trabajar por metodologías activas de aprendizaje.
-- Adoptar de manera colegiada las decisiones de promoción a que haya lugar.
+- Adoptar de manera colegiada las decisiones de promoción que haya lugar.
 - Realizar las propuestas de titulación del alumnado, o certificación en su caso.
 - Proponer la presentación a la convocatoria extraordinaria del alumnado que no haya superado algún módulo profesional o resultado de aprendizaje, y que sea susceptible de superarlo en dicha convocatoria; y en todo caso, al alumnado que no haya podido realizar la formación en empresa por edad u otras circunstancias justificadas. 
 
