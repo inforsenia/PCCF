@@ -94,6 +94,23 @@ proyecto-smx: files proyecto-base
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh SMX
 
+	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/UPS_MODULO ${RESET}"
+	./tools/ups-to-pdfs.sh SMR AOF
+	./tools/ups-to-pdfs.sh SMR AW
+	./tools/ups-to-pdfs.sh SMR DASP
+	./tools/ups-to-pdfs.sh SMR IP
+	./tools/ups-to-pdfs.sh SMR IPEI
+	./tools/ups-to-pdfs.sh SMR IPEII
+	./tools/ups-to-pdfs.sh SMR MME
+	./tools/ups-to-pdfs.sh SMR OPS190
+	./tools/ups-to-pdfs.sh SMR RL
+	./tools/ups-to-pdfs.sh SMR SASP
+	./tools/ups-to-pdfs.sh SMR SER
+	./tools/ups-to-pdfs.sh SMR SI
+	./tools/ups-to-pdfs.sh SMR SOM
+	./tools/ups-to-pdfs.sh SMR SOR
+
+	@echo " ${LIGHTBLUE} Programaciones Generadas para SMX ${RESET}"
 
 
 proyecto-rsn: files proyecto-base
