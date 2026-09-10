@@ -80,13 +80,13 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | UD | NOMBRE | RA | HORAS APROX | Fecha Inicio |
 | :--- | :--- | :--- | :--- | :--- |
-| **UD1** | Introducción a las aplicaciones Web. Conceptos y tecnologías previas | RA1 | 10 | Miércoles, 10 de septiembre de 2025 |
-| **UD2** | Instalación y configuración de un entorno web | RA1 | 16 | Viernes, 26 de septiembre de 2025 |
-| **UD3** | PROGRAMACIÓN BÁSICA DE APLICACIONES CON PHP | RA5 | 12 | Viernes, 31 de octubre de 2025 |
-| **UD4** | NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP | RA6 | 12 | Viernes, 21 de noviembre de 2025 |
-| **UD5** | Introducción a la integración continua y despliegue continuo | RA1 | 16 | Viernes, 12 de diciembre de 2025 |
-| **UD6** | Implantación y administración de gestores de contenidos | RA2, RA3, RA7 | 16 | Viernes, 23 de enero de 2026 |
-| **UD7** | Implantación de aplicaciones de ofimática web | RA4 | 0,5 | Viernes, 13 de febrero de 2026 |
+| **UD1** | Introducción a las aplicaciones Web. Conceptos y tecnologías previas | RA1 | 10 | Jueves, 10 de septiembre de 2026 |
+| **UD2** | Instalación y configuración de un entorno web | RA1 | 16 | Lunes, 28 de septiembre de 2026 |
+| **UD3** | PROGRAMACIÓN BÁSICA DE APLICACIONES CON PHP | RA5 | 12 | Jueves, 29 de octubre de 2026 |
+| **UD4** | NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP | RA6 | 12 | Lunes, 23 de noviembre de 2026 |
+| **UD5** | Introducción a la integración continua y despliegue continuo | RA1 | 16 | Lunes, 17 de diciembre de 2026 |
+| **UD6** | Implantación y administración de gestores de contenidos | RA2, RA3, RA7 | 16 | Lunes, 25 de enero de 2027 |
+| **UD7** | Implantación de aplicaciones de ofimática web | RA4 | 0,5 | Jueves, 11 de febrero de 2026 |
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
