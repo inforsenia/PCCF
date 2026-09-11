@@ -38,7 +38,7 @@ Los **Resultados de Aprendizaje** relativos al módulo de Introducción a la Pro
 | 3 | **U.D. 3:** Funciones y programación modular en Python | **RA3** | 9 horas | Viernes, 16 de octubre de 2026 |
 | 4 | **U.D. 4:** Tratamiento de excepciones, ficheros | **RA3, RA5** | 5 horas | Viernes, 6 de noviembre de 2026 |
 | 5 | **U.D. 5:** POO | **RA2 y RA4** | 9 horas | Martes, 17 de noviembre de 2026 |
-| 6 | **U.D. 6:** Acceso a BBDD | **RA5** | 9 horas | Marftes, 8 de diciembre de 2026 |
+| 6 | **U.D. 6:** Acceso a BBDD | **RA5** | 9 horas | Martes, 8 de diciembre de 2026 |
 | 7 | **U.D. 7:** Estructuras de datos avanzadas. Intercambio de datos | **RA6** | 5 horas | Viernes, 15 de enero de 2027 |
 | 8 | **U.D. 8:** Frameworks de Python: Django | **RA1** | 5 horas | Martes, 26 de enero de 2027 |
 | 9 | **U.D. 9:** Python en la administración de sistemas | **RA1** | 2 horas | Viernes, 5 de febrero de 2027 |

@@ -1,19 +1,19 @@
-# Unidades de programación: 190 Módulo Optativo - Introducción a la Programación (2025-2026)
+# Unidades de programación: 190 Módulo Optativo - Introducción a la Programación (2026-2027)
 
 
-### Resumen de Unidades de Programación (Curso 2025-2026)
+### Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Nombre de la UP | Duración (Horas Centro) | Temporalización | RAs Asociados |
 | :--- | :--- | :--- | :--- | :--- |
-| **UP01** | Introducción a la programación y Python | 5h | 10/09/2025 – 17/09/2025 | **RA01** |
-| **UP02** | Python básico  | 9h | 19/09/2025 – 17/10/2025 | **RA03** |
-| **UP03** | Funciones y programación modular en Python | 9h | 17/10/2025 – 7/11/2025 | **RA03**|
-| **UP04** | Tratamiento de excepciones, ficheros | 5h | 7/11/2025 – 21/11/2025 | **RA3, RA5** |
-| **UP05** | POO (Programación Orientada a Objetos) | 9h | 21/11/2025 – 12/12/2025 | **RA2 y RA4** |
-| **UP06** | Acceso a BBDD | 9h | 12/12/2025 – 16/01/2026 | **RA05** |
-| **UP07** | Estructuras de datos avanzadas. Intercambio de datos | 5h | 16/01/2026 - 30/01/2026 | **RA06** |
-| **UP08** | Frameworks de Python: Django | 5h | 30/01/2026 - 13/02/2026 | **RA01** |
-| **UP09** | Python en la administración de sistemas | 2h | 13/02/2026 - 13/02/2026 | **RA01** |
+| **UP01** | Introducción a la programación y Python | 5h | 11/09/2026 – 18/09/2026 | **RA01** |
+| **UP02** | Python básico  | 9h | 22/09/2026 – 13/10/2026 | **RA03** |
+| **UP03** | Funciones y programación modular en Python | 9h | 16/10/2026 – 3/11/2026 | **RA03**|
+| **UP04** | Tratamiento de excepciones, ficheros | 5h | 6/11/2026 – 17/11/2026 | **RA3, RA5** |
+| **UP05** | POO (Programación Orientada a Objetos) | 9h | 17/11/2026 – 4/12/2026 | **RA2 y RA4** |
+| **UP06** | Acceso a BBDD | 9h | 8/12/2026 – 12/01/2027 | **RA05** |
+| **UP07** | Estructuras de datos avanzadas. Intercambio de datos | 5h | 15/01/2027 - 22/01/2027 | **RA06** |
+| **UP08** | Frameworks de Python: Django | 5h | 26/01/2027 - 9/02/2027 | **RA01** |
+| **UP09** | Python en la administración de sistemas | 2h | 9/02/2027 - 12/02/2027 | **RA01** |
 
 
 
@@ -21,7 +21,7 @@
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 0190
 *   **Duración:** 5 horas.
-*   **Temporalización:** 10/09/2025 – 17/09/2025.
+*   **Temporalización:** 11/09/2026 – 18/09/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -51,7 +51,7 @@
 *   **Teoría:** 
     * Los lenguajes de programación y sus paradigmas. Tipos de lenguajes de programación. Paradigmas de programación. Lenguajes interpretados y compilados. Lenguajes de bajo y alto nivel. Lenguajes de propósito general y específico. Lenguajes de programación estructurada, orientada a objetos, funcional, lógica y declarativa.
 
-*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
+*   **Metodología:** Metodologías activas con tareas y actividades disponibles en la plataforma Aules.
 *   **Secuencia (Fases):**
     * Tipos de lenguajes de programación y paradigmas: Hola mundo en varios lenguajes.
     
@@ -72,7 +72,7 @@
 ### 1. Identificación
 *   **Código:** UP02 | **Módulo:** 0190
 *   **Duración:** 9 horas.
-*   **Temporalización:** 19/09/2025 – 17/10/2025.
+*   **Temporalización:** 22/09/2026 – 13/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 * **Resultado de Aprendizaje:**
@@ -112,7 +112,7 @@ control del lenguaje.
         * Tuplas
         * Sets
 
-*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
+*   **Metodología:** Metodologías activas con tareas y actividades disponibles en la plataforma Aules.
 *   **Secuencia (Fases):**
     * Tarea 1: Introducción a la programación y Python (tipos de datos, variables, funciones integradas)
     * Tarea 2: Estructuras de control (condicionales, bucles), Listas
@@ -136,7 +136,7 @@ control del lenguaje.
 ### 1. Identificación
 *   **Código:** UP03 | **Módulo:** 0190
 *   **Duración:** 9 horas.
-*   **Temporalización:** 17/10/2025 – 7/11/2025.
+*   **Temporalización:** 16/10/2026 – 3/11/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -202,7 +202,7 @@ control del lenguaje.
 ### 1. Identificación
 *   **Código:** UP04 | **Módulo:** 0190
 *   **Duración:** 5 horas.
-*   **Temporalización:** 7/11/2025 – 21/11/2025.
+*   **Temporalización:** 6/11/2026 – 17/11/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -269,7 +269,7 @@ procedimientos específicos del lenguaje y librerías de clases.
 ### 1. Identificación
 *   **Código:** UP05 | **Módulo:** 0190
 *   **Duración:** 9 horas.
-*   **Temporalización:** 21/11/2025 – 12/12/2025.
+*   **Temporalización:** 17/11/2026 – 4/12/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -334,7 +334,7 @@ principios de la programación orientada a objetos.
 ### 1. Identificación
 *   **Código:** UP06 | **Módulo:** 0190
 *   **Duración:** 9 horas.
-*   **Temporalización:** 12/12/2025 – 16/01/2026.
+*   **Temporalización:** 8/12/2026 – 12/01/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -403,7 +403,7 @@ procedimientos específicos del lenguaje y librerías de clases.
 ### 1. Identificación
 *   **Código:** UP07 | **Módulo:** 0190
 *   **Duración:** 5 horas.
-*   **Temporalización:** 16/01/2026 - 30/01/2026.
+*   **Temporalización:** 15/01/2027 - 22/01/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -458,7 +458,7 @@ utilizando tipos avanzados de datos
 ### 1. Identificación
 *   **Código:** UP08 | **Módulo:** 0190
 *   **Duración:** 5 horas.
-*   **Temporalización:** 30/01/2026 - 13/02/2026.
+*   **Temporalización:** 26/01/2027 - 9/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -511,7 +511,7 @@ utilizando tipos avanzados de datos
 ### 1. Identificación
 *   **Código:** UP09 | **Módulo:** 0190
 *   **Duración:** 2 horas.
-*   **Temporalización:** 13/02/2026 - 13/02/2026.
+*   **Temporalización:** 9/02/2027 - 12/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 

@@ -1,24 +1,24 @@
-# Unidades de programación: 0376 Implantación de Aplicaciones Web (2025-2026)
+# Unidades de programación: 0376 Implantación de Aplicaciones Web (2026-2027)
 
 
-### Resumen de Unidades de Programación (Curso 2025-2026)
+### Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Nombre de la UP | Duración (Horas Centro) | Temporalización | RAs Asociados |
 | :--- | :--- | :--- | :--- | :--- |
-| **UP01** | Introducción a las aplicaciones Web. Conceptos y tecnologías previas | 10h | 08/09/2025 – 26/09/2025 | **RA01** |
-| **UP02** | Instalación y configuración de un entorno web | 16h | 01/10/2025 – 31/10/2025  **RA01** |
-| **UP03** | PROGRAMACIÓN BÁSICA DE APLICACIONES CON PHP | 12h | 01/11/2025 – 21/11/2025 | **RA05**|
-| **UP04** | NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP | 12h | 25/11/2025 – 12/12/2025 | **RA06** |
-| **UP05** | Introducción a la integración continua y despliegue continuo | 12h | 16/12/2025 – 23/01/2026 | **RA01** |
-| **UP06** | Implantación y administración de gestores de contenidos | 16h | 24/01/2026 – 13/02/2026 | **RA02**,**RA03**,**RA07** |
-| **UP07** | Implantación de aplicaciones de ofimática web | 0,5h | 13/02/2026 | **RA04** |
+| **UP01** | Introducción a las aplicaciones Web. Conceptos y tecnologías previas | 10h | 10/09/2026 – 24/09/2026 | **RA01** |
+| **UP02** | Instalación y configuración de un entorno web | 16h | 28/09/2026 – 26/10/2026  **RA01** |
+| **UP03** | PROGRAMACIÓN BÁSICA DE APLICACIONES CON PHP | 12h | 29/10/2026 – 19/11/2026 | **RA05**|
+| **UP04** | NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP | 12h | 23/11/2026 – 13/12/2026 | **RA06** |
+| **UP05** | Introducción a la integración continua y despliegue continuo | 12h | 17/12/2026 – 21/01/2027 | **RA01** |
+| **UP06** | Implantación y administración de gestores de contenidos | 16h | 25/01/2027 – 11/02/2027 | **RA02**,**RA03**,**RA07** |
+| **UP07** | Implantación de aplicaciones de ofimática web | 0,5h | 11/02/2027 | **RA04** |
 
 
 ## UP01: Introducción a las aplicaciones Web. Conceptos y tecnologías previas
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 0376
 *   **Duración:** 10 horas.
-*   **Temporalización:** 08/09/2025 – 26/09/2025.
+*   **Temporalización:** 10/09/2026 – 24/09/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -43,7 +43,7 @@
     * Introducción a la contenedorización y virtualización ligera (Docker) aplicada al aislamiento de microservicios.
     * Lenguajes de marcado y formatos de serialización de datos para configuración (Markdown y YAML).
 
-*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
+*   **Metodología:** Metodologías activas con tareas y actividades.
 *   **Secuencia (Fases):**
     * [Tarea 1 - Introducción a la documentación con Markdown](https://inforsenia.github.io/Terraformadores/v3/Markdown/Tarea1)
     * [Tarea 2 - Introducción a Git y GitHub](https://inforsenia.github.io/Terraformadores/v3/Git/Tarea1)
@@ -60,7 +60,7 @@
     * git, GitHub, GitLab
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Instrumentos:** Tareas displibles en el plataforma Aules. Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
 *   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
 
 ---
@@ -69,7 +69,7 @@
 ### 1. Identificación
 *   **Código:** UP02 | **Módulo:** 0376
 *   **Duración:** 16 horas.
-*   **Temporalización:** 01/10/2025 – 31/10/2025.
+*   **Temporalización:** 28/09/2026 – 26/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 * **Resultado de Aprendizaje:**
@@ -97,7 +97,7 @@
     * Despliegue de infraestructura web y aprovisionamiento en la nube bajo el modelo IaaS (Amazon Web Services - AWS).
 
 
-*   **Metodología:** Metodologías activas con tareas y actividades basadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores).
+*   **Metodología:** Metodologías activas con tareas y actividades displibles en el plataforma Aules.
 *   **Secuencia (Fases):**
     * Tarea 1: LAMP Básico. Instalación y configuración de Apache, MySQL/MariaDB y PHP como servicios en una máquina local.
     * Tarea 2: LAMP con Docker en una máquina local. Instalación y configuración de Apache, MySQL/MariaDB y PHP como servicios en contenedores Docker.
@@ -107,7 +107,7 @@
 *    Docker, Entorno de Desarrollo Codium, git, GitHub, GitLab, Nginx, Apache, MySQL, MariaDB, PostgreSQL, PHP.
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Instrumentos:** Tareas realizadas en la plataforma Aules. Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
 *   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
 
 ---
@@ -116,7 +116,7 @@
 ### 1. Identificación
 *   **Código:** UP03 | **Módulo:** 0376
 *   **Duración:** 12 horas.
-*   **Temporalización:** 01/11/2025 – 21/11/2025.
+*   **Temporalización:** 29/10/2026 – 19/11/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -165,7 +165,7 @@
 ### 1. Identificación
 *   **Código:** UP04 | **Módulo:** 0376
 *   **Duración:** 12 horas.
-*   **Temporalización:** 25/11/2025 – 12/12/2025.
+*   **Temporalización:** 23/11/2026 – 13/12/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -215,7 +215,7 @@
 ### 1. Identificación
 *   **Código:** UP05 | **Módulo:** 0376
 *   **Duración:** 12 horas.
-*   **Temporalización:** 16/12/2025 – 23/01/2026.
+*   **Temporalización:** 17/12/2026 – 21/01/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -266,7 +266,7 @@
 ### 1. Identificación
 *   **Código:** UP06 | **Módulo:** 0376
 *   **Duración:** 16 horas.
-*   **Temporalización:** 24/01/2026 – 13/02/2026.
+*   **Temporalización:** 25/01/2027 – 11/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -311,7 +311,7 @@
 *   **Herramientas:** WordPress, Joomla, Drupal, Docker, Nginx, Apache, MySQL, MariaDB, PostgreSQL, PHP, git, GitHub, GitLab.
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Tareas realizadas en el proyecto [Terraformadores de Venus](https://inforsenia.github.io/Terraformadores) (100%). Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
+*   **Instrumentos:** Tareas realizadas en la plataforma Aules. Observación directa de la participación en las actividades y tareas. Evaluación de los entregables y documentación generada.
 *   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
 
 
@@ -322,7 +322,7 @@
 ### 1. Identificación
 *   **Código:** UP07 | **Módulo:** 0376
 *   **Duración:** 0,5 horas.
-*   **Temporalización:** 13/02/2026.
+*   **Temporalización:** 11/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
