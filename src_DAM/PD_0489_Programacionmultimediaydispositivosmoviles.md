@@ -48,10 +48,6 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 |<img width=100/>|<img width=500/>|
 
 
-
-
-
-
 ## Competencias del Título 
 
 La formación del módulo contribuye a alcanzar las *Competencias del Título* siguientes:
@@ -83,19 +79,15 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | 02     | UP02: Desarrollo de Interfaces Modernas con Jetpack Compose en Android.   |Primero  |
 | 03     | UP03: Arquitectura y Organización de Proyectos en Jetpack Compose.        |Primero  |
 | 04     | UP04: Layouts en Compose.                                                 |Primero  |
-
 | 05     | UP05: Componentes básicos.                                                |Primero  |
 | 06     | UP06: Estructura de interfaz de usuario.                                  |Primero  |
 | 07     | UP07: Componentes avanzados.                                              |Primero  |
 | 08     | UP08: Navegación                                                          |Primero  |
-
-| 09     | UP9: Componentes básicos multimedia.                                   |Primero  |
+| 09     | UP9: Componentes básicos multimedia.                                      |Primero  |
 | 10     | UP10: Animaciones.                                                        |Primero  |
-
 | 11     | UP11: Entorno de desarrollo en Unity.                                     |Segundo  |
 | 12     | UP12: Arquitectura de juegos en Unity.                                    |Segundo  |
 | 13     | UP13: Pruebas y primeros prototipos.                                      |Segundo  |
-
 | 14     | UP14: Elementos multimedia en juegos.                                     |Segundo  |
 | 15     | UP15: Desarrollo de juego 3D sencillo.                                    |Segundo  |
 | 16     | UP16: Exportación y evaluación del juego.                                 |Segundo  |
@@ -172,7 +164,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 - **Escala del 1 al 10 sin decimales**: el redondeo o truncamiento de los decimales será a discreción del profesor que evalúa el módulo.
 
-- **Resultados de Aprendizaje (RA) en empresa**: serán calificados por la empresa como **“superado”** o **“no superado”**. En caso de “no superado”, el módulo podrá ser calificado por el profesor como **aprobado** o **suspenso**. Si se califica como suspenso, el informe deberá reflejar los RA en empresa que han sido superados y los que no.
+- **Resultados de Aprendizaje (RA) en empresa**: serán calificados por la empresa como **"superado"** o **"no superado"**. En caso de "no superado", el módulo podrá ser calificado por el profesor como **aprobado** o **suspenso**. Si se califica como suspenso, el informe deberá reflejar los RA en empresa que han sido superados y los que no.
 
 - **Nota final del Ciclo**: se calculará como la **media aritmética** de los módulos, excluyendo las convalidaciones sin nota.
 
@@ -194,8 +186,10 @@ El cálculo ponderado de la nota de los RAs 2 y 3 será:
 
 | Prueba objetiva                              | Porcentaje|
 |----------------------------------------------|-----------|
-| Nota obtenida en el examen práctico.         |     70%   |
-| Nota obtenida en las prácticas obligatorias. |     30%   |
+| Nota obtenida en el examen práctico.         |     95%   |
+| Nota obtenida en las prácticas obligatorias. |      5%   |
+
+IMPORTANTE: en caso de que se detecte abuso en el uso de la IA en la realización de las prácticas obligatorias, el porcentaje pasará a la prueba objetiva (examen práctico). Así mismo, no se podrá utilizar IA en las pruebas prácticas, en caso contrario quedará suspendido.
 
 La nota de los RAs 4 y 5 será:
 
@@ -203,7 +197,27 @@ La nota de los RAs 4 y 5 será:
 |----------------------------------------------|-----------|
 | Nota obtenida en la práctica obligatoria.    |    100%   |
 
+Se tendrá en cuenta los siguientes aspectos para la práctica obligatoria: 
+- Deberá ser de su propiedad intelectual.
+- Deberá cumplir los requisitos mínimos expuestos en clase.
+- Se podrá utilizar IA para resolver dudas o corregir errores, nunca para sustituir el aprendizaje del alumno, que será demostrado defendiendo y explicando todas las partes del video juego.
+- En caso de que el alumno tenga que preguntar a la IA para saber responder a las preguntas, quedará como "NO SUPERADO", ya que no demuestra su aprendizaje.
+- En caso de que el alumno no sepa responder a las preguntas de la profesora, quedará como "NO SUPERADO", ya que no demuestra su aprendizaje.
+- Se desarrollará utilizando el mismo lenguaje de programación y software, que se utiliza en la plataforma de aprendizaje.
+- Quedará como "NO SUPERADO" en caso de ser igual o similar a las prácticas de aprendizaje de la plataforma, ya que no demuestra haber aprendido.
+
+
 La nota media del módulo será la obtenida del cálculo de los porcentajes de cada RA.
+
+### Reglas sobre el uso de la IA
+
+❌ No permitido: generar directamente el código completo del ejercicio.
+
+⚠️ Permitido: pedir explicación de conceptos.
+
+⚠️ Permitido: depurar errores si el código es propio.
+
+✅ Obligatorio: declarar si se ha usado IA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 

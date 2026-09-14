@@ -74,20 +74,15 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 |--------|--------------------------------------------------------------|---------|
 | 01     | UP01: Características de un Sistema Gestor de Base de Datos. |Primero  |
 | 02     | UP02: Requerimientos del sistema.                            |Primero  |
-
 | 03     | UP03: Instalación del motor de Oracle y Developer.           |Primero  |
 | 04     | UP04: Migración de Mysql a Oracle.                           |Primero  |
-
 | 05     | UP05: Creación de usuarios, roles y perfiles.                |Primero  |
 | 06     | UP06: Generación de informes y logs en Oracle.               |Primero  |
-
 | 07     | UP07: Introducción a la programación en Pl/SQL.              |Primero  |
 | 08     | UP08: Cursores.                                              |Primero  |
 | 09     | UP09: Excepciones.                                           |Primero  |
 | 10     | UP10: Disparadores.                                          |Segundo  |
-
 | 11     | UP11: Herramientas de monitorización y optimización de BBDD. |Segundo  |
-
 | 12     | UP12: Características de las BBDD distribuidas.              |Segundo  |
 
 ## Metodología del proceso de enseñanza-aprendizaje
@@ -174,7 +169,13 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-La nota de los RA 1, 2 y 3 será:
+La nota del RA 1 será:
+
+| Prueba objetiva                              | Porcentaje|
+|----------------------------------------------|-----------|
+| Nota obtenida en el examen práctico.         |    100%   |
+
+La nota de los RA 2 y 3 será:
 
 | Prueba objetiva                              | Porcentaje|
 |----------------------------------------------|-----------|
@@ -199,6 +200,16 @@ La nota del RA 6 será:
 | Nota obtenida en la práctica obligatoria.    |    100%   |
 
 La nota media del módulo será la obtenida del cálculo de los porcentajes de cada RA.
+
+### Reglas sobre el uso de la IA
+
+❌ No permitido: generar directamente el código completo del ejercicio.
+
+⚠️ Permitido: pedir explicación de conceptos.
+
+⚠️ Permitido: depurar errores si el código es propio.
+
+✅ Obligatorio: declarar si se ha usado IA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 

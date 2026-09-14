@@ -50,12 +50,13 @@
 *   **Secuencia (Fases):**
     *   **E1:** Actividad: Análisis de los componentes y la arquitectura de un SGBD comercial.
     *   **E2:** Actividad: Comparativa razonada entre SGBD comerciales (Oracle, SQL Server) y libres (MySQL, PostgreSQL) para justificar una selección.
+    *   **E3:** Actividad: Instalación de MongoDB. Inserción, modificación, borrado y consulta de datos.
 
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** Equipos con Sistema Operativo Linux/Windows, máquinas virtuales (VirtualBox/VMware), documentación oficial de los SGBD.
 
 ### 5. Evaluación y Adaptación
-*   **Instrumentos:** Práctica obligatoria (100% de la nota del RA01, según el esquema de evaluación de la programación didáctica).
+*   **Instrumentos:** Examen práctico objetivo (100% de la nota del RA01, según el esquema de evaluación de la programación didáctica).
 *   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas.
 
 ---

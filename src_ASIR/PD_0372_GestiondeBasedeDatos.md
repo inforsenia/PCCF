@@ -72,19 +72,14 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | 01     | UP01: Introducción al sistema de almacenamiento de la información.  |Primero  |
 | 02     | UP02: Modelos de bases de datos más comunes.                        |Primero  |
 | 03     | UP03: Herramientas Case.                                            |Primero  |
-
 | 04     | UP04: Diseño de diagramas entidad-relación.                         |Primero  |
 | 05     | UP05: Diseño de diagramas relacionales.                             |Primero  |
 | 06     | UP06: Normalización de tablas.                                      |Primero  |
-
 | 07     | UP07: Creación de bases de datos con herramientas gráficas.         |Segundo  |
 | 08     | UP08: Lenguaje de definición de datos.                              |Segundo  |
-
 | 09     | UP09: Lenguaje de manipulación de datos básico.                     |Segundo  |
 | 10     | UP10: Lenguaje de manipulación de datos avanzado.                   |Segundo  |
-
 | 11     | UP11: Uso de guiones (cursores).                                    |Tercero  |
-
 | 12     | UP12: Lenguaje de control de datos.                                 |Tercero  |
 | 13     | UP13: Copias de seguridad.                                          |Tercero  |
 | 14     | UP14: Bases de datos documentales.                                  |Tercero  |
@@ -192,6 +187,16 @@ El cálculo ponderado de la nota de los RAs 2, 3, 4, 5 y 6 será:
 Existen prácticas obligatorias para cumplir alguno de los criterios de evaluación. La nota del criterio será la de la práctica obligatoria, restando este porcentaje del porcentaje del examen práctico.
 
 La nota media del módulo será la obtenida del cálculo de los porcentajes de cada RA.
+
+### Reglas sobre el uso de la IA
+
+❌ No permitido: generar directamente el código completo del ejercicio.
+
+⚠️ Permitido: pedir explicación de conceptos.
+
+⚠️ Permitido: depurar errores si el código es propio.
+
+✅ Obligatorio: declarar si se ha usado IA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
