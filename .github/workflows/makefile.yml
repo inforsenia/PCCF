@@ -24,16 +24,10 @@ jobs:
 
     - name: SMX - Proyecto
       run: make proyecto-smx
-      
-    - name: DAW - Proyecto
-      run: make proyecto-daw	
 
     - name: DAM - Proyecto
-      run: make proyecto-dam	
-    
-    - name: ASIR - Proyecto
-      run: make proyecto-asir
-      
+      run: make proyecto-dam
+
     - uses: actions/upload-artifact@v4
       with:
         name: PDFs-PCCFs

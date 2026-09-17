@@ -93,7 +93,7 @@ Via Docker wrapper:
 
 ## CI (`.github/workflows/makefile.yml`)
 
-Only runs on `main` when commit message contains `[build]`. Generates only INF cycles (SMX, DAW, DAM, ASIR). Copies PDFs to `releases/{date}/` and commits them.
+Only runs on `main` when commit message contains `[build]`. Generates only SMX and DAM (DAW/ASIR were dropped from the Makefile's `CICLOS_INF` — not taught at this center, repo started as a fork of another school's). Copies PDFs to `releases/{date}/` and commits them.
 
 ## Repo layout
 

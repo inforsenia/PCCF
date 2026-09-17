@@ -18,9 +18,7 @@ diferentes ciclos.
 |--------|-----------------|-------|
 | IIO | Informática y Oficina | Grado Básico |
 | SMX    | Sistemas Microinformáticos y Redes | Grado Medio |
-| DAW 	 | Desarrollo de Aplicaciones Web | Grado Superior |
 | DAM    | Desarrollo de Aplicaciones Multiplataforma | Grado Superior |
-| ASIR   | Admnistración de Sistemas Informáticos y Redes | Grado Superior |
 | CEIABD | Curso de especialización de IA y BD | Curso de Especialización |
 
 ### Familia de Servicios a la comunidad:
