@@ -98,25 +98,31 @@ generar-plantilles-pccf-%: validate-json
 
 	@# Si PCCF_ROOT != project root, copiar pccf/ al sync root (bootstrap OneDrive)
 	@if [ "$(shell readlink -f $(PCCF_ROOT))" != "$(PROJECT_ROOT)" ]; then \
-		echo " ${LIGHTBLUE} Copiant pccf/ a $(PCCF_ROOT)/ (no sobreescriu)${RESET}"; \
+		echo " ${LIGHTBLUE} Copiant pccf/ a $(PCCF_ROOT)/ (no sobreescriu, excepte Portades)${RESET}"; \
 		for d in src src_$(FAMILIA) src_$(FAMILIA)_$(CICLO_UPPER); do \
 			[ -d "$(PROJECT_ROOT)/pccf/$$d" ] || continue; \
 			mkdir -p "$(PCCF_SRC)/$$d" && \
 			for f in "$(PROJECT_ROOT)/pccf/$$d"/*.md; do \
 				[ -f "$$f" ] || continue; \
 				b=$$(basename "$$f"); \
-				[ -f "$(PCCF_SRC)/$$d/$$b" ] || cp -n "$$f" "$(PCCF_SRC)/$$d/"; \
+				case "$$b" in \
+					*_000_*) python3 tools/render_portada.py "$$f" "$(PCCF_SRC)/$$d/$$b" ;; \
+					*) [ -f "$(PCCF_SRC)/$$d/$$b" ] || cp -n "$$f" "$(PCCF_SRC)/$$d/" ;; \
+				esac; \
 			done; \
 		done; \
 	fi
-	@echo " ${LIGHTBLUE} Copiant PD_*.md a programacions/$(CICLO_UPPER)/ (no sobreescriu)${RESET}"
+	@echo " ${LIGHTBLUE} Copiant PD_*.md a programacions/$(CICLO_UPPER)/ (no sobreescriu, excepte Portades)${RESET}"
 	mkdir -p "$(PD_DIR)"
 	@for d in $(PCCF_SRC)/src $(PCCF_SRC)/src_$(FAMILIA) $(PCCF_SRC)/src_$(FAMILIA)_$(CICLO_UPPER); do \
 		[ -d "$$d" ] || continue; \
 		for f in $$d/PD_*.md; do \
 			[ -f "$$f" ] || continue; \
 			b=$$(basename "$$f"); \
-			[ -f "$(PD_DIR)/$$b" ] || cp -n "$$f" "$(PD_DIR)/"; \
+			case "$$b" in \
+				*_000_*) python3 tools/render_portada.py "$$f" "$(PD_DIR)/$$b" ;; \
+				*) [ -f "$(PD_DIR)/$$b" ] || cp -n "$$f" "$(PD_DIR)/" ;; \
+			esac; \
 		done; \
 	done
 	@echo " ${LIGHTBLUE} Generant Excel (si no existeix)${RESET}"
@@ -154,7 +160,10 @@ compila-pccf-%:
 		for f in "$(PCCF_SRC)/$$d"/PCCF_*.md; do \
 			[ -f "$$f" ] || continue; \
 			b=$$(basename "$$f"); \
-			[ -f "$(COMPILA_DIR)/$$b" ] || cp -n "$$f" "$(COMPILA_DIR)/"; \
+			case "$$b" in \
+				*_000_*) python3 tools/render_portada.py "$$f" "$(COMPILA_DIR)/$$b" ;; \
+				*) [ -f "$(COMPILA_DIR)/$$b" ] || cp -n "$$f" "$(COMPILA_DIR)/" ;; \
+			esac; \
 		done; \
 	done
 	@# PCCF_*.md des de programacions/ (optatives, etc.)

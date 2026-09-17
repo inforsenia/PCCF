@@ -1,6 +1,6 @@
 ---
 title: PCCF - Sistemes Microinformàtics i Xarxes
-subtitle: "Curs 2025-2026"
+subtitle: "Curs {{ curs }}"
 author: Departament d'Informàtica
 header-includes: |
 lang: ca-ES
@@ -12,14 +12,14 @@ abstract: |
 
           Carlet (València)
 
-          Curs 2025-2026
+          Curs {{ curs }}
 titlepage: true,
 page-background: "rsrc/backgrounds/bg_EPM.pdf"
 page-background-opacity: 0.4
 titlepage-text-color: "3c4d64"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "rsrc/backgrounds/pccf_EPM.pdf"
+titlepage-background: "rsrc/backgrounds/pccf_EPM_INF.pdf"
 ---
 
 \newpage

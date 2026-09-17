@@ -1,6 +1,6 @@
 ---
 title: Projecte Curricular del Cicle Formatiu Educació Infantil
-subtitle: "Curs 2025-2026"
+subtitle: "Curs {{ curs }}"
 author: Departament de Servicis Socioculturals i a la Comunitat
 header-includes: |
 lang: ca-ES
@@ -12,7 +12,7 @@ abstract: |
 
           Carlet (València)
 
-          Curs 2025-2026
+          Curs {{ curs }}
 titlepage: true,
 page-background: "rsrc/backgrounds/bg_EPM.pdf"
 page-background-opacity: 0.4
