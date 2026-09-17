@@ -9,6 +9,12 @@ Técnico Superior en Atención a Personas en Situación de Dependencia.
 
 Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
 
+### DOCENT
+
+**Docent**: [###]
+
+**correu-e**: [###]
+
 
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 

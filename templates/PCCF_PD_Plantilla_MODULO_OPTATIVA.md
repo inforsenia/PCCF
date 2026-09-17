@@ -8,6 +8,12 @@
 
 Té una correspondència en Crèdits de {{ modulo.creditos }}.
 
+### DOCENT
+
+**Docent**: [###]
+
+**correu-e**: [###]
+
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 
 ## Relació entre els estàndards de competència i els mòduls del cicle formatiu

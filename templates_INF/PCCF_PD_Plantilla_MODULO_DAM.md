@@ -9,6 +9,12 @@ Técnico en Desarrollo de Aplicaciones Multiplataforma.
 
 Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
 
+### DOCENT
+
+**Docent**: [###]
+
+**correu-e**: [###]
+
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 
 ## Relación entre los estándares de competencia y los módulos del ciclo formativo

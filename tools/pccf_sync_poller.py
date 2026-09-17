@@ -30,13 +30,20 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import CICLES_INF, CICLES_SCO, get_familia
-from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report
+from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, parse_pd_filename
+from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report, find_placeholders
+from memories_utils import get_teacher_email
+from mailer import smtp_configured, send_report_email
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CICLES_ALL = CICLES_INF + CICLES_SCO
 
 STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
+
+# Estat intern del poller (últim mtime de cada PD ja avaluat per a
+# notificació al docent). MAI dins la carpeta sincronitzada: és bookkeeping
+# del poller, no contingut per als docents.
+PD_TEACHER_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_pd_teacher_notify_state.json")
 
 
 def load_state():
@@ -74,6 +81,81 @@ def latest_source_mtime(pdir):
             if f.endswith(".md") or f.endswith(".xlsx"):
                 mtimes.append(os.path.getmtime(os.path.join(pdir, f)))
     return max(mtimes) if mtimes else 0.0
+
+
+def load_pd_teacher_state():
+    if not os.path.exists(PD_TEACHER_STATE_PATH):
+        return {}
+    try:
+        with open(PD_TEACHER_STATE_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_pd_teacher_state(state):
+    os.makedirs(os.path.dirname(PD_TEACHER_STATE_PATH), exist_ok=True)
+    with open(PD_TEACHER_STATE_PATH, "w", encoding="utf-8") as f:
+        json.dump(state, f)
+
+
+def notify_pd_teachers(cicle, familia, pd_dir):
+    """Avisa cada docent per correu de les deficiències de la seua pròpia
+    PD (no del report sencer del cicle), si el seu fitxer .md conté una
+    línia "correu-e: adreça" a la secció ### DOCENT (vore
+    memories_utils.get_teacher_email). En esta v1 nomes compten com a
+    deficiència els placeholders [###]/[...] pendents i l'estat _BORRADOR
+    -- la coherència de l'Excel es queda fora (nomes al report agregat).
+
+    No invasiu: sense SMTP configurat no fa absolutament res. Cada versió
+    (mtime) d'un fitxer es processa com a màxim una vegada -- si
+    l'enviament falla, l'estat no es guarda i es reintenta a la propera
+    passada.
+    """
+    if not smtp_configured():
+        return
+
+    state = load_pd_teacher_state()
+
+    for fname in sorted(os.listdir(pd_dir)):
+        if not fname.endswith(".md") or "_000_" in fname:
+            continue
+        filepath = os.path.join(pd_dir, fname)
+        state_key = f"{familia}/{cicle}/{fname}"
+        mtime = os.path.getmtime(filepath)
+        if mtime <= state.get(state_key, 0.0):
+            continue
+
+        to_addr = get_teacher_email(filepath)
+        if not to_addr:
+            state[state_key] = mtime
+            save_pd_teacher_state(state)
+            continue
+
+        deficiencies = []
+        places = find_placeholders(filepath)
+        if places:
+            deficiencies.append(f"{len(places)} marques pendents ([###]/[...] sense substituir)")
+        parsed = parse_pd_filename(fname)
+        if parsed and parsed["estat"] == "BORRADOR":
+            deficiencies.append("el fitxer segueix en estat BORRADOR (falta renombrar a _OK.md)")
+
+        if not deficiencies:
+            state[state_key] = mtime
+            save_pd_teacher_state(state)
+            continue
+
+        subject = f"[PCCF {cicle}] Incidències pendents a la teua PD - {fname}"
+        body = (
+            f"S'han detectat les següents incidències a la teua Programació "
+            f"Didàctica ({fname}, cicle {cicle}):\n\n"
+            + "\n".join(f"- {d}" for d in deficiencies)
+            + "\n\nRevisa i completa-la directament al fitxer.\n"
+        )
+        if send_report_email(to_addr, subject, body):
+            print(f"[pccf-poller] correu enviat al docent ({to_addr}) per {fname}", flush=True)
+            state[state_key] = mtime
+            save_pd_teacher_state(state)
 
 
 def poll_once(sync_root, centre, cicle=None):
@@ -130,6 +212,7 @@ def poll_once(sync_root, centre, cicle=None):
             os.makedirs(report_dir, exist_ok=True)
             with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
                 f.write(format_pd_report(status))
+            notify_pd_teachers(cicle, familia, pdir)
 
         if pccf_canviat:
             status = compute_pccf_status(cicle, familia, pccf_dir)
