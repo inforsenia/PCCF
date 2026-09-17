@@ -26,7 +26,7 @@ See `AGENTS.md` → "Build commands", "Docker", and "Testing" sections for the f
 
 - `tools/pccf_utils.py::get_hoja_label()` is where you add a mapping if a new Excel sheet name doesn't match a module — see `AGENTS.md` → Key conventions.
 - `tools/memories_utils.py::CICLES_CONEGUTS` must include any newly added cycle.
-- Generated/teacher-workspace directories are gitignored: `plantilles_*/`, `memories_FP/`, `memories_ESOBAT/`, `PDFS/`, `temp/`. Don't treat their absence as broken state.
+- Generated/teacher-workspace directories are gitignored: `plantilles_*/`, `programacions/`, `pccf/0_report/`, `pccf/1_esborrany/`, `memories_FP/`, `memories_ESOBAT/`, `PDFS/`, `temp/`. Don't treat their absence as broken state.
 - `boe_{INF,SCO}/rd-{ciclo}.json` is the single source of truth for curriculum data; everything else (Excel, PDs, PCCF sections) derives from it.
 - CI (`.github/workflows/makefile.yml`) only builds on `main` when the commit message contains `[build]`.
 - `memories_ESOBAT`/`memories_FP` may be **symlinks** to a OneDrive-synced folder (not plain generated directories), and `tools/local_sync_poller.py` may already be auto-compiling+publishing on file changes with zero manual trigger — see `AGENTS.md` → "Sincronització OneDrive de memòries" for the full mechanism, `tools/publish_memories_output.py`, Portainer deployment, and critical safety lessons (never kill `onedrive` mid-`--resync`, never `--resync` unsupervised, `lualatex` must stay preferred over `xelatex`) before touching anything related to it.
