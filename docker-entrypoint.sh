@@ -24,10 +24,11 @@ if [ ! -f "$ONEDRIVE_CONFDIR/refresh_token" ]; then
     exit 1
 fi
 
-# El perfil de PCCF és OPCIONAL: mentre no s'haja fet el seu bootstrap manual
-# (encara pendent), el contenidor arranca igualment i les memòries seguixen
-# funcionant exactament igual que abans -- no bloquegem tot el desplegament
-# per una peça nova que encara no s'ha configurat.
+# El perfil de PCCF és OPCIONAL: si mai falta el seu bootstrap manual (p. ex.
+# un desplegament nou des de zero), el contenidor arranca igualment i les
+# memòries seguixen funcionant exactament igual que abans -- no bloquegem tot
+# el desplegament per esta peça. En este servidor el bootstrap ja està fet
+# (confirmat: el poller de PCCF corre en producció, vore AGENTS.md).
 PCCF_SYNC_ENABLED=1
 if [ ! -f "$PCCF_ONEDRIVE_CONFDIR/refresh_token" ]; then
     echo "AVÍS: no hi ha refresh_token a $PCCF_ONEDRIVE_CONFDIR"
