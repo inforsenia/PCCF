@@ -11,6 +11,19 @@ CICLES_INF = ["SMX", "DAM", "CEIABD", "FPBIIO"]
 CICLES_SCO = ["APD", "EI", "IS"]
 CICLES_CONEGUTS = sorted(CICLES_INF + CICLES_SCO, key=len, reverse=True)
 
+# Text de cada cicle INF per a la frase "Es un módulo de ... que se imparte
+# en {contexto}." de templates_INF/_base_pd_INF.md. Únic lloc on viu este
+# text -- abans estava hardcodejat i copiat a cada plantilla de cicle, i
+# CEIABD/FPBIIO arrossegaven per error el text de DAM. CEIABD és un Curso de
+# Especialización (no un "Ciclo de Grado X"), per això és una frase completa
+# independent i no un grado+títol descompost.
+CICLE_INFO_INF = {
+    "SMX": {"contexto": "el Ciclo de Grado Medio de \nTécnico en Sistemas Microinformáticos y Redes"},
+    "DAM": {"contexto": "el Ciclo de Grado Superior de \nTécnico en Desarrollo de Aplicaciones Multiplataforma"},
+    "CEIABD": {"contexto": "el Curso de Especialización en Inteligencia Artificial y Big Data"},
+    "FPBIIO": {"contexto": "el Ciclo de Grado Básico de \nTécnico Básico en Informática y Oficina"},
+}
+
 OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 
 # Pattern per a noms de fitxer PD:

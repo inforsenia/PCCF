@@ -33,10 +33,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, parse_pd_filename
 from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report, find_placeholders
 from memories_utils import get_teacher_email
-from mailer import smtp_configured, send_report_email
+from mailer import smtp_configured, send_report_email, get_department_email
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CICLES_ALL = CICLES_INF + CICLES_SCO
+
+# Fitxer disparador que el cap de departament crea (buit) dins de
+# programacions/{CICLE}/ des de la seua carpeta sincronitzada OneDrive, per a
+# demanar la compilació del PDF de Programacions sense accés al contenidor.
+# Deliberadament manual (a diferència del PCCF, que s'autocompila): el moment
+# de compilar el decideix el cap, no cada edició d'una PD.
+PD_COMPILE_TRIGGER = "COMPILAR_ARA"
 
 STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
 
@@ -158,6 +165,51 @@ def notify_pd_teachers(cicle, familia, pd_dir):
             save_pd_teacher_state(state)
 
 
+def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre):
+    """Compila el PDF de Programacions si el cap de departament ha deixat el
+    fitxer disparador `PD_COMPILE_TRIGGER` (buit) dins de programacions/{CICLE}/.
+
+    Independent de si hi ha hagut cap canvi de PD en esta passada -- cal
+    comprovar-ho sempre. Si la compilació falla, el disparador NO s'esborra
+    (es reintenta a la propera passada, mateix criteri que notify_pd_teachers).
+    Si té èxit, s'esborra el disparador i s'avisa per correu el cap de
+    departament (department_emails.json, tipus "PCCF", clau = cicle).
+    """
+    trigger_path = os.path.join(pdir, PD_COMPILE_TRIGGER)
+    if not os.path.exists(trigger_path):
+        return
+
+    print(f"[pccf-poller] {familia}_{cicle}: disparador {PD_COMPILE_TRIGGER} detectat, compilant Programacions...", flush=True)
+    result = subprocess.run(
+        ["make", f"PCCF_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
+         f"compila-pd-pccf-{cicle.lower()}"],
+        cwd=PROJECT_DIR, capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        print(f"[pccf-poller] ERROR compilant PD (disparador) {familia}_{cicle}:\n{result.stdout[-2000:]}\n{result.stderr[-2000:]}", flush=True)
+        return
+
+    try:
+        os.remove(trigger_path)
+    except OSError:
+        pass
+
+    pdf_path = os.path.join(pdir, "1_esborrany", f"Programaciones_{centre}_{cicle}.pdf")
+    to_addr = get_department_email("PCCF", cicle)
+    if not to_addr:
+        print(f"[pccf-poller] {familia}_{cicle}: PD compilada però no hi ha email de cap de departament a department_emails.json (tipus 'PCCF', clau '{cicle}')", flush=True)
+        return
+
+    subject = f"[PCCF {cicle}] Programacions compilades"
+    body = (
+        f"S'ha generat el PDF de Programacions del cicle {cicle} a petició teua "
+        f"(fitxer {PD_COMPILE_TRIGGER}).\n\n"
+        "L'adjunt d'este correu, si s'ha pogut adjuntar, és la darrera versió compilada.\n"
+    )
+    if send_report_email(to_addr, subject, body, attachments=[pdf_path]):
+        print(f"[pccf-poller] correu enviat al cap de departament ({to_addr}) per Programacions {cicle}", flush=True)
+
+
 def poll_once(sync_root, centre, cicle=None):
     processed = []
     state = load_state()
@@ -179,6 +231,10 @@ def poll_once(sync_root, centre, cicle=None):
         if bootstrap.returncode != 0:
             print(f"[pccf-poller] ERROR bootstrap {key}:\n{bootstrap.stdout[-2000:]}\n{bootstrap.stderr[-2000:]}", flush=True)
             continue
+
+        # Independent de si hi ha canvis de PD/PCCF esta passada -- el cap de
+        # departament pot demanar compilar encara que res haja canviat.
+        check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre)
 
         pd_mtime = latest_source_mtime(pdir)
         mtime_src = dir_mtime(pccf_dir, "src")
