@@ -257,6 +257,14 @@ El tipus `"PCCF"` (usat pel disparador `COMPILAR_ARA` de Programacions, vore sec
 - `tools/mailer.py::smtp_configured()` comprova la condició 1; `send_report_email()` fa l'enviament real (adjunta el `.txt` del report i el PDF si existeixen) i capça qualsevol excepció (SMTP caigut, credencials incorrectes) registrant-la per stdout sense interrompre el poller/publicació.
 - Mecanisme d'enviament recomanat: SMTP amb un compte dedicat (p. ex. Gmail + contrasenya d'aplicació), evitant dependre de permisos del tenant GVA.
 
+**Curs academic actual per a les Portades (`curs_actual.json`)**: mateix patro que `department_emails.json` -- fitxer extern **mai en git**, perque canviar de curs no ha de requerir un commit ni un redesplegament. `tools/render_portada.py::get_curs()` el llig per a renderitzar les Portades (`PCCF_000_*.md`, `PD_000_*.md`) com a plantilla Jinja2:
+```json
+{"curs": "2026-2027"}
+```
+- Path per defecte: `CURS_ACTUAL_FILE` (Portainer: `/data/curs_actual.json`, bind mount `${PCCF_DATA_DIR:-/docker/pccf}/curs_actual.json:ro`; en local sense la variable: `curs_actual.json` a l'arrel del projecte, ja gitignorat). **Ha d'existir al host ABANS del primer desplegament amb este bind mount** — mateixa trampa que `department_emails.json`: si Docker no troba el fitxer origen en muntar-lo, crea un directori buit en son lloc i el contenidor falla en llegir-lo.
+- A diferencia dels emails de departament, este fitxer **no és opcional**: si no es troba, `render_portada.py` avorta amb un error clar (les Portades sempre es regeneren, no té sentit continuar sense un curs vàlid).
+- Abans (`ad3085c`) vivia com `pccf/curs_actual.json`, tracat en git — es va traure perque canviar-lo exigia un commit cada any acadèmic; ara es gestiona igual que qualsevol altra dada específica del servidor.
+
 **Notificacions al propi docent (opció B, `tools/local_sync_poller.py::notify_teachers()`)**: avisa el docent de les deficiències de la seua pròpia memòria (no el report sencer del departament) quan el fitxer `.md` conté una línia opcional `correu-e` a la secció `### DOCENT`, p. ex.:
 ```
 ### DOCENT

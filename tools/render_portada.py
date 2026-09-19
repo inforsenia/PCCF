@@ -2,7 +2,9 @@
 
 """
 Renderitza una Portada/Introduccio (PCCF_000_*.md, PD_000_*.md) com a
-plantilla Jinja2, llegint el curs academic actual de pccf/curs_actual.json.
+plantilla Jinja2, llegint el curs academic actual d'un fitxer extern
+(mai en git, vore CURS_ACTUAL_FILE -- mateix patro que department_emails.json
+a tools/mailer.py, aixi es pot canviar el curs sense tocar codi ni fer commit).
 
 A diferencia de la resta de PD_*.md (treball del docent, mai sobreescrit),
 les Portades no contenen treball del docent -- nomes text fix + el curs --
@@ -19,11 +21,20 @@ import sys
 
 import jinja2
 
-CURS_FILE = "pccf/curs_actual.json"
+from memories_utils import PROJECT_DIR
+
+CURS_ACTUAL_FILE = os.environ.get(
+    "CURS_ACTUAL_FILE", os.path.join(PROJECT_DIR, "curs_actual.json")
+)
 
 
 def get_curs():
-    with open(CURS_FILE, encoding="utf-8") as f:
+    if not os.path.isfile(CURS_ACTUAL_FILE):
+        sys.exit(
+            f"ERROR: no es troba {CURS_ACTUAL_FILE}. Crea'l amb "
+            '{"curs": "2026-2027"} (fitxer extern, mai en git -- vore AGENTS.md).'
+        )
+    with open(CURS_ACTUAL_FILE, encoding="utf-8") as f:
         return json.load(f)["curs"]
 
 

@@ -15,6 +15,10 @@ pccf_sync
 *.bak
 *.kate-swp
 
+# Curs academic actual per a les Portades PCCF/PD -- fitxer extern editable
+# sense fer commit (mateix patro que department_emails.json), vore AGENTS.md.
+curs_actual.json
+
 # Xarxa de seguretat: el token d'onedrive NO ha d'estar mai dins del repositori
 # (repositori públic). Viu sempre en un volum Docker extern, mai ací.
 refresh_token
