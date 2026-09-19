@@ -7,7 +7,7 @@ lang: ca-ES
 keywords: [DAM]
 abstract: |
           Programacions Didàctiques del Cicle Formatiu per al Grau Superior de Desenvolupament d'Aplicacions Multiplataforma
-          Impartit a l'IES La Sénia.
+          Impartit a l'IES Eduardo Primo Marqués.
           Curs {{ curs }}.
 titlepage: true
 page-background: "../rsrc/backgrounds/bg_EPM.pdf"
