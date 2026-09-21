@@ -86,7 +86,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | **UD4** | NOCIONES AVANZADAS SOBRE EL LENGUAJE PHP | RA6 | 12 | Lunes, 23 de noviembre de 2026 |
 | **UD5** | Introducción a la integración continua y despliegue continuo | RA1 | 16 | Lunes, 17 de diciembre de 2026 |
 | **UD6** | Implantación y administración de gestores de contenidos | RA2, RA3, RA7 | 16 | Lunes, 25 de enero de 2027 |
-| **UD7** | Implantación de aplicaciones de ofimática web | RA4 | 0,5 | Jueves, 11 de febrero de 2026 |
+| **UD7** | Implantación de aplicaciones de ofimática web | RA4 | 0,5 | Jueves, 11 de febrero de 2027 |
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
