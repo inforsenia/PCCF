@@ -1,3 +1,100 @@
+
+
+# UP03 : Mide parámetros eléctricos
+
+## Resultados y Criterios
+
+### Resultados de Aprendizaje
+
+
+| RA   | Resultado                                                                                    |
+|------|----------------------------------------------------------------------------------------------|
+| RA03 | Mide parámetros eléctricos, identificando el tipo de señal y relacionándola con sus unidades características.                    |
+
+
+
+### Criterios de Evaluación 
+
+| RA03 | Criterios de Evaluación                              |
+|------|------------------------------------------------------|
+| a    | Se ha identificado el tipo de señal a medir con el aparato correspondiente.   |
+|  b   |  Se ha seleccionado la magnitud, el rango de medida y se ha conectado el aparato según la magnitud a medir.  |
+| c    | Se ha relacionado la medida obtenida con los valores típicos. |
+|   d  | Se han identificado los bloques de una fuente de alimentación (F.A.) para un ordenador personal. |
+|  e   | Se han enumerado las tensiones proporcionadas por una F.A. típica.   |
+|  f   | Se han medido las tensiones en F.A. típicas de ordenadores personales.   |
+|  g   |  Se han identificado los bloques de un sistema de alimentación ininterrumpida.  |
+|  h   | Se han medido las señales en los puntos significativos de un SAI.   |
+
+
+# Duración y Temporalización
+
+| Sesiones   | Fechas                              |
+|------------|-------------------------------------|
+| 11 Sesiones | 09/09/2026 $\rightarrow$ 21/09/2026 |
+
+# Evaluación
+
+- Taller acerca de montaje y desmontaje de una fuente de alimentación.
+    + Medición eléctrica de los tipos de cables de una fuente.
+- Tareas de búsqueda de información acerca de los tipos de fuentes.
+- Tareas acerca de evaluar la potencia necesaria del SAI.
+
+
+
+
+
+# UP08 : Prevención de Riesgos
+
+## Resultados y Criterios
+
+### Resultados de Aprendizaje
+
+
+| RA   | Resultado                                                                                    |
+|------|----------------------------------------------------------------------------------------------|
+| RA08 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos.            |
+
+
+
+### Criterios de Evaluación 
+
+| RA08 | Criterios de Evaluación                              |
+|------|------------------------------------------------------|
+| a    |  Se han identificado los riesgos y el nivel de peligrosidad que suponen la manipulación de los materiales, herramientas, útiles, máquinas y medios de transporte.   |
+|  b   |  Se han operado las máquinas respetando las normas de seguridad.    |
+| c    | Se han identificado las causas más frecuentes de accidentes en la manipulación de materiales, herramientas, máquinas de corte y conformado, entre otras. |
+|   d  | Se han descrito los elementos de seguridad (protecciones, alarmas, pasos de emergencia, entre otros) de las máquinas y los equipos de protección individual (calzado, protección ocular, indumentaria, entre otros) que se deben emplear en las distintas operaciones de montaje y mantenimiento. |
+|  e   | Se ha relacionado la manipulación de materiales, herramientas y máquinas con las medidas de seguridad y protección personal requeridos.     |
+|  f   |  Se han identificado las posibles fuentes de contaminación del entorno ambiental. g) Se han clasificado los residuos generados para su retirada selectiva.    |
+|  g   |  Se ha valorado el orden y la limpieza de instalaciones y equipos como primer factor de prevención de riesgos.   |
+
+
+
+
+# Duración y Temporalización
+
+| Sesiones   | Fechas                              |
+|------------|-------------------------------------|
+| 11 Sesiones | 22/09/2026 $\rightarrow$ 02/10/2026 |
+
+# Evaluación
+
+- Visualización de videos y casos prácticos.
+- Realización de tests de evaluación de contenidos.
+
+
+
+
+
+
+
+
+
+
+
+
+
 # UP01 : Selección de componentes
 
 ## Resultados y Criterios
@@ -31,7 +128,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 23 Sesiones | 08/09/2025 $\rightarrow$ 10/10/2025 |
+| 23 Sesiones | 05/10/2026 $\rightarrow$ 05/11/2026 |
 
 # Evaluación
 
@@ -75,7 +172,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 48 Sesiones | 02/10/2025 $\rightarrow$ 19/11/2025 |
+| 48 Sesiones | 06/11/2026 $\rightarrow$ 21/12/2026 |
 
 # Evaluación
 
@@ -87,45 +184,15 @@
 
 
 
-# UP03 : Mide parámetros eléctricos
-
-## Resultados y Criterios
-
-### Resultados de Aprendizaje
-
-
-| RA   | Resultado                                                                                    |
-|------|----------------------------------------------------------------------------------------------|
-| RA03 | Mide parámetros eléctricos, identificando el tipo de señal y relacionándola con sus unidades características.                    |
 
 
 
-### Criterios de Evaluación 
-
-| RA03 | Criterios de Evaluación                              |
-|------|------------------------------------------------------|
-| a    | Se ha identificado el tipo de señal a medir con el aparato correspondiente.   |
-|  b   |  Se ha seleccionado la magnitud, el rango de medida y se ha conectado el aparato según la magnitud a medir.  |
-| c    | Se ha relacionado la medida obtenida con los valores típicos. |
-|   d  | Se han identificado los bloques de una fuente de alimentación (F.A.) para un ordenador personal. |
-|  e   | Se han enumerado las tensiones proporcionadas por una F.A. típica.   |
-|  f   | Se han medido las tensiones en F.A. típicas de ordenadores personales.   |
-|  g   |  Se han identificado los bloques de un sistema de alimentación ininterrumpida.  |
-|  h   | Se han medido las señales en los puntos significativos de un SAI.   |
 
 
-# Duración y Temporalización
 
-| Sesiones   | Fechas                              |
-|------------|-------------------------------------|
-| 11 Sesiones | 20/11/2025 $\rightarrow$ 30/11/2025 |
 
-# Evaluación
 
-- Taller acerca de montaje y desmontaje de una fuente de alimentación.
-    + Medición eléctrica de los tipos de cables de una fuente.
-- Tareas de búsqueda de información acerca de los tipos de fuentes.
-- Tareas acerca de evaluar la potencia necesaria del SAI.
+
 
 
 
@@ -161,7 +228,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 59 Sesiones | 01/12/2025 $\rightarrow$ 01/02/2026 |
+| 59 Sesiones | 07/01/2027 $\rightarrow$ 12/03/2027 |
 
 # Evaluación
 
@@ -204,7 +271,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 11 Sesiones | 02/02/2026 $\rightarrow$ 15/02/2026 |
+| 11 Sesiones | 15/03/2027 $\rightarrow$ 24/03/2027 |
 
 # Evaluación
 
@@ -248,7 +315,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 35 Sesiones | 16/02/2026 $\rightarrow$ 22/03/2026 |
+| 35 Sesiones | 06/04/2027 $\rightarrow$ 12/05/2027 |
 
 # Evaluación
 
@@ -293,7 +360,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 35 Sesiones | 23/03/2026 $\rightarrow$ 26/04/2026 |
+| 35 Sesiones | 13/05/2027 $\rightarrow$ 18/06/2027 |
 
 # Evaluación
 
@@ -306,44 +373,7 @@
 
 
 
-# UP08 : Prevención de Riesgos
 
-## Resultados y Criterios
-
-### Resultados de Aprendizaje
-
-
-| RA   | Resultado                                                                                    |
-|------|----------------------------------------------------------------------------------------------|
-| RA08 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos.            |
-
-
-
-### Criterios de Evaluación 
-
-| RA08 | Criterios de Evaluación                              |
-|------|------------------------------------------------------|
-| a    |  Se han identificado los riesgos y el nivel de peligrosidad que suponen la manipulación de los materiales, herramientas, útiles, máquinas y medios de transporte.   |
-|  b   |  Se han operado las máquinas respetando las normas de seguridad.    |
-| c    | Se han identificado las causas más frecuentes de accidentes en la manipulación de materiales, herramientas, máquinas de corte y conformado, entre otras. |
-|   d  | Se han descrito los elementos de seguridad (protecciones, alarmas, pasos de emergencia, entre otros) de las máquinas y los equipos de protección individual (calzado, protección ocular, indumentaria, entre otros) que se deben emplear en las distintas operaciones de montaje y mantenimiento. |
-|  e   | Se ha relacionado la manipulación de materiales, herramientas y máquinas con las medidas de seguridad y protección personal requeridos.     |
-|  f   |  Se han identificado las posibles fuentes de contaminación del entorno ambiental. g) Se han clasificado los residuos generados para su retirada selectiva.    |
-|  g   |  Se ha valorado el orden y la limpieza de instalaciones y equipos como primer factor de prevención de riesgos.   |
-
-
-
-
-# Duración y Temporalización
-
-| Sesiones   | Fechas                              |
-|------------|-------------------------------------|
-| 11 Sesiones | 27/04/2026 $\rightarrow$ 10/05/2026 |
-
-# Evaluación
-
-- Visualización de videos y casos prácticos.
-- Realización de tests de evaluación de contenidos.
 
 
 
