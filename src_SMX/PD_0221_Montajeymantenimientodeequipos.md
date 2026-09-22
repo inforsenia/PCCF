@@ -4,8 +4,7 @@
 
 ## Datos identificativos y contextualización del módulo. 
 
-Es un módulo de 233 horas que se imparte en el Ciclo de Grado Medio de 
-Técnico en Sistemas Microinformáticos y Redes.
+Es un módulo de 233 horas que se imparte en el Ciclo de Grado Medio de Técnico en Sistemas Microinformáticos y Redes.
 
 
 
@@ -196,21 +195,13 @@ El equipo docente se compromente a facilitar en Aules un seguimiento del progres
 
 ### Formación en empresa 
 
-En el caso de que el alumnado no supere los Resultados de Aprendizaje requeridos
-para la Formación en Empresa, se elaborará un programa educativo especifico
-para la recuperación de los RA no superados. Este programa se llevará a cabo
-en el periodo que el alumnado debería estar realizando la Formación en Empresa
-y **antes de la Convocatoria Ordinaria**.
+En el caso de que el alumnado no supere los Resultados de Aprendizaje requeridos para la Formación en Empresa, se elaborará un programa educativo especifico para la recuperación de los RA no superados. Este programa se llevará a cabo en el periodo que el alumnado debería estar realizando la Formación en Empresa y **antes de la Convocatoria Ordinaria**.
 
-Cuando un estudiante de **primer curso no se incorpore a Formación en Empresa (FE)** por causa 
-justificada y acreditada, permanecerá en el centro educativo realizando actividades complementarias, 
-extraescolares y/o de refuerzo que le permitan acercarse al ámbito socio-laboral. 
+Cuando un estudiante de **primer curso no se incorpore a Formación en Empresa (FE)** por causa justificada y acreditada, permanecerá en el centro educativo realizando actividades complementarias, extraescolares y/o de refuerzo que le permitan acercarse al ámbito socio-laboral. 
 
-La fase de Formación en Empresa podrá acogerse a las condiciones que cada empresa 
-tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora del mismo 
+La fase de Formación en Empresa podrá acogerse a las condiciones que cada empresa tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora del mismo.
 
-Para realizar la Formación en Empresa es **requisito** que el alumno haya adquirido las 
-competencias de riesgos específicos y medidas de **Prevención de Riesgos Laborales**. 
+Para realizar la Formación en Empresa es **requisito** que el alumno haya adquirido las competencias de riesgos específicos y medidas de **Prevención de Riesgos Laborales**. 
 
 #### Superación de los RA's asociados a la FE
 
@@ -244,16 +235,12 @@ recuperación
 
 ### Convocatoria Ordinaria
 
-1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs 
-   durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo 
-   de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará
-   al calendario propuesto por el centro.
+1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
+2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará al calendario propuesto por el centro.
 
 ### Convocatoria Extraordinaria
 
-La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
-descrito en el Proyecto Curricular de Ciclo Formativo.
+La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Actividades complementarias y extraescolares. 
 
