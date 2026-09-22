@@ -30,7 +30,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 11 Sesiones | 08/09/2025 $\rightarrow$ 21/09/2025 |
+| 11 Sesiones | 09/09/2026 $\rightarrow$ 22/09/2026 |
 
 # Evaluación
 
@@ -75,7 +75,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 36 Sesiones | 22/09/2025 $\rightarrow$ 26/10/2025 |
+| 36 Sesiones | 23/09/2026 $\rightarrow$ 28/10/2026 |
 
 # Evaluación
 
@@ -119,7 +119,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 35 Sesiones | 27/10/2025 $\rightarrow$ 30/11/2025 |
+| 35 Sesiones | 29/10/2026 $\rightarrow$ 02/12/2026 |
 
 # Evaluación
 
@@ -163,7 +163,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 47 Sesiones | 01/12/2025 $\rightarrow$ 18/01/2026 |
+| 47 Sesiones | 03/12/2026 $\rightarrow$ 21/01/2027 |
 
 # Evaluación
 
@@ -207,7 +207,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 35 Sesiones | 19/01/2026 $\rightarrow$ 22/02/2026 |
+| 35 Sesiones | 22/01/2027 $\rightarrow$ 25/02/2027 |
 
 # Evaluación
 
@@ -254,7 +254,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 35 Sesiones | 23/02/2026 $\rightarrow$ 29/03/2026 |
+| 35 Sesiones | 26/02/2027 $\rightarrow$ 14/04/2027 |
 
 # Evaluación
 
@@ -297,7 +297,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 23 Sesiones | 30/03/2026 $\rightarrow$ 22/04/2026 |
+| 23 Sesiones | 15/04/2027 $\rightarrow$ 07/05/2027 |
 
 # Evaluación
 
@@ -340,7 +340,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 11 Sesiones | 23/04/2026 $\rightarrow$ 11/05/2026 |
+| 11 Sesiones | 10/05/2027 $\rightarrow$ 24/05/2027 |
 
 # Evaluación
 
