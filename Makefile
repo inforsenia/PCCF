@@ -217,8 +217,10 @@ compila-pd-pccf-%:
 			cp "$(PD_DIR)"/.optatives_pd/PD_*.md "$$STAGE/"; \
 		fi && \
 		sed -i "s#\.\./rsrc/backgrounds/#$(PROJECT_ROOT)/rsrc/backgrounds/#g" "$$STAGE"/*.md && \
+		python3 tools/prepara_pd_compilacio.py $(CICLO_UPPER) $(FAMILIA) --pd-dir "$(PD_DIR)" --stage "$$STAGE" && \
+		if [ -f "$$STAGE/.draft" ]; then DRAFT_OPT="-V draft=true"; else DRAFT_OPT=""; fi && \
 		cd "$$STAGE" && \
-		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
+		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $$DRAFT_OPT --include-in-header "$$STAGE/pd_header.tex" \
 			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
 	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
 	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PD_DIR)" 2>&1 | tail -3

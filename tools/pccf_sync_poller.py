@@ -44,6 +44,9 @@ CICLES_ALL = CICLES_INF + CICLES_SCO
 # Deliberadament manual (a diferència del PCCF, que s'autocompila): el moment
 # de compilar el decideix el cap, no cada edició d'una PD.
 PD_COMPILE_TRIGGER = "COMPILAR_ARA"
+# Des d'OneDrive/Windows costa crear un fitxer sense extensió: s'accepten
+# també .md i .txt, sense distingir majúscules.
+PD_COMPILE_TRIGGER_EXTS = ("", ".md", ".txt")
 
 STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
 
@@ -175,8 +178,12 @@ def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre):
     Si té èxit, s'esborra el disparador i s'avisa per correu el cap de
     departament (department_emails.json, tipus "PCCF", clau = cicle).
     """
-    trigger_path = os.path.join(pdir, PD_COMPILE_TRIGGER)
-    if not os.path.exists(trigger_path):
+    valids = {(PD_COMPILE_TRIGGER + ext).upper() for ext in PD_COMPILE_TRIGGER_EXTS}
+    try:
+        triggers = [os.path.join(pdir, f) for f in os.listdir(pdir) if f.upper() in valids]
+    except OSError:
+        return
+    if not triggers:
         return
 
     print(f"[pccf-poller] {familia}_{cicle}: disparador {PD_COMPILE_TRIGGER} detectat, compilant Programacions...", flush=True)
@@ -189,10 +196,11 @@ def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre):
         print(f"[pccf-poller] ERROR compilant PD (disparador) {familia}_{cicle}:\n{result.stdout[-2000:]}\n{result.stderr[-2000:]}", flush=True)
         return
 
-    try:
-        os.remove(trigger_path)
-    except OSError:
-        pass
+    for trigger_path in triggers:
+        try:
+            os.remove(trigger_path)
+        except OSError:
+            pass
 
     pdf_path = os.path.join(pdir, "1_esborrany", f"Programaciones_{centre}_{cicle}.pdf")
     to_addr = get_department_email("PCCF", cicle)
