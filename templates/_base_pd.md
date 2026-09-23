@@ -2,11 +2,11 @@
 
 # Programació didàctica: Mòdul {% if optativa %}optatiu {% endif %}{{ modulo.nombre }}
 
-## Datos identificativos y contextualización del módulo. 
+## Dades identificatives i contextualització del mòdul
 
-Es un módulo de {{ modulo.horas }} horas que se imparte en {{ ciclo_contexto }}.
+És un mòdul de {{ modulo.horas }} hores que s'imparteix en {{ ciclo_contexto }}.
 
-Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
+Té una correspondència en crèdits de {{ modulo.creditos}}.
 
 ### DOCENT
 
@@ -16,31 +16,31 @@ Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
 
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 
-## Relación entre los estándares de competencia y los módulos del ciclo formativo
+## Relació entre els estàndards de competència i els mòduls del cicle formatiu
 
-| Unidad de Competencia | Descripción |
+| Unitat de competència | Descripció |
 |-----------------------|-------------|{% for uca in modulo.UnidadesCompetenciaAcreditadas %}
 | {{ uca }} | {{ modulo.UnidadesCompetenciaAcreditadas[uca] }} |{% endfor %}
 |<img width=200/>|<img width=500/>|
 
 {% endif %}
 
-## Resultados de Aprendizaje
+## Resultats d'aprenentatge
 
-Los **Resultados de Aprendizaje** relativos al módulo de {{modulo.nombre}} son:
+Els **resultats d'aprenentatge** relatius al mòdul de {{modulo.nombre}} són:
 
-|Código| Resultado de Aprendizaje |
+|Codi| Resultat d'aprenentatge |
 |------|--------------------------|{% for ra in modulo.ResultadosAprendizaje %}
 | {{ ra }} | {{ modulo.ResultadosAprendizaje[ra].Resultado }} |{% endfor %}
 |<img width=200/>|<img width=500/>|
 
 {% if modulo.ObjetivosGenerales|count > 0 %}
 
-## Objetivos Generales 
+## Objectius generals
 
-La formación del módulo contribuye a alcanzar los *Objetivos Generales del Ciclo* siguientes:
+La formació del mòdul contribueix a assolir els *objectius generals del cicle* següents:
 
-| Obj| Objetivo General del Ciclo |
+| Obj| Objectiu general del cicle |
 |----|----------------------------|{% for obj in modulo.ObjetivosGenerales %}
 | {{ obj }} | {{ modulo.OG[obj] }} |{% endfor %}
 |<img width=100/>|<img width=500/>|
@@ -50,90 +50,88 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 
 {% if modulo.CompetenciasTitulo|count > 0 %}
 
-## Competencias del Título 
+## Competències del títol
 
-La formación del módulo contribuye a alcanzar las *Competencias del Título* siguientes:
+La formació del mòdul contribueix a assolir les *competències del títol* següents:
 
-| Obj| Competencia del Título |
+| Codi| Competència del títol |
 |----|----------------------------|{% for com in modulo.CompetenciasTitulo %}
 | {{ com }} | {{ modulo.CPSS[com] }} |{% endfor %}
 |<img width=100/>|<img width=500/>|
 
 {% endif %}
 
-## Secuenciación de las Unidades de Programación. 
+## Seqüenciació de les unitats de programació
 
 > **Instruccions per al docent:** Substituïu les marques `[###]` per la informació real del vostre mòdul. Si una secció no escau, indiqueu "No escau".
 
 [###]
 
-Se propone esta taula orientativa
+Es proposa esta taula orientativa:
 
-| Número | Título                    | Trimestre |
+| Número | Títol                     | Trimestre |
 |--------|---------------------------|-----------|
 | 01     | [###] | [###] |
 
-## Metodología del proceso de enseñanza-aprendizaje
+## Metodologia del procés d'ensenyança-aprenentatge
 
-La metodología didáctica adoptada en esta programación se encuentra alineada con los principios y directrices establecidos en el Proyecto Curricular del Ciclo Formativo (PCCF), elaborado de forma colaborativa por el equipo docente del ciclo. Este documento marco recoge los enfoques metodológicos comunes que guían el proceso de enseñanza-aprendizaje en todos los módulos del ciclo, promoviendo una formación integral, activa y contextualizada del alumnado.
+La metodologia didàctica adoptada en esta programació està alineada amb els principis i directrius establits en el Projecte Curricular del Cicle Formatiu (PCCF), elaborat de manera col·laborativa per l'equip docent del cicle. Este document marc recull els enfocaments metodològics comuns que guien el procés d'ensenyança-aprenentatge en tots els mòduls del cicle, i promou una formació integral, activa i contextualitzada de l'alumnat.
 
-Se apuesta por metodologías activas, centradas en el estudiante, que fomentan el aprendizaje significativo, el trabajo cooperativo, la resolución de problemas y la aplicación práctica de los contenidos en contextos reales o simulados. Asimismo, se integran estrategias que favorecen la autonomía, la reflexión crítica y el desarrollo de competencias profesionales, personales y sociales.
+S'aposta per metodologies actives, centrades en l'alumnat, que fomenten l'aprenentatge significatiu, el treball cooperatiu, la resolució de problemes i l'aplicació pràctica dels continguts en contextos reals o simulats. Així mateix, s'integren estratègies que afavorixen l'autonomia, la reflexió crítica i el desenvolupament de competències professionals, personals i socials.
 
-Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en la **Programación de Aula**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
+Qualsevol concreció metodològica específica, adaptada a les característiques del mòdul o del grup d'alumnes, es desenvoluparà en la **programació d'aula**, on es detallaran les activitats, els recursos i les dinàmiques concretes que es duran a terme.
 
 ## Recursos
 
-Los recursos didácticos utilizados en este módulo se seleccionan en coherencia con los criterios establecidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que define los medios y herramientas comunes para facilitar el desarrollo de las competencias profesionales, personales y sociales del alumnado.
+Els recursos didàctics utilitzats en este mòdul se seleccionen en coherència amb els criteris establits en el Projecte Curricular del Cicle Formatiu (PCCF), que definix els mitjans i les ferramentes comuns per a facilitar el desenvolupament de les competències professionals, personals i socials de l'alumnat.
 
-Se contempla el uso de recursos variados, tanto materiales como digitales, que favorecen un aprendizaje activo, contextualizado y accesible. Entre ellos se incluyen: equipamiento técnico específico del módulo, herramientas TIC, plataformas educativas, materiales audiovisuales, documentación profesional actualizada y recursos adaptados a las necesidades del grupo.
+Es contempla l'ús de recursos variats, tant materials com digitals, que afavorixen un aprenentatge actiu, contextualitzat i accessible. Entre ells s'inclouen: equipament tècnic específic del mòdul, ferramentes TIC, plataformes educatives, materials audiovisuals, documentació professional actualitzada i recursos adaptats a les necessitats del grup.
 
-La concreción de los recursos específicos que se emplearán en cada unidad didáctica o actividad se detallará en la **Programación de Aula**, en función de los objetivos, contenidos y metodologías aplicadas.
+La concreció dels recursos específics que s'empraran en cada unitat didàctica o activitat es detallarà en la **programació d'aula**, en funció dels objectius, els continguts i les metodologies aplicades.
 
-## Uso de espacios y equipamientos. 
+## Ús d'espais i equipaments
 
-El uso de los espacios y equipamientos necesarios para el desarrollo de este módulo se organiza conforme a lo establecido en el Proyecto Curricular del Ciclo Formativo (PCCF), donde se recogen los criterios comunes para la distribución, aprovechamiento y adecuación de los entornos formativos.
+L'ús dels espais i equipaments necessaris per al desenvolupament d'este mòdul s'organitza d'acord amb el que s'establix en el Projecte Curricular del Cicle Formatiu (PCCF), on es recullen els criteris comuns per a la distribució, l'aprofitament i l'adequació dels entorns formatius.
 
-Se prioriza la utilización de espacios que reproduzcan contextos profesionales reales o simulados, favoreciendo así el aprendizaje significativo y la adquisición de competencias en condiciones similares a las del entorno laboral. Asimismo, se garantiza el acceso a los equipamientos técnicos y tecnológicos adecuados, asegurando su disponibilidad, mantenimiento y uso responsable, cumpliendo la normativa del Centro y de la Conselleria.
+Es prioritza la utilització d'espais que reproduïsquen contextos professionals reals o simulats, i s'afavorix així l'aprenentatge significatiu i l'adquisició de competències en condicions semblants a les de l'entorn laboral. Així mateix, es garantix l'accés als equipaments tècnics i tecnològics adequats, i se n'assegura la disponibilitat, el manteniment i l'ús responsable, d'acord amb la normativa del centre i de la Conselleria.
 
-Las especificidades sobre el uso de espacios y equipamientos en cada actividad concreta se detallarán en la **Programación de Aula**, adaptándose a las necesidades del alumnado y a los objetivos de cada propuesta didáctica.
+Les especificitats sobre l'ús d'espais i equipaments en cada activitat concreta es detallaran en la **programació d'aula**, i s'adaptaran a les necessitats de l'alumnat i als objectius de cada proposta didàctica.
 
-## Medidas de atención a la diversidad. 
+## Mesures d'atenció a la diversitat
 
-Las medidas de atención a la diversidad contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
+Les mesures d'atenció a la diversitat contemplades en esta programació es fonamenten en els principis recollits en el Projecte Curricular del Cicle Formatiu (PCCF), que establix un marc comú per a garantir una resposta educativa inclusiva, equitativa i adaptada a les característiques de l'alumnat.
 
-Se parte del reconocimiento de la diversidad como un valor y una oportunidad para el aprendizaje, promoviendo estrategias que favorezcan la participación, la motivación y el progreso de todos los estudiantes. Entre las medidas generales se incluyen la flexibilización metodológica, la adaptación de recursos, el uso de apoyos personalizados y la atención a distintos ritmos y estilos de aprendizaje.
+Es parteix del reconeixement de la diversitat com un valor i una oportunitat per a l'aprenentatge, i es promouen estratègies que afavorisquen la participació, la motivació i el progrés de tot l'alumnat. Entre les mesures generals s'inclouen la flexibilització metodològica, l'adaptació de recursos, l'ús de suports personalitzats i l'atenció a diferents ritmes i estils d'aprenentatge.
 
-Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en la **Programación de Aula**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
+Les adaptacions específiques, tant metodològiques com organitzatives, es concretaran en la **programació d'aula**, on es detallaran les actuacions necessàries per a atendre les necessitats individuals de l'alumnat, sempre en coordinació amb els serveis d'orientació i l'equip docent.
 
-## Evaluación del aprendizaje. 
+## Avaluació de l'aprenentatge
 
-La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
+La ponderació de cada resultat d'aprenentatge s'indica en l'Esquema general.
 
-> Ací haurien d'apareixer els instruments i activitats concretes d'avaluació que s'empraran pera  qualificar cada RA:
->
-> tabla: RA, instrument i percentatge
+> Ací han d'aparéixer els instruments i les activitats concretes d'avaluació que s'empraran per a qualificar cada RA, en una taula amb les columnes: RA, instrument i percentatge.
 
 [###]
 
-### Primera Convocatoria
+### Primera convocatòria
 
-1. Todo el alumnado tiene derecho a una primera convocatoria, en el caso de que el alumnado haya superado todos los RAs durante la *evaluación continua*, se establecerá su calificación como la de la Primera Convocatoria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará al calendario propuesto por el centro.
+1. Tot l'alumnat té dret a una primera convocatòria. Si l'alumne o l'alumna ha superat tots els RA durant l'*avaluació contínua*, esta qualificació serà la de la primera convocatòria.
+2. Si hi ha RA **no superats** durant l'*avaluació contínua*, l'alumnat té dret a una prova que incloga eixos RA, amb l'objectiu de comprovar que ha adquirit els resultats d'aprenentatge descrits en el mòdul. Esta prova s'ajustarà al calendari proposat pel centre.
 
-### Segona Convocatoria
+### Segona convocatòria
 
-La segunda convocatoria del módulo se ajustará a lo decidido de manera conjunta y ha sido descrito en el Proyecto Curricular de Ciclo Formativo.
+La segona convocatòria del mòdul s'ajustarà al que s'ha decidit de manera conjunta i s'ha descrit en el Projecte Curricular del Cicle Formatiu.
 
-## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
+## Criteris i procediments per a l'avaluació del desenvolupament de la programació i de la pràctica docent
 
-La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
+L'avaluació del propi procés d'*ensenyança-aprenentatge* contemplada en esta programació es fonamenta en els principis recollits en el Projecte Curricular del Cicle Formatiu (PCCF), que establix un marc comú per a garantir una resposta educativa inclusiva, equitativa i adaptada a les característiques de l'alumnat.
 
-## Actividades complementarias y extraescolares. 
+## Activitats complementàries i extraescolars
 
 [###]
 
-## Esquema General de {{modulo.nombre}}
+## Esquema general de {{modulo.nombre}}
 
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 
+NOTA: ací es generarà de manera automàtica la taula a partir de l'Excel compartit amb els RA, els CE i les hores assignades.
 
-NO RELLENAR.
+NO OMPLIR.

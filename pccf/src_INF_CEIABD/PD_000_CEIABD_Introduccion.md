@@ -1,12 +1,12 @@
 ---
-title: Programacions Didàctiques - Curs d'especialització de Intel·ligència Artificial i Big Data 
+title: Programacions Didàctiques - Curs d'especialització d'Intel·ligència Artificial i Big Data 
 subtitle: "Curs {{ curs }}"
 author: Programacions Didàctiques del Departament d'Informàtica
 header-includes: |
 lang: ca-ES
 keywords: [CEIABD]
 abstract: |
-          Programacions Didàctiques del Curs d'especialització de Intel·ligència Artificial i Big Data
+          Programacions Didàctiques del Curs d'especialització d'Intel·ligència Artificial i Big Data
           Impartit a l'IES Eduardo Primo Marqués.
           Carlet (València)
           Curs {{ curs }}

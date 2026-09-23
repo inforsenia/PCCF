@@ -72,15 +72,15 @@ for codigo, modulo in data_box.items():
     p_contenidos_col = 10
     p_contenidos_row = 8
 
-    ws['B1'].value = "Código"
+    ws['B1'].value = "Codi"
     ws['B1'].alignment = Alignment(horizontal='center', vertical='center')
     ws['B1'].fill = PatternFill('lightHorizontal')
 
-    ws['B2'].value = "Nombre"
+    ws['B2'].value = "Nom"
     ws['B2'].alignment = Alignment(horizontal='center', vertical='center')
     ws['B2'].fill = PatternFill('lightHorizontal')
 
-    ws['B3'].value = "Horas"
+    ws['B3'].value = "Hores"
     ws['B3'].alignment = Alignment(horizontal='center', vertical='center')
     ws['B3'].fill = PatternFill('lightHorizontal')
 
@@ -103,7 +103,7 @@ for codigo, modulo in data_box.items():
     ws[p_nombre].font = Font(size=14)
 
     ws.merge_cells(start_row=3, start_column=6, end_row=4, end_column=6)
-    ws[p_TOTAL_HORAS_titulo].value = "TOTAL HORAS"
+    ws[p_TOTAL_HORAS_titulo].value = "TOTAL HORES"
     ws[p_TOTAL_HORAS_titulo].fill = PatternFill('darkTrellis')
     ws[p_TOTAL_HORAS_titulo].font = Font(size=13)
     ws[p_TOTAL_HORAS_titulo].alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
@@ -112,7 +112,7 @@ for codigo, modulo in data_box.items():
     ws[p_TOTAL_HORAS].value = "=SUM(F8:F200)/2"
 
     ws.merge_cells(start_row=3, start_column=9, end_row=4, end_column=9)
-    ws[p_TOTAL_HORAS_DUAL_titulo].value = "TOTAL H.DUAL"
+    ws[p_TOTAL_HORAS_DUAL_titulo].value = "TOTAL H. DUAL"
     ws[p_TOTAL_HORAS_DUAL_titulo].fill = PatternFill('darkTrellis')
     ws[p_TOTAL_HORAS_DUAL_titulo].font = Font(size=13)
     ws[p_TOTAL_HORAS_DUAL_titulo].alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
@@ -122,7 +122,7 @@ for codigo, modulo in data_box.items():
 
     ws.merge_cells(start_row=p_ra_titulo_row, start_column=p_ra_titulo_col,
                    end_row=p_ra_titulo_row + 1, end_column=p_ra_titulo_col)
-    ws.cell(column=p_ra_titulo_col, row=p_ra_titulo_row).value = "RESULTADO DE APRENDIZAJE"
+    ws.cell(column=p_ra_titulo_col, row=p_ra_titulo_row).value = "RESULTAT D'APRENENTATGE"
     ws.cell(column=p_ra_titulo_col, row=p_ra_titulo_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_ra_titulo_col, row=p_ra_titulo_row).fill = PatternFill('gray125')
     ws.column_dimensions[p_ra_col_l].width = 40
@@ -147,7 +147,7 @@ for codigo, modulo in data_box.items():
     p_ce_row = p_comp_row
     ws.merge_cells(start_row=p_ce_row, start_column=p_ce_col,
                    end_row=p_comp_row + 1, end_column=p_ce_col)
-    ws.cell(column=p_ce_col, row=p_ce_row).value = "CRITERIOS DE EVALUACIÓN"
+    ws.cell(column=p_ce_col, row=p_ce_row).value = "CRITERIS D'AVALUACIÓ"
     ws.cell(column=p_ce_col, row=p_ce_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_ce_col, row=p_ce_row).fill = PatternFill('gray125')
     ws.column_dimensions[p_ce_col_l].width = 90
@@ -156,7 +156,7 @@ for codigo, modulo in data_box.items():
     p_h_row = p_ce_row
     ws.merge_cells(start_row=p_h_row, start_column=p_h_col,
                    end_row=p_h_row + 1, end_column=p_h_col)
-    ws.cell(column=p_h_col, row=p_h_row).value = "HORAS"
+    ws.cell(column=p_h_col, row=p_h_row).value = "HORES"
     ws.cell(column=p_h_col, row=p_h_row).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(column=p_h_col, row=p_h_row).fill = PatternFill('gray125')
 
@@ -172,7 +172,7 @@ for codigo, modulo in data_box.items():
     p_req_fe_row = p_h_row
     ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col,
                    end_row=p_req_fe_row + 1, end_column=p_req_fe_col)
-    ws.cell(column=p_req_fe_col, row=p_req_fe_row).value = "REQUISITO FE"
+    ws.cell(column=p_req_fe_col, row=p_req_fe_row).value = "REQUISIT FE"
     ws.cell(column=p_req_fe_col, row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
     ws.cell(column=p_req_fe_col, row=p_req_fe_row).fill = PatternFill('gray125')
     ws.column_dimensions[p_req_fe_col_l].width = 15
@@ -181,7 +181,7 @@ for codigo, modulo in data_box.items():
     p_horas_dual_row = p_req_fe_row
     ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col,
                    end_row=p_horas_dual_row + 1, end_column=p_horas_dual_col)
-    ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).value = "HORAS DUAL"
+    ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).value = "HORES DUAL"
     ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
     ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).fill = PatternFill('gray125')
 
@@ -189,7 +189,7 @@ for codigo, modulo in data_box.items():
     p_contenidos_row = p_horas_dual_row
     ws.merge_cells(start_row=p_contenidos_row, start_column=p_contenidos_col,
                    end_row=p_contenidos_row + 1, end_column=p_contenidos_col)
-    ws.cell(column=p_contenidos_col, row=p_contenidos_row).value = "CONTENIDOS"
+    ws.cell(column=p_contenidos_col, row=p_contenidos_row).value = "CONTINGUTS"
     ws.cell(column=p_contenidos_col, row=p_contenidos_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
     ws.cell(column=p_contenidos_col, row=p_contenidos_row).fill = PatternFill('gray125')
     ws.column_dimensions[p_contenidos_col_l].width = 50
@@ -230,7 +230,7 @@ for codigo, modulo in data_box.items():
                        end_row=p_ra_titulo_row + numCriterios, end_column=p_contenidos_col)
 
         p_ce_row = p_ce_row + 2
-        ws.cell(column=p_ce_col, row=p_ce_row).value = "TODOS"
+        ws.cell(column=p_ce_col, row=p_ce_row).value = "TOTS"
         ws.cell(column=p_ce_col, row=p_ce_row).alignment = Alignment(horizontal='center', vertical='center')
 
         ws.cell(column=p_ce_col + 1, row=p_ce_row).value = "=SUM(F" + str(p_ce_row + 1) + ":F" + str(p_ce_row + numCriterios) + ")"
