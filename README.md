@@ -399,7 +399,7 @@ Genera l'Excel compartit (`programacions/OPTATIVES/libro_optatives.xlsx`) i les 
 make generar-plantilles-optatives
 ```
 
-Les PDs es generen amb Jinja2 a partir de la plantilla `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md`. No sobreescriu PDs existents (BORRADOR/OK).
+Les PDs es generen amb Jinja2 a partir de la plantilla única `templates/_base_pd.md` (la mateixa que els cicles). No sobreescriu PDs existents (BORRADOR/OK).
 
 #### `tools/copy_optatives_pd.py`
 

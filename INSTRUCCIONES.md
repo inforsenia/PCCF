@@ -26,7 +26,7 @@ Si una competència no es troba al diccionari, es mostrarà amb **2 estrelles (�
 
 ### 2. Generar la plantilla de les PD's per als mòduls del nou cicle
 
-A la carpeta `templates_XXX` (XXX correspon a la família) hem de clonar l'arxiu `PCCF_PD_Plantilla_MODULO_CEIABD.md` i crear un per al nou cicle `PCCF_PD_Plantilla_MODULO_FPBIIO.md`
+Totes les PD es generen des de la plantilla única `templates/_base_pd.md`: no cal crear cap plantilla nova. Només cal afegir el nou cicle a `CICLE_INFO` de `tools/pccf_utils.py` (frase de contextualització, p.ex. "el Cicle Formatiu de Grau Bàsic de Tècnic Bàsic en Informàtica d'Oficina").
 
 ### 3. Crear estructura de carpeta per al nou cicle `src_INF_FPBIIO`:
 
@@ -238,7 +238,7 @@ Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen d
 
 ### Plantilla de PD per a optatius
 
-La plantilla es troba a `templates/PCCF_PD_Plantilla_MODULO_OPTATIVA.md`.
+Les optatives usen la mateixa plantilla única que els cicles, `templates/_base_pd.md` (amb el títol "Mòdul optatiu").
 - No inclou seccions d'Objectius Generals ni Competències del Títol (ja que no n'hi ha).
 - El sistema de BORRADOR/OK funciona igual que la resta de PDs.
 - Les PDs es generen a `programacions/OPTATIVES/` (compartides).

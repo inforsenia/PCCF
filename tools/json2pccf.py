@@ -12,7 +12,7 @@ import jinja2
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import get_hoja_label, get_optatives, CICLE_INFO_INF
+from pccf_utils import get_hoja_label, get_optatives, CICLE_INFO, PD_TEMPLATE
 
 
 def get_template_loader_and_env(familia, template_name):
@@ -29,7 +29,7 @@ def get_template_loader_and_env(familia, template_name):
     searchpath_familia = f"./templates_{familia}/"
     if os.path.exists(searchpath_familia):
         # Llista (no un únic path) perquè un {% extends %} dins d'una
-        # plantilla de família (p.ex. _base_pd_INF.md) puga també resoldre's
+        # plantilla de família (p.ex. PCCF_PD_Plantilla_Portada_Modulo.md) puga també resoldre's
         # contra el directori genèric si mai cal compartir-hi res entre
         # famílies -- no trenca la resolució normal (el genèric ja s'ha
         # provat abans, més amunt, per al fitxer d'entrada).
@@ -61,12 +61,10 @@ familia = args.familia.upper()
 s_ciclo = args.ciclo
 outdir = args.outdir.rstrip("/") + "/"
 
-# Frase de contextualització del cicle (templates_INF/_base_pd_INF.md). Els
-# cicles SCO no la fan servir (cada plantilla ja porta el seu propi
-# {% block intro %}), així que buida no té efecte per a ells.
-ciclo_contexto = CICLE_INFO_INF.get(s_ciclo.upper(), {}).get("contexto", "")
-if familia == "INF" and s_ciclo.upper() not in CICLE_INFO_INF:
-    print(f" * AVÍS: cicle '{s_ciclo}' no és a CICLE_INFO_INF (pccf_utils.py) -- la frase de contextualització de la PD quedarà buida.")
+# Frase de contextualització del cicle (templates/_base_pd.md).
+ciclo_contexto = CICLE_INFO.get(s_ciclo.upper(), {}).get("contexto", "")
+if s_ciclo.upper() not in CICLE_INFO:
+    print(f" * AVÍS: cicle '{s_ciclo}' no és a CICLE_INFO (pccf_utils.py) -- la frase de contextualització de la PD quedarà buida.")
 
 nombre_archivo = f'./boe_{familia}/rd-{ciclo}.json'
 
@@ -218,7 +216,7 @@ for codigo in data_box.ModulosProfesionales:
         else:
             fmod = fmod_borrador
             print(f" PD generado : {os.path.basename(fmod)}")
-            TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_" + args.ciclo + ".md"
+            TEMPLATE_FILE = PD_TEMPLATE
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
@@ -232,7 +230,7 @@ for codigo in data_box.ModulosProfesionales:
             print(" PD provisionado : " + nom_net)
         else:
             print(" PD generado : Programacion Didactica para " + nom_net)
-            TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_" + args.ciclo + ".md"
+            TEMPLATE_FILE = PD_TEMPLATE
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)

@@ -1,19 +1,24 @@
 \newpage
 
-# Programació didàctica: Mòdul {{ modulo.nombre }}
+# Programació didàctica: Mòdul {% if optativa %}optatiu {% endif %}{{ modulo.nombre }}
 
 ## Datos identificativos y contextualización del módulo. 
 
-Es un módulo de {{ modulo.horas }} horas que se imparte en el Ciclo de Grado Superior de 
-Técnico en Administración de Sistemas Informáticos y Redes.
+Es un módulo de {{ modulo.horas }} horas que se imparte en {{ ciclo_contexto }}.
 
 Tiene una correspondéncia en Créditos de {{ modulo.creditos}}.
+
+### DOCENT
+
+**Docent**: [###]
+
+**correu-e**: [###]
 
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
 
 ## Relación entre los estándares de competencia y los módulos del ciclo formativo
 
-|Código| Descripción del estándar |
+| Unidad de Competencia | Descripción |
 |-----------------------|-------------|{% for uca in modulo.UnidadesCompetenciaAcreditadas %}
 | {{ uca }} | {{ modulo.UnidadesCompetenciaAcreditadas[uca] }} |{% endfor %}
 |<img width=200/>|<img width=500/>|
@@ -42,6 +47,7 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 
 {% endif %}
 
+
 {% if modulo.CompetenciasTitulo|count > 0 %}
 
 ## Competencias del Título 
@@ -63,9 +69,9 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 Se propone esta taula orientativa
 
-| Número | Título                    | Inicio    | Fin       |
-|--------|---------------------------|-----------|-----------|
-| 01     | [###] | [###] | [###] |
+| Número | Título                    | Trimestre |
+|--------|---------------------------|-----------|
+| 01     | [###] | [###] |
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -73,7 +79,7 @@ La metodología didáctica adoptada en esta programación se encuentra alineada 
 
 Se apuesta por metodologías activas, centradas en el estudiante, que fomentan el aprendizaje significativo, el trabajo cooperativo, la resolución de problemas y la aplicación práctica de los contenidos en contextos reales o simulados. Asimismo, se integran estrategias que favorecen la autonomía, la reflexión crítica y el desarrollo de competencias profesionales, personales y sociales.
 
-Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en el diseño de las **Situaciones de Aprendizaje**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
+Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en la **Programación de Aula**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
 
 ## Recursos
 
@@ -81,7 +87,7 @@ Los recursos didácticos utilizados en este módulo se seleccionan en coherencia
 
 Se contempla el uso de recursos variados, tanto materiales como digitales, que favorecen un aprendizaje activo, contextualizado y accesible. Entre ellos se incluyen: equipamiento técnico específico del módulo, herramientas TIC, plataformas educativas, materiales audiovisuales, documentación profesional actualizada y recursos adaptados a las necesidades del grupo.
 
-La concreción de los recursos específicos que se emplearán en cada unidad didáctica o actividad se detallará en las correspondientes **Situaciones de Aprendizaje**, en función de los objetivos, contenidos y metodologías aplicadas.
+La concreción de los recursos específicos que se emplearán en cada unidad didáctica o actividad se detallará en la **Programación de Aula**, en función de los objetivos, contenidos y metodologías aplicadas.
 
 ## Uso de espacios y equipamientos. 
 
@@ -89,7 +95,7 @@ El uso de los espacios y equipamientos necesarios para el desarrollo de este mó
 
 Se prioriza la utilización de espacios que reproduzcan contextos profesionales reales o simulados, favoreciendo así el aprendizaje significativo y la adquisición de competencias en condiciones similares a las del entorno laboral. Asimismo, se garantiza el acceso a los equipamientos técnicos y tecnológicos adecuados, asegurando su disponibilidad, mantenimiento y uso responsable, cumpliendo la normativa del Centro y de la Conselleria.
 
-Las especificidades sobre el uso de espacios y equipamientos en cada actividad concreta se detallarán en las **Situaciones de Aprendizaje**, adaptándose a las necesidades del alumnado y a los objetivos de cada propuesta didáctica.
+Las especificidades sobre el uso de espacios y equipamientos en cada actividad concreta se detallarán en la **Programación de Aula**, adaptándose a las necesidades del alumnado y a los objetivos de cada propuesta didáctica.
 
 ## Medidas de atención a la diversidad. 
 
@@ -97,35 +103,34 @@ Las medidas de atención a la diversidad contempladas en esta programación se f
 
 Se parte del reconocimiento de la diversidad como un valor y una oportunidad para el aprendizaje, promoviendo estrategias que favorezcan la participación, la motivación y el progreso de todos los estudiantes. Entre las medidas generales se incluyen la flexibilización metodológica, la adaptación de recursos, el uso de apoyos personalizados y la atención a distintos ritmos y estilos de aprendizaje.
 
-Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
+Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en la **Programación de Aula**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
 ## Evaluación del aprendizaje. 
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-- **Càlcul de la qualificació**: [###]
-- **Càlcul de la qualificació d'un RA dualitzat**: [###]
-
-### Convocatoria Ordinaria
-
-1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs 
-   durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo 
-   de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará
-   al calendario propuesto por el centro.
-
-### Convocatoria Extraordinaria
-
-La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
-descrito en el Proyecto Curricular de Ciclo Formativo.
-
-## Actividades complementarias y extraescolares. 
+> Ací haurien d'apareixer els instruments i activitats concretes d'avaluació que s'empraran pera  qualificar cada RA:
+>
+> tabla: RA, instrument i percentatge
 
 [###]
+
+### Primera Convocatoria
+
+1. Todo el alumnado tiene derecho a una primera convocatoria, en el caso de que el alumnado haya superado todos los RAs durante la *evaluación continua*, se establecerá su calificación como la de la Primera Convocatoria.
+2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará al calendario propuesto por el centro.
+
+### Segona Convocatoria
+
+La segunda convocatoria del módulo se ajustará a lo decidido de manera conjunta y ha sido descrito en el Proyecto Curricular de Ciclo Formativo.
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
 
 La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
+
+## Actividades complementarias y extraescolares. 
+
+[###]
 
 ## Esquema General de {{modulo.nombre}}
 

@@ -11,7 +11,7 @@ from openpyxl.styles import Alignment, Font, PatternFill, NamedStyle
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import OPTATIVES_PATH, PROJECT_DIR
+from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
 
@@ -304,7 +304,7 @@ def get_template_loader_and_env(template_name):
     return loader, env, searchpaths[0]
 
 
-TEMPLATE_FILE = "PCCF_PD_Plantilla_MODULO_OPTATIVA.md"
+TEMPLATE_FILE = PD_TEMPLATE
 tloader, tenv, used_path = get_template_loader_and_env(TEMPLATE_FILE)
 print(f" * PD optatives: usant plantilles des de: {used_path}")
 template = tenv.get_template(TEMPLATE_FILE)
@@ -323,7 +323,7 @@ for codigo, modulo in data_box.items():
     # Set synthetic OG/CPSS for template compatibility (placeholder data)
     modulo.OG = {k: k for k in (modulo.ObjetivosGenerales or [])}
     modulo.CPSS = {k: k for k in (modulo.CompetenciasTitulo or [])}
-    outputText = template.render(modulo=modulo)
+    outputText = template.render(modulo=modulo, ciclo_contexto=CONTEXTO_OPTATIVA, optativa=True)
     with open(fmod_borrador, "w", encoding="utf-8") as f:
         f.write(outputText)
 
