@@ -16,14 +16,20 @@ CICLES_CONEGUTS = sorted(CICLES_INF + CICLES_SCO, key=len, reverse=True)
 # els cicles i famílies). Únic lloc on viu este text. CEIABD és un Curs
 # d'Especialització (no un "Cicle de Grau X"), per això és una frase
 # completa i no un grau+títol descompost.
+# Decret autonòmic de currículum, per al subapartat "Marc normatiu" de la PD.
+# Només per als cicles de grau mitjà i superior (Decret 114/2025, art. 1).
+# FPBIIO (grau bàsic) i CEIABD (curs d'especialització) es regulen per una
+# altra norma: sense "curriculum", la plantilla remet al PCCF.
+D114_CURRICULUM = "Decret 114/2025, de 29 de juliol, del Consell, pel qual s'establixen els currículums dels cicles formatius de grau mitjà i de grau superior de Formació Professional"
+
 CICLE_INFO = {
-    "SMX": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Sistemes Microinformàtics i Xarxes"},
-    "DAM": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Desenvolupament d'Aplicacions Multiplataforma"},
+    "SMX": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Sistemes Microinformàtics i Xarxes", "curriculum": D114_CURRICULUM},
+    "DAM": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Desenvolupament d'Aplicacions Multiplataforma", "curriculum": D114_CURRICULUM},
     "CEIABD": {"contexto": "el Curs d'Especialització en Intel·ligència Artificial i Big Data"},
     "FPBIIO": {"contexto": "el Cicle Formatiu de Grau Bàsic de \nTècnic Bàsic en Informàtica d'Oficina"},
-    "APD": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Atenció a Persones en Situació de Dependència"},
-    "EI": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Educació Infantil"},
-    "IS": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Integració Social"},
+    "APD": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Atenció a Persones en Situació de Dependència", "curriculum": D114_CURRICULUM},
+    "EI": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Educació Infantil", "curriculum": D114_CURRICULUM},
+    "IS": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Integració Social", "curriculum": D114_CURRICULUM},
 }
 
 # Frase de contextualització per a les PD d'optatives (compartides entre cicles).

@@ -11,7 +11,7 @@ from openpyxl.styles import Alignment, Font, PatternFill, NamedStyle
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA
+from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
 
@@ -323,7 +323,8 @@ for codigo, modulo in data_box.items():
     # Set synthetic OG/CPSS for template compatibility (placeholder data)
     modulo.OG = {k: k for k in (modulo.ObjetivosGenerales or [])}
     modulo.CPSS = {k: k for k in (modulo.CompetenciasTitulo or [])}
-    outputText = template.render(modulo=modulo, ciclo_contexto=CONTEXTO_OPTATIVA, optativa=True)
+    outputText = template.render(modulo=modulo, ciclo_contexto=CONTEXTO_OPTATIVA,
+                                 ciclo_curriculum=D114_CURRICULUM, optativa=True)
     with open(fmod_borrador, "w", encoding="utf-8") as f:
         f.write(outputText)
 

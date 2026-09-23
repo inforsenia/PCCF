@@ -63,6 +63,7 @@ outdir = args.outdir.rstrip("/") + "/"
 
 # Frase de contextualització del cicle (templates/_base_pd.md).
 ciclo_contexto = CICLE_INFO.get(s_ciclo.upper(), {}).get("contexto", "")
+ciclo_curriculum = CICLE_INFO.get(s_ciclo.upper(), {}).get("curriculum", "")
 if s_ciclo.upper() not in CICLE_INFO:
     print(f" * AVÍS: cicle '{s_ciclo}' no és a CICLE_INFO (pccf_utils.py) -- la frase de contextualització de la PD quedarà buida.")
 
@@ -220,7 +221,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto)
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
     else:
@@ -234,7 +235,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto)
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
 
