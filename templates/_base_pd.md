@@ -190,6 +190,4 @@ D'acord amb {% if ciclo_curriculum %}l'article 5 del Decret 114/2025 i {% endif 
 
 ## Esquema general de {{modulo.nombre}}
 
-NOTA: ací es generarà de manera automàtica la taula a partir de l'Excel compartit amb els RA, els CE i les hores assignades.
-
-NO OMPLIR.
+> NOTA: ací es generarà de manera automàtica la taula a partir de l'Excel compartit amb els RA, els CE i les hores assignades. NO OMPLIR.

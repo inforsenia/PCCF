@@ -8,9 +8,15 @@ Per a cada PD de mòdul copiada a STAGE:
      `[###]`/`[...]` o Excel incoherent per a la seua fulla) -- mateix criteri
      visual que ✏️/❌ a memòries, però amb pifont perquè el PD compila amb
      xelatex (el paquet emoji requereix LuaTeX).
-  2. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
+  2. Elimina els blocs de cita (`> ...`): a les plantilles de PD només
+     s'usen per a instruccions al docent, que no han d'eixir al PDF (mateix
+     regex que memòries, `memories_utils.py`).
+  3. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
      (`libro_{CICLE}.xlsx` de PD_DIR, el que editen els docents), exportat a
-     PDF amb LibreOffice i inclòs amb \\includepdf.
+     PDF amb LibreOffice i inclòs amb \\includepdf. El títol
+     `## Esquema general de ...` de la plantilla es trau del markdown i
+     s'afig a l'índex amb `addtotoc` del mateix \\includepdf: si no, quedava
+     sol en una pàgina en blanc abans del Quadre Resum (apaïsat).
 
 A més, escriu STAGE/.draft si el report no està verificat
 (`is_pd_verified`), perquè el Makefile active la marca d'aigua ESBORRANY.
@@ -20,6 +26,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import shutil
 import sys
 
@@ -32,6 +39,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MARCA_BORRADOR = r"\texorpdfstring{\ \ding{46}}{}"
 MARCA_INCIDENCIES = r"\texorpdfstring{\ \textcolor{red}{\ding{55}}}{}"
 HEADER_TEX = "\\usepackage{pifont}\n"
+BLOCKQUOTE_RE = re.compile(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*')
 
 
 def load_excel_exporter():
@@ -64,6 +72,29 @@ def marca_titol(path, marca):
             break
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
+
+
+ESQUEMA_RE = re.compile(r'^## (Esquema general de .*?)\s*$', re.MULTILINE)
+LATEX_ESPECIALS = {"&": r"\&", "%": r"\%", "#": r"\#", "_": r"\_", "$": r"\$"}
+
+
+def extrau_titol_esquema(path):
+    """Lleva la línia `## Esquema general de ...` i en torna el text (o None)."""
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    m = ESQUEMA_RE.search(content)
+    if not m:
+        return None
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content[:m.start()] + content[m.end():])
+    return "".join(LATEX_ESPECIALS.get(c, c) for c in m.group(1))
+
+
+def elimina_instruccions(path):
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(BLOCKQUOTE_RE.sub("", content))
 
 
 def main():
@@ -120,6 +151,7 @@ def main():
             marca += MARCA_INCIDENCIES
         if marca:
             marca_titol(path, marca)
+        elimina_instruccions(path)
 
         if not (exportar and fulla):
             if exportar and nombre:
@@ -139,8 +171,10 @@ def main():
             continue
         pdf_name = f"PD_9999_{codi}_CuadroResumen.pdf"
         shutil.move(tmp_pdf, os.path.join(args.stage, pdf_name))
+        titol = extrau_titol_esquema(path)
+        toc = f",addtotoc={{1,subsection,2,{{{titol}}},esquema-{codi}}}" if titol else ""
         with open(path, "a", encoding="utf-8") as f:
-            f.write(f"\n\n\\includepdf[pages=-,landscape=true]{{./{pdf_name}}}\n")
+            f.write(f"\n\n\\includepdf[pages=-,landscape=true{toc}]{{./{pdf_name}}}\n")
         print(f" * [PD] {codi}: Quadre Resum afegit")
 
 
