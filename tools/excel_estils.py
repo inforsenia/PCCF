@@ -12,7 +12,9 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 LLETRA = "Liberation Sans"
 MIDA = 10
 MIDA_CAPCALERA = 12       # capçaleres de columna i etiquetes del mòdul
-MIDA_MODUL = 15           # codi, nom i hores del mòdul
+MIDA_MODUL = 15           # totals de la banda 2
+MIDA_BANDA1 = 20          # nom, codi i hores del mòdul (banda 1)
+MIDA_ETIQUETA_BANDA1 = 10
 
 COLOR_FOSC = "1F3A5F"      # capçalera del mòdul i totals
 COLOR_MIG = "2F5597"       # capçaleres de columna
@@ -114,10 +116,10 @@ def aplica_estils(ws):
     fe, fv = FILES_BANDA1
     for _etiqueta, c0, c1, clau in BANDA1:
         al = ESQUERRA if clau == "nom" else CENTRAT  # etiqueta alineada amb el seu valor
-        _estil_bloc(ws, fe, c0, c1, MIG, _font(bold=True, blanc=True, size=9), al)
-        _estil_bloc(ws, fv, c0, c1, FOSC, _font(bold=True, blanc=True, size=MIDA_MODUL), al)
-    ws.row_dimensions[fe].height = 16
-    ws.row_dimensions[fv].height = 28
+        _estil_bloc(ws, fe, c0, c1, MIG, _font(bold=True, blanc=True, size=MIDA_ETIQUETA_BANDA1), al)
+        _estil_bloc(ws, fv, c0, c1, FOSC, _font(bold=True, blanc=True, size=MIDA_BANDA1), al)
+    ws.row_dimensions[fe].height = 18
+    ws.row_dimensions[fv].height = 36
 
     # Banda 2: objectius, competències i totals
     fe, fv = FILES_BANDA2
