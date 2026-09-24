@@ -26,15 +26,17 @@ COL_INI, COL_FI = 2, 10    # B..J
 COL_COMP = "D"
 COLS_NUMERIQUES = range(6, 10)  # HORES, % CE, REQUISIT FE, HORES DUAL (F..I)
 CENTRAT = Alignment(horizontal="center", vertical="center")
-AMPLE_COMP = 16
+AMPLE_COMP = 12
+COL_PERCENT_RA = "C"
+AMPLE_PERCENT_RA = 6.3
 # Les 4 columnes numèriques porten la capçalera girada 90° per a poder ser
 # estretes; les files 8-9 (capçalera fusionada) han de tindre alçada per al text.
-AMPLE_NUMERIQUES = 7
+AMPLE_NUMERIQUES = 5.25
 # Amplàries de criteris (E) i continguts (J): el Quadre Resum del PDF
 # inclou B..J i LibreOffice l'ajusta a l'ample de pàgina, així que
 # l'amplària total fixa l'escala (i la mida del text) al PDF.
 COL_CE = "E"
-AMPLE_CE = 117
+AMPLE_CE = 88
 COL_CONTINGUTS = "J"
 AMPLE_CONTINGUTS = 23      # continguts resumits
 ALT_CAPCALERA = 30         # punts per fila (x2); el text girat fa 2 línies
@@ -168,6 +170,7 @@ def aplica_estils(ws):
             ra.font = _font(bold=True)
 
     ws.column_dimensions[COL_COMP].width = AMPLE_COMP
+    ws.column_dimensions[COL_PERCENT_RA].width = AMPLE_PERCENT_RA
     ws.column_dimensions[COL_CE].width = AMPLE_CE
     ws.column_dimensions[COL_CONTINGUTS].width = AMPLE_CONTINGUTS
     for col in COLS_NUMERIQUES:
