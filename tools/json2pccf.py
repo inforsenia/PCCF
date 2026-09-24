@@ -108,7 +108,7 @@ if args.generate_competences:
             competencias_profesionales=data_box.CompetenciasProfesionales,
             competencias_sociales=data_box.CompetenciasSociales,
             cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
-            importancia=data.get("ImportanciaCompetencies", {}),
+            importancia=data.get("ImportanciaCompetencias", {}),  # clau del JSON en castellà (BOE)
         )
         fpath = os.path.join(outdir, f"PCCF_033_{s_ciclo}_ImportanciaCompetencies.md")
         with open(fpath, "w", encoding="utf-8") as f:
@@ -150,7 +150,7 @@ if not args.generate_only:
             competencias_profesionales=data_box.CompetenciasProfesionales,
             competencias_sociales=data_box.CompetenciasSociales,
             cpps=data_box.CompetenciasProfesionalesPersonalesSociales,
-            importancia=data.get("ImportanciaCompetencies", {}),
+            importancia=data.get("ImportanciaCompetencias", {}),  # clau del JSON en castellà (BOE)
         )
         comp_file = os.path.join(outdir, f"PCCF_033_{s_ciclo}_ImportanciaCompetencies.md")
         with open(comp_file, "w", encoding="utf-8") as fc:
