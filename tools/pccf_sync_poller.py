@@ -47,6 +47,8 @@ PD_COMPILE_TRIGGER = "COMPILAR_ARA"
 # Des d'OneDrive/Windows costa crear un fitxer sense extensió: s'accepten
 # també .md i .txt, sense distingir majúscules.
 PD_COMPILE_TRIGGER_EXTS = ("", ".md", ".txt")
+# El mateix disparador a l'arrel de programacions/ (al costat de les carpetes
+# de cicle) compila les Programacions de TOTS els cicles.
 
 STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
 
@@ -168,45 +170,36 @@ def notify_pd_teachers(cicle, familia, pd_dir):
             save_pd_teacher_state(state)
 
 
-def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre):
-    """Compila el PDF de Programacions si el cap de departament ha deixat el
-    fitxer disparador `PD_COMPILE_TRIGGER` (buit) dins de programacions/{CICLE}/.
-
-    Independent de si hi ha hagut cap canvi de PD en esta passada -- cal
-    comprovar-ho sempre. Si la compilació falla, el disparador NO s'esborra
-    (es reintenta a la propera passada, mateix criteri que notify_pd_teachers).
-    Si té èxit, s'esborra el disparador i s'avisa per correu el cap de
-    departament (department_emails.json, tipus "PCCF", clau = cicle).
-    """
+def find_pd_triggers(directori):
+    """Fitxers disparador `PD_COMPILE_TRIGGER` (amb extensions acceptades)
+    presents a `directori`, o llista buida."""
     valids = {(PD_COMPILE_TRIGGER + ext).upper() for ext in PD_COMPILE_TRIGGER_EXTS}
     try:
-        triggers = [os.path.join(pdir, f) for f in os.listdir(pdir) if f.upper() in valids]
+        return [os.path.join(directori, f) for f in os.listdir(directori)
+                if f.upper() in valids and os.path.isfile(os.path.join(directori, f))]
     except OSError:
-        return
-    if not triggers:
-        return
+        return []
 
-    print(f"[pccf-poller] {familia}_{cicle}: disparador {PD_COMPILE_TRIGGER} detectat, compilant Programacions...", flush=True)
+
+def compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
+    """Compila el PDF de Programacions d'un cicle i avisa per correu el cap
+    de departament (department_emails.json, tipus "PCCF", clau = cicle).
+    Torna True si la compilació ha anat bé."""
+    print(f"[pccf-poller] {familia}_{cicle}: {motiu}, compilant Programacions...", flush=True)
     result = subprocess.run(
         ["make", f"PCCF_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
          f"compila-pd-pccf-{cicle.lower()}"],
         cwd=PROJECT_DIR, capture_output=True, text=True,
     )
     if result.returncode != 0:
-        print(f"[pccf-poller] ERROR compilant PD (disparador) {familia}_{cicle}:\n{result.stdout[-2000:]}\n{result.stderr[-2000:]}", flush=True)
-        return
-
-    for trigger_path in triggers:
-        try:
-            os.remove(trigger_path)
-        except OSError:
-            pass
+        print(f"[pccf-poller] ERROR compilant PD {familia}_{cicle}:\n{result.stdout[-2000:]}\n{result.stderr[-2000:]}", flush=True)
+        return False
 
     pdf_path = os.path.join(pdir, "1_esborrany", f"Programaciones_{centre}_{cicle}.pdf")
     to_addr = get_department_email("PCCF", cicle)
     if not to_addr:
         print(f"[pccf-poller] {familia}_{cicle}: PD compilada però no hi ha email de cap de departament a department_emails.json (tipus 'PCCF', clau '{cicle}')", flush=True)
-        return
+        return True
 
     subject = f"[PCCF {cicle}] Programacions compilades"
     body = (
@@ -216,6 +209,33 @@ def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre):
     )
     if send_report_email(to_addr, subject, body, attachments=[pdf_path]):
         print(f"[pccf-poller] correu enviat al cap de departament ({to_addr}) per Programacions {cicle}", flush=True)
+    return True
+
+
+def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=False):
+    """Compila el PDF de Programacions si el cap de departament ha deixat el
+    fitxer disparador `PD_COMPILE_TRIGGER` (buit) dins de programacions/{CICLE}/,
+    o si `forcat` (disparador global a l'arrel de programacions/).
+
+    Independent de si hi ha hagut cap canvi de PD en esta passada -- cal
+    comprovar-ho sempre. Si la compilació falla, el disparador del cicle NO
+    s'esborra (es reintenta a la propera passada, mateix criteri que
+    notify_pd_teachers). Torna False només si s'ha intentat i ha fallat.
+    """
+    triggers = find_pd_triggers(pdir)
+    if not triggers and not forcat:
+        return True
+
+    motiu = "disparador global" if forcat and not triggers else f"disparador {PD_COMPILE_TRIGGER} detectat"
+    if not compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
+        return False
+
+    for trigger_path in triggers:
+        try:
+            os.remove(trigger_path)
+        except OSError:
+            pass
+    return True
 
 
 def poll_once(sync_root, centre, cicle=None):
@@ -223,6 +243,15 @@ def poll_once(sync_root, centre, cicle=None):
     state = load_state()
 
     cicles_a_processar = [cicle] if cicle else CICLES_ALL
+
+    # Disparador global (programacions/COMPILAR_ARA): compila tots els cicles.
+    # Només quan es processen tots (no amb --cicle).
+    prog_root = os.path.join(sync_root, "programacions")
+    global_triggers = [] if cicle else find_pd_triggers(prog_root)
+    if global_triggers:
+        print(f"[pccf-poller] disparador global {PD_COMPILE_TRIGGER} detectat a programacions/: compilant tots els cicles", flush=True)
+    fallats = []
+
     for cicle in cicles_a_processar:
         familia = get_familia(cicle)
         key = f"{familia}_{cicle}"
@@ -242,7 +271,8 @@ def poll_once(sync_root, centre, cicle=None):
 
         # Independent de si hi ha canvis de PD/PCCF esta passada -- el cap de
         # departament pot demanar compilar encara que res haja canviat.
-        check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre)
+        if not check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=bool(global_triggers)):
+            fallats.append((cicle, pdir))
 
         pd_mtime = latest_source_mtime(pdir)
         mtime_src = dir_mtime(pccf_dir, "src")
@@ -301,6 +331,20 @@ def poll_once(sync_root, centre, cicle=None):
         state[key] = {"mtime_src": mtime_src, "mtime_familia": mtime_familia, "mtime_cicle": mtime_cicle, "mtime_pd": pd_mtime}
         save_state(state)
         processed.append(key)
+
+    if global_triggers:
+        # El global s'esborra sempre; si algun cicle ha fallat, es deixa el
+        # disparador dins de la seua carpeta perquè només es reintente eixe
+        # cicle (i no tots) a la propera passada.
+        for cicle_ko, pdir_ko in fallats:
+            if not find_pd_triggers(pdir_ko) and os.path.isdir(pdir_ko):
+                open(os.path.join(pdir_ko, PD_COMPILE_TRIGGER), "w").close()
+                print(f"[pccf-poller] {cicle_ko}: compilació fallada, es deixa {PD_COMPILE_TRIGGER} a la seua carpeta per a reintentar", flush=True)
+        for trigger_path in global_triggers:
+            try:
+                os.remove(trigger_path)
+            except OSError:
+                pass
 
     return processed
 

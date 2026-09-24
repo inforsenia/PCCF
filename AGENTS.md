@@ -308,6 +308,7 @@ Extensió del mateix patró de sincronització OneDrive de la secció anterior a
    - Èxit: esborra `COMPILAR_ARA` i avisa per correu el cap de departament (`department_emails.json`, tipus `"PCCF"`, clau = cicle — mateix mecanisme que `get_department_email()` ja fa servir per a memòries), adjuntant el PDF (`programacions/{CICLE}/1_esborrany/Programaciones_{CENTRE}_{CICLO}.pdf`).
    - Fallada: **no esborra el disparador** (es reintenta a la propera passada, mateix criteri que `notify_pd_teachers`), registra l'error per stdout.
    - Deliberadament manual (a diferència del PCCF, que s'autocompila): el moment de compilar el decideix el cap de departament, no cada edició d'una PD.
+   - **Disparador global**: el mateix fitxer a l'arrel de `programacions/` (al costat de les carpetes `DAM/`, `EI/`, `SMX/`…) compila les Programacions de **tots** els cicles en una passada (`find_pd_triggers()` + `compile_pd()`, amb un correu per cicle). El global s'esborra sempre en acabar; si algun cicle falla, el poller deixa un `COMPILAR_ARA` dins de la carpeta d'eixe cicle perquè només es reintente eixe (no els 7 a cada passada). S'ignora amb `--cicle`.
 
 **Publicació** (integrat al Makefile, sense script separat):
 ```
