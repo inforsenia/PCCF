@@ -284,7 +284,7 @@ El tipus `"PCCF"` (usat pel disparador `COMPILAR_ARA` de Programacions, vore sec
 
 Extensió del mateix patró de sincronització OneDrive de la secció anterior a la generació del PCCF i les Programacions Didàctiques, mantenint el pipeline de dues fases (`generar-plantilles-pccf-%` / `compila-pccf-%`) intacte. Perfil `onedrive` i poller **separats** dels de memòries (aïlla els riscos de `--resync`/bugs entre els dos sistemes).
 
-**Diferència clau amb memòries**: allà el docent crea els fitxers de zero; ací cal generar contingut previ (BORRADOR + Excel des del JSON del BOE) abans que hi haja res a editar. Com que la Fase 1 ja és idempotent per disseny (`cp -n`, mai sobreescriu `_BORRADOR`/`_OK` existent, Excel només si no existeix), el poller de PCCF reexecuta `generar-plantilles-pccf-{cicle}` a cada passada com a "bootstrap" sense risc — així un cicle nou queda disponible a OneDrive sense cap pas manual.
+**Diferència clau amb memòries**: allà el docent crea els fitxers de zero; ací cal generar contingut previ (BORRADOR + Excel des del JSON del BOE) abans que hi haja res a editar. Es fa **a mà, una vegada per curs** (o quan canvien les plantilles), des de la consola del contenidor: `make PCCF_ROOT=/home/PCCF/pccf_sync CENTRO_EDUCATIVO=IESEPM genera-totes-plantilles` (7 cicles + optatives). La generació és idempotent (`cp -n`, mai sobreescriu `_BORRADOR`/`_OK` existent, Excel només si no existeix): per a regenerar amb una plantilla nova cal esborrar abans les PD i els `libro_*.xlsx` d'OneDrive i esperar que l'esborrat arribe al contenidor. **El poller ja no ho fa** (abans reexecutava `generar-plantilles-pccf-{cicle}` a cada passada): tornava a crear en silenci les PD que un docent esborrava i, amb OneDrive a mitjan sincronitzar, podia generar BORRADORs en conflicte amb els dels docents; a més era incoherent amb les optatives, que sempre han sigut manuals.
 
 **`PCCF_ROOT` (Makefile)**: variable (`?= .`, sense canvis en local) que apunta a l'arrel de l'estructura `pccf/` (src* + 0_report/ + 1_esborrany/) + `programacions/{CICLO}/` (PDs + 0_report/ + 1_esborrany/). Al contenidor, el poller la fixa a la carpeta sincronitzada amb OneDrive. `PLANTILLES_ROOT` es manté per compatibilitat però està deprecat.
 
@@ -296,7 +296,7 @@ Extensió del mateix patró de sincronització OneDrive de la secció anterior a
 - Memòries: `tools/compilar_memories.py` activa `draft=true` si apareix qualsevol marcador ❌ (incidències) o ✏️ (BORRADOR) al TOC, o si hi ha mòduls `[FALTA]` (variable `document_has_draft_marker`). Els mòduls marcats `_NOIMPARTIT.md` (sense alumnat, confirmat pel cap de departament) NO compten com a `[FALTA]` i per tant no activen esta marca d'aigua.
 
 **Poller de PCCF** (`tools/pccf_sync_poller.py`, anàleg a `tools/local_sync_poller.py`): per a cada cicle, quan detecta un canvi de mtime als `.md` de `pccf/src*/` o als `.md`/`.xlsx` de `programacions/{CICLO}/`:
-1. Bootstrap idempotent (`generar-plantilles-pccf-{cicle}`).
+1. No genera plantilles ni Excel (vore paràgraf anterior). Si `programacions/{CICLE}/` no té cap `PD_*.md` (`has_pd_files()`; la compilació del PCCF la pot crear buida), se salten els reports, avisos i disparadors de PD d'eixe cicle, però el PCCF es continua compilant.
 2. Regenera i publica els reports (`compute_pccf_status`/`format_pccf_report` per a PCCF, `compute_pd_status`/`format_pd_report` per a PD, barat: regex + `openpyxl`, sense LaTeX):
    - PCCF change → `pccf/0_report/{FAMILIA}_{CICLO}.txt`
    - PD change → `programacions/{CICLO}/0_report/{FAMILIA}_{CICLO}.txt`

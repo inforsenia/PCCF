@@ -5,6 +5,8 @@ Sondeja les carpetes sincronitzades OneDrive i, per a cada cicle, regenera
 el report sempre que detecta un canvi (PCCF o PD). Compila automàticament
 el PCCF PDF (pccf/src*/) pero NO les Programaciones (programacions/) --
 això es fa manualment pel cap de departament (compila-pd-pccf-{cicle}).
+Tampoc genera les plantilles de PD ni els Excel: es fa a mà una vegada per
+curs amb `make PCCF_ROOT=... genera-totes-plantilles`.
 
 Estructura esperada dins de sync-root:
   pccf/
@@ -170,6 +172,13 @@ def notify_pd_teachers(cicle, familia, pd_dir):
             save_pd_teacher_state(state)
 
 
+def has_pd_files(pdir):
+    try:
+        return any(f.startswith("PD_") and f.endswith(".md") for f in os.listdir(pdir))
+    except OSError:
+        return False
+
+
 def find_pd_triggers(directori):
     """Fitxers disparador `PD_COMPILE_TRIGGER` (amb extensions acceptades)
     presents a `directori`, o llista buida."""
@@ -259,19 +268,21 @@ def poll_once(sync_root, centre, cicle=None):
         pdir = os.path.join(sync_root, "programacions", cicle)
         pccf_dir = os.path.join(sync_root, "pccf")
 
-        # Bootstrap (idempotent)
-        bootstrap = subprocess.run(
-            ["make", f"PCCF_ROOT={sync_root}", f"CENTRO_EDUCATIVO={centre}",
-             f"generar-plantilles-pccf-{cicle.lower()}"],
-            cwd=PROJECT_DIR, capture_output=True, text=True,
-        )
-        if bootstrap.returncode != 0:
-            print(f"[pccf-poller] ERROR bootstrap {key}:\n{bootstrap.stdout[-2000:]}\n{bootstrap.stderr[-2000:]}", flush=True)
-            continue
+        # Les plantilles de PD i els Excel NO es generen ací: es fa a mà una
+        # vegada per curs (o quan canvien les plantilles) amb
+        # `make PCCF_ROOT=... genera-totes-plantilles`. Regenerar-les a cada
+        # passada tornava a crear en silenci les PD que un docent esborrava i,
+        # amb OneDrive a mitjan sincronitzar, podia generar BORRADORs en
+        # conflicte amb els dels docents.
+        # La compilació automàtica del PCCF pot crear programacions/{CICLE}/
+        # buida (copy_optatives_pd.py): el que compta és que hi haja PD.
+        te_pd = has_pd_files(pdir)
+        if not te_pd and global_triggers:
+            print(f"[pccf-poller] {key}: no hi ha PD a programacions/{cicle}/ (cal genera-totes-plantilles), no es compilen les seues Programacions", flush=True)
 
         # Independent de si hi ha canvis de PD/PCCF esta passada -- el cap de
         # departament pot demanar compilar encara que res haja canviat.
-        if not check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=bool(global_triggers)):
+        if te_pd and not check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=bool(global_triggers)):
             fallats.append((cicle, pdir))
 
         pd_mtime = latest_source_mtime(pdir)
@@ -300,7 +311,7 @@ def poll_once(sync_root, centre, cicle=None):
         print(f"[pccf-poller] {key}: canvi {'+'.join(what)} detectat", flush=True)
 
         # --- Regenerar reports ---
-        if pd_canviat:
+        if pd_canviat and te_pd:
             status = compute_pd_status(cicle, familia, pdir)
             report_dir = os.path.join(pdir, "0_report")
             os.makedirs(report_dir, exist_ok=True)
