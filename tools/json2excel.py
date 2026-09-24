@@ -202,13 +202,13 @@ for codigo in data_box.ModulosProfesionales:
     p_complist_row=p_contenidos_row-6
     ws.cell(column=p_complist_col,row=p_complist_row).value="OBJECTIUS"
     try:
-        ws.cell(column=p_complist_col,row=p_complist_row+1).value=str(modulo.ObjetivosGenerales)
+        ws.cell(column=p_complist_col,row=p_complist_row+1).value = ", ".join(str(x) for x in modulo.ObjetivosGenerales)
     except Exception as e:
         print("  - INFO : No tiene Objetivos Generales")
 
     ws.cell(column=p_complist_col,row=p_complist_row+2).value="COMPETENCIES"
     try:
-        ws.cell(column=p_complist_col,row=p_complist_row+3).value=str(modulo.CompetenciasTitulo)
+        ws.cell(column=p_complist_col,row=p_complist_row+3).value = ", ".join(str(x) for x in modulo.CompetenciasTitulo)
     except Exception as e:
         print("  - INFO : No tiene Objetivos CompetenciasTitulo")
 

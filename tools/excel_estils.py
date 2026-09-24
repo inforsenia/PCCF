@@ -40,7 +40,14 @@ GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap
 # etiqueta G5:H5 -> valor I5 (HORES DUAL).
 FILA_TOTALS = 5
 TOTALS = ((5, 6), (7, 9))  # (columna etiqueta, columna valor)
-FILES_BUIDES = (4, 6, 7)   # separadors entre capçalera, totals i taula
+FILES_BUIDES = (6, 7)      # separadors entre els totals i la taula
+# Columna J (fora del Quadre Resum del PDF, però l'edita el docent):
+# OBJECTIUS / COMPETENCIES amb les seues llistes, a les files 2-5. Per això
+# la fila 4 no pot ser un separador baix.
+COL_LLISTES = 10
+FILES_LLISTES = ((2, 3), (4, 5))  # (fila etiqueta, fila valor)
+ALT_LLISTA = 30
+VALOR_LLISTA = Alignment(horizontal="left", vertical="center", wrap_text=True, indent=1)
 DRETA = Alignment(horizontal="right", vertical="center", wrap_text=True, indent=1)
 
 BLANC = PatternFill("solid", fgColor="FFFFFF")
@@ -86,6 +93,19 @@ def aplica_estils(ws):
         valor.border = VORA
         valor.alignment = CENTRAT
     ws.row_dimensions[FILA_TOTALS].height = 26
+
+    # Llistes d'objectius i competències (columna J)
+    for fila_etiqueta, fila_valor in FILES_LLISTES:
+        etiqueta = ws.cell(row=fila_etiqueta, column=COL_LLISTES)
+        etiqueta.fill = CLAR
+        etiqueta.font = Font(name=LLETRA, size=MIDA, bold=True, color=COLOR_FOSC)
+        etiqueta.border = VORA
+        etiqueta.alignment = Alignment(horizontal="left", vertical="center", indent=1)
+        valor = ws.cell(row=fila_valor, column=COL_LLISTES)
+        valor.font = _font(size=MIDA_CAPCALERA)
+        valor.border = VORA
+        valor.alignment = VALOR_LLISTA
+        ws.row_dimensions[fila_valor].height = max(ws.row_dimensions[fila_valor].height or 0, ALT_LLISTA)
     for r in FILES_BUIDES:
         ws.row_dimensions[r].height = 6
 
@@ -107,7 +127,7 @@ def aplica_estils(ws):
         for col in range(COL_INI, COL_FI + 1):
             c = ws.cell(row=r, column=col)
             c.border = VORA_INICI_RA if inici_ra else VORA
-            if inici_ra and col >= 5:
+            if inici_ra and 5 <= col < COL_LLISTES:  # CONTINGUTS (J) queda en blanc: l'omple el docent
                 c.fill = CLAR
                 c.font = _font(bold=True)
         for col in COLS_NUMERIQUES:
