@@ -41,14 +41,14 @@ GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap
 # a json2excel.py i json2optatives.py:
 #   Banda 1 (files 1-2): MÒDUL (B:E) | CODI (F:I) | HORES (J)
 #   Banda 2 (files 4-5): OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E:F) |
-#                        TOTAL HORES (G:H) | TOTAL H. DUAL (I:J)
+#                        TOTAL H. DUAL (G:I) | TOTAL HORES (J)
 # Cada bloc: etiqueta a la primera fila i valor a la segona. Cap codi llig
 # estes cel·les; la taula comença a FILA_CAPCALERA (no canvia).
 FILES_BANDA1 = (1, 2)
 FILES_BANDA2 = (4, 5)
 BANDA1 = (("MÒDUL", 2, 5, "nom"), ("CODI", 6, 9, "codi"), ("HORES", 10, 10, "hores"))
 BANDA2 = (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 6, "competencies"),
-          ("TOTAL HORES", 7, 8, "total"), ("TOTAL H. DUAL", 9, 10, "total_dual"))
+          ("TOTAL H. DUAL", 7, 9, "total_dual"), ("TOTAL HORES", 10, 10, "total"))
 # Les fórmules sumen les columnes HORES (F) i HORES DUAL (I); /2 perquè cada
 # RA també té la fila "TOTS" amb la suma dels seus CE.
 FORMULA_TOTAL = "=SUM(F8:F200)/2"
