@@ -181,6 +181,41 @@ def get_optatives(cicle=None, familia=None):
     return result
 
 
+# Fitxers de PD d'optatives a programacions/OPTATIVES/: PD_{CODI}_{NOM}_{BORRADOR|OK}.md
+OPT_PD_FILE_RE = re.compile(r'^PD_(\d+|[A-Z]+)_(.+?)_(BORRADOR|OK)\.md$')
+OPTATIVES_DIRNAME = "OPTATIVES"
+OPTATIVES_LIBRO = "libro_optatives.xlsx"
+
+
+def get_optatives_del_cicle(cicle, familia):
+    """Optatives que pertanyen al cicle, com a llista de (codi, modul).
+
+    `codi` és la clau d'optatives.json: la que porten els fitxers
+    PD_{codi}_*.md de programacions/OPTATIVES/. No és el codi alternatiu
+    del cicle (codis_alternatius) que torna get_optatives(), i que no
+    correspon a cap fitxer (p.ex. INP és CVOPS190 per a DAM).
+    """
+    cicle = cicle.upper()
+    familia = familia.upper()
+    return [
+        (codi, modul) for codi, modul in get_optatives().items()
+        if any(g.get("cicle", "").upper() == cicle and g.get("familia", "").upper() == familia
+               for g in modul.get("grups", []))
+    ]
+
+
+def find_optativa_pd(opt_dir, codi):
+    """Nom del fitxer de PD de l'optativa `codi` dins opt_dir (l'_OK té
+    prioritat sobre el _BORRADOR), o None si no existeix."""
+    try:
+        files = os.listdir(opt_dir)
+    except OSError:
+        return None
+    trobats = sorted(f for f in files if (m := OPT_PD_FILE_RE.match(f)) and m.group(1) == codi)
+    ok = [f for f in trobats if f.endswith("_OK.md")]
+    return (ok or trobats or [None])[0]
+
+
 def get_moduls_merged(cicle, familia=None):
     """Fusiona els mòduls del cicle + optatives que pertanyen al cicle.
 

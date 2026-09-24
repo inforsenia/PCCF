@@ -184,10 +184,8 @@ compila-pccf-%:
 			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) \
 			-o "$(OUTPUT_DIR)/PCCF_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" \
 			"$${FILES_ARR[@]}"
-	@echo " ${LIGHTBLUE} Incluint PDs d'optatives (només les del cicle)${RESET}"
-	python3 tools/copy_optatives_pd.py "$(CICLO_UPPER)" "$(FAMILIA)" "$(PD_DIR)" "$(PCCF_ROOT)/programacions/OPTATIVES"
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
-	rm -rf "$(COMPILA_DIR)" "$(PD_DIR)/.optatives_pd"
+	rm -rf "$(COMPILA_DIR)"
 	@echo " ${LIGHTGREEN} [ Compilacio PCCF $(CICLO_UPPER) completada ] ${RESET}"
 
 # ============================================================
@@ -213,9 +211,7 @@ compila-pd-pccf-%:
 	@STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; \
 		rm -rf "$$STAGE" && mkdir -p "$$STAGE" && \
 		cp "$(PD_DIR)"/PD_*.md "$$STAGE/" && \
-		if [ -f "$(PD_DIR)/.optatives_pd/.copied_count" ] && [ "$$(cat "$(PD_DIR)/.optatives_pd/.copied_count")" -gt 0 ]; then \
-			cp "$(PD_DIR)"/.optatives_pd/PD_*.md "$$STAGE/"; \
-		fi && \
+		python3 tools/copy_optatives_pd.py $(CICLO_UPPER) $(FAMILIA) "$(PCCF_ROOT)/programacions/OPTATIVES" "$$STAGE" && \
 		sed -i "s#\.\./rsrc/backgrounds/#$(PROJECT_ROOT)/rsrc/backgrounds/#g" "$$STAGE"/*.md && \
 		python3 tools/prepara_pd_compilacio.py $(CICLO_UPPER) $(FAMILIA) --pd-dir "$(PD_DIR)" --stage "$$STAGE" && \
 		if [ -f "$$STAGE/.draft" ]; then DRAFT_OPT="-V draft=true"; else DRAFT_OPT=""; fi && \
@@ -227,7 +223,7 @@ compila-pd-pccf-%:
 	@echo " ${LIGHTBLUE} Generant report de PD a $(PD_DIR)/0_report/${RESET}"
 	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
-	rm -rf "$(PD_DIR)/.optatives_pd" "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
+	rm -rf "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
 	@echo " ${LIGHTGREEN} [ Compilacio Programaciones $(CICLO_UPPER) completada ] ${RESET}"
 
 # ============================================================

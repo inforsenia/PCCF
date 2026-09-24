@@ -6,7 +6,8 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import parse_pd_filename, check_excel_coherence, get_familia
+from pccf_utils import (parse_pd_filename, check_excel_coherence, get_familia,
+                        get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO)
 
 PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
 
@@ -58,7 +59,41 @@ def compute_pd_status(cicle, familia, pd_dir):
             status["total_places"] += len(places)
 
     status["excel_issues"] = check_excel_coherence(status["excel_path"])
+    add_optatives_status(status)
     return status
+
+
+def add_optatives_status(status):
+    """Afig a `status` les optatives del cicle (optatives.json), que viuen
+    compartides a programacions/OPTATIVES/ però formen part de les
+    Programacions del cicle: si en falta la PD, està en BORRADOR, té marques
+    pendents o la seua fulla de libro_optatives.xlsx no és coherent, el
+    cicle no es considera verificat (marca ESBORRANY)."""
+    opt_dir = os.path.join(os.path.dirname(os.path.abspath(status["pd_dir"])), OPTATIVES_DIRNAME)
+    status["opt_dir"] = opt_dir
+    status["opt_excel_path"] = os.path.join(opt_dir, OPTATIVES_LIBRO)
+    status["optatives"] = []
+    status["opt_excel_issues"] = []
+
+    opts = get_optatives_del_cicle(status["cicle"], status["familia"])
+    if not opts:
+        return
+
+    for codi, modul in opts:
+        fname = find_optativa_pd(opt_dir, codi)
+        estat = None if not fname else ("OK" if fname.endswith("_OK.md") else "BORRADOR")
+        status["optatives"].append({"codi": codi, "nom": modul["nombre"], "fitxer": fname, "estat": estat})
+        if fname:
+            places = find_placeholders(os.path.join(opt_dir, fname))
+            if places:
+                status["placeholders"].append((f"{OPTATIVES_DIRNAME}/{fname}", places))
+                status["total_places"] += len(places)
+
+    # Només les fulles de les optatives d'este cicle (Excel talla el nom a 31)
+    noms = {m["nombre"] for _, m in opts} | {m["nombre"][:31] for _, m in opts}
+    for issue in check_excel_coherence(status["opt_excel_path"]):
+        if "Fulla '" not in issue or any(f"Fulla '{n}'" in issue for n in noms):
+            status["opt_excel_issues"].append(issue)
 
 
 def compute_pccf_status(cicle, familia, pccf_dir):
@@ -102,6 +137,10 @@ def is_pd_verified(status):
     if status["total_places"] > 0:
         return False
     if status["excel_issues"]:
+        return False
+    if any(o["estat"] != "OK" for o in status.get("optatives", [])):
+        return False
+    if status.get("opt_excel_issues"):
         return False
     return True
 
@@ -151,6 +190,22 @@ def format_pd_report(status):
     else:
         lines.append("  Correcte (RA suma 100% o Excel no trobat/sense dades).")
     lines.append("")
+
+    if status.get("optatives"):
+        lines.append(f"Optatives del cicle ({status['opt_dir']}/): {len(status['optatives'])}")
+        for o in status["optatives"]:
+            if o["estat"] is None:
+                estat = "FALTA la PD (cal generar-la: genera-totes-plantilles)"
+            else:
+                estat = o["estat"]
+            lines.append(f"  - {o['nom']} ({o['codi']}): {estat}")
+        lines.append(f"Excel optatives: {status['opt_excel_path']}")
+        if status["opt_excel_issues"]:
+            for e in status["opt_excel_issues"]:
+                lines.append(f"  {e}")
+        else:
+            lines.append("  Correcte (RA suma 100% o sense dades).")
+        lines.append("")
 
     lines.append(f"Verificat (sense marca d'esborrany): {'SI' if is_pd_verified(status) else 'NO'}")
 

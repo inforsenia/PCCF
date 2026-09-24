@@ -11,8 +11,8 @@ Curricular projects & teaching plans for vocational training at IES La Sénia. B
 - **PD generation**: same single template as the cycles (`templates/_base_pd.md`, rendered with `optativa=True` + `CONTEXTO_OPTATIVA`); skips OG/CPSS sections when empty.
 - **State tracking**: same as PCCF (`_BORRADOR.md` / `_OK.md`), shared across all cycles.
 - **Excel**: `programacions/OPTATIVES/libro_optatives.xlsx` (shared, one sheet per module).
-- **Pipeline**: `make generar-plantilles-optatives` → `make report-optatives` → `make compila-pccf-{CICLO}` copies matching optatives PDs from `programacions/OPTATIVES/` automatically.
-- **Integration**: `tools/copy_optatives_pd.py` filters by `grups` field and copies PDs from `programacions/OPTATIVES/` to `programacions/{CICLO}/` during per-cycle compilation.
+- **Pipeline**: `make generar-plantilles-optatives` (també dins `genera-totes-plantilles`) → `make compila-pd-pccf-{CICLO}` inclou automàticament les PD d'optatives del cicle al PDF de Programacions.
+- **Integration**: `pccf_utils.get_optatives_del_cicle()` torna les optatives d'un cicle (camp `grups`) amb el codi d'`optatives.json` — el dels fitxers `PD_{CODI}_*.md` —, no el codi alternatiu (`get_optatives()` torna `CVOPS190` per a INP a DAM/EI, que no correspon a cap fitxer). `tools/copy_optatives_pd.py` les copia a la còpia de muntatge de `compila-pd-pccf-{CICLO}` renomenades `PD_{CICLE}_{CODI}_...`: van al final del PDF i `prepara_pd_compilacio.py` els posa marques ✎/✗ i el Quadre Resum de `libro_optatives.xlsx`. El report del cicle (`report_pccf.py::add_optatives_status`) té un apartat "Optatives del cicle" (PD que falta, BORRADOR, `[###]`, coherència de la seua fulla de l'Excel) i qualsevol incidència hi impedeix el "Verificat" (marca ESBORRANY). El poller regenera el report dels cicles amb optatives quan canvia `programacions/OPTATIVES/` i avisa el docent de cada PD d'optativa.
 
 ## Build commands
 
@@ -135,10 +135,9 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
    - `json2pccf.py --generate-competences` → `.compila_{CICLO}/` dins `$(PCCF_ROOT)`
    - Staging: copia `PCCF_*.md` de `pccf/src*/` a `.compila_{CICLO}/`
     - `pandoc` des de `.compila_{CICLO}/` → `pccf/1_esborrany/PCCF_{CENTRO}_{CICLO}.pdf`
-    - `copy_optatives_pd.py` — copia PDs optatives a `programacions/{CICLO}/`
     - `rm -rf .compila_{CICLO}/`
 4. Phase 2b: `compila-pd-pccf-{CICLO}` (manual, cap de departament):
-    - `pandoc` des de `programacions/{CICLO}/` (staging per a paths de fons)
+    - `pandoc` des de `programacions/{CICLO}/` (staging per a paths de fons), més les PD d'optatives del cicle (`copy_optatives_pd.py`)
     - → `programacions/{CICLO}/1_esborrany/Programaciones_{CENTRO}_{CICLO}.pdf`
     - `shell-progs-didacticas-standalone.sh` — per-module PDFs
     - Després genera el report de PD a `programacions/{CICLO}/0_report/`

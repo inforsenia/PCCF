@@ -32,7 +32,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, parse_pd_filename
+from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, get_optatives_del_cicle, OPTATIVES_DIRNAME
 from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report, find_placeholders
 from memories_utils import get_teacher_email
 from mailer import smtp_configured, send_report_email, get_department_email
@@ -150,8 +150,9 @@ def notify_pd_teachers(cicle, familia, pd_dir):
         places = find_placeholders(filepath)
         if places:
             deficiencies.append(f"{len(places)} marques pendents ([###]/[...] sense substituir)")
-        parsed = parse_pd_filename(fname)
-        if parsed and parsed["estat"] == "BORRADOR":
+        # Pel sufix (no parse_pd_filename): val també per a les PD
+        # d'optatives, que no porten el cicle al nom.
+        if fname.endswith("_BORRADOR.md"):
             deficiencies.append("el fitxer segueix en estat BORRADOR (falta renombrar a _OK.md)")
 
         if not deficiencies:
@@ -261,6 +262,12 @@ def poll_once(sync_root, centre, cicle=None):
         print(f"[pccf-poller] disparador global {PD_COMPILE_TRIGGER} detectat a programacions/: compilant tots els cicles", flush=True)
     fallats = []
 
+    # PD d'optatives (compartides entre cicles): avís al docent una sola
+    # vegada per passada (l'estat per fitxer evita repetir-los).
+    opt_dir = os.path.join(prog_root, OPTATIVES_DIRNAME)
+    if os.path.isdir(opt_dir):
+        notify_pd_teachers(OPTATIVES_DIRNAME, "OPT", opt_dir)
+
     for cicle in cicles_a_processar:
         familia = get_familia(cicle)
         key = f"{familia}_{cicle}"
@@ -274,8 +281,7 @@ def poll_once(sync_root, centre, cicle=None):
         # passada tornava a crear en silenci les PD que un docent esborrava i,
         # amb OneDrive a mitjan sincronitzar, podia generar BORRADORs en
         # conflicte amb els dels docents.
-        # La compilació automàtica del PCCF pot crear programacions/{CICLE}/
-        # buida (copy_optatives_pd.py): el que compta és que hi haja PD.
+        # programacions/{CICLE}/ pot existir buida: el que compta és que hi haja PD.
         te_pd = has_pd_files(pdir)
         if not te_pd and global_triggers:
             print(f"[pccf-poller] {key}: no hi ha PD a programacions/{cicle}/ (cal genera-totes-plantilles), no es compilen les seues Programacions", flush=True)
@@ -286,6 +292,10 @@ def poll_once(sync_root, centre, cicle=None):
             fallats.append((cicle, pdir))
 
         pd_mtime = latest_source_mtime(pdir)
+        # Les optatives del cicle formen part de les seues Programacions i del
+        # seu report: un canvi a programacions/OPTATIVES/ també el regenera.
+        if get_optatives_del_cicle(cicle, familia):
+            pd_mtime = max(pd_mtime, latest_source_mtime(opt_dir))
         mtime_src = dir_mtime(pccf_dir, "src")
         mtime_familia = dir_mtime(pccf_dir, f"src_{familia}")
         mtime_cicle = dir_mtime(pccf_dir, f"src_{familia}_{cicle}")

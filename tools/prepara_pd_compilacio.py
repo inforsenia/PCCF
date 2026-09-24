@@ -31,7 +31,7 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import parse_pd_filename, get_hoja_label
+from pccf_utils import parse_pd_filename, get_hoja_label, get_optatives_del_cicle
 from report_pccf import compute_pd_status, is_pd_verified, find_placeholders
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -122,17 +122,28 @@ def main():
     with open(os.path.join(args.stage, "pd_header.tex"), "w", encoding="utf-8") as f:
         f.write(HEADER_TEX)
 
-    excel = status["excel_path"]
-    sheetnames = []
-    exportar = None
-    if os.path.exists(excel):
+    # Cada llibre Excel: (camí, fulles, incidències). Els mòduls del cicle
+    # usen libro_{CICLE}.xlsx; les optatives (copiades a STAGE per
+    # copy_optatives_pd.py com a PD_{CICLE}_{CODI}_...) libro_optatives.xlsx.
+    def llig_llibre(excel, issues):
+        if not os.path.exists(excel):
+            print(f" * [PD] Excel no trobat ({excel}): sense Quadres Resum")
+            return (excel, [], issues)
         import openpyxl
         wb = openpyxl.load_workbook(excel, read_only=True)
         sheetnames = wb.sheetnames
         wb.close()
-        exportar = load_excel_exporter()
-    else:
-        print(f" * [PD] Excel no trobat ({excel}): sense Quadres Resum")
+        return (excel, sheetnames, issues)
+
+    llibre_cicle = llig_llibre(status["excel_path"], status["excel_issues"])
+    llibres = {codi: llibre_cicle for codi in moduls}
+    optatives = get_optatives_del_cicle(cicle, familia)
+    if optatives:
+        llibre_opt = llig_llibre(status["opt_excel_path"], status["opt_excel_issues"])
+        for codi, modul in optatives:
+            moduls[codi] = modul["nombre"]
+            llibres[codi] = llibre_opt
+    exportar = load_excel_exporter() if any(l[1] for l in llibres.values()) else None
 
     for fname in sorted(os.listdir(args.stage)):
         parsed = parse_pd_filename(fname)
@@ -141,9 +152,10 @@ def main():
         path = os.path.join(args.stage, fname)
         codi = parsed["codi"]
         nombre = moduls.get(codi)
+        excel, sheetnames, excel_issues = llibres.get(codi, (None, [], []))
         fulla = resol_fulla(sheetnames, nombre) if nombre else None
 
-        excel_ko = bool(fulla) and any(f"Fulla '{fulla}'" in e for e in status["excel_issues"])
+        excel_ko = bool(fulla) and any(f"Fulla '{fulla}'" in e for e in excel_issues)
         marca = ""
         if parsed["estat"] == "BORRADOR":
             marca += MARCA_BORRADOR
