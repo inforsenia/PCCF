@@ -175,7 +175,8 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 - **File naming**: `{TYPE}_{NNN}_{CONTEXT}_Description.md` (TYPE=PCCF|PD, NNN=3-digit order, CONTEXT=CICLO or FAMILIA). Order in `ls` determines PDF page order.
 - **Include syntax**: `@@@filename.md` in markdown pulls in content from another file at compile time.
 - **`ImportanciaCompetencias`**: JSON dict with values 1-3 (stars). Missing = 2 stars default.
-- **Module code mapping**: `tools/pccf_utils.py::get_hoja_label()` maps full module names to short codes. If a new Excel sheet name doesn't match, add it there. Use "1"/"2" suffix for modules with I/II to avoid prefix collisions (e.g. "Ciències aplicades 1" not "Ciències aplicades I").
+- **Module code mapping**: `tools/pccf_utils.py::HOJA_LABELS` (usat per `get_hoja_label()`) maps full module names (prefix) to short codes. **Són el nom de les fulles** de `libro_{CICLE}.xlsx` i `libro_optatives.xlsx` (Excel limita a 31 caràcters: amb el nom complet, IPO I/II tallats quedaven iguals i Excel en reanomenava un a "Recuperado_Hoja1"). Es tria el prefix **més llarg** que coincidix, així que l'ordre de la llista no importa i "... I" / "... II" no col·lidixen. Un mòdul nou sense entrada rep el seu nom si cap en 31 caràcters o, si no, unes sigles automàtiques (`_sigles_automatiques`); millor afegir-lo a `HOJA_LABELS` i comprovar que la sigla no es repetix dins del cicle.
+- **Codis de mòdul alfanumèrics** (p.ex. `IPO1`/`IPO2` a FPBIIO): `PD_FILE_RE` accepta `\d+` o `[A-Z][A-Z0-9]*`. Abans només `[A-Z]+`, i eixes PD no es reconeixien (sense marques, Quadre Resum ni report).
 - **PD override**: Place a file with the same name in `src_{FAMILIA}_{CICLO}/` to override auto-generated PD markdown.
 - **State tracking**: `_BORRADOR.md` = pending teacher review. Teacher renames to `_OK.md` when completed.
 - **Instructions block**: Automatically stripped from the compiled PDF (regex removes `> **Instruccions...` blocks).

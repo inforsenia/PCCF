@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from excel_estils import aplica_estils
-from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM
+from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM, get_hoja_label
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
 
@@ -52,8 +52,8 @@ p_TOTAL_HORAS_DUAL = "I5"
 
 for codigo, modulo in data_box.items():
     print(f" [ Optatives Excel ] : {modulo.nombre}")
-    ws = wb.create_sheet(title=modulo.nombre)
-    wb.active = wb.sheetnames.index(modulo.nombre)
+    ws = wb.create_sheet(title=get_hoja_label(modulo.nombre))  # sigles: Excel limita a 31 caràcters
+    wb.active = wb.sheetnames.index(ws.title)
 
     # Reset row counters per module (same pattern as json2excel.py)
     p_ra_titulo_col = 2

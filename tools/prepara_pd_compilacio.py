@@ -55,9 +55,9 @@ def load_excel_exporter():
 
 
 def resol_fulla(sheetnames, nombre):
-    """json2excel crea la fulla amb el nom complet del mòdul; els llibres
-    antics/proporcionats usen les sigles (get_hoja_label). Excel talla a 31."""
-    for cand in (nombre, nombre[:31], get_hoja_label(nombre)):
+    """json2excel crea la fulla amb les sigles del mòdul (get_hoja_label);
+    els llibres antics, amb el nom complet (Excel el talla a 31)."""
+    for cand in (get_hoja_label(nombre), nombre, nombre[:31]):
         if cand in sheetnames:
             return cand
     return None

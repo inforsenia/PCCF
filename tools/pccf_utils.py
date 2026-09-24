@@ -43,92 +43,111 @@ OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 # Pattern per a noms de fitxer PD:
 # PD_{CICLO}_{CODI}_{NOM}_{BORRADOR|OK}.md
 PD_FILE_RE = re.compile(
-    r'^PD_(' + '|'.join(CICLES_CONEGUTS) + r')_(\d+|[A-Z]+)_(.+?)_(BORRADOR|OK)\.md$'
+    r'^PD_(' + '|'.join(CICLES_CONEGUTS) + r')_(\d+|[A-Z][A-Z0-9]*)_(.+?)_(BORRADOR|OK)\.md$'
 )
 
 
+# Sigles de cada mòdul: nom de la fulla a libro_{CICLE}.xlsx i
+# libro_optatives.xlsx (Excel limita el nom a 31 caràcters: amb el nom
+# complet, IPO I/II tallats quedaven iguals i Excel en reanomenava un a
+# "Recuperado_Hoja1"). Es tria el prefix MÉS LLARG que coincidix, perquè
+# l'ordre de la llista no importe ("Programació" vs "Programació d'...",
+# "... I" vs "... II").
+HOJA_LABELS = [
+    ('Llenguatges de marques', 'LM'),
+    ('Sostenibilitat', 'SOS'),
+    ("Itinerari personal per a l'ocupabilitat II", 'IPO2'),
+    ("Itinerari personal per a l'ocupabilitat I", 'IPO1'),
+    ('Digitalització', 'DIG'),
+    ('Anglés Professional', 'ANG'),
+    ('Anglés oral', 'AOEP'),
+    ('Comunicació professional', 'COM'),
+    ('Projecte intermodular', 'PI'),
+    ('Introducció al Núvol', 'NVL'),
+    ('Muntatge', 'MME'),
+    ('Sistemes operatius mono', 'SOM'),
+    ('Aplicacions ofimàtiques', 'AOF'),
+    ('Sistemes operatius en xarxa', 'SOX'),
+    ('Seguretat informàtica', 'SIN'),
+    ('Serveis en xarxa', 'SEX'),
+    ('Aplicacions web', 'AW'),
+    ('Xarxes Locals', 'XL'),
+    ('Introducció a la Programació', 'IPR'),
+    ('Entorns de', 'ED'),
+    ('Sistemes Informàtics', 'SI'),
+    ('Bases de ', 'BBDD'),
+    ('Programació de serveis i pro', 'PSP'),
+    ('Programació multimèdia i dispo', 'PMDM'),
+    ('Programació', 'PRG'),
+    ("Desenvolupament d'inter", 'DI'),
+    ('Accés a ', 'AD'),
+    ('Sistemes de gestió empresarial', 'SGE'),
+    ('Models d', 'MIA'),
+    ('Sistemes d', 'SAA'),
+    ('Programació d', 'PIA'),
+    ('Sistemes de', 'SBD'),
+    ('Big Data', 'BDA'),
+    ('Montatge i manteniment', 'MMEB'),
+    ('Operacions auxiliars', 'OA'),
+    ('Ofimàtica', 'OAD'),
+    ('Instal·lació i manteniment', 'IMXTD'),
+    ('Ciències aplicades I', 'CA1'),
+    ('Ciències aplicades II', 'CA2'),
+    ('Comunicació i societat I', 'CS1'),
+    ('Comunicació i societat II', 'CS2'),
+    ("Organització de l'atenció", 'OAPD'),
+    ('Destreses socials', 'DDSS'),
+    ('Característiques i necessitats', 'CNP'),
+    ('Atenció i suport psicosocial', 'ASP'),
+    ('Suport a la comunicació', 'SC'),
+    ('Suport domiciliari', 'SD'),
+    ('Atenció sanitària', 'AS'),
+    ('Atenció higiènica', 'AH'),
+    ('Teleassistència', 'TEL'),
+    ('Primers auxilis', 'PA'),
+    ("Didàctica de l'educació infantil", 'DEI'),
+    ('Autonomia personal i salut infantil', 'APSI'),
+    ('El joc infantil', 'JOC'),
+    ('Expressió i comunicació', 'EC'),
+    ('Desenvolupament cognitiu', 'DCM'),
+    ('Desenvolupament socioafectiu', 'DSA'),
+    ('Habilitats socials', 'HHSS'),
+    ('Intervenció amb famílies', 'IFAM'),
+    ("Projecte d'atenció", 'PAI'),
+    ('Context de la intervenció social', 'CIS'),
+    ('Inserció sociolaboral', 'ISL'),
+    ('Atenció a les unitats de convivència', 'AUC'),
+    ('Mediació comunitària', 'MC'),
+    ('Suport a la intervenció educativa', 'SIE'),
+    ("Promoció de l'autonomia personal", 'PAP'),
+    ('Sistemes augmentatius', 'SAAC'),
+    ('Metodologia de la intervenció social', 'MIS'),
+    ('Ciències aplicades 1', 'CA1'),
+    ('Ciències aplicades 2', 'CA2'),
+    ('Comunicació i societat 1', 'CS1'),
+    ('Comunicació i societat 2', 'CS2'),
+]
+
+_STOPWORDS = {"de", "del", "i", "a", "al", "als", "la", "les", "el", "els", "en", "per", "amb", "d", "l"}
+
+
+def _sigles_automatiques(nom):
+    """Inicials de les paraules significatives + numeral final (I, II, 1, 2...)."""
+    paraules = re.findall(r"[\w·]+", nom.replace("'", " "))
+    final = paraules[-1] if paraules and re.fullmatch(r"[IVX]+|\d+", paraules[-1]) else ""
+    if final:
+        paraules = paraules[:-1]
+    sigles = "".join(p[0].upper() for p in paraules if p.lower() not in _STOPWORDS)
+    return (sigles + final)[:31]
+
+
 def get_hoja_label(hoja):
-    ## INFORMATICA
-    # Comunes
-    if hoja.startswith("Llenguatges de marques"): return "LM"
-    if hoja.startswith("Sostenibilitat"): return "SOS"
-    if hoja.startswith("Itinerari personal per a l'ocupabilitat II"): return "IPO2"
-    if hoja.startswith("Itinerari personal per a l'ocupabilitat I"): return "IPO1"
-    if hoja.startswith("Digitalització"): return "DIG"
-    if hoja.startswith("Anglés Professional"): return "ANG"
-    if hoja.startswith("Anglés oral"): return "AOEP"
-    if hoja.startswith("Comunicació professional"): return "COM"
-    if hoja.startswith("Projecte intermodular"): return "PI"
-    if hoja.startswith("Introducció al Núvol"): return "NVL"
-
-    if hoja.startswith("Muntatge"): return "MME"
-    if hoja.startswith("Sistemes operatius mono"): return "SOM"
-    if hoja.startswith("Aplicacions ofimàtiques"): return "AOF"
-    if hoja.startswith("Sistemes operatius en xarxa"): return "SOX"
-    if hoja.startswith("Seguretat informàtica"): return "SIN"
-    if hoja.startswith("Serveis en xarxa"): return "SEX"
-    if hoja.startswith("Aplicacions web"): return "AW"
-    if hoja.startswith("Xarxes Locals"): return "XL"
-    if hoja.startswith("Introducció a la Programació"): return "IPR"
-
-    if hoja.startswith("Entorns de"): return "ED"
-    if hoja.startswith("Sistemes Informàtics"): return "SI"
-    if hoja.startswith("Bases de "): return "BBDD"
-    if hoja.startswith("Programació de serveis i pro"): return "PSP"
-    if hoja.startswith("Programació multimèdia i dispo"): return "PMDM"
-    if hoja.startswith("Programació"): return "PRG"
-
-    if hoja.startswith("Desenvolupament d'inter"): return "DI"
-    if hoja.startswith("Accés a "): return "AD"
-    if hoja.startswith("Sistemes de gestió empresarial"): return "SGE"
-
-    if hoja.startswith("Models d"): return "MIA"
-    if hoja.startswith("Sistemes d"): return "SAA"
-    if hoja.startswith("Programació d"): return "PIA"
-    if hoja.startswith("Sistemes de"): return "SBD"
-    if hoja.startswith("Big Data"): return "BDA"
-
-    if hoja.startswith("Montatge i manteniment"): return "MMEB"
-    if hoja.startswith("Operacions auxiliars"): return "OA"
-    if hoja.startswith("Ofimàtica"): return "OAD"
-    if hoja.startswith("Instal·lació i manteniment"): return "IMXTD"
-    if hoja.startswith("Ciències aplicades I"): return "CA1"
-    if hoja.startswith("Ciències aplicades II"): return "CA2"
-    if hoja.startswith("Comunicació i societat I"): return "CS1"
-    if hoja.startswith("Comunicació i societat II"): return "CS2"
-
-    ## SERVEIS A LA COMUNITAT
-    if hoja.startswith("Organització de l'atenció"): return "OAPD"
-    if hoja.startswith("Destreses socials"): return "DDSS"
-    if hoja.startswith("Característiques i necessitats"): return "CNP"
-    if hoja.startswith("Atenció i suport psicosocial"): return "ASP"
-    if hoja.startswith("Suport a la comunicació"): return "SC"
-    if hoja.startswith("Suport domiciliari"): return "SD"
-    if hoja.startswith("Atenció sanitària"): return "AS"
-    if hoja.startswith("Atenció higiènica"): return "AH"
-    if hoja.startswith("Teleassistència"): return "TEL"
-    if hoja.startswith("Primers auxilis"): return "PA"
-
-    if hoja.startswith("Didàctica de l'educació infantil"): return "DEI"
-    if hoja.startswith("Autonomia personal i salut infantil"): return "APSI"
-    if hoja.startswith("El joc infantil"): return "JOC"
-    if hoja.startswith("Expressió i comunicació"): return "EC"
-    if hoja.startswith("Desenvolupament cognitiu"): return "DCM"
-    if hoja.startswith("Desenvolupament socioafectiu"): return "DSA"
-    if hoja.startswith("Habilitats socials"): return "HHSS"
-    if hoja.startswith("Intervenció amb famílies"): return "IFAM"
-    if hoja.startswith("Projecte d'atenció"): return "PAI"
-
-    if hoja.startswith("Context de la intervenció social"): return "CIS"
-    if hoja.startswith("Inserció sociolaboral"): return "ISL"
-    if hoja.startswith("Atenció a les unitats de convivència"): return "AUC"
-    if hoja.startswith("Mediació comunitària"): return "MC"
-    if hoja.startswith("Suport a la intervenció educativa"): return "SIE"
-    if hoja.startswith("Promoció de l'autonomia personal"): return "PAP"
-    if hoja.startswith("Sistemes augmentatius"): return "SAAC"
-    if hoja.startswith("Metodologia de la intervenció social"): return "MIS"
-
-    return hoja
+    """Sigla del mòdul `hoja` (nom complet). Sense entrada a HOJA_LABELS,
+    torna el nom si cap en 31 caràcters o, si no, unes sigles automàtiques."""
+    candidats = [(pre, lab) for pre, lab in HOJA_LABELS if hoja.startswith(pre)]
+    if candidats:
+        return max(candidats, key=lambda c: len(c[0]))[1]
+    return hoja if len(hoja) <= 31 else _sigles_automatiques(hoja)
 
 
 def get_familia(cicle):
@@ -182,7 +201,7 @@ def get_optatives(cicle=None, familia=None):
 
 
 # Fitxers de PD d'optatives a programacions/OPTATIVES/: PD_{CODI}_{NOM}_{BORRADOR|OK}.md
-OPT_PD_FILE_RE = re.compile(r'^PD_(\d+|[A-Z]+)_(.+?)_(BORRADOR|OK)\.md$')
+OPT_PD_FILE_RE = re.compile(r'^PD_(\d+|[A-Z][A-Z0-9]*)_(.+?)_(BORRADOR|OK)\.md$')
 OPTATIVES_DIRNAME = "OPTATIVES"
 OPTATIVES_LIBRO = "libro_optatives.xlsx"
 

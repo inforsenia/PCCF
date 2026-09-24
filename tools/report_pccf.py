@@ -7,7 +7,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import (parse_pd_filename, check_excel_coherence, get_familia,
-                        get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO)
+                        get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO,
+                        get_hoja_label)
 
 PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
 
@@ -89,8 +90,11 @@ def add_optatives_status(status):
                 status["placeholders"].append((f"{OPTATIVES_DIRNAME}/{fname}", places))
                 status["total_places"] += len(places)
 
-    # Només les fulles de les optatives d'este cicle (Excel talla el nom a 31)
-    noms = {m["nombre"] for _, m in opts} | {m["nombre"][:31] for _, m in opts}
+    # Només les fulles de les optatives d'este cicle: la fulla porta les
+    # sigles (get_hoja_label); els llibres antics, el nom (tallat a 31)
+    noms = set()
+    for _, m in opts:
+        noms |= {m["nombre"], m["nombre"][:31], get_hoja_label(m["nombre"])}
     for issue in check_excel_coherence(status["opt_excel_path"]):
         if "Fulla '" not in issue or any(f"Fulla '{n}'" in issue for n in noms):
             status["opt_excel_issues"].append(issue)

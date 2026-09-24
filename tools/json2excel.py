@@ -13,6 +13,7 @@ from openpyxl.styles import Alignment
 from openpyxl.styles import NamedStyle
 
 from excel_estils import aplica_estils
+from pccf_utils import get_hoja_label
 
 debug = False
 
@@ -83,8 +84,8 @@ for codigo in data_box.ModulosProfesionales:
     p_ra_titulo_col=2
     p_ra_titulo_row=8
 
-    ws = wb.create_sheet(title=modulo.nombre)
-    wb.active = wb.sheetnames.index(modulo.nombre)
+    ws = wb.create_sheet(title=get_hoja_label(modulo.nombre))  # sigles: Excel limita a 31 caràcters
+    wb.active = wb.sheetnames.index(ws.title)
 
     ws['B1'].value="Codi"
     ws['B1'].alignment = Alignment(horizontal='center',vertical='center')
