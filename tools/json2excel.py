@@ -12,7 +12,7 @@ import openpyxl
 from openpyxl.styles import Alignment
 from openpyxl.styles import NamedStyle
 
-from excel_estils import aplica_estils
+from excel_estils import aplica_estils, escriu_capcalera
 from pccf_utils import get_hoja_label
 
 debug = False
@@ -60,20 +60,12 @@ libro = os.path.join(outdir, f"libro_{args.ciclo}.xlsx")
 wb = openpyxl.Workbook()
 
 # Algunas posiciones fijas
-p_codigo='C1'
-p_nombre='C2'
-p_horas='C3'
 p_ra_col_l='B'
 p_ra_titulo_col=2
 p_ra_titulo_row=8
 p_ce_col_l='E'
 p_req_fe_col_l='H'
 p_contenidos_col_l='J'
-
-p_TOTAL_HORAS_titulo="E5"
-p_TOTAL_HORAS="F5"
-p_TOTAL_HORAS_DUAL_titulo="G5"
-p_TOTAL_HORAS_DUAL="I5"
 
 
 for codigo in data_box.ModulosProfesionales:
@@ -87,40 +79,7 @@ for codigo in data_box.ModulosProfesionales:
     ws = wb.create_sheet(title=get_hoja_label(modulo.nombre))  # sigles: Excel limita a 31 caràcters
     wb.active = wb.sheetnames.index(ws.title)
 
-    ws['B1'].value="Codi"
-    ws['B1'].alignment = Alignment(horizontal='center',vertical='center')
-
-    ws['B2'].value="Nom"
-    ws['B2'].alignment = Alignment(horizontal='center',vertical='center')
-
-    ws['B3'].value="Hores"
-    ws['B3'].alignment = Alignment(horizontal='center',vertical='center')
-
-    ws.merge_cells(start_row=3, start_column=3, end_row=3, end_column=9)
-    ws['C3'].value=modulo.horas
-    ws['C3'].alignment = Alignment(horizontal='center',vertical='center')
-
-
-    ws.merge_cells(start_row=1, start_column=3, end_row=1, end_column=9)
-    ws[p_codigo].value=codigo
-    ws[p_codigo].alignment = Alignment(horizontal='center',vertical='center')
-
-    ws.merge_cells(start_row=2, start_column=3, end_row=2, end_column=9)
-    ws[p_nombre].value=modulo.nombre
-    ws[p_nombre].alignment = Alignment(horizontal='center',vertical='center')
-
-    ws[p_TOTAL_HORAS_titulo].value="TOTAL HORES"
-    ws[p_TOTAL_HORAS_titulo].alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
-
-
-    # TODO
-    ws[p_TOTAL_HORAS].value="=SUM(F8:F200)/2"
-
-    ws.merge_cells(start_row=5, start_column=7, end_row=5, end_column=8)
-    ws[p_TOTAL_HORAS_DUAL_titulo].value="TOTAL H. DUAL"
-    ws[p_TOTAL_HORAS_DUAL_titulo].alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
-    # TODO
-    ws[p_TOTAL_HORAS_DUAL].value="=SUM(I8:I200)/2"
+    escriu_capcalera(ws, codigo, modulo)
 
 
 
@@ -195,22 +154,6 @@ for codigo in data_box.ModulosProfesionales:
 
     ws.column_dimensions[p_contenidos_col_l].width = 50
 
-    # Peticion de las Competencias
-
-    #print(" - COMPETENCIAS - LISTA ")
-    p_complist_col=p_contenidos_col
-    p_complist_row=p_contenidos_row-6
-    ws.cell(column=p_complist_col,row=p_complist_row).value="OBJECTIUS"
-    try:
-        ws.cell(column=p_complist_col,row=p_complist_row+1).value = ", ".join(str(x) for x in modulo.ObjetivosGenerales)
-    except Exception as e:
-        print("  - INFO : No tiene Objetivos Generales")
-
-    ws.cell(column=p_complist_col,row=p_complist_row+2).value="COMPETENCIES"
-    try:
-        ws.cell(column=p_complist_col,row=p_complist_row+3).value = ", ".join(str(x) for x in modulo.CompetenciasTitulo)
-    except Exception as e:
-        print("  - INFO : No tiene Objetivos CompetenciasTitulo")
 
 
     # Ahora ya seguimos para abajo

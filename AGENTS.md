@@ -128,7 +128,7 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 2. Phase 1: `generar-plantilles-pccf-{CICLO}`:
    - If `$(PCCF_ROOT) != $(PROJECT_ROOT)` (OneDrive mode): copies `pccf/` tree from git to `$(PCCF_ROOT)/pccf/` (first bootstrap, never overwrites)
    - Copies `PD_*.md` from `pccf/src*` dirs → `programacions/{CICLO}/`
-   - `json2excel.py {CICLO} {FAMILIA} --outdir programacions/{CICLO}` — generates `libro_{CICLO}.xlsx` (colors/lletres/vores a `tools/excel_estils.py::aplica_estils()`, compartit amb `json2optatives.py`: fons blanc sòlid a tota la taula perquè el fons decoratiu del PDF no es veja darrere del Quadre Resum)
+   - `json2excel.py {CICLO} {FAMILIA} --outdir programacions/{CICLO}` — generates `libro_{CICLO}.xlsx` (capçalera de la fulla a `tools/excel_estils.py::escriu_capcalera()` i colors/lletres/vores a `aplica_estils()`, tots dos compartits amb `json2optatives.py`. Capçalera en dues bandes: MÒDUL (B:E) | CODI (F:I) | HORES (J), i OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E:F) | TOTAL HORES (G:H) | TOTAL H. DUAL (I:J); la taula comença a la fila 8. Fons blanc sòlid a tota la taula perquè el fons decoratiu del PDF no es veja darrere del Quadre Resum)
    - `json2pccf.py {CICLO} {FAMILIA} --generate-only` — generates `PD_*_BORRADOR.md` from Jinja2 templates
    - **pccf/src* conté els PCCF framework (editable); programacions/ conté PDs + Excel (editable)**
 3. Phase 2a: `compila-pccf-{CICLO}` (auto, triggered by poller):
