@@ -28,11 +28,13 @@ AMPLE_COMP = 16
 # Les 4 columnes numèriques porten la capçalera girada 90° per a poder ser
 # estretes; les files 8-9 (capçalera fusionada) han de tindre alçada per al text.
 AMPLE_NUMERIQUES = 7
-# L'amplària que perden les columnes numèriques la guanya la dels criteris
-# (E): l'amplària total no canvia, i per tant tampoc l'escala del Quadre
-# Resum al PDF (LibreOffice l'ajusta a l'ample de pàgina).
+# Amplàries de criteris (E) i continguts (J): el Quadre Resum del PDF
+# inclou B..J i LibreOffice l'ajusta a l'ample de pàgina, així que
+# l'amplària total fixa l'escala (i la mida del text) al PDF.
 COL_CE = "E"
-AMPLE_CE = 120
+AMPLE_CE = 95
+COL_CONTINGUTS = "J"
+AMPLE_CONTINGUTS = 45
 ALT_CAPCALERA = 30         # punts per fila (x2); el text girat fa 2 línies
 GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap_text=True)
 # Banda de totals (fila 5), entre la capçalera del mòdul i la taula, amb cada
@@ -142,5 +144,6 @@ def aplica_estils(ws):
 
     ws.column_dimensions[COL_COMP].width = AMPLE_COMP
     ws.column_dimensions[COL_CE].width = AMPLE_CE
+    ws.column_dimensions[COL_CONTINGUTS].width = AMPLE_CONTINGUTS
     for col in COLS_NUMERIQUES:
         ws.column_dimensions[chr(ord("A") + col - 1)].width = AMPLE_NUMERIQUES

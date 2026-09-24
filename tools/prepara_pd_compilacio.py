@@ -38,6 +38,9 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MARCA_BORRADOR = r"\texorpdfstring{\ \ding{46}}{}"
 MARCA_INCIDENCIES = r"\texorpdfstring{\ \textcolor{red}{\ding{55}}}{}"
+# Inclou la columna J (CONTINGUTS, i OBJECTIUS/COMPETENCIES a dalt), per si
+# el docent concreta els continguts a l'Excel.
+QUADRE_RESUM_RANG = "B1:J200"
 HEADER_TEX = "\\usepackage{pifont}\n"
 BLOCKQUOTE_RE = re.compile(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*')
 
@@ -175,7 +178,7 @@ def main():
         cwd = os.getcwd()
         os.chdir(PROJECT_DIR)  # exportar_rango_a_pdf usa ./temp/ relatiu
         try:
-            exportar(excel, fulla, "B1:I200", tmp_pdf)
+            exportar(excel, fulla, QUADRE_RESUM_RANG, tmp_pdf)
         finally:
             os.chdir(cwd)
         if not os.path.exists(tmp_pdf):
