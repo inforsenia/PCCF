@@ -32,9 +32,9 @@ AMPLE_NUMERIQUES = 7
 # inclou B..J i LibreOffice l'ajusta a l'ample de pàgina, així que
 # l'amplària total fixa l'escala (i la mida del text) al PDF.
 COL_CE = "E"
-AMPLE_CE = 95
+AMPLE_CE = 117
 COL_CONTINGUTS = "J"
-AMPLE_CONTINGUTS = 45
+AMPLE_CONTINGUTS = 23      # continguts resumits
 ALT_CAPCALERA = 30         # punts per fila (x2); el text girat fa 2 línies
 GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap_text=True)
 # Capçalera de la fulla (files 1-5), escrita per escriu_capcalera() i comuna
