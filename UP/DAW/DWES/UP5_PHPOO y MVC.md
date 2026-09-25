@@ -7,7 +7,7 @@
 | **Código** | UP05 |
 | **Módulo** |  Desarrollo Web en Entorno Servidor (0613) |
 | **Duración** | **18 Horas** |
-| **Temporalización** | Del **28/10/2025** al **11/11/2025** |
+| **Temporalización** | Del **09/11/2026** al **23/11/2026** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
