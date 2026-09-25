@@ -5,10 +5,10 @@
 
 | Código | Título de la UP | Duración | Temporalización | RA asociados (Descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **Fundamentos, adopción y economía de la nube** | **9 h** | 10/09/2025 - 01/10/2025 | **RA01:** Fundamentos, adopción, migración y costes de la nube. |
-| **UP02** | **Infraestructura global y seguridad** | **9 h** | 01/10/2025 - 22/10/2025 | **RA02:** Infraestructura global, servicios principales y seguridad básica. |
-| **UP03** | **Redes, cómputo, escalado y monitorización**| **21 h** | 22/10/2025 - 10/12/2025 | **RA03:** Redes virtuales, cómputo, balanceo, escalado y servicios serverless. |
-| **UP04** | **Almacenamiento, bases de datos y arquitectura en la nube** | **17 h** | 10/12/2025 - 30/01/2026 | **RA04:** Almacenamiento, bases de datos y arquitecturas escalables y resilientes. |
+| **UP01** | **Fundamentos, adopción y economía de la nube** | **9 h** | 10/09/2026 - 01/10/2026 | **RA01:** Fundamentos, adopción, migración y costes de la nube. |
+| **UP02** | **Infraestructura global y seguridad** | **9 h** | 06/10/2026 - 03/11/2026 | **RA02:** Infraestructura global, servicios principales y seguridad básica. |
+| **UP03** | **Redes, cómputo, escalado y monitorización**| **21 h** | 05/11/2026 - 22/12/2026 | **RA03:** Redes virtuales, cómputo, balanceo, escalado y servicios serverless. |
+| **UP04** | **Almacenamiento, bases de datos y arquitectura en la nube** | **17 h** | 07/01/2027 - 11/02/2027 | **RA04:** Almacenamiento, bases de datos y arquitecturas escalables y resilientes. |
 
 * La suma total de estas unidades es de **56 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo fuera del periodo dual.
 
@@ -63,10 +63,13 @@
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
-La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA01.
-* **Actividades prácticas y tareas guiadas (40%):** valoración de ejercicios sobre documentación, modelos de nube, adopción, migración y estimación de costes.
-* **Cuestionarios y pruebas objetivas (40%):** revisión de conocimientos de AWS Academy y prueba teórico-práctica del bloque.
-* **Participación y trabajo en clase (20%):** seguimiento de la participación en debates, análisis de casos y actividades colaborativas.
+La evaluación será continua y formativa, enfocada en la comprobación de la adquisición de competencias mediante los Criterios de Evaluación ponderados en el RA.
+
+Se llevará a cabo la observación directa en el aula durante la realización de ejercicios y supuestos prácticos.
+
+Por otra parte, el alumnado elaborará un informe técnico individual documentando la elección de infraestructura y servicio de nube pública, identificación de los servicios y sus categorías así como los costes asociados y la conveniencia o no de migración al proveedor de nube pública, según los escenarios propuestos con justificación técnica y de elaboración propia.
+
+Se realizará una prueba práctica final en el aula, con acceso a los apuntes de clase y sin acceso a Internet para comprobar la autonomía del alumnado a la hora de solucionar el reto.
 
 **Adaptaciones**
 * **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
@@ -80,7 +83,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 | **Código** | UP02 |
 | **Módulo** | Introducción a la nube pública (OPS190) |
 | **Duración** | **9 Horas** |
-| **Temporalización** | Del **01/10/2025** al **22/10/2025** |
+| **Temporalización** | Del **06/10/2026** al **03/11/2026** |
 | **Módulos AWS Academy** | Módulo 3: Información general sobre la infraestructura global de AWS; Módulo 4: Seguridad de la nube |
 
 ### 2. Fundamentación
@@ -122,10 +125,13 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
-La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA02.
-* **Prácticas de consola y laboratorios (40%):** valoración de ejercicios sobre infraestructura global, servicios e IAM.
-* **Cuestionarios y pruebas objetivas (40%):** revisión de conocimientos de AWS Academy y prueba teórico-práctica del bloque.
-* **Participación y análisis de casos (20%):** seguimiento de la intervención del alumnado en actividades sobre seguridad y responsabilidad compartida.
+La evaluación será continua y formativa, enfocada en la comprobación de la adquisición de competencias mediante los Criterios de Evaluación ponderados en el RA.
+
+Se llevará a cabo la observación directa en el aula durante la realización de ejercicios y supuestos prácticos.
+
+Por otra parte, el alumnado elaborará un informe técnico individual documentando la elección de región, zonas de disponibilidad y edge location, identificará la responsabilidad compartida entre proveedor de nube pública y cliente y aplicará métodos y mecanismos de seguridad para proteger cuentas y datos, según los escenarios propuestos con justificación técnica y de elaboración propia.
+
+Se realizará una prueba práctica final en el aula, con acceso a los apuntes de clase y sin acceso a Internet para comprobar la autonomía del alumnado a la hora de solucionar el reto.
 
 **Adaptaciones**
 * **Medidas según necesidades:** las adaptaciones se aplicarán de forma individualizada, ajustando tiempos, apoyos y nivel de guiado en las prácticas.
@@ -139,7 +145,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 | **Código** | UP03 |
 | **Módulo** | Introducción a la nube pública (OPS190) |
 | **Duración** | **21 Horas** |
-| **Temporalización** | Del **22/10/2025** al **10/12/2025** |
+| **Temporalización** | Del **05/11/2026** al **22/12/2026** |
 | **Módulos AWS Academy** | Módulo 5: Redes y entrega de contenido; Módulo 6: Cómputo; Módulo 10: Escalado automático y supervisión |
 
 ### 2. Fundamentación
@@ -183,10 +189,13 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
-La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA03.
-* **Laboratorios y prácticas técnicas (50%):** valoración de la configuración de redes, instancias, balanceadores, alarmas y escalado.
-* **Cuestionarios y pruebas objetivas (30%):** revisión de conocimientos de AWS Academy y prueba teórico-práctica del bloque.
-* **Resolución de casos y participación (20%):** evaluación de la selección justificada de servicios de cómputo y estrategias de escalado.
+La evaluación será continua y formativa, enfocada en la comprobación de la adquisición de competencias mediante los Criterios de Evaluación ponderados en el RA.
+
+Se llevará a cabo la observación directa en el aula durante la realización de ejercicios y supuestos prácticos, así como el uso de los laboratorios.
+
+Por otra parte, el alumnado elaborará un informe técnico individual documentando la configuración de redes y reglas de seguridad así como la creación y gestión de instancias de cómputo tratando de optimizar costes y aplicando técnicas para la disponibilidad y adecuación a los datos, según los escenarios propuestos con justificación técnica y de elaboración propia.
+
+Se realizará una prueba práctica final en el aula, con acceso a los apuntes de clase y sin acceso a Internet para comprobar la autonomía del alumnado a la hora de solucionar el reto.
 
 **Adaptaciones**
 * **Medidas según necesidades:** se ajustarán tiempos, agrupamientos, guías de laboratorio y apoyos técnicos en función de las necesidades del alumnado.
@@ -200,7 +209,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 | **Código** | UP04 |
 | **Módulo** | Introducción a la nube pública (OPS190) |
 | **Duración** | **17 Horas** |
-| **Temporalización** | Del **10/12/2025** al **30/01/2026** |
+| **Temporalización** | Del **07/01/2027** al **11/02/2027** |
 | **Módulos AWS Academy** | Módulo 7: Almacenamiento; Módulo 8: Bases de datos; Módulo 9: Arquitectura en la nube |
 
 ### 2. Fundamentación
@@ -245,10 +254,13 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
-La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA04.
-* **Laboratorios y prácticas técnicas (45%):** valoración de actividades de almacenamiento, bases de datos y configuración de servicios.
-* **Cuestionarios y pruebas objetivas (35%):** revisión de conocimientos de AWS Academy y prueba teórico-práctica del bloque.
-* **Análisis de arquitecturas y casos prácticos (20%):** evaluación de propuestas de mejora, selección de servicios y aplicación de buenas prácticas.
+La evaluación será continua y formativa, enfocada en la comprobación de la adquisición de competencias mediante los Criterios de Evaluación ponderados en el RA.
+
+Se llevará a cabo la observación directa en el aula durante la realización de ejercicios y supuestos prácticos, así como el uso de los laboratorios.
+
+Por otra parte, el alumnado elaborará un informe técnico individual documentando la elección de diversos tipos de almacenamiento y de bases de datos razonando su elección en cada caso, así como aplicando la configuración, gestión y uso de bases de datos desplegadas en la nube, según los escenarios propuestos con justificación técnica y de elaboración propia.
+
+Se realizará una prueba práctica final en el aula, con acceso a los apuntes de clase y sin acceso a Internet para comprobar la autonomía del alumnado a la hora de solucionar el reto.
 
 **Adaptaciones**
 * **Medidas según necesidades:** se adaptarán tiempos, agrupamientos, guías de trabajo y nivel de apoyo durante las prácticas.
