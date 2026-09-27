@@ -27,8 +27,6 @@ fi
 
 cd UP/$CICLO/
 
-echo "Procesando Markdowns/odts"
-
 for updir in $(ls -1); do
 	cd $updir
 	echo -n " ** ${updir} "
@@ -48,8 +46,5 @@ for updir in $(ls -1); do
 	echo ""
 	cd ..
 done
-
-cd -
-
 
 exit 0
