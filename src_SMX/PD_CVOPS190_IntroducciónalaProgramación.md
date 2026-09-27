@@ -31,12 +31,13 @@ Los **Resultados de Aprendizaje** relativos al módulo de Introducción a la Pro
 
 | Número | Título                    						| Inicio    | Fin       |
 |--------|---------------------------						|-----------|-----------|
-| 01	 | UP01: Introducción a la programación. Algorítmos. Pseudocódigo       | 15/09/2025| 22/09/2025|
-| 02	 | UP02: Programación Estructurada. Funciones Y Procedimientos		| 29/09/2025| 27/10/2025|
-| 03	 | UP03: POO: Clases y Objetos,  Métodos				| 03/11/2025| 17/11/2025|
-| 04	 | UP04: POO: Constructores y Destructores. Sobrecarga			| 24/11/2025| 15/12/2025|
-| 05	 | UP05: POO: Manejo de flujos de información. Excepciones. Ficheros	| 12/01/2026| 19/01/2026|
-| 06	 | UP06: POO: Estructuras de almacenamiento. Operaciones Agregadas.	| 26/01/2026| 02/02/2026|
+| 01	 | UP01: Introducción a la programación. Algorítmos. Pseudocódigo       | 10/09/2026| 17/09/2026|
+| 02	 | UP02: Programación Estructurada. Funciones Y Procedimientos		| 21/09/2026| 01/10/2026|
+| 03	 | UP03: Módulos. Paquetes. Estructuras de control				| 01/10/2026| 05/11/2026|
+| 04	 | UP04: Funciones. Errore. Excepciones			| 09/11/2026| 30/11/2026|
+| 05	 | UP05: Tipos de datos complejos. Listas. Diccionarios	| 03/12/2026| 07/01/2027|
+| 06	 | UP06: Manejo de ficheros	| 11/01/2027| 20/01/2027|
+| 07	 | UP07: POO y Módulos	| 25/01/2027| 08/02/2027|
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
