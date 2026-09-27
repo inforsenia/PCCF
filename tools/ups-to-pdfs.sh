@@ -49,8 +49,8 @@ else
 	fi
 fi
 
-mkdir -p mkdir -p ../../../PDFS/UPS-$CICLO/
-test -f ../../../PDFS/UPS-$MODULO/PD-UP-$MODULO.pdf && mv ../../../PDFS/UPS-$MODULO/PD-UP-$MODULO.pdf ../../../PDFS/UPS-$CICLO/
+mkdir -p mkdir -p ../../../PDFS/UnidadesProg-$CICLO/
+test -f ../../../PDFS/UPS-$MODULO/PD-UP-$MODULO.pdf && mv ../../../PDFS/UPS-$MODULO/PD-UP-$MODULO.pdf ../../../PDFS/UnidadesProg-$CICLO/
 
 cd -
 

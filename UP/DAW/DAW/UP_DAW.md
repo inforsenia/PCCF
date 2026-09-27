@@ -17,7 +17,9 @@
 ---
 
 ## UP01: Arquitecturas web y servidores web
+
 ### 1. Identificación
+
 | Campo | Detalle |
 | :--- | :--- |
 | **Código** | UP01 |
@@ -44,12 +46,12 @@
 **Competencias**
 
 * **Profesionales:** a), b), c), j), n), ñ), q).
-
 * **Ocupación:** c), d), o), p), r).
 
 ### 3. Organización
 
 **Contenidos**
+
 * Introducción al despliegue de aplicaciones web: concepto de despliegue, servidores y servicios necesarios para publicar una aplicación web.
 * Arquitecturas web: modelo cliente-servidor y evolución de las arquitecturas web.
 * Arquitecturas de una capa, dos capas y tres capas.
@@ -99,17 +101,23 @@
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
+
 La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA01 y el RA02.
-*   **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
-*   **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
+
+* **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
+* **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
 
 **Adaptaciones**
-*   **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
-*   **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
+* **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
+* **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
 ---
 
 ## UP02: Seguridad en servidores web
+
 ### 1. Identificación
+
 | Campo | Detalle |
 | :--- | :--- |
 | **Código** | UP02 |
@@ -138,7 +146,6 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 **Competencias**
 
 * **Profesionales:** a), b), c), j), n), ñ), q).
-
 * **Ocupación:** c), d), o), p), r).
 
 ### 3. Organización
@@ -199,17 +206,22 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
+
 La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA02.
-*   **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
-*   **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
+* **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
+* **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
 
 **Adaptaciones**
-*   **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
-*   **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
+* **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
+* **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
 ---
 
 ## UP03: Contenedores y servidores de aplicaciones
+
 ### 1. Identificación
+
 | Campo | Detalle |
 | :--- | :--- |
 | **Código** | UP03 |
@@ -242,7 +254,6 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 **Competencias**
 
 * **Profesionales:** a), b), c), j), n), ñ), q).
-
 * **Ocupación:** c), d), o), p), r).
 
 ### 3. Organización
@@ -318,16 +329,20 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 
 **Instrumentos de evaluación**
 La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación de las partes del RA01 y el RA03 trabajadas.
-*   **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
-*   **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
+* **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
+* **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
 
 **Adaptaciones**
-*   **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
-*   **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
+* **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
+* **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
 ---
 
 ## UP04: Servicios de red y transferencia de archivos
+
 ### 1. Identificación
+
 | Campo | Detalle |
 | :--- | :--- |
 | **Código** | UP04 |
@@ -345,6 +360,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 **Criterios de Evaluación**
 
 **RA04 - Criterios de evaluación**
+
 * **a)** Se han instalado y configurado servidores de transferencia de archivos.
 * **b)** Se han creado usuarios y grupos para el acceso remoto al servidor.
 * **c)** Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.
@@ -355,6 +371,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 * **h)** Se han utilizado tecnologías de virtualización en el despliegue de servidores de transferencia de archivos en la nube y en contenedores.
 
 **RA05 - Criterios de evaluación**
+
 * **a)** Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.
 * **b)** Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.
 * **c)** Se ha identificado la función, elementos y estructuras lógicas del servicio de directorio.
@@ -448,16 +465,19 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 
 **Instrumentos de evaluación**
 La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA04 y el RA05.
-*   **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
-*   **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
+* **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
+* **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
 
 **Adaptaciones**
-*   **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
-*   **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+* **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
+* **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
 ---
 
 ## UP05: Documentación e Integración continua
+
 ### 1. Identificación
+
 | Campo | Detalle |
 | :--- | :--- |
 | **Código** | UP05 |
@@ -498,7 +518,6 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 * Creación y utilización de plantillas de documentación.
 * Documentación de los procesos de instalación, configuración y despliegue de una aplicación web.
 * Documentación de componentes y recursos de una aplicación web.
-
 * Sistemas de control de versiones: finalidad y características.
 * Git como sistema de control de versiones.
 * Repositorios locales y remotos.
@@ -507,7 +526,6 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 * Control de cambios y recuperación de versiones anteriores.
 * Seguridad y accesibilidad de la información almacenada en un sistema de control de versiones.
 * Plataformas colaborativas para alojar repositorios y documentación.
-
 * Integración continua: concepto, finalidad y ventajas.
 * Flujo básico de integración continua: modificación del código, envío al repositorio, ejecución automática y comprobación del resultado.
 * Automatización de tareas mediante herramientas de integración continua.
@@ -544,11 +562,15 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 ### 4. Evaluación y adaptación
 
 **Instrumentos de evaluación**
+
 La evaluación será continua y formativa, enfocada en la adquisición de los criterios de evaluación del RA06.
-*   **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
-*   **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
+
+* **Rúbricas de prácticas (40%):** valoración sistemática de la documentación y resultado generados en cada actividad, atendiendo a la corrección técnica, la funcionalidad y configuración conrrectas y la claridad de la documentación.
+* **Pruebas objetivas (60%):** prueba teórico-práctica al finalizar el RA para verificar el cumplimiento de los criterios de evaluación.
 
 **Adaptaciones**
-*   **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
-*   **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
+* **Medidas según necesidades:** las adaptaciones se aplicarán de manera flexible tras la evaluación inicial y el seguimiento diario del progreso del alumnado.
+* **DUA:** se empleará el **Diseño Universal para el Aprendizaje**, proporcionando materiales en múltiples formatos y permitiendo la flexibilización de tiempos en las actividades prácticas.
+
 ---
