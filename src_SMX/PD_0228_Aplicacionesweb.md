@@ -65,12 +65,12 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    				| Inicio    | Fin       |
 |--------|---------------------------				|-----------|-----------|
-| 01	 | UP01: Internet-Sevidores Web-HTML-CSS.		| 11/09/2025| 19/09/2025|
-| 02	 | UP02: Diseño y Maquetación de Páginas Web: HTML5+CSS3| 25/09/2025| 14/11/2025|
-| 03	 | UP03: Gestores de contenidos o CMS			| 20/11/2025| 19/12/2025|
-| 04	 | UP04: Gestores de Aprendizaje a Distancia		| 08/01/2026| 06/02/2026|
-| 05	 | UP05: Aplicaciones Web de Oficina y Escritorio	| 12/02/2026| 24/04/2026|
-| 06	 | UP06: Servicios de Gestión de Archivos Web		| 30/04/2026| 12/06/2026|
+| 01	 | UP01: Internet-Sevidores Web-HTML-CSS.		| 11/09/2026| 16/09/2026|
+| 02	 | UP02: Diseño y Maquetación de Páginas Web: HTML5+CSS3| 18/09/2026| 21/10/2026|
+| 03	 | UP03: Gestores de contenidos o CMS			| 23/10/2026| 18/11/2026|
+| 04	 | UP04: Gestores de Aprendizaje a Distancia		| 20/11/2026| 11/12/2026|
+| 05	 | UP05: Aplicaciones Web de Oficina y Escritorio	| 22/01/2027| 03/02/2027|
+| 06	 | UP06: Servicios de Gestión de Archivos Web		| 05/02/2027| 10/02/2027|
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
