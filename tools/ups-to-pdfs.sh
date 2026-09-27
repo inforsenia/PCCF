@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " * Procesador de UPs por Modulo"
+echo " * Procesador de UPs por Modulo v2"
 
 if [ $# -ne 2 ]; then
 	echo " Numero de argumento incorrecto"
