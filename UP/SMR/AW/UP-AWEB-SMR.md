@@ -7,7 +7,7 @@
 | Código | Nombre | Duración (centro) | DUAL | Temporalización | RA’s Asoc. |
 |----|----|----|----|----|----|
 | UP1 | HTML. CSS. CMS | 30 | 12 | 11/09/2026 – 18/11/2026 | RA01 |
-| UP2 | LMS | 11 | 3 | 20/11/2026 – 11/12/2027 | RA02 |
+| UP2 | LMS | 11 | 3 | 20/11/2026 – 11/12/2026 | RA02 |
 | UP3 | ALMACENAMIENTO EN LA NUBE. NextCloud | 10 | 8 | 16/12/2026 – 20/01/2027 | RA03 |
 | UP4 | APLICACIONES OFIMÁTICAS EN LA NUBE | 2 | 10 | 22/01/2027 – 03/02/2027 | RA04 |
 | UP5 | APLICACIONES WEB DE ESCRITORIO | 3 | 10 | 05/02/2027 – 10/02/2027 | RA05 |
