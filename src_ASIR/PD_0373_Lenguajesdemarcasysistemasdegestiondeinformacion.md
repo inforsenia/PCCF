@@ -60,13 +60,16 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                                               | Inicio    | Fin       |
 |--------|---------------------------	                         |-----------|-----------|
-| 01	 | UP01: Introducción a los lenguajes de marcas.          | 16/09/2025| 23/09/2025|
-| 02	 | UP02: LM para documentación y administración de sistemas: Markdown Y YAML | 30/09/2025| 07/10/2025|
-| 03	 | UP03: Fundamentos de XML		                         | 14/10/2025| 28/10/2025|
-| 04	 | UP04: Definición de esquemas y vocabularios XML        | 04/11/2025| 03/02/2026|
-| 05	 | UP05: LM en entornos web (HTML/XHTML)                  | 10/02/2026| 03/03/2026|
-| 06	 | UP06: Diseño Web con CSS, CSS3						       | 10/03/2026| 31/03/2026|
-| 07	 | UP07: Sistemas empresariales de gestión de información | 14/04/2026| 26/05/2026|
+| 01	 | UP01: Introducción a los lenguajes de marcas.          | 10/09/2026| 29/09/2026|
+| 02	 | UP02: LM para documentación y administración de sistemas: Markdown Y YAML | 01/10/2026| 15/10/2026|
+| 03	 | UP03: Fundamentos de XML		                         | 20/10/2026| 29/10/2026|
+| 04	 | UP04: 4.1: Validación XML con DTD                      | 03/11/2026| 23/11/2026|
+| 05   | UP05: 4.2: Validación XML con XSD - XML Schema         | 26/11/2026 | 19/01/2027|
+| 06   | UP06: Recorrer un XML - XPath                          | 21/01/2027| 28/01/2027|
+| 07   | UP07: Transformar un XML con XSLT                      | 02/02/2027| 11/02/2027|
+| 08   | UP08: Consultar un XML con XQUERY                      | 16/02/2027| 25/02/2027|
+| 09	 | UP09: LM en entornos web (HTML5/XHTML) + CSS3 - Hojas de Estilo en Cascada | 02/02/2027| 15/04/2027|
+| 10	 | UP10: Sistemas empresariales de gestión de información - ODOO| 20/04/2027| 29/04/2027|
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
