@@ -6,11 +6,11 @@
 
 | Código | Nombre | Duración (centro) | DUAL | Temporalización | RA’s Asoc. |
 |----|----|----|----|----|----|
-| UP1 | HTML. CSS. CMS | 30 | 12 | 08/09/2025 – 28/11/2025 | RA01 |
-| UP2 | LMS | 12 | 3 | 04/12/2025 – 16/01/2026 | RA02 |
-| UP3 | ALMACENAMIENTO EN LA NUBE. NextCloud | 10 | 8 | 23/01/2023 – 06/02/2026 | RA03 |
-| UP4 | APLICACIONES OFIMÁTICAS EN LA NUBE | 2 | 10 | 06/02/2026 – 12/02/2026 | RA04 |
-| UP5 | APLICACIONES WEB DE ESCRITORIO | 3 | 10 | 12/02/2026 – 13/02/2026 | RA05 |
+| UP1 | HTML. CSS. CMS | 30 | 12 | 11/09/2026 – 18/11/2026 | RA01 |
+| UP2 | LMS | 11 | 3 | 20/11/2026 – 11/12/2027 | RA02 |
+| UP3 | ALMACENAMIENTO EN LA NUBE. NextCloud | 10 | 8 | 16/12/2026 – 20/01/2027 | RA03 |
+| UP4 | APLICACIONES OFIMÁTICAS EN LA NUBE | 2 | 10 | 22/01/2027 – 03/02/2027 | RA04 |
+| UP5 | APLICACIONES WEB DE ESCRITORIO | 3 | 10 | 05/02/2027 – 10/02/2027 | RA05 |
 |  |  | 57 | 43 | 100 |  |
 
 ### UP1 – HTML.CSS. CMS
@@ -21,7 +21,7 @@
 
 \- Duración: 30 horas
 
-\- Temporalización: 08/09/2025 – 28/11/2025
+\- Temporalización: 11/09/2026 – 18/11/2026
 
 #### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -107,9 +107,9 @@ Adaptaciones
 
 \- Código: UP2: Sistema de Gestión de Aprendizaje LMS – Moodle\| Módulo: 0228
 
-\- Duración: 12 horas
+\- Duración: 11 horas
 
-\- Temporalización: 04/12/2025 – 16/01/2026
+\- Temporalización: 20/11/2026 – 11/12/2027
 
 #### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -187,7 +187,7 @@ Adaptaciones
 
 \- Duración: 10 horas
 
-\- Temporalización: 23/01/2023 – 06/02/2026
+\- Temporalización: 16/12/2026 – 20/01/2027
 
 #### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -263,7 +263,7 @@ Adaptaciones
 
 \- Duración: 2 horas
 
-\- Temporalización: 06/02/2026 – 12/02/2026
+\- Temporalización: 22/01/2027 – 03/02/2027
 
 #### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -333,7 +333,7 @@ Adaptaciones
 
 \- Duración: 3 horas
 
-\- Temporalización: 12/02/2026 – 13/02/2026
+\- Temporalización: 05/02/2027 – 10/02/2027
 
 #### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
