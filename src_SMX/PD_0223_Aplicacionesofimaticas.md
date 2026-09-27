@@ -36,7 +36,7 @@ Los **Resultados de Aprendizaje** relativos al módulo de Aplicaciones ofimátic
 | RA09 |  Aplica técnicas de soporte en el uso de aplicaciones, identificando y resolviendo incidencias. |
 |<img width=200/>|<img width=500/>|
 
-
+Se agrega un RA transversal (RA0) a los RA's 1, 4, 5 y 9, sobre "Iniciación al pensamiento computacional".
 
 ## Objetivos Generales 
 
@@ -88,15 +88,16 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                                               | Inicio    | Fin       |
 |--------|------------------------------------------------------|-----------|-----------|
-| 01     | UP01: Procesadores de texto                          | 09/09/2025| 22/10/2025|
-| 02     | UP02: Presentaciones digitales                       | 24/10/2025| 31/10/2025|
-| 03     | UP03: Edición de imagen digital                      | 04/11/2025| 21/11/2025|
-| 04     | UP04: Instalación de aplicaciones ofimáticas         | 25/11/2025| 12/12/2025|
-| 05     | UP05: Soporte al usuario de aplicaciones ofimáticas  | 16/12/2025| 19/12/2025|
-| 06     | UP06: Hojas de cálculo                               | 07/01/2026| 17/02/2026|
-| 07     | UP07: Gestión de correo y agenda electrónica         | 18/02/2026| 25/02/2026|
-| 08     | UP08: Edición de video digital                       | 27/02/2026| 06/03/2026|
-| 09     | UP09: Bases de datos ofimáticas                      | 10/03/2026| 08/05/2026|
+| 00     |	UP00 Iniciación al pensamiento computacional.        | 09/09/2026| 02/10/2026|
+| 01     |	UP01	Hojas de cálculo	                               | 05/10/2026| 17/11/2026|
+| 02     |	UP02	Presentaciones digitales	                       | 18/11/2026| 25/11/2026|
+| 03     |	UP03	Edición de imagen digital                       |	26/11/2026|	01/12/2026|
+| 04     |	UP04	Bases de datos ofimáticas                       |	04/12/2026|	10/02/2027|
+| 05     |	UP05	Gestión de correo y agenda electrónica          |	11/02/2027|	09/03/2027|
+| 06     |	UP06	Procesadores de texto                           |	12/03/2027|	11/05/2027|
+| 07     |	UP07	Edición de vídeo digital	                       | 12/05/2027|	14/05/2027|
+| 08     |	UP08	Instalación de aplicaciones ofimáticas          |	17/05/2027|	02/06/2027|
+| 09     |	UP09	Soporte al usuario de aplicaciones ofimáticas   | 03/06/2027|	04/06/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -182,7 +183,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-Nota final = 0,1(RA1+RA5) + 0,2(RA2+RA3+RA4) + 0,05*(RA6+RA7+RA8+RA9)
+Nota final = 4%\*RA0 +	20%\*RA1 +	7%\*RA2 +	3%\*RA3 +	20%\*RA4 +	7%\*RA5 +	20%\*RA6 +	2%\*RA7 +	7%\*RA8 +	10%\*RA9
 
 En cada unidad de programación se especificará cómo se evaluarán los Resultados de Aprendizaje correspondientes. De forma general, la calificación se distribuirá en un 20% para la parte práctica y un 80% para una prueba objetiva.
 
