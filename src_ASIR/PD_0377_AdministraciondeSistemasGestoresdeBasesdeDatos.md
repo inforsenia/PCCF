@@ -203,13 +203,10 @@ La nota media del módulo será la obtenida del cálculo de los porcentajes de c
 
 ### Reglas sobre el uso de la IA
 
-❌ No permitido: generar directamente el código completo del ejercicio.
-
-⚠️ Permitido: pedir explicación de conceptos.
-
-⚠️ Permitido: depurar errores si el código es propio.
-
-✅ Obligatorio: declarar si se ha usado IA.
+- **No permitido**: generar directamente el código completo del ejercicio.
+- **Permitido**: pedir explicación de conceptos.
+- **Permitido**: Permitido: depurar errores si el código es propio.
+- **Obligatorio**: declarar si se ha usado IA.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
