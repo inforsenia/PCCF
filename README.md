@@ -161,3 +161,5 @@ sudo apt install python3-jinja2 \
          python3-pandas
 
 ```
+
+Existen algunos cambios en el Makefile para poder probarlo en entornos de prueba.
