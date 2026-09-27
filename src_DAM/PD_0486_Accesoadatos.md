@@ -80,11 +80,12 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                                  | Inicio    | Fin       |
 |--------|-----------------------------------------|-----------|-----------|
-| 01     | UP01: Acceso a ficheros                 | 10/09/2025| 19/09/2025|
-| 02     | UP02: Acceso a BD relacionales          | 19/09/2025| 15/10/2025|
-| 03     | UP03: Mapeo de objetos relacional ORM   | 17/10/2025| 12/11/2025|
-| 05     | UP05: Consumir servicios web (API's)    | 12/11/2025| 26/11/2026|
-| 06     | UP06: Acceso a BD NoSQL                 | 26/11/2025| 30/01/2026|
+| 01     | UP01: Acceso a ficheros                 | 11/09/2026| 25/09/2026| <!-- Horas:10  RA1: -->
+| 02     | UP02: Acceso a BD relacionales          | 28/09/2026| 19/10/2026| <!-- Horas:10  RA2: -->
+| 03     | UP03: Mapeo objeto-relacional ORM       | 23/10/2026| 09/11/2026| <!-- Horas:12  RA3: -->
+| 04     | UP04: Consumir servicios web (API's)    | 12/11/2026| 23/11/2026| <!-- Horas:8  RA4: -->
+| 05     | UP05: Acceso a BD NoSQL                 | 27/11/2026| 29/01/2027| <!-- Horas:28  RA5: -->
+<!--| 06     | UP06: Desarrollo de componentes         | 19/01/2027| 29/01/2027| <!-- Horas:8  RA6: -->
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -119,7 +120,6 @@ Se parte del reconocimiento de la diversidad como un valor y una oportunidad par
 Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
 ## Evaluación del aprendizaje. 
-
 
 
 ### Principios y objeto de la evaluación 
@@ -172,7 +172,7 @@ La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General
 
 Nota final = 0,1*RA1 + 0,2*RA2 + 0,2*RA3 + 0,1*RA4 + 0,2*RA5 + 0,2*RA6 
 
-En cada unidad de programación se especificará cómo se evaluarán los Resultados de Aprendizaje correspondientes. En la convocatoria ordinaria, si el alumno ha mantiene el proceso de evaluación continua, se mantendrá este sistema de calificación. En caso contrario, así como en la evaluación extraordinaria, el 100% de cada RA se calificará a través de una prueba objetiva.
+Cada uno de los Resultados de Aprendizaje se evaluaran mediante diferentes pruebas objetivas que eliminarán material de cara a una posible prueba final. En la convocatoria ordinaria, si el alumno mantiene el proceso de evaluación continua, se mantendrá la calificación de todos los Resultados de Aprendizaje superados. En caso contrario, así como en la evaluación extraordinaria, el 100% de cada RA se calificará a través de una prueba objetiva. Tanto en la prueba objetiva de la evaluación ordinaria como en la de la evaluación extraordinaria se guardará la nota de aquellos RA superados mediante la evaluación continua.
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -233,12 +233,12 @@ recuperación
 - **Alumnos de segundo curso con módulos no superados de primero**: Se diseñará para que el alumnado lo pueda realizar simultáneamente con los módulos de segundo **sin garantizarse su asistencia a clase**. Dispondrá de **convocatoria ordinaria y extraordinaria**. 
 
 
-
 ### Convocatoria Ordinaria
 
 1. Todo el alumnado tiene derecho a una Convocatoria Ordinaria, en el caso de que el alumnado haya superado todos los RAs 
    durante la *evaluación continua*, se establecerá su calificación como la de la Convocatoria Ordinaria.
-2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya dichos RAs con el objetivo 
+2. Si hay RAs **no superados** durante la *evaluación continua*, el alumnado tiene derecho a una prueba que incluya 
+dichos RAs con el objetivo 
    de comprobar que ha adquirido los Resultados de Aprendizaje descritos en el Módulo. Esta prueba se ajustará
    al calendario propuesto por el centro.
 
@@ -257,4 +257,3 @@ La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en es
 
 ## Esquema General de Acceso a datos
 
-NOTA : Aquí se generará de manera automática la tabla a partir del Excel compartido con los RA, CE y Horas Asignadas. 

@@ -67,16 +67,16 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a la Programación y Java  | 08/09/2025| 29/09/2025|
-| 02     | UP02: Pensamiento computacional     | 30/09/2025| 07/10/2025|
-| 03     | UP03: Estructuras de programación   | 13/10/2025| 13/11/2025|
-| 04     | UP04: Programación modular   | 17/11/2025| 09/12/2025|
-| 05     | UP05: Estructuras de datos   | 11/12/2025| 22/12/2025|
-| 06     | UP06: Programación Orientada a Objetos     | 07/01/2026| 22/01/2026|
-| 07     | UP07: Uso avanzado de clases   | 26/01/2026| 19/02/2026|
-| 08     | UP08: Gestión de Ficheros     | 23/02/2026| 05/03/2026|
-| 09     | UP09: Acceso a datos   | 09/03/2026| 30/03/2026|
-| 10     | UP10: Interfaz Gráfica de Usuario   | 14/04/2026| 15/05/2026|
+| 01     | UP01: Introducción a la Programación y Java  | 10/09/2026| 30/09/2026| <!-- Horas:24  RA1: RA2: -->
+| 02     | UP02: Pensamiento computacional     | 01/10/2026| 08/10/2026| <!-- Horas:11 RA1: -->
+| 03     | UP03: Estructuras de programación   | 13/10/2026| 29/10/2026| <!-- Horas:24 RA3: RA4: -->
+| 04     | UP04: Programación modular   | 03/11/2026| 19/11/2026| <!-- Horas:24 RA2: -->
+| 05     | UP05: Estructuras de datos   | 24/11/2026| 17/12/2026| <!-- Horas:29 RA6: -->
+| 06     | UP06: Programación Orientada a Objetos     | 22/12/2027| 22/01/2027| <!-- Horas:24 RA7: -->
+| 07     | UP07: Uso avanzado de clases   | 26/01/2027| 18/02/2027| <!-- Horas:32 RA7: -->
+| 08     | UP08: Gestión de Ficheros     | 23/02/2027| 04/03/2027| <!-- Horas:16 RA5: -->
+| 09     | UP09: Acceso a datos   | 09/03/2027| 08/04/2027| <!-- Horas:21 RA8: RA9:  -->
+| 10     | UP10: Interfaz Gráfica de Usuario   | 13/04/2027| 13/05/2027| <!-- Horas:40 RA5: -->
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
@@ -246,7 +246,7 @@ Se planifican las siguientes actividades complementarias y extraescolares:
 - Participación en la Semana del Código
 - Recomendar lecturas científicas o ficticias, al igual que películas o documentales, con el fin de motivar al alumno.
 - Diferentes actividades que podrían surgir a lo largo de curso: visitas a centros de programación, empresas del sector, ponencias y congresos de Programación, etc.
-- Asistencia a las jornadas *Inf0rSenia 2026*.
+- Asistencia a las jornadas *Inf0rSenia 2027*.
 
 
 ## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 

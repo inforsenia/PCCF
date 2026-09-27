@@ -34,6 +34,16 @@ Los **Resultados de Aprendizaje** relativos al módulo de Despliegue de aplicaci
 | RA06 | Elabora la documentación de la aplicación web evaluando y seleccionando herramientas de generación de documentación, control de versiones y de integración continua. |
 |<img width=200/>|<img width=500/>|
 
+## Secuenciación de las Unidades de Programación. 
+| Número | Título                    | Inicio    | Fin       |
+|--------|---------------------------|-----------|-----------|
+| 01     | UP01: Arquitecturas web y servidores web | 14/09/2026| 28/09/2026| <!-- Horas:9  RA1: RA2: -->
+| 02     | UP02: Seguridad en servidores web | 05/10/2026 | 02/11/2026 | <!-- Horas:12  RA2: -->
+| 03     | UP03: Contenedores y servidores de aplicaciones    | 09/11/2026| 14/12/2026| <!-- Horas:15  RA3: -->
+| 04     | UP04: Servicios de red y transferencia de archivos | 21/12/2026| 18/01/2027| <!-- Horas:9   RA4: RA5: -->
+| 05     | UP05: Documentación e Integración continua         | 25/01/2027| 01/02/2027| <!-- Horas:6  RA6: --> 
+
+
 
 
 ## Objetivos Generales 
@@ -70,18 +80,6 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 |<img width=100/>|<img width=500/>|
 
 
-
-## Secuenciación de las Unidades de Programación. 
-
-
-
-| Número | Título                                        |   Trimestre  |  RA Asociados  |
-|--------|-----------------------------------------------|--------------|-----------------
-| 01     | UP01: Arquitecturas web                       |       1      |    1, 4, 5     |
-| 02     | UP02: Sistemas avanzados de virtualización    |       1      |       1        |
-| 03     | UP03: Gestores de contenidos                  |       1      |       2        |
-| 04     | UP04: Servidores de aplicaciones              |       2      |       3        |
-
 ## Metodología del proceso de enseñanza-aprendizaje
 
 La metodología didáctica adoptada en esta programación se encuentra alineada con los principios y directrices establecidos en el Proyecto Curricular del Ciclo Formativo (PCCF), elaborado de forma colaborativa por el equipo docente del ciclo. Este documento marco recoge los enfoques metodológicos comunes que guían el proceso de enseñanza-aprendizaje en todos los módulos del ciclo, promoviendo una formación integral, activa y contextualizada del alumnado.
@@ -115,7 +113,6 @@ Se parte del reconocimiento de la diversidad como un valor y una oportunidad par
 Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
 ## Evaluación del aprendizaje. 
-
 
 
 ### Principios y objeto de la evaluación 
@@ -166,13 +163,7 @@ El alumnado podrá obtener las siguientes calificaciones:
 
 La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
 
-- UP1 y UP2: evaluación conjunta mediante prueba específica (examen escrito) , que supondrá el 25% de la calificación del curso, y selección de actividades de aula, que supondrá un 5% de la calificación del curso. La ponderación de los RA será RA1 25%, RA4 2,5% y RA5 2,5%.
-
-- UP3: 20% calificación del curso, evaluada mediante proyecto de aula (situación de aprendizaje).
-
-- UP4: 40% calificación del curso, evaluada mediante proyecto de aula (situación de aprendizaje, 25%) y selección de actividades (15%).
-
-El RA6 se dualizará totalmente, y su calificación será el 10% de la calificación del curso (esto es, 1 punto). Se documentará el trabajo desarrollado, tanto en el propio código como, en su caso, en un informe del que se hará entrega o bien se expondrá.
+- La calificación de cada RA se calculará otorgando una valor de 40% a las notas de los trabajos propuestos en el aula y entregados mediante la plataforma Aules y un valor del 60% de la nota de las pruebas objetivas que se realizará durante el curso.
 
 La calificación del boletín de notas del trimestre 1 es orientativa y se obtendrá de las calificaciones de las UP1, UP2 y UP3 (que dado en conjunto suponen el 50% de la calificación del curso, a los meros efectos del boletín su valor se duplicará). La calificación se redondeará al entero inferior a los meros efectos del boletín, sin perjuicio de que los decimales se conserven para el cálculo de la calificación final del curso.
 
@@ -180,7 +171,9 @@ La calificación de las actividades sufrirá una penalización de 0,5 puntos por
 
 La actitud, reflejada entre otros aspectos en el interés mostrado, la participación en clase y la asistencia tanto al módulo como a otras actividades realizadas en el centro, aunque sean en horario diferente al de clase, servirá para redondear la calificación final del curso.
 
+La nota final se calculara de acuerdo a la fórmula que pondera cada RA:
 
+Nota final = 0,1·RA1 + 0,2·RA2 + 0,2·RA3 + 0,2·RA4 + 0,2·RA5 + 0,1·RA6
 
 ### Evaluación por RA y diseño de Unidades de Programación (UP) 
 
@@ -224,8 +217,6 @@ Esta presentación se puede simultanear, en su caso, con la presentación del Pr
 Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
 
 
-La calificación del RA dualizado (RA6) se realizará mediante entrega de memoria y/o exposición del trabajo efectuado en la empresa en relación al mismo.
-
 ### Recuperación: 
 
 Para el alumnado que **no haya superado algún módulo o RA** se establecerá un **programa de recuperación individual** que se diseñará de forma diferenciada según periodos: 
@@ -246,8 +237,7 @@ recuperación
 
 ### Convocatoria Extraordinaria
 
-La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
-descrito en el Proyecto Curricular de Ciclo Formativo.
+Si tras la evaluación ordinaria el alumnado no ha superado todos los RAs, derecho a realizar una prueba que incluya todos los RAs no superados.
 
 ## Actividades complementarias y extraescolares. 
 
