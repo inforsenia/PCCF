@@ -8,13 +8,13 @@
 
 | Código | Nombre | Duración (centro) | DUAL | Temporalización | RA’s Asoc. |
 |----|----|----|----|----|----|
-| UP1 | PROGRAMACIÓN ESTRUCTURADA – PSEINT | 5 | 0 | 08/09/2025 – 15/09/2025 | RA1 |
-| UP2 | PROGRAMACIÓN ESTRUCTURADA - PYTHON | 5 | 5 | 15/09/2025 – 22/09/2025 | RA1 |
-| UP3 | MÓDULOS. PAQUETES. ESTRUCTURAS DE CONTROL | 15 | 5 | 22/09/2025 – 03/11/2025 | RA2 y RA3 |
-| UP4 | FUNCIONES. ERRORES. EXCEPCIONES | 10 | 10 | 10/11/2025 – 24/11/2025 | RA3 |
-| UP5 | TIPOS DE DATOS COMPLEJOS. LISTAS. DICCIONARIOS | 10 | 5 | 01/12/2025 – 12/01/2026 | RA6 |
-| UP6 | MANEJO DE FICHEROS | 5 | 10 | 19/01/2026 – 26/01/2026 | RA5 |
-| UP7 | POO Y MÓDULOS | 7 | 8 | 02/02/2026 – 16/02/2026 | RA4 y RA6 |
+| UP1 | PROGRAMACIÓN ESTRUCTURADA – PSEINT | 5 | 0 | 10/09/2026 – 17/09/2026 | RA1 |
+| UP2 | PROGRAMACIÓN ESTRUCTURADA - PYTHON | 5 | 5 | 21/09/2026 – 01/10/2026 | RA1 |
+| UP3 | MÓDULOS. PAQUETES. ESTRUCTURAS DE CONTROL | 15 | 5 | 01/10/2026 – 05/11/2026 | RA2 y RA3 |
+| UP4 | FUNCIONES. ERRORES. EXCEPCIONES | 10 | 10 | 09/11/2026 – 30/11/2026 | RA3 |
+| UP5 | TIPOS DE DATOS COMPLEJOS. LISTAS. DICCIONARIOS | 10 | 5 | 03/12/2026 – 07/01/2027 | RA6 |
+| UP6 | MANEJO DE FICHEROS | 5 | 10 | 11/01/2027 – 20/01/2027 | RA5 |
+| UP7 | POO Y MÓDULOS | 7 | 8 | 25/01/2027 – 08/02/2027 | RA4 y RA6 |
 |  |  | 57 | 43 | 100 |  |
 
 ### UP1 – PROGRAMACIÓN ESTRUCTURADA
@@ -25,7 +25,7 @@
 
 \- Duración: 5 horas
 
-\- Temporalización: 08/09/2025 – 15/09/2025
+\- Temporalización: 10/09/2026 – 17/09/2026
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -115,7 +115,7 @@ Pruebas objetivas (test) (80%) sobre los conceptos explicados y aplicados en cla
 
 \- Duración: 5 horas
 
-\- Temporalización: 15/09/2025 – 22/09/2025
+\- Temporalización: 21/09/2026 – 01/10/2026
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -197,7 +197,7 @@ Adaptaciones
 
 \- Duración: 15 horas
 
-\- Temporalización: 22/09/2025 – 03/11/2025
+\- Temporalización: 01/10/2026 – 05/11/2026
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -295,7 +295,7 @@ Adaptaciones
 
 \- Duración: 10 horas
 
-\- Temporalización: 10/11/2025 – 24/11/2025
+\- Temporalización: 09/11/2026 – 30/11/2026
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -367,7 +367,7 @@ Adaptaciones
 
 \- Duración: 10 horas
 
-\- Temporalización: 01/12/2025 – 12/01/2026
+\- Temporalización: 03/12/2026 – 07/01/2027
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -433,7 +433,7 @@ Adaptaciones
 
 \- Duración: 5 horas
 
-\- Temporalización: 19/01/2026 – 26/01/2026
+\- Temporalización: 11/01/2027 – 20/01/2027
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
@@ -503,7 +503,7 @@ Adaptaciones
 
 \- Duración: 7 horas
 
-\- Temporalización: 02/02/2026 – 16/02/2026
+\- Temporalización: 25/01/2027 – 08/02/2027
 
 #### 2. Fundamentación ([DECRETO 114/2025, de 29 de julio, del Consell](https://dogv.gva.es/va/eli/es-vc/d/2025/07/29/114/dof/vci/html))
 
