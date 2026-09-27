@@ -1,5 +1,3 @@
-\newpage
-
 # Programación didáctica: Módulo Aplicaciones web
 
 ## Datos identificativos y contextualización del módulo. 
