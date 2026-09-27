@@ -190,6 +190,25 @@ proyecto-asir: files proyecto-base
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh ASIR
 
+	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/UPS_MODULO ${RESET}"
+	./tools/ups-to-pdfs.sh ASIR ASGBD
+	./tools/ups-to-pdfs.sh ASIR ASO
+	./tools/ups-to-pdfs.sh ASIR DASP
+	./tools/ups-to-pdfs.sh ASIR FH
+	./tools/ups-to-pdfs.sh ASIR IPEI
+	./tools/ups-to-pdfs.sh ASIR IPEII
+	./tools/ups-to-pdfs.sh ASIR IP
+	./tools/ups-to-pdfs.sh ASIR OPS190
+	./tools/ups-to-pdfs.sh ASIR ISO
+	./tools/ups-to-pdfs.sh ASIR SASP
+	./tools/ups-to-pdfs.sh ASIR LMSI
+	./tools/ups-to-pdfs.sh ASIR PAR
+	./tools/ups-to-pdfs.sh ASIR SAD
+	./tools/ups-to-pdfs.sh ASIR SRI
+
+	@echo " ${LIGHTBLUE} Programaciones Generadas para ASIR ${RESET}"
+
+
 proyecto-daw: files proyecto-base
 
 	@echo " [ ${BLUE} Proyecto Curricular : DAW ${RESET}]"
@@ -207,6 +226,26 @@ proyecto-daw: files proyecto-base
 	@cd temp/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Programaciones_SENIA_DAW.pdf ./PD_*.md
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh DAW
+
+
+	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/UPS_MODULO ${RESET}"
+	./tools/ups-to-pdfs.sh DAW BD
+	./tools/ups-to-pdfs.sh DAW DAW
+	./tools/ups-to-pdfs.sh DAW DASP
+	./tools/ups-to-pdfs.sh DAW DIW
+	./tools/ups-to-pdfs.sh DAW IPEI
+	./tools/ups-to-pdfs.sh DAW IPEII
+	./tools/ups-to-pdfs.sh DAW IP
+	./tools/ups-to-pdfs.sh DAW OPS190
+	./tools/ups-to-pdfs.sh DAW DWEC
+	./tools/ups-to-pdfs.sh DAW DWES
+	./tools/ups-to-pdfs.sh DAW LMSGI
+	./tools/ups-to-pdfs.sh DAW ED
+	./tools/ups-to-pdfs.sh DAW PR
+	./tools/ups-to-pdfs.sh DAW SASP
+	./tools/ups-to-pdfs.sh DAW SI
+
+	@echo " ${LIGHTBLUE} Programaciones Generadas para DAW ${RESET}"
 
 proyecto-dam: files proyecto-base
 
@@ -233,3 +272,22 @@ proyecto-dam: files proyecto-base
 	@echo " ${LIGHTBLUE} Ahora recorro los diferentes modulos ${RESET}"
 	./tools/shell-progs-didacticas-standalone.sh DAM
 	@echo " ${LIGHTBLUE} [ Proyecto DAM Completado ] ${RESET}"
+
+	@echo " ${LIGHTBLUE} Generando $(PDF_PATH)/UPS_MODULO ${RESET}"
+	./tools/ups-to-pdfs.sh DAM ADA
+	./tools/ups-to-pdfs.sh DAM BD
+	./tools/ups-to-pdfs.sh DAM DASP
+	./tools/ups-to-pdfs.sh DAM DI
+	./tools/ups-to-pdfs.sh DAM ED
+	./tools/ups-to-pdfs.sh DAM IP
+	./tools/ups-to-pdfs.sh DAM IPEI
+	./tools/ups-to-pdfs.sh DAM IPEII
+	./tools/ups-to-pdfs.sh DAM LMSGI
+	./tools/ups-to-pdfs.sh DAM OPS190
+	./tools/ups-to-pdfs.sh DAM PMDM
+	./tools/ups-to-pdfs.sh DAM PR
+	./tools/ups-to-pdfs.sh DAM SASP
+	./tools/ups-to-pdfs.sh DAM SGE
+	./tools/ups-to-pdfs.sh DAM SI
+
+	@echo " ${LIGHTBLUE} Programaciones Generadas para DAM ${RESET}"
