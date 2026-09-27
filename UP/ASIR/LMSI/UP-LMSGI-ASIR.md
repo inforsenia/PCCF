@@ -6,7 +6,7 @@
 
 | Código | Nombre | Duración (centro) | Dual | Temporalización | RA’s Asoc. |
 |----|----|----|----|----|----|
-| UP01 | CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS | 9 | 0 | 10/09/2026 - 29/09/2025 | RA1 |
+| UP01 | CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS | 9 | 0 | 10/09/2026 - 29/09/2026 | RA1 |
 | UP02 | LENGUAJES DE MARCAS: EN EDICIÓN DE TEXTOS (MARKDOWN) Y EN LA ADMINISTRACIÓN DE SISTEMAS (YAML) | 8 | 0 | 01/10/2026 - 15/10/2026 | RA1 |
 | UP03 | XML | 6 | 3 | 20/10/2026 - 29/10/2026 | RA1 |
 | UP04 | 4.1 - VALIDACIÓN XML: DTD | 10 | 0 | 03/11/2026 - 23/11/2026 | RA4 |
@@ -14,8 +14,8 @@
 | UP06 | RECORRER UN XML - XPath | 4 | 0 | 21/01/2027 - 28/01/2027 | RA5 |
 | UP07 | TRANSFORMAR UN XML - XSLT | 6 | 0 | 02/02/2027 - 11/02/2027 | RA5 |
 | UP08 | CONSULTAR UN XML - XQUERY | 6 | 0 | 16/02/2027 - 25/02/2027 | RA6 |
-| UP09 | HTML - Hiper Text Markup Language + CSS - Hojas de Estilo en Cascada | 20 | 5 | 02/02/2026 - 15/04/2027 | RA2 |
-| UP10 | SISTEMAS DE GESTIÓN DE LA INFORMACIÓN | 6 | 0 | 20/04/2026 - 29/04/2026 | RA7 |
+| UP09 | HTML - Hiper Text Markup Language + CSS - Hojas de Estilo en Cascada | 20 | 5 | 02/02/2027 - 15/04/2027 | RA2 |
+| UP10 | SISTEMAS DE GESTIÓN DE LA INFORMACIÓN | 6 | 0 | 20/04/2027 - 29/04/2027 | RA7 |
 |  |  | 92 | 8 | 100 |  |
 
 ### UP01 – CARACTERÍSTICAS DE LOS LENGUAJES DE MARCAS
@@ -26,7 +26,7 @@
 
 \- Duración: 9
 
-\- Temporalización: 16/09/2025 - 30/09/2025
+\- Temporalización: 10/09/2026 - 29/09/2026
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -94,7 +94,7 @@ Adaptaciones
 
 \- Duración: 8
 
-\- Temporalización: 07/10/2025 - 21/10/2025
+\- Temporalización:  01/10/2026 - 15/10/2026
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -158,7 +158,7 @@ Adaptaciones
 
 \- Duración: 6
 
-\- Temporalización: 17/12/2025 - 30/01/2026
+\- Temporalización: 20/10/2026 - 29/10/2026
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -226,7 +226,7 @@ Adaptaciones
 
 \- Duración: 11
 
-\- Temporalización: 28/10/2025 - 18/11/2025
+\- Temporalización: 03/11/2026 - 23/11/2026
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -304,7 +304,7 @@ Adaptaciones
 
 \- Duración: 15
 
-\- Temporalización: 18/11/2025 - 09/12/2025
+\- Temporalización: 26/11/2026 - 19/01/2027
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -384,7 +384,7 @@ Adaptaciones
 
 \- Duración: 4
 
-\- Temporalización: 09/12/2025 - 16/12/2025
+\- Temporalización: 21/01/2027 - 28/01/2027
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -454,7 +454,7 @@ Adaptaciones
 
 \- Duración: 6
 
-\- Temporalización: 13/01/2026 - 20/01/2026
+\- Temporalización: 02/02/2027 - 11/02/2027
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -524,7 +524,7 @@ Adaptaciones
 
 \- Duración: 3
 
-\- Temporalización: 27/01/2026 - 03/02/2026
+\- Temporalización: 16/02/2027 - 25/02/2027
 
 ### 2. Fundamentación
 
@@ -578,7 +578,7 @@ Adaptaciones
 
 \- Duración: 24
 
-\- Temporalización: 10/02/2026 - 24/03/2026
+\- Temporalización: 02/02/2027 - 15/04/2027
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
@@ -672,7 +672,7 @@ Adaptaciones
 
 \- Duración: 6
 
-\- Temporalización: 14/04/2026 - 21/04/2026
+\- Temporalización: 20/04/2027 - 29/04/2027
 
 ### 2. Fundamentación ([RD 1629/2009, de 30 de octubre](https://www.boe.es/eli/es/rd/2009/10/30/1629))
 
