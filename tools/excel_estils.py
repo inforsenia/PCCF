@@ -22,9 +22,8 @@ COLOR_CLAR = "DCE6F1"      # files "TOTS" i etiquetes OBJECTIUS/COMPETENCIES
 COLOR_VORA = "8EA9C1"
 
 FILA_CAPCALERA = 8         # fila de "RESULTAT D'APRENENTATGE", "% RA", ...
-COL_INI, COL_FI = 2, 10    # B..J
+COL_INI = 2                # B
 COL_COMP = "D"
-COLS_NUMERIQUES = range(6, 10)  # HORES, % CE, REQUISIT FE, HORES DUAL (F..I)
 CENTRAT = Alignment(horizontal="center", vertical="center")
 AMPLE_COMP = 12
 COL_PERCENT_RA = "C"
@@ -37,7 +36,6 @@ AMPLE_NUMERIQUES = 5.25
 # l'amplària total fixa l'escala (i la mida del text) al PDF.
 COL_CE = "E"
 AMPLE_CE = 88
-COL_CONTINGUTS = "J"
 AMPLE_CONTINGUTS = 23      # continguts resumits
 ALT_CAPCALERA = 30         # punts per fila (x2); el text girat fa 2 línies
 GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap_text=True)
@@ -48,11 +46,13 @@ GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap
 #                        TOTAL H. DUAL (G:I) | TOTAL HORES (J)
 # Cada bloc: etiqueta a la primera fila i valor a la segona. Cap codi llig
 # estes cel·les; la taula comença a FILA_CAPCALERA (no canvia).
+#
+# Un mòdul que no dualitza (pccf_utils.dualitza) no té les columnes
+# REQUISIT FE (H) ni HORES DUAL (I): CONTINGUTS passa a H i la capçalera
+# queda MÒDUL (B:E) | CODI (F:G) | HORES (H) i OBJECTIUS (B:D) |
+# COMPETÈNCIES (E:F) | TOTAL HORES (G:H), sense TOTAL H. DUAL.
 FILES_BANDA1 = (1, 2)
 FILES_BANDA2 = (4, 5)
-BANDA1 = (("MÒDUL", 2, 5, "nom"), ("CODI", 6, 9, "codi"), ("HORES", 10, 10, "hores"))
-BANDA2 = (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 6, "competencies"),
-          ("TOTAL H. DUAL", 7, 9, "total_dual"), ("TOTAL HORES", 10, 10, "total"))
 # Les fórmules sumen les columnes HORES (F) i HORES DUAL (I); /2 perquè cada
 # RA també té la fila "TOTS" amb la suma dels seus CE.
 FORMULA_TOTAL = "=SUM(F8:F200)/2"
@@ -71,12 +71,38 @@ VORA = Border(left=_fina, right=_fina, top=_fina, bottom=_fina)
 VORA_INICI_RA = Border(left=_fina, right=_fina, top=_grossa, bottom=_fina)
 
 
+def disposicio(dual):
+    """Columnes de la fulla segons si el mòdul dualitza."""
+    if dual:
+        return {
+            "col_fi": 10,                        # J
+            "col_continguts": 10,
+            "numeriques": range(6, 10),          # HORES, % CE, REQUISIT FE, HORES DUAL (F..I)
+            "banda1": (("MÒDUL", 2, 5, "nom"), ("CODI", 6, 9, "codi"), ("HORES", 10, 10, "hores")),
+            "banda2": (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 6, "competencies"),
+                       ("TOTAL H. DUAL", 7, 9, "total_dual"), ("TOTAL HORES", 10, 10, "total")),
+        }
+    return {
+        "col_fi": 8,                             # H
+        "col_continguts": 8,
+        "numeriques": range(6, 8),               # HORES, % CE (F..G)
+        "banda1": (("MÒDUL", 2, 5, "nom"), ("CODI", 6, 7, "codi"), ("HORES", 8, 8, "hores")),
+        "banda2": (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 6, "competencies"),
+                   ("TOTAL HORES", 7, 8, "total")),
+    }
+
+
+def _lletra(col):
+    return chr(ord("A") + col - 1)
+
+
 def _font(bold=False, blanc=False, size=MIDA):
     return Font(name=LLETRA, size=size, bold=bold, color="FFFFFF" if blanc else "000000")
 
 
-def escriu_capcalera(ws, codi, modul):
+def escriu_capcalera(ws, codi, modul, dual=True):
     """Escriu (i fusiona) les dues bandes de la capçalera de la fulla."""
+    d = disposicio(dual)
     valors = {
         "nom": modul.nombre,
         "codi": codi,
@@ -86,7 +112,7 @@ def escriu_capcalera(ws, codi, modul):
         "total": FORMULA_TOTAL,
         "total_dual": FORMULA_TOTAL_DUAL,
     }
-    for (fila_etiqueta, fila_valor), blocs in ((FILES_BANDA1, BANDA1), (FILES_BANDA2, BANDA2)):
+    for (fila_etiqueta, fila_valor), blocs in ((FILES_BANDA1, d["banda1"]), (FILES_BANDA2, d["banda2"])):
         for etiqueta, c0, c1, clau in blocs:
             if c1 > c0:
                 ws.merge_cells(start_row=fila_etiqueta, start_column=c0, end_row=fila_etiqueta, end_column=c1)
@@ -105,27 +131,32 @@ def _estil_bloc(ws, fila, c0, c1, fill, font, alignment, border=None):
             c.border = border
 
 
-def aplica_estils(ws):
+def aplica_estils(ws, dual=True):
+    d = disposicio(dual)
+    col_fi = d["col_fi"]
+    numeriques = d["numeriques"]
     ultima = ws.max_row
 
     # Fons blanc i lletra uniforme a tota la taula
-    for row in ws.iter_rows(min_row=1, max_row=ultima, min_col=COL_INI, max_col=COL_FI):
+    for row in ws.iter_rows(min_row=1, max_row=ultima, min_col=COL_INI, max_col=col_fi):
         for c in row:
             c.fill = BLANC
             c.font = _font()
 
     # Banda 1: identificació del mòdul (etiqueta menuda, valor gran)
     fe, fv = FILES_BANDA1
-    for _etiqueta, c0, c1, clau in BANDA1:
+    for _etiqueta, c0, c1, clau in d["banda1"]:
         al = ESQUERRA if clau == "nom" else CENTRAT  # etiqueta alineada amb el seu valor
         _estil_bloc(ws, fe, c0, c1, MIG, _font(bold=True, blanc=True, size=MIDA_ETIQUETA_BANDA1), al)
+        if clau == "codi":  # els codis d'optativa (MOPACOMDIS...) no caben en F:G dels mòduls no duals
+            al = Alignment(horizontal="center", vertical="center", shrink_to_fit=True)
         _estil_bloc(ws, fv, c0, c1, FOSC, _font(bold=True, blanc=True, size=MIDA_BANDA1), al)
     ws.row_dimensions[fe].height = 18
     ws.row_dimensions[fv].height = 36
 
     # Banda 2: objectius, competències i totals
     fe, fv = FILES_BANDA2
-    for _etiqueta, c0, c1, clau in BANDA2:
+    for _etiqueta, c0, c1, clau in d["banda2"]:
         al = CENTRAT if clau.startswith("total") else ESQUERRA
         _estil_bloc(ws, fe, c0, c1, CLAR, Font(name=LLETRA, size=9, bold=True, color=COLOR_FOSC), al, VORA)
         if clau.startswith("total"):
@@ -140,12 +171,12 @@ def aplica_estils(ws):
 
     # Capçaleres de columna (files 8-9, fusionades)
     for r in (FILA_CAPCALERA, FILA_CAPCALERA + 1):
-        for col in range(COL_INI, COL_FI + 1):
+        for col in range(COL_INI, col_fi + 1):
             c = ws.cell(row=r, column=col)
             c.fill = MIG
             c.font = _font(bold=True, blanc=True, size=MIDA_CAPCALERA)
             c.border = VORA
-            if col in COLS_NUMERIQUES:
+            if col in numeriques:
                 c.alignment = GIRAT
         ws.row_dimensions[r].height = ALT_CAPCALERA
 
@@ -153,13 +184,13 @@ def aplica_estils(ws):
     # (fila "TOTS"), i ressalt de "TOTS" i de les etiquetes de competències
     for r in range(FILA_CAPCALERA + 2, ultima + 1):
         inici_ra = ws.cell(row=r, column=5).value == "TOTS"
-        for col in range(COL_INI, COL_FI + 1):
+        for col in range(COL_INI, col_fi + 1):
             c = ws.cell(row=r, column=col)
             c.border = VORA_INICI_RA if inici_ra else VORA
-            if inici_ra and 5 <= col < COL_FI:  # CONTINGUTS (J) queda en blanc: l'omple el docent
+            if inici_ra and 5 <= col < col_fi:  # CONTINGUTS (última columna) queda en blanc: l'omple el docent
                 c.fill = CLAR
                 c.font = _font(bold=True)
-        for col in COLS_NUMERIQUES:
+        for col in numeriques:
             ws.cell(row=r, column=col).alignment = CENTRAT
         comp = ws.cell(row=r, column=4)
         if comp.value in ("OBJECTIUS", "COMPETENCIES"):
@@ -172,6 +203,6 @@ def aplica_estils(ws):
     ws.column_dimensions[COL_COMP].width = AMPLE_COMP
     ws.column_dimensions[COL_PERCENT_RA].width = AMPLE_PERCENT_RA
     ws.column_dimensions[COL_CE].width = AMPLE_CE
-    ws.column_dimensions[COL_CONTINGUTS].width = AMPLE_CONTINGUTS
-    for col in COLS_NUMERIQUES:
-        ws.column_dimensions[chr(ord("A") + col - 1)].width = AMPLE_NUMERIQUES
+    ws.column_dimensions[_lletra(d["col_continguts"])].width = AMPLE_CONTINGUTS
+    for col in numeriques:
+        ws.column_dimensions[_lletra(col)].width = AMPLE_NUMERIQUES

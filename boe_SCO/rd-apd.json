@@ -983,6 +983,7 @@
                 }
             },
             "horas": "30",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []
@@ -1069,6 +1070,7 @@
                 }
             },
             "horas": "100",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "t",
@@ -1159,6 +1161,7 @@
                 }
             },
             "horas": "100",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "w",
@@ -1236,6 +1239,7 @@
                 }
             },
             "horas": "32",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -1328,6 +1332,7 @@
                 }
             },
             "horas": "32",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",

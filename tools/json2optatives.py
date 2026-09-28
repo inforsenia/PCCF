@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from excel_estils import aplica_estils, escriu_capcalera
-from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM, get_hoja_label
+from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM, dualitza, get_hoja_label
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
 
@@ -40,8 +40,6 @@ p_ra_col_l = 'B'
 p_ra_titulo_col = 2
 p_ra_titulo_row = 8
 p_ce_col_l = 'E'
-p_req_fe_col_l = 'H'
-p_contenidos_col_l = 'J'
 
 for codigo, modulo in data_box.items():
     print(f" [ Optatives Excel ] : {modulo.nombre}")
@@ -66,7 +64,8 @@ for codigo, modulo in data_box.items():
     p_contenidos_col = 10
     p_contenidos_row = 8
 
-    escriu_capcalera(ws, codigo, modulo)
+    dual = dualitza(modulo)  # sense dual, no hi ha REQUISIT FE ni HORES DUAL
+    escriu_capcalera(ws, codigo, modulo, dual)
 
     ws.merge_cells(start_row=p_ra_titulo_row, start_column=p_ra_titulo_col,
                    end_row=p_ra_titulo_row + 1, end_column=p_ra_titulo_col)
@@ -110,27 +109,30 @@ for codigo, modulo in data_box.items():
     ws.cell(column=p_ce_per_col, row=p_ce_per_row).value = "% CE"
     ws.cell(column=p_ce_per_col, row=p_ce_per_row).alignment = Alignment(horizontal='center', vertical='center')
 
-    p_req_fe_col = p_ce_per_col + 1
-    p_req_fe_row = p_h_row
-    ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col,
-                   end_row=p_req_fe_row + 1, end_column=p_req_fe_col)
-    ws.cell(column=p_req_fe_col, row=p_req_fe_row).value="REQUISIT\nFE"
-    ws.cell(column=p_req_fe_col, row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+    if dual:
+        p_req_fe_col = p_ce_per_col + 1
+        p_req_fe_row = p_h_row
+        ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col,
+                       end_row=p_req_fe_row + 1, end_column=p_req_fe_col)
+        ws.cell(column=p_req_fe_col, row=p_req_fe_row).value="REQUISIT\nFE"
+        ws.cell(column=p_req_fe_col, row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-    p_horas_dual_col = p_req_fe_col + 1
-    p_horas_dual_row = p_req_fe_row
-    ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col,
-                   end_row=p_horas_dual_row + 1, end_column=p_horas_dual_col)
-    ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).value = "HORES DUAL"
-    ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+        p_horas_dual_col = p_req_fe_col + 1
+        p_horas_dual_row = p_req_fe_row
+        ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col,
+                       end_row=p_horas_dual_row + 1, end_column=p_horas_dual_col)
+        ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).value = "HORES DUAL"
+        ws.cell(column=p_horas_dual_col, row=p_horas_dual_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+    else:
+        p_horas_dual_col = p_ce_per_col  # CONTINGUTS just després de % CE
 
     p_contenidos_col = p_horas_dual_col + 1
-    p_contenidos_row = p_horas_dual_row
+    p_contenidos_row = p_h_row
     ws.merge_cells(start_row=p_contenidos_row, start_column=p_contenidos_col,
                    end_row=p_contenidos_row + 1, end_column=p_contenidos_col)
     ws.cell(column=p_contenidos_col, row=p_contenidos_row).value = "CONTINGUTS"
     ws.cell(column=p_contenidos_col, row=p_contenidos_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
-    ws.column_dimensions[p_contenidos_col_l].width = 50
+    ws.column_dimensions[chr(ord('A') + p_contenidos_col - 1)].width = 50
 
 
     p_ra_titulo_row = p_ra_titulo_row + 2
@@ -160,7 +162,8 @@ for codigo, modulo in data_box.items():
 
         ws.cell(column=p_ce_col + 1, row=p_ce_row).value = "=SUM(F" + str(p_ce_row + 1) + ":F" + str(p_ce_row + numCriterios) + ")"
         ws.cell(column=p_ce_col + 2, row=p_ce_row).value = "=SUM(G" + str(p_ce_row + 1) + ":G" + str(p_ce_row + numCriterios) + ")"
-        ws.cell(column=p_ce_col + 4, row=p_ce_row).value = "=SUM(I" + str(p_ce_row + 1) + ":I" + str(p_ce_row + numCriterios) + ")"
+        if dual:
+            ws.cell(column=p_ce_col + 4, row=p_ce_row).value = "=SUM(I" + str(p_ce_row + 1) + ":I" + str(p_ce_row + numCriterios) + ")"
 
 
         # Ingenieria para las competencias (same as json2excel.py)
@@ -196,7 +199,7 @@ for codigo, modulo in data_box.items():
 
         p_ra_titulo_row = p_ra_titulo_row + numCriterios + 2
 
-    aplica_estils(ws)
+    aplica_estils(ws, dual)
 
 del wb['Sheet']
 print(f" * Desant llibre optatives: {libro_path}")
@@ -245,7 +248,8 @@ for codigo, modulo in data_box.items():
     modulo.OG = {k: k for k in (modulo.ObjetivosGenerales or [])}
     modulo.CPSS = {k: k for k in (modulo.CompetenciasTitulo or [])}
     outputText = template.render(modulo=modulo, ciclo_contexto=CONTEXTO_OPTATIVA,
-                                 ciclo_curriculum=D114_CURRICULUM, optativa=True)
+                                 ciclo_curriculum=D114_CURRICULUM, optativa=True,
+                                 dualitza=dualitza(modulo))
     with open(fmod_borrador, "w", encoding="utf-8") as f:
         f.write(outputText)
 

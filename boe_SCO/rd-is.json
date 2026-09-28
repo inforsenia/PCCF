@@ -1188,6 +1188,7 @@
                 }
             },
             "horas": "100",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "t",
@@ -1278,6 +1279,7 @@
                 }
             },
             "horas": "100",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "v",
@@ -1321,6 +1323,7 @@
                 }
             },
             "horas": "1",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a"

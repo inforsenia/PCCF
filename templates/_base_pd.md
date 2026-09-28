@@ -139,6 +139,7 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 
 [###]
 
+{% if dualitza %}
 ### Formació en empresa (RA dualitzats)
 
 La valoració del tutor o tutora dual de l'empresa (superat / no superat) sobre els RA desenvolupats en l'empresa s'integra en la qualificació d'eixos RA segons els criteris següents. Els RA no superats en l'empresa es recuperen en el centre educatiu. Els RA i les hores de formació en empresa consten en l'Esquema general (columnes REQUISIT FE i HORES DUAL).
@@ -147,6 +148,7 @@ La valoració del tutor o tutora dual de l'empresa (superat / no superat) sobre 
 
 [###]
 
+{% endif %}
 ### Pèrdua de l'avaluació contínua
 
 Els criteris de pèrdua del dret a l'avaluació contínua per faltes d'assistència (Orde 8/2025, art. 7) i el procediment d'avaluació aplicable en eixe cas es recullen en el PCCF.

@@ -13,7 +13,7 @@ from openpyxl.styles import Alignment
 from openpyxl.styles import NamedStyle
 
 from excel_estils import aplica_estils, escriu_capcalera
-from pccf_utils import get_hoja_label
+from pccf_utils import dualitza, get_hoja_label
 
 debug = False
 
@@ -64,8 +64,6 @@ p_ra_col_l='B'
 p_ra_titulo_col=2
 p_ra_titulo_row=8
 p_ce_col_l='E'
-p_req_fe_col_l='H'
-p_contenidos_col_l='J'
 
 
 for codigo in data_box.ModulosProfesionales:
@@ -79,7 +77,8 @@ for codigo in data_box.ModulosProfesionales:
     ws = wb.create_sheet(title=get_hoja_label(modulo.nombre))  # sigles: Excel limita a 31 caràcters
     wb.active = wb.sheetnames.index(ws.title)
 
-    escriu_capcalera(ws, codigo, modulo)
+    dual = dualitza(modulo)  # sense dual, no hi ha REQUISIT FE ni HORES DUAL
+    escriu_capcalera(ws, codigo, modulo, dual)
 
 
 
@@ -130,29 +129,31 @@ for codigo in data_box.ModulosProfesionales:
     ws.cell(column=p_ce_per_col,row=p_ce_per_row).value="% CE"
     ws.cell(column=p_ce_per_col,row=p_ce_per_row).alignment = Alignment(horizontal='center', vertical='center')
 
-    #print(" - REQUISITO FE")
-    p_req_fe_col=p_ce_per_col+1
-    p_req_fe_row=p_h_row
-    ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col, end_row=p_req_fe_row+1, end_column=p_req_fe_col)
-    ws.cell(column=p_req_fe_col,row=p_req_fe_row).value="REQUISIT\nFE"
-    ws.cell(column=p_req_fe_col,row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
+    if dual:
+        #print(" - REQUISITO FE")
+        p_req_fe_col=p_ce_per_col+1
+        p_req_fe_row=p_h_row
+        ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col, end_row=p_req_fe_row+1, end_column=p_req_fe_col)
+        ws.cell(column=p_req_fe_col,row=p_req_fe_row).value="REQUISIT\nFE"
+        ws.cell(column=p_req_fe_col,row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
 
-    #print(" - HORAS DUAL ")
-    p_horas_dual_col=p_req_fe_col+1
-    p_horas_dual_row=p_req_fe_row
-    ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col, end_row=p_horas_dual_row+1, end_column=p_horas_dual_col)
-    ws.cell(column=p_horas_dual_col,row=p_horas_dual_row).value="HORES DUAL"
-    ws.cell(column=p_horas_dual_col,row=p_horas_dual_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
-
+        #print(" - HORAS DUAL ")
+        p_horas_dual_col=p_req_fe_col+1
+        p_horas_dual_row=p_req_fe_row
+        ws.merge_cells(start_row=p_horas_dual_row, start_column=p_horas_dual_col, end_row=p_horas_dual_row+1, end_column=p_horas_dual_col)
+        ws.cell(column=p_horas_dual_col,row=p_horas_dual_row).value="HORES DUAL"
+        ws.cell(column=p_horas_dual_col,row=p_horas_dual_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
+    else:
+        p_horas_dual_col = p_ce_per_col  # CONTINGUTS just després de % CE
 
     #print(" - CONTENIDOS ")
     p_contenidos_col=p_horas_dual_col+1
-    p_contenidos_row=p_horas_dual_row
+    p_contenidos_row=p_h_row
     ws.merge_cells(start_row=p_contenidos_row, start_column=p_contenidos_col, end_row=p_contenidos_row+1, end_column=p_contenidos_col)
     ws.cell(column=p_contenidos_col,row=p_contenidos_row).value="CONTINGUTS"
     ws.cell(column=p_contenidos_col,row=p_contenidos_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
 
-    ws.column_dimensions[p_contenidos_col_l].width = 50
+    ws.column_dimensions[chr(ord('A') + p_contenidos_col - 1)].width = 50
 
 
 
@@ -185,7 +186,8 @@ for codigo in data_box.ModulosProfesionales:
 
         ws.cell(column=p_ce_col+1,row=p_ce_row).value="=SUM(F"+str(p_ce_row+1)+":F"+str(p_ce_row+numCriterios)+")"
         ws.cell(column=p_ce_col+2,row=p_ce_row).value="=SUM(G"+str(p_ce_row+1)+":G"+str(p_ce_row+numCriterios)+")"
-        ws.cell(column=p_ce_col+4,row=p_ce_row).value="=SUM(I"+str(p_ce_row+1)+":I"+str(p_ce_row+numCriterios)+")"
+        if dual:
+            ws.cell(column=p_ce_col+4,row=p_ce_row).value="=SUM(I"+str(p_ce_row+1)+":I"+str(p_ce_row+numCriterios)+")"
 
 
         # Ingenieria para las competencias
@@ -228,7 +230,7 @@ for codigo in data_box.ModulosProfesionales:
         # Incrementamos la fila
         p_ra_titulo_row=p_ra_titulo_row+numCriterios+2
 
-    aplica_estils(ws)
+    aplica_estils(ws, dual)
 
 
 if (debug): print(" * Quitamos la primera hoja ")

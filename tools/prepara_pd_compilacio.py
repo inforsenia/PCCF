@@ -39,7 +39,8 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MARCA_BORRADOR = r"\texorpdfstring{\ \ding{46}}{}"
 MARCA_INCIDENCIES = r"\texorpdfstring{\ \textcolor{red}{\ding{55}}}{}"
 # Inclou la columna J (CONTINGUTS, i OBJECTIUS/COMPETENCIES a dalt), per si
-# el docent concreta els continguts a l'Excel.
+# el docent concreta els continguts a l'Excel. En els mòduls que no
+# dualitzen, CONTINGUTS és la H i exportar_rango_a_pdf retalla el rang.
 QUADRE_RESUM_RANG = "B1:J200"
 HEADER_TEX = "\\usepackage{pifont}\n"
 BLOCKQUOTE_RE = re.compile(r'(?:^|\n)[ \t]*>.*(?:\n[ \t]*>.*)*')

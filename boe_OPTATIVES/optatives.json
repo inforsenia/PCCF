@@ -3,6 +3,7 @@
         "nombre": "Comunicació professional",
         "creditos": "",
         "horas": "96",
+        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -67,6 +68,7 @@
         "nombre": "Anglés oral en entorns professionals",
         "creditos": "",
         "horas": "100",
+        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -127,6 +129,7 @@
         "nombre": "Introducció al Núvol Públic",
         "creditos": "10",
         "horas": "100",
+        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -190,6 +193,7 @@
         "nombre": "Introducció a la Programació",
         "creditos": "-",
         "horas": "100",
+        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -282,6 +286,146 @@
         "codis_alternatius": {},
         "grups": [
             {"cicle": "SMX", "curs": "2", "familia": "INF"}
+        ]
+    },
+    "MOPACOMDIS": {
+        "nombre": "Acompanyament a les persones amb discapacitat en la realització de les activitats programades",
+        "creditos": "",
+        "horas": "96",
+        "dualitza": false,
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Organitza les accions d'acompanyament per a les persones amb discapacitat per a permetre el desenvolupament de les activitats programades, en col·laboració amb l'equip interdisciplinari.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han organitzat les accions d'acompanyament sobre la base de les activitats programades (d'oci, esportives, culturals, sanitàries, formatives, laborals, administratives, entre altres) i en col·laboració amb l'equip interdisciplinari, per a realitzar intervencions coordinades i integrals.",
+                    "b": "S'han establit les accions d'acompanyament, de manera individualitzada per a cada persona amb discapacitat i centrades en les seues característiques, per a promoure el desenvolupament i l'autonomia personal.",
+                    "c": "S'han identificat els suports que requerixen les persones amb discapacitat, valorant-ne les característiques, habilitats i necessitats, tant individuals com grupals, i potenciant-ne l'autonomia i la participació.",
+                    "d": "S'ha establit la durada de l'activitat, en funció de les característiques grupals i individuals, per a aconseguir un grau de satisfacció equilibrat.",
+                    "e": "S'han valorat prèviament els espais de realització de les activitats, identificant-ne les característiques en relació amb l'accés de les persones amb discapacitat i detectant les possibles barreres existents (físiques, comunicatives, educatives i formatives, entre altres), per a permetre el desenvolupament de l'activitat programada.",
+                    "f": "S'ha presentat el respecte a la persona amb discapacitat com a principi bàsic en tot el procés d'intervenció, per a protegir el seu dret a la intimitat.",
+                    "g": "S'ha respectat el secret professional per a garantir la confidencialitat de la informació rebuda de la persona amb discapacitat, promovent la intimitat de la persona."
+                }
+            },
+            "RA02": {
+                "Resultado": "Consensua amb les persones amb discapacitat, en els casos en què siga possible, les condicions i característiques de les accions d'acompanyament per a potenciar-ne la motivació i el compromís de participació.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han recollit i incorporat les preferències i aportacions de cada persona amb discapacitat en l'organització de les accions d'acompanyament, per a augmentar-ne la motivació i el compromís de participació en les activitats.",
+                    "b": "S'han establit les accions d'acompanyament, i les pautes per a realitzar-les, de manera conjunta i consensuada amb la persona amb discapacitat, per a afavorir-ne la implicació.",
+                    "c": "S'han centrat les activitats planificades en la persona amb discapacitat, promovent-ne la participació i, si escau, la de la família, per a complir tant les expectatives de la persona amb discapacitat com les de l'activitat mateixa.",
+                    "d": "S'ha tingut en compte la realitat social i econòmica de la persona amb discapacitat i/o de la seua família per al desenvolupament i l'ajust de les activitats."
+                }
+            },
+            "RA03": {
+                "Resultado": "Realitza l'acompanyament en les activitats programades, tant individuals com grupals, prestant el suport necessari per a afavorir el desenvolupament, l'autonomia i la participació social de les persones amb discapacitat.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha realitzat l'acompanyament a la persona amb discapacitat d'acord amb l'organització prèvia, en aquelles activitats (d'oci, esportives, culturals, sanitàries, formatives, laborals, administratives, entre altres) a què, per la seua dificultat, no puga accedir sola, per a afavorir-ne l'autonomia i la participació.",
+                    "b": "S'ha prestat suport a les tasques específiques que requerixen les activitats, garantint que siga adequat a les necessitats de la persona amb discapacitat, per a afavorir-ne l'autonomia.",
+                    "c": "S'ha fomentat l'autonomia en les activitats de la vida diària de manera continuada, per a aconseguir l'èxit de l'acompanyament.",
+                    "d": "S'ha realitzat l'acompanyament en les activitats externes com a suport a la persona amb discapacitat i no com a substitut de la seua intervenció, perquè en prevalga la independència.",
+                    "e": "S'han promogut les activitats grupals per a facilitar la presència de la persona amb discapacitat en fòrums i escenaris socials que promoguen la participació social.",
+                    "f": "S'han fixat i entrenat les pautes de comportament de la persona amb discapacitat en les activitats, per a afavorir la comunicació i la implicació social, contribuint a la seua socialització i normalització i evitant situacions que danyen la seua identitat com a persona."
+                }
+            },
+            "RA04": {
+                "Resultado": "Valora i avalua el grau de satisfacció de les persones amb discapacitat i de les seues famílies amb l'acompanyament en les activitats programades.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han elaborat criteris d'avaluació per a valorar el grau de satisfacció de les persones usuàries.",
+                    "b": "S'ha elaborat una conclusió dels resultats obtinguts en l'avaluació de l'acompanyament de les persones amb discapacitat i de les seues famílies."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "EI",  "curs": "2", "familia": "SCO"},
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+        ]
+    },
+    "MOPOCITL": {
+        "nombre": "Activitats d'oci i temps lliure per a la inclusió social",
+        "creditos": "",
+        "horas": "96",
+        "dualitza": false,
+        "UnidadesCompetenciaAcreditadas": {},
+        "CompetenciasTitulo": [],
+        "ObjetivosGenerales": [],
+        "ResultadosAprendizaje": {
+            "RA01": {
+                "Resultado": "Planifica projectes d'oci i temps lliure inclusiu relacionant els principis de l'animació en l'oci i el temps lliure amb les necessitats de les persones usuàries, tenint en compte les persones i els col·lectius en situació de vulnerabilitat i en risc d'exclusió social i les característiques dels equipaments i recursos des d'una perspectiva inclusiva.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han valorat els contextos d'intervenció en l'oci i el temps lliure.",
+                    "b": "S'han caracteritzat els principis de l'animació en l'oci i el temps lliure.",
+                    "c": "S'han establit les bases de l'educació en el temps lliure.",
+                    "d": "S'han valorat les característiques fisiològiques, psicosocials específiques i conductuals de les persones i els col·lectius en risc d'exclusió social i en situació de vulnerabilitat.",
+                    "e": "S'ha adequat el projecte d'oci i temps lliure a les necessitats de les persones usuàries, amb una atenció especial a les persones i els col·lectius en situació de vulnerabilitat i en risc d'exclusió social.",
+                    "f": "S'han valorat estratègies per al desenvolupament d'activitats d'oci i temps lliure des d'una perspectiva inclusiva.",
+                    "g": "S'han seleccionat els equipaments i recursos per als projectes d'oci i temps lliure amb un enfocament inclusiu.",
+                    "h": "S'han identificat les funcions i el paper de les persones responsables en les activitats d'oci i temps lliure.",
+                    "i": "S'ha justificat la importància de la intencionalitat educativa en l'oci i el temps lliure per a la inclusió."
+                }
+            },
+            "RA02": {
+                "Resultado": "Organitza activitats d'oci i temps lliure educatiu amb una perspectiva inclusiva, analitzant els espais i recursos, així com la normativa en matèria de prevenció i seguretat.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han identificat els principis de la pedagogia del joc.",
+                    "b": "S'han identificat els tipus i les pautes d'evolució del joc.",
+                    "c": "S'han plantejat objectius específics per a cada situació de vulnerabilitat i de risc d'exclusió social d'acord amb l'orientació de la intervenció de les institucions de referència.",
+                    "d": "S'han seleccionat espais, recursos i materials per al desenvolupament d'activitats lúdiques inclusives.",
+                    "e": "S'han establit criteris per a l'organització d'espais i materials.",
+                    "f": "S'han establit estratègies d'intervenció que afavorisquen la comunicació i la participació dels col·lectius i les persones en situació de vulnerabilitat i risc d'exclusió social, així com la transmissió de valors culturals i socials.",
+                    "g": "S'han establit els mitjans i les ajudes tècniques específiques que faciliten la realització de les activitats per part de les persones i els col·lectius en situació de vulnerabilitat i en risc d'exclusió social.",
+                    "h": "S'han tingut en compte les mesures de seguretat i prevenció en la realització de les activitats d'oci i temps lliure educatiu i inclusiu.",
+                    "i": "S'ha argumentat el valor educatiu del joc."
+                }
+            },
+            "RA03": {
+                "Resultado": "Implementa activitats d'oci i temps lliure per a la inclusió seleccionant recursos i tècniques educatives d'animació.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han utilitzat tècniques per al desenvolupament de l'expressió oral, corporal, musical, plàstica i audiovisual.",
+                    "b": "S'han desenvolupat jocs per al desenvolupament de les habilitats socials, intel·lectuals i motrius.",
+                    "c": "S'han utilitzat estils d'intervenció que desenvolupen els aspectes socialitzadors de les activitats d'oci i temps lliure.",
+                    "d": "S'han seleccionat múltiples recursos tenint en compte els objectius de la intervenció i possibilitant la màxima participació.",
+                    "e": "S'han utilitzat els materials i els espais atenent la potencialitat educativa de les activitats i perseguint la màxima participació en condicions de seguretat.",
+                    "f": "S'han dissenyat adaptacions dels recursos i les tècniques d'animació a les necessitats de les persones usuàries i els col·lectius en situació de vulnerabilitat i en risc d'exclusió social.",
+                    "g": "S'han valorat els beneficis de la pràctica d'activitats d'oci i temps lliure en la inclusió de les persones i els col·lectius vulnerables i en risc d'exclusió social."
+                }
+            },
+            "RA04": {
+                "Resultado": "Realitza activitats d'oci i temps lliure en el medi natural, respectant els principis de conservació del medi ambient, les mesures de prevenció i seguretat i els beneficis de la pràctica de l'activitat física en la inclusió de persones i col·lectius en situació de vulnerabilitat i de risc d'exclusió social.",
+                "CriteriosEvaluacion": {
+                    "a": "S'ha valorat la importància de l'educació mediambiental a través de les activitats d'oci i temps lliure.",
+                    "b": "S'han definit les característiques del medi natural com a espai d'oci i temps lliure.",
+                    "c": "S'ha justificat la realització d'activitats d'oci i temps lliure en el medi natural en els processos d'inclusió social.",
+                    "d": "S'han seleccionat tècniques i estratègies, estils d'intervenció i pautes d'actuació que desenvolupen els aspectes socialitzadors en el desenvolupament d'activitats d'oci i temps lliure en el medi natural.",
+                    "e": "S'ha utilitzat una varietat de materials, d'espais, de jocs i de recursos diferents que possibiliten la màxima participació de les persones i els col·lectius en situació de vulnerabilitat i de risc d'exclusió social.",
+                    "f": "S'han organitzat els recursos humans per a garantir el desenvolupament de les activitats en el medi natural.",
+                    "g": "S'han desenvolupat protocols d'atenció en casos de situacions d'emergència en les activitats desenvolupades en el medi natural.",
+                    "h": "S'han valorat els beneficis de la pràctica d'activitats d'oci i temps lliure en el medi natural en la inclusió de les persones i els col·lectius vulnerables i en risc d'exclusió social.",
+                    "i": "S'ha valorat la importància de generar entorns segurs en el medi natural, minimitzant-ne els riscos."
+                }
+            },
+            "RA05": {
+                "Resultado": "Dissenya l'avaluació del procés d'inclusió en les activitats per a l'oci i el temps lliure establint els instruments que permeten obtindre informació rellevant en funció dels objectius proposats en la intervenció i les tècniques i els recursos per a identificar els aspectes susceptibles de millora.",
+                "CriteriosEvaluacion": {
+                    "a": "S'han seleccionat els indicadors i els instruments que cal seguir en l'avaluació de projectes i activitats d'oci i temps lliure inclusiu.",
+                    "b": "S'han definit les tècniques i les activitats d'avaluació per al control i el seguiment de la consecució dels objectius plantejats en les intervencions de les activitats d'oci i temps lliure.",
+                    "c": "S'han elaborat i emplenat registres de seguiment dels projectes i les activitats d'oci i temps lliure inclusius.",
+                    "d": "S'han utilitzat les tecnologies de la informació i la comunicació per a l'elaboració del seguiment i l'avaluació de les activitats.",
+                    "e": "S'han formulat conclusions a partir de la informació obtinguda i s'han transmés els resultats de l'avaluació a les persones implicades.",
+                    "f": "S'ha valorat la transcendència d'establir procediments d'avaluació per a millorar la inclusió en la intervenció educativa de l'animació d'oci i temps lliure.",
+                    "g": "S'han elaborat informes i memòries d'avaluació que han proposat millores a partir de la identificació de les causes d'intervencions no adequades.",
+                    "h": "S'han tingut en compte processos de qualitat i millora en el desenvolupament del projecte d'animació d'oci i temps lliure inclusiu."
+                }
+            }
+        },
+        "codis_alternatius": {},
+        "grups": [
+            {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "EI",  "curs": "2", "familia": "SCO"},
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
         ]
     }
 }

@@ -38,6 +38,14 @@ CONTEXTO_OPTATIVA = "el cicle formatiu corresponent"
 # Plantilla única de PD (templates/), usada per json2pccf.py i json2optatives.py.
 PD_TEMPLATE = "_base_pd.md"
 
+# Mòduls que no dualitzen (sense hores de FEE ni RA requisit per a la FEE):
+# porten "dualitza": false al JSON (boe_*/rd-*.json o optatives.json). Sense
+# la clau, el mòdul dualitza. La PD no porta la subsecció de Formació en
+# empresa i la fulla de l'Excel no té REQUISIT FE / HORES DUAL.
+def dualitza(modulo):
+    return modulo.get("dualitza", True) is not False
+
+
 OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 
 # Pattern per a noms de fitxer PD:
@@ -62,6 +70,8 @@ HOJA_LABELS = [
     ('Anglés Professional', 'ANG'),
     ('Anglés oral', 'AOEP'),
     ('Comunicació professional', 'COM'),
+    ('Acompanyament a les persones amb discapacitat', 'ACD'),
+    ("Activitats d'oci i temps lliure", 'OTL'),
     ('Projecte intermodular', 'PI'),
     ('Introducció al Núvol', 'NVL'),
     ('Muntatge', 'MME'),

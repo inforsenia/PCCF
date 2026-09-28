@@ -28,8 +28,14 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
 
     # Eliminar filas y columnas fuera del rango
     cols = rango.split(":")[0][0], rango.split(":")[1][0]
-    
-    columna="I"
+    # Un mòdul que no dualitza no té REQUISIT FE / HORES DUAL: la taula acaba
+    # en CONTINGUTS (H en lloc de J). Retallem el rang fins a eixa columna.
+    for cell in ws[8]:
+        if cell.value == "CONTINGUTS" and cell.column_letter < cols[1]:
+            cols = cols[0], cell.column_letter
+
+    # HORES (F) té valor a totes les files de la taula, dualitze o no el mòdul
+    columna="F"
     ultima_fila = ws.max_row
     while ultima_fila > 0:
         if ws[f"{columna}{ultima_fila}"].value is not None:

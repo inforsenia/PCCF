@@ -1160,6 +1160,7 @@
                 }
             },
             "horas": "400",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -1273,6 +1274,7 @@
                 }
             },
             "horas": "1",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a"
@@ -1321,6 +1323,7 @@
                 }
             },
             "horas": "1",
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a"

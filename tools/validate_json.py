@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Validate every *.json file inside boe_INF/ and boe_SCO/.
+"""Validate every *.json file inside boe_INF/, boe_SCO/ and boe_OPTATIVES/.
+The optional module key "dualitza" must be a boolean (false = no FEE).
 Exit code 0 → all files are valid.
 Exit code 1 → at least one file is invalid (error printed to stderr).
 """
@@ -7,7 +8,7 @@ import sys
 import json
 import pathlib
 
-DIRS = ["boe_INF", "boe_SCO"]
+DIRS = ["boe_INF", "boe_SCO", "boe_OPTATIVES"]
 
 failed = False
 files = []
@@ -18,7 +19,12 @@ print(f"🔍  Validating {len(files)} JSON files …")
 for path in files:
     try:
         data = path.read_text(encoding="utf-8")
-        json.loads(data)
+        parsed = json.loads(data)
+        moduls = parsed.get("ModulosProfesionales", parsed)
+        for codi, modul in moduls.items():
+            if isinstance(modul, dict) and not isinstance(modul.get("dualitza", True), bool):
+                print(f"❌  {path}: module {codi}: \"dualitza\" must be true/false", file=sys.stderr)
+                failed = True
     except Exception as exc:
         print(f"❌  Invalid JSON in {path}: {exc}", file=sys.stderr)
         failed = True
