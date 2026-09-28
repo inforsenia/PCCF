@@ -5,11 +5,9 @@
 ## Datos identificativos y contextualización del módulo. 
 
 Es un módulo de 34 horas que se imparte en el Ciclo de Grado Superior de 
-Técnico en Desarrollo de Aplicaciones Multiplataforma.
+Técnico en Desarrollo Web.
 
 Tiene una correspondéncia en Créditos de 3.
-
-
 
 ## Resultados de Aprendizaje
 
@@ -33,14 +31,10 @@ La formación del módulo contribuye a alcanzar los *Objetivos Generales del Cic
 
 | Obj| Objetivo General del Ciclo |
 |----|----------------------------|
-| e | Seleccionar y emplear lenguajes, herramientas y librerías, interpretando las especificaciones para desarrollar aplicaciones multiplataforma con acceso a bases de datos. |
-| j | Seleccionar y emplear técnicas, lenguajes y entornos de desarrollo, evaluando sus posibilidades, para desarrollar aplicaciones en teléfonos móviles, tabletas y otros dispositivos inteligentes. |
+| e | Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados. |
+| j | Desarrollar e integrar componentes software en el entorno del servidor web empleando herramientas y lenguajes específicos para cumplir las especificaciones de la aplicación. |
 | q | Seleccionar y emplear lenguajes y herramientas, atendiendo a los requerimientos, para desarrollar componentes personalizados en sistemas ERP-CRM. |
 |<img width=100/>|<img width=500/>|
-
-
-
-
 
 
 ## Competencias del Título 
@@ -50,12 +44,11 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | Obj| Competencia del Título |
 |----|----------------------------|
 | a | Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos. |
-| e | Desarrollar aplicaciones multiplataforma con acceso a bases de datos utilizando lenguajes, librerías y herramientas adecuados a las especificaciones. |
-| f | Desarrollar aplicaciones implementando un sistema completo de formularios e informes que permitan gestionar de forma integral la información almacenada. |
-| i | Participar en el desarrollo de juegos y aplicaciones en el ámbito del entretenimiento y la educación empleando técnicas, motores y entornos de desarrollo específicos. |
-| j | Desarrollar aplicaciones para teléfonos móviles, tabletas y otros dispositivos inteligentes empleando técnicas y entornos de desarrollo específicos. |
-| v | Gestionar su carrera profesional, analizando las oportunidades de empleo, autoempleo y de aprendizaje. |
-| y | Participar de forma activa en la vida económica, social y cultural, con una actitud crítica y responsable. |
+| e | Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados. |
+| f | Integrar contenidos en la lógica de una aplicación web desarrollando componentes de acceso a datos adecuados a las especificaciones.|
+| i | Integrar componentes multimedia en el interfaz de una aplicación web realizando el análisis de interactividad, accesibilidad y usabilidad. |
+| j | Desarrollar e integrar componentes software en el entorno del servidor web empleando herramientas y lenguajes específicos para cumplir las especificaciones de la aplicación. |
+| v | Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y actuar con iniciativa profesional. |
 |<img width=100/>|<img width=500/>|
 
 
