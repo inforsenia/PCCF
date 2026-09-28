@@ -168,7 +168,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP03 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 27/10/2025 – 10/11/2025.
+*   **Temporalización:**  01/11/2026 - 30/11/2026
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -208,7 +208,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP04 | **Módulo:** 1665
 *   **Duración:** 3 horas.
-*   **Temporalización:** 10/11/2025 – 1/12/2025.
+*   **Temporalización:**  01/12/2026| 19/12/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -258,7 +258,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP05 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 1/12/2025 – 12/1/2026.
+*   **Temporalización:** 20/12/2026 - 25/01/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -309,7 +309,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP06 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 12/1/2026 – 26/01/2026.
+*   **Temporalización:** 26/01/2027| 16/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -353,7 +353,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP07 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 26/01/2026 - 9/02/2026.
+*   **Temporalización:** 01/02/2027| 16/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
