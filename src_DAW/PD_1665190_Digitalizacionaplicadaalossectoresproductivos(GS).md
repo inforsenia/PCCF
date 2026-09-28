@@ -65,28 +65,335 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
  Número | Título                                        | Inicio    | Fin       |
 |--------|-----------------------------------------------|-----------|-----------|
-| 01     | UP01: El reto de la Digitalización            | 08/09/2025| 30/09/2025|
-| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 01/10/2025| 31/10/2025|
-| 03     | UP03: La Computación en la Nube               | 01/11/2025| 30/11/2025|
-| 04     | UP04: La Inteligencia Artificial              | 01/12/2025| 19/12/2025|
-| 05     | UP05: Los Datos y su Protección               | 20/12/2025| 25/01/2025|
-| 06     | UP06: La Transformación Digital               | 26/01/2025| 16/02/2025|
+| 01     | UP01: El reto de la Digitalización            | 09/09/2026| 08/10/2026|
+| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 15/10/2026| 31/10/2026|
+| 03     | UP03: La Computación en la Nube               | 01/11/2026| 30/11/2026|
+| 04     | UP04: La Inteligencia Artificial              | 01/12/2026| 19/12/2026|
+| 05     | UP05: Los Datos y su Protección               | 20/12/2026| 25/01/2027|
+| 06     | UP06: La Transformación Digital               | 26/01/2027| 16/02/2027|
 
-## Metodología del proceso de enseñanza-aprendizaje
+## UP01: Digitalización en los sistemas productivos 
+### 1. Identificación
+*   **Código:** UP01 | **Módulo:** 1665
+*   **Duración:** 4 horas.
+*   **Temporalización:** 09/09/2026 – 08/10/2026.
 
-La metodología didáctica adoptada en esta programación se encuentra alineada con los principios y directrices establecidos en el Proyecto Curricular del Ciclo Formativo (PCCF), elaborado de forma colaborativa por el equipo docente del ciclo. Este documento marco recoge los enfoques metodológicos comunes que guían el proceso de enseñanza-aprendizaje en todos los módulos del ciclo, promoviendo una formación integral, activa y contextualizada del alumnado.
+### 2. Fundamentación (Real Decreto 1629/2009)
 
-Se apuesta por metodologías activas, centradas en el estudiante, que fomentan el aprendizaje significativo, el trabajo cooperativo, la resolución de problemas y la aplicación práctica de los contenidos en contextos reales o simulados. Asimismo, se integran estrategias que favorecen la autonomía, la reflexión crítica y el desarrollo de competencias profesionales, personales y sociales.
+* **Resultado de Aprendizaje:** 
+    * **RA01:** Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (Information Technology: tecnología de la información) y OT (Operation Technology: tecnología de operación) característicos.
+* **Criterios de Evaluación:**
+    * a) Se ha descrito en qué consiste el concepto de digitalización.
+    * b) Se ha relacionado la implantación de la tecnología digital con la organización de las empresas.
+    * c) Se han establecido las diferencias y similitudes entre los entornos IT y OT.
 
-Cualquier concreción metodológica específica, adaptada a las características del módulo o del grupo de estudiantes, se desarrollará en el diseño de las **Situaciones de Aprendizaje**, donde se detallarán las actividades, recursos y dinámicas concretas que se llevarán a cabo.
+* **Competencias:**
+    * **Profesionales:** * Identificar los cambios tecnológicos y organizativos necesarios para adaptarse a las nuevas situaciones laborales del sector.
+        * Analizar el funcionamiento y la convergencia de los sistemas de información (IT) y operación (OT) para optimizar procesos empresariales.
+    * **Empleabilidad:**
+        * Adaptabilidad al cambio tecnológico y resiliencia.
+        * Toma de decisiones basada en el análisis funcional de los entornos empresariales.
 
-## Recursos
 
-Los recursos didácticos utilizados en este módulo se seleccionan en coherencia con los criterios establecidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que define los medios y herramientas comunes para facilitar el desarrollo de las competencias profesionales, personales y sociales del alumnado.
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** 
+    * Concepto de digitalización y su relevancia e impacto en los sectores productivos.
+    * Relación entre la digitalización y la transformación en la organización empresarial (metodologías ágiles, tableros Kanban).
+    * Definición, diferencias, similitudes y convergencia entre los entornos IT (Tecnología de la Información) y OT (Tecnología de Operación).
+*   **Teoría:** 
+    * Digitalización en los sistemas productivos: Conceptos, importancia y repercusión en los sectores productivos. Entornos IT y OT característicos de los sectores productivos.
 
-Se contempla el uso de recursos variados, tanto materiales como digitales, que favorecen un aprendizaje activo, contextualizado y accesible. Entre ellos se incluyen: equipamiento técnico específico del módulo, herramientas TIC, plataformas educativas, materiales audiovisuales, documentación profesional actualizada y recursos adaptados a las necesidades del grupo.
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * Tarea 1: Actividad de investigación y exposición sobre los contenidos del tema. 
+    
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Trello, Canva
 
-La concreción de los recursos específicos que se emplearán en cada unidad didáctica o actividad se detallará en las correspondientes **Situaciones de Aprendizaje**, en función de los objetivos, contenidos y metodologías aplicadas.
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP02: Caracterización de tecnologías habilitadoras 
+### 1. Identificación
+*   **Código:** UP02 | **Módulo:** 1665
+*   **Duración:** 2 horas.
+*   **Temporalización:** 15/10/2026 – 31/10/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA02:** Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones.
+* **Criterios de Evaluación:**
+    * a) Se han identificado las principales tecnologías habilitadoras digitales.
+    * b) Se han relacionado las THD con el desarrollo de productos y servicios.
+    * c) Se ha relacionado la importancia de las THD con la economía sostenible y eficiente.
+
+* **Competencias:**
+    * **Profesionales:** * Seleccionar e implementar las tecnologías habilitadoras digitales (THD) más adecuadas para la optimización y modernización de los procesos de la empresa.
+        * Potenciar la innovación en el despliegue de nuevos productos y servicios corporativos (ERPs/E-commerce).
+    * **Empleabilidad:**
+        * Visión estratégica orientada a la innovación tecnológica.
+        * Orientación hacia la eficiencia operativa y la sostenibilidad.
+
+
+### 3. Organización
+*   **Contenidos (Orden 36/2012):** 
+    * Tecnologías Habilitadoras Digitales (THD): Contenedores, IoT, robótica, impresión 3D, gemelos digitales, entre otras.
+    * Impacto de las THD en el diseño, desarrollo y despliegue de productos y servicios (Sistemas ERP y E-commerce).
+    * Relación de las THD con la optimización de recursos y la economía sostenible.
+*   **Teoría:** 
+    * Tecnologías habilitadoras digitales: Conceptos, importancia y repercusión en los sectores productivos. Caracterización de las tecnologías habilitadoras digitales y sus aplicaciones.
+
+
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * [Práctica: Despliegue y exploración de un ERP/E-commerce contenerizado](https://inforsenia.github.io/Terraformadores/v8/Practica2/Practica2)
+    
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Odoo, ERPNext, Prestashop, WooCommerce
+    * Docker, Docker Compose.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP03: Computación en la nube  
+### 1. Identificación
+*   **Código:** UP03 | **Módulo:** 1665
+*   **Duración:** 2 horas.
+*   **Temporalización:**  01/11/2026 - 30/11/2026
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA03:** Identifica sistemas basados en cloud/nube y su influencia en el desarrollo de los sistemas digitales.
+* **Criterios de Evaluación:**
+    * a) Se han identificado los diferentes niveles de la cloud/nube.
+    * b) Se han identificado las principales funciones de la cloud/nube (procesamiento de datos, intercambio de información, ejecución de aplicaciones, entre otros).
+    * c) Se ha descrito el concepto de edge computing y su relación con la cloud/nube.
+
+* **Competencias:**
+    * **Profesionales:** * Gestionar y evaluar servicios en arquitecturas basadas en la nube según las necesidades de procesamiento y almacenamiento del negocio.
+    * **Empleabilidad:**
+        * Capacidad para trabajar en entornos colaborativos, distribuidos y deslocalizados.
+
+### 3. Organización
+* **Contenidos:** * Arquitecturas en la nube (Cloud computing) y sus funciones principales: procesamiento, almacenamiento e intercambio de información.
+    * Niveles y modelos de servicio (IaaS, PaaS, SaaS) y modelos de despliegue (pública, privada e híbrida).
+    * Paradigmas descentralizados: Concepto de Edge computing y Fog computing, y su integración con la nube central.
+*   **Teoría:** 
+    * Conceptos de computación en la nube, modelos de servicio (IaaS, PaaS, SaaS), modelos de despliegue (pública, privada, híbrida) y su influencia en el desarrollo de los sistemas digitales.
+
+*   **Metodología:** Explicación teórica con ejemplos prácticos y resolución de problemas.   **Secuencia (Fases):**
+    *  Test sencillo sobre la nube y sus aplicaciones en los sistemas productivos.
+
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * AWS, Azure, Google Cloud Platform, Oracle Cloud, IBM Cloud.
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP04: Inteligencia artificial 
+### 1. Identificación
+*   **Código:** UP04 | **Módulo:** 1665
+*   **Duración:** 3 horas.
+*   **Temporalización:**  01/12/2026| 19/12/2026.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA04:** Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación.
+* **Criterios de Evaluación:**
+    * a) Se ha identificado la importancia de la IA en la automatización de procesos y su optimización.
+    * b) Se ha relacionado la IA con la recogida masiva de datos (Big Data) y su tratamiento (análisis) con la rentabilidad de las empresas.
+    * c) Se ha valorado la importancia presente y futura de la IA.
+
+* **Competencias:**
+    * **Profesionales:** * Integrar y consumir modelos y librerías de Inteligencia Artificial para la automatización, consulta de datos y optimización de flujos de trabajo.
+    * **Empleabilidad:**
+        * Pensamiento crítico en la evaluación e integración de soluciones generadas por modelos algorítmicos.
+        * Resolución ágil de problemas complejos mediante herramientas tecnológicas de vanguardia.
+
+### 3. Organización
+* **Contenidos:** * Automatización de procesos empresariales y optimización técnica a través de IA.
+    * Interacción entre la Inteligencia Artificial y la integración masiva de datos mediante librerías y APIs (ej. consumo de modelos NLP como Mistral AI).
+    * Impacto, rentabilidad y valoración del papel presente y futuro de la IA en los diferentes sectores.
+*   **Teoría:** 
+    * Conceptos de inteligencia artificial:
+        * Aprendizaje supervisado y no supervisado.
+        * Redes neuronales y aprendizaje profundo.
+        * Procesamiento de lenguaje natural (NLP).
+        * Visión por computadora.
+        * Aplicaciones de la IA en sectores productivos.
+
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * Practica Webapp IA Python: Adaptación de una aplicación web que se proporciona a los alumnos en la que se consume un modelo de IA (Mistral AI) para la consulta de datos de una temática concreta.
+    
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * IDE Codium
+    * Lenguaje Python
+    * Framework Flask
+    * Librería Mistral AI
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP05: Big Data
+### 1. Identificación
+*   **Código:** UP05 | **Módulo:** 1665
+*   **Duración:** 2 horas.
+*   **Temporalización:** 20/12/2026 - 25/01/2027.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA05:** Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales.
+* **Criterios de Evaluación:**
+    * a) Se ha establecido la diferencia entre dato e información.
+    * b) Se ha descrito el ciclo de vida del dato.
+    * c) Se ha identificado la relación entre Big Data, análisis de datos, machine/deep learning e inteligencia artificial.
+    * d) Se han descrito las características que definen Big Data.
+    * e) Se han descrito las etapas típicas de la ciencia de datos y su relación en el proceso.
+
+* **Competencias:**
+    * **Profesionales:** * Capturar, gestionar y visualizar grandes volúmenes de datos utilizando herramientas específicas (Python, Pandas, Plotly) para la extracción de conocimiento aplicable al negocio.
+    * **Empleabilidad:**
+        * Toma de decisiones fundamentada en datos objetivos (Data-driven decision making).
+        * Habilidad para comunicar hallazgos técnicos de manera clara y visual (Storytelling).
+
+### 3. Organización
+* **Contenidos:** * Diferencias fundamentales entre dato crudo, información y conocimiento.
+    * Etapas del ciclo de vida del dato (Ingesta, Procesamiento, Análisis y Visualización) mediante el uso de lenguajes de scripting (Python).
+    * Relación simbiótica entre el Big Data, la ciencia de datos y las disciplinas asociadas (Machine Learning e IA).
+*   **Teoría:** 
+    * Conceptos de Big Data:
+        * Definición y características del Big Data.
+        * Arquitectura y componentes del ecosistema Big Data.
+        * Procesamiento y análisis de grandes volúmenes de datos.
+        * Aplicaciones del Big Data en sectores productivos.
+
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * Actividad Práctica1: Análisis Exploratorio de Datos con Python - Libreria Pandas
+    * Actividad Práctica2: Visualización de Datos y Storytelling - Libreria Plotly
+    
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * IDE Codium
+    * Lenguaje de programación Python, librerías Pandas y Plotly.
+
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP06: Ciberseguridad 
+### 1. Identificación
+*   **Código:** UP06 | **Módulo:** 1665
+*   **Duración:** 2 horas.
+*   **Temporalización:** 26/01/2027| 16/02/2027.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA05:** Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales.
+* **Criterios de Evaluación:**
+    * a) Se han identificado los principales objetivos de la ciencia de datos en las diferentes empresas.
+    * b) Se ha valorado la importancia de la seguridad y su regulación legal en relación con la protección de los datos corporativos y personales.
+
+* **Competencias:**
+    * **Profesionales:** * Implementar y auditar de forma básica normativas y protocolos de ciberseguridad para proteger la información y la infraestructura digital.
+    * **Empleabilidad:**
+        * Concienciación y responsabilidad sobre la ética y la seguridad en el manejo de la información (Compliance).
+        * Prevención activa ante amenazas y sentido de la cautela digital.
+
+### 3. Organización
+* **Contenidos:** * Importancia crítica de la seguridad, regulaciones vigentes y normativas de protección del dato en la economía digital.
+    * Sistemas de prevención, medidas de protección contra incidentes y control de vulnerabilidades a nivel local y global.
+*   **Teoría:** 
+    * Conceptos de ciberseguridad:
+        * Principios básicos de seguridad informática.
+        * Tipos de amenazas y ataques cibernéticos.
+        * Medidas de protección y buenas prácticas en ciberseguridad.
+        * Herramientas y técnicas de análisis de vulnerabilidades y pruebas de penetración.
+
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * Tarea práctica 1: Análisis de vulnerabilidades y pruebas de penetración en un entorno controlado.
+     
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Entorno virtualizado con máquinas vulnerables y herramientas de ciberseguridad (Kali Linux, Metasploit, Nmap, Wireshark, etc.).
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
+---
+
+## UP07: Proyecto de transformación digital
+### 1. Identificación
+*   **Código:** UP07 | **Módulo:** 1665
+*   **Duración:** 2 horas.
+*   **Temporalización:** 01/02/2027| 16/02/2027.
+
+### 2. Fundamentación (Real Decreto 1629/2009)
+
+* **Resultado de Aprendizaje:** 
+    * **RA06:** Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa.
+* **Criterios de Evaluación:**
+    * a) Se han identificado los objetivos estratégicos de la empresa.
+    * b) Se han identificado y alineado las áreas de producción/negocio y de comunicaciones.
+    * c) Se han identificado las áreas susceptibles de ser digitalizadas.
+    * d) Se ha analizado el encaje de AD (áreas digitalizadas) entre sí y con las que no lo están.
+
+* **Competencias:**
+    * **Profesionales:** * Planificar, liderar y ejecutar proyectos integrales de transformación digital coherentes con los objetivos estratégicos de una organización real o simulada.
+    * **Empleabilidad:**
+        * Liderazgo, proactividad y gestión del cambio en entornos organizacionales complejos.
+        * Capacidad organizativa y colaboración eficaz mediante herramientas de control de versiones y gestión de proyectos.
+
+### 3. Organización
+* **Contenidos:** * Fases para el desarrollo, diseño y evaluación de un proyecto real de transformación digital en un negocio.
+    * Identificación de objetivos estratégicos empresariales e interrelación entre las áreas corporativas digitalizadas y no digitalizadas.
+    * Uso coordinado de repositorios (Control de Versiones) y sistemas Kanban para el despliegue del proyecto.
+*   **Teoría:** 
+    * Conceptos de transformación digital:
+        * Definición y objetivos de la transformación digital.
+        * Estrategias y modelos de transformación digital.
+        * Impacto de la transformación digital en los procesos empresariales.
+        * Herramientas y tecnologías habilitadoras para la transformación digital.
+
+*   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
+*   **Secuencia (Fases):**
+    * Tarea práctica 1: Desarrollo de un proyecto de transformación digital para una empresa ficticia, aplicando los conocimientos adquiridos en las unidades anteriores y considerando los objetivos estratégicos de la empresa.
+    
+### 4. Recursos Tecnológicos
+*   **Base Tecnológica:** 
+    * Entorno de desarrollo colaborativo (GitHub, GitLab) y herramientas de gestión de proyectos (Trello, Jira).
+
+### 5. Evaluación y Adaptación
+*   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
+*   **Adaptaciones:** Aplicación de Diseño Universal para el Aprendizaje (DUA) y ritmos flexibles según necesidades detectadas. 
+
 
 ## Uso de espacios y equipamientos. 
 
@@ -104,118 +411,6 @@ Se parte del reconocimiento de la diversidad como un valor y una oportunidad par
 
 Las adaptaciones específicas, tanto metodológicas como organizativas, se concretarán en las **Situaciones de Aprendizaje**, donde se detallarán las actuaciones necesarias para atender a las necesidades individuales del alumnado, siempre en coordinación con los servicios de orientación y el equipo docente.
 
-## Evaluación del aprendizaje. 
-
-
-
-### Principios y objeto de la evaluación 
-
-La evaluación es:
-
-- **Continua**: se realiza a lo largo del proceso de aprendizaje.
-- **Formativa**: orientada a la mejora.
-- **Integradora**: considera todos los aspectos del desarrollo del alumnado.
-- **Adaptada**: contempla medidas para el alumnado con necesidades específicas.
-- **Basada en la adquisición de competencias**: se evalúa mediante los **Resultados de Aprendizaje (RA)** y sus correspondientes **Criterios de Evaluación (CE)** definidos en el título.
-
-El objetivo de la evaluación es la superación del módulo por parte del alumnado. Para ello, es imprescindible que **todos los RA estén aprobados**.
-
-Cada RA puede tener un **peso ponderado** en la calificación final del módulo. Para su evaluación, se tendrán en cuenta los CE asociados, también ponderados, que deben convertirse en **indicadores de logro claros, precisos y observables**.
-
-El **peso de los CE o RA** puede modificarse durante el curso si existe una justificación pedagógica. En tal caso, se informará al alumnado a través de los medios establecidos en esta guía.
-
-### Tipos de evaluación 
-
-La evaluación de un módulo será realizada por el profesor titular del correspondiente módulo profesional y, en su caso, teniendo en cuenta el informe de la empresa tras la Formación en Empresa.
-
-Durante el curso se llevarán a cabo varias sesiones de evaluación, que serán las siguientes:
-
-- **Inicial**: antes del segundo mes. De carácter diagnóstica y sin calificación.
-- **Parciales**: se realizarán un mínimo de dos por curso (primer y segundo trimestre). Incluyen calificaciones numéricas orientativas sobre la progresión del alumnado.
-- **Formación en Empresa (FE)**: antes del inicio de la FE. Evalúa la situación e idoneidad del alumnado para realizar esta fase.
-- **Ordinaria**: al final del curso. Se decide la promoción y titulación del alumnado.
-- **Extraordinaria**: destinada a la recuperación de módulos no superados.
-
-En cada sesión de evaluación, el tutor elaborará un acta que refleje los acuerdos y decisiones adoptadas de forma colegiada con el equipo docente.
-
-### Calificaciones 
-
-El alumnado podrá obtener las siguientes calificaciones:
-
-- **Escala del 1 al 10 sin decimales**: el redondeo o truncamiento de los decimales será a discreción del profesor que evalúa el módulo.
-
-- **Resultados de Aprendizaje (RA) en empresa**: serán calificados por la empresa como **“superado”** o **“no superado”**. En caso de “no superado”, el módulo podrá ser calificado por el profesor como **aprobado** o **suspenso**. Si se califica como suspenso, el informe deberá reflejar los RA en empresa que han sido superados y los que no.
-
-- **Nota final del Ciclo**: se calculará como la **media aritmética** de los módulos, excluyendo las convalidaciones sin nota.
-
-- **Mención honorífica**: se otorga a quienes obtienen un **10 en un módulo**, con un máximo del **10% del grupo**.
-
-- **Matrícula de honor**: se concede a quienes obtienen una **nota final de Ciclo igual o superior a 9**, con un máximo de **2 en el alumnado de Ciclo Medio** y **3 en Ciclo Superior**.
-
-- **Calificaciones parciales**: cada docente incluirá un comentario explicativo sobre la calificación parcial obtenida por el alumnado, indicando que esta es **provisional** y tiene carácter **orientativo** respecto al estado del proceso de aprendizaje.
-
-La ponderación de cada Resultado de Aprendizaje se indica en el Esquema General.
-
-
-
-### Evaluación por RA y diseño de Unidades de Programación (UP) 
-
-Cada módulo se divide en **Unidades de Programación (UP) o Situaciones de Aprendizaje (SA)** que agrupan Resultados de Aprendizaje y sus criterios de evaluación. A cada RA se le asigna un **peso evaluativo** y una **carga horaria** proporcional. 
-
-Las Unidades de Programación/Situaciones de Aprendizaje deben: 
-
-- Estar alineadas con las competencias del ciclo. 
-- Incluir actividades significativas y metodologías activas. 
-- Incorporar competencias para la empleabilidad (trabajo en equipo, comunicación, etc.). 
-- Incluir los contenidos necesarios alineados con los CE para conseguir los RA. 
-
-El equipo docente se compromente a facilitar en Aules un seguimiento del progreso de los RA por parte del alumnado.
-
-### Formación en empresa 
-
-En el caso de que el alumnado no supere los Resultados de Aprendizaje requeridos
-para la Formación en Empresa, se elaborará un programa educativo especifico
-para la recuperación de los RA no superados. Este programa se llevará a cabo
-en el periodo que el alumnado debería estar realizando la Formación en Empresa
-y **antes de la Convocatoria Ordinaria**.
-
-Cuando un estudiante de **primer curso no se incorpore a Formación en Empresa (FE)** por causa 
-justificada y acreditada, permanecerá en el centro educativo realizando actividades complementarias, 
-extraescolares y/o de refuerzo que le permitan acercarse al ámbito socio-laboral. 
-
-La fase de Formación en Empresa podrá acogerse a las condiciones que cada empresa 
-tenga establecidas con respecto al **teletrabajo**, de acuerdo con la normativa reguladora del mismo 
-
-Para realizar la Formación en Empresa es **requisito** que el alumno haya adquirido las 
-competencias de riesgos específicos y medidas de **Prevención de Riesgos Laborales**. 
-
-#### Superación de los RA's asociados a la FE
-
-Respecto a la evaluación, el tutor recabará el parecer de los instructores, que compartirá con los profesores del equipo docente. 
-
-Además, se reservarán unos días a final de curso, finalizado el período de Formación en Empresa, para que el alumnado muestre el trabajo realizado en la empresa al profesorado, y pueda responder a las cuestiones que se le planteen desde cada módulo. 
-
-Esta presentación se puede simultanear, en su caso, con la presentación del Proyecto Intermodular, de tal modo que bien sea por una vía o por otra quede constancia de que cada estudiante ha adquirido todos los conocimientos requeridos en los diversos módulos. 
-
-Para superar un RA dualizado se debe **superar tanto la parte impartida en el centro como la realizada en la empresa**. Se considerará *superado cuando la nota de cada una de las partes sea igual o mayor a 5*.
-
-La calificación de cada Resultado de Aprendizaje (RA) cuya evaluación se lleve a cabo de forma compartida entre la empresa y el instituto se determinará en función de la proporción de horas realizadas en cada uno de los ámbitos. En ambos casos, la valoración se expresará en una escala de 1 a 10, ponderándose posteriormente según el número de horas desarrolladas en la empresa y en el instituto, respectivamente.<br>
-
-- Si un RA se desarrolla en un 20 % en la empresa y en un 80 % en el instituto, la calificación final se obtendrá ponderando las notas asignadas en cada ámbito en esas proporciones.  _(Ejemplo: Nota empresa = 8, Nota instituto = 7 → Calificación final = (8 × 0,20) + (7 × 0,80) = 7,2)._
-
-- Si un RA se desarrolla íntegramente en la empresa (100 %), la calificación final coincidirá con la nota otorgada en la empresa.  _(Ejemplo: Nota empresa = 9 → Calificación final = 9)._  La nota del RA realizado en la empresa se obtendrá en función de la información del trabajo en la empresa y de la exposición que realizaran al acabar
-
-La nota del RA en su parte dualizada se obtendrá en función del seguimiento de la FE, así como de la presentación final del alumno.
-
-### Recuperación: 
-
-Para el alumnado que **no haya superado algún módulo o RA** se establecerá un **programa de recuperación individual** que se diseñará de forma diferenciada según periodos: 
-recuperación 
-
-- No superados en la **evaluación ordinaria de primero o segundo**: se podrán recuperar en la **convocatoria extraordinaria** .
-- **Alumnos de segundo curso con módulos no superados de primero**: Se diseñará para que el alumnado lo pueda realizar simultáneamente con los módulos de segundo **sin garantizarse su asistencia a clase**. Dispondrá de **convocatoria ordinaria y extraordinaria**. 
-
-
 
 ### Convocatoria Ordinaria
 
@@ -230,10 +425,4 @@ recuperación
 La convocatoria extraordinaria del módulo se ajustará lo decidido de manera conjunta y ha sido 
 descrito en el Proyecto Curricular de Ciclo Formativo.
 
-
-
-## Criterios y procedimientos para la evaluación del desarrollo de la programación y de la práctica docente. 
-
-La evaluación del propio proceso de *enseñanza-aprendizaje* contempladas en esta programación se fundamentan en los principios recogidos en el Proyecto Curricular del Ciclo Formativo (PCCF), que establece un marco común para garantizar una respuesta educativa inclusiva, equitativa y adaptada a las características del alumnado.
-
-## Esquema General de Digitalización aplicada a los sectores productivos (GS)
+---
