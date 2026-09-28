@@ -44,10 +44,8 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 | Obj| Competencia del Título |
 |----|----------------------------|
 | a | Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos. |
-| e | Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados. |
 | f | Integrar contenidos en la lógica de una aplicación web desarrollando componentes de acceso a datos adecuados a las especificaciones.|
 | i | Integrar componentes multimedia en el interfaz de una aplicación web realizando el análisis de interactividad, accesibilidad y usabilidad. |
-| j | Desarrollar e integrar componentes software en el entorno del servidor web empleando herramientas y lenguajes específicos para cumplir las especificaciones de la aplicación. |
 | v | Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y actuar con iniciativa profesional. |
 |<img width=100/>|<img width=500/>|
 
