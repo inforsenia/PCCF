@@ -65,8 +65,8 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
  Número | Título                                        | Inicio    | Fin       |
 |--------|-----------------------------------------------|-----------|-----------|
-| 01     | UP01: El reto de la Digitalización            | 09/09/2026| 30/09/2026|
-| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 01/10/2026| 31/10/2026|
+| 01     | UP01: El reto de la Digitalización            | 09/09/2026| 08/10/2026|
+| 02     | UP02: Las Tecnologías Habilitadoras Digitales | 15/10/2026| 31/10/2026|
 | 03     | UP03: La Computación en la Nube               | 01/11/2026| 30/11/2026|
 | 04     | UP04: La Inteligencia Artificial              | 01/12/2026| 19/12/2026|
 | 05     | UP05: Los Datos y su Protección               | 20/12/2026| 25/01/2027|
@@ -76,7 +76,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 1665
 *   **Duración:** 4 horas.
-*   **Temporalización:** 15/09/2025 – 13/10/2025.
+*   **Temporalización:** 09/09/2026 – 08/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -105,12 +105,11 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 *   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
 *   **Secuencia (Fases):**
-    * Tarea 1: Digitalización de la Gestión de Incidencias con Trello [Terraformadores](https://inforsenia.github.io/Terraformadores/v8/Practica1/Practica1)
+    * Tarea 1: Actividad de investigación y exposición sobre los contenidos del tema. 
     
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** 
-    * Trello
-    * IDE Codium
+    * Trello, Canva
 
 ### 5. Evaluación y Adaptación
 *   **Instrumentos:** Observación directa de la participación en las actividades y tareas.
@@ -122,7 +121,7 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 ### 1. Identificación
 *   **Código:** UP02 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 13/10/2025 – 27/10/2025.
+*   **Temporalización:** 15/10/2026 – 31/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
