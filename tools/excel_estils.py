@@ -9,6 +9,7 @@
 
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Protection, Side
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.worksheet.dimensions import DimensionHolder
 import os
 
 from pccf_utils import HOJA_INSTRUCCIONS
@@ -31,6 +32,7 @@ COL_COMP = "D"
 CENTRAT = Alignment(horizontal="center", vertical="center")
 AMPLE_COMP = 12
 COL_PERCENT_RA = "C"
+AMPLE_RA = 40              # RESULTAT D'APRENENTATGE (B)
 AMPLE_PERCENT_RA = 6.3
 # Les 4 columnes numèriques porten la capçalera girada 90° per a poder ser
 # estretes; les files 8-9 (capçalera fusionada) han de tindre alçada per al text.
@@ -213,13 +215,32 @@ def aplica_estils(ws, dual=True):
     if dual:
         _valida_fe(ws, ultima)
     protegeix(ws, dual, ultima)
+    aplica_amplades(ws, dual)
 
-    ws.column_dimensions[COL_COMP].width = AMPLE_COMP
-    ws.column_dimensions[COL_PERCENT_RA].width = AMPLE_PERCENT_RA
-    ws.column_dimensions[COL_CE].width = AMPLE_CE
-    ws.column_dimensions[_lletra(d["col_continguts"])].width = AMPLE_CONTINGUTS
-    for col in numeriques:
-        ws.column_dimensions[_lletra(col)].width = AMPLE_NUMERIQUES
+
+def es_dual(ws):
+    """Una fulla ja generada dualitza si té la columna HORES DUAL."""
+    return any(c.value == "HORES DUAL" for c in ws[FILA_CAPCALERA])
+
+
+def aplica_amplades(ws, dual):
+    """Amplàries de disseny de les columnes B..CONTINGUTS. Les fixen el
+    Quadre Resum del PDF (s'ajusta a l'ample de pàgina, així que l'amplària
+    total decidix la mida del text). excel-to-pdfs.py la torna a aplicar
+    abans d'exportar: les descarta si el docent les ha canviades (llibres
+    antics) i torna a mostrar les files/columnes amagades."""
+    d = disposicio(dual)
+    amplades = {COL_INI: AMPLE_RA, 3: AMPLE_PERCENT_RA, 4: AMPLE_COMP, 5: AMPLE_CE,
+                d["col_continguts"]: AMPLE_CONTINGUTS}
+    amplades.update({col: AMPLE_NUMERIQUES for col in d["numeriques"]})
+    # Dimensions noves (una per columna): openpyxl agrupa les columnes
+    # contigües d'igual amplària en un sol <col min max>, i modificar-ne una
+    # del mig deixaria definicions solapades.
+    ws.column_dimensions = DimensionHolder(worksheet=ws, default_factory=ws._add_column)
+    for col, ample in amplades.items():
+        ws.column_dimensions[_lletra(col)].width = ample
+    for rd in ws.row_dimensions.values():
+        rd.hidden = False
 
 
 def _valida_fe(ws, ultima):
@@ -266,8 +287,11 @@ def protegeix(ws, dual, ultima=None):
                 comp.protection = EDITABLE
     p = ws.protection
     p.sheet = True
-    p.formatRows = False      # es pot canviar l'alçada de files i l'amplària de columnes
-    p.formatColumns = False
+    # Es pot canviar l'alçada de les files (CONTINGUTS és una cel·la fusionada
+    # i Excel no l'ajusta sola), però no l'amplària de les columnes: fixa la
+    # mida del text al Quadre Resum del PDF (vore aplica_amplades).
+    p.formatRows = False
+    p.formatColumns = True
     p.selectLockedCells = False
     p.selectUnlockedCells = False
     contrasenya = os.environ.get("EXCEL_PROTECCIO_PASSWORD")

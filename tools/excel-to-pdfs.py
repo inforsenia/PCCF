@@ -6,6 +6,9 @@ import os
 import shutil
 from openpyxl import load_workbook
 from openpyxl.styles import Font
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from excel_estils import aplica_amplades, es_dual
 import subprocess
 import os
 import warnings
@@ -20,6 +23,8 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
         print(" * Hoja no encontrada : "+str(ke))
         return
     ws.protection.sheet = False  # la fulla del docent està protegida (excel_estils.protegeix)
+    # Amplàries de disseny i res amagat, encara que el docent les haja canviat
+    aplica_amplades(ws, es_dual(ws))
 
     # Crear un nuevo libro y copiar solo el rango deseado
     nuevo_wb = wb.copy_worksheet(ws)
