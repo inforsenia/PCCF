@@ -299,8 +299,8 @@ INSTRUCCIONS = [
     ("text", "El report de les Programacions avisa si la suma dels % RA no és 100. Per als mòduls que dualitzen, "
              "si cap criteri té C/E, si les hores dual són 0 o si hi ha criteris marcats sense hores (o hores sense "
              "marca), el mòdul consta com a pendent i la coordinació de Formació en Empresa en rep l'avís."),
-    ("text", "Els mòduls que no dualitzen (Digitalització, Sostenibilitat, IPO, Projecte intermodular i les "
-             "optatives) no tenen les columnes REQUISIT FE ni HORES DUAL."),
+    ("text", "Els mòduls que no dualitzen (Digitalització, Sostenibilitat, IPO, Projecte intermodular, les "
+             "optatives i els del curs d'especialització) no tenen les columnes REQUISIT FE ni HORES DUAL."),
 ]
 
 

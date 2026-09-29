@@ -186,6 +186,7 @@
             },
             "horas": "40",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -302,6 +303,7 @@
             },
             "horas": "90",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -399,6 +401,7 @@
             },
             "horas": "210",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -496,6 +499,7 @@
             },
             "horas": "55",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "b",
@@ -613,6 +617,7 @@
             },
             "horas": "75",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "b",
