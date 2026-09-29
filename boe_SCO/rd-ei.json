@@ -172,6 +172,7 @@
                 }
             },
             "horas": "266",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1028_3": "Programar, organitzar, realitzar i avaluar processos d'intervenció educativa de centre i de grup d'infants de zero a tres anys."
             },
@@ -282,6 +283,7 @@
                 }
             },
             "horas": "166",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1029_3": "Desenvolupar programes d'adquisició i entrenament en hàbits d'autonomia i salut, així com altres programes d'intervenció educativa amb infants de zero a tres anys en col·laboració amb la família i altres professionals."
             },
@@ -371,6 +373,7 @@
                 }
             },
             "horas": "90",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1030_3": "Promoure i implementar situacions de joc com a eix de l'activitat i del desenvolupament infantil."
             },
@@ -463,6 +466,7 @@
                 }
             },
             "horas": "166",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1031_3": "Desenvolupar els recursos expressius i comunicatius de l'infant a través del cos, el moviment, el ritme, la plàstica i altres activitats."
             },
@@ -571,6 +575,7 @@
                 }
             },
             "horas": "192",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1033_3": "Definir, seqüenciar i avaluar aprenentatges, interpretant-los en el context del desenvolupament infantil de zero a sis anys."
             },
@@ -699,6 +704,7 @@
                 }
             },
             "horas": "85",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -795,6 +801,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1027_3": "Establir i mantenir relacions fluides amb la comunitat educativa i coordinació amb les famílies, el personal del centre educatiu i amb altres professionals."
             },
@@ -911,6 +918,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -992,6 +1000,7 @@
                 }
             },
             "horas": "40",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [],
             "CompetenciasTitulo": []
@@ -1041,6 +1050,7 @@
                 }
             },
             "horas": "40",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "n",
@@ -1125,6 +1135,7 @@
                 }
             },
             "horas": "68",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -1230,6 +1241,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1327,6 +1339,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1371,6 +1384,7 @@
                 }
             },
             "horas": "1",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

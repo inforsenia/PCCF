@@ -202,6 +202,7 @@
                 }
             },
             "horas": "133",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1016_2": "Preparar i donar suport a les intervencions d'atenció a les persones i al seu entorn en l'àmbit institucional indicades per l'equip interdisciplinari."
             },
@@ -288,6 +289,7 @@
                 }
             },
             "horas": "166",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "p",
@@ -364,6 +366,7 @@
                 }
             },
             "horas": "133",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -423,6 +426,7 @@
                 }
             },
             "horas": "130",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
@@ -510,6 +514,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
                 "UC0250_2": "Desenvolupar intervencions d'atenció psicosocial domiciliària dirigides a persones amb necessitats d'atenció sociosanitària."
@@ -636,6 +641,7 @@
                 }
             },
             "horas": "192",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
             },
@@ -696,6 +702,7 @@
                 }
             },
             "horas": "115",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
@@ -755,6 +762,7 @@
                 }
             },
             "horas": "50",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
                 "UC1018_2": "Desenvolupar intervencions d'atenció sociosanitària dirigides a persones dependents en l'àmbit institucional.",
@@ -849,6 +857,7 @@
                 }
             },
             "horas": "200",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC_1423_2": "Atendre i gestionar les trucades entrants del servei de teleassistència.",
                 "UC_1424_2": "Emetre i gestionar les trucades sortints del servei de teleassistència.",
@@ -905,6 +914,7 @@
                 }
             },
             "horas": "35",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "k"
@@ -983,6 +993,7 @@
                 }
             },
             "horas": "30",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
@@ -1070,6 +1081,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -1161,6 +1173,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -1239,6 +1252,7 @@
                 }
             },
             "horas": "32",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1332,6 +1346,7 @@
                 }
             },
             "horas": "32",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

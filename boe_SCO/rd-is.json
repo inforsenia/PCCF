@@ -221,6 +221,7 @@
                 }
             },
             "horas": "70",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
@@ -332,6 +333,7 @@
                 }
             },
             "horas": "115",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1034_3": "Gestionar la informació sobre els recursos sociolaborals i formatius i col·laborar en l'anàlisi de llocs de treball per a la inserció sociolaboral de persones amb discapacitat.",
                 "UC1035_3": "Realitzar les intervencions dirigides a l'entrenament per a l'adquisició i desenvolupament d'habilitats sociolaborals en les persones amb discapacitat.",
@@ -453,6 +455,7 @@
                 }
             },
             "horas": "80",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1038_3": "Identificar i concretar les característiques i necessitats del context social de la intervenció."
@@ -549,6 +552,7 @@
                 }
             },
             "horas": "128",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1039_3": "Prevenir conflictes entre diferents persones, actors i col·lectius socials.",
                 "UC1040_3": "Organitzar i implementar el procés de gestió de conflictes.",
@@ -638,6 +642,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1427_3": "Executar, en col·laboració amb el tutor/a i/o amb l'equip interdisciplinari del centre educatiu, els programes educatius de l'alumnat amb necessitats educatives especials (ACNEE) a la seua aula de referència.",
                 "UC1428_3": "Implementar els programes d'autonomia i higiene personal en l'assec de l'alumnat amb necessitats educatives especials (ACNEE), participant amb l'equip interdisciplinari del centre educatiu."
@@ -763,6 +768,7 @@
                 }
             },
             "horas": "192",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social."
             },
@@ -867,6 +873,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0254_3": "Establir, adaptar i aplicar sistemes alternatius de comunicació."
             },
@@ -971,6 +978,7 @@
                 }
             },
             "horas": "133",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
                 "UC1026_3": "Incorporar la perspectiva de gènere en els projectes d'intervenció social."
@@ -1087,6 +1095,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "m",
@@ -1188,6 +1197,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1279,6 +1289,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1323,6 +1334,7 @@
                 }
             },
             "horas": "1",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
