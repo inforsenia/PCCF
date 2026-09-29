@@ -1,6 +1,6 @@
 \newpage
 
-# Programación didáctica: Módulo Sostenibilidad aplicada al sistema productivo
+# Programación didáctica: Módulo 1708190 — Sostenibilidad aplicada al sistema productivo (GM) (2026-2027)
 
 ## Datos identificativos y contextualización del módulo. 
 
@@ -28,10 +28,10 @@ Los **Resultados de Aprendizaje** relativos al módulo de Sostenibilidad aplicad
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Desafios Ecosociales            | 11/09/2025| 30/10/2025|
-| 02     | UP02: ODS y Empresas                  | 06/11/2025| 27/11/2025|
-| 03     | UP03: Planes de Sostenibilidad        | 04/12/2025| 05/03/2026|
-| 04     | UP04: Proyectos                       | 12/03/2026| 04/06/2026|
+| 01     | UP01: ASPECTOS ASG AMBIENTALES, SOCIALES Y DE GOBERNANZA. ODS            | 14/09/2026| 19/10/2026|
+| 02     | UP02: RETOS AMBIENTALES Y SOCIALES DE LA SOCIEDAD ACTUAL                  | 02/11/2026| 30/11/2026|
+| 03     | UP03: SOSTENIBILIDAD EN EL DESEMPEÑO PROFESIONAL Y PERSONAL. ECONOMÍA CIRCULAR        | 07/12/2026| 08/02/2027|
+| 04     | UP04: ACTIVIDADES SOSTENIBLES. PLAN DE SOSTENIBILIDAD                       | 15/02/2027| 10/04/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
