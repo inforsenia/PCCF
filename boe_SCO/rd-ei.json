@@ -1354,6 +1354,173 @@
                 "x",
                 "y"
             ]
+        },
+        "1665": {
+            "nombre": "Digitalització aplicada als sectors productius (GS)",
+            "creditos": "3",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Analitza el concepte de digitalització i la seua repercusió en els sectors productius tenint en compte l'activitat de l'empresa i identificant entorns IT (Information Technology: tecnologia de la informació) i OT (Operation Technology: tecnologia d'operació) característics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit en què consisteix el concepte de digitalització.",
+                        "b": "S'ha relacionat la implantació de la tecnologia digital amb l'organització de les empreses.",
+                        "c": "S'han establert les diferències i semblances entre els entorns IT i OT.",
+                        "d": "S'han identificat els departaments típics de les empreses que poden constituir entorns IT.",
+                        "e": "S'han seleccionat les tecnologies típiques de la digitalització en planta i en negoci.",
+                        "f": "S'ha analitzat la importància de la connexió entre entorns IT i OT.",
+                        "g": "S'han analitzat els avantatges de digitalitzar una empresa industrial d'extrem a extrem."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza les tecnologies habilitadores digitals necessàries per a l'adequació/transformació de les empreses a entorns digitals descrivint les seues característiques i aplicacions.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les principals tecnologies habilitadores digitals.",
+                        "b": "S'han relacionat les THD amb el desenvolupament de productes i serveis.",
+                        "c": "S'ha relacionat la importància de les THD amb l'economia sostenible i eficient.",
+                        "d": "S'han identificat nous mercats generats per les THD.",
+                        "e": "S'ha analitzat la implicació de THD tant en la part de negoci com en la part de planta.",
+                        "f": "S'han identificat les millores produïdes a causa de la implantació de les tecnologies habilitadores en relació amb els entorns IT i OT.",
+                        "g": "S'ha elaborat un informe que relacione les tecnologies amb les seues característiques i àrees d'aplicació."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Identifica sistemes basats en cloud/núvol i la seua influència en el desenvolupament dels sistemes digitals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents nivells del cloud/núvol.",
+                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres)",
+                        "c": "S'ha descrit el concepte d'edge computing i la seua relació amb el cloud/núvol.",
+                        "d": "S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
+                        "e": "S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica aplicacions de la IA (intel·ligència artificial) en entorns del sector on està enquadrat el títol descrivint les millores implícites en la seua implementació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la importància de la IA en l'automatització de processos i la seua optimització.",
+                        "b": "S'ha relacionat la IA amb la recollida massiva de dades (Big Data) i el seu tractament (anàlisi) amb la rendabilitat de les empreses.",
+                        "c": "S'ha valorat la importància present i futura de la IA.",
+                        "d": "S'han identificat els sectors amb implantació més rellevant d'IA.",
+                        "e": "S'han identificat els llenguatges de programació en IA.",
+                        "f": "S'ha descrit com influix la IA en el sector del títol."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Avalua la importància de les dades, així com la seua protecció en una economia digital globalitzada, definint sistemes de seguretat i ciberseguretat tant a nivell d'equip/sistema, com globals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert la diferència entre dada i informació.",
+                        "b": "S'ha descrit el cicle de vida de la dada.",
+                        "c": "S'ha identificat la relació entre Big Data, anàlisi de dades, machine/ deep learning i intel·ligència artificial.",
+                        "d": "S'han descrit les característiques que defineixen Big Data.",
+                        "e": "S'han descrit les etapes típiques de la ciència de dades i la seua relació en el procés.",
+                        "f": "S'han descrit els procediments d'emmagatzematge de dades en el cloud/núvol.",
+                        "g": "S'ha descrit la importància del cloud computing.",
+                        "h": "S'han identificat els principals objectius de la ciència de dades en les diferents empreses.",
+                        "i": "S'ha valorat la importància de la seguretat i la seua regulació en relació amb les dades.",
+                        "j": "S'ha definit tipus de mètodes d’autenticació segurs (contrasenyes, biomètrics, entre altres).",
+                        "k": "S’han procedimentat plans de restauració davant de desastres (còpies de seguretat, desconnexió d’equips importants, entre altres).",
+                        "l": "S’han identificat les amenaces més importants dins dels llocs de treball com ara phishing, ransomware i smishing, entre altres.",
+                        "m": "S’han definit mesures de prevenció i protecció com ara antivirus o tallafocs, entre altres."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Desenvolupa un projecte de transformació digital d'una empresa d'un sector relacionat amb el títol, tenint en compte els canvis que s'han de produir en funció dels objectius de l'empresa.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els objectius estratègics de l'empresa.",
+                        "b": "S'han identificat i alineat les àrees de producció/negoci i de comunicacions.",
+                        "c": "S'han identificat les àrees susceptibles de ser digitalitzades.",
+                        "d": "S'ha analitzat l'encaix de AD (àrees digitalitzades entre si i amb les que no ho estan).",
+                        "e": "S'han tingut en compte les necessitats presents i futures de l'empresa.",
+                        "f": "S'han relacionat cadascuna de les àrees amb la implantació de les tecnologies.",
+                        "g": "S'han analitzat les possibles bretxes de seguretat en cadascuna de les àrees.",
+                        "h": "S'ha definit el tractament de les dades i la seua anàlisi.",
+                        "i": "S'ha tingut en compte la integració entre dades, aplicacions, plataformes que les suporten, entre altres.",
+                        "j": "S'han documentat els canvis realitzats en funció de l'estratègia.",
+                        "k": "S'ha tingut en compte la idoneïtat dels recursos humans."
+                    }
+                }
+            },
+            "horas": "34",
+            "curs": 2,
+            "dualitza": false,
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
+        },
+        "1708": {
+            "nombre": "Sostenibilitat aplicada al sistema productiu",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a la seua consecució.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit el concepte de sostenibilitat, establint els marcs internacionals associats al desenvolupament sostenible.",
+                        "b": "S'han identificat les qüestions ambientals, socials i de governança que influeixen en el desenvolupament sostenible de les organitzacions empresarials.",
+                        "c": "S'han relacionat els Objectius de Desenvolupament Sostenible ODS, amb la seua importància per a la consecució de l'Agenda 2030.",
+                        "d": "S'ha analitzat la importància d'identificar els aspectes ASG més rellevants per als grups d'interès de les organitzacions relacionant-los amb els riscos i oportunitats que suposen per a la pròpia organització.",
+                        "e": "S'han identificat els principals estàndards de mètriques per a l'avaluació del rendiment en sostenibilitat i el seu paper en la rendició de comptes que marca la legislació vigent i les futures regulacions en desenvolupament.",
+                        "f": "S'ha descrit la inversió socialment responsable i el paper dels analistes, inversors, agències i índexs de sostenibilitat en el foment de la sostenibilitat."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza els reptes ambientals i socials als quals s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per a minimitzar-los.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals reptes ambientals i socials.",
+                        "b": "S'han relacionat els reptes ambientals i socials amb el desenvolupament de l'activitat econòmica.",
+                        "c": "S'ha analitzat l'efecte dels impactes ambientals i socials sobre les persones i els sectors productius.",
+                        "d": "S'han identificat les mesures i accions encaminades a minimitzar els impactes ambientals i socials.",
+                        "e": "S'ha analitzat la importància d'establir aliances i treballar de manera transversal i coordinada per a abordar amb èxit els reptes ambientals i socials."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Estableix l'aplicació de criteris de sostenibilitat en el rendiment professional i personal, identificant els elements necessaris.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els ODS més rellevants per a l'activitat professional que realitza.",
+                        "b": "S'han analitzat els riscos i oportunitats que representen els ODS.",
+                        "c": "S'han identificat les accions necessàries per a atendre alguns dels reptes ambientals i socials des de l'activitat professional i l'entorn personal."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'han aplicat principis d'ecodisseny.",
+                        "e": "S'ha analitzat el cicle de vida del producte.",
+                        "f": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza activitats sostenibles minimitzant l'impacte de les mateixes en el medi ambient.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'ha avaluat l'impacte de les activitats personals i professionals.",
+                        "e": "S'han aplicat principis d'ecodisseny.",
+                        "f": "S'han aplicat estratègies sostenibles.",
+                        "g": "S'ha analitzat el cicle de vida del producte.",
+                        "h": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
+                        "i": "S'ha aplicat la normativa ambiental."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza un pla de sostenibilitat d'una empresa del sector, identificant els seus grups d'interès, els aspectes ASG materials i justificant accions per a la seua gestió i mesura.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals grups d'interès de l'empresa.",
+                        "b": "S'han analitzat els aspectes ASG materials, les expectatives dels grups d'interès i la importància dels aspectes ASG en relació amb els objectius empresarials.",
+                        "c": "S'han definit accions encaminades a minimitzar els impactes negatius i aprofitar les oportunitats que plantegen els principals aspectes ASG identificats.",
+                        "d": "S'han determinat les mètriques d'avaluació del rendiment de l'empresa d'acord amb els estàndards de sostenibilitat més àmpliament utilitzats.",
+                        "e": "S'ha elaborat un informe de sostenibilitat amb el pla i els indicadors proposats."
+                    }
+                }
+            },
+            "horas": "34",
+            "curs": 2,
+            "dualitza": false,
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         }
     }
 }

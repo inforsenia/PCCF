@@ -1343,6 +1343,302 @@
             "ObjetivosGenerales": [
                 "a"
             ]
+        },
+        "0179": {
+            "nombre": "Anglés Professional (GS)",
+            "creditos": "4",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Comprèn informació, de índole professional, acadèmica i quotidiana, continguda en tot tipus de discursos orals, emesos per qualsevol mitjà de comunicació en llengua estàndard, interpretant amb precisió el contingut del missatge.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la idea principal de missatges en llengua estàndard relacionats amb la vida social, professional o acadèmica.",
+                        "b": "S'ha reconegut la finalitat de missatges directes o emesos en qualsevol suport en llengua estàndard.",
+                        "c": "S'ha extret informació específica continguda en diferents discursos orals en llengua estàndard, relacionada amb la vida social, professional o acadèmica.",
+                        "d": "S'ha identificat el punt de vista i l'actitud del parlant.",
+                        "e": "S'ha identificat el fil argumental de missatges orals i determinat els rols que apareixen en dits missatges.",
+                        "f": "S'han comprès adequadament missatges en llengua estàndard en ambients amb contaminació acústica.",
+                        "g": "S'han extret les idees principals de conferències, xerrades i informes, i altres formes de presentació acadèmica i professional, lingüísticament complexes.",
+                        "h": "S'ha pres consciència de la importància de comprendre globalment un missatge sense entendre tots i cadascun dels elements del mateix."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Comprèn missatges escrits, de naturalesa professional, acadèmica i quotidiana, de relativa dificultat, analitzant de forma comprensible el seu contingut.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la idea principal de textos específics del seu àmbit social, professional o acadèmic.",
+                        "b": "S'ha reconegut la finalitat de diferents textos escrits en qualsevol suport, en llengua estàndard i relacionats amb l'activitat professional.",
+                        "c": "S'ha extret informació específica de textos, de diferent naturalesa, relatius a la seua professió, i continguts en diferents suports.",
+                        "d": "S'ha pres consciència de la importància de comprendre globalment un text sense entendre tots i cadascun dels elements del mateix.",
+                        "e": "S'han llegit i comprès, de manera autònoma, textos relacionats amb el sector amb la velocitat i estil de lectura pròpia del nivell competencial.",
+                        "f": "S'ha interpretat la correspondència relativa a la seua especialitat, captant fàcilment el significat essencial.",
+                        "g": "S'han interpretat textos extensos, i d'una certa complexitat, relacionats o no amb la seua especialitat, podent realitzar diverses lectures del mateix.",
+                        "h": "S'ha identificat amb rapidesa el contingut i la importància de notícies, articles i informes sobre una ampla sèrie de temes professionals.",
+                        "i": "S'han interpretat instruccions, amb diferents nivells de dificultat, i missatges tècnics rebuts a través de suports digitals.",
+                        "j": "S'han traduït textos d'una certa complexitat, utilitzant material de suport en cas necessari."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Produeix missatges orals clars i ben estructurats, analitzant el contingut de la situació i adaptant-se al registre lingüístic de l'interlocutor.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han emés missatges generals propis del sector i de la vida quotidiana, utilitzant nexes i estratègies d'interacció.",
+                        "b": "S'ha intercanviat amb fluïdesa informació específica i detallada utilitzant estructures d'una complexitat acord al nivell competencial.",
+                        "c": "S'han seleccionat i aplicat els registres adequats per a l'emissió del missatge, així com protocols i normes de relació social propis del país.",
+                        "d": "S'han realitzat presentacions, ben estructurades, sobre temes del seu àmbit professional, fent ús dels protocols establerts.",
+                        "e": "S'ha utilitzat correctament la terminologia de la professió.",
+                        "f": "S'ha descrit i seqüenciat oralment un procés de treball de la seua competència.",
+                        "g": "S'ha sol·licitat la reformulació del discurs o part del mateix quan s'ha considerat necessari.",
+                        "h": "S'ha interaccionat espontàniament, adoptant un nivell de formalitat adequat a les circumstàncies.",
+                        "i": "S'ha expressat amb fluïdesa, precisió i eficàcia sobre una ampla sèrie de temes generals, acadèmics, professionals o d'oci, marcant amb claredat la relació entre les idees.",
+                        "j": "S'han expressat i defensat punts de vista amb claredat, proporcionant explicacions i arguments adequats.",
+                        "k": "S'ha respost a preguntes relatives a la seua vida socio-professional, incloses les pròpies d'una entrevista de treball."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Redacta documents i informes, propis del sector o de la vida acadèmica i quotidiana, relacionant els recursos lingüístics amb el propòsit dels mateixos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han escrit textos clars i detallats sobre una varietat de temes relacionats amb la seua professió, sintetitzant i avaluant informació i arguments procedents de diverses fonts.",
+                        "b": "S'ha complert documentació específica del seu camp professional, utilitzant vocabulari específic i protocols i normes de relació social propis del país.",
+                        "c": "S'ha organitzat la informació amb correcció, precisió, amb cohesió i coherència, sol·licitant i/o facilitant informació de tipus general o detallada.",
+                        "d": "S'han complert textos mitjançant suports visuals i claus lingüístiques.",
+                        "e": "S'han elaborat informes, destacant els aspectes significatius i oferint detalls rellevants que servisquen de suport.",
+                        "f": "S'han escrit cartes, formals i informals, emprant les fórmules de cortesia establertes i el vocabulari específic per a l'elaboració de les mateixes.",
+                        "g": "S'han resumit diferents tipus de documents escrits, utilitzant els seus propis recursos lingüístics.",
+                        "h": "S'han utilitzat les fórmules de cortesia pròpies del document que es va a elaborar."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Aplica actituds i comportaments professionals en situacions de comunicació, descrivint les relacions típiques característiques del país de la llengua estrangera.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit els trets més significatius de les costums i usos de la comunitat on es parla la llengua estrangera.",
+                        "b": "S'han descrit els protocols i normes de relació social propis del país.",
+                        "c": "S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+                        "d": "S'ha identificat els aspectes socio-professionals propis del sector, en qualsevol tipus de text.",
+                        "e": "S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera.",
+                        "f": "S'han reconegut els marcadors lingüístics de la procedència regional."
+                    }
+                }
+            },
+            "horas": "67",
+            "curs": 1,
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
+        },
+        "0020": {
+            "nombre": "Primers auxilis",
+            "creditos": "4",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Realitza l'avaluació inicial de l'assistència en una situació d'emergència amb xiquets i xiquetes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han reconegut les característiques de les situacions d'urgència.",
+                        "b": "S'han identificat els protocols d'actuació en emergències.",
+                        "c": "S'han reconegut els signes de compromís vital.",
+                        "d": "S'han prioritzat les intervencions segons els criteris establerts.",
+                        "e": "S'han aplicat els protocols d'actuació per a la petició d'ajuda als serveis d'emergència."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Aplica tècniques de suport vital bàsic, relacionant-les amb els objectius de l'assistència a realitzar.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les tècniques d'obertura de la via aèria.",
+                        "b": "S'han aplicat tècniques de suport ventilatori en xiquets i xiquetes.",
+                        "c": "S'han aplicat tècniques de suport circulatori.",
+                        "d": "S'ha realitzat la desobstrucció de la via aèria.",
+                        "e": "S'ha aplicat la posició de seguretat a una persona inconscient."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Aplica tècniques d'immobilització en cas de traumatismes.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els tipus de traumatismes més freqüents en la infància.",
+                        "b": "S'han descrit les tècniques d'immobilització segons el tipus de traumatisme.",
+                        "c": "S'han aplicat tècniques d'immobilització.",
+                        "d": "S'han identificat les situacions que requereixen trasllat."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Aplica tècniques de suport en diferents situacions d'urgència.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les situacions d'urgència més freqüents en xiquets i xiquetes.",
+                        "b": "S'han descrit les característiques de les ferides i hemorràgies i les tècniques d'actuació.",
+                        "c": "S'han descrit les característiques de les cremades i les tècniques d'actuació.",
+                        "d": "S'han descrit les característiques de les intoxicacions i les tècniques d'actuació.",
+                        "e": "S'han aplicat les tècniques en cada tipus de situació."
+                    }
+                }
+            },
+            "horas": "67",
+            "curs": 2,
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales": [],
+            "CompetenciasTitulo": []
+        },
+        "1665": {
+            "nombre": "Digitalització aplicada als sectors productius (GS)",
+            "creditos": "3",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Analitza el concepte de digitalització i la seua repercusió en els sectors productius tenint en compte l'activitat de l'empresa i identificant entorns IT (Information Technology: tecnologia de la informació) i OT (Operation Technology: tecnologia d'operació) característics.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit en què consisteix el concepte de digitalització.",
+                        "b": "S'ha relacionat la implantació de la tecnologia digital amb l'organització de les empreses.",
+                        "c": "S'han establert les diferències i semblances entre els entorns IT i OT.",
+                        "d": "S'han identificat els departaments típics de les empreses que poden constituir entorns IT.",
+                        "e": "S'han seleccionat les tecnologies típiques de la digitalització en planta i en negoci.",
+                        "f": "S'ha analitzat la importància de la connexió entre entorns IT i OT.",
+                        "g": "S'han analitzat els avantatges de digitalitzar una empresa industrial d'extrem a extrem."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza les tecnologies habilitadores digitals necessàries per a l'adequació/transformació de les empreses a entorns digitals descrivint les seues característiques i aplicacions.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les principals tecnologies habilitadores digitals.",
+                        "b": "S'han relacionat les THD amb el desenvolupament de productes i serveis.",
+                        "c": "S'ha relacionat la importància de les THD amb l'economia sostenible i eficient.",
+                        "d": "S'han identificat nous mercats generats per les THD.",
+                        "e": "S'ha analitzat la implicació de THD tant en la part de negoci com en la part de planta.",
+                        "f": "S'han identificat les millores produïdes a causa de la implantació de les tecnologies habilitadores en relació amb els entorns IT i OT.",
+                        "g": "S'ha elaborat un informe que relacione les tecnologies amb les seues característiques i àrees d'aplicació."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Identifica sistemes basats en cloud/núvol i la seua influència en el desenvolupament dels sistemes digitals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els diferents nivells del cloud/núvol.",
+                        "b": "S'han identificat les principals funcions del cloud/núvol (processament de dades, intercanvi d'informació, execució d'aplicacions, entre altres)",
+                        "c": "S'ha descrit el concepte d'edge computing i la seua relació amb el cloud/núvol.",
+                        "d": "S'han definit els conceptes de fog i mist i les seues zones d'aplicació en el conjunt.",
+                        "e": "S'han identificat els avantatges que proporciona la utilització del cloud/núvol en els sistemes connectats."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Identifica aplicacions de la IA (intel·ligència artificial) en entorns del sector on està enquadrat el títol descrivint les millores implícites en la seua implementació.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha identificat la importància de la IA en l'automatització de processos i la seua optimització.",
+                        "b": "S'ha relacionat la IA amb la recollida massiva de dades (Big Data) i el seu tractament (anàlisi) amb la rendabilitat de les empreses.",
+                        "c": "S'ha valorat la importància present i futura de la IA.",
+                        "d": "S'han identificat els sectors amb implantació més rellevant d'IA.",
+                        "e": "S'han identificat els llenguatges de programació en IA.",
+                        "f": "S'ha descrit com influix la IA en el sector del títol."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Avalua la importància de les dades, així com la seua protecció en una economia digital globalitzada, definint sistemes de seguretat i ciberseguretat tant a nivell d'equip/sistema, com globals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha establert la diferència entre dada i informació.",
+                        "b": "S'ha descrit el cicle de vida de la dada.",
+                        "c": "S'ha identificat la relació entre Big Data, anàlisi de dades, machine/ deep learning i intel·ligència artificial.",
+                        "d": "S'han descrit les característiques que defineixen Big Data.",
+                        "e": "S'han descrit les etapes típiques de la ciència de dades i la seua relació en el procés.",
+                        "f": "S'han descrit els procediments d'emmagatzematge de dades en el cloud/núvol.",
+                        "g": "S'ha descrit la importància del cloud computing.",
+                        "h": "S'han identificat els principals objectius de la ciència de dades en les diferents empreses.",
+                        "i": "S'ha valorat la importància de la seguretat i la seua regulació en relació amb les dades.",
+                        "j": "S'ha definit tipus de mètodes d’autenticació segurs (contrasenyes, biomètrics, entre altres).",
+                        "k": "S’han procedimentat plans de restauració davant de desastres (còpies de seguretat, desconnexió d’equips importants, entre altres).",
+                        "l": "S’han identificat les amenaces més importants dins dels llocs de treball com ara phishing, ransomware i smishing, entre altres.",
+                        "m": "S’han definit mesures de prevenció i protecció com ara antivirus o tallafocs, entre altres."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Desenvolupa un projecte de transformació digital d'una empresa d'un sector relacionat amb el títol, tenint en compte els canvis que s'han de produir en funció dels objectius de l'empresa.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els objectius estratègics de l'empresa.",
+                        "b": "S'han identificat i alineat les àrees de producció/negoci i de comunicacions.",
+                        "c": "S'han identificat les àrees susceptibles de ser digitalitzades.",
+                        "d": "S'ha analitzat l'encaix de AD (àrees digitalitzades entre si i amb les que no ho estan).",
+                        "e": "S'han tingut en compte les necessitats presents i futures de l'empresa.",
+                        "f": "S'han relacionat cadascuna de les àrees amb la implantació de les tecnologies.",
+                        "g": "S'han analitzat les possibles bretxes de seguretat en cadascuna de les àrees.",
+                        "h": "S'ha definit el tractament de les dades i la seua anàlisi.",
+                        "i": "S'ha tingut en compte la integració entre dades, aplicacions, plataformes que les suporten, entre altres.",
+                        "j": "S'han documentat els canvis realitzats en funció de l'estratègia.",
+                        "k": "S'ha tingut en compte la idoneïtat dels recursos humans."
+                    }
+                }
+            },
+            "horas": "34",
+            "curs": 2,
+            "dualitza": false,
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
+        },
+        "1708": {
+            "nombre": "Sostenibilitat aplicada al sistema productiu",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica els aspectes ambientals, socials i de governança (ASG) relatius a la sostenibilitat tenint en compte el concepte de desenvolupament sostenible i els marcs internacionals que contribueixen a la seua consecució.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha descrit el concepte de sostenibilitat, establint els marcs internacionals associats al desenvolupament sostenible.",
+                        "b": "S'han identificat les qüestions ambientals, socials i de governança que influeixen en el desenvolupament sostenible de les organitzacions empresarials.",
+                        "c": "S'han relacionat els Objectius de Desenvolupament Sostenible ODS, amb la seua importància per a la consecució de l'Agenda 2030.",
+                        "d": "S'ha analitzat la importància d'identificar els aspectes ASG més rellevants per als grups d'interès de les organitzacions relacionant-los amb els riscos i oportunitats que suposen per a la pròpia organització.",
+                        "e": "S'han identificat els principals estàndards de mètriques per a l'avaluació del rendiment en sostenibilitat i el seu paper en la rendició de comptes que marca la legislació vigent i les futures regulacions en desenvolupament.",
+                        "f": "S'ha descrit la inversió socialment responsable i el paper dels analistes, inversors, agències i índexs de sostenibilitat en el foment de la sostenibilitat."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Caracteritza els reptes ambientals i socials als quals s'enfronta la societat, descrivint els impactes sobre les persones i els sectors productius i proposant accions per a minimitzar-los.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals reptes ambientals i socials.",
+                        "b": "S'han relacionat els reptes ambientals i socials amb el desenvolupament de l'activitat econòmica.",
+                        "c": "S'ha analitzat l'efecte dels impactes ambientals i socials sobre les persones i els sectors productius.",
+                        "d": "S'han identificat les mesures i accions encaminades a minimitzar els impactes ambientals i socials.",
+                        "e": "S'ha analitzat la importància d'establir aliances i treballar de manera transversal i coordinada per a abordar amb èxit els reptes ambientals i socials."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Estableix l'aplicació de criteris de sostenibilitat en el rendiment professional i personal, identificant els elements necessaris.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els ODS més rellevants per a l'activitat professional que realitza.",
+                        "b": "S'han analitzat els riscos i oportunitats que representen els ODS.",
+                        "c": "S'han identificat les accions necessàries per a atendre alguns dels reptes ambientals i socials des de l'activitat professional i l'entorn personal."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Proposa productes i serveis responsables tenint en compte els principis de l'economia circular.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'han aplicat principis d'ecodisseny.",
+                        "e": "S'ha analitzat el cicle de vida del producte.",
+                        "f": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza activitats sostenibles minimitzant l'impacte de les mateixes en el medi ambient.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha caracteritzat el model de producció i consum actual.",
+                        "b": "S'han identificat els principis de l'economia verda i circular.",
+                        "c": "S'han contrastat els beneficis de l'economia verda i circular davant del model clàssic de producció.",
+                        "d": "S'ha avaluat l'impacte de les activitats personals i professionals.",
+                        "e": "S'han aplicat principis d'ecodisseny.",
+                        "f": "S'han aplicat estratègies sostenibles.",
+                        "g": "S'ha analitzat el cicle de vida del producte.",
+                        "h": "S'han identificat els processos de producció i els criteris de sostenibilitat aplicats.",
+                        "i": "S'ha aplicat la normativa ambiental."
+                    }
+                },
+                "RA06": {
+                    "Resultado": "Analitza un pla de sostenibilitat d'una empresa del sector, identificant els seus grups d'interès, els aspectes ASG materials i justificant accions per a la seua gestió i mesura.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat els principals grups d'interès de l'empresa.",
+                        "b": "S'han analitzat els aspectes ASG materials, les expectatives dels grups d'interès i la importància dels aspectes ASG en relació amb els objectius empresarials.",
+                        "c": "S'han definit accions encaminades a minimitzar els impactes negatius i aprofitar les oportunitats que plantegen els principals aspectes ASG identificats.",
+                        "d": "S'han determinat les mètriques d'avaluació del rendiment de l'empresa d'acord amb els estàndards de sostenibilitat més àmpliament utilitzats.",
+                        "e": "S'ha elaborat un informe de sostenibilitat amb el pla i els indicadors proposats."
+                    }
+                }
+            },
+            "horas": "34",
+            "curs": 2,
+            "dualitza": false,
+            "UnidadesCompetenciaAcreditadas": {},
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         }
     }
 }
