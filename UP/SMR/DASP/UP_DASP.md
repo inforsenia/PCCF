@@ -1,7 +1,7 @@
 # PROGRAMACIÓN DIDÁCTICA: DIGITALIZACIÓN APLICADA A LOS SECTORES PRODUCTIVOS (GM)(CURSO 2025/2026)
 
 
-## Resumen de Unidades de Programación (Curso 2025-2026)
+## Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Título de la UP | Horas (Centro) | Temporalización |
 | :--- | :--- | :---: | :--- |
