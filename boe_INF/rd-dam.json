@@ -14,7 +14,7 @@
         "l": "Crear tutorials, manuals d'usuari, d'instal·lació, de configuració i d'administració, emprant eines específiques.",
         "m": "Empaquetar aplicacions per a la seua distribució preparant paquets auto instal·lables amb assistents incorporats.",
         "n": "Desenvolupar aplicacions multiprocés i multifil emprant llibreries i tècniques de programació específiques.",
-        "ñ": "Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació.",
+        "ny": "Desenvolupar aplicacions capaces d'oferir serveis en xarxa emprant mecanismes de comunicació.",
         "o": "Participar en la implantació de sistemes ERP-CRM avaluant la utilitat de cadascun dels seus mòduls.",
         "p": "Gestionar la informació emmagatzemada en sistemes ERP-CRM garantint la seua integritat.",
         "q": "Desenvolupar components personalitzats per a un sistema ERP-CRM atenent als requeriments.",
@@ -42,7 +42,7 @@
         "l",
         "m",
         "n",
-        "ñ",
+        "ny",
         "o",
         "p",
         "q",
@@ -72,7 +72,7 @@
         "l": 1,
         "m": 1,
         "n": 3,
-        "ñ": 3,
+        "ny": 3,
         "o": 1,
         "p": 2,
         "q": 3,
@@ -134,7 +134,7 @@
         "l": "Valorar i emprar eines específiques, atenent a l'estructura dels continguts, per crear tutorials, manuals d'usuari i altres documents associats a una aplicació.",
         "m": "Seleccionar i emprar tècniques i eines, avaluant la utilitat dels assistents d'instal·lació generats, per empaquetar aplicacions.",
         "n": "Analitzar i aplicar tècniques i llibreries específiques, simulant diferents escenaris, per desenvolupar aplicacions capaces d'oferir serveis en xarxa.",
-        "ñ": "Analitzar i aplicar tècniques i llibreries de programació, avaluant la seua funcionalitat per desenvolupar aplicacions multiprocés i multifil.",
+        "ny": "Analitzar i aplicar tècniques i llibreries de programació, avaluant la seua funcionalitat per desenvolupar aplicacions multiprocés i multifil.",
         "o": "Reconèixer l'estructura dels sistemes ERP-CRM, identificant la utilitat de cadascun dels seus mòduls, per participar en la seua implantació.",
         "p": "Realitzar consultes, analitzant i avaluant el seu abast, per gestionar la informació emmagatzemada en sistemes ERP-CRM.",
         "q": "Seleccionar i emprar llenguatges i eines, atenent als requeriments, per desenvolupar components personalitzats en sistemes ERP-CRM.",
@@ -744,7 +744,7 @@
                 "h",
                 "i",
                 "j",
-                "ñ",
+                "ny",
                 "o"
             ]
         },
@@ -831,8 +831,7 @@
                 "i",
                 "j",
                 "v",
-                "y",
-                "z"
+                "y"
             ],
             "ObjetivosGenerales": [
                 "e",
@@ -1177,7 +1176,7 @@
                 "l",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "s",
                 "t",
                 "w"
@@ -1192,7 +1191,7 @@
                 "l",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "s",
                 "t",
                 "w"
@@ -1286,7 +1285,7 @@
                 "j",
                 "l",
                 "n",
-                "ñ",
+                "ny",
                 "t",
                 "w"
             ],
@@ -1297,7 +1296,7 @@
                 "j",
                 "l",
                 "n",
-                "ñ",
+                "ny",
                 "t",
                 "w"
             ]
@@ -1578,8 +1577,7 @@
                 "i",
                 "j",
                 "v",
-                "y",
-                "z"
+                "y"
             ],
             "ObjetivosGenerales": [
                 "e",

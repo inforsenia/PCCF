@@ -133,7 +133,7 @@
         "l": "Detectar i analitzar canvis tecnològics per triar noves alternatives i mantenir-se actualitzat dins del sector.",
         "m": "Reconèixer i valorar incidències, determinant les seues causes i descrivint les accions correctores per resoldre-les.",
         "n": "Analitzar i descriure procediments de qualitat, prevenció de riscos laborals i mediambientals, assenyalant les accions a realitzar en els casos definits per actuar d'acord amb les normes estandarditzades.",
-        "ñ": "Valorar les activitats de treball en un procés productiu, identificant la seua aportació al procés global per aconseguir els objectius de la producció.",
+        "ny": "Valorar les activitats de treball en un procés productiu, identificant la seua aportació al procés global per aconseguir els objectius de la producció.",
         "o": "Identificar i valorar les oportunitats d'aprenentatge i ocupació, analitzant les ofertes i demandes del mercat laboral per gestionar la seua carrera professional.",
         "p": "Reconèixer les oportunitats de negoci, identificant i analitzant demandes del mercat per crear i gestionar una petita empresa.",
         "q": "Reconèixer els seus drets i deures com a agent actiu en la societat, analitzant el marc legal que regula les condicions socials i laborals per participar com a ciutadà democràtic."
@@ -292,9 +292,7 @@
                 "f",
                 "i",
                 "j",
-                "v",
-                "y",
-                "z"
+                "v"
             ],
             "ObjetivosGenerales": [
                 "e",
@@ -740,7 +738,7 @@
                 "l",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "r"
             ],
             "creditos": "-",
@@ -844,7 +842,7 @@
                 "l",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "p",
                 "r"
             ],
@@ -976,7 +974,7 @@
                 "k",
                 "l",
                 "m",
-                "ñ"
+                "ny"
             ],
             "CompetenciasTitulo": [
                 "a",
@@ -987,7 +985,7 @@
                 "l",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "p",
                 "q",
                 "r"
@@ -1195,7 +1193,7 @@
                 "g",
                 "j",
                 "m",
-                "ñ",
+                "ny",
                 "r"
             ],
             "creditos": "-",
@@ -1326,7 +1324,7 @@
                 "j",
                 "m",
                 "n",
-                "ñ",
+                "ny",
                 "q",
                 "r"
             ],
