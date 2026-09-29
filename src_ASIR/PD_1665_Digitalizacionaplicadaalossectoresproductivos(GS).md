@@ -1,6 +1,6 @@
 \newpage
 
-# Programación didáctica: Módulo Digitalización aplicada a los sectores productivos (GS)
+# Programación didáctica: Digitalización Aplicada a los Sectores Productivos (2026-2027)(GS)
 
 ## Datos identificativos y contextualización del módulo. 
 
@@ -64,13 +64,13 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Unidad Didáctica | Resultado de Aprendizaje (RA) | Horas estimadas | Fecha Inicio |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | **U.D. 1:** Digitalización en los sistemas productivos | **RA1** | 4 horas | 15 de septiembre de 2025 |
-| 2 | **U.D. 2:** Caracterización de tecnologías habilitadoras | **RA2** | 2 horas | 13 de octubre de 2025 |
-| 3 | **U.D. 3:** Computación en la nube | **RA3** | 2 horas | 27 de octubre de 2025 |
-| 4 | **U.D. 4:** Inteligencia artificial | **RA4** | 3 horas | 10 de noviembre de 2025 |
-| 5 | **U.D. 5:** Big data | **RA5** | 2 horas | 1 de diciembre de 2025 |
-| 6 | **U.D. 6:** Ciberseguridad | **RA5** | 2 horas | 12 de enero de 2026 |
-| 7 | **U.D. 7:** Proyecto de transformación digital | **RA6** | 2 horas | 26 de enero de 2026 |
+| 1 | **U.D. 1:** DIGITALIZACIÓN EN LOS SECTORES PRODUCTIVOS | **RA1** | 4 horas | 14 de septiembre de 2026 |
+| 2 | **U.D. 2:** Caracterización de tecnologías habilitadoras | **RA2** | 2 horas | 19 de octubre de 2026 |
+| 3 | **U.D. 3:** SISTEMAS CLOUD. COMPUTACIÓN EN LA NUBE | **RA3** | 2 horas | 2 de noviembre de 2026 |
+| 4 | **U.D. 4:** INTELIGENCIA ARTIFICIAL. APLICACIÓN EN EL SECTOR PRODUCTIVO | **RA4** | 3 horas | 16 de noviembre de 2026 |
+| 5 | **U.D. 5:** BIG DATA: EVALUACIÓN DE DATOS | **RA5** | 2 horas | 14 de diciembre de 2026 |
+| 6 | **U.D. 6:** CIBERSEGURIDAD | **RA5** | 2 horas | 11 de enero de 2027 |
+| 7 | **U.D. 7:** DESARROLLO DE UN PROYECTO DE TRANSFORMACIÓN DIGITAL | **RA6** | 2 horas | 25 de enero de 2027 |
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
