@@ -1,25 +1,25 @@
-# PROGRAMACIÓN DIDÁCTICA: DIGITALIZACIÓN APLICADA A LOS SECTORES PRODUCTIVOS (CURSO 2025/2026)
+# PROGRAMACIÓN DIDÁCTICA: DIGITALIZACIÓN APLICADA A LOS SECTORES PRODUCTIVOS (GM)(CURSO 2025/2026)
 
 
 ## Resumen de Unidades de Programación (Curso 2025-2026)
 
 | Código | Título de la UP | Horas (Centro) | Temporalización |
 | :--- | :--- | :---: | :--- |
-| **UP01** | **Desafío 1. Economía Circular** | 10 h total | 5h IES| 5h DUAL| 08/09/2025 – 08/10/2025 |
-| **UP02** | **Desafío 2. Almacenamiento en Cloud / nube** | 12 h total | 8h IES | 4h DUAL 09/10/2025 – 05/12/2025 |
-| **UP03** | **Desafío 3. Transformación Digital** | 4 h | 2h IES | 2h DUAL | 06/12/2025 – 16/12/2025 |
-| **UP04** | **Desafío 4. Plan de Digitalización** | 8 h | 4h IES | 4h DUAL |17/12/2025 – 16/02/2026 |
+| **UP01** | **Desafío 1. ECONOMÍA CIRCULAR Y LA 4ª REVOLUCIÓN INDUSTRIAL** | 10 h total | 5h IES| 5h DUAL| 15/09/2026 – 13/10/2026 |
+| **UP02** | **Desafío 2. CLOUD/NUBE Y SISTEMAS CONECTADOS** | 12 h total | 8h IES | 4h DUAL |21/10/2026 – 15/12/2026 |
+| **UP03** | **Desafío 3. SISTEMAS DE PRODUCCIÓN Y TRANSFORMACIÓN DIGITAL** | 4 h | 2h IES | 2h DUAL | 12/01/2027 – 19/01/2027 |
+| **UP04** | **Desafío 4. PLAN DE DIGITALIZACIÓN** | 8 h | 4h IES | 4h DUAL |26/01/2027 – 16/02/2027 |
 
 **Total horas en el centro:** 34 horas. de las cuales en el IES de imparten 19 y 15 en empresa
 
 
-## UP01: DESAFÍO 1. ECONOMÍA CIRCULAR
+## UP01: DESAFÍO 1. ECONOMÍA CIRCULAR Y LA 4ª REVOLUCIÓN INDUSTRIAL
 ### 1. Identificación
 *   **Código:** UP01
 *   **Título:** Desafío 1. Economía Circular
 *   **Módulo:** Digitalización aplicada a los sectores productivos
 *   **Duración:** 10 horas
-*   **Temporalización:** Del 08/09/2025 al 08/10/2025
+*   **Temporalización:** Del 15/09/2026 al 13/10/2026
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -63,12 +63,12 @@
 
 ---
 
-## UP02: DESAFÍO 2. ALMACENAMIENTO EN CLOUD / NUBE
+## UP02: DESAFÍO 2. CLOUD/NUBE Y SISTEMAS CONECTADOS
 ### 1. Identificación
 *   **Código:** UP02
 *   **Título:** Desafío 2. Almacenamiento en Cloud / nube
 *   **Duración:** 12 horas
-*   **Temporalización:** Del 09/10/2025 al 05/12/2025
+*   **Temporalización:** Del 21/10/2026 al 15/12/2026
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -101,12 +101,12 @@
 
 ---
 
-## UP03: DESAFÍO 3. TRANSFORMACIÓN DIGITAL
+## UP03: DESAFÍO 3. SISTEMAS DE PRODUCCIÓN Y TRANSFORMACIÓN DIGITA
 ### 1. Identificación
 *   **Código:** UP03
 *   **Título:** Desafío 3. Transformación Digital
 *   **Duración:** 4 horas
-*   **Temporalización:** Del 06/12/2025 al 16/12/2025
+*   **Temporalización:** Del 12/01/2027 al 19/01/2027
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -147,7 +147,7 @@
 *   **Código:** UP04
 *   **Título:** Desafío 4. Plan de Digitalización
 *   **Duración:** 8 horas
-*   **Temporalización:** Del 17/12/2025 al 16/02/2026
+*   **Temporalización:** Del 26/01/2027 al 16/02/2027
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
