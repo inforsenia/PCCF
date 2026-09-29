@@ -43,6 +43,9 @@ services:
       - SMTP_FROM=${SMTP_FROM:-}
       - SMTP_REPLY_TO=${SMTP_REPLY_TO:-}
       - SMTP_USE_TLS=${SMTP_USE_TLS:-1}
+      # Contrasenya de protecció de les fulles dels libro_*.xlsx generats
+      # (tools/excel_estils.py). Buida = protecció sense contrasenya.
+      - EXCEL_PROTECCIO_PASSWORD=${EXCEL_PROTECCIO_PASSWORD:-}
       - DEPARTMENT_EMAILS_FILE=/data/department_emails.json
       - CURS_ACTUAL_FILE=/data/curs_actual.json
     networks:
