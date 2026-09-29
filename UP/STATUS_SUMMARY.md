@@ -1,6 +1,6 @@
 # Resumen de Estado de Módulos
 
-> 🕒 Última actualización: **29/09/2026 a las 15:03:53 UTC**
+> 🕒 Última actualización: **29/09/2026 a las 15:04:23 UTC**
 
 ---
 
@@ -50,7 +50,7 @@
 
 | Módulo | Estado |
 |--------|--------|
-| BD | pendiente |
+| BD | **completado** |
 | DASP | pendiente |
 | DAW | **completado** |
 | DIW | pendiente |
@@ -87,4 +87,4 @@
 
 ---
 
-_Generado automáticamente el 29/09/2026 a las 15:03:53 UTC_
+_Generado automáticamente el 29/09/2026 a las 15:04:23 UTC_
