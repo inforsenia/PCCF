@@ -184,7 +184,7 @@
                     }
                 }
             },
-            "horas": "40",
+            "horas": "90",
             "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -497,7 +497,7 @@
                     }
                 }
             },
-            "horas": "55",
+            "horas": "90",
             "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -615,7 +615,7 @@
                     }
                 }
             },
-            "horas": "75",
+            "horas": "120",
             "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
