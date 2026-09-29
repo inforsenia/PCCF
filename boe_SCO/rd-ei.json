@@ -372,7 +372,7 @@
                     }
                 }
             },
-            "horas": "90",
+            "horas": "166",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1030_3": "Promoure i implementar situacions de joc com a eix de l'activitat i del desenvolupament infantil."
@@ -574,7 +574,7 @@
                     }
                 }
             },
-            "horas": "192",
+            "horas": "200",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1033_3": "Definir, seqüenciar i avaluar aprenentatges, interpretant-los en el context del desenvolupament infantil de zero a sis anys."
@@ -703,7 +703,7 @@
                     }
                 }
             },
-            "horas": "85",
+            "horas": "133",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -999,11 +999,12 @@
                     }
                 }
             },
-            "horas": "40",
+            "horas": "134",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [],
-            "CompetenciasTitulo": []
+            "CompetenciasTitulo": [],
+            "dualitza": false
         },
         "0020": {
             "nombre": "Primers auxilis",
@@ -1049,7 +1050,7 @@
                     }
                 }
             },
-            "horas": "40",
+            "horas": "67",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -1352,46 +1353,6 @@
                 "w",
                 "x",
                 "y"
-            ]
-        },
-        "PI": {
-            "nombre": "Projecte intermodular",
-            "creditos": "",
-            "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "RA1",
-                    "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
-                    }
-                },
-                "RA02": {
-                    "Resultado": "RA2",
-                    "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
-                    }
-                }
-            },
-            "horas": "1",
-            "curs": 2,
-            "dualitza": false,
-            "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "a"
-            ],
-            "ObjetivosGenerales": [
-                "a"
             ]
         }
     }

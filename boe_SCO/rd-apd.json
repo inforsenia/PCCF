@@ -144,6 +144,86 @@
         "ab": "Reconèixer els seus drets i deures com a agent actiu en la societat, tenint en compte el marc legal que regula les condicions socials i laborals per participar com a ciutadà democràtic."
     },
     "ModulosProfesionales": {
+        "0156": {
+            "nombre": "Anglés Professional (GM)",
+            "creditos": "10",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": " Comprèn informació, d'índole professional i quotidiana, continguda en discursos orals senzills, emesos en llengua estàndard, desxifrant el contingut global del missatge, i relacionant-lo amb els recursos lingüístics corresponents.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha situat el missatge en el seu context per mitjà de l'anàlisi de les seues característiques textuals i contextuals.",
+                        "b": "S'ha identificat el fil argumental de missatges orals i determinat els rols que apareixen en els mateixos.",
+                        "c": "S'ha reconegut la finalitat del missatge, ja es tracte d'un missatge directe, telefònic o en qualsevol altre mitjà auditiu.",
+                        "d": "S'ha extret informació específica continguda en discursos orals, en llengua estàndard, relacionats amb la vida social, professional o acadèmica.",
+                        "e": "S'han seqüenciat els elements constituents del missatge.",
+                        "f": "S'han identificat i resumit amb claredat les idees principals d'un discurs sobre temes coneguts, transmès pels mitjans de comunicació i emés en llengua estàndard.",
+                        "g": "S'han reconegut les instruccions orals i s'han seguit les indicacions sent capaç de concloure si precisen d'una resposta verbal o d'una no verbal.",
+                        "h": "S'ha pres consciència de la importància de comprendre globalment un missatge, sense necessitat d'entendre tots i cadascun dels elements del mateix.",
+                        "i": "S'ha servit de l'anàlisi de l'entonació i dels elements visuals per identificar els diversos significats i intencions comunicatives de l'emissor."
+                    }
+                },
+                "RA02": {
+                    "Resultado": " Comprèn informació professional continguda en textos escrits senzills, analitzant de forma comprensiva el seu contingut.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat els materials de consulta i diccionaris tècnics. per a la comprensió del text.",
+                        "b": "S'han llegit de forma comprensiva textos clars en llengua estàndard.",
+                        "c": "S'ha relacionat el text amb l'àmbit del sector al qual es refereix.",
+                        "d": "S'han reconegut les idees principals d'un text escrit identificant la informació rellevant, sense necessitat d'entendre tots i cadascun dels elements d'aquest text.",
+                        "e": "S'ha identificat la terminologia utilitzada, així com les estructures gramaticals i altres elements característics de cada tipologia discursiva.",
+                        "f": "S'han realitzat traduccions de textos en llengua estàndard utilitzant material de suport en cas necessari.",
+                        "g": "S'ha interpretat el missatge rebut a través de suports telemàtics o qualsevol altre tipus de suport.",
+                        "h": "S'ha reconegut la finalitat de diferents textos escrits en qualsevol suport, en llengua estàndard i relacionats amb l'activitat professional.",
+                        "i": "S'ha extret informació específica de textos de diferent naturalesa, relatius a la seua professió i continguts en diferents suports."
+                    }
+                },
+                "RA03": {
+                    "Resultado": " Produeix missatges orals senzills, clars i estructurats, participant com a agent actiu en converses professionals.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han determinat els registres més adequats per a l'emissió del missatge.",
+                        "b": "S'ha comunicat utilitzant fórmules, nexos d'unió, marcadors discursius i estratègies d'interacció acords a la situació de comunicació.",
+                        "c": "S'han descrit fets breus i imprevists relacionats amb la seua professió.",
+                        "d": "S'ha utilitzat correctament la terminologia de la professió.",
+                        "e": "S'han expressat sentiments, idees o opinions.",
+                        "f": "S'han enumerat les activitats pròpies de la tasca professional.",
+                        "g": "S'ha descrit i seqüenciat un procés de treball de la seua competència.",
+                        "h": "S'ha justificat l'acceptació o no de propostes realitzades fent ús de normes de cortesia i de modals apropiats.",
+                        "i": "S'ha intercanviat, amb relativa fluïdesa, informació específica i detallada utilitzant frases d'estructura senzilla i diferents suports telemàtics.",
+                        "j": "S'han realitzat, de manera clara, presentacions breus i preparades sobre un tema dins de la seua especialitat, fent ús dels protocols adequats.",
+                        "k": "S'ha comunicat espontàniament adoptant un nivell de formalitat adequat a les circumstàncies.",
+                        "l": "S'han respost preguntes relatives a la seua vida socio-professional, incloses les pròpies d'una entrevista de treball.",
+                        "m": "S'ha sol·licitat la reformulació del discurs o l'aclariment de part del mateix quan s'ha considerat necessari per a una millor comprensió."
+                    }
+                },
+                "RA04": {
+                    "Resultado": " Redacta textos senzills en llengua estàndard, relacionant les regles gramaticals amb la finalitat dels mateixos.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat les estratègies, estructures, vocabulari i convencions més adequades per al tipus de text que es va a crear (fax, nota, carta o correu electrònic, entre altres",
+                        "b": "S'han redactat textos breus relacionats amb aspectes quotidians i/o professionals.",
+                        "c": "S'ha organitzat la informació de manera coherent i cohesionada.",
+                        "d": "S'han realitzat resums de textos relacionats amb el seu entorn professional, identificant les idees principals dels mateixos.",
+                        "e": "S'ha complimentat documentació específica del seu camp professional, aplicant les fórmules establertes i el vocabulari específic.",
+                        "f": "S'ha complimentat un text donat amb suports visuals i claus lingüístiques aportades.",
+                        "g": "S'han utilitzat les fórmules de cortesia pròpies del document que es va a elaborar.",
+                        "h": "S'ha escrit correspondència formal bàsica en format físic o digital destinada principalment a demanar informació, sol·licitar un servei o dur a terme una reclamació o una altra gestió senzilla, sempre atenent a les convencions de la tipologia textual.",
+                        "i": "S'han pres notes, i missatges, amb informació senzilla sobre aspectes propis de la seua labor professional.",
+                        "j": "S'ha sol·licitat, de forma escrita, informació referent a aspectes relacionats amb el seu camp professional (pàgina web i correu electrònic, entre altres"
+                    }
+                },
+                "RA05": {
+                    "Resultado": " Aplica actituds i comportaments professionals en situacions de comunicació, descrivint les relacions típiques característiques del país de la llengua estrangera.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han definit els trets més significatius dels costums i usos de la comunitat on es parla la llengua estrangera.",
+                        "b": "S'han descrit els protocols i normes de relació social propis del país.",
+                        "c": "S'han identificat els valors i creences propis de la comunitat on es parla la llengua estrangera.",
+                        "d": "S'han identificat els aspectes socio-professionals propis del sector, en qualsevol tipus de text.",
+                        "e": "S'han aplicat els protocols i normes de relació social propis del país de la llengua estrangera."
+                    }
+                }
+            },
+            "horas": "67",
+            "curs": 1,
+            "UnidadesCompetenciaAcreditadas": {}
+        },
         "0210": {
             "nombre": "Organització de l'atenció a les persones en situació de dependència",
             "creditos": "7",
@@ -425,7 +505,7 @@
                     }
                 }
             },
-            "horas": "130",
+            "horas": "200",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1019_2": "Desenvolupar intervencions d'atenció psicosocial dirigides a persones dependents en l'àmbit institucional.",
@@ -640,7 +720,7 @@
                     }
                 }
             },
-            "horas": "192",
+            "horas": "200",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0251_2": "Desenvolupar les activitats relacionades amb la gestió i funcionament de la unitat convivencial."
@@ -701,7 +781,7 @@
                     }
                 }
             },
-            "horas": "115",
+            "horas": "166",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
@@ -761,7 +841,7 @@
                     }
                 }
             },
-            "horas": "50",
+            "horas": "100",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1017_2": "Desenvolupar intervencions d'atenció física dirigides a persones dependents en l'àmbit institucional.",
@@ -913,7 +993,7 @@
                     }
                 }
             },
-            "horas": "35",
+            "horas": "67",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -992,7 +1072,7 @@
                     }
                 }
             },
-            "horas": "30",
+            "horas": "34",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -1251,7 +1331,7 @@
                     }
                 }
             },
-            "horas": "32",
+            "horas": "34",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -1345,7 +1425,7 @@
                     }
                 }
             },
-            "horas": "32",
+            "horas": "67",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},

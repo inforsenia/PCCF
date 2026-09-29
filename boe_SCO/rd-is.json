@@ -220,7 +220,7 @@
                     }
                 }
             },
-            "horas": "70",
+            "horas": "133",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
@@ -332,7 +332,7 @@
                     }
                 }
             },
-            "horas": "115",
+            "horas": "200",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1034_3": "Gestionar la informació sobre els recursos sociolaborals i formatius i col·laborar en l'anàlisi de llocs de treball per a la inserció sociolaboral de persones amb discapacitat.",
@@ -454,7 +454,7 @@
                     }
                 }
             },
-            "horas": "80",
+            "horas": "166",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0252_3": "Programar, organitzar i avaluar les intervencions d'integració social.",
@@ -551,7 +551,7 @@
                     }
                 }
             },
-            "horas": "128",
+            "horas": "133",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1039_3": "Prevenir conflictes entre diferents persones, actors i col·lectius socials.",
@@ -767,7 +767,7 @@
                     }
                 }
             },
-            "horas": "192",
+            "horas": "200",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0253_3": "Desenvolupar les intervencions dirigides a l'entrenament i a l'adquisició d'habilitats d'autonomia personal i social."
@@ -1333,7 +1333,7 @@
                     }
                 }
             },
-            "horas": "1",
+            "horas": "134",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},

@@ -1401,7 +1401,7 @@
         },
         "0225": {
             "nombre": "Xarxes Locals",
-            "horas": "224",
+            "horas": "233",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0220_2": "Instal·lar, configurar i verificar els elements de la xarxa local segons procediments establerts."
@@ -1543,7 +1543,7 @@
                     }
                 }
             },
-            "horas": "1",
+            "horas": "66",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},

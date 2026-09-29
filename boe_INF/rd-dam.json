@@ -627,7 +627,7 @@
                     }
                 }
             },
-            "horas": "96",
+            "horas": "100",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1371,7 +1371,7 @@
                     }
                 }
             },
-            "horas": "100",
+            "horas": "133",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1213_3": "Instal·lar i configurar sistemes de planificació de recursos empresarials i de gestió de relacions amb clients."
@@ -1476,7 +1476,7 @@
                     }
                 }
             },
-            "horas": "32",
+            "horas": "34",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -1817,7 +1817,7 @@
                     }
                 }
             },
-            "horas": "1",
+            "horas": "134",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},

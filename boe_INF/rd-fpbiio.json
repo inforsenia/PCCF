@@ -664,7 +664,7 @@
                     }
                 }
             },
-            "horas": "90",
+            "horas": "133",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -842,7 +842,7 @@
                     }
                 }
             },
-            "horas": "90",
+            "horas": "166",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -973,7 +973,7 @@
                     }
                 }
             },
-            "horas": "120",
+            "horas": "133",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1109,7 +1109,7 @@
                     }
                 }
             },
-            "horas": "120",
+            "horas": "166",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1167,7 +1167,7 @@
                     }
                 }
             },
-            "horas": "400",
+            "horas": "67",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -1282,7 +1282,7 @@
                     }
                 }
             },
-            "horas": "1",
+            "horas": "67",
             "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
@@ -1332,7 +1332,7 @@
                     }
                 }
             },
-            "horas": "1",
+            "horas": "34",
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
