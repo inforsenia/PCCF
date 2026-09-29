@@ -1,6 +1,6 @@
 \newpage
 
-# Programación didáctica: Módulo Digitalización aplicada a los sectores productivos (GM)
+# Programación didáctica: MÓDULO 1664190 - DIGITALIZACIÓN APLICADA A LOS SECTORES PRODUCTIVOS (GM) (CURSO 2026/2027)
 
 ## Datos identificativos y contextualización del módulo. 
 
@@ -65,10 +65,10 @@ Se propone esta tabla
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Desafío 1. Economía Circular | 08/09/2025| 08/10/2025|
-| 02     | UP02: Desafio 2. Almacenamiento en Cloud / nube   | 09/10/2025| 05/12/2025|
-| 03     | UP03: Desafío 3. Transformación Digital  | 06/12/2025| 16/12/2025|
-| 04     | UP04: Desaafio 4. Plan de Digitalización  | 17/12/2025| 06/02/2025|
+| 01     | UP01: Desafío 1. ECONOMÍA CIRCULAR Y LA 4ª REVOLUCIÓN INDUSTRIAL | 15/09/2026| 13/10/2026|
+| 02     | UP02: Desafio 2. CLOUD/NUBE Y SISTEMAS CONECTADOS   | 21/10/2026| 15/12/2026|
+| 03     | UP03: Desafío 3. SISTEMAS DE PRODUCCIÓN Y TRANSFORMACIÓN DIGITAL  | 12/01/2027| 19/01/2027|
+| 04     | UP04: Desaafio 4. PLAN DE DIGITALIZACIÓN  | 26/01/2027| 16/02/2027|
 
 ## Metodología del proceso de enseñanza-aprendizaje
 
