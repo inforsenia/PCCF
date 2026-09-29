@@ -203,8 +203,14 @@ for codigo, modulo in data_box.items():
 
 del wb['Sheet']
 escriu_instruccions(wb, "Mòduls optatius")
-print(f" * Desant llibre optatives: {libro_path}")
-wb.save(libro_path)
+# Com libro_{CICLE}.xlsx (Makefile, generar-plantilles-pccf-%): mai
+# sobreescriu el llibre que ja omplin els docents. Per a regenerar-lo cal
+# esborrar-lo abans.
+if os.path.exists(libro_path):
+    print(f" * Llibre optatives conservat (ja existeix): {libro_path}")
+else:
+    print(f" * Desant llibre optatives: {libro_path}")
+    wb.save(libro_path)
 
 # -----------------------------------------------------------------------
 # 2. Generate shared PDs
