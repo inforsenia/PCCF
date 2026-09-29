@@ -1,23 +1,23 @@
-# Unidades de programación: 1665 Módulo Optativo - Digitalización Aplicadad a los sectores productivos (2025-2026)
+# Unidades de programación: 1665 Módulo Optativo - Digitalización Aplicada a los Sectores Productivos (GS)(2026-2027)
 
 
-### Resumen de Unidades de Programación (Curso 2025-2026)
+### Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Nombre de la UP | Duración (Horas Centro) | Temporalización | RAs Asociados |
 | :--- | :--- | :--- | :--- | :--- |
-| **UP01** | Digitalización en los sistemas productivos | 4h | 15/09/2025 – 13/10/2025 | **RA01** |
-| **UP02** | Caracterización de tecnologías habilitadoras  | 2h | 13/10/2025 – 27/10/2025 | **RA02** |
-| **UP03** | Computación en la nube | 2h | 27/10/2025 – 10/11/2025 | **RA03**|
-| **UP04** | Inteligencia artificial | 3h | 10/11/2025 – 1/12/2025 | **RA4** |
-| **UP05** | Big data | 2h | 1/12/2025 – 12/1/2026 | **RA5** |
-| **UP06** | Ciberseguridad | 2h | 12/1/2026 – 26/01/2026 | **RA05** |
-| **UP07** | Proyecto de transformación digital | 2h | 26/01/2026 - 9/02/2026 | **RA06** |
+| **UP01** | DIGITALIZACIÓN EN LOS SECTORES PRODUCTIVOS | 4h | 14/09/2026 – 05/10/2026 | **RA01** |
+| **UP02** | CARACTERIZACIÓN DE LAS TECNOLOGÍAS HABILITADORAS  | 2h | 19/10/2026 – 26/10/2026 | **RA02** |
+| **UP03** | SISTEMAS CLOUD. COMPUTACIÓN EN LA NUBE | 2h | 02/11/2026 – 09/11/2026 | **RA03**|
+| **UP04** | INTELIGENCIA ARTIFICIAL. APLICACIÓN EN EL SECTOR PRODUCTIVO | 3h | 16/11/2026 – 30/11/2026 | **RA4** |
+| **UP05** | BIG DATA: EVALUACIÓN DE DATOS | 2h | 14/12/2026 – 21/12/2026 | **RA5** |
+| **UP06** | CIBERSEGURIDAD | 2h | 11/01/2027 – 18/01/2027 | **RA05** |
+| **UP07** | DESARROLLO DE UN PROYECTO DE TRANSFORMACIÓN DIGITAL | 2h | 25/01/2027 - 1/02/2027 | **RA06** |
 
-## UP01: Digitalización en los sistemas productivos 
+## UP01: DIGITALIZACIÓN EN LOS SECTORES PRODUCTIVOS 
 ### 1. Identificación
 *   **Código:** UP01 | **Módulo:** 1665
 *   **Duración:** 4 horas.
-*   **Temporalización:** 15/09/2025 – 13/10/2025.
+*   **Temporalización:** 14/09/2026 – 05/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -46,7 +46,7 @@
 
 *   **Metodología:** Breve introducción teórica seguida de metodologías activas con tareas y actividades basadas en un enfoque práctico y colaborativo. Se fomentará la participación activa del alumnado mediante la resolución de problemas y ejercicios prácticos.
 *   **Secuencia (Fases):**
-    * Tarea 1: Digitalización de la Gestión de Incidencias con Trello [Terraformadores](https://inforsenia.github.io/Terraformadores/v8/Practica1/Practica1)
+    * Tarea 1: Digitalización de la Gestión de Incidencias con Trello [TAREA01](https://inforsenia.github.io/Terraformadores/v8/Practica1/Practica1)
     
 ### 4. Recursos Tecnológicos
 *   **Base Tecnológica:** 
@@ -59,11 +59,11 @@
 
 ---
 
-## UP02: Caracterización de tecnologías habilitadoras 
+## UP02: CARACTERIZACIÓN DE LAS TECNOLOGÍAS HABILITADORAS 
 ### 1. Identificación
 *   **Código:** UP02 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 13/10/2025 – 27/10/2025.
+*   **Temporalización:** 19/10/2026 – 26/10/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -106,11 +106,11 @@
 
 ---
 
-## UP03: Computación en la nube  
+## UP03: SISTEMAS CLOUD. COMPUTACIÓN EN LA NUBE  
 ### 1. Identificación
 *   **Código:** UP03 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 27/10/2025 – 10/11/2025.
+*   **Temporalización:** 02/11/2026 – 09/11/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -146,11 +146,11 @@
 
 ---
 
-## UP04: Inteligencia artificial 
+## UP04: INTELIGENCIA ARTIFICIAL. APLICACIÓN EN EL SECTOR PRODUCTIVO 
 ### 1. Identificación
 *   **Código:** UP04 | **Módulo:** 1665
 *   **Duración:** 3 horas.
-*   **Temporalización:** 10/11/2025 – 1/12/2025.
+*   **Temporalización:** 16/11/2026 – 30/11/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -196,11 +196,11 @@
 
 ---
 
-## UP05: Big Data
+## UP05: BIG DATA: EVALUACIÓN DE DATOS
 ### 1. Identificación
 *   **Código:** UP05 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 1/12/2025 – 12/1/2026.
+*   **Temporalización:** 14/12/2026 – 21/12/2026.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -247,11 +247,11 @@
 
 ---
 
-## UP06: Ciberseguridad 
+## UP06: CIBERSEGURIDAD 
 ### 1. Identificación
 *   **Código:** UP06 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 12/1/2026 – 26/01/2026.
+*   **Temporalización:** 11/01/2027 – 18/01/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
@@ -291,11 +291,11 @@
 
 ---
 
-## UP07: Proyecto de transformación digital
+## UP07: DESARROLLO DE UN PROYECTO DE TRANSFORMACIÓN DIGITAL
 ### 1. Identificación
 *   **Código:** UP07 | **Módulo:** 1665
 *   **Duración:** 2 horas.
-*   **Temporalización:** 26/01/2026 - 9/02/2026.
+*   **Temporalización:** 25/01/2027 - 1/02/2027.
 
 ### 2. Fundamentación (Real Decreto 1629/2009)
 
