@@ -239,6 +239,7 @@
                 }
             },
             "horas": "166",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0223_3": "Configurar y explotar sistemas informáticos."
             },
@@ -363,6 +364,7 @@
                 }
             },
             "horas": "166",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0226_3": "Programar bases de dades relacionals."
             },
@@ -511,6 +513,7 @@
                 }
             },
             "horas": "266",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
             },
@@ -625,6 +628,7 @@
                 }
             },
             "horas": "96",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "h",
@@ -723,6 +727,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "d",
@@ -817,6 +822,7 @@
                 }
             },
             "horas": "68",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "a",
@@ -917,6 +923,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0227_3": "Desenvolupar components programari en llenguatges de programació orientats a objectes."
             },
@@ -1048,6 +1055,7 @@
                 }
             },
             "horas": "166",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0494_3": "Desenvolupar components programari en llenguatges de programació estructurada."
             },
@@ -1157,6 +1165,7 @@
                 }
             },
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "d",
@@ -1266,6 +1275,7 @@
                 }
             },
             "horas": "67",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0964_3": "Crear elements programari per a la gestió del sistema i els seus recursos."
             },
@@ -1362,6 +1372,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1213_3": "Instal·lar i configurar sistemes de planificació de recursos empresarials i de gestió de relacions amb clients."
             },
@@ -1466,6 +1477,7 @@
                 }
             },
             "horas": "32",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
@@ -1556,6 +1568,7 @@
                 }
             },
             "horas": "34",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1662,6 +1675,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1759,6 +1773,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1803,6 +1818,7 @@
                 }
             },
             "horas": "1",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

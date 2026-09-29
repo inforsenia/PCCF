@@ -11,7 +11,12 @@ Per a cada PD de mòdul copiada a STAGE:
   2. Elimina els blocs de cita (`> ...`): a les plantilles de PD només
      s'usen per a instruccions al docent, que no han d'eixir al PDF (mateix
      regex que memòries, `memories_utils.py`).
-  3. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
+  3. Als mòduls que dualitzen, afig a la subsecció «Formació en empresa (RA
+     dualitzats)» la taula RA | CE | Compartit | Sols empresa i les hores en
+     empresa, llegides de REQUISIT FE / HORES DUAL de l'Excel amb el mateix
+     lector que la plantilla RRAA_CA de la coordinació (`genera_fe.py`). Si
+     la informació FE és incompleta, hi posa un avís i marca ✗ el títol.
+  4. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
      (`libro_{CICLE}.xlsx` de PD_DIR, el que editen els docents), exportat a
      PDF amb LibreOffice i inclòs amb \\includepdf. El títol
      `## Esquema general de ...` de la plantilla es trau del markdown i
@@ -31,7 +36,8 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import parse_pd_filename, get_hoja_label, get_optatives_del_cicle
+from pccf_utils import parse_pd_filename, get_optatives_del_cicle, dualitza
+from genera_fe import llig_fe_modul, resol_fulla, taula_markdown
 from report_pccf import compute_pd_status, is_pd_verified, find_placeholders
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,15 +62,6 @@ def load_excel_exporter():
     mod = importlib.util.module_from_spec(spec)
     exec(compile(src, path, "exec"), mod.__dict__)
     return mod.exportar_rango_a_pdf
-
-
-def resol_fulla(sheetnames, nombre):
-    """json2excel crea la fulla amb les sigles del mòdul (get_hoja_label);
-    els llibres antics, amb el nom complet (Excel el talla a 31)."""
-    for cand in (get_hoja_label(nombre), nombre, nombre[:31]):
-        if cand in sheetnames:
-            return cand
-    return None
 
 
 def marca_titol(path, marca):
@@ -94,6 +91,33 @@ def extrau_titol_esquema(path):
     return "".join(LATEX_ESPECIALS.get(c, c) for c in m.group(1))
 
 
+FE_TITOL_RE = re.compile(r'^###\s+Formació en empresa.*$', re.MULTILINE)
+
+
+def afig_taula_fe(path, info):
+    """Insereix la taula FE després del primer paràgraf de la subsecció.
+    Torna False si la PD no té la subsecció (o ja no la té el docent)."""
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    m = FE_TITOL_RE.search(content)
+    if not m:
+        return False
+    # Final del primer paràgraf (text fix de la plantilla) després del títol
+    resta = content[m.end():]
+    inici = len(resta) - len(resta.lstrip("\n"))
+    fi = resta.find("\n\n", inici)
+    fi = len(resta) if fi == -1 else fi
+    if info["incidencies"]:
+        bloc = ("**Informació de formació en empresa pendent a l'Excel:** "
+                + "; ".join(info["incidencies"]) + ".\n")
+    else:
+        bloc = taula_markdown(info)
+    pos = m.end() + fi
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content[:pos] + "\n\n" + bloc + content[pos:])
+    return True
+
+
 def elimina_instruccions(path):
     with open(path, encoding="utf-8") as f:
         content = f.read()
@@ -112,7 +136,9 @@ def main():
     familia = args.familia.upper()
 
     with open(os.path.join(PROJECT_DIR, f"boe_{familia}", f"rd-{cicle.lower()}.json"), encoding="utf-8") as f:
-        moduls = {str(k): v["nombre"] for k, v in json.load(f)["ModulosProfesionales"].items()}
+        json_moduls = json.load(f)["ModulosProfesionales"]
+    moduls = {str(k): v["nombre"] for k, v in json_moduls.items()}
+    duals = {str(k) for k, v in json_moduls.items() if dualitza(v)}
 
     status = compute_pd_status(cicle, familia, args.pd_dir)
     draft_path = os.path.join(args.stage, ".draft")
@@ -149,6 +175,12 @@ def main():
             llibres[codi] = llibre_opt
     exportar = load_excel_exporter() if any(l[1] for l in llibres.values()) else None
 
+    # Informació FE (REQUISIT FE / HORES DUAL) dels mòduls que dualitzen
+    wb_fe = None
+    if duals and llibre_cicle[1]:
+        import openpyxl
+        wb_fe = openpyxl.load_workbook(llibre_cicle[0], data_only=True)
+
     for fname in sorted(os.listdir(args.stage)):
         parsed = parse_pd_filename(fname)
         if not parsed:
@@ -160,6 +192,14 @@ def main():
         fulla = resol_fulla(sheetnames, nombre) if nombre else None
 
         excel_ko = bool(fulla) and any(f"Fulla '{fulla}'" in e for e in excel_issues)
+        if codi in duals:
+            if wb_fe is not None and fulla:
+                info = llig_fe_modul(wb_fe[fulla])
+            else:
+                info = {"ras": [], "hores": 0.0, "incidencies": ["fulla del mòdul no trobada a l'Excel"]}
+            if afig_taula_fe(path, info):
+                excel_ko = excel_ko or bool(info["incidencies"])
+                print(f" * [PD] {codi}: taula FE afegida" + (" (pendent)" if info["incidencies"] else ""))
         marca = ""
         if parsed["estat"] == "BORRADOR":
             marca += MARCA_BORRADOR

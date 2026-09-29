@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate every *.json file inside boe_INF/, boe_SCO/ and boe_OPTATIVES/.
-The optional module key "dualitza" must be a boolean (false = no FEE).
+The optional module key "dualitza" must be a boolean (false = no FEE) and
+the optional key "curs" must be 1 or 2 (course where the module is taught).
 Exit code 0 → all files are valid.
 Exit code 1 → at least one file is invalid (error printed to stderr).
 """
@@ -24,6 +25,9 @@ for path in files:
         for codi, modul in moduls.items():
             if isinstance(modul, dict) and not isinstance(modul.get("dualitza", True), bool):
                 print(f"❌  {path}: module {codi}: \"dualitza\" must be true/false", file=sys.stderr)
+                failed = True
+            if isinstance(modul, dict) and modul.get("curs", 1) not in (1, 2):
+                print(f"❌  {path}: module {codi}: \"curs\" must be 1 or 2", file=sys.stderr)
                 failed = True
     except Exception as exc:
         print(f"❌  Invalid JSON in {path}: {exc}", file=sys.stderr)

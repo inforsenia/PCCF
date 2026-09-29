@@ -27,6 +27,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     python3-numpy \
     python3-pandas \
     python3-openpyxl \
+    python3-docx \
     python3-matplotlib \
     fonts-ubuntu \
     onedrive \

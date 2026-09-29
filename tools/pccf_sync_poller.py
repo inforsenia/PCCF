@@ -36,6 +36,7 @@ from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, get_optatives_del_ci
 from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report, find_placeholders
 from memories_utils import get_teacher_email
 from mailer import smtp_configured, send_report_email, get_department_email
+import genera_fe
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CICLES_ALL = CICLES_INF + CICLES_SCO
@@ -58,6 +59,13 @@ STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_poller_state.json")
 # notificació al docent). MAI dins la carpeta sincronitzada: és bookkeeping
 # del poller, no contingut per als docents.
 PD_TEACHER_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_pd_teacher_notify_state.json")
+
+# Últim estat FE (empremta de genera_fe.empremta) ja notificat a la
+# coordinació de Formació en Empresa. Mateix criteri: fora de la carpeta
+# sincronitzada, i si l'enviament falla no es guarda (es reintenta).
+FE_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_fe_notify_state.json")
+# Destinatari a department_emails.json: {"FE": {"coordinacio": "adreça"}}
+FE_EMAIL_TIPUS, FE_EMAIL_CLAU = "FE", "coordinacio"
 
 
 def load_state():
@@ -173,6 +181,50 @@ def notify_pd_teachers(cicle, familia, pd_dir):
             save_pd_teacher_state(state)
 
 
+def actualitza_fe(sync_root, cicles):
+    """Regenera programacions/2_FE (plantilla RRAA_CA dels `cicles` i
+    pendents_FE.txt de tots) i avisa la coordinació de FE si ha canviat."""
+    try:
+        estats, text, total, _ = genera_fe.genera(sync_root, cicles)
+    except Exception as e:
+        print(f"[pccf-poller] ERROR generant la plantilla RRAA_CA (FE): {e}", flush=True)
+        return
+    notify_fe_coordinator(sync_root, estats, text, total)
+
+
+def notify_fe_coordinator(sync_root, estats, text, total):
+    """Correu a la coordinació de FE amb els mòduls duals pendents i els
+    docx de 2_FE, només quan l'estat FE canvia. No invasiu: sense SMTP o
+    sense adreça a department_emails.json no fa res."""
+    if not smtp_configured():
+        return
+    to_addr = get_department_email(FE_EMAIL_TIPUS, FE_EMAIL_CLAU)
+    if not to_addr:
+        return
+    empremta = genera_fe.empremta(estats)
+    try:
+        with open(FE_STATE_PATH, encoding="utf-8") as f:
+            if json.load(f).get("empremta") == empremta:
+                return
+    except (OSError, json.JSONDecodeError):
+        pass
+    desti = os.path.join(sync_root, "programacions", genera_fe.DIR_FE)
+    adjunts = [os.path.join(desti, f) for f in sorted(os.listdir(desti)) if f.endswith(".docx")]
+    adjunts.append(os.path.join(desti, genera_fe.PENDENTS))
+    subject = (f"[FE] Plantilla RRAA_CA: {total} mòduls duals pendents" if total
+               else "[FE] Plantilla RRAA_CA: tots els mòduls duals complets")
+    body = (
+        "S'ha actualitzat la plantilla RRAA_CA a partir dels Excel de les "
+        "Programacions (carpeta programacions/2_FE, adjunta també a este correu).\n\n"
+        + text
+    )
+    if send_report_email(to_addr, subject, body, adjunts):
+        print(f"[pccf-poller] correu FE enviat a la coordinació ({to_addr}): {total} pendents", flush=True)
+        os.makedirs(os.path.dirname(FE_STATE_PATH), exist_ok=True)
+        with open(FE_STATE_PATH, "w", encoding="utf-8") as f:
+            json.dump({"empremta": empremta}, f)
+
+
 def has_pd_files(pdir):
     try:
         return any(f.startswith("PD_") and f.endswith(".md") for f in os.listdir(pdir))
@@ -261,6 +313,7 @@ def poll_once(sync_root, centre, cicle=None):
     if global_triggers:
         print(f"[pccf-poller] disparador global {PD_COMPILE_TRIGGER} detectat a programacions/: compilant tots els cicles", flush=True)
     fallats = []
+    cicles_fe = []  # cicles amb canvis de PD/Excel: es regenera la plantilla RRAA_CA
 
     # PD d'optatives (compartides entre cicles): avís al docent una sola
     # vegada per passada (l'estat per fitxer evita repetir-los).
@@ -328,6 +381,7 @@ def poll_once(sync_root, centre, cicle=None):
             with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
                 f.write(format_pd_report(status))
             notify_pd_teachers(cicle, familia, pdir)
+            cicles_fe.append(cicle)
 
         if pccf_canviat:
             status = compute_pccf_status(cicle, familia, pccf_dir)
@@ -352,6 +406,9 @@ def poll_once(sync_root, centre, cicle=None):
         state[key] = {"mtime_src": mtime_src, "mtime_familia": mtime_familia, "mtime_cicle": mtime_cicle, "mtime_pd": pd_mtime}
         save_state(state)
         processed.append(key)
+
+    if cicles_fe:
+        actualitza_fe(sync_root, cicles_fe)
 
     if global_triggers:
         # El global s'esborra sempre; si algun cicle ha fallat, es deixa el

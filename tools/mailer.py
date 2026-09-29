@@ -102,6 +102,8 @@ def send_report_email(to_addr, subject, body, attachments=None):
             maintype, subtype = "application", "pdf"
         elif path.endswith(".txt"):
             maintype, subtype = "text", "plain"
+        elif path.endswith(".docx"):
+            maintype, subtype = "application", "vnd.openxmlformats-officedocument.wordprocessingml.document"
         else:
             maintype, subtype = "application", "octet-stream"
         msg.add_attachment(data, maintype=maintype, subtype=subtype,

@@ -128,7 +128,7 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 2. Phase 1: `generar-plantilles-pccf-{CICLO}`:
    - If `$(PCCF_ROOT) != $(PROJECT_ROOT)` (OneDrive mode): copies `pccf/` tree from git to `$(PCCF_ROOT)/pccf/` (first bootstrap, never overwrites)
    - Copies `PD_*.md` from `pccf/src*` dirs → `programacions/{CICLO}/`
-   - `json2excel.py {CICLO} {FAMILIA} --outdir programacions/{CICLO}` — generates `libro_{CICLO}.xlsx` (capçalera de la fulla a `tools/excel_estils.py::escriu_capcalera()` i colors/lletres/vores a `aplica_estils()`, tots dos compartits amb `json2optatives.py`. Capçalera en dues bandes: MÒDUL (B:E) | CODI (F:I) | HORES (J), i OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E:F) | TOTAL H. DUAL (G:I) | TOTAL HORES (J); la taula comença a la fila 8. Els mòduls que no dualitzen (`"dualitza": false`) no tenen REQUISIT FE (H) ni HORES DUAL (I): la taula acaba en CONTINGUTS (H) i la capçalera és MÒDUL (B:E) | CODI (F:G) | HORES (H) i OBJECTIUS (B:D) | COMPETÈNCIES (E:F) | TOTAL HORES (G:H) — `excel_estils.disposicio(dual)`; `excel-to-pdfs.py` retalla el rang del Quadre Resum fins a la columna CONTINGUTS. Fons blanc sòlid a tota la taula perquè el fons decoratiu del PDF no es veja darrere del Quadre Resum)
+   - `json2excel.py {CICLO} {FAMILIA} --outdir programacions/{CICLO}` — generates `libro_{CICLO}.xlsx` (capçalera de la fulla a `tools/excel_estils.py::escriu_capcalera()` i colors/lletres/vores a `aplica_estils()`, tots dos compartits amb `json2optatives.py`. Capçalera en dues bandes: MÒDUL (B:E) | CODI (F:I) | HORES (J), i OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E:F) | TOTAL H. DUAL (G:I) | TOTAL HORES (J); la taula comença a la fila 8. REQUISIT FE (H) porta un desplegable C/E. Els mòduls que no dualitzen (`"dualitza": false`) no tenen REQUISIT FE (H) ni HORES DUAL (I): la taula acaba en CONTINGUTS (H) i la capçalera és MÒDUL (B:E) | CODI (F:G) | HORES (H) i OBJECTIUS (B:D) | COMPETÈNCIES (E:F) | TOTAL HORES (G:H) — `excel_estils.disposicio(dual)`; `excel-to-pdfs.py` retalla el rang del Quadre Resum fins a la columna CONTINGUTS. Fons blanc sòlid a tota la taula perquè el fons decoratiu del PDF no es veja darrere del Quadre Resum)
    - `json2pccf.py {CICLO} {FAMILIA} --generate-only` — generates `PD_*_BORRADOR.md` from Jinja2 templates
    - **pccf/src* conté els PCCF framework (editable); programacions/ conté PDs + Excel (editable)**
 3. Phase 2a: `compila-pccf-{CICLO}` (auto, triggered by poller):
@@ -167,7 +167,10 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 ## Excel workflow
 
 1. Auto-generated from JSON → `plantilles_{FAMILIA}_{CICLO}/libro_{CICLO}.xlsx`
-2. Teachers fill: RA weights (col C, must sum to 100%), CE hours (col F), FEE flags (col H), FEE hours (col I), contents (col J)
+2. Teachers fill: RA weights (col C, must sum to 100%), COMP (col D), CE hours (col F), CE weights (col G), REQUISIT FE (col H: **C** = compartit centre+empresa, **E** = sols empresa, buit = sols centre; desplegable de validació), FEE hours (col I), contents (col J)
+   - Primera pestanya **`Instruccions`** (`excel_estils.escriu_instruccions()`, `pccf_utils.HOJA_INSTRUCCIONS`): com s'usa el llibre i què omplir. Els lectors del llibre l'han de saltar (`check_excel_coherence` ja ho fa).
+   - Fulles **protegides** (`excel_estils.protegeix()`, cridat des d'`aplica_estils()`): només són editables C, D (fora de les etiquetes), F, G, H, I i CONTINGUTS; el que ve del JSON i les fórmules queden bloquejats. Es poden redimensionar files/columnes. Contrasenya opcional per `EXCEL_PROTECCIO_PASSWORD` (mai en git; sense ella la protecció es pot llevar des d'Excel). `excel-to-pdfs.py` desprotegeix la còpia abans d'exportar el Quadre Resum.
+   - Només afecta llibres generats de nou (la generació no sobreescriu un `libro_*.xlsx` existent).
 3. `python3 tools/preparar_excel.py -c CICLO -f FAMILIA` — renames sheets to short codes, saves to `excels_{FAMILIA}/libro_{CICLO}.xlsx`
 
 ## Key conventions
@@ -179,6 +182,7 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 - **Taules de competències del PCCF** (`PCCF_030_{CICLE}_ContribucioModuls.md`, `PCCF_033_{CICLE}_ImportanciaCompetencies.md`): les genera sempre `json2pccf.py --generate-competences` a `compila-pccf-%` des del JSON; un fitxer amb el mateix nom a `pccf/src*` s'ignora (el generat té prioritat). La importància (estrelles) ve del camp **`ImportanciaCompetencias`** del JSON (clau en castellà, com la resta): abans el codi llegia `ImportanciaCompetencies` i totes les competències eixien amb 2 estrelles. Els antics `PCCF_111_Competencies_*` (CEIABD, FPBIIO) duplicaven la taula i s'han eliminat.
 - **Codis de mòdul alfanumèrics** (p.ex. `IPO1`/`IPO2` a FPBIIO): `PD_FILE_RE` accepta `\d+` o `[A-Z][A-Z0-9]*`. Abans només `[A-Z]+`, i eixes PD no es reconeixien (sense marques, Quadre Resum ni report).
 - **Mòduls que no dualitzen**: clau opcional `"dualitza": false` al mòdul (`boe_*/rd-*.json`, `optatives.json`); sense la clau, el mòdul dualitza (`pccf_utils.dualitza()`). Marcats ara: Digitalització (1664/1665), Sostenibilitat (1708), IPO I/II (1709/1710, IPO1/IPO2 de FPBIIO), Projecte intermodular (PI, 1713, 3160972) i totes les optatives. Efecte: la PD no porta «Formació en empresa (RA dualitzats)» (`{% if dualitza %}` a `_base_pd.md`) i l'Excel no té les columnes H/I. Només afecta PD/Excel generats de nou (la generació no sobreescriu). `validate_json.py` comprova que siga booleà.
+- **Curs del mòdul**: clau opcional `"curs": 1|2` al mòdul (`boe_*/rd-*.json`, després d'`horas`); `pccf_utils.get_curs()` (None si falta). Font: les imatges d'horari `pccf/src_*_{CICLE}/imgs/*_horario.png`. Omplit a DAM, SMX, CEIABD (tot 1) i FPBIIO; **pendent a APD, EI i IS**. L'usa la plantilla RRAA_CA (un document per cicle i curs). `validate_json.py` comprova que siga 1 o 2.
 - **PD override**: Place a file with the same name in `src_{FAMILIA}_{CICLO}/` to override auto-generated PD markdown.
 - **State tracking**: `_BORRADOR.md` = pending teacher review. Teacher renames to `_OK.md` when completed.
 - **Instructions block**: Automatically stripped from the compiled PDF (regex removes `> **Instruccions...` blocks).
@@ -205,6 +209,15 @@ All paths are relative to `$(PCCF_ROOT)` (default `.` = project root, or `pccf_s
 - **Paragraph spacing**: `####` headings in compiled PDFs now have proper line breaks via `\titlespacing` LaTeX patch.
 - **Report legend**: Appended from `tools/report_legend.txt` (external file, easy to maintain).
 - **Report dir naming**: `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/` (includes timestamp + type suffix).
+
+## Plantilla RRAA_CA de Formació en Empresa (`tools/genera_fe.py`)
+
+La coordinació de FE demana, per cicle i curs, la seua plantilla (`templates/FE/Plantilla_RRAA_CA.docx`, còpia sense metadades personals): per mòdul dual, Mòdul, Hores empresa i RRAA | CE | Compartit | Sols empresa. Es genera sola des dels Excel:
+- `llig_fe_modul(ws)` llig H (C/E) i I (HORES DUAL) de cada CE de la fulla d'un mòdul que dualitza. Incidències (= mòdul pendent): valor de H que no és C/E (p. ex. una `X` antiga), cap CE amb C/E, HORES DUAL total 0, CE amb C/E sense hores o hores sense C/E, Excel o fulla absents.
+- `genera(root, cicles)` → `{root}/programacions/2_FE/RRAA_CA_{CICLE}_{1r|2n}.docx` (una taula per mòdul dual del curs, clonada de la 1a taula de la plantilla; una fila per RA i tipus; els mòduls pendents porten l'avís en lloc de les files) i `pendents_FE.txt` (sempre tots els cicles, amb el docent si la PD té `**Docent**:` omplit).
+- `make [PCCF_ROOT=...] fe-{ciclo}` / `fe-tots`. Requereix `python3-docx` (Dockerfile).
+- **PD**: `prepara_pd_compilacio.py` injecta a la còpia de muntatge, després del primer paràgraf de «Formació en empresa (RA dualitzats)», la taula FE (`taula_markdown`) amb el mateix lector; si el mòdul està pendent, un avís i la marca ✗ al títol. El `.md` del docent no es toca.
+- **Poller**: `pccf_sync_poller.py::actualitza_fe()` regenera 2_FE quan canvien els `.md`/`.xlsx` d'algun cicle i `notify_fe_coordinator()` envia el correu (pendents + docx adjunts) a `department_emails.json` → `{"FE": {"coordinacio": "..."}}`, només si canvia `genera_fe.empremta()` (estat a `temp/pccf_fe_notify_state.json`; si l'enviament falla, no es guarda). Sense SMTP o sense adreça, no fa res.
 
 ## Sincronització OneDrive de memòries + desplegament autònom (Docker/Portainer)
 
@@ -252,7 +265,7 @@ python3 tools/publish_memories_output.py --base-dir memoriaESOBAT --dest "/data/
 ```json
 {"ESOBAT": {"ECONOMIA": "cap.economia@..."}, "FP": {"INF": "cap.informatica@..."}, "PCCF": {"DAM": "cap.dam@...", "APD": "cap.apd@..."}}
 ```
-El tipus `"PCCF"` (usat pel disparador `COMPILAR_ARA` de Programacions, vore secció anterior) té una clau per **cicle** (no per família): allà el cap de departament és per cicle, no per família com a memòries.
+El tipus `"FE"` (clau `"coordinacio"`) és la coordinació de Formació en Empresa (vore «Plantilla RRAA_CA»). El tipus `"PCCF"` (usat pel disparador `COMPILAR_ARA` de Programacions, vore secció anterior) té una clau per **cicle** (no per família): allà el cap de departament és per cicle, no per família com a memòries.
 - Path per defecte: `DEPARTMENT_EMAILS_FILE` (Portainer: `/data/department_emails.json`, bind mount `${PCCF_DATA_DIR:-/docker/pccf}/department_emails.json`; en local sense la variable: `temp/department_emails.json`, ja gitignorat). **Ha d'existir al host ABANS del primer desplegament amb este bind mount** — si Docker no troba el fitxer origen en muntar-lo, crea un directori buit en son lloc i el contenidor falla en llegir-lo.
 - `tools/mailer.py::get_department_email(tipus, familia)` llig eixe fitxer; qualsevol departament absent (o el fitxer sencer absent/malformat) es tracta com "sense email", mai llança excepció.
 - Deliberadament **no** s'ha triat mesclar l'email dins del JSON de currículum via bind mount fitxer-a-fitxer: crearia una còpia duplicada de l'estructura de currículum al servidor que es desincronitzaria silenciosament de la versió en git cada volta que canviara un mòdul/curs.

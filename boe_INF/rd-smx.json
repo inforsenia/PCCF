@@ -216,6 +216,7 @@
                 }
             },
             "horas": "68",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {}
         },
         "1664": {
@@ -282,6 +283,7 @@
                 }
             },
             "horas": "34",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -388,6 +390,7 @@
                 }
             },
             "horas": "100",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -485,6 +488,7 @@
                 }
             },
             "horas": "100",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -568,6 +572,7 @@
                 }
             },
             "horas": "34",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
@@ -576,6 +581,7 @@
         "0221": {
             "nombre": "Muntatge i manteniment d'equips",
             "horas": "233",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0957_2": "Mantenir i regular el subsistema físic en sistemes informàtics.",
                 "UC0954_2": "Reparar i ampliar equipament microinformàtic.",
@@ -709,6 +715,7 @@
         "0222": {
             "nombre": "Sistemes operatius monolloc",
             "horas": "133",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0219_2": "Instal·lar i configurar el programari base en sistemes microinformàtics.",
                 "UC0958_2": "Executar procediments d'administració i manteniment en el programari base i d'aplicació de client."
@@ -809,6 +816,7 @@
         "0223": {
             "nombre": "Aplicacions ofimàtiques",
             "horas": "233",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0222_2": "Facilitar a l'usuari la utilització de paquets informàtics de propòsit general i aplicacions específiques.",
                 "UC0221_2": "Instal·lar, configurar i mantenir paquets informàtics de propòsit general i aplicacions específiques.}"
@@ -954,6 +962,7 @@
         "0224": {
             "nombre": "Sistemes operatius en xarxa",
             "horas": "200",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -1068,6 +1077,7 @@
         "0226": {
             "nombre": "Seguretat informàtica",
             "horas": "133",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0958_2": "Executar procediments d'administració i manteniment en el programari base i d'aplicació de client.",
                 "UC0959_2": "Mantenir la seguretat dels subsistemes físics i lògics en sistemes informàtics."
@@ -1163,6 +1173,7 @@
         "0227": {
             "nombre": "Serveis en xarxa",
             "horas": "233",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0955_2": "Monitoritzar els processos de comunicacions de la xarxa local.",
                 "UC0956_2": "Realitzar els processos de connexió entre xarxes privades i xarxes públiques."
@@ -1297,6 +1308,7 @@
         "0228": {
             "nombre": "Aplicacions web",
             "horas": "100",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
                 "a",
@@ -1390,6 +1402,7 @@
         "0225": {
             "nombre": "Xarxes Locals",
             "horas": "224",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0220_2": "Instal·lar, configurar i verificar els elements de la xarxa local segons procediments establerts."
             },
@@ -1531,6 +1544,7 @@
                 }
             },
             "horas": "1",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

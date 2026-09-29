@@ -208,6 +208,7 @@
                 }
             },
             "horas": "299",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1207_1": "Realitzar operacions auxiliars de muntatge d'equips microinformàtics.",
                 "UC1208_1": "Realitzar operacions auxiliars de manteniment de sistemes microinformàtics."
@@ -293,6 +294,7 @@
                 }
             },
             "horas": "200",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1209_1": "Realitzar operacions auxiliars amb tecnologies de la informació i la comunicació."
             },
@@ -414,6 +416,7 @@
                 }
             },
             "horas": "299",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0974_1": "Realitzar operacions bàsiques de tractament de dades i textos, i confecció de documentació.",
                 "UC0971_1": "Realitzar operacions auxiliars de reproducció i arxiu en suport convencional o informàtic."
@@ -521,6 +524,7 @@
                 }
             },
             "horas": "332",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "c",
@@ -661,6 +665,7 @@
                 }
             },
             "horas": "90",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "k",
@@ -838,6 +843,7 @@
                 }
             },
             "horas": "90",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "k",
@@ -968,6 +974,7 @@
                 }
             },
             "horas": "120",
+            "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "n",
@@ -1103,6 +1110,7 @@
                 }
             },
             "horas": "120",
+            "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "n",
@@ -1160,6 +1168,7 @@
                 }
             },
             "horas": "400",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1274,6 +1283,7 @@
                 }
             },
             "horas": "1",
+            "curs": 1,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
@@ -1323,6 +1333,7 @@
                 }
             },
             "horas": "1",
+            "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

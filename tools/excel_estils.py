@@ -7,7 +7,11 @@
 # com a passada final sobre la fulla ja construïda, identificant cada tipus de
 # fila de la taula pel seu contingut ("TOTS", OBJECTIUS/COMPETENCIES).
 
-from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Protection, Side
+from openpyxl.worksheet.datavalidation import DataValidation
+import os
+
+from pccf_utils import HOJA_INSTRUCCIONS
 
 LLETRA = "Liberation Sans"
 MIDA = 10
@@ -69,6 +73,12 @@ _fina = Side(style="thin", color=COLOR_VORA)
 _grossa = Side(style="medium", color=COLOR_FOSC)
 VORA = Border(left=_fina, right=_fina, top=_fina, bottom=_fina)
 VORA_INICI_RA = Border(left=_fina, right=_fina, top=_grossa, bottom=_fina)
+
+# REQUISIT FE (H) dels mòduls que dualitzen: C = compartit (centre i
+# empresa), E = sols empresa, buida = sols centre. La llig genera_fe.py per a
+# la plantilla RRAA_CA de la coordinació de FE i per a la taula FE de la PD.
+COL_FE = 8
+VALORS_FE = ("C", "E")
 
 
 def disposicio(dual):
@@ -200,9 +210,148 @@ def aplica_estils(ws, dual=True):
         if isinstance(ra.value, str) and ra.value.startswith("RA"):
             ra.font = _font(bold=True)
 
+    if dual:
+        _valida_fe(ws, ultima)
+    protegeix(ws, dual, ultima)
+
     ws.column_dimensions[COL_COMP].width = AMPLE_COMP
     ws.column_dimensions[COL_PERCENT_RA].width = AMPLE_PERCENT_RA
     ws.column_dimensions[COL_CE].width = AMPLE_CE
     ws.column_dimensions[_lletra(d["col_continguts"])].width = AMPLE_CONTINGUTS
     for col in numeriques:
         ws.column_dimensions[_lletra(col)].width = AMPLE_NUMERIQUES
+
+
+def _valida_fe(ws, ultima):
+    """Desplegable C/E a REQUISIT FE (H) de les files de criteri."""
+    dv = DataValidation(type="list", formula1='"' + ",".join(VALORS_FE) + '"', allow_blank=True,
+                        showErrorMessage=True, errorTitle="REQUISIT FE",
+                        error="C = compartit (centre i empresa), E = sols empresa, buit = sols centre",
+                        promptTitle="REQUISIT FE",
+                        prompt="C = compartit (centre i empresa)\nE = sols empresa\nbuit = sols centre")
+    dv.showInputMessage = True
+    ws.add_data_validation(dv)
+    lletra = _lletra(COL_FE)
+    for r in range(FILA_CAPCALERA + 2, ultima + 1):
+        ce = ws.cell(row=r, column=5).value
+        if isinstance(ce, str) and ce and ce != "TOTS":
+            dv.add(f"{lletra}{r}")
+
+
+# Protecció de la fulla: tot el que ve del JSON (RA, CE, codi, hores del
+# mòdul, objectius, competències) i les fórmules (TOTS, totals) queden
+# bloquejats. El docent només pot escriure a les cel·les pròpies:
+# % RA (C), COMP (D, sota OBJECTIUS/COMPETENCIES), HORES (F), % CE (G),
+# REQUISIT FE (H) i HORES DUAL (I) si dualitza, i CONTINGUTS.
+# Contrasenya opcional per variable d'entorn (el repositori és públic);
+# sense ella, la protecció evita errors però es pot llevar des d'Excel.
+EDITABLE = Protection(locked=False)
+
+
+def protegeix(ws, dual, ultima=None):
+    d = disposicio(dual)
+    ultima = ultima or ws.max_row
+    cols_ce = [6, 7] + ([COL_FE, COL_FE + 1] if dual else [])
+    for r in range(FILA_CAPCALERA + 2, ultima + 1):
+        ra = ws.cell(row=r, column=2).value
+        if isinstance(ra, str) and ra.startswith("RA"):
+            for col in (3, d["col_continguts"]):  # cel·la superior de les fusionades
+                ws.cell(row=r, column=col).protection = EDITABLE
+        ce = ws.cell(row=r, column=5).value
+        if isinstance(ce, str) and ce and ce != "TOTS":
+            for col in cols_ce:
+                ws.cell(row=r, column=col).protection = EDITABLE
+            comp = ws.cell(row=r, column=4)
+            if comp.value not in ("OBJECTIUS", "COMPETENCIES"):
+                comp.protection = EDITABLE
+    p = ws.protection
+    p.sheet = True
+    p.formatRows = False      # es pot canviar l'alçada de files i l'amplària de columnes
+    p.formatColumns = False
+    p.selectLockedCells = False
+    p.selectUnlockedCells = False
+    contrasenya = os.environ.get("EXCEL_PROTECCIO_PASSWORD")
+    if contrasenya:
+        p.password = contrasenya
+
+
+INSTRUCCIONS = [
+    ("titol", "Llibre de programacions — {titol}"),
+    ("text", "Este llibre conté una pestanya per mòdul (amb les sigles del mòdul). De cada pestanya ix "
+             "l'Esquema general (Quadre Resum) que s'afig al final de la programació didàctica del mòdul "
+             "en compilar les Programacions, i la plantilla RRAA_CA que rep la coordinació de Formació en Empresa."),
+    ("seccio", "Què és protegit"),
+    ("text", "Els RA, els criteris d'avaluació, el codi, les hores del mòdul, els objectius generals i les "
+             "competències venen del currículum (BOE/DOGV) i no es poden modificar. Les files TOTS i els "
+             "totals de la capçalera són fórmules i es calculen soles. Tampoc canvieu el nom de les pestanyes "
+             "ni inseriu o esborreu files o columnes."),
+    ("seccio", "Què heu d'omplir en la pestanya del vostre mòdul"),
+    ("camp", "% RA (columna C)", "Ponderació de cada RA en la qualificació del mòdul. La suma de tots els RA ha de ser 100."),
+    ("camp", "COMP (columna D)", "Sota OBJECTIUS i COMPETENCIES, les lletres dels objectius generals i de les competències que treballa el RA."),
+    ("camp", "HORES (columna F)", "Hores dedicades a cada criteri d'avaluació. El TOTAL HORES de la capçalera hauria de coincidir amb les hores del mòdul."),
+    ("camp", "% CE (columna G)", "Pes de cada criteri dins del seu RA. La suma dels criteris d'un RA (fila TOTS) ha de ser 100."),
+    ("camp", "REQUISIT FE (C/E) (columna H)", "Només en els mòduls que dualitzen. Per a cada criteri que es treballa en l'empresa: "
+             "C = compartit (centre i empresa), E = sols empresa. Buit = sols al centre."),
+    ("camp", "HORES DUAL (columna I)", "Només en els mòduls que dualitzen. Hores en l'empresa de cada criteri marcat amb C o E. "
+             "Tot criteri marcat ha de tindre hores i no hi pot haver hores sense marca."),
+    ("camp", "CONTINGUTS (última columna)", "Resum dels continguts associats a cada RA."),
+    ("seccio", "Què es comprova automàticament"),
+    ("text", "El report de les Programacions avisa si la suma dels % RA no és 100. Per als mòduls que dualitzen, "
+             "si cap criteri té C/E, si les hores dual són 0 o si hi ha criteris marcats sense hores (o hores sense "
+             "marca), el mòdul consta com a pendent i la coordinació de Formació en Empresa en rep l'avís."),
+    ("text", "Els mòduls que no dualitzen (Digitalització, Sostenibilitat, IPO, Projecte intermodular i les "
+             "optatives) no tenen les columnes REQUISIT FE ni HORES DUAL."),
+]
+
+
+def escriu_instruccions(wb, titol):
+    """Primera pestanya del llibre: com s'usa i què ha d'omplir el docent."""
+    ws = wb.create_sheet(title=HOJA_INSTRUCCIONS, index=0)
+    ws.sheet_view.showGridLines = False
+    ws.column_dimensions["A"].width = 2
+    ws.column_dimensions["B"].width = 30
+    ws.column_dimensions["C"].width = 100
+    r = 2
+    for entrada in INSTRUCCIONS:
+        tipus = entrada[0]
+        if tipus == "titol":
+            ws.merge_cells(start_row=r, start_column=2, end_row=r, end_column=3)
+            c = ws.cell(row=r, column=2, value=entrada[1].format(titol=titol))
+            c.font = _font(bold=True, blanc=True, size=MIDA_BANDA1 - 4)
+            c.fill = FOSC
+            c.alignment = ESQUERRA
+            ws.cell(row=r, column=3).fill = FOSC
+            ws.row_dimensions[r].height = 32
+            r += 2
+            continue
+        if tipus == "seccio":
+            r += 1
+            ws.merge_cells(start_row=r, start_column=2, end_row=r, end_column=3)
+            c = ws.cell(row=r, column=2, value=entrada[1])
+            c.font = Font(name=LLETRA, size=MIDA_CAPCALERA, bold=True, color=COLOR_FOSC)
+            for col in (2, 3):
+                ws.cell(row=r, column=col).fill = CLAR
+        elif tipus == "text":
+            ws.merge_cells(start_row=r, start_column=2, end_row=r, end_column=3)
+            c = ws.cell(row=r, column=2, value=entrada[1])
+            c.font = _font(size=11)
+            c.alignment = Alignment(wrap_text=True, vertical="top")
+            ws.row_dimensions[r].height = 15 * (len(entrada[1]) // 115 + 1)
+        else:  # camp
+            b = ws.cell(row=r, column=2, value=entrada[1])
+            b.font = _font(bold=True, size=11)
+            b.alignment = Alignment(wrap_text=True, vertical="top")
+            c = ws.cell(row=r, column=3, value=entrada[2])
+            c.font = _font(size=11)
+            c.alignment = Alignment(wrap_text=True, vertical="top")
+            ws.row_dimensions[r].height = 15 * (len(entrada[2]) // 90 + 1)
+        r += 1
+    ws.sheet_properties.pageSetUpPr.fitToPage = True  # en imprimir, una pàgina d'ample
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 0
+    ws.protection.sheet = True
+    contrasenya = os.environ.get("EXCEL_PROTECCIO_PASSWORD")
+    if contrasenya:
+        ws.protection.password = contrasenya
+    wb.active = 0
+    return ws

@@ -142,9 +142,9 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 {% if dualitza %}
 ### Formació en empresa (RA dualitzats)
 
-La valoració del tutor o tutora dual de l'empresa (superat / no superat) sobre els RA desenvolupats en l'empresa s'integra en la qualificació d'eixos RA segons els criteris següents. Els RA no superats en l'empresa es recuperen en el centre educatiu. Els RA i les hores de formació en empresa consten en l'Esquema general (columnes REQUISIT FE i HORES DUAL).
+La valoració del tutor o tutora dual de l'empresa (superat / no superat) sobre els RA desenvolupats en l'empresa s'integra en la qualificació d'eixos RA segons els criteris següents. Els RA no superats en l'empresa es recuperen en el centre educatiu. La taula següent, generada a partir de l'Excel del mòdul (columnes REQUISIT FE (C/E) i HORES DUAL), recull els criteris d'avaluació que es desenvolupen en l'empresa (compartits amb el centre o sols en l'empresa) i les hores de formació en empresa.
 
-> Indiqueu com s'integra la valoració de l'empresa en la qualificació dels RA dualitzats i com es recuperen. Si el mòdul no té RA dualitzats, indiqueu "No escau".
+> La taula dels RA dualitzats no s'escriu ací: ix sola de l'Excel (REQUISIT FE: C = compartit, E = sols empresa; i HORES DUAL). Indiqueu com s'integra la valoració de l'empresa en la qualificació dels RA dualitzats i com es recuperen.
 
 [###]
 

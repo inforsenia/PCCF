@@ -11,7 +11,7 @@ from openpyxl.styles import Alignment, NamedStyle
 import warnings
 warnings.filterwarnings('ignore')
 
-from excel_estils import aplica_estils, escriu_capcalera
+from excel_estils import aplica_estils, escriu_capcalera, escriu_instruccions
 from pccf_utils import OPTATIVES_PATH, PROJECT_DIR, PD_TEMPLATE, CONTEXTO_OPTATIVA, D114_CURRICULUM, dualitza, get_hoja_label
 
 numberStyle = NamedStyle(name='numberStyle', number_format='0.00')
@@ -114,7 +114,7 @@ for codigo, modulo in data_box.items():
         p_req_fe_row = p_h_row
         ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col,
                        end_row=p_req_fe_row + 1, end_column=p_req_fe_col)
-        ws.cell(column=p_req_fe_col, row=p_req_fe_row).value="REQUISIT\nFE"
+        ws.cell(column=p_req_fe_col, row=p_req_fe_row).value="REQUISIT\nFE (C/E)"
         ws.cell(column=p_req_fe_col, row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
         p_horas_dual_col = p_req_fe_col + 1
@@ -202,6 +202,7 @@ for codigo, modulo in data_box.items():
     aplica_estils(ws, dual)
 
 del wb['Sheet']
+escriu_instruccions(wb, "Mòduls optatius")
 print(f" * Desant llibre optatives: {libro_path}")
 wb.save(libro_path)
 

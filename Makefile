@@ -291,6 +291,16 @@ report-tots-pccf:
 		$(MAKE) report-pccf-$$c; \
 	done
 
+# Plantilla RRAA_CA de la coordinació de Formació en Empresa (tools/genera_fe.py):
+# docx per cicle i curs + pendents_FE.txt (tots els cicles) a programacions/2_FE/.
+fe-%:
+	$(eval CICLO_UPPER=$(shell echo $* | tr '[:lower:]' '[:upper:]'))
+	@if [ -z "$(call check_ciclo,$(shell echo $* | tr '[:upper:]' '[:lower:]'))" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$*' ${RESET}"; exit 1; fi
+	python3 tools/genera_fe.py --root "$(PCCF_ROOT)" --cicle $(CICLO_UPPER)
+
+fe-tots:
+	python3 tools/genera_fe.py --root "$(PCCF_ROOT)"
+
 ## ----------------------------------------------------------------
 ##  Memòries del Departament
 ## ----------------------------------------------------------------

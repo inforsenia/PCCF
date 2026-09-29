@@ -19,6 +19,7 @@ def exportar_rango_a_pdf(ruta_excel, hoja, rango, ruta_pdf):
     except KeyError as ke:
         print(" * Hoja no encontrada : "+str(ke))
         return
+    ws.protection.sheet = False  # la fulla del docent està protegida (excel_estils.protegeix)
 
     # Crear un nuevo libro y copiar solo el rango deseado
     nuevo_wb = wb.copy_worksheet(ws)

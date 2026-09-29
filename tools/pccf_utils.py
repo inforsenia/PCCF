@@ -46,6 +46,18 @@ def dualitza(modulo):
     return modulo.get("dualitza", True) is not False
 
 
+# Curs (1 o 2) en què s'imparteix el mòdul: clau opcional "curs" del JSON.
+# Sense la clau torna None (la plantilla RRAA_CA de FE l'agrupa a part).
+def get_curs(modulo):
+    curs = modulo.get("curs")
+    return curs if curs in (1, 2) else None
+
+
+# Primera pestanya dels llibres Excel de PD (excel_estils.escriu_instruccions):
+# no és cap mòdul i els lectors del llibre l'han de saltar.
+HOJA_INSTRUCCIONS = "Instruccions"
+
+
 OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 
 # Pattern per a noms de fitxer PD:
@@ -294,6 +306,8 @@ def check_excel_coherence(filepath):
         return [f"Error en obrir Excel: {e}"]
 
     for sheet_name in wb.sheetnames:
+        if sheet_name == HOJA_INSTRUCCIONS:
+            continue
         ws = wb[sheet_name]
         # Buscar columna C (RA weights) i sumar
         total_weight = 0

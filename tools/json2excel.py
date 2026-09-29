@@ -12,7 +12,7 @@ import openpyxl
 from openpyxl.styles import Alignment
 from openpyxl.styles import NamedStyle
 
-from excel_estils import aplica_estils, escriu_capcalera
+from excel_estils import aplica_estils, escriu_capcalera, escriu_instruccions
 from pccf_utils import dualitza, get_hoja_label
 
 debug = False
@@ -134,7 +134,7 @@ for codigo in data_box.ModulosProfesionales:
         p_req_fe_col=p_ce_per_col+1
         p_req_fe_row=p_h_row
         ws.merge_cells(start_row=p_req_fe_row, start_column=p_req_fe_col, end_row=p_req_fe_row+1, end_column=p_req_fe_col)
-        ws.cell(column=p_req_fe_col,row=p_req_fe_row).value="REQUISIT\nFE"
+        ws.cell(column=p_req_fe_col,row=p_req_fe_row).value="REQUISIT\nFE (C/E)"
         ws.cell(column=p_req_fe_col,row=p_req_fe_row).alignment = Alignment(horizontal='center', vertical='center',wrap_text=True)
 
         #print(" - HORAS DUAL ")
@@ -235,6 +235,7 @@ for codigo in data_box.ModulosProfesionales:
 
 if (debug): print(" * Quitamos la primera hoja ")
 del wb['Sheet']
+escriu_instruccions(wb, ciclo.upper())
 print(" * Guardamos el libro en : "+str(libro))
 wb.save(libro)
 
