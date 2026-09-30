@@ -279,7 +279,7 @@ Tot el procés d'avaluació, en els seus diferents aspectes, ha de servir per a 
 ### 5.5.2 L'AVALUACIÓ DE LA PRÀCTICA DOCENT PER PART DE L'ALUMNAT
 Consistirà en una enquesta amb els mateixos ítems que haurà utilitzat el professor per a autoavaluar-se i que es realitzarà en finalitzar el curs, anònima i contrastada amb la de la resta de professors/as del departament. A continuació es mostren la taula d'exemple amb alguns dels ítems que s'utilitzarien per a dur a terme l'autoavaluació docent i l'avaluació per part dels discents.
 
-![rúbrica](.\img\rubrica.png)
+<img src="./img/rubrica.png" alt="Rúbrica" />
 
 Este tipus d'accions permeten fer els canvis oportuns i perfeccionar l'acció docent mitjançant cursos formatius, seminaris, participació en congressos i que faran d'esta programació un element viu i útil per a dur a terme la labor docent.
 
