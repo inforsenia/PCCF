@@ -1,6 +1,22 @@
-# Programació Didàctica — TALLER DE RELACIONS DIGITALS RESPONSABLES — 1r ESO
+<center>
+ 
+# Programació Didàctica
 
-**Curs 2026 - 2027** 
+## TALLER DE RELACIONS DIGITALS RESPONSABLES
+### 1<sup>er</sup> ESO
+
+##### *CURS 2026 - 2027*
+---
+
+**Professor**: Juan Carlos Fernández Velasco
+
+<img src="./img/gva.jpg" alt="Escudo GVA" width="200" >
+
+<img src="./img/lasenia.png" alt="Logo de La Senia" width="300" >
+
+<img src="./img/fse.png" alt="Fondo Social Europeo" width="300" >
+
+</center>
 
 ## ÍNDEX
 
