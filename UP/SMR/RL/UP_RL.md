@@ -1,17 +1,17 @@
 # PROGRAMACIÓN DIDÁCTICA / DE AULA: REDES LOCALES
 
-### Resumen de Unidades de Programación (Curso 2025-2026)
+### Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Título de la UP | Duración | Temporalización | RA asociados (Descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **Introducción a las redes** | **10 h** | 08/09/2025 - 15/09/2025 | **RA01:** Principios de funcionamiento y tipos de redes (parcial). |
-| **UP02** | **Arquitectura de las redes locales** | **25 h** | 17/09/2025 - 06/10/2025 | **RA01:** Elementos, topologías y mapas físicos (parcial). |
-| **UP03** | **Identificación de elementos y espacios físicos** | **33 h** | 08/10/2025 - 06/11/2025 | **RA02:** Despliegue, canalizaciones y racks (parcial) + **RA06:** PRL. |
-| **UP04** | **Medios de transmisión** | **25 h** | 06/11/2025 - 04/12/2025 | **RA01 y RA02:** Clasificación de medios, tomas de usuario y paneles. |
-| **UP05** | **Instalación/configuración de los equipos de red. Aspectos teóricos** | **35 h** | 10/11/2025 - 29/01/2026 | **RA04:** Redes inalámbricas, protocolos y direccionamiento básico (parcial). |
-| **UP06** | **Configuración de los equipos de red** | **35 h** | 29/01/2026 - 04/03/2026 | **RA04:** Configuración avanzada, seguridad inalámbrica y creación de VLANs (parcial). |
-| **UP07** | **Interconexión de equipos** | **40 h** | 05/03/2026 - 23/04/2026 | **RA03:** Adaptadores, crimpado (cobre/fibra), switches y paneles de parcheo. |
-| **UP08** | **Resolución de incidencias en una LAN** | **30 h** | 27/04/2026 - 28/05/2026 | **RA05:** Mantenimiento preventivo/correctivo, diagnóstico e informes de averías. |
+| **UP01** | **Introducción a las redes** | **10 h** | 08/09/2026 - 15/09/2026 | **RA01:** Principios de funcionamiento y tipos de redes (parcial). |
+| **UP02** | **Arquitectura de las redes locales** | **25 h** | 17/09/2026 - 06/10/2026 | **RA01:** Elementos, topologías y mapas físicos (parcial). |
+| **UP03** | **Identificación de elementos y espacios físicos** | **33 h** | 08/10/2026 - 06/11/2026 | **RA02:** Despliegue, canalizaciones y racks (parcial) + **RA06:** PRL. |
+| **UP04** | **Medios de transmisión** | **25 h** | 06/11/2026 - 04/12/2026 | **RA01 y RA02:** Clasificación de medios, tomas de usuario y paneles. |
+| **UP05** | **Instalación/configuración de los equipos de red. Aspectos teóricos** | **35 h** | 10/11/2026 - 29/01/2027 | **RA04:** Redes inalámbricas, protocolos y direccionamiento básico (parcial). |
+| **UP06** | **Configuración de los equipos de red** | **35 h** | 29/01/2027 - 04/03/2027 | **RA04:** Configuración avanzada, seguridad inalámbrica y creación de VLANs (parcial). |
+| **UP07** | **Interconexión de equipos** | **40 h** | 05/03/2027 - 23/04/2027 | **RA03:** Adaptadores, crimpado (cobre/fibra), switches y paneles de parcheo. |
+| **UP08** | **Resolución de incidencias en una LAN** | **30 h** | 27/04/2027 - 28/05/2027 | **RA05:** Mantenimiento preventivo/correctivo, diagnóstico e informes de averías. |
 
 * La suma total de estas unidades es de **233 horas**, las cuales engloban de forma integrada las 23.3 horas asignadas al periodo Dual/Formación en Empresa.
 
@@ -24,7 +24,7 @@
 | **Código** | UP01 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **10 Horas** |
-| **Temporalización** | Del **08/09/2025** al **15/09/2025** (1º Trimestre) |
+| **Temporalización** | Del **08/09/2026** al **15/09/2026** (1º Trimestre) |
 | **Bloques de Contenido** | Conceptos básicos de comunicación; Clasificación de redes según cobertura y propiedad |
 
 ### 2. Fundamentación
@@ -71,7 +71,7 @@
 | **Código** | UP02 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **25 Horas** |
-| **Temporalización** | Del **17/09/2025** al **06/10/2025** (1º Trimestre) |
+| **Temporalización** | Del **17/09/2026** al **06/10/2026** (1º Trimestre) |
 | **Bloques de Contenido** | Topologías de red; Componentes de la LAN; Representación y mapas de red |
 
 ### 2. Fundamentación
@@ -118,7 +118,7 @@
 | **Código** | UP03 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **33 Horas** |
-| **Temporalización** | Del **08/10/2025** al **06/11/2025** (1º Trimestre) |
+| **Temporalización** | Del **08/10/2026** al **06/11/2026** (1º Trimestre) |
 | **Bloques de Contenido** | Canalizaciones; Armarios de comunicaciones (Racks); Seguridad y Prevención en Instalaciones |
 
 ### 2. Fundamentación
@@ -166,7 +166,7 @@
 | **Código** | UP04 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **25 Horas** |
-| **Temporalización** | Del **06/11/2025** al **04/12/2025** (1º Trimestre) |
+| **Temporalización** | Del **06/11/2026** al **04/12/2026** (1º Trimestre) |
 | **Bloques de Contenido** | Cable de cobre (UTP/FTP/STP); Fibra Óptica; Paneles de parcheo y Tomas de usuario |
 
 ### 2. Fundamentación
@@ -212,7 +212,7 @@
 | **Código** | UP05 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **35 Horas** |
-| **Temporalización** | Del **10/11/2025** al **29/01/2026** (1º y 2º Trimestre) |
+| **Temporalización** | Del **10/11/2026** al **29/01/2027** (1º y 2º Trimestre) |
 | **Bloques de Contenido** | El modelo OSI y TCP/IP; Direccionamiento IPv4; Introducción a redes inalámbricas |
 
 ### 2. Fundamentación
@@ -258,7 +258,7 @@
 | **Código** | UP06 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **35 Horas** |
-| **Temporalización** | Del **29/01/2026** al **04/03/2026** (2º Trimestre) |
+| **Temporalización** | Del **29/01/2027** al **04/03/2027** (2º Trimestre) |
 | **Bloques de Contenido** | Configuración de adaptadores IP; Seguridad inalámbrica; Puntos de acceso; VLANs |
 
 ### 2. Fundamentación
@@ -308,7 +308,7 @@
 | **Código** | UP07 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **40 Horas** |
-| **Temporalización** | Del **05/03/2026** al **23/04/2026** (2º y 3º Trimestre) |
+| **Temporalización** | Del **05/03/2027** al **23/04/2027** (2º y 3º Trimestre) |
 | **Bloques de Contenido** | Crimpado de cables RJ-45; Montaje de conectores; Latiguillos de red; Certificación de enlaces |
 
 ### 2. Fundamentación
@@ -359,7 +359,7 @@
 | **Código** | UP08 |
 | **Módulo** | Redes Locales (0225) |
 | **Duración** | **30 Horas** |
-| **Temporalización** | Del **27/04/2026** al **28/05/2026** (3º Trimestre) |
+| **Temporalización** | Del **27/04/2027** al **28/05/2027** (3º Trimestre) |
 | **Bloques de Contenido** | Diagnóstico de averías LAN; Señales visuales; Software de monitorización; Informes |
 
 ### 2. Fundamentación
