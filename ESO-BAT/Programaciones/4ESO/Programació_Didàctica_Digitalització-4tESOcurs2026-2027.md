@@ -175,7 +175,7 @@ Per a dur a terme el procés d'avaluació, es tindrà en compte el que es dispos
 ## 5.2 CRITERIS D’AVALUACIÓ
 A continuació es mostren els criteris d'avaluació associades a les competències específiques exposades anteriorment segons el decret 107/2022:
 
-** Competència específica 1. Criteris d’avaluació.**
+**Competència específica 1. Criteris d’avaluació.**
 
 *CE1. Dissenyar equips i xarxes de comunicació d’ús personal i domèstic, administrar-los i utilitzar-losde manera segura i sostenible.*
 
