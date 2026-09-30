@@ -11,9 +11,9 @@
 
 <img src="./img/gva.jpg" alt="Escudo GVA" width="200" >
 
-<img src="./img/lasenia.png" alt="Logo de La Senia" width="300" >
+<img src="./img/lasenia.png" alt="Logo de La Senia" width="150" >
 
-<img src="./img/fse.png" alt="Fondo Social Europeo" width="300" >
+<img src="./img/fse.png" alt="Fondo Social Europeo" width="150" >
 
 </center>
 
