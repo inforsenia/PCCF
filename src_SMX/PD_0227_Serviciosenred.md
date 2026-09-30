@@ -80,13 +80,13 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    | Inicio    | Fin      |
 |--------|---------------------------|-----------|----------|
-| 01     | UP01: El enlace vital     | 08/09/25  | 24/09/25 | 
-| 02     | UP02: La amenaza creciente | 25/09/25  | 12/10/25 | 
-| 03     | UP03: Servicios esenciales | 13/10/25  | 09/11/25 |
-| 04     | UP04: Red esperanza  | 10/11/25  | 14/12/25 | 
-| 05     | UP05: Zona desmilitarizada  | 15/12/25  | 14/01/26 | 
-| 06     | UP06: Portal cautivo  | 15/01/26  | 23/01/25 | 
-| 07     | UP07: Cartas en la tormenta  | 24/01/26  | 06/02/25 |
+| 01     | UP01: El enlace vital     | 08/09/26  | 24/09/26 | 
+| 02     | UP02: La amenaza creciente | 25/09/26  | 12/10/26 | 
+| 03     | UP03: Servicios esenciales | 13/10/26  | 09/11/26 |
+| 04     | UP04: Red esperanza  | 10/11/26  | 14/12/26 | 
+| 05     | UP05: Zona desmilitarizada  | 15/12/26  | 14/01/26 | 
+| 06     | UP06: Portal cautivo  | 15/01/27  | 23/01/27 | 
+| 07     | UP07: Cartas en la tormenta  | 24/01/27  | 06/02/27 |
 
 
 ## Metodología del proceso de enseñanza-aprendizaje
