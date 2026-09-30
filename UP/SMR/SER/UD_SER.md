@@ -2,17 +2,17 @@
 
 
 
-### Resumen de Unidades de Programación (Curso 2025-2026)
+### Resumen de Unidades de Programación (Curso 2026-2027)
 
 | Código | Título de la UP | Duración | Temporalización | RA asociados (Descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **El enlace vital** | 16 h | 08/09/25 – 24/09/25 | **RA08:** Interconexión redes |
-| **UP02** | **La amenaza creciente** | 14 h | 25/09/25 – 12/10/25 | **RA06:** Acceso remoto |
-| **UP03** | **Servicios esenciales** | 22 h | 13/10/25 – 09/11/25 | **RA01:** DHCP <br> **RA02:** DNS |
-| **UP04** | **Red esperanza** | 35 h | 10/11/25 – 14/12/25 | **RA05:** Servidores web <br> **RA03:** Transferencia ficheros |
-| **UP05** | **Cartas en la tormenta** | 22 h | 15/12/25 – 14/01/26 | **RA04:** Correo electrónico |
-| **UP06** | **WIFI Restringido** | 14 h | 15/01/26 – 23/01/26 | **RA07:** Redes inalámbricas |
-| **UP07** | **Acceso externo e interzonas** | 10 h | 24/01/26 – 06/02/26 | **RA08:** Interconexión redes |
+| **UP01** | **El enlace vital** | 16 h | 08/09/26 – 24/09/26 | **RA08:** Interconexión redes |
+| **UP02** | **La amenaza creciente** | 14 h | 25/09/26 – 12/10/26 | **RA06:** Acceso remoto |
+| **UP03** | **Servicios esenciales** | 22 h | 13/10/26 – 09/11/26 | **RA01:** DHCP <br> **RA02:** DNS |
+| **UP04** | **Red esperanza** | 35 h | 10/11/26 – 14/12/26 | **RA05:** Servidores web <br> **RA03:** Transferencia ficheros |
+| **UP05** | **Cartas en la tormenta** | 22 h | 15/12/26 – 14/01/26 | **RA04:** Correo electrónico |
+| **UP06** | **WIFI Restringido** | 14 h | 15/01/27 – 23/01/27 | **RA07:** Redes inalámbricas |
+| **UP07** | **Acceso externo e interzonas** | 10 h | 24/01/27 – 06/02/27 | **RA08:** Interconexión redes |
 
 
 *   La suma total de estas unidades es de **133 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo fuera del periodo dual.
@@ -27,7 +27,7 @@
 | **Código** | UP01 |
 | **Módulo** | Servicios en Red (0227) |
 | **Duración** | **16 Horas** (Parte de las 50h totales del RA08) |
-| **Temporalización** | Del **08/09/2025** al **24/09/2025** |
+| **Temporalización** | Del **08/09/2026** al **24/09/2026** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -81,7 +81,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP02 |
 | **Duración** | **14 Horas** (Parte de las 24h totales del RA06) |
-| **Temporalización** | Del **25/09/2025** al **12/10/2025** |
+| **Temporalización** | Del **25/09/2026** al **12/10/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -138,7 +138,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP03 |
 | **Duración** | **22 Horas** (11h del RA01 + 11h del RA02 centro) |
-| **Temporalización** | Del **13/10/2025** al **09/11/2025** |
+| **Temporalización** | Del **13/10/2026** al **09/11/2026** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -201,7 +201,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP04 |
 | **Duración** | **35 Horas** (13h RA03 + 22h RA05 centro) |
-| **Temporalización** | Del **10/11/2025** al **14/12/2025** |
+| **Temporalización** | Del **10/11/2026** al **14/12/2026** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
@@ -263,7 +263,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP05 |
 | **Duración** | **22 Horas** (Parte de las 38h totales del RA04) |
-| **Temporalización** | Del **15/12/2025** al **14/01/2026** |
+| **Temporalización** | Del **15/12/2026** al **14/01/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -308,7 +308,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP06 |
 | **Duración** | **14 Horas** (Parte de las 24h totales del RA07) |
-| **Temporalización** | Del **15/01/2026** al **23/01/2026** |
+| **Temporalización** | Del **15/01/2027** al **23/01/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -357,7 +357,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | :--- | :--- |
 | **Código** | UP07 |
 | **Duración** | **10 Horas** (Cierre de las 50h del RA08) |
-| **Temporalización** | Del **24/01/2026** al **06/02/2026** |
+| **Temporalización** | Del **24/01/2027** al **06/02/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
