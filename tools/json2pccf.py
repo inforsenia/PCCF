@@ -191,9 +191,13 @@ def nom_fitxer_modul(modul_nom):
     return clean_path(modul_nom.replace(' ', ''))
 
 
+# Pla de pendents: només mòduls de 1r en cicles de dos cursos (no CEIABD)
+cicle_dos_cursos = any(str(m.get('curs')) == '2' for m in data_box.ModulosProfesionales.values())
+
 for codigo in data_box.ModulosProfesionales:
 
     modulo = data_box.ModulosProfesionales[codigo]
+    pla_pendents = cicle_dos_cursos and str(modulo.get('curs')) == '1'
     modulo.CPSS = data_box.CompetenciasProfesionalesPersonalesSociales
     modulo.OG = data_box.ObjetivosGenerales
     nom_net = nom_fitxer_modul(modulo.nombre)
@@ -221,7 +225,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo))
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), pla_pendents=pla_pendents)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
     else:
@@ -235,7 +239,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo))
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), pla_pendents=pla_pendents)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
 

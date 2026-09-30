@@ -166,6 +166,16 @@ L'alumnat amb RA no superats disposa d'un programa de recuperació i, si no supe
 
 [###]
 
+{% if pla_pendents %}
+### Pla de pendents
+
+L'alumnat que promociona a segon curs amb este mòdul pendent disposa d'un pla de recuperació que li permet superar-lo sense assistir a les classes ordinàries. El pla s'informa a l'alumnat a l'inici del curs i té com a referents els resultats d'aprenentatge i els criteris d'avaluació no superats.
+
+> Indiqueu les activitats i els treballs que haurà de realitzar l'alumnat, el calendari de lliuraments i proves, el seguiment previst (horari d'atenció, tutories, plataforma), i els instruments i criteris de qualificació.
+
+[###]
+
+{% endif %}
 ### Segona convocatòria
 
 La segona convocatòria del mòdul s'ajustarà al que s'ha decidit de manera conjunta i s'ha descrit en el Projecte Curricular del Cicle Formatiu.
