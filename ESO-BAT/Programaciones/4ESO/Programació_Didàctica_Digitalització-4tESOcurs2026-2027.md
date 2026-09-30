@@ -185,6 +185,7 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 1.4. Instal·lar, utilitzar i mantindre sistemes operatius i aplicacions, configurant-ne  les característiques en funció de les necessitats personals.
 1.5. Administrar dispositius mòbils i xarxes domèstiques de manera segura i sostenible, segons l’ús per al qual estan destinats.
 1.6. Participar en equips de treball per a dissenyar, administrar i utilitzar equips i xarxes de comunicació, respectant els rols assignats i les aportacions de la resta d’integrants del grup.
+
 ---
 **Competència específica 2. Criteris d’avaluació.**
 
@@ -196,6 +197,7 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 2.4. Programar aplicacions senzilles multiplataforma de manera creativa, de manera individual o col·lectiva, respectant els drets d’autoria i llicències d’ús.
 2.5. Compartir i publicar informació i dades interactuant en espais virtuals de comunicació i plataformes d’aprenentatge col·laboratiu, adaptant-se a diferents audiències amb una actitud participativa i respectuosa.
 2.6. Participar en equips de treball per a afavorir l’aprenentatge permanent mitjançant entorns digitals.
+
 ---
 **Competència específica 3. Criteris d’avaluació.**
 
@@ -206,7 +208,8 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 3.3. Adoptar conductes proactives que protegisquen les persones i fomenten relacions personals respectuoses i enriquidores.
 3.4. Identificar i saber reaccionar davant de situacions que representen amenaces a través de dispositius digitals, triant la millor solució entre diverses opcions i valorant el benestar personal i col·lectiu.
 3.5. Prendre mesures de prevenció davant dels riscos derivats de l’ús continuat de dispositius digitals.
-3.6. Mostrar empatia cap als membres del grup reconeixent les seues aportacions i establint un diàleg igualitari per a resoldre conflictes i discrepàncies
+3.6. Mostrar empatia cap als membres del grup reconeixent les seues aportacions i establint un diàleg igualitari per a resoldre conflictes i discrepàncies.
+
 ---
 **Competència específica 4. Criteris d’avaluació.**
 
@@ -215,10 +218,10 @@ informació.*
 
 4.1. Fer un ús ètic de les dades i de les eines digitals, aplicant l’etiqueta digital, col·laborant i participant activament en la xarxa.
 4.2. Reconéixer les aportacions de les plataformes digitals en les gestions administratives i el comerç electrònic, sent conscient de la bretxa d’accés, ús i aprofitament per a diversos col·lectius.
-4.3. Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió que suposen els mitjans digitals i comunitats virtuals per a poder exercir un activisme ètic i
-responsable.
+4.3. Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió que suposen els mitjans digitals i comunitats virtuals per a poder exercir un activisme ètic i responsable.
 4.4. Analitzar de manera crítica el missatge transmés en mitjans digitals, tenint-ne en compte l’objectivitat, ideologia, intencionalitat, biaixos i caducitat.
 4.5. Analitzar la necessitat i els beneficis globals d’un ús i desenvolupament ecosocialment responsable de les tecnologies digitals, tenint en compte criteris d’accessibilitat, sostenibilitat i impacte.
+
 ---
 **Competència específica 5. Criteris d’avaluació**
 
@@ -227,7 +230,8 @@ responsable.
 5.1. Gestionar situacions d’incertesa en entorns digitals amb una actitud positiva, i afrontar-les utilitzant el coneixement adquirit i sentint-se competent.
 5.2. Desenvolupar projectes de digitalització en l’entorn quotidià amb iniciativa, analitzant les situacions des de diferents punts de vista i proposant solucions creatives.
 5.3. Assumir proactivament responsabilitats en el marc d’un grup de treball per a abordar desafiaments concrets propis d’una societat digitalitzada i aconseguir metes conjuntes.
-5.4. Resoldre problemes tècnics senzills analitzant components i funcions dels dispositius digitals, avaluant les solucions de manera crítica i reformulant el procediment utilitzat en cas necessari
+5.4. Resoldre problemes tècnics senzills analitzant components i funcions dels dispositius digitals, avaluant les solucions de manera crítica i reformulant el procediment utilitzat en cas necessari.
+
 ---
 ## 5.3 CRITERIS DE CALIFICACIÓ
 Tal i com s’estableix en l’Annex III, apartat 6, del DECRET 107/2022, de 5 d'agost, del Consell, l’avaluació ha de realitzar-se a partir dels Criteris d’Avaluació de les Competències específiques.
