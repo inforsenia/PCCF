@@ -286,8 +286,57 @@ def parse_pd_filename(filename):
     }
 
 
-def check_excel_coherence(filepath):
-    """Valida la coherència de l'Excel de pesos RA.
+def _fmt_h(h):
+    return str(int(h)) if float(h).is_integer() else f"{h:.2f}".rstrip("0").rstrip(".")
+
+
+def hores_fulla(ws):
+    """Hores al centre (HORES, F) i en empresa (HORES DUAL, I, si la fulla
+    en té) de les files de criteri (E amb text, fora de "TOTS"). Llig les
+    cel·les i no les fórmules de capçalera: un llibre generat amb openpyxl no
+    en té el valor calculat. Torna (centre, dual, errors)."""
+    dual = any(c.value == "HORES DUAL" for c in ws[8])
+    centre = empresa = 0.0
+    errors = []
+    for r in range(10, ws.max_row + 1):
+        ce = ws.cell(row=r, column=5).value
+        if not isinstance(ce, str) or ce.strip() in ("", "TOTS"):
+            continue
+        for col, nom in ((6, "HORES"),) + (((9, "HORES DUAL"),) if dual else ()):
+            v = ws.cell(row=r, column=col).value
+            if v is None or v == "":
+                continue
+            try:
+                h = float(str(v).replace(",", "."))
+            except ValueError:
+                errors.append(f"  Fulla '{ws.title}': fila {r}, {nom} no numèric '{v}'")
+                continue
+            if col == 6:
+                centre += h
+            else:
+                empresa += h
+    return centre, empresa, errors
+
+
+def hores_per_fulla(moduls):
+    """{nom de fulla: hores del mòdul} a partir dels mòduls del JSON. Claus
+    amb les sigles (get_hoja_label) i, per als llibres antics, el nom."""
+    mapa = {}
+    for modul in moduls:
+        try:
+            hores = float(str(modul.get("horas", "")).replace(",", "."))
+        except ValueError:
+            continue
+        nom = modul["nombre"]
+        for clau in (get_hoja_label(nom), nom, nom[:31]):
+            mapa.setdefault(clau, hores)
+    return mapa
+
+
+def check_excel_coherence(filepath, hores_moduls=None):
+    """Valida la coherència de l'Excel de pesos RA i, si es passa
+    `hores_moduls` ({fulla: hores del mòdul}, vore hores_per_fulla), que
+    HORES + HORES DUAL de cada fulla sumen les hores del mòdul.
 
     Retorna una llista de missatges d'error (buida si tot correcte).
     """
@@ -337,6 +386,15 @@ def check_excel_coherence(filepath):
 
         for e in errors:
             issues.append(e)
+
+        if hores_moduls and sheet_name in hores_moduls:
+            centre, empresa, errors_h = hores_fulla(ws)
+            issues.extend(errors_h)
+            esperat = hores_moduls[sheet_name]
+            if abs(centre + empresa - esperat) > 0.01:
+                detall = (f"HORES ({_fmt_h(centre)}) + HORES DUAL ({_fmt_h(empresa)}) = {_fmt_h(centre + empresa)} h"
+                          if any(c.value == "HORES DUAL" for c in ws[8]) else f"HORES = {_fmt_h(centre)} h")
+                issues.append(f"  Fulla '{sheet_name}': {detall}, però el mòdul té {_fmt_h(esperat)} h")
 
     wb.close()
     return issues

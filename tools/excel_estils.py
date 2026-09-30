@@ -8,6 +8,7 @@
 # fila de la taula pel seu contingut ("TOTS", OBJECTIUS/COMPETENCIES).
 
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Protection, Side
+from openpyxl.formatting.rule import FormulaRule
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.dimensions import DimensionHolder
 import os
@@ -48,21 +49,28 @@ GIRAT = Alignment(horizontal="center", vertical="center", text_rotation=90, wrap
 # Capçalera de la fulla (files 1-5), escrita per escriu_capcalera() i comuna
 # a json2excel.py i json2optatives.py:
 #   Banda 1 (files 1-2): MÒDUL (B:E) | CODI (F:I) | HORES (J)
-#   Banda 2 (files 4-5): OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E:F) |
-#                        TOTAL H. DUAL (G:I) | TOTAL HORES (J)
-# Cada bloc: etiqueta a la primera fila i valor a la segona. Cap codi llig
-# estes cel·les; la taula comença a FILA_CAPCALERA (no canvia).
+#   Banda 2 (files 4-5): OBJECTIUS GENERALS (B:D) | COMPETÈNCIES (E) |
+#                        H. CENTRE (F:G) | H. DUAL (H:I) |
+#                        TOTAL HORES (J) = centre + dual
+# Cada bloc: etiqueta a la primera fila i valor a la segona. Les hores del
+# mòdul (JSON) són les hores al centre (HORES dels CE) més les hores en
+# empresa (HORES DUAL): TOTAL HORES es posa en roig mentre no hi quadra
+# (pccf_utils.check_excel_coherence ho valida després). Cap codi llig estes
+# cel·les; la taula comença a FILA_CAPCALERA (no canvia).
 #
 # Un mòdul que no dualitza (pccf_utils.dualitza) no té les columnes
 # REQUISIT FE (H) ni HORES DUAL (I): CONTINGUTS passa a H i la capçalera
 # queda MÒDUL (B:E) | CODI (F:G) | HORES (H) i OBJECTIUS (B:D) |
-# COMPETÈNCIES (E:F) | TOTAL HORES (G:H), sense TOTAL H. DUAL.
+# COMPETÈNCIES (E:F) | TOTAL HORES (G:H) = HORES, sense H. CENTRE ni H. DUAL.
 FILES_BANDA1 = (1, 2)
 FILES_BANDA2 = (4, 5)
 # Les fórmules sumen les columnes HORES (F) i HORES DUAL (I); /2 perquè cada
 # RA també té la fila "TOTS" amb la suma dels seus CE.
 FORMULA_TOTAL = "=SUM(F8:F200)/2"
 FORMULA_TOTAL_DUAL = "=SUM(I8:I200)/2"
+FORMULA_TOTAL_CENTRE_DUAL = "=SUM(F8:F200)/2+SUM(I8:I200)/2"
+ROIG = PatternFill("solid", fgColor="F4B6B6", bgColor="F4B6B6")
+VERD = PatternFill("solid", fgColor="C6E7C6", bgColor="C6E7C6")
 FILES_BUIDES = (3, 6, 7)   # separadors entre bandes i taula
 ESQUERRA = Alignment(horizontal="left", vertical="center", wrap_text=True, indent=1)
 
@@ -91,8 +99,9 @@ def disposicio(dual):
             "col_continguts": 10,
             "numeriques": range(6, 10),          # HORES, % CE, REQUISIT FE, HORES DUAL (F..I)
             "banda1": (("MÒDUL", 2, 5, "nom"), ("CODI", 6, 9, "codi"), ("HORES", 10, 10, "hores")),
-            "banda2": (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 6, "competencies"),
-                       ("TOTAL H. DUAL", 7, 9, "total_dual"), ("TOTAL HORES", 10, 10, "total")),
+            "banda2": (("OBJECTIUS GENERALS", 2, 4, "objectius"), ("COMPETÈNCIES", 5, 5, "competencies"),
+                       ("H. CENTRE", 6, 7, "total_centre"), ("H. DUAL", 8, 9, "total_dual"),
+                       ("TOTAL HORES", 10, 10, "total")),
         }
     return {
         "col_fi": 8,                             # H
@@ -118,10 +127,11 @@ def escriu_capcalera(ws, codi, modul, dual=True):
     valors = {
         "nom": modul.nombre,
         "codi": codi,
-        "hores": modul.horas,
+        "hores": _numero(modul.horas),
         "objectius": ", ".join(str(x) for x in (modul.get("ObjetivosGenerales") or [])),
         "competencies": ", ".join(str(x) for x in (modul.get("CompetenciasTitulo") or [])),
-        "total": FORMULA_TOTAL,
+        "total": FORMULA_TOTAL_CENTRE_DUAL if dual else FORMULA_TOTAL,
+        "total_centre": FORMULA_TOTAL,
         "total_dual": FORMULA_TOTAL_DUAL,
     }
     for (fila_etiqueta, fila_valor), blocs in ((FILES_BANDA1, d["banda1"]), (FILES_BANDA2, d["banda2"])):
@@ -131,6 +141,27 @@ def escriu_capcalera(ws, codi, modul, dual=True):
                 ws.merge_cells(start_row=fila_valor, start_column=c0, end_row=fila_valor, end_column=c1)
             ws.cell(row=fila_etiqueta, column=c0).value = etiqueta
             ws.cell(row=fila_valor, column=c0).value = valors[clau]
+    _marca_total(ws, d)
+
+
+def _numero(valor):
+    """Hores del JSON ("233") com a número, perquè es puguen comparar."""
+    try:
+        f = float(str(valor).replace(",", "."))
+    except ValueError:
+        return valor
+    return int(f) if f.is_integer() else f
+
+
+def _marca_total(ws, d):
+    """TOTAL HORES en roig si no coincidix amb les HORES del mòdul, en verd si sí."""
+    blocs = {clau: (c0, c1) for _e, c0, c1, clau in d["banda1"] + d["banda2"]}
+    c0, c1 = blocs["total"]
+    total = f"{_lletra(c0)}{FILES_BANDA2[1]}"
+    hores = f"${_lletra(blocs['hores'][0])}${FILES_BANDA1[1]}"
+    rang = f"{total}:{_lletra(c1)}{FILES_BANDA2[1]}"
+    ws.conditional_formatting.add(rang, FormulaRule(formula=[f"ABS({total}-{hores})>0.01"], fill=ROIG, stopIfTrue=True))
+    ws.conditional_formatting.add(rang, FormulaRule(formula=[f"ABS({total}-{hores})<=0.01"], fill=VERD))
 
 
 def _estil_bloc(ws, fila, c0, c1, fill, font, alignment, border=None):
@@ -312,7 +343,9 @@ INSTRUCCIONS = [
     ("seccio", "Què heu d'omplir en la pestanya del vostre mòdul"),
     ("camp", "% RA (columna C)", "Ponderació de cada RA en la qualificació del mòdul. La suma de tots els RA ha de ser 100."),
     ("camp", "COMP (columna D)", "Sota OBJECTIUS i COMPETENCIES, les lletres dels objectius generals i de les competències que treballa el RA."),
-    ("camp", "HORES (columna F)", "Hores dedicades a cada criteri d'avaluació. El TOTAL HORES de la capçalera hauria de coincidir amb les hores del mòdul."),
+    ("camp", "HORES (columna F)", "Hores al centre dedicades a cada criteri d'avaluació. Les hores del mòdul són les hores al centre "
+             "més les hores en l'empresa (HORES DUAL): el TOTAL HORES de la capçalera (H. CENTRE + H. DUAL) "
+             "es posa en roig mentre no coincidix amb les HORES del mòdul, i en verd quan quadra."),
     ("camp", "% CE (columna G)", "Pes de cada criteri dins del seu RA. La suma dels criteris d'un RA (fila TOTS) ha de ser 100."),
     ("camp", "REQUISIT FE (C/E) (columna H)", "Només en els mòduls que dualitzen. Per a cada criteri que es treballa en l'empresa: "
              "C = compartit (centre i empresa), E = sols empresa. Buit = sols al centre."),
@@ -320,7 +353,8 @@ INSTRUCCIONS = [
              "Tot criteri marcat ha de tindre hores i no hi pot haver hores sense marca."),
     ("camp", "CONTINGUTS (última columna)", "Resum dels continguts associats a cada RA."),
     ("seccio", "Què es comprova automàticament"),
-    ("text", "El report de les Programacions avisa si la suma dels % RA no és 100. Per als mòduls que dualitzen, "
+    ("text", "El report de les Programacions avisa si la suma dels % RA no és 100 i si HORES + HORES DUAL no suma "
+             "les hores del mòdul (la programació no es dona per verificada). Per als mòduls que dualitzen, "
              "si cap criteri té C/E, si les hores dual són 0 o si hi ha criteris marcats sense hores (o hores sense "
              "marca), el mòdul consta com a pendent i la coordinació de Formació en Empresa en rep l'avís."),
     ("text", "Els mòduls que no dualitzen (Digitalització, Sostenibilitat, IPO, Projecte intermodular, les "

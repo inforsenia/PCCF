@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import (parse_pd_filename, check_excel_coherence, get_familia,
                         get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO,
-                        get_hoja_label)
+                        get_hoja_label, get_moduls_del_cicle, hores_per_fulla)
 
 PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
 
@@ -59,7 +59,8 @@ def compute_pd_status(cicle, familia, pd_dir):
             status["placeholders"].append((f, places))
             status["total_places"] += len(places)
 
-    status["excel_issues"] = check_excel_coherence(status["excel_path"])
+    status["excel_issues"] = check_excel_coherence(
+        status["excel_path"], hores_per_fulla(get_moduls_del_cicle(cicle, familia).values()))
     add_optatives_status(status)
     return status
 
@@ -95,7 +96,7 @@ def add_optatives_status(status):
     noms = set()
     for _, m in opts:
         noms |= {m["nombre"], m["nombre"][:31], get_hoja_label(m["nombre"])}
-    for issue in check_excel_coherence(status["opt_excel_path"]):
+    for issue in check_excel_coherence(status["opt_excel_path"], hores_per_fulla(m for _, m in opts)):
         if "Fulla '" not in issue or any(f"Fulla '{n}'" in issue for n in noms):
             status["opt_excel_issues"].append(issue)
 
