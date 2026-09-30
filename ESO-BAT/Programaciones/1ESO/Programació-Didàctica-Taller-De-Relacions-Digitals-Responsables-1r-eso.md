@@ -279,12 +279,11 @@ Tenint en compte la relació entre els blocs de continguts i les Competències E
 A l'hora de traduir aquestes qualificacions numèriques a les indicades en l'Article 36 del DECRET 107/2022, de 5 d'agost del Consell, atendrem a les indicacions de l'Article 10 del DECRET 66/2024, de 21 de juny, del Consell, pel qual es modifica el Decret 107/2022, de manera que l'apartat 13 de l'article 36, que queda redactat en els termes següents:
 
 > «13. Els resultats de l'avaluació s'expressaran en els termes que disposa l'article 31.2 del Reial decret 217/2022. A estos termes s'adjuntarà, amb caràcter informatiu, una qualificació numèrica, sense utilitzar decimals, en una escala d'un a deu, amb les correspondències següents:
->
-> Insuficient: 1, 2, 3 o 4.
-> Suficient: 5.
-> Bé: 6.
-> Notable: 7 o 8.
-> Excel·lent: 9 o 10.»
+> - Insuficient: 1, 2, 3 o 4.
+> - Suficient: 5.
+> - Bé: 6.
+> - Notable: 7 o 8.
+> - Excel·lent: 9 o 10.»
 
 A fi d'evitar imprecisions, seguirem l'acord de centre pres en la COCOPE del dijous 13 d'octubre de 2022 i que les resumeix de la forma que es presenta a continuació:
 
