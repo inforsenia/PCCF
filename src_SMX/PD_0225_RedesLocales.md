@@ -79,14 +79,14 @@ La formación del módulo contribuye a alcanzar las *Competencias del Título* s
 
 | Número | Título                    | Inicio    | Fin       |
 |--------|---------------------------|-----------|-----------|
-| 01     | UP01: Introducción a las redes  | 08/09/2025| 15/09/2025|
-| 02     | UP02: Arquitectura de las redes locales      | 17/09/2025| 06/10/2025|
-| 03     | UP03: Identificación de elementos y espacios físicos   | 08/10/2025| 06/11/2025|
-| 04     | UP04: Medios de transmisión    | 06/11/2025| 04/12/2025|
-| 05     | UP05: Instalación/configuración de los equipos de red. Aspectos teóricos     | 10/11/2025| 29/01/2026|
-| 06     | UP06: Configuración de los equipos de red    | 29/01/2026| 04/03/2026|
-| 07     | UP07: Interconexión de equipos    | 05/03/2026| 23/04/2026|
-| 08     | UP08: Resolución de incidencias en una LAN     | 27/04/2026| 28/05/2026|
+| 01     | UP01: Introducción a las redes  | 08/09/2026| 15/09/2026|
+| 02     | UP02: Arquitectura de las redes locales      | 17/09/2026| 06/10/2026|
+| 03     | UP03: Identificación de elementos y espacios físicos   | 08/10/2026| 06/11/2026|
+| 04     | UP04: Medios de transmisión    | 06/11/2026| 04/12/2026|
+| 05     | UP05: Instalación/configuración de los equipos de red. Aspectos teóricos     | 10/11/2026| 29/01/2027|
+| 06     | UP06: Configuración de los equipos de red    | 29/01/2027| 04/03/2027|
+| 07     | UP07: Interconexión de equipos    | 05/03/2027| 23/04/2027|
+| 08     | UP08: Resolución de incidencias en una LAN     | 27/04/2027| 28/05/2027|
 
 
 
