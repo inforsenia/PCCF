@@ -1,5 +1,4 @@
 <center>
- 
 # Programació Didàctica
 
 ## DIGITALITZACIÓ
@@ -12,9 +11,9 @@
 
 <img src="./img/gva.jpg" alt="Escudo GVA" width="200" >
 
-<img src="./img/lasenia.png" alt="Logo de La Senia" width="150" >
+<img src="./img/lasenia.png" alt="Logo de La Senia" width="300" >
 
-<img src="./img/fse.png" alt="Fondo Social Europeo" width="150" >
+<img src="./img/fse.png" alt="Fondo Social Europeo" width="300" >
 
 </center>
 
@@ -176,7 +175,7 @@ Per a dur a terme el procés d'avaluació, es tindrà en compte el que es dispos
 ## 5.2 CRITERIS D’AVALUACIÓ
 A continuació es mostren els criteris d'avaluació associades a les competències específiques exposades anteriorment segons el decret 107/2022:
 
-**Competència específica 1. Criteris d’avaluació.**
+** Competència específica 1. Criteris d’avaluació.**
 
 *CE1. Dissenyar equips i xarxes de comunicació d’ús personal i domèstic, administrar-los i utilitzar-losde manera segura i sostenible.*
 
@@ -186,7 +185,6 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 1.4. Instal·lar, utilitzar i mantindre sistemes operatius i aplicacions, configurant-ne  les característiques en funció de les necessitats personals.
 1.5. Administrar dispositius mòbils i xarxes domèstiques de manera segura i sostenible, segons l’ús per al qual estan destinats.
 1.6. Participar en equips de treball per a dissenyar, administrar i utilitzar equips i xarxes de comunicació, respectant els rols assignats i les aportacions de la resta d’integrants del grup.
-
 ---
 **Competència específica 2. Criteris d’avaluació.**
 
@@ -198,7 +196,6 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 2.4. Programar aplicacions senzilles multiplataforma de manera creativa, de manera individual o col·lectiva, respectant els drets d’autoria i llicències d’ús.
 2.5. Compartir i publicar informació i dades interactuant en espais virtuals de comunicació i plataformes d’aprenentatge col·laboratiu, adaptant-se a diferents audiències amb una actitud participativa i respectuosa.
 2.6. Participar en equips de treball per a afavorir l’aprenentatge permanent mitjançant entorns digitals.
-
 ---
 **Competència específica 3. Criteris d’avaluació.**
 
@@ -209,8 +206,7 @@ A continuació es mostren els criteris d'avaluació associades a les competènci
 3.3. Adoptar conductes proactives que protegisquen les persones i fomenten relacions personals respectuoses i enriquidores.
 3.4. Identificar i saber reaccionar davant de situacions que representen amenaces a través de dispositius digitals, triant la millor solució entre diverses opcions i valorant el benestar personal i col·lectiu.
 3.5. Prendre mesures de prevenció davant dels riscos derivats de l’ús continuat de dispositius digitals.
-3.6. Mostrar empatia cap als membres del grup reconeixent les seues aportacions i establint un diàleg igualitari per a resoldre conflictes i discrepàncies.
-
+3.6. Mostrar empatia cap als membres del grup reconeixent les seues aportacions i establint un diàleg igualitari per a resoldre conflictes i discrepàncies
 ---
 **Competència específica 4. Criteris d’avaluació.**
 
@@ -219,10 +215,10 @@ informació.*
 
 4.1. Fer un ús ètic de les dades i de les eines digitals, aplicant l’etiqueta digital, col·laborant i participant activament en la xarxa.
 4.2. Reconéixer les aportacions de les plataformes digitals en les gestions administratives i el comerç electrònic, sent conscient de la bretxa d’accés, ús i aprofitament per a diversos col·lectius.
-4.3. Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió que suposen els mitjans digitals i comunitats virtuals per a poder exercir un activisme ètic i responsable.
+4.3. Valorar la importància de l’oportunitat, facilitat i llibertat d’expressió que suposen els mitjans digitals i comunitats virtuals per a poder exercir un activisme ètic i
+responsable.
 4.4. Analitzar de manera crítica el missatge transmés en mitjans digitals, tenint-ne en compte l’objectivitat, ideologia, intencionalitat, biaixos i caducitat.
 4.5. Analitzar la necessitat i els beneficis globals d’un ús i desenvolupament ecosocialment responsable de les tecnologies digitals, tenint en compte criteris d’accessibilitat, sostenibilitat i impacte.
-
 ---
 **Competència específica 5. Criteris d’avaluació**
 
@@ -231,8 +227,7 @@ informació.*
 5.1. Gestionar situacions d’incertesa en entorns digitals amb una actitud positiva, i afrontar-les utilitzant el coneixement adquirit i sentint-se competent.
 5.2. Desenvolupar projectes de digitalització en l’entorn quotidià amb iniciativa, analitzant les situacions des de diferents punts de vista i proposant solucions creatives.
 5.3. Assumir proactivament responsabilitats en el marc d’un grup de treball per a abordar desafiaments concrets propis d’una societat digitalitzada i aconseguir metes conjuntes.
-5.4. Resoldre problemes tècnics senzills analitzant components i funcions dels dispositius digitals, avaluant les solucions de manera crítica i reformulant el procediment utilitzat en cas necessari.
-
+5.4. Resoldre problemes tècnics senzills analitzant components i funcions dels dispositius digitals, avaluant les solucions de manera crítica i reformulant el procediment utilitzat en cas necessari
 ---
 ## 5.3 CRITERIS DE CALIFICACIÓ
 Tal i com s’estableix en l’Annex III, apartat 6, del DECRET 107/2022, de 5 d'agost, del Consell, l’avaluació ha de realitzar-se a partir dels Criteris d’Avaluació de les Competències específiques.
@@ -250,13 +245,12 @@ es mostra en la següent taula:
 
 A l’hora de traduir aquestes qualificacions numèriques a les indicades en l’Article 36 del DECRET 107/2022, de 5 d'agost del Consell, atendrem a les indicacions de l’Article 10 del DECRET 66/2024, de 21 de juny, del Consell, pel qual es modifica el Decret 107/2022, de manera que l’apartat 13 de l’article 36, que queda redactat en els termes següents:
 
-“13. Els resultats de l'avaluació s'expressaran en els termes que disposa l'article
-31.2 del Reial decret 217/2022. A estos termes s'adjuntarà, amb caràcter informatiu, una qualificació numèrica, sense utilitzar decimals, en una escala d'un a deu, amb les correspondències següents:
-- Insuficient: 1, 2, 3 o 4.
-- Suficient: 5.
-- Bé: 6.
-- Notable: 7 o 8.
-- Excel·lent: 9 o 10.”
+>“13. Els resultats de l'avaluació s'expressaran en els termes que disposa l'article 31.2 del Reial decret 217/2022. A estos termes s'adjuntarà, amb caràcter informatiu, una qualificació numèrica, sense utilitzar decimals, en una escala d'un a deu, amb les correspondències següents:
+>- Insuficient: 1, 2, 3 o 4.
+>- Suficient: 5.
+>- Bé: 6.
+>- Notable: 7 o 8.
+>- Excel·lent: 9 o 10.”
 
 A fi d’evitar imprecissions, seguirem l’acord de centre pres en la COCOPE del dijous 13 d’octubre de 2022 i que les resumeix de la forma que es presenta a continuació:
 - Insuficient (IN): qualificacions inferiors al 5 (0-4’99).
@@ -280,7 +274,7 @@ Tot el procés d'avaluació, en els seus diferents aspectes, ha de servir per a 
 ### 5.5.2 L'AVALUACIÓ DE LA PRÀCTICA DOCENT PER PART DE L'ALUMNAT
 Consistirà en una enquesta amb els mateixos ítems que haurà utilitzat el professor per a autoavaluar-se i que es realitzarà en finalitzar el curs, anònima i contrastada amb la de la resta de professors/as del departament. A continuació es mostren la taula d'exemple amb alguns dels ítems que s'utilitzarien per a dur a terme l'autoavaluació docent i l'avaluació per part dels discents.
 
-<img src="./img/rubrica.png" alt="Rúbrica" />
+![rúbrica](.\img\rubrica.png)
 
 Este tipus d'accions permeten fer els canvis oportuns i perfeccionar l'acció docent mitjançant cursos formatius, seminaris, participació en congressos i que faran d'esta programació un element viu i útil per a dur a terme la labor docent.
 
