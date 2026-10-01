@@ -7,7 +7,7 @@
 | **UP01** | **Introducción a las redes** | **10 h** | 08/09/2026 - 15/09/2026 | **RA01:** Principios de funcionamiento y tipos de redes (parcial). |
 | **UP02** | **Arquitectura de las redes locales** | **25 h** | 17/09/2026 - 06/10/2026 | **RA01:** Elementos, topologías y mapas físicos (parcial). |
 | **UP03** | **Identificación de elementos y espacios físicos** | **33 h** | 08/10/2026 - 06/11/2026 | **RA02:** Despliegue, canalizaciones y racks (parcial) + **RA06:** PRL. |
-| **UP04** | **Medios de transmisión** | **25 h** | 06/11/2026 - 04/12/2026 | **RA01 y RA02:** Clasificación de medios, tomas de usuario y paneles. |
+| **UP04** | **Medios de transmisión** | **25 h** | 06/11/2026 - 04/12/2026 | **R3:** Clasificación de medios, tomas de usuario y paneles. |
 | **UP05** | **Instalación/configuración de los equipos de red. Aspectos teóricos** | **35 h** | 10/11/2026 - 29/01/2027 | **RA04:** Redes inalámbricas, protocolos y direccionamiento básico (parcial). |
 | **UP06** | **Configuración de los equipos de red** | **35 h** | 29/01/2027 - 04/03/2027 | **RA04:** Configuración avanzada, seguridad inalámbrica y creación de VLANs (parcial). |
 | **UP07** | **Interconexión de equipos** | **40 h** | 05/03/2027 - 23/04/2027 | **RA03:** Adaptadores, crimpado (cobre/fibra), switches y paneles de parcheo. |
@@ -175,8 +175,14 @@
 * **RA02 (Parcial).** Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.
 
 **Criterios de Evaluación**
-* **RA01: d)** Identificación y clasificación de los medios de transmisión.
-* **RA02: b)** Identificación de tipos de redes; **c)** Diferenciación de medios; **g)** Montaje y conexionado de tomas de usuario y paneles de parcheo; **h)** Prueba de líneas de comunicación; **i)** Etiquetado de cables y tomas.
+* **RA03:
+* a) Se ha interpretado el plan de montaje lógico de la red.
+* b) Se han montado los adaptadores de red en los equipos.
+* c) Se han montado conectores sobre cables (cobre y fibra) de red.
+* d) Se han montado los equipos de conmutación en los armarios de comunicaciones.
+* e) Se han conectado los equipos de conmutación a los paneles de parcheo.
+* f) Se ha verificado la conectividad de la instalación.
+* g) Se ha trabajado con la calidad requerida.
 
 ### 3. Organización
 **Contenidos**
