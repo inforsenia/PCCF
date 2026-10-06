@@ -6,13 +6,13 @@
 
 | Código | Título de la UP | Duración | Temporalización | RA asociados (Descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **Introducción al DIN** | 18 h | 08/09/25 – 20/09/25 | **RA01:** Interfaces gráficos con editores visuales |
-| **UP02** | **Prototipado de una App** | 24 h | 21/09/25 – 21/10/25 | **RA02:** Interfaces naturales de usuario |
-| **UP03** | **Componentes con XML** | 10 h | 21/10/25 – 22/10/25 | **RA03:** Componentes visuales con XML |
-| **UP04** | **Interfaces en Android con Jetpack Compose** | 40 h | 23/10/25 – 20/11/25 | **RA04:** Usabilidad y accesibilidad con Jetpack Compose |
-| **UP05** | **Testing** | 14 h | 26/11/25 – 05/12/25 | **RA08:** Pruebas de funcionamiento |
-| **UP06** | **Criterios de Usabilidad** | 20 h | 07/01/26 – 20/01/26 | **RA04:** Criterios de usabilidad y accesibilidad |
-| **UP07** | **Informes, Documentación y Distribución de Apps** | 30 h | 21/01/26 – 05/02/26 | **RA05:** Informes <br> **RA06:** Documentación <br> **RA07:** Distribución |
+| **UP01** | **Introducción al DIN** | 18 h | 08/09/26 – 20/09/26 | **RA01:** Interfaces gráficos con editores visuales |
+| **UP02** | **Prototipado de una App** | 24 h | 21/09/26 – 23/10/26 | **RA02:** Interfaces naturales de usuario |
+| **UP03** | **Componentes con XML** | 10 h | 26/10/26 – 28/10/26 | **RA03:** Componentes visuales con XML |
+| **UP04** | **Interfaces en Android con Jetpack Compose** | 40 h | 29/10/26 – 20/11/26 | **RA04:** Usabilidad y accesibilidad con Jetpack Compose |
+| **UP05** | **Testing** | 14 h | 23/11/26 – 04/12/26 | **RA08:** Pruebas de funcionamiento |
+| **UP06** | **Criterios de Usabilidad** | 20 h | 07/01/27 – 20/01/27 | **RA04:** Criterios de usabilidad y accesibilidad |
+| **UP07** | **Informes, Documentación y Distribución de Apps** | 30 h | 21/01/27 – 05/02/27 | **RA05:** Informes <br> **RA06:** Documentación <br> **RA07:** Distribución |
 
 *   La suma total de estas unidades es de **156 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo.
 
@@ -26,7 +26,7 @@
 | **Código** | UP01 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **18 Horas** |
-| **Temporalización** | Del **08/09/2025** al **20/09/2025** |
+| **Temporalización** | Del **08/09/2026** al **20/09/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -84,7 +84,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP02 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **24 Horas** |
-| **Temporalización** | Del **21/09/2025** al **21/10/2025** |
+| **Temporalización** | Del **21/09/2026** al **23/10/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -144,7 +144,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP03 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **10 Horas** |
-| **Temporalización** | Del **21/10/2025** al **22/10/2025** |
+| **Temporalización** | Del **26/10/2026** al **28/10/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -203,7 +203,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP04 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **40 Horas** |
-| **Temporalización** | Del **23/10/2025** al **20/11/2025** |
+| **Temporalización** | Del **29/10/2026** al **20/11/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -266,7 +266,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP05 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **14 Horas** |
-| **Temporalización** | Del **26/11/2025** al **05/12/2025** |
+| **Temporalización** | Del **23/11/2026** al **04/12/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -325,7 +325,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP06 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **20 Horas** |
-| **Temporalización** | Del **07/01/2026** al **20/01/2026** |
+| **Temporalización** | Del **07/01/2027** al **20/01/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -383,7 +383,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de compet
 | **Código** | UP07 |
 | **Módulo** | Desarrollo de interfaces (0488) |
 | **Duración** | **30 Horas** (10h RA05 + 10h RA06 + 10h RA07) |
-| **Temporalización** | Del **21/01/2026** al **05/02/2026** |
+| **Temporalización** | Del **21/01/2027** al **05/02/2027** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
