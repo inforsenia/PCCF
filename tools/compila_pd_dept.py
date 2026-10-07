@@ -71,6 +71,51 @@ def pdfs_dept(prog_dir, dept):
     return sorted(pdfs, key=lambda p: (ordre[p[0]], os.path.basename(p[2])))
 
 
+ROT_RE = re.compile(r"^Page\s+(\d+)\s+rot:\s+(-?\d+)", re.M)
+
+# Atribut /Rotate de la pàgina de sortida. \includepdf (graphicx) no respecta el
+# /Rotate de les pàgines incloses: el Quadre Resum, que als PDF de mòdul és una
+# pàgina vertical amb /Rotate 90 (\includepdf[landscape=true]), eixia vertical.
+# xdvipdfmx (xelatex): \special pdf:put; pdflatex: \pdfpageattr, que s'aplica a
+# totes les pàgines següents, per això cada tram el torna a fixar (també a 0).
+# Va a la capçalera (--include-in-header): un \\newcommand dins del markdown el
+# consumiria pandoc (extensió latex_macros) i no arribaria a LaTeX.
+MACRO_ROTACIO = (
+    "\\newcommand{\\pdrotacio}[1]{\\thispagestyle{empty}\\ifdefined\\pdfpageattr\\pdfpageattr{/Rotate #1}"
+    "\\else\\ifnum#1=0\\else\\special{pdf: put @thispage << /Rotate #1 >>}\\fi\\fi}\n"
+)
+
+
+def trams_rotacio(path):
+    """[(primera, última, rotació)] de pàgines consecutives amb la mateixa
+    rotació, llegides amb pdfinfo (poppler-utils). Si no es pot llegir, tot
+    el PDF com un sol tram sense rotació."""
+    try:
+        out = subprocess.run(["pdfinfo", "-f", "1", "-l", "100000", path],
+                             capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return [(1, None, 0)]
+    trams = []
+    for pagina, rot in ((int(p), int(r) % 360) for p, r in ROT_RE.findall(out)):
+        if trams and trams[-1][2] == rot and trams[-1][1] == pagina - 1:
+            trams[-1] = (trams[-1][0], pagina, rot)
+        else:
+            trams.append((pagina, pagina, rot))
+    return trams or [(1, None, 0)]
+
+
+def includepdf(path, toc):
+    """\\includepdf per trams de rotació; l'entrada de l'índex, al primer."""
+    linies = []
+    for i, (primera, ultima, rot) in enumerate(trams_rotacio(path)):
+        pagines = "-" if ultima is None else f"{{{primera}-{ultima}}}"
+        opcions = [f"pages={pagines}", "fitpaper=true", f"pagecommand={{\\pdrotacio{{{rot}}}}}"]
+        if i == 0 and toc:
+            opcions.append(f"addtotoc={{{','.join(toc)}}}")
+        linies.append(f"\\includepdf[{','.join(opcions)}]{{{path}}}")
+    return linies
+
+
 def markdown_dept(dept, pdfs, centre):
     from genera_fe import nom_cicle
     nom = nom_departament(dept)
@@ -97,7 +142,7 @@ def markdown_dept(dept, pdfs, centre):
             cicle_actual = cicle
             toc.append(f"1,section,1,{{{tex(nom_cicle(cicle))}}},cicle-{cicle}")
         toc.append(f"1,subsection,2,{{{tex(nom_modul(cicle, codi))}}},modul-{cicle}-{codi}")
-        cos.append(f"\\includepdf[pages=-,fitpaper=true,addtotoc={{{','.join(toc)}}}]{{{path}}}")
+        cos.extend(includepdf(path, toc))
         cos.append("")
     return "\n".join(l for l in yaml if l is not None) + "\n" + "\n".join(cos)
 
@@ -133,7 +178,11 @@ def main():
         with open(md, "w", encoding="utf-8") as f:
             f.write(markdown_dept(dept, pdfs, args.centre))
         desti = os.path.join(desti_dir, f"Programaciones_{args.centre}_{dept}.pdf")
-        r = subprocess.run(["pandoc", *pandoc_opts, "-o", desti, md], cwd=tmp, capture_output=True, text=True)
+        capcalera = os.path.join(tmp, "rotacio.tex")
+        with open(capcalera, "w", encoding="utf-8") as f:
+            f.write(MACRO_ROTACIO)
+        r = subprocess.run(["pandoc", *pandoc_opts, "--include-in-header", capcalera, "-o", desti, md],
+                           cwd=tmp, capture_output=True, text=True)
         if r.returncode != 0:
             print(f" * [PD] ERROR compilant el PDF del departament {dept}:\n{r.stderr[-1500:]}")
         else:
