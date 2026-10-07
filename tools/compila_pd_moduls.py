@@ -48,7 +48,8 @@ def portada_modul(portada_cicle, modul):
     out, dins_abstract = [], False
     for l in linies:
         if dins_abstract:
-            if l.startswith((" ", "\t")):
+            # Les portades de SCO tenen línies en blanc dins de l'abstract
+            if l.startswith((" ", "\t")) or not l.strip():
                 continue
             dins_abstract = False
         if l.startswith("title:"):
