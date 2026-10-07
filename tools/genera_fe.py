@@ -171,6 +171,7 @@ def estat_cicle(cicle, root):
             info = {"ras": [], "hores": 0.0,
                     "incidencies": ["Excel no trobat" if wb is None else "fulla del mòdul no trobada a l'Excel"]}
         moduls.append({"codi": codi, "nom": modul["nombre"], "curs": get_curs(modul),
+                       "sigles": f"{cicle}_{get_hoja_label(modul['nombre'])}",
                        "docent": docent_de_la_pd(pd_dir, codi), **info})
     if wb:
         wb.close()
@@ -186,7 +187,8 @@ def nom_cicle(cicle):
 # --- docx -------------------------------------------------------------------
 
 def _text_cela(tc, text):
-    """Escriu `text` al primer paràgraf de la cel·la (w:tc), conservant-ne el format."""
+    """Escriu `text` al primer paràgraf de la cel·la (w:tc), conservant-ne el format.
+    Cada "\n" és un salt de línia (w:br) dins del mateix paràgraf."""
     from docx.oxml.ns import qn
     ps = tc.findall(qn("w:p"))
     for p in ps[1:]:
@@ -196,9 +198,12 @@ def _text_cela(tc, text):
         p.remove(r)
     if text:
         r = p.makeelement(qn("w:r"), {})
-        t = r.makeelement(qn("w:t"), {qn("xml:space"): "preserve"})
-        t.text = text
-        r.append(t)
+        for i, linia in enumerate(text.split("\n")):
+            if i:
+                r.append(r.makeelement(qn("w:br"), {}))
+            t = r.makeelement(qn("w:t"), {qn("xml:space"): "preserve"})
+            t.text = linia
+            r.append(t)
         p.append(r)
 
 
@@ -211,7 +216,8 @@ def _omple_taula(tbl, modul):
     from docx.oxml.ns import qn
     trs = tbl.findall(qn("w:tr"))
     fila_modul, fila_hores, prototip = trs[0], trs[1], trs[3]  # trs[2]: capçalera RRAA | CE | ...
-    _text_cela(_cel_les(fila_modul)[1], f"{modul['codi']} {modul['nom']}")
+    # Mòdul: CICLE_SIGLES (p. ex. DAM_PRG) i, davall, el codi i el nom complet
+    _text_cela(_cel_les(fila_modul)[1], f"{modul['sigles']}\n{modul['codi']} {modul['nom']}")
     pendent = bool(modul["incidencies"])
     _text_cela(_cel_les(fila_hores)[1], "Pendent" if pendent else fmt_hores(modul["hores"]))
     for tr in trs[3:]:
