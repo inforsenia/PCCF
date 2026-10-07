@@ -309,21 +309,68 @@
             "creditos": "11.5",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Organitza les activitats d'atenció sanitària a persones en situació de dependència, relacionant-les amb les característiques i necessitats de les mateixes.",
+                    "Resultado": "Organitza les activitats d'atenció sanitària a persones en situació de dependència, relacionant-les amb les característiques i necessitats d'estes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han descrit les característiques anatomo-fisiològiques bàsiques i les alteracions més freqüents dels sistemes cardiovascular, respiratori, digestiu i reproductor.",
+                        "a": "S'han descrit les característiques anatomofisiològiques bàsiques i les alteracions més freqüents dels sistemes cardiovascular, respiratori, digestiu i reproductor.",
                         "b": "S'han descrit les principals característiques i necessitats d'atenció física de les persones en situació de dependència.",
                         "c": "S'han identificat els principals signes de deteriorament físic i sanitari associats a situacions de dependència.",
-                        "d": "S'han identificat les característiques de l'entorn que afavoreixen o dificulten l'estat físic i de salut de la persona usuària."
+                        "d": "S'han identificat les característiques de l'entorn que afavorixen o dificulten l'estat físic i de salut de la persona usuària.",
+                        "e": "S'han interpretat les prescripcions d'atenció sanitària establides en el pla de cures.",
+                        "f": "S'han definit les condicions ambientals favorables per a l'atenció sanitària.",
+                        "g": "S'ha argumentat la importància de la participació de la persona en les activitats sanitàries.",
+                        "h": "S'ha valorat la importància de promoure l'autocura."
                     }
                 },
                 "RA02": {
                     "Resultado": "Aplica tècniques de mobilització, trasllat i deambulació, analitzant les característiques de la persona en situació de dependència.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han aplicat les tècniques més freqüents de posicionament de persones enllitades, adequant-les a l'estat i condicions de les mateixes.",
+                        "a": "S'han aplicat les tècniques més freqüents de posicionament de persones enllitades, adequant-les a l'estat i les condicions d'estes.",
                         "b": "S'han aplicat tècniques de mobilització, deambulació i trasllat de persones en situació de dependència, adaptant-les al seu estat i condicions.",
-                        "c": "S'han aplicat procediments que garanteixin una càrrega segura i la prevenció d'aparició de possibles lesions en el professional.",
-                        "d": "S'han utilitzat les ajudes tècniques de mobilització, transport, deambulació i posicionament en llit de persones en situació de dependència més adequades al seu estat i condicions."
+                        "c": "S'han aplicat procediments que garantisquen una càrrega segura i la prevenció de possibles lesions en el professional.",
+                        "d": "S'han utilitzat les ajudes tècniques de mobilització, transport, deambulació i posicionament en el llit de persones en situació de dependència més adequades al seu estat i condicions.",
+                        "e": "S'han adoptat mesures de prevenció i seguretat.",
+                        "f": "S'han descrit les tècniques de neteja i conservació de pròtesis, precisant els materials i productes adequats en funció de l'estat i les necessitats de la persona usuària.",
+                        "g": "S'han proporcionat pautes d'actuació a la persona en situació de dependència i al seu entorn que afavorixen la seua autonomia en relació amb la mobilitat i el manteniment de les ajudes tècniques.",
+                        "h": "S'ha mostrat sensibilitat cap a la necessitat de potenciar l'autonomia de la persona usuària."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Caracteritza activitats d'assistència sanitària, relacionant les necessitats i les característiques de la persona usuària amb el que establix el pla de cures.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seleccionat les posicions anatòmiques més adequades per a facilitar l'exploració de les persones usuàries.",
+                        "b": "S'ha preparat i previst l'administració dels medicaments, complint les pautes establides en el pla de cures individualitzat i les prescripcions específiques per a cada via i producte.",
+                        "c": "S'han identificat els principals riscos associats a l'administració de medicaments.",
+                        "d": "S'han seleccionat tractaments locals de fred i calor atenent les pautes d'un pla de cures individualitzat.",
+                        "e": "S'han identificat els signes de possibles alteracions en l'estat general de la persona durant l'administració de medicaments.",
+                        "f": "S'han pres les constants vitals de la persona, utilitzant els materials adequats i seguint les prescripcions establides.",
+                        "g": "S'ha valorat la importància d'afavorir la participació de la persona usuària i del seu entorn en les activitats sanitàries.",
+                        "h": "S'han emprat les mesures de protecció, higiene i seguretat establides tant per al personal com per a la persona usuària."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Organitza activitats d'alimentació i suport a la ingesta, seleccionant les tècniques, els instruments i les ajudes necessàries.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha organitzat la distribució i el servici de les menjades en la institució, seguint les prescripcions del full de dietes.",
+                        "b": "S'han aplicat diferents tècniques de suport a la ingesta, en funció de les característiques i necessitats de la persona.",
+                        "c": "S'ha informat la persona en situació de dependència i les famílies sobre la correcta administració d'aliments.",
+                        "d": "S'ha comprovat que la ingesta de les persones s'ajusta al pla de cures.",
+                        "e": "S'ha assessorat la persona i la família sobre la utilització dels materials de recollida d'excretes i la seua posterior eliminació.",
+                        "f": "S'ha mostrat sensibilitat cap a la importància que l'hora de menjar siga un moment agradable per a la persona.",
+                        "g": "S'han identificat els possibles riscos associats a les situacions d'ingesta.",
+                        "h": "S'han adoptat mesures de seguretat i prevenció de riscos."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Realitza el control i el seguiment de les activitats d'atenció sanitària, analitzant els protocols d'observació i registre establits.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han identificat les característiques que han de reunir els protocols d'observació, control i seguiment de l'estat físic i sanitari de les persones usuàries.",
+                        "b": "S'han emplenat protocols d'observació i registre, manuals i informatitzats, seguint les pautes establides en cada cas.",
+                        "c": "S'ha recollit informació correcta i completa sobre les activitats realitzades i les contingències que s'han presentat.",
+                        "d": "S'ha obtingut informació de la persona o persones a càrrec seu mitjançant diferents instruments.",
+                        "e": "S'han aplicat les tècniques i els instruments d'observació previstos per a fer el seguiment de l'evolució física de la persona, i s'han registrat les dades obtingudes segons el procediment establit.",
+                        "f": "S'han registrat les dades per a la comunicació responsable del pla de cures individualitzat.",
+                        "g": "S'ha transmés la informació pels procediments establits i en el moment oportú.",
+                        "h": "S'ha argumentat la importància del control i el seguiment de l'evolució física i sanitària de la persona per a millorar-ne el benestar."
                     }
                 }
             },
@@ -742,14 +789,9 @@
                     "Resultado": "Transmet informació amb claredat, de manera ordenada i estructurada.",
                     "CriteriosEvaluacion": {
                         "a": "S'ha mantingut una actitud ordenada i metòdica en la transmissió de la informació.",
-                        "b": "S'han utilitzat els mitjans tècnics més adequats per a la transmissió de la informació.",
-                        "c": "S'han estructurat les idees de manera coherent i lògica.",
-                        "d": "S'ha mantingut una actitud respectuosa i col·laboradora amb els companys i el professorat.",
-                        "e": "S'han exposat idees de manera argumentada.",
-                        "f": "S'ha demostrat interès i creativitat en la proposta d'idees.",
-                        "g": "S'han respectat les opinions dels companys i s'han acceptat els punts de vista diferents al propi.",
-                        "h": "S'han realitzat tasques de suport a la docència i al grup de treball.",
-                        "i": "S'han dut a terme accions per al suport dels companys en la resolució de dubtes."
+                        "b": "S'ha transmés informació verbal tant horitzontalment com verticalment.",
+                        "c": "S'ha transmés informació entre els membres del grup utilitzant mitjans informàtics.",
+                        "d": "S'han conegut els termes tècnics en altres llengües que siguen estàndards del sector."
                     }
                 }
             },
