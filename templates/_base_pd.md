@@ -10,7 +10,7 @@
 > 4. Quan la programació estiga completada, canvieu `_BORRADOR` per `_OK` al nom del fitxer.
 >    Exemple: `PD_DAM_0485_Programacio_BORRADOR.md` → `PD_DAM_0485_Programacio_OK.md`
 > 5. No modifiqueu la resta del nom del fitxer (el sistema l'usa per identificar el cicle i el mòdul).
-> 6. Recordeu que en Markdown **un sol salt de línia concatena el text** (com si fóra un espai). Per a separar paràgrafs, deixeu **una línia en blanc**. Per a llistar elements, feu servir una **llista amb vinyetes** (`- element`). Les taules s'escriuen amb `|`, com les que ja hi ha a la plantilla.
+> 6. Recordeu que en Markdown **un sol salt de línia concatena el text** (com si fóra un espai). Per a separar paràgrafs, deixeu **una línia en blanc**. Per a llistar elements, feu servir una **llista amb vinyetes** (`- element`). Les taules s'escriuen amb `|`: quan un apartat porta una taula, la nota mostra una taula d'exemple i davall teniu la taula buida per omplir; substituïu els `[###]` de cada cel·la i afegiu o esborreu files copiant-ne una sencera.
 > 7. **No utilitzeu encapçalaments ( #, ##, ### ) ni blocs de notes ( > )** al vostre contingut, perquè podrien interferir amb la compilació del document final.
 > 8. Les hores, els RA, els criteris d'avaluació i les ponderacions **no s'escriuen ací**: s'editen a l'Excel compartit del cicle (`libro_{CICLE}.xlsx`, la fulla del vostre mòdul) i el Quadre Resum s'afig sol al final de la programació.
 > 9. Si ompliu el camp **correu-e** de l'apartat DOCENT, rebreu per correu els avisos de les marques pendents d'esta programació.
@@ -101,17 +101,25 @@ La formació del mòdul contribueix a assolir les *competències del títol* seg
 
 L'esquema general del mòdul (RA, criteris d'avaluació, hores i ponderació de cada RA) es genera automàticament a partir de l'Excel compartit i s'inclou al final d'esta programació.
 
-> Expliqueu breument com s'organitzen les unitats de programació: criteri de seqüenciació i relació amb els RA. Després completeu la taula amb una fila per unitat (número, títol i trimestre: 1r, 2n o 3r). Afegiu tantes files com unitats tingueu.
+> Expliqueu breument com s'organitzen les unitats de programació: criteri de seqüenciació i relació amb els RA. Després completeu la taula amb una fila per unitat: número, títol, RA que treballa i trimestre (1r, 2n o 3r). Afegiu o esborreu files segons les unitats que tingueu.
 >
-> Exemple: "El mòdul s'organitza en 6 unitats que van de menys a més complexitat. Les unitats 1 i 2 treballen el RA1; la 3, el RA2 i el RA3; i les unitats 4 a 6, la resta de RA." I a la taula: `| 01 | Introducció a la programació | 1r |`, `| 02 | Estructures de control | 1r |`, `| 03 | Programació orientada a objectes | 2n |`.
+> Exemple de paràgraf: "El mòdul s'organitza en 6 unitats que van de menys a més complexitat. Les unitats 1 i 2 treballen el RA1; la 3, el RA2 i el RA3; i les unitats 4 a 6, la resta de RA."
+>
+> Exemple de taula:
+>
+> | Número | Títol                            | RA       | Trimestre |
+> |--------|----------------------------------|----------|-----------|
+> | 01     | Introducció a la programació     | RA1      | 1r        |
+> | 02     | Estructures de control           | RA1      | 1r        |
+> | 03     | Programació orientada a objectes | RA2, RA3 | 2n        |
 
 [###]
 
-Es proposa esta taula orientativa:
-
-| Número | Títol                     | Trimestre |
-|--------|---------------------------|-----------|
-| 01     | [###] | [###] |
+| Número | Títol | RA    | Trimestre |
+|--------|-------|-------|-----------|
+| 01     | [###] | [###] | [###]     |
+| 02     | [###] | [###] | [###]     |
+| 03     | [###] | [###] | [###]     |
 
 ## Metodologia del procés d'ensenyança-aprenentatge
 
@@ -155,11 +163,21 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 
 ### Instruments i criteris de qualificació
 
-> Ací han d'aparéixer els instruments i les activitats concretes d'avaluació que s'empraran per a qualificar cada RA, en una taula amb les columnes: RA, instrument i percentatge. Els percentatges de cada RA han de sumar 100 %. El pes de cada RA en la nota del mòdul no s'escriu ací: és la ponderació de l'Excel.
+> Completeu la taula amb els instruments i les activitats concretes d'avaluació que s'empraran per a qualificar cada RA: una fila per instrument, amb el RA, l'instrument i el percentatge. Els percentatges de cada RA han de sumar 100 %. El pes de cada RA en la nota del mòdul no s'escriu ací: és la ponderació de l'Excel. Afegiu o esborreu files segons calga.
 >
-> Exemple: `| RA1 | Prova pràctica | 60 % |`, `| RA1 | Pràctiques de laboratori | 40 % |`, `| RA2 | Projecte en grup | 100 % |`.
+> Exemple de taula:
+>
+> | RA  | Instrument d'avaluació   | Percentatge |
+> |-----|--------------------------|-------------|
+> | RA1 | Prova pràctica           | 60 %        |
+> | RA1 | Pràctiques de laboratori | 40 %        |
+> | RA2 | Projecte en grup         | 100 %       |
 
-[###]
+| RA    | Instrument d'avaluació | Percentatge |
+|-------|------------------------|-------------|
+| [###] | [###]                  | [###]       |
+| [###] | [###]                  | [###]       |
+| [###] | [###]                  | [###]       |
 
 {% if dualitza %}
 ### Formació en empresa (RA dualitzats)
