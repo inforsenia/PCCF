@@ -7,7 +7,7 @@
 | **Código** | UP01 |
 | **Módulo** | Programación de Servicios y Procesos (0490) |
 | **Duración** | **10 Horas** |
-| **Temporalización** | Del **12/09/2025** al **17/10/2025** |  
+| **Temporalización** | Del **14/09/2026** al **19/10/2026** |  
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
