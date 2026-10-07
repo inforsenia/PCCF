@@ -1129,27 +1129,55 @@
             "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "RA1",
+                    "Resultado": "Busca informació en internet sobre empreses «tipus» del sector o sectors relacionats amb els estàndards (unitats) de competència inclosos en l'àmbit professional del títol, i elabora un mapa d'estes i dels servicis o productes que oferixen.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'ha elaborat conjuntament un esquema que contemple el conjunt de les empreses tipus del sector.",
+                        "b": "S'han constituït equips de treball i s'han distribuït entre els grups les empreses que s'analitzaran.",
+                        "c": "S'han identificat, per a l'empresa seleccionada, els productes o servicis que oferix.",
+                        "d": "S'han relacionat els productes o servicis oferits amb la consecució dels ODS (Objectius de Desenrotllament Sostenible).",
+                        "e": "S'ha realitzat un diagrama de blocs dels possibles departaments que conformen l'empresa.",
+                        "f": "S'han tingut en compte les àrees transversals i la seua relació amb les altres.",
+                        "g": "S'ha presentat al gran grup la configuració de l'empresa i els productes que oferix.",
+                        "h": "S'ha fet una valoració dels recursos necessaris per a cada unitat.",
+                        "i": "S'ha elaborat un informe en un format establit amb la informació recollida, que indique almenys el sector en què s'enquadra, els principals països on opera i les àrees de què es compon."
                     }
                 },
                 "RA02": {
-                    "Resultado": "RA2",
+                    "Resultado": "Selecciona un servici o producte d'una empresa del sector, relacionant-lo amb la seua contribució als ODS i amb els seus destinataris a escala global.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'ha seleccionat un producte o servici de l'empresa objecte d'estudi.",
+                        "b": "S'ha discutit en grup amb quins ODS pot estar relacionat.",
+                        "c": "S'han identificat les característiques del públic objectiu al qual està destinat.",
+                        "d": "S'ha comparat el producte amb altres d'empreses semblants.",
+                        "e": "S'ha desenrotllat una proposta innovadora per a potenciar el producte o servici."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Fa una proposta d'una empresa tipus «spin-off», indicant els aspectes diferencials respecte a l'empresa de referència i elaborant un dossier amb les seues característiques.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha plantejat en el grup el concepte d'una empresa tipus «spin-off», indicant-ne els avantatges i els inconvenients.",
+                        "b": "S'ha discutit en grup amb quins ODS pot estar relacionada.",
+                        "c": "S'ha proposat una possible organització de l'empresa, atenent una estructura lineal o circular.",
+                        "d": "S'han indicat quines tecnologies s'hi inclourien per a augmentar-ne la competitivitat.",
+                        "e": "S'han proposat aspectes innovadors sobre algun producte de l'empresa de referència."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Relaciona cada unitat d'una empresa tipus amb la prevenció de riscos professionals, identificant els equips i sistemes de protecció generals i els propis de cada activitat.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha analitzat la responsabilitat de l'empresa i dels treballadors i treballadores en la consecució d'entorns de treball segurs.",
+                        "b": "S'han identificat els sistemes de protecció generals i individuals de cada unitat en funció de les activitats que s'han de realitzar.",
+                        "c": "S'ha estimat el cost dels elements de protecció individual.",
+                        "d": "S'han proposat possibles elements de millora en relació amb la seguretat."
+                    }
+                },
+                "RA05": {
+                    "Resultado": "Transmet informació amb claredat, de manera ordenada i estructurada.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha mantingut una actitud ordenada i metòdica en la transmissió de la informació.",
+                        "b": "S'ha transmés informació verbal tant horitzontalment com verticalment.",
+                        "c": "S'ha transmés informació entre els membres del grup utilitzant mitjans informàtics.",
+                        "d": "S'han conegut els termes tècnics en altres llengües que siguen estàndards del sector."
                     }
                 }
             },

@@ -1305,32 +1305,61 @@
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []
         },
-        "PI": {
-            "nombre": "Projecte intermodular",
+        "0345": {
+            "nombre": "Projecte intermodular d'integració social",
             "creditos": "",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "RA1",
+                    "Resultado": "Identifica necessitats del sector productiu, relacionant-les amb projectes tipus que les puguen satisfer.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'han classificat les empreses del sector per les seues característiques organitzatives i el tipus de producte o servici que oferixen.",
+                        "b": "S'han caracteritzat les empreses tipus, indicant l'estructura organitzativa i les funcions de cada departament.",
+                        "c": "S'han identificat les necessitats més demandades a les empreses.",
+                        "d": "S'han valorat les oportunitats de negoci previsibles en el sector.",
+                        "e": "S'ha identificat el tipus de projecte requerit per a donar resposta a les demandes previstes.",
+                        "f": "S'han determinat les característiques específiques requerides en el projecte.",
+                        "g": "S'han determinat les obligacions fiscals, laborals i de prevenció de riscos, i les seues condicions d'aplicació.",
+                        "h": "S'han identificat possibles ajudes o subvencions per a la incorporació de les noves tecnologies de producció o de servici que es proposen.",
+                        "i": "S'ha elaborat el guió de treball que s'ha de seguir per a l'elaboració del projecte."
                     }
                 },
                 "RA02": {
-                    "Resultado": "RA2",
+                    "Resultado": "Dissenya projectes relacionats amb les competències expressades en el títol, incloent-hi i desenrotllant les fases que el componen.",
                     "CriteriosEvaluacion": {
-                        "a": "CA1",
-                        "b": "CA2",
-                        "c": "CA3",
-                        "d": "CA4",
-                        "e": "CA5",
-                        "f": "CA6",
-                        "g": "CA7"
+                        "a": "S'ha recopilat informació relativa als aspectes que seran tractats en el projecte.",
+                        "b": "S'ha realitzat l'estudi de viabilitat tècnica d'este.",
+                        "c": "S'han identificat les fases o parts que componen el projecte i el seu contingut.",
+                        "d": "S'han establit els objectius que es pretenen aconseguir, identificant-ne l'abast.",
+                        "e": "S'han previst els recursos materials i personals necessaris per a realitzar-lo.",
+                        "f": "S'ha realitzat el pressupost econòmic corresponent.",
+                        "g": "S'han identificat les necessitats de finançament per a posar-lo en marxa.",
+                        "h": "S'ha definit i elaborat la documentació necessària per al seu disseny.",
+                        "i": "S'han identificat els aspectes que s'han de controlar per a garantir la qualitat del projecte."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Planifica l'execució del projecte, determinant el pla d'intervenció i la documentació associada.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seqüenciat les activitats ordenant-les en funció de les necessitats de desenrotllament.",
+                        "b": "S'han determinat els recursos i la logística necessària per a cada activitat.",
+                        "c": "S'han identificat les necessitats de permisos i autoritzacions per a dur a terme les activitats.",
+                        "d": "S'han determinat els procediments d'actuació o execució de les activitats.",
+                        "e": "S'han identificat els riscos inherents a la implementació, i s'ha definit el pla de prevenció de riscos i els mitjans i equips necessaris.",
+                        "f": "S'ha planificat l'assignació de recursos materials i humans i els temps d'execució.",
+                        "g": "S'ha fet la valoració econòmica que dona resposta a les condicions de la seua posada en marxa.",
+                        "h": "S'ha definit i elaborat la documentació necessària per a l'execució."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Definix els procediments per al seguiment i control en l'execució del projecte, justificant la selecció de variables i instruments emprats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha definit el procediment d'avaluació de les activitats o intervencions.",
+                        "b": "S'han definit els indicadors de qualitat per a realitzar l'avaluació.",
+                        "c": "S'ha definit el procediment per a l'avaluació de les incidències que puguen presentar-se durant la realització de les activitats, la seua possible solució i registre.",
+                        "d": "S'ha definit el procediment per a gestionar els possibles canvis en els recursos i en les activitats, incloent-hi el sistema de registre d'estos.",
+                        "e": "S'ha definit i elaborat la documentació necessària per a l'avaluació de les activitats i del projecte.",
+                        "f": "S'ha establit el procediment per a la participació de les persones usuàries o clients en l'avaluació i s'han elaborat els documents específics.",
+                        "g": "S'ha establit un sistema per a garantir el compliment del plec de condicions del projecte, quan este existix."
                     }
                 }
             },
