@@ -1,25 +1,29 @@
 {
     "CompetenciasProfesionalesPersonalesSociales": {
-        "a": "Programar, organitzar i avaluar les intervencions d'integració social aplicant estratègies i tècniques específiques, promovent l'equitat, igualtat d'oportunitats i inclusió, actuant en tot moment amb una actitud de respecte cap a les persones destinatàries i garantint la creació d'entorns segurs tant per a les persones destinatàries com per al professional amb la finalitat de millorar la seua situació personal, familiar i/o social.",
-        "b": "Detectar i analitzar les necessitats i característiques de les persones i col·lectius susceptibles d'atenció social, utilitzant instruments i tècniques d'avaluació adequades.",
-        "c": "Dissenyar, implementar i avaluar projectes d'intervenció social ajustats a les necessitats detectades i al marc legal vigent.",
-        "d": "Aplicar estratègies i tècniques de mediació comunitària per a la prevenció i gestió de conflictes entre persones, actors i col·lectius socials.",
-        "e": "Organitzar i desenvolupar activitats d'inserció sociolaboral dirigides a persones amb discapacitat o en risc d'exclusió social, incloent la metodologia d'ocupació amb suport.",
-        "f": "Realitzar intervencions educatives de suport a l'alumnat amb necessitats específiques d'ajuda educativa en contextos escolars, en col·laboració amb l'equip interdisciplinari.",
-        "g": "Utilitzar i adaptar sistemes augmentatius i alternatius de comunicació per a persones amb dificultats comunicatives.",
-        "h": "Desenvolupar habilitats socials i comunicatives per afavorir la relació social, la dinàmica de grups, la conducció de reunions i la gestió de conflictes.",
-        "i": "Organitzar i implementar intervencions en unitats de convivència, incloent la prevenció i actuació en casos de violència domèstica.",
-        "j": "Aplicar la perspectiva de gènere en tots els projectes i intervencions socials.",
-        "k": "Participar en la dinamització comunitària i en la promoció de la participació ciutadana.",
-        "l": "Col·laborar en l'elaboració i desenvolupament de programes d'habilitats d'autonomia personal i social.",
-        "m": "Realitzar el seguiment i avaluació dels processos d'intervenció social, elaborant informes i registres oportuns.",
-        "n": "Assegurar la creació d'entorns segurs i l'aplicació de normatives de prevenció de riscos laborals i protecció ambiental.",
-        "ny": "Adaptar-se a les noves situacions laborals i tecnològiques, actualitzant coneixements i utilitzant recursos per a l'aprenentatge al llarg de la vida.",
-        "o": "Actuar amb responsabilitat, autonomia i ètica professional, treballant en equip i respectant la diversitat.",
-        "p": "Comunicar-se eficaçment amb tots els agents implicats en els processos d'intervenció social.",
-        "q": "Aplicar protocols de qualitat i accessibilitat universal en les activitats professionals.",
-        "r": "Gestionar recursos i documentació associada a les intervencions socials.",
-        "s": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, participant activament en la vida social i cultural."
+        "a": "Elaborar projectes d'integració social, aplicant la normativa legal vigent i incorporant la perspectiva de gènere.",
+        "b": "Dirigir la implementació de projectes d'integració social, coordinant les actuacions necessàries per a dur-les a terme i supervisant la realització de les activitats amb criteris de qualitat.",
+        "c": "Realitzar actuacions administratives associades al desenvolupament del projecte, aplicant les tecnologies de la informació i la comunicació per a gestionar la documentació generada.",
+        "d": "Programar activitats d'integració social, aplicant els recursos i estratègies metodològiques més adequades.",
+        "e": "Dissenyar i posar en pràctica actuacions per a previndre la violència domèstica, avaluant el desenvolupament de les mateixes.",
+        "f": "Dissenyar activitats d'atenció a les necessitats físiques i psicosocials, en funció de les característiques dels usuaris i del context, controlant i avaluant el desenvolupament de les mateixes.",
+        "g": "Organitzar les activitats de suport a la gestió domèstica, en funció de les característiques de la unitat de convivència, controlant i avaluant el desenvolupament de les mateixes.",
+        "h": "Organitzar i desenvolupar activitats de suport psicosocial, mostrant una actitud respectuosa amb la intimitat de les persones i avaluant el desenvolupament de les mateixes.",
+        "i": "Organitzar i desenvolupar activitats d'entrenament en habilitats d'autonomia personal i social, avaluant els resultats aconseguits.",
+        "j": "Dissenyar i desenvolupar activitats d'intervenció socioeducativa dirigides a l'alumnat amb necessitats educatives específiques, col·laborant amb l'equip interdisciplinar.",
+        "k": "Organitzar i implementar programes d'inserció laboral i ocupacional, avaluant el desenvolupament dels mateixos i el seu ajust a l'itinerari prefixat.",
+        "l": "Entrenar en habilitats de comunicació, fent ús de sistemes alternatius o augmentatius i motivant a les persones usuàries en la utilització dels mateixos.",
+        "m": "Realitzar tasques de mediació entre persones i grups, aplicant tècniques participatives i de gestió de conflictes de forma eficient.",
+        "n": "Aplicar protocols establerts en matèria de primers auxilis en situacions d'accident o emergència.",
+        "ny": "Realitzar el control i seguiment de la intervenció amb actitud autocrítica i aplicant criteris de qualitat i procediments de retroalimentació per a corregir les desviacions detectades.",
+        "o": "Mantenir relacions fluides amb les persones usuàries i les seues famílies, membres del grup de treball i altres professionals, mostrant habilitats socials i aportant solucions als conflictes que sorgeixen.",
+        "p": "Adaptar-se a les noves situacions laborals, mantenint actualitzats els coneixements científics, tècnics i tecnològics relatius al seu entorn professional, gestionant la seua formació i els recursos existents en l'aprenentatge al llarg de la vida i utilitzant les tecnologies de la informació i la comunicació.",
+        "q": "Resoldre situacions, problemes o contingències amb iniciativa i autonomia en l'àmbit de la seua competència, amb creativitat, innovació i esperit de millora en el treball personal i en el dels membres de l'equip.",
+        "r": "Organitzar i coordinar equips de treball amb responsabilitat, supervisant el desenvolupament del mateix, mantenint relacions fluides i assumint el lideratge, així com aportant solucions als conflictes grupals que es presenten.",
+        "s": "Comunicar-se amb els seus iguals, superiors, clients i persones sota la seua responsabilitat, utilitzant vies eficaces de comunicació, transmetent la informació o coneixements adequats i respectant l'autonomia i la competència de les persones que intervenen en l'àmbit del seu treball.",
+        "t": "Generar entorns segurs en el desenvolupament del seu treball i el del seu equip, supervisant i aplicant els procediments de prevenció de riscos laborals i ambientals, d'acord amb l'establert per la normativa i els objectius de l'empresa.",
+        "u": "Supervisar i aplicar procediments de gestió de qualitat, d'accessibilitat universal i de \"disseny per a tots\", en les activitats professionals incloses en els processos de producció o prestació de serveis.",
+        "v": "Realitzar la gestió bàsica per a la creació i funcionament d'una xicoteta empresa i tenir iniciativa en la seua activitat professional amb sentit de la responsabilitat social.",
+        "w": "Exercir els seus drets i complir amb les obligacions derivades de la seua activitat professional, d'acord amb l'establert en la legislació vigent, participant activament en la vida econòmica, social i cultural."
     },
     "CompetenciasProfesionales": [
         "a",
@@ -34,42 +38,46 @@
         "j",
         "k",
         "l",
-        "m"
+        "m",
+        "n",
+        "ny"
     ],
     "CompetenciasSociales": [
-        "n",
-        "ny",
         "o",
         "p",
         "q",
         "r",
-        "s"
+        "s",
+        "t",
+        "u",
+        "v",
+        "w"
     ],
     "ImportanciaCompetencias": {
-        "a": 3,
-        "b": 3,
-        "c": 3,
-        "d": 3,
+        "a": 2,
+        "b": 2,
+        "c": 2,
+        "d": 2,
         "e": 2,
-        "f": 3,
+        "f": 2,
         "g": 2,
-        "h": 3,
-        "i": 3,
+        "h": 2,
+        "i": 2,
         "j": 2,
         "k": 2,
         "l": 2,
         "m": 2,
-        "n": 1,
-        "ny": 3,
-        "o": 3,
+        "n": 2,
+        "ny": 2,
+        "o": 2,
         "p": 2,
-        "q": 3,
-        "r": 3,
-        "s": 3,
+        "q": 2,
+        "r": 2,
+        "s": 2,
         "t": 2,
         "u": 2,
-        "v": 1,
-        "w": 1
+        "v": 2,
+        "w": 2
     },
     "CualificacionesINCUAL": {
         "Completas": {
@@ -129,25 +137,32 @@
         }
     },
     "ObjetivosGenerales": {
-        "a": "Analitzar el context social on es desenvolupen les intervencions d'integració social, identificant els factors i dinàmiques que influeixen en els processos d'inclusió i exclusió social.",
-        "b": "Detecció de necessitats i planificació d'intervencions socials ajustades a les característiques de persones i col·lectius en situació de vulnerabilitat.",
-        "c": "Dissenyar i implementar projectes de mediació comunitària per a la prevenció i resolució de conflictes socials.",
-        "d": "Organitzar i desenvolupar programes d'inserció sociolaboral per a persones amb discapacitat o en risc d'exclusió social, utilitzant metodologies com l'ocupació amb suport.",
-        "e": "Col·laborar en l'atenció educativa d'alumnat amb necessitats específiques d'ajuda educativa, seguint les adaptacions curriculars i les directrius de l'equip interdisciplinari.",
-        "f": "Aplicar sistemes augmentatius i alternatius de comunicació per a persones amb dificultats comunicatives, adaptant-los a les seues necessitats.",
-        "g": "Desenvolupar habilitats socials i comunicatives per millorar la interacció professional, la dinàmica de grups i la gestió de conflictes.",
-        "h": "Intervenir en unitats de convivència, incloent la prevenció i actuació en casos de violència domèstica, garantint la seguretat i el benestar de les persones.",
-        "i": "Incorporar la perspectiva de gènere en totes les fases dels projectes d'intervenció social.",
-        "j": "Participar en processos de dinamització comunitària i promoció de la participació ciutadana.",
-        "k": "Elaborar i desenvolupar programes d'habilitats d'autonomia personal i social per a persones en situació de dependència.",
-        "l": "Realitzar el seguiment i avaluació de les intervencions socials, elaborant la documentació associada.",
-        "m": "Aplicar normatives de prevenció de riscos laborals, protecció ambiental i qualitat en l'activitat professional.",
-        "n": "Adaptar-se als canvis tecnològics i organitzatius, aprofitant els recursos per a l'aprenentatge continu.",
-        "o": "Actuar amb ètica professional, autonomia i responsabilitat, fomentant el treball en equip i el respecte a la diversitat.",
-        "p": "Utilitzar eficaçment les tècniques de comunicació professional amb tots els agents implicats.",
-        "q": "Aplicar principis d'accessibilitat universal i disseny per a tothom en les activitats professionals.",
-        "r": "Gestionar recursos materials, humans i econòmics en el desenvolupament de projectes socials.",
-        "s": "Exercir els drets i deures com a professional i ciutadà/ana, participant activament en la societat."
+        "a": "Interpretar informació seleccionant les estratègies i recursos pertinents per a elaborar projectes d'integració social adequats a la persona destinatària, el context i el marc legal vigent i que incorporen la perspectiva de gènere, així com la defensa dels drets de les víctimes de violència de gènere i de les seues filles i fills.",
+        "b": "Identificar les competències requerides al tècnic superior en Integració Social i als membres de l'equip interdisciplinar, analitzant el context d'intervenció i els criteris de qualitat establerts en la planificació, per a dirigir i supervisar la posada en pràctica de projectes i programes.",
+        "c": "Aplicar les tecnologies de la informació i de la comunicació, identificant els protocols i recursos pertinents per a gestionar la documentació i realitzar les actuacions administratives associades a la intervenció.",
+        "d": "Seleccionar recursos i estratègies metodològiques, interpretant les normatives relatives a requisits tècnics i instal·lacions, per a programar activitats d'integració social.",
+        "e": "Identificar els nivells d'intervenció, analitzant els factors influents per a dissenyar, implementar i avaluar intervencions dirigides a la prevenció de la violència domèstica.",
+        "f": "Identificar les necessitats d'atenció física de les persones usuàries, relacionant-les en el seu cas amb les ajudes tècniques disponibles, per a dissenyar, supervisar i avaluar activitats que donen resposta a les mateixes.",
+        "g": "Analitzar les característiques de les unitats de convivència, identificant les variables rellevants, per a organitzar, supervisar i avaluar activitats de suport a la gestió domèstica.",
+        "h": "Seleccionar estratègies metodològiques i pautes d'actuació, identificant els recursos necessaris per a organitzar, dur a terme i avaluar activitats de suport psicosocial.",
+        "i": "Seleccionar estratègies metodològiques i pautes d'actuació, concretant les ajudes tècniques necessàries, per a organitzar, dur a terme i avaluar activitats d'entrenament en habilitats d'autonomia personal i social.",
+        "j": "Seleccionar estratègies metodològiques i d'avaluació, aplicant els criteris establerts per l'equip interdisciplinar per a dissenyar i dur a terme activitats d'intervenció socioeducativa.",
+        "k": "Analitzar les necessitats d'entrenament, mediació i suport tècnic en funció dels recursos sociolaborals disponibles, per a organitzar, dur a terme i avaluar activitats d'inserció laboral i ocupacional.",
+        "l": "Identificar les necessitats de suport a la comunicació i, en el seu cas, les ajudes tècniques, en funció de les característiques de la persona destinatària, per a entrenar en habilitats de comunicació.",
+        "m": "Analitzar els problemes plantejats, seleccionant tècniques de participació i gestió de conflictes, per a realitzar tasques de mediació entre persones i grups.",
+        "n": "Descriure els protocols d'actuació en cas d'accident o emergència, seleccionant les tècniques adequades per a aplicar primers auxilis.",
+        "ny": "Seleccionar tècniques i instruments d'avaluació, analitzant els criteris i indicadors de qualitat establerts en la programació per a realitzar el control, seguiment i retroalimentació de la intervenció.",
+        "o": "Analitzar les habilitats socials requerides en l'entorn professional, identificant els factors influents per a mantenir relacions fluides amb les persones implicades en la intervenció i superar els possibles conflictes.",
+        "p": "Analitzar i utilitzar els recursos i oportunitats d'aprenentatge relacionats amb l'evolució científica, tecnològica i organitzativa del sector i les tecnologies de la informació i la comunicació, per a mantenir l'esperit d'actualització i adaptar-se a noves situacions laborals i personals.",
+        "q": "Desenvolupar la creativitat i l'esperit d'innovació per a respondre als reptes que es presenten en els processos i en l'organització del treball i de la vida personal.",
+        "r": "Prendre decisions de forma fonamentada, analitzant les variables implicades, integrant sabers de diferent àmbit i acceptant els riscos i la possibilitat d'equivocació en les mateixes, per a afrontar i resoldre diferents situacions, problemes o contingències.",
+        "s": "Desenvolupar tècniques de lideratge, motivació, supervisió i comunicació en contextos de treball en grup, per a facilitar l'organització i coordinació d'equips de treball.",
+        "t": "Aplicar estratègies i tècniques de comunicació, adaptant-se als continguts que es van a transmetre, a la finalitat i a les característiques dels receptors, per a assegurar l'eficàcia en els processos de comunicació.",
+        "u": "Avaluar situacions de prevenció de riscos laborals i de protecció ambiental, proposant i aplicant mesures de prevenció personals i col·lectives, d'acord amb la normativa aplicable en els processos de treball, per a garantir entorns segurs.",
+        "v": "Identificar i proposar les accions professionals necessàries, per a donar resposta a l'accessibilitat universal i al \"disseny per a tots\".",
+        "w": "Identificar i aplicar paràmetres de qualitat en els treballs i activitats realitzats en el procés d'aprenentatge, per a valorar la cultura de l'avaluació de la qualitat i ser capaços de supervisar i millorar procediments de gestió de qualitat.",
+        "x": "Utilitzar procediments relacionats amb la cultura emprenedora, empresarial i d'iniciativa professional, per a realitzar la gestió bàsica d'una xicoteta empresa o emprendre un treball.",
+        "y": "Reconèixer els seus drets i deures com a agent actiu en la societat, tenint en compte el marc legal que regula les condicions socials i laborals, per a participar com a ciutadà democràtic."
     },
     "ModulosProfesionales": {
         "0337": {
@@ -239,7 +254,7 @@
                 "j",
                 "k",
                 "m",
-                "fi",
+                "ny",
                 "o"
             ],
             "ObjetivosGenerales": [
@@ -255,7 +270,7 @@
                 "j",
                 "k",
                 "m",
-                "f",
+                "ny",
                 "o"
             ]
         },
@@ -346,7 +361,7 @@
                 "c",
                 "d",
                 "k",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "s",
@@ -359,7 +374,7 @@
                 "c",
                 "d",
                 "k",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -467,7 +482,7 @@
                 "d",
                 "e",
                 "g",
-                "f",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -482,7 +497,7 @@
                 "d",
                 "e",
                 "g",
-                "f",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -564,7 +579,7 @@
                 "c",
                 "d",
                 "m",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "s",
@@ -576,7 +591,7 @@
                 "c",
                 "d",
                 "m",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -653,8 +668,11 @@
                 "f",
                 "h",
                 "j",
-                "ñ",
+                "ny",
+                "o",
                 "q",
+                "s",
+                "t",
                 "u"
             ],
             "ObjetivosGenerales": [
@@ -663,9 +681,14 @@
                 "f",
                 "h",
                 "j",
-                "ñ",
+                "ny",
+                "o",
                 "q",
-                "u"
+                "r",
+                "t",
+                "u",
+                "v",
+                "w"
             ]
         },
         "0342": {
@@ -780,7 +803,7 @@
                 "h",
                 "i",
                 "j",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "s",
@@ -795,7 +818,7 @@
                 "h",
                 "i",
                 "j",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -884,7 +907,7 @@
                 "h",
                 "j",
                 "l",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "s",
@@ -898,7 +921,7 @@
                 "h",
                 "j",
                 "l",
-                "ñ",
+                "ny",
                 "o",
                 "q",
                 "r",
@@ -996,8 +1019,8 @@
                 "j",
                 "k",
                 "m",
-                "ñ",
-                "w"
+                "ny",
+                "u"
             ],
             "ObjetivosGenerales": [
                 "a",
@@ -1012,8 +1035,8 @@
                 "j",
                 "k",
                 "m",
-                "ñ",
-                "u"
+                "ny",
+                "w"
             ]
         },
         "0017": {
@@ -1201,16 +1224,17 @@
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
+                "o",
+                "p",
+                "r",
                 "t",
-                "u",
-                "v",
-                "w",
-                "y"
+                "w"
             ],
             "ObjetivosGenerales": [
-                "t",
+                "o",
+                "p",
+                "s",
                 "u",
-                "v",
                 "y"
             ]
         },
@@ -1293,15 +1317,12 @@
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
-                "v",
-                "w",
-                "x",
-                "y"
+                "p",
+                "v"
             ],
             "ObjetivosGenerales": [
-                "w",
-                "x",
-                "y"
+                "p",
+                "x"
             ]
         },
         "PI": {
@@ -1338,10 +1359,58 @@
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
-                "a"
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w"
             ],
             "ObjetivosGenerales": [
-                "a"
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y"
             ]
         },
         "0179": {
@@ -1470,8 +1539,12 @@
             "horas": "67",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales": [],
-            "CompetenciasTitulo": []
+            "ObjetivosGenerales": [
+                "n"
+            ],
+            "CompetenciasTitulo": [
+                "n"
+            ]
         },
         "1665": {
             "nombre": "Digitalització aplicada als sectors productius (GS)",
