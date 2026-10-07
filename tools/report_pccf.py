@@ -8,7 +8,9 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import (parse_pd_filename, check_excel_coherence, get_familia,
                         get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO,
-                        get_hoja_label, get_moduls_del_cicle, hores_per_fulla)
+                        get_hoja_label, get_moduls_del_cicle, hores_per_fulla,
+                        CICLES_INF, CICLES_SCO, DEPARTAMENTS, get_departament,
+                        dir_report_cicle, dir_report_dept)
 
 PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
 
@@ -20,7 +22,9 @@ def find_placeholders(filepath):
             stripped = line.strip()
             if not PLACEHOLDER_RE.search(stripped):
                 continue
-            if stripped.startswith('>') and '`[###]`' in stripped:
+            # Els blocs `>` de la PD són instruccions per al docent (amb
+            # exemples) i s'eliminen del PDF: mai són marques pendents.
+            if stripped.startswith('>'):
                 continue
             places.append((i, stripped[:120]))
     return places
@@ -260,25 +264,138 @@ def report_pccf(cicle, familia, pccf_dir):
     return format_pccf_report(compute_pccf_status(cicle, familia, pccf_dir))
 
 
+# --- Report per departament ------------------------------------------------
+
+def _issues_fulla(issues, nombre):
+    """Incidències de l'Excel que són de la fulla del mòdul `nombre` (la
+    fulla porta les sigles; els llibres antics, el nom tallat a 31)."""
+    noms = {nombre, nombre[:31], get_hoja_label(nombre)}
+    return [i.strip() for i in issues if any(f"Fulla '{n}'" in i for n in noms)]
+
+
+def estat_moduls_cicle(cicle, prog_dir, status=None):
+    """Una entrada per mòdul del cicle (inclosos els de les optatives), amb
+    el departament, l'estat de la PD (OK/BORRADOR/FALTA), les marques
+    pendents, les incidències de la seua fulla de l'Excel i les de FE."""
+    import genera_fe
+    familia = get_familia(cicle)
+    pd_dir = os.path.join(prog_dir, cicle)
+    if not os.path.isdir(pd_dir):
+        return []
+    if status is None:
+        status = compute_pd_status(cicle, familia, pd_dir)
+    marques = {f: len(p) for f, p in status["placeholders"]}
+    fitxers = {p["codi"]: p for p in status["borrador"] + status["ok"]}
+    fe = {m["codi"]: m["incidencies"] for m in
+          genera_fe.estat_cicle(cicle, os.path.dirname(os.path.abspath(prog_dir)))}
+
+    moduls = []
+    for codi, modul in get_moduls_del_cicle(cicle, familia).items():
+        codi = str(codi)
+        p = fitxers.get(codi)
+        moduls.append({
+            "cicle": cicle, "codi": codi, "nom": modul["nombre"],
+            "departament": get_departament(familia, codi),
+            "estat": p["estat"] if p else "FALTA",
+            "marques": marques.get(p["filename"], 0) if p else 0,
+            "excel": _issues_fulla(status["excel_issues"], modul["nombre"]),
+            "fe": fe.get(codi, []),
+        })
+    for o in status.get("optatives", []):
+        moduls.append({
+            "cicle": cicle, "codi": o["codi"], "nom": o["nom"],
+            "departament": get_departament(familia, o["codi"]),
+            "estat": o["estat"] or "FALTA",
+            "marques": marques.get(f"{OPTATIVES_DIRNAME}/{o['fitxer']}", 0) if o["fitxer"] else 0,
+            "excel": _issues_fulla(status.get("opt_excel_issues", []), o["nom"]),
+            "fe": [],
+        })
+    return moduls
+
+
+def estat_departaments(prog_dir, estats_cicle=None):
+    """{dept: [mòduls]} de tots els cicles. `estats_cicle` ({cicle: status})
+    permet reutilitzar els compute_pd_status ja calculats."""
+    estats_cicle = estats_cicle or {}
+    depts = {d: [] for d in DEPARTAMENTS}
+    for cicle in CICLES_INF + CICLES_SCO:
+        for m in estat_moduls_cicle(cicle, prog_dir, estats_cicle.get(cicle)):
+            depts.setdefault(m["departament"], []).append(m)
+    return depts
+
+
+def modul_verificat(m):
+    return m["estat"] == "OK" and not m["marques"] and not m["excel"] and not m["fe"]
+
+
+def format_dept_report(dept, moduls):
+    lines = [f"=== Report Programacions Didàctiques: departament {dept} ===", ""]
+    if not moduls:
+        lines.append("Cap mòdul adscrit al departament.")
+        return "\n".join(lines) + "\n"
+    for estat in ("OK", "BORRADOR", "FALTA"):
+        lines.append(f"PDs en {estat}: {sum(m['estat'] == estat for m in moduls)}")
+    pendents = [m for m in moduls if not modul_verificat(m)]
+    lines.append(f"Mòduls amb alguna incidència: {len(pendents)} de {len(moduls)}")
+    lines.append("")
+    cicle_actual = None
+    for m in moduls:
+        if m["cicle"] != cicle_actual:
+            cicle_actual = m["cicle"]
+            lines.append(f"{cicle_actual}:")
+        marca = "✓" if modul_verificat(m) else "✗"
+        lines.append(f"  {marca} {m['codi']} {m['nom']}: {m['estat']}")
+        if m["marques"]:
+            lines.append(f"      · {m['marques']} marques pendents ([###]/[...])")
+        lines.extend(f"      · Excel: {i}" for i in m["excel"])
+        lines.extend(f"      · FE: {i}" for i in m["fe"])
+    lines.append("")
+    lines.append(f"Verificat (sense marca d'esborrany): {'SI' if not pendents else 'NO'}")
+    return "\n".join(lines) + "\n"
+
+
+def escriu_reports_dept(prog_dir, estats_cicle=None):
+    """Escriu programacions/0_report/{DEPT}/report_{DEPT}.txt de tots els
+    departaments. Torna {dept: mòduls} (per a l'empremta del poller)."""
+    depts = estat_departaments(prog_dir, estats_cicle)
+    for dept, moduls in depts.items():
+        report_dir = dir_report_dept(prog_dir, dept)
+        os.makedirs(report_dir, exist_ok=True)
+        with open(os.path.join(report_dir, f"report_{dept}.txt"), "w", encoding="utf-8") as f:
+            f.write(format_dept_report(dept, moduls))
+    return depts
+
+
 def main():
     parser = argparse.ArgumentParser(description="Genera report de PCCF o Programacions")
-    parser.add_argument("cicle", help="Cicle (ex: APD)")
-    parser.add_argument("--type", choices=["pd", "pccf"], default="pd",
-                        help="Tipus de report: pd (PD + Excel, dins programacions/) o pccf (framework, dins pccf/)")
+    parser.add_argument("cicle", nargs="?", default="", help="Cicle (ex: APD)")
+    parser.add_argument("--prog-dir", default=os.environ.get("PCCF_ROOT", ".") + "/programacions",
+                        help="Directori programacions/ (per a --type dept)")
+    parser.add_argument("--type", choices=["pd", "pccf", "dept"], default="pd",
+                        help="Tipus de report: pd (PD + Excel, dins programacions/), pccf (framework, dins pccf/) "
+                             "o dept (un report per departament, de tots els cicles; el cicle s'ignora)")
     parser.add_argument("--pd-dir", help="Directori de les PD (ex: programacions/APD)")
     parser.add_argument("--pccf-dir", default=os.environ.get("PCCF_ROOT", ".") + "/pccf",
                         help="Directori del framework PCCF (conté src*/)")
     parser.add_argument("--centre", default="SENIA")
     args = parser.parse_args()
 
+    if args.type == "dept":
+        for dept, moduls in escriu_reports_dept(args.prog_dir).items():
+            print(f"Report del departament {dept} ({len(moduls)} mòduls) guardat a: "
+                  f"{os.path.join(dir_report_dept(args.prog_dir, dept), f'report_{dept}.txt')}")
+        return
+
     cicle = args.cicle.upper()
+    if not cicle:
+        parser.error("cal indicar el cicle")
     familia = get_familia(cicle) or "INF"
 
     if args.type == "pd":
         pd_dir = args.pd_dir or f"programacions/{cicle}"
         status = compute_pd_status(cicle, familia, pd_dir)
         report_text = format_pd_report(status)
-        report_dir = os.path.join(pd_dir, "0_report")
+        report_dir = dir_report_cicle(os.path.dirname(os.path.abspath(pd_dir)))
     else:
         pccf_dir = args.pccf_dir
         status = compute_pccf_status(cicle, familia, pccf_dir)

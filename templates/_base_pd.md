@@ -2,6 +2,20 @@
 
 # Programació didàctica: Mòdul {% if optativa %}optatiu {% endif %}{{ modulo.nombre }}
 
+> **Instruccions per al docent:**
+>
+> 1. Substituïu les marques `[###]` per la informació real del vostre mòdul. **Heu de llevar els claudàtors sencers** (`[###]` → text real), no només les #. Si un apartat no escau, indiqueu "No escau".
+> 2. Només heu d'omplir els apartats que porten `[###]`. La resta del text és comú a tot el cicle (ve del PCCF i de la normativa) i no s'ha de modificar.
+> 3. Cada apartat que heu d'omplir porta davant una nota com esta que explica què s'hi espera, amb un exemple.
+> 4. Quan la programació estiga completada, canvieu `_BORRADOR` per `_OK` al nom del fitxer.
+>    Exemple: `PD_DAM_0485_Programacio_BORRADOR.md` → `PD_DAM_0485_Programacio_OK.md`
+> 5. No modifiqueu la resta del nom del fitxer (el sistema l'usa per identificar el cicle i el mòdul).
+> 6. Recordeu que en Markdown **un sol salt de línia concatena el text** (com si fóra un espai). Per a separar paràgrafs, deixeu **una línia en blanc**. Per a llistar elements, feu servir una **llista amb vinyetes** (`- element`). Les taules s'escriuen amb `|`, com les que ja hi ha a la plantilla.
+> 7. **No utilitzeu encapçalaments ( #, ##, ### ) ni blocs de notes ( > )** al vostre contingut, perquè podrien interferir amb la compilació del document final.
+> 8. Les hores, els RA, els criteris d'avaluació i les ponderacions **no s'escriuen ací**: s'editen a l'Excel compartit del cicle (`libro_{CICLE}.xlsx`, la fulla del vostre mòdul) i el Quadre Resum s'afig sol al final de la programació.
+> 9. Si ompliu el camp **correu-e** de l'apartat DOCENT, rebreu per correu els avisos de les marques pendents d'esta programació.
+> 10. Este bloc d'instruccions i totes les notes ( > ) **s'esborraran automàticament** en compilar el PDF final.
+
 ## Dades identificatives, marc normatiu i contextualització del mòdul
 
 És un mòdul de {{ modulo.horas }} hores que s'imparteix en {{ ciclo_contexto }}.
@@ -9,6 +23,10 @@
 Té una correspondència en crèdits de {{ modulo.creditos}}.
 
 ### DOCENT
+
+> Indiqueu el nom i cognoms del docent i el correu on vol rebre els avisos d'esta programació. Si el mòdul l'imparteixen diversos docents, separeu-los per comes, **en el mateix ordre** en tots dos camps. Al PDF apareixeran com una llista, un docent per línia amb el seu correu.
+>
+> Exemple: `**Docent**: Anna Pérez Gil, Joan Martí Soler` i `**correu-e**: a.perezgil@edu.gva.es, j.martisoler@edu.gva.es`
 
 **Docent**: [###]
 
@@ -83,7 +101,9 @@ La formació del mòdul contribueix a assolir les *competències del títol* seg
 
 L'esquema general del mòdul (RA, criteris d'avaluació, hores i ponderació de cada RA) es genera automàticament a partir de l'Excel compartit i s'inclou al final d'esta programació.
 
-> **Instruccions per al docent:** Substituïu les marques `[###]` per la informació real del vostre mòdul. Si una secció no escau, indiqueu "No escau".
+> Expliqueu breument com s'organitzen les unitats de programació: criteri de seqüenciació i relació amb els RA. Després completeu la taula amb una fila per unitat (número, títol i trimestre: 1r, 2n o 3r). Afegiu tantes files com unitats tingueu.
+>
+> Exemple: "El mòdul s'organitza en 6 unitats que van de menys a més complexitat. Les unitats 1 i 2 treballen el RA1; la 3, el RA2 i el RA3; i les unitats 4 a 6, la resta de RA." I a la taula: `| 01 | Introducció a la programació | 1r |`, `| 02 | Estructures de control | 1r |`, `| 03 | Programació orientada a objectes | 2n |`.
 
 [###]
 
@@ -135,7 +155,9 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 
 ### Instruments i criteris de qualificació
 
-> Ací han d'aparéixer els instruments i les activitats concretes d'avaluació que s'empraran per a qualificar cada RA, en una taula amb les columnes: RA, instrument i percentatge.
+> Ací han d'aparéixer els instruments i les activitats concretes d'avaluació que s'empraran per a qualificar cada RA, en una taula amb les columnes: RA, instrument i percentatge. Els percentatges de cada RA han de sumar 100 %. El pes de cada RA en la nota del mòdul no s'escriu ací: és la ponderació de l'Excel.
+>
+> Exemple: `| RA1 | Prova pràctica | 60 % |`, `| RA1 | Pràctiques de laboratori | 40 % |`, `| RA2 | Projecte en grup | 100 % |`.
 
 [###]
 
@@ -145,6 +167,8 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 La valoració del tutor o tutora dual de l'empresa (superat / no superat) sobre els RA desenvolupats en l'empresa s'integra en la qualificació d'eixos RA segons els criteris següents. Els RA no superats en l'empresa es recuperen en el centre educatiu. La taula següent, generada a partir de l'Excel del mòdul (columnes REQUISIT FE (C/E) i HORES DUAL), recull els criteris d'avaluació que es desenvolupen en l'empresa (compartits amb el centre o sols en l'empresa) i les hores de formació en empresa.
 
 > La taula dels RA dualitzats no s'escriu ací: ix sola de l'Excel (REQUISIT FE: C = compartit, E = sols empresa; i HORES DUAL). Indiqueu com s'integra la valoració de l'empresa en la qualificació dels RA dualitzats i com es recuperen.
+>
+> Exemple: "Els RA compartits es qualifiquen al centre. Si el tutor dual valora un RA com a no superat, l'alumne haurà de fer una pràctica de recuperació al centre abans de l'avaluació final. Els RA que només es desenvolupen en l'empresa es qualifiquen amb un 5 si l'empresa els valora com a superats; si no, es recuperen al centre amb una prova pràctica."
 
 [###]
 
@@ -163,6 +187,8 @@ Els criteris de pèrdua del dret a l'avaluació contínua per faltes d'assistèn
 L'alumnat amb RA no superats disposa d'un programa de recuperació i, si no supera el mòdul en la primera convocatòria, d'un programa formatiu específic per a preparar la segona convocatòria.
 
 > Indiqueu les activitats de recuperació, el moment en què es realitzaran i els criteris d'avaluació que s'aplicaran.
+>
+> Exemple: "Per a cada RA no superat, l'alumne lliurarà les pràctiques pendents i farà una prova pràctica a la fi de cada trimestre. La qualificació del RA recuperat seguirà els mateixos instruments i percentatges que en l'avaluació contínua."
 
 [###]
 
@@ -172,6 +198,8 @@ L'alumnat amb RA no superats disposa d'un programa de recuperació i, si no supe
 L'alumnat que promociona a segon curs amb este mòdul pendent disposa d'un pla de recuperació que li permet superar-lo sense assistir a les classes ordinàries. El pla s'informa a l'alumnat a l'inici del curs i té com a referents els resultats d'aprenentatge i els criteris d'avaluació no superats.
 
 > Indiqueu les activitats i els treballs que haurà de realitzar l'alumnat, el calendari de lliuraments i proves, el seguiment previst (horari d'atenció, tutories, plataforma), i els instruments i criteris de qualificació.
+>
+> Exemple: "L'alumne disposarà a Aules d'un curs amb les pràctiques de cada RA no superat, amb lliuraments a final d'octubre, gener i març, i una prova pràctica a l'abril. Tindrà una hora setmanal de tutoria amb el docent. Les pràctiques valdran el 40 % i la prova, el 60 %."
 
 [###]
 
@@ -190,6 +218,10 @@ Els criteris de qualificació de l'alumnat es recullen en l'apartat *Avaluació 
 
 ## Activitats complementàries i extraescolars
 
+> Indiqueu les activitats complementàries i extraescolars previstes per al mòdul, amb una data aproximada i els RA amb què es relacionen. Si no n'hi ha cap de prevista, indiqueu "No escau".
+>
+> Exemple: "- Visita al centre de dades d'una empresa del sector (2n trimestre, RA3 i RA4). - Xarrada d'una professional sobre ciberseguretat (novembre, RA5)."
+
 [###]
 
 ## Contribució al Projecte intermodular
@@ -197,6 +229,8 @@ Els criteris de qualificació de l'alumnat es recullen en l'apartat *Avaluació 
 D'acord amb {% if ciclo_curriculum %}l'article 5 del Decret 114/2025 i {% endif %}els criteris establits en el PCCF, el Projecte intermodular integra resultats d'aprenentatge de diversos mòduls del cicle.
 
 > Indiqueu quins RA d'este mòdul s'integren en el Projecte intermodular i com es coordina amb l'equip docent. Si no escau, indiqueu "No escau".
+>
+> Exemple: "Els RA3 i RA5 d'este mòdul s'integren en el Projecte intermodular. L'alumnat dissenya la base de dades del projecte. El seguiment es fa en les reunions quinzenals de l'equip docent, i la nota d'eixos RA té en compte el lliurament corresponent del projecte."
 
 [###]
 

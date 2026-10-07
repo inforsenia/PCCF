@@ -20,19 +20,36 @@ CURSOS_ESOBAT = sorted(["ESO", "BAT"], key=len, reverse=True)
 # fitxer .md, p.ex. "**correu-e**: nom@edu.gva.es". Mai en git -- el
 # contingut d'estos .md viu exclusivament a la carpeta sincronitzada
 # (OneDrive), no al repositori.
-CORREU_E_RE = re.compile(r'(?im)^\s*\**\s*correu-e\s*\**\s*:\s*\**\s*([^\s*]+@[^\s*]+)')
+CORREU_E_RE = re.compile(r'(?im)^\s*\**\s*correu-e\s*\**\s*:\s*(.*)$')
+
+
+def parse_emails(text):
+    """Llista d'adreces d'un camp `correu-e`, separades per comes o `;`."""
+    emails = []
+    for part in re.split(r'[,;]', text):
+        part = part.strip().strip('*').strip()
+        if '@' in part and not re.search(r'\s', part):
+            emails.append(part)
+    return emails
+
+
+def get_teacher_emails(filepath):
+    """Torna la llista d'adreces del camp `correu-e` (diversos docents
+    separats per comes o `;`), o una llista buida si no n'hi ha cap."""
+    with open(filepath, encoding="utf-8") as f:
+        content = f.read()
+    m = CORREU_E_RE.search(content)
+    return parse_emails(m.group(1)) if m else []
 
 
 def get_teacher_email(filepath):
     """Torna l'adreça de correu del docent si el fitxer la conté, o None.
 
     Camp opcional -- si no hi és, torna None (comportament actual, sense
-    canvis) enlloc de llançar excepció.
+    canvis) enlloc de llançar excepció. Amb diversos docents, la primera.
     """
-    with open(filepath, encoding="utf-8") as f:
-        content = f.read()
-    m = CORREU_E_RE.search(content)
-    return m.group(1) if m else None
+    emails = get_teacher_emails(filepath)
+    return emails[0] if emails else None
 
 
 def is_annex_file(filename):
