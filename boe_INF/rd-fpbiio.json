@@ -1269,12 +1269,8 @@
             "horas": "67",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "a"
-            ],
-            "ObjetivosGenerales": [
-                "a"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "IPO2": {
             "nombre": "IPO2",
@@ -1318,12 +1314,8 @@
             "horas": "34",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "a"
-            ],
-            "ObjetivosGenerales": [
-                "a"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         }
     }
 }

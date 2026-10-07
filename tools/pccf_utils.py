@@ -8,7 +8,10 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
 CICLES_INF = ["SMX", "DAM", "CEIABD", "FPBIIO"]
-CICLES_SCO = ["APD", "EI", "IS"]
+# APDSEMI i ISSEMI: modalitat semipresencial, tractada com un cicle a part
+# (JSON boe_SCO/rd-{apd,is}semi.json, còpia del presencial que validate_json
+# comprova que seguisca igual). APDSEMI només té 2n (cicle a extingir).
+CICLES_SCO = ["APD", "EI", "IS", "APDSEMI", "ISSEMI"]
 CICLES_CONEGUTS = sorted(CICLES_INF + CICLES_SCO, key=len, reverse=True)
 
 # Frase de contextualització de cada cicle per a "... que s'imparteix en
@@ -30,6 +33,8 @@ CICLE_INFO = {
     "APD": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Atenció a Persones en Situació de Dependència", "curriculum": D114_CURRICULUM},
     "EI": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Educació Infantil", "curriculum": D114_CURRICULUM},
     "IS": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Integració Social", "curriculum": D114_CURRICULUM},
+    "APDSEMI": {"contexto": "el Cicle Formatiu de Grau Mitjà de \nTècnic en Atenció a Persones en Situació de Dependència, en règim semipresencial", "curriculum": D114_CURRICULUM},
+    "ISSEMI": {"contexto": "el Cicle Formatiu de Grau Superior de \nTècnic Superior en Integració Social, en règim semipresencial", "curriculum": D114_CURRICULUM},
 }
 
 # Frase de contextualització per a les PD d'optatives (compartides entre cicles).

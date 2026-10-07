@@ -1673,19 +1673,8 @@
             "horas": "100",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "t",
-                "u",
-                "v",
-                "w",
-                "y"
-            ],
-            "ObjetivosGenerales": [
-                "t",
-                "u",
-                "v",
-                "y"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1710": {
             "nombre": "Itinerari personal per a l'ocupabilitat II",
@@ -1770,17 +1759,8 @@
             "horas": "100",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "v",
-                "w",
-                "x",
-                "y"
-            ],
-            "ObjetivosGenerales": [
-                "w",
-                "x",
-                "y"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "PI": {
             "nombre": "Projecte intermodular",
@@ -1816,10 +1796,60 @@
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
-                "a"
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y"
             ],
             "ObjetivosGenerales": [
-                "a"
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y"
             ]
         }
     }

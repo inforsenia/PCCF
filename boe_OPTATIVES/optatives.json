@@ -3,7 +3,6 @@
         "nombre": "Comunicació professional",
         "creditos": "",
         "horas": "96",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -60,15 +59,16 @@
             {"cicle": "SMX", "curs": "2", "familia": "INF"},
             {"cicle": "DAM", "curs": "2", "familia": "INF"},
             {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "APDSEMI", "curs": "2", "familia": "SCO"},
             {"cicle": "EI",  "curs": "2", "familia": "SCO"},
-            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"},
+            {"cicle": "ISSEMI",  "curs": "2", "familia": "SCO"}
         ]
     },
     "MOPANGPROF": {
         "nombre": "Anglés oral en entorns professionals",
         "creditos": "",
         "horas": "100",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -122,14 +122,14 @@
             {"cicle": "DAM", "curs": "2", "familia": "INF"},
             {"cicle": "APD", "curs": "1", "familia": "SCO"},
             {"cicle": "EI",  "curs": "2", "familia": "SCO"},
-            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"},
+            {"cicle": "ISSEMI",  "curs": "2", "familia": "SCO"}
         ]
     },
     "INP": {
         "nombre": "Introducció al Núvol Públic",
         "creditos": "10",
         "horas": "100",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -193,7 +193,6 @@
         "nombre": "Introducció a la Programació",
         "creditos": "-",
         "horas": "100",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -292,7 +291,6 @@
         "nombre": "Acompanyament a les persones amb discapacitat en la realització de les activitats programades",
         "creditos": "",
         "horas": "96",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -340,15 +338,16 @@
         "codis_alternatius": {},
         "grups": [
             {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "APDSEMI", "curs": "2", "familia": "SCO"},
             {"cicle": "EI",  "curs": "2", "familia": "SCO"},
-            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"},
+            {"cicle": "ISSEMI",  "curs": "2", "familia": "SCO"}
         ]
     },
     "MOPOCITL": {
         "nombre": "Activitats d'oci i temps lliure per a la inclusió social",
         "creditos": "",
         "horas": "96",
-        "dualitza": false,
         "UnidadesCompetenciaAcreditadas": {},
         "CompetenciasTitulo": [],
         "ObjetivosGenerales": [],
@@ -424,8 +423,10 @@
         "codis_alternatius": {},
         "grups": [
             {"cicle": "APD", "curs": "2", "familia": "SCO"},
+            {"cicle": "APDSEMI", "curs": "2", "familia": "SCO"},
             {"cicle": "EI",  "curs": "2", "familia": "SCO"},
-            {"cicle": "IS",  "curs": "2", "familia": "SCO"}
+            {"cicle": "IS",  "curs": "2", "familia": "SCO"},
+            {"cicle": "ISSEMI",  "curs": "2", "familia": "SCO"}
         ]
     }
 }

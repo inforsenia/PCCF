@@ -38,7 +38,7 @@ PDF_PATH:=$(shell readlink -f PDFS)
 
 # Lista de ciclos disponibles por familia
 CICLOS_INF = smx dam ceiabd fpbiio
-CICLOS_SCO = apd ei is
+CICLOS_SCO = apd ei is apdsemi issemi
 CICLOS_ALL = $(CICLOS_INF) $(CICLOS_SCO)
 
 # Helper per determinar familia a partir del ciclo
@@ -404,7 +404,7 @@ help:
 	@echo "    report-tots-pccf                 Report de [###] per a tots els cicles"
 	@echo "  Cicles disponibles:"
 	@echo "    Familia INF: smx, dam, ceiabd, fpbiio"
-	@echo "    Familia SCO: apd, ei, is"
+	@echo "    Familia SCO: apd, ei, is, apdsemi, issemi"
 	@echo "  Conjunt:"
 	@echo "    todos              Generar todos los proyectos (INF+SCO+optatives)"
 	@echo "    todos-inf          Generar todos los proyectos INF + optatives"

@@ -179,14 +179,19 @@
             "ObjetivosGenerales": [
                 "a",
                 "b",
+                "c",
                 "f",
                 "g",
+                "h",
+                "i",
+                "j",
+                "k",
                 "l"
             ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
-                "c",
+                "e",
                 "g",
                 "h",
                 "i",
@@ -291,15 +296,17 @@
                 "a",
                 "b",
                 "c",
-                "k",
-                "n",
-                "ny"
+                "f",
+                "g",
+                "l"
             ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
                 "c",
                 "f",
+                "g",
+                "j",
                 "k"
             ]
         },
@@ -382,13 +389,19 @@
                 "b",
                 "c",
                 "f",
+                "g",
+                "j",
                 "l"
             ],
             "CompetenciasTitulo": [
                 "a",
                 "b",
                 "c",
-                "g"
+                "f",
+                "g",
+                "i",
+                "j",
+                "k"
             ]
         },
         "0014": {
@@ -475,7 +488,8 @@
                 "b",
                 "c",
                 "f",
-                "m"
+                "g",
+                "k"
             ],
             "CompetenciasTitulo": [
                 "a",
@@ -584,6 +598,7 @@
                 "b",
                 "c",
                 "f",
+                "g",
                 "l"
             ],
             "CompetenciasTitulo": [
@@ -928,6 +943,8 @@
                 "e",
                 "f",
                 "g",
+                "j",
+                "k",
                 "l"
             ],
             "CompetenciasTitulo": [
@@ -1002,8 +1019,40 @@
             "horas": "134",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
-            "ObjetivosGenerales": [],
-            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny"
+            ],
             "dualitza": false
         },
         "0020": {
@@ -1054,13 +1103,12 @@
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
-                "n",
                 "ny"
             ],
             "CompetenciasTitulo": [
-                "f",
-                "k"
-            ]
+                "f"
+            ],
+            "dualitza": false
         },
         "0179": {
             "nombre": "Anglés Professional (GS)",
@@ -1138,21 +1186,8 @@
             "horas": "68",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "a",
-                "e",
-                "f",
-                "i",
-                "j",
-                "v",
-                "y",
-                "z"
-            ],
-            "ObjetivosGenerales": [
-                "e",
-                "j",
-                "q"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1709": {
             "nombre": "Itinerari personal per a l'ocupabilitat I",
@@ -1243,21 +1278,9 @@
             },
             "horas": "100",
             "curs": 1,
-            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "t",
-                "u",
-                "v",
-                "w",
-                "y"
-            ],
-            "ObjetivosGenerales": [
-                "t",
-                "u",
-                "v",
-                "y"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1710": {
             "nombre": "Itinerari personal per a l'ocupabilitat II",
@@ -1343,17 +1366,8 @@
             "curs": 2,
             "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
-            "CompetenciasTitulo": [
-                "v",
-                "w",
-                "x",
-                "y"
-            ],
-            "ObjetivosGenerales": [
-                "w",
-                "x",
-                "y"
-            ]
+            "CompetenciasTitulo": [],
+            "ObjetivosGenerales": []
         },
         "1665": {
             "nombre": "Digitalització aplicada als sectors productius (GS)",
@@ -1441,7 +1455,6 @@
             },
             "horas": "34",
             "curs": 2,
-            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []
@@ -1517,7 +1530,6 @@
             },
             "horas": "34",
             "curs": 2,
-            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []
