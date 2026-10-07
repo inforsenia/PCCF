@@ -7,7 +7,7 @@
 | **Código** | UP04 |
 | **Módulo** | Programacíón de Servicios y Procesos (0490) |
 | **Duración** | **4 Horas** |
-| **Temporalización** | Del **13/02/2026** al **20/02/2026** |
+| **Temporalización** | Del **15/02/2027** al **22/02/2027** |
 
 ### 2. Fundamentación
 **Resultados de Aprendizaje**
