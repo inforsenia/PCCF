@@ -10,7 +10,7 @@ fulla a `programacions/{CICLE}/libro_{CICLE}.xlsx` i:
     empresa);
   - escriu `pendents_FE.txt` amb els mòduls duals que encara no tenen la
     informació completa (vore `llig_fe_modul`).
-Tot a `programacions/2_FE/`. El mateix lector genera la taula FE que
+Tot a `programacions/4_plaFormatiuFE/` (`pccf_utils.DIR_FE`). El mateix lector genera la taula FE que
 `prepara_pd_compilacio.py` injecta a la PD de cada mòdul, perquè PD i
 document de la coordinadora sempre coincidisquen.
 
@@ -27,11 +27,10 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import (CICLES_INF, CICLES_SCO, CICLE_INFO, PROJECT_DIR, dualitza, get_curs,
+from pccf_utils import (CICLES_INF, CICLES_SCO, CICLE_INFO, DIR_FE, PROJECT_DIR, dualitza, get_curs,
                         get_familia, get_hoja_label, get_moduls_del_cicle, parse_pd_filename)
 
 PLANTILLA = os.path.join(PROJECT_DIR, "templates", "FE", "Plantilla_RRAA_CA.docx")
-DIR_FE = "2_FE"
 PENDENTS = "pendents_FE.txt"
 
 FILA_INICI = 10                 # primera fila de dades (excel_estils.FILA_CAPCALERA + 2)
@@ -306,7 +305,7 @@ def empremta(estats):
 
 
 def genera(root, cicles=None):
-    """Genera a {root}/programacions/2_FE els docx de `cicles` (per defecte,
+    """Genera a {root}/programacions/{DIR_FE} els docx de `cicles` (per defecte,
     tots) i pendents_FE.txt, que sempre cobreix tots els cicles.
 
     Torna (estats, text_pendents, total_pendents, fitxers_docx)."""

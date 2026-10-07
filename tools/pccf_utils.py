@@ -181,6 +181,56 @@ def get_familia(cicle):
     return None
 
 
+# Departaments als quals s'adscriuen els mòduls (PD per departament,
+# programacions/2_esborranysPerDept i 3_esborranyModuls). Per defecte, un
+# mòdul és del departament de la família del cicle (INF/SCO); les excepcions,
+# per codi, segons les memòries (memoriaFP/memories_{DEPT}.json). Les
+# optatives compartides (COM, SOS, DIG...) van a la família del cicle on
+# s'imparteixen. Ciències aplicades i Comunicació i societat de FPBIIO no
+# són a cap memòria: queden a INF.
+DEPARTAMENTS = ["INF", "SCO", "ANG", "FOL"]
+DEPT_PER_CODI = {
+    "0156": "ANG", "0179": "ANG", "MOPANGPROF": "ANG",   # Anglés
+    "1709": "FOL", "1710": "FOL", "IPO1": "FOL", "IPO2": "FOL",   # IPO I/II
+}
+
+
+def get_departament(familia, codi):
+    return DEPT_PER_CODI.get(str(codi), familia.upper())
+
+
+def nom_departament(dept):
+    """«Departament d'Informàtica», amb el nom de memoriaFP/memories_{DEPT}.json."""
+    try:
+        with open(os.path.join(PROJECT_DIR, "memoriaFP", f"memories_{dept}.json"), encoding="utf-8") as f:
+            return f"Departament {json.load(f)['departament']}"
+    except (OSError, KeyError, ValueError):
+        return f"Departament {dept}"
+
+
+# Estructura de sortida de programacions/ (dins de PCCF_ROOT): tot junt al
+# primer nivell, al costat de les carpetes de cicle (que només tenen les PD,
+# el libro_{CICLE}.xlsx i la portada).
+DIR_REPORT = "0_report"                    # PerCicle/{FAM}_{CICLE}.txt + {DEPT}/report_{DEPT}.txt
+DIR_REPORT_CICLE = "PerCicle"
+DIR_ESBORRANY_CICLE = "1_esborranysPerCicle"   # Programaciones_{CENTRE}_{CICLE}.pdf
+DIR_ESBORRANY_DEPT = "2_esborranysPerDept"     # Programaciones_{CENTRE}_{DEPT}.pdf
+DIR_MODULS = "3_esborranyModuls"               # {DEPT}/PD_{CICLE}_{CODI}_{SIGLES}.pdf
+DIR_FE = "4_plaFormatiuFE"                     # RRAA_CA_*.docx + pendents_FE.txt
+
+
+def dir_report_cicle(prog_dir):
+    return os.path.join(prog_dir, DIR_REPORT, DIR_REPORT_CICLE)
+
+
+def dir_report_dept(prog_dir, dept):
+    return os.path.join(prog_dir, DIR_REPORT, dept)
+
+
+def dir_moduls(prog_dir, dept):
+    return os.path.join(prog_dir, DIR_MODULS, dept)
+
+
 def get_moduls_del_cicle(cicle, familia=None):
     if familia is None:
         familia = get_familia(cicle)
@@ -243,6 +293,13 @@ def get_optatives_del_cicle(cicle, familia):
         if any(g.get("cicle", "").upper() == cicle and g.get("familia", "").upper() == familia
                for g in modul.get("grups", []))
     ]
+
+
+def departaments_del_cicle(cicle):
+    """Departaments amb algun mòdul (o optativa) al cicle."""
+    familia = get_familia(cicle)
+    codis = list(get_moduls_del_cicle(cicle, familia)) + [c for c, _ in get_optatives_del_cicle(cicle, familia)]
+    return {get_departament(familia, c) for c in codis}
 
 
 def find_optativa_pd(opt_dir, codi):

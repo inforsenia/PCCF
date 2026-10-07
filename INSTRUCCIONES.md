@@ -249,7 +249,7 @@ Durant `make compila-pd-pccf-{CICLO}`, l'script `tools/copy_optatives_pd.py`:
 1. Llig `boe_OPTATIVES/optatives.json` i filtra els mòduls que tenen eixe cicle a `grups`.
 2. Copia les PDs corresponents (OK o, si no n'hi ha, BORRADOR) des de `programacions/OPTATIVES/` a la còpia de muntatge de la compilació (mai toca els fitxers dels docents).
 3. Les PDs s'inclouen al final del `Programaciones_{CENTRO}_{CICLO}.pdf`, amb les marques ✎/✗ i el Quadre Resum de `libro_optatives.xlsx`.
-4. El report del cicle (`programacions/{CICLO}/0_report/`) inclou l'apartat "Optatives del cicle": si en falta alguna, està en BORRADOR, té marques `[###]` o la seua fulla de l'Excel no és coherent, el PDF porta la marca ESBORRANY.
+4. El report del cicle (`programacions/0_report/PerCicle/`) inclou l'apartat "Optatives del cicle": si en falta alguna, està en BORRADOR, té marques `[###]` o la seua fulla de l'Excel no és coherent, el PDF porta la marca ESBORRANY.
 
 ## Procediment per a generar correctament les PD's i PCCF de cada cicle
 

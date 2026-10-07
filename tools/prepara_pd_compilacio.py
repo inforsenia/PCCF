@@ -16,7 +16,10 @@ Per a cada PD de mòdul copiada a STAGE:
      empresa, llegides de REQUISIT FE / HORES DUAL de l'Excel amb el mateix
      lector que la plantilla RRAA_CA de la coordinació (`genera_fe.py`). Si
      la informació FE és incompleta, hi posa un avís i marca ✗ el títol.
-  4. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
+  4. A la secció ### DOCENT, converteix `**Docent**: A, B` i
+     `**correu-e**: a, b` (diversos docents separats per comes) en una
+     llista amb una vinyeta per docent, «Nom (correu)» (`formata_docents`).
+  5. Afig al final el Quadre Resum de la fulla del mòdul a l'Excel
      (`libro_{CICLE}.xlsx` de PD_DIR, el que editen els docents), exportat a
      PDF amb LibreOffice i inclòs amb \\includepdf. El títol
      `## Esquema general de ...` de la plantilla es trau del markdown i
@@ -24,7 +27,11 @@ Per a cada PD de mòdul copiada a STAGE:
      sol en una pàgina en blanc abans del Quadre Resum (apaïsat).
 
 A més, escriu STAGE/.draft si el report no està verificat
-(`is_pd_verified`), perquè el Makefile active la marca d'aigua ESBORRANY.
+(`is_pd_verified`), perquè el Makefile active la marca d'aigua ESBORRANY, i
+STAGE/.moduls.json (fitxer, codi, departament, sigles, draft de cada mòdul)
+per a `compila_pd_moduls.py`, que en fa un PDF per mòdul. Cada PDF de mòdul
+porta la marca d'aigua només si eixe mòdul té ✎/✗ (no depén de la resta del
+cicle).
 """
 
 import argparse
@@ -36,7 +43,8 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import parse_pd_filename, get_optatives_del_cicle, dualitza
+from pccf_utils import (parse_pd_filename, get_optatives_del_cicle, dualitza, get_departament,
+                        get_hoja_label)
 from genera_fe import llig_fe_modul, resol_fulla, taula_markdown
 from report_pccf import compute_pd_status, is_pd_verified, find_placeholders
 
@@ -118,6 +126,43 @@ def afig_taula_fe(path, info):
     return True
 
 
+DOCENT_RE = re.compile(r'(?m)^[ \t]*\**Docent\**[ \t]*:[ \t]*\**[ \t]*(.*?)[ \t]*$')
+CORREU_RE = re.compile(r'(?m)^[ \t]*\**correu-e\**[ \t]*:[ \t]*\**[ \t]*(.*?)[ \t]*$\n?')
+PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
+
+
+def _llista_camp(valor):
+    """Separa un camp de DOCENT per comes (o `;`) i descarta les parts buides
+    o que encara són una marca pendent."""
+    parts = [p.strip().strip("*").strip() for p in re.split(r"[,;]", valor)]
+    return [p for p in parts if p and not PLACEHOLDER_RE.search(p)]
+
+
+def formata_docents(path):
+    """Converteix `**Docent**: A, B` + `**correu-e**: a, b` en una llista amb
+    una vinyeta per docent, «Nom (correu)», aparellats per posició. Si sobren
+    correus, ixen sols en vinyetes a continuació. Si el camp Docent encara és
+    `[###]`, no es toca (ja el marca el report)."""
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    m = DOCENT_RE.search(content)
+    if not m:
+        return
+    noms = _llista_camp(m.group(1))
+    if not noms:
+        return
+    mc = CORREU_RE.search(content, m.end())
+    correus = _llista_camp(mc.group(1)) if mc else []
+    items = [f"- {nom} ({correus[i]})" if i < len(correus) else f"- {nom}"
+             for i, nom in enumerate(noms)]
+    items += [f"- {c}" for c in correus[len(noms):]]
+    if mc:
+        content = content[:mc.start()] + content[mc.end():]
+    content = content[:m.start()] + "\n".join(items) + content[m.end():]
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
 def elimina_instruccions(path):
     with open(path, encoding="utf-8") as f:
         content = f.read()
@@ -181,6 +226,8 @@ def main():
         import openpyxl
         wb_fe = openpyxl.load_workbook(llibre_cicle[0], data_only=True)
 
+    # Un PDF per mòdul (compila_pd_moduls.py, programacions/3_esborranyModuls)
+    moduls_pdf = []
     for fname in sorted(os.listdir(args.stage)):
         parsed = parse_pd_filename(fname)
         if not parsed:
@@ -208,6 +255,13 @@ def main():
         if marca:
             marca_titol(path, marca)
         elimina_instruccions(path)
+        formata_docents(path)
+        moduls_pdf.append({
+            "fitxer": fname, "codi": codi, "nom": nombre or codi,
+            "departament": get_departament(familia, codi),
+            "sigles": get_hoja_label(nombre) if nombre else codi,
+            "draft": bool(marca),
+        })
 
         if not (exportar and fulla):
             if exportar and nombre:
@@ -232,6 +286,9 @@ def main():
         with open(path, "a", encoding="utf-8") as f:
             f.write(f"\n\n\\includepdf[pages=-,landscape=true{toc}]{{./{pdf_name}}}\n")
         print(f" * [PD] {codi}: Quadre Resum afegit")
+
+    with open(os.path.join(args.stage, ".moduls.json"), "w", encoding="utf-8") as f:
+        json.dump(moduls_pdf, f, ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":

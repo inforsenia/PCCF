@@ -16,7 +16,9 @@ RESET := $(shell printf '\033[0m')
 CENTRO_EDUCATIVO ?= SENIA
 
 # Arrel on viu l'estructura completa del PCCF+PD dins de OneDrive (o localment).
-# Conté: pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/{CICLO}/ (PDs + 0_report/ + 1_esborrany/).
+# Conté: pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/ (0_report/{PerCicle,DEPT}/,
+# 1_esborranysPerCicle/, 2_esborranysPerDept/, 3_esborranyModuls/{DEPT}/, 4_plaFormatiuFE/
+# i una carpeta {CICLO}/ per cicle amb les PD i el libro_{CICLO}.xlsx).
 # Per defecte "." = project root (comportament local). Al contenidor, l'entrypoint
 # la fixa al path de la carpeta sincronitzada amb OneDrive (pccf_sync).
 PCCF_ROOT ?= .
@@ -198,7 +200,8 @@ compila-pd-pccf-%:
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
-	$(eval OUTPUT_DIR:=$(PD_DIR)/1_esborrany)
+	$(eval PROG_DIR:=$(PCCF_ROOT)/programacions)
+	$(eval OUTPUT_DIR:=$(PROG_DIR)/1_esborranysPerCicle)
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) ] ${RESET}"
 	mkdir -p "$(OUTPUT_DIR)"
@@ -218,10 +221,15 @@ compila-pd-pccf-%:
 		cd "$$STAGE" && \
 		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $$DRAFT_OPT --include-in-header "$$STAGE/pd_header.tex" \
 			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
-	@echo " ${LIGHTBLUE} Generant PDs individuals (ignorant errors)${RESET}"
-	-./tools/shell-progs-didacticas-standalone.sh $(CICLO_UPPER) "$(PD_DIR)" 2>&1 | tail -3
-	@echo " ${LIGHTBLUE} Generant report de PD a $(PD_DIR)/0_report/${RESET}"
+	@echo " ${LIGHTBLUE} Generant un PDF per mòdul a $(PROG_DIR)/3_esborranyModuls/ (ignorant errors)${RESET}"
+	-STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; \
+		python3 tools/compila_pd_moduls.py $(CICLO_UPPER) --stage "$$STAGE" --prog-dir "$(PROG_DIR)" -- \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) && \
+		python3 tools/compila_pd_dept.py --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) --stage "$$STAGE" -- \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
+	@echo " ${LIGHTBLUE} Generant reports de PD a $(PROG_DIR)/0_report/${RESET}"
 	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
+	python3 tools/report_pccf.py --type dept --prog-dir "$(PROG_DIR)"
 	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
 	rm -rf "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
 	@echo " ${LIGHTGREEN} [ Compilacio Programaciones $(CICLO_UPPER) completada ] ${RESET}"
@@ -244,6 +252,17 @@ report-pccf-%:
 	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
+	python3 tools/report_pccf.py --type dept --prog-dir "$(PCCF_ROOT)/programacions"
+
+# Report per departament (INF, SCO, ANG, FOL) de tots els cicles a programacions/0_report/{DEPT}/.
+report-pd-depts:
+	python3 tools/report_pccf.py --type dept --prog-dir "$(PCCF_ROOT)/programacions"
+
+# PDF per departament a programacions/2_esborranysPerDept/, a partir dels PDF de
+# mòdul ja compilats (3_esborranyModuls/, els genera compila-pd-pccf-{cicle}).
+compila-pd-depts:
+	python3 tools/compila_pd_dept.py --prog-dir "$(PCCF_ROOT)/programacions" --centre $(CENTRO_EDUCATIVO) -- \
+		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
 
 # ============================================================
 #  OPTATIVES (shared transversal modules)
@@ -292,7 +311,7 @@ report-tots-pccf:
 	done
 
 # Plantilla RRAA_CA de la coordinació de Formació en Empresa (tools/genera_fe.py):
-# docx per cicle i curs + pendents_FE.txt (tots els cicles) a programacions/2_FE/.
+# docx per cicle i curs + pendents_FE.txt (tots els cicles) a programacions/4_plaFormatiuFE/.
 fe-%:
 	$(eval CICLO_UPPER=$(shell echo $* | tr '[:lower:]' '[:upper:]'))
 	@if [ -z "$(call check_ciclo,$(shell echo $* | tr '[:upper:]' '[:lower:]'))" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$*' ${RESET}"; exit 1; fi

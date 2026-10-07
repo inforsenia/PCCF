@@ -13,10 +13,15 @@ Estructura esperada dins de sync-root:
     src*, src_{FAMILIA}*, src_{FAMILIA}_{CICLO}*  → PCCF framework MDs
     0_report/   → reports del framework PCCF
     1_esborrany/ → PCCF_{CENTRO}_{CICLO}.pdf (auto)
-  programacions/{CICLO}/
-    PD_*.md + libro_{CICLO}.xlsx
-    0_report/   → reports de les PD
-    1_esborrany/ → Programaciones_{CENTRO}_{CICLO}.pdf (manual)
+  programacions/
+    {CICLO}/                → PD_*.md + libro_{CICLO}.xlsx (+ COMPILAR_ARA)
+    OPTATIVES/              → PD de les optatives + libro_optatives.xlsx
+    0_report/PerCicle/      → reports de les PD per cicle
+    0_report/{DEPT}/        → report per departament (INF, SCO, ANG, FOL)
+    1_esborranysPerCicle/   → Programaciones_{CENTRO}_{CICLO}.pdf (manual)
+    2_esborranysPerDept/    → Programaciones_{CENTRO}_{DEPT}.pdf (en compilar un cicle)
+    3_esborranyModuls/{DEPT}/ → un PDF per mòdul (en compilar un cicle)
+    4_plaFormatiuFE/        → plantilla RRAA_CA + pendents_FE.txt (auto)
 
 Ús:
     python3 tools/pccf_sync_poller.py --once             # una sola passada
@@ -32,9 +37,12 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import CICLES_INF, CICLES_SCO, get_familia, get_optatives_del_cicle, OPTATIVES_DIRNAME
-from report_pccf import compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report, find_placeholders
-from memories_utils import get_teacher_email
+from pccf_utils import (CICLES_INF, CICLES_SCO, get_familia, get_optatives_del_cicle, OPTATIVES_DIRNAME,
+                        DIR_ESBORRANY_CICLE, DIR_ESBORRANY_DEPT, departaments_del_cicle,
+                        dir_report_cicle, dir_report_dept)
+from report_pccf import (compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report,
+                         find_placeholders, escriu_reports_dept, format_dept_report, modul_verificat)
+from memories_utils import get_teacher_emails
 from mailer import smtp_configured, send_report_email, get_department_email
 import genera_fe
 
@@ -66,6 +74,13 @@ PD_TEACHER_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_pd_teacher_notif
 FE_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_fe_notify_state.json")
 # Destinatari a department_emails.json: {"FE": {"coordinacio": "adreça"}}
 FE_EMAIL_TIPUS, FE_EMAIL_CLAU = "FE", "coordinacio"
+
+# Caps de departament (INF, SCO, ANG, FOL) per a les PD: les mateixes adreces
+# que les memòries, department_emails.json → {"FP": {"INF": "adreça", ...}}.
+DEPT_EMAIL_TIPUS = "FP"
+# Última empremta de l'estat de cada departament ja notificada al seu cap
+# ({dept: empremta}). Mateix criteri que FE: si l'enviament falla, no es guarda.
+DEPT_STATE_PATH = os.path.join(PROJECT_DIR, "temp", "pccf_dept_notify_state.json")
 
 
 def load_state():
@@ -124,8 +139,8 @@ def save_pd_teacher_state(state):
 def notify_pd_teachers(cicle, familia, pd_dir):
     """Avisa cada docent per correu de les deficiències de la seua pròpia
     PD (no del report sencer del cicle), si el seu fitxer .md conté una
-    línia "correu-e: adreça" a la secció ### DOCENT (vore
-    memories_utils.get_teacher_email). En esta v1 nomes compten com a
+    línia "correu-e: adreça[, adreça...]" a la secció ### DOCENT (vore
+    memories_utils.get_teacher_emails). En esta v1 nomes compten com a
     deficiència els placeholders [###]/[...] pendents i l'estat _BORRADOR
     -- la coherència de l'Excel es queda fora (nomes al report agregat).
 
@@ -148,7 +163,8 @@ def notify_pd_teachers(cicle, familia, pd_dir):
         if mtime <= state.get(state_key, 0.0):
             continue
 
-        to_addr = get_teacher_email(filepath)
+        # Diversos docents (separats per comes): un sol correu a tots.
+        to_addr = ", ".join(get_teacher_emails(filepath))
         if not to_addr:
             state[state_key] = mtime
             save_pd_teacher_state(state)
@@ -176,13 +192,13 @@ def notify_pd_teachers(cicle, familia, pd_dir):
             + "\n\nRevisa i completa-la directament al fitxer.\n"
         )
         if send_report_email(to_addr, subject, body):
-            print(f"[pccf-poller] correu enviat al docent ({to_addr}) per {fname}", flush=True)
+            print(f"[pccf-poller] correu enviat als docents ({to_addr}) per {fname}", flush=True)
             state[state_key] = mtime
             save_pd_teacher_state(state)
 
 
 def actualitza_fe(sync_root, cicles):
-    """Regenera programacions/2_FE (plantilla RRAA_CA dels `cicles` i
+    """Regenera programacions/4_plaFormatiuFE (plantilla RRAA_CA dels `cicles` i
     pendents_FE.txt de tots) i avisa la coordinació de FE si ha canviat."""
     try:
         estats, text, total, _ = genera_fe.genera(sync_root, cicles)
@@ -194,7 +210,7 @@ def actualitza_fe(sync_root, cicles):
 
 def notify_fe_coordinator(sync_root, estats, text, total):
     """Correu a la coordinació de FE amb els mòduls duals pendents i els
-    docx de 2_FE, només quan l'estat FE canvia. No invasiu: sense SMTP o
+    docx de 4_plaFormatiuFE, només quan l'estat FE canvia. No invasiu: sense SMTP o
     sense adreça a department_emails.json no fa res."""
     if not smtp_configured():
         return
@@ -215,7 +231,7 @@ def notify_fe_coordinator(sync_root, estats, text, total):
                else "[FE] Plantilla RRAA_CA: tots els mòduls duals complets")
     body = (
         "S'ha actualitzat la plantilla RRAA_CA a partir dels Excel de les "
-        "Programacions (carpeta programacions/2_FE, adjunta també a este correu).\n\n"
+        f"Programacions (carpeta programacions/{genera_fe.DIR_FE}, adjunta també a este correu).\n\n"
         + text
     )
     if send_report_email(to_addr, subject, body, adjunts):
@@ -223,6 +239,94 @@ def notify_fe_coordinator(sync_root, estats, text, total):
         os.makedirs(os.path.dirname(FE_STATE_PATH), exist_ok=True)
         with open(FE_STATE_PATH, "w", encoding="utf-8") as f:
             json.dump({"empremta": empremta}, f)
+
+
+def _llig_dept_state():
+    try:
+        with open(DEPT_STATE_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _guarda_dept_state(state):
+    os.makedirs(os.path.dirname(DEPT_STATE_PATH), exist_ok=True)
+    with open(DEPT_STATE_PATH, "w", encoding="utf-8") as f:
+        json.dump(state, f)
+
+
+def _resum_dept(moduls):
+    pendents = sum(not modul_verificat(m) for m in moduls)
+    return f"{pendents} de {len(moduls)} mòduls amb incidències" if pendents else f"tots els mòduls ({len(moduls)}) complets"
+
+
+def notify_dept_report(sync_root, depts, ja_avisats=()):
+    """Correu al cap de cada departament amb el seu report (0_report/{DEPT}/)
+    quan l'estat del departament canvia de veritat: per a cada mòdul, l'estat
+    OK/BORRADOR/FALTA i si té o no marques pendents i incidències de l'Excel
+    o de FE (empremta, com a FE). Omplir una marca de les moltes que en
+    queden, o editar text, no avisa.
+    No invasiu: sense SMTP o sense adreça a department_emails.json
+    ({"FP": {DEPT: adreça}}) no fa res. Els departaments de `ja_avisats`
+    reben en esta passada el correu de compilació (que ja porta el report):
+    només se'n guarda l'empremta, per no enviar-los dos correus."""
+    if not smtp_configured():
+        return
+    state = _llig_dept_state()
+    prog_root = os.path.join(sync_root, "programacions")
+    for dept, moduls in depts.items():
+        if not moduls:
+            continue
+        to_addr = get_department_email(DEPT_EMAIL_TIPUS, dept)
+        if not to_addr:
+            continue
+        # Per mòdul, només si té o no incidències de cada tipus: omplir una
+        # marca o canviar unes hores no avisa; passar a OK o a complet, sí.
+        empremta = genera_fe.empremta([
+            [m["cicle"], m["codi"], m["estat"], bool(m["marques"]), bool(m["excel"]), bool(m["fe"])]
+            for m in moduls])
+        if state.get(dept) == empremta:
+            continue
+        if dept in ja_avisats:
+            state[dept] = empremta
+            _guarda_dept_state(state)
+            continue
+        report = os.path.join(dir_report_dept(prog_root, dept), f"report_{dept}.txt")
+        subject = f"[PD {dept}] Estat de les programacions: {_resum_dept(moduls)}"
+        body = (
+            f"Ha canviat l'estat de les programacions didàctiques del departament {dept} "
+            "(carpeta programacions/0_report, adjunt també a este correu).\n\n"
+            + format_dept_report(dept, moduls)
+        )
+        if send_report_email(to_addr, subject, body, [report]):
+            print(f"[pccf-poller] correu de report enviat al cap del departament {dept} ({to_addr})", flush=True)
+            state[dept] = empremta
+            _guarda_dept_state(state)
+
+
+def notify_dept_heads(sync_root, centre, depts, cicles):
+    """Després de compilar les Programacions de `cicles`, un sol correu per
+    departament afectat amb el seu PDF (2_esborranysPerDept) i el seu report,
+    encara que el disparador global n'haja compilat diversos."""
+    if not smtp_configured():
+        return
+    prog_root = os.path.join(sync_root, "programacions")
+    for dept in sorted(depts):
+        to_addr = get_department_email(DEPT_EMAIL_TIPUS, dept)
+        if not to_addr:
+            print(f"[pccf-poller] PD del departament {dept} compilada però no hi ha email a department_emails.json (tipus '{DEPT_EMAIL_TIPUS}', clau '{dept}')", flush=True)
+            continue
+        pdf = os.path.join(prog_root, DIR_ESBORRANY_DEPT, f"Programaciones_{centre}_{dept}.pdf")
+        report = os.path.join(dir_report_dept(prog_root, dept), f"report_{dept}.txt")
+        subject = f"[PD {dept}] Programacions del departament compilades"
+        body = (
+            f"S'han compilat les Programacions de {', '.join(cicles)} i s'ha actualitzat el PDF "
+            f"del departament {dept} (programacions/{DIR_ESBORRANY_DEPT}). Els PDF de cada mòdul "
+            "són a programacions/3_esborranyModuls.\n\n"
+            "Adjunts: el PDF del departament i el seu report, si s'han pogut adjuntar.\n"
+        )
+        if send_report_email(to_addr, subject, body, [pdf, report]):
+            print(f"[pccf-poller] correu enviat al cap del departament {dept} ({to_addr}) amb el PDF", flush=True)
 
 
 def has_pd_files(pdir):
@@ -257,7 +361,7 @@ def compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
         print(f"[pccf-poller] ERROR compilant PD {familia}_{cicle}:\n{result.stdout[-2000:]}\n{result.stderr[-2000:]}", flush=True)
         return False
 
-    pdf_path = os.path.join(pdir, "1_esborrany", f"Programaciones_{centre}_{cicle}.pdf")
+    pdf_path = os.path.join(sync_root, "programacions", DIR_ESBORRANY_CICLE, f"Programaciones_{centre}_{cicle}.pdf")
     to_addr = get_department_email("PCCF", cicle)
     if not to_addr:
         print(f"[pccf-poller] {familia}_{cicle}: PD compilada però no hi ha email de cap de departament a department_emails.json (tipus 'PCCF', clau '{cicle}')", flush=True)
@@ -282,11 +386,12 @@ def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=Fal
     Independent de si hi ha hagut cap canvi de PD en esta passada -- cal
     comprovar-ho sempre. Si la compilació falla, el disparador del cicle NO
     s'esborra (es reintenta a la propera passada, mateix criteri que
-    notify_pd_teachers). Torna False només si s'ha intentat i ha fallat.
+    notify_pd_teachers). Torna None si no hi havia res a compilar, True si
+    ha compilat i False si s'ha intentat i ha fallat.
     """
     triggers = find_pd_triggers(pdir)
     if not triggers and not forcat:
-        return True
+        return None
 
     motiu = "disparador global" if forcat and not triggers else f"disparador {PD_COMPILE_TRIGGER} detectat"
     if not compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
@@ -313,7 +418,9 @@ def poll_once(sync_root, centre, cicle=None):
     if global_triggers:
         print(f"[pccf-poller] disparador global {PD_COMPILE_TRIGGER} detectat a programacions/: compilant tots els cicles", flush=True)
     fallats = []
+    compilats = []  # cicles amb les Programacions compilades en esta passada
     cicles_fe = []  # cicles amb canvis de PD/Excel: es regenera la plantilla RRAA_CA
+    estats_pd = {}  # compute_pd_status ja calculats, per al report de departament
 
     # PD d'optatives (compartides entre cicles): avís al docent una sola
     # vegada per passada (l'estat per fitxer evita repetir-los).
@@ -341,8 +448,12 @@ def poll_once(sync_root, centre, cicle=None):
 
         # Independent de si hi ha canvis de PD/PCCF esta passada -- el cap de
         # departament pot demanar compilar encara que res haja canviat.
-        if te_pd and not check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=bool(global_triggers)):
-            fallats.append((cicle, pdir))
+        if te_pd:
+            compilat = check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=bool(global_triggers))
+            if compilat is False:
+                fallats.append((cicle, pdir))
+            elif compilat:
+                compilats.append(cicle)
 
         pd_mtime = latest_source_mtime(pdir)
         # Les optatives del cicle formen part de les seues Programacions i del
@@ -376,7 +487,8 @@ def poll_once(sync_root, centre, cicle=None):
         # --- Regenerar reports ---
         if pd_canviat and te_pd:
             status = compute_pd_status(cicle, familia, pdir)
-            report_dir = os.path.join(pdir, "0_report")
+            estats_pd[cicle] = status
+            report_dir = dir_report_cicle(prog_root)
             os.makedirs(report_dir, exist_ok=True)
             with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
                 f.write(format_pd_report(status))
@@ -407,8 +519,18 @@ def poll_once(sync_root, centre, cicle=None):
         save_state(state)
         processed.append(key)
 
+    depts_compilats = set().union(*(departaments_del_cicle(c) for c in compilats))
     if cicles_fe:
         actualitza_fe(sync_root, cicles_fe)
+        # Report per departament (de tots els cicles) i avís al cap si l'estat
+        # del seu departament ha canviat.
+        try:
+            notify_dept_report(sync_root, escriu_reports_dept(prog_root, estats_pd), depts_compilats)
+        except Exception as e:
+            print(f"[pccf-poller] ERROR generant els reports de departament: {e}", flush=True)
+
+    if compilats:
+        notify_dept_heads(sync_root, centre, depts_compilats, compilats)
 
     if global_triggers:
         # El global s'esborra sempre; si algun cicle ha fallat, es deixa el
