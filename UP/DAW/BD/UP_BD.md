@@ -4,14 +4,14 @@
 
 | Código | Título de la UP | Duración | Temporalización | RA asociado (descripción breve) |
 | :--- | :--- | :---: | :--- | :--- |
-| **UP01** | **Introducción a las BBDD** | 8 h | 08/09/2025 – 18/09/2025 | **RA1:** Sistemas de información, bases de datos y SGBD |
-| **UP02** | **Diseño conceptual de BD (Modelo E-R)** | 20 h | 19/09/2025 – 17/10/2025 | **RA6:** Diseño conceptual y modelo Entidad-Relación |
-| **UP03** | **Diseño lógico de BD (Modelo Relacional)** | 27 h | 20/10/2025 – 28/11/2025 | **RA2:** Modelo relacional, transformación, normalización y control |
-| **UP04** | **Creación de DB (DDL, DCL)** | 15 h | 01/12/2025 – 19/12/2025 | **RA2:** Modelo relacional, transformación, normalización y control |
-| **UP05** | **Modificación de Datos (DML 1: Insert, Update, Delete)** | 17 h | 07/01/2026 – 30/01/2026 | **RA4:** Inserción, modificación y borrado de datos |
-| **UP06** | **Consultas (DML 2: Select)** | 26 h | 02/02/2026 – 13/03/2026 | **RA3:** Consultas y recuperación de información |
-| **UP07** | **Programación de BD** | 27 h | 16/03/2026 – 30/04/2026 | **RA5:** Programación de bases de datos |
-| **UP08** | **Introducción BD no relacionales** | 8 h | 04/05/2026 – 15/05/2026 | **RA7:** Bases de datos no relacionales |
+| **UP01** | **Introducción a las BBDD** | 8 h | 09/09/2026 – 18/09/2026 | **RA1:** Sistemas de información, bases de datos y SGBD |
+| **UP02** | **Diseño conceptual de BD (Modelo E-R)** | 20 h | 23/09/2026 – 16/10/2025 | **RA6:** Diseño conceptual y modelo Entidad-Relación |
+| **UP03** | **Diseño lógico de BD (Modelo Relacional)** | 27 h | 21/10/2026 – 27/11/2026 | **RA2:** Modelo relacional, transformación, normalización y control |
+| **UP04** | **Creación de DB (DDL, DCL)** | 15 h | 02/12/2026 – 23/12/2026 | **RA2:** Modelo relacional, transformación, normalización y control |
+| **UP05** | **Modificación de Datos (DML 1: Insert, Update, Delete)** | 17 h | 08/01/2027 – 29/01/2027 | **RA4:** Inserción, modificación y borrado de datos |
+| **UP06** | **Consultas (DML 2: Select)** | 26 h | 03/02/2027 – 12/03/2027 | **RA3:** Consultas y recuperación de información |
+| **UP07** | **Programación de BD** | 27 h | 24/03/2027 – 30/04/2027 | **RA5:** Programación de bases de datos |
+| **UP08** | **Introducción BD no relacionales** | 8 h | 05/05/2027 – 14/05/2027 | **RA7:** Bases de datos no relacionales |
 
 *   La suma total de estas unidades es de **148 horas**, correspondientes íntegramente al periodo de formación realizado en el centro educativo fuera del periodo dual.
 
@@ -25,7 +25,7 @@
 | **Código** | UP01 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **8 horas** |
-| **Temporalización** | Del **08/09/2025** al **18/09/2025** |
+| **Temporalización** | Del **09/09/2026** al **18/09/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -79,7 +79,7 @@
 | **Código** | UP02 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **20 horas** |
-| **Temporalización** | Del **19/09/2025** al **17/10/2025** |
+| **Temporalización** | Del **23/09/2026** al **16/10/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -130,7 +130,7 @@
 | **Código** | UP03 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **27 horas**, de las cuales **3 son duales** |
-| **Temporalización** | Del **20/10/2025** al **28/11/2025** |
+| **Temporalización** | Del **21/10/2026** al **27/11/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -182,7 +182,7 @@
 | **Código** | UP04 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **15 horas**, de las cuales **2 son duales** |
-| **Temporalización** | Del **01/12/2025** al **19/12/2025** |
+| **Temporalización** | Del **02/12/2026** al **23/12/2026** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -235,7 +235,7 @@
 | **Código** | UP05 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **17 horas**, de las cuales **3 son duales** |
-| **Temporalización** | Del **07/01/2026** al **30/01/2026** |
+| **Temporalización** | Del **08/01/2027** al **29/01/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -287,7 +287,7 @@
 | **Código** | UP06 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **26 horas**, de las cuales **7 son duales** |
-| **Temporalización** | Del **02/02/2026** al **13/03/2026** |
+| **Temporalización** | Del **03/02/2027** al **12/03/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -341,7 +341,7 @@
 | **Código** | UP07 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **27 horas**, de las cuales **3 son duales** |
-| **Temporalización** | Del **16/03/2026** al **30/04/2026** |
+| **Temporalización** | Del **24/03/2027** al **30/04/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
@@ -396,7 +396,7 @@
 | **Código** | UP08 |
 | **Módulo** | Bases de Datos |
 | **Duración** | **8 horas** |
-| **Temporalización** | Del **04/05/2026** al **15/05/2026** |
+| **Temporalización** | Del **05/05/2027** al **14/05/2027** |
 
 ### 2. Fundamentación
 **Resultado de Aprendizaje**
