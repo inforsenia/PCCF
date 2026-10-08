@@ -44,6 +44,7 @@ Esta programació s'ajusta a la normativa següent:
 
 El reial decret del títol{% if not ciclo_curriculum %}, el decret autonòmic de currículum{% endif %} i la resta de normativa específica del cicle es recullen en el Projecte Curricular del Cicle Formatiu (PCCF).
 
+{% if not optativa -%}
 ## Relació entre els estàndards de competència i els mòduls del cicle formatiu
 
 {% if modulo.UnidadesCompetenciaAcreditadas|count > 0 %}
@@ -55,13 +56,17 @@ Este mòdul està associat als estàndards de competència següents:
 |<img width=200/>|<img width=500/>|
 {% else %}
 No escau: este mòdul no té estàndards de competència associats.
-{% endif %}
+{% endif %}{% endif %}
 
+{% if not optativa -%}
 ## Contribució dels resultats d'aprenentatge a les competències
 
 Els resultats d'aprenentatge del mòdul, juntament amb els seus criteris d'avaluació, són els referents de l'avaluació i contribueixen a assolir els objectius generals i les competències professionals, personals i socials del títol que s'indiquen a continuació.
 
 ### Resultats d'aprenentatge
+{%- else -%}
+## Resultats d'aprenentatge
+{%- endif %}
 
 Els **resultats d'aprenentatge** relatius al mòdul de {{modulo.nombre}} són:
 
@@ -70,7 +75,7 @@ Els **resultats d'aprenentatge** relatius al mòdul de {{modulo.nombre}} són:
 | {{ ra }} | {{ modulo.ResultadosAprendizaje[ra].Resultado }} |{% endfor %}
 |<img width=200/>|<img width=500/>|
 
-{% if modulo.ObjetivosGenerales|count > 0 %}
+{% if not optativa and modulo.ObjetivosGenerales|count > 0 %}
 
 ### Objectius generals
 
@@ -84,7 +89,7 @@ La formació del mòdul contribueix a assolir els *objectius generals del cicle*
 {% endif %}
 
 
-{% if modulo.CompetenciasTitulo|count > 0 %}
+{% if not optativa and modulo.CompetenciasTitulo|count > 0 %}
 
 ### Competències del títol
 
@@ -242,6 +247,7 @@ Els criteris de qualificació de l'alumnat es recullen en l'apartat *Avaluació 
 
 [###]
 
+{% if not optativa -%}
 ## Contribució al Projecte intermodular
 
 D'acord amb {% if ciclo_curriculum %}l'article 5 del Decret 114/2025 i {% endif %}els criteris establits en el PCCF, el Projecte intermodular integra resultats d'aprenentatge de diversos mòduls del cicle.
@@ -251,6 +257,7 @@ D'acord amb {% if ciclo_curriculum %}l'article 5 del Decret 114/2025 i {% endif 
 > Exemple: "Els RA3 i RA5 d'este mòdul s'integren en el Projecte intermodular. L'alumnat dissenya la base de dades del projecte. El seguiment es fa en les reunions quinzenals de l'equip docent, i la nota d'eixos RA té en compte el lliurament corresponent del projecte."
 
 [###]
+{%- endif %}
 
 ## Esquema general de {{modulo.nombre}}
 
