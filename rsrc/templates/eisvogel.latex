@@ -557,6 +557,12 @@ $endif$
 
 $if(page-background)$
 \usepackage[pages=all]{background}
+% El fons s'ha de dibuixar davall de les pàgines de \includepdf (pdfpages les
+% posa amb eso-pic al mateix hook). Sense esta regla l'ordre és el de càrrega
+% (eso-pic, background) i el fons tapava el Quadre Resum: les cel·les blanques
+% semblaven transparents. Amb la marca ESBORRANY no passava perquè
+% draftwatermark declara `draftwatermark < eso-pic` i això reordenava el hook.
+\DeclareHookRule{shipout/background}{background}{<}{eso-pic}
 $endif$
 
 %
