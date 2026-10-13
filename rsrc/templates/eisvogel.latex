@@ -585,6 +585,26 @@ $if(draft)$
 $endif$
 
 %
+% \FonsBlanc: la pàgina actual porta fons blanc opac damunt del fons decoratiu
+% (page-background). Per a les pàgines de \includepdf de taules exportades de
+% l'Excel (Quadre Resum), que no tenen fons i deixaven vore el decorat:
+% \includepdf[...,pagecommand={\thispagestyle{empty}\FonsBlanc}]{...}.
+% Ordre del hook: background < fonsblanc < draftwatermark < eso-pic (la pàgina
+% inclosa de pdfpages), així la marca ESBORRANY es continua veient.
+%
+\newif\iffonsblanc
+\newcommand*{\FonsBlanc}{\global\fonsblanctrue}
+\AddToHook{shipout/background}[fonsblanc]{%
+  \iffonsblanc
+    % de sobra per si fitpaper/landscape canvien la mida de la pàgina
+    \put(0,0){\color{white}\rule[-2\paperheight]{2\paperwidth}{3\paperheight}}%
+    \global\fonsblancfalse
+  \fi}
+\DeclareHookRule{shipout/background}{background}{<}{fonsblanc}
+\DeclareHookRule{shipout/background}{fonsblanc}{<}{draftwatermark}
+\DeclareHookRule{shipout/background}{fonsblanc}{<}{eso-pic}
+
+%
 % break urls
 %
 \PassOptionsToPackage{hyphens}{url}

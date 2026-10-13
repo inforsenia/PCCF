@@ -284,7 +284,8 @@ def main():
         titol = extrau_titol_esquema(path)
         toc = f",addtotoc={{1,subsection,2,{{{titol}}},esquema-{codi}}}" if titol else ""
         with open(path, "a", encoding="utf-8") as f:
-            f.write(f"\n\n\\includepdf[pages=-,landscape=true{toc}]{{./{pdf_name}}}\n")
+            f.write(f"\n\n\\includepdf[pages=-,landscape=true{toc},"
+                    f"pagecommand={{\\thispagestyle{{empty}}\\FonsBlanc}}]{{./{pdf_name}}}\n")
         print(f" * [PD] {codi}: Quadre Resum afegit")
 
     with open(os.path.join(args.stage, ".moduls.json"), "w", encoding="utf-8") as f:

@@ -315,7 +315,7 @@ for codigo in data_box.ModulosProfesionales:
         compiled_pdf = os.path.join(outdir, f"PD_9999_{codigo}_CuadroResumen.pdf")
         shutil.copy(pdf_cuadro, compiled_pdf)
         with open(fmod, "a", encoding="utf-8") as f:
-            f.write(f"\n\n\\includepdf[pages=-,noautoscale=true,fitpaper=true]{{./PD_9999_{codigo}_CuadroResumen.pdf}}\n")
+            f.write(f"\n\n\\includepdf[pages=-,noautoscale=true,fitpaper=true,pagecommand={{\\thispagestyle{{empty}}\\FonsBlanc}}]{{./PD_9999_{codigo}_CuadroResumen.pdf}}\n")
 
 # Guardar mapa código → siglas (només en mode complet)
 if not args.generate_only:
