@@ -73,6 +73,7 @@ ROIG = PatternFill("solid", fgColor="F4B6B6", bgColor="F4B6B6")
 VERD = PatternFill("solid", fgColor="C6E7C6", bgColor="C6E7C6")
 FILES_BUIDES = (3, 6, 7)   # separadors entre bandes i taula
 ESQUERRA = Alignment(horizontal="left", vertical="center", wrap_text=True, indent=1)
+DALT = Alignment(horizontal="left", vertical="top", wrap_text=True)
 
 BLANC = PatternFill("solid", fgColor="FFFFFF")
 FOSC = PatternFill("solid", fgColor=COLOR_FOSC)
@@ -243,10 +244,24 @@ def aplica_estils(ws, dual=True):
         if isinstance(ra.value, str) and ra.value.startswith("RA"):
             ra.font = _font(bold=True)
 
+    alinea_continguts(ws, dual, ultima)
     if dual:
         _valida_fe(ws, ultima)
     protegeix(ws, dual, ultima)
     aplica_amplades(ws, dual)
+
+
+def alinea_continguts(ws, dual, ultima=None):
+    """CONTINGUTS ajustat i a dalt. Sense ajust, Calc sols mostra una línia
+    (a baix) de la cel·la fusionada i, en exportar el Quadre Resum, estén
+    l'àrea d'impressió fins on arriba el text desbordat: la taula s'encongix
+    i no ocupa l'ample de la pàgina. excel-to-pdfs.py la torna a aplicar als
+    llibres ja repartits (el docent no pot formatar cel·les protegides)."""
+    col = disposicio(dual)["col_continguts"]
+    for r in range(FILA_CAPCALERA + 2, (ultima or ws.max_row) + 1):
+        ra = ws.cell(row=r, column=2).value
+        if isinstance(ra, str) and ra.startswith("RA"):  # cel·la superior de la fusionada
+            ws.cell(row=r, column=col).alignment = DALT
 
 
 def es_dual(ws):
