@@ -28,13 +28,13 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import (CICLES_INF, CICLES_SCO, CICLE_INFO, DIR_FE, PROJECT_DIR, dualitza, get_curs,
-                        get_familia, get_hoja_label, get_moduls_del_cicle, parse_pd_filename)
+                        get_familia, get_hoja_label, get_moduls_del_cicle, llista_ce, parse_pd_filename)
 
 PLANTILLA = os.path.join(PROJECT_DIR, "templates", "FE", "Plantilla_RRAA_CA.docx")
 PENDENTS = "pendents_FE.txt"
 
 FILA_INICI = 10                 # primera fila de dades (excel_estils.FILA_CAPCALERA + 2)
-COL_RA, COL_CE, COL_FE, COL_HORES_DUAL = 2, 5, 8, 9
+COL_RA, COL_CE, COL_HORES, COL_FE, COL_HORES_DUAL = 2, 5, 6, 8, 9
 CE_RE = re.compile(r"^\s*([a-zñ]{1,2})\)")
 RA_RE = re.compile(r"^\s*(RA\s*\d+)\s*\.?\s*(.*)", re.S)
 TIPUS = (("C", "Compartit"), ("E", "Sols empresa"))
@@ -70,7 +70,8 @@ def llig_fe_modul(ws):
     """
     ras, incidencies = [], []
     actual = None
-    marcats = sense_hores = hores_sense_marca = 0
+    marcats = 0
+    sense_hores, hores_sense_marca, e_amb_centre, c_sense_centre = [], [], [], []
     hores = 0.0
     for r in range(FILA_INICI, ws.max_row + 1):
         ra = ws.cell(row=r, column=COL_RA).value
@@ -92,15 +93,21 @@ def llig_fe_modul(ws):
                                f"('{ws.cell(row=r, column=COL_HORES_DUAL).value}')")
             h = 0.0
         hores += h
+        criteri = {"ra": actual[0], "ce": f"{lletra})"}
+        centre = _hores(ws.cell(row=r, column=COL_HORES).value) or 0.0
         if marca in ("C", "E"):
             actual[2][marca].append(lletra)
             marcats += 1
             if h <= 0:
-                sense_hores += 1
+                sense_hores.append(criteri)
+            if marca == "E" and centre > 0:
+                e_amb_centre.append(criteri)
+            elif marca == "C" and centre <= 0:
+                c_sense_centre.append(criteri)
         elif marca:
             incidencies.append(f"{actual[0]} {lletra}): valor '{marca}' a REQUISIT FE (cal C o E)")
         elif h > 0:
-            hores_sense_marca += 1
+            hores_sense_marca.append(criteri)
     if not marcats and hores <= 0 and not incidencies:
         incidencies.append("sense informació FE (cap criteri amb C/E ni HORES DUAL)")
     else:
@@ -109,9 +116,15 @@ def llig_fe_modul(ws):
         if hores <= 0:
             incidencies.append("HORES DUAL sense omplir (total 0)")
     if sense_hores:
-        incidencies.append(f"{sense_hores} criteri(s) amb C/E sense HORES DUAL")
+        incidencies.append(f"{len(sense_hores)} criteri(s) amb C/E sense HORES DUAL: {llista_ce(sense_hores)}")
     if hores_sense_marca:
-        incidencies.append(f"{hores_sense_marca} criteri(s) amb HORES DUAL sense C/E")
+        incidencies.append(f"{len(hores_sense_marca)} criteri(s) amb HORES DUAL sense C/E: {llista_ce(hores_sense_marca)}")
+    if e_amb_centre:
+        incidencies.append(f"{len(e_amb_centre)} criteri(s) marcats E (sols empresa) amb HORES al centre: "
+                           f"{llista_ce(e_amb_centre)}")
+    if c_sense_centre:
+        incidencies.append(f"{len(c_sense_centre)} criteri(s) marcats C (compartit) sense HORES al centre: "
+                           f"{llista_ce(c_sense_centre)}")
     return {"ras": ras, "hores": hores, "incidencies": incidencies}
 
 

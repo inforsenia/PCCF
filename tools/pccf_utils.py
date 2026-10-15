@@ -380,6 +380,88 @@ def hores_fulla(ws):
     return centre, empresa, errors
 
 
+# Percentatge de les hores del mòdul que pot anar a l'empresa (instruccions de FE dual)
+DUAL_MIN_PCT, DUAL_MAX_PCT = 10, 65
+MAX_CE_LLISTATS = 10   # CE que es nomenen en una incidència (un llibre nou els té tots a 0)
+
+_CE_LLETRA_RE = re.compile(r"^\s*([a-zñ]{1,2})\)")
+
+
+def _num(v):
+    """Valor numèric d'una cel·la (coma decimal acceptada); 0 si és buida,
+    None si no és numèrica (eixe error ja el reporta hores_fulla)."""
+    if v is None or v == "":
+        return 0.0
+    try:
+        return float(str(v).replace(",", "."))
+    except ValueError:
+        return None
+
+
+def criteris_fulla(ws):
+    """Files de RA i de CE d'una fulla de mòdul. Torna (ras, ces):
+    ras = [(codi, % RA o None)], ces = [{ra, ce, hores, pes, dual}] (dual
+    0 si la fulla no en té)."""
+    dual = any(c.value == "HORES DUAL" for c in ws[8])
+    ras, ces, ra = [], [], None
+    for r in range(10, ws.max_row + 1):
+        b = ws.cell(row=r, column=2).value
+        if isinstance(b, str) and b.strip().startswith("RA"):
+            ra = b.strip().split(".")[0].replace(" ", "")
+            ras.append((ra, _num(ws.cell(row=r, column=3).value)))
+        ce = ws.cell(row=r, column=5).value
+        if ra is None or not isinstance(ce, str) or ce.strip() in ("", "TOTS"):
+            continue
+        m = _CE_LLETRA_RE.match(ce)
+        ces.append({"ra": ra, "ce": f"{m.group(1) if m else ce.strip()[:3]})",
+                    "hores": _num(ws.cell(row=r, column=6).value),
+                    "pes": _num(ws.cell(row=r, column=7).value),
+                    "dual": _num(ws.cell(row=r, column=9).value) if dual else 0.0})
+    return ras, ces
+
+
+def llista_ce(ces):
+    """'RA01 a), RA03 b), ... i N més' (com a màxim MAX_CE_LLISTATS)."""
+    noms = [f"{c['ra']} {c['ce']}" for c in ces]
+    text = ", ".join(noms[:MAX_CE_LLISTATS])
+    if len(noms) > MAX_CE_LLISTATS:
+        text += f" i {len(noms) - MAX_CE_LLISTATS} més"
+    return text
+
+
+def _issues_criteris(ws, hores_modul):
+    """CE sense hores, % CE per RA, pesos a 0 i % dual del mòdul."""
+    issues = []
+    nom = ws.title
+    ras, ces = criteris_fulla(ws)
+
+    sense_hores = [c for c in ces if (c["hores"] or 0) + (c["dual"] or 0) <= 0]
+    if sense_hores:
+        issues.append(f"  Fulla '{nom}': {len(sense_hores)} criteri(s) sense hores "
+                      f"(ni al centre ni en l'empresa): {llista_ce(sense_hores)}")
+
+    for ra, pes_ra in ras:
+        if pes_ra is not None and pes_ra <= 0:
+            issues.append(f"  Fulla '{nom}': {ra} amb % RA = {_fmt_h(pes_ra)} (ha de ser major que 0)")
+        del_ra = [c for c in ces if c["ra"] == ra]
+        if not del_ra or any(c["pes"] is None for c in del_ra):
+            continue
+        sense_pes = [c for c in del_ra if c["pes"] <= 0]
+        if sense_pes:
+            issues.append(f"  Fulla '{nom}': {len(sense_pes)} criteri(s) amb % CE = 0: {llista_ce(sense_pes)}")
+        suma = sum(c["pes"] for c in del_ra)
+        if abs(suma - 100) > 0.1:
+            issues.append(f"  Fulla '{nom}': {ra}: suma de % CE = {suma:.1f}% (hauria de ser 100%)")
+
+    dual = sum(c["dual"] or 0 for c in ces)
+    if hores_modul and dual > 0:
+        pct = dual * 100 / hores_modul
+        if not DUAL_MIN_PCT <= pct <= DUAL_MAX_PCT:
+            issues.append(f"  Fulla '{nom}': HORES DUAL = {_fmt_h(dual)} h ({pct:.1f}% del mòdul), "
+                          f"ha d'estar entre el {DUAL_MIN_PCT}% i el {DUAL_MAX_PCT}%")
+    return issues
+
+
 def hores_per_fulla(moduls):
     """{nom de fulla: hores del mòdul} a partir dels mòduls del JSON. Claus
     amb les sigles (get_hoja_label) i, per als llibres antics, el nom."""
@@ -448,6 +530,8 @@ def check_excel_coherence(filepath, hores_moduls=None):
 
         for e in errors:
             issues.append(e)
+
+        issues.extend(_issues_criteris(ws, (hores_moduls or {}).get(sheet_name)))
 
         if hores_moduls and sheet_name in hores_moduls:
             centre, empresa, errors_h = hores_fulla(ws)
