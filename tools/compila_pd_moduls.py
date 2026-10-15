@@ -9,8 +9,11 @@ llista de docents, taula FE i Quadre Resum), amb la llista de mòduls de
 cicle (`PD_000_*`) amb el títol del mòdul i el seu departament, i la marca
 d'aigua ESBORRANY si el mòdul té ✎/✗.
 
-Abans d'escriure, esborra els PDF d'este cicle de totes les carpetes de
-departament, perquè un mòdul eliminat o que canvia de departament no hi quede.
+Abans de compilar cada mòdul n'esborra el PDF anterior de totes les carpetes
+de departament (el mòdul pot haver canviat de departament o de sigles). Els
+PDF dels mòduls que no són a `.moduls.json` no es toquen: la compilació pot
+ser només d'uns quants (`prepara_pd_compilacio.py --moduls`). Els dels mòduls
+que ja no existixen els esborra `compila_pd_cicle.py` en muntar el cicle.
 Si un mòdul no compila, s'avisa i es continua amb la resta.
 
 Ús (des del Makefile, amb les mateixes opcions de pandoc que el PDF del cicle):
@@ -22,6 +25,7 @@ import glob
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
@@ -84,11 +88,8 @@ def main():
         moduls = json.load(f)
     portades = sorted(glob.glob(os.path.join(args.stage, "PD_000_*.md")))
 
-    for dept in DEPARTAMENTS:
-        for vell in glob.glob(os.path.join(dir_moduls(args.prog_dir, dept), f"PD_{cicle}_*.pdf")):
-            os.remove(vell)
-
     errors = 0
+    resultat = {"ok": [], "ko": []}
     for modul in moduls:
         desti_dir = dir_moduls(args.prog_dir, modul["departament"])
         os.makedirs(desti_dir, exist_ok=True)
@@ -103,15 +104,29 @@ def main():
         cmd = ["pandoc", *pandoc_opts, "--include-in-header", "pd_header.tex"]
         if modul["draft"]:
             cmd += ["-V", "draft=true"]
-        cmd += ["-o", desti, *fitxers]
+        # Es compila a STAGE i només si va bé es substituïx l'anterior: si
+        # falla, el PDF vell es queda (i el cicle el continua incloent).
+        nou = os.path.join(args.stage, f"_modul_{modul['codi']}.pdf")
+        cmd += ["-o", nou, *fitxers]
         r = subprocess.run(cmd, cwd=args.stage, capture_output=True, text=True)
         rel = os.path.relpath(desti, args.prog_dir)
         if r.returncode != 0:
             errors += 1
+            resultat["ko"].append(modul["codi"])
             print(f" * [PD] ERROR compilant {rel}:\n{r.stderr[-1500:]}")
         else:
+            for dept in DEPARTAMENTS:
+                for vell in glob.glob(os.path.join(dir_moduls(args.prog_dir, dept), f"PD_{cicle}_{modul['codi']}_*.pdf")):
+                    os.remove(vell)
+            shutil.move(nou, desti)
+            resultat["ok"].append(modul["codi"])
             print(f" * [PD] {rel}" + (" (ESBORRANY)" if modul["draft"] else ""))
     print(f" * [PD] {DIR_MODULS}: {len(moduls) - errors} de {len(moduls)} mòduls de {cicle} compilats")
+    # El poller (compilació incremental) vol saber quins mòduls han anat bé
+    if os.environ.get("PD_BUILD_RESULT"):
+        with open(os.environ["PD_BUILD_RESULT"], "w", encoding="utf-8") as f:
+            json.dump(resultat, f)
+    sys.exit(1 if errors else 0)
 
 
 if __name__ == "__main__":

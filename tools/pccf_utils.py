@@ -216,8 +216,9 @@ def nom_departament(dept):
 # Estructura de sortida de programacions/ (dins de PCCF_ROOT): tot junt al
 # primer nivell, al costat de les carpetes de cicle (que només tenen les PD,
 # el libro_{CICLE}.xlsx i la portada).
-DIR_REPORT = "0_report"                    # PerCicle/{FAM}_{CICLE}.txt + {DEPT}/report_{DEPT}.txt
+DIR_REPORT = "0_report"                    # PerCicle/{FAM}_{CICLE}.txt + PerDept/{DEPT}/report_{DEPT}.txt
 DIR_REPORT_CICLE = "PerCicle"
+DIR_REPORT_DEPT = "PerDept"
 DIR_ESBORRANY_CICLE = "1_esborranysPerCicle"   # Programaciones_{CENTRE}_{CICLE}.pdf
 DIR_ESBORRANY_DEPT = "2_esborranysPerDept"     # Programaciones_{CENTRE}_{DEPT}.pdf
 DIR_MODULS = "3_esborranyModuls"               # {DEPT}/PD_{CICLE}_{CODI}_{SIGLES}.pdf
@@ -229,7 +230,7 @@ def dir_report_cicle(prog_dir):
 
 
 def dir_report_dept(prog_dir, dept):
-    return os.path.join(prog_dir, DIR_REPORT, dept)
+    return os.path.join(prog_dir, DIR_REPORT, DIR_REPORT_DEPT, dept)
 
 
 def dir_moduls(prog_dir, dept):

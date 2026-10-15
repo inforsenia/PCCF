@@ -10,7 +10,7 @@ from pccf_utils import (parse_pd_filename, check_excel_coherence, get_familia,
                         get_optatives_del_cicle, find_optativa_pd, OPTATIVES_DIRNAME, OPTATIVES_LIBRO,
                         get_hoja_label, get_moduls_del_cicle, hores_per_fulla,
                         CICLES_INF, CICLES_SCO, DEPARTAMENTS, get_departament,
-                        dir_report_cicle, dir_report_dept)
+                        DIR_REPORT, dir_report_cicle, dir_report_dept)
 
 PLACEHOLDER_RE = re.compile(r'\[#+#\]|\[\.\.\.\]')
 
@@ -284,7 +284,7 @@ def estat_moduls_cicle(cicle, prog_dir, status=None):
         return []
     if status is None:
         status = compute_pd_status(cicle, familia, pd_dir)
-    marques = {f: len(p) for f, p in status["placeholders"]}
+    llocs = dict(status["placeholders"])  # {fitxer: [(línia, text)]}
     fitxers = {p["codi"]: p for p in status["borrador"] + status["ok"]}
     fe = {m["codi"]: m["incidencies"] for m in
           genera_fe.estat_cicle(cicle, os.path.dirname(os.path.abspath(prog_dir)))}
@@ -297,7 +297,8 @@ def estat_moduls_cicle(cicle, prog_dir, status=None):
             "cicle": cicle, "codi": codi, "nom": modul["nombre"],
             "departament": get_departament(familia, codi),
             "estat": p["estat"] if p else "FALTA",
-            "marques": marques.get(p["filename"], 0) if p else 0,
+            "marques": len(llocs.get(p["filename"], [])) if p else 0,
+            "llocs": llocs.get(p["filename"], []) if p else [],
             "excel": _issues_fulla(status["excel_issues"], modul["nombre"]),
             "fe": fe.get(codi, []),
         })
@@ -306,7 +307,8 @@ def estat_moduls_cicle(cicle, prog_dir, status=None):
             "cicle": cicle, "codi": o["codi"], "nom": o["nom"],
             "departament": get_departament(familia, o["codi"]),
             "estat": o["estat"] or "FALTA",
-            "marques": marques.get(f"{OPTATIVES_DIRNAME}/{o['fitxer']}", 0) if o["fitxer"] else 0,
+            "marques": len(llocs.get(f"{OPTATIVES_DIRNAME}/{o['fitxer']}", [])) if o["fitxer"] else 0,
+            "llocs": llocs.get(f"{OPTATIVES_DIRNAME}/{o['fitxer']}", []) if o["fitxer"] else [],
             "excel": _issues_fulla(status.get("opt_excel_issues", []), o["nom"]),
             "fe": [],
         })
@@ -346,7 +348,10 @@ def format_dept_report(dept, moduls):
         marca = "✓" if modul_verificat(m) else "✗"
         lines.append(f"  {marca} {m['codi']} {m['nom']}: {m['estat']}")
         if m["marques"]:
-            lines.append(f"      · {m['marques']} marques pendents ([###]/[...])")
+            lines.append(f"      · {m['marques']} marques pendents ([###]/[...]):")
+            lines.extend(f"          L{ln}: {text}" for ln, text in m.get("llocs", [])[:10])
+            if m["marques"] > 10:
+                lines.append(f"          ... i {m['marques'] - 10} marques més")
         lines.extend(f"      · Excel: {i}" for i in m["excel"])
         lines.extend(f"      · FE: {i}" for i in m["fe"])
     lines.append("")
@@ -355,10 +360,17 @@ def format_dept_report(dept, moduls):
 
 
 def escriu_reports_dept(prog_dir, estats_cicle=None):
-    """Escriu programacions/0_report/{DEPT}/report_{DEPT}.txt de tots els
-    departaments. Torna {dept: mòduls} (per a l'empremta del poller)."""
+    """Escriu programacions/0_report/PerDept/{DEPT}/report_{DEPT}.txt de tots
+    els departaments. Torna {dept: mòduls} (per a l'empremta del poller)."""
     depts = estat_departaments(prog_dir, estats_cicle)
     for dept, moduls in depts.items():
+        # Ubicació antiga (0_report/{DEPT}/, fins al 2026-10-15): s'esborra
+        antic = os.path.join(prog_dir, DIR_REPORT, dept)
+        try:
+            os.remove(os.path.join(antic, f"report_{dept}.txt"))
+            os.rmdir(antic)
+        except OSError:
+            pass
         report_dir = dir_report_dept(prog_dir, dept)
         os.makedirs(report_dir, exist_ok=True)
         with open(os.path.join(report_dir, f"report_{dept}.txt"), "w", encoding="utf-8") as f:

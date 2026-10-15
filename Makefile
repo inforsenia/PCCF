@@ -16,7 +16,7 @@ RESET := $(shell printf '\033[0m')
 CENTRO_EDUCATIVO ?= SENIA
 
 # Arrel on viu l'estructura completa del PCCF+PD dins de OneDrive (o localment).
-# Conté: pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/ (0_report/{PerCicle,DEPT}/,
+# Conté: pccf/ (src* + 0_report/ + 1_esborrany/) i programacions/ (0_report/{PerCicle,PerDept/{DEPT}}/,
 # 1_esborranysPerCicle/, 2_esborranysPerDept/, 3_esborranyModuls/{DEPT}/, 4_plaFormatiuFE/
 # i una carpeta {CICLO}/ per cicle amb les PD i el libro_{CICLO}.xlsx).
 # Per defecte "." = project root (comportament local). Al contenidor, l'entrypoint
@@ -193,19 +193,22 @@ compila-pccf-%:
 # ============================================================
 #  PD (Programacions) - compile manually (disparat per cap de departament)
 # ============================================================
+# Programacions d'un cicle. Amb MODULS="0485 0486" només es tornen a compilar
+# eixos mòduls (compilació incremental del poller); sense MODULS, tots
+# (COMPILAR_ARA o a mà). En els dos casos el PDF del cicle i els dels
+# departaments es munten després amb els PDF de mòdul (compila_pd_cicle.py i
+# compila_pd_dept.py), sense tornar a renderitzar el markdown.
+MODULS ?=
 compila-pd-pccf-%:
 	$(eval CICLO_RAW=$*)
 	$(eval CICLO=$(shell echo $* | tr '[:upper:]' '[:lower:]'))
 	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
-	$(eval PD_DIR:=$(PCCF_ROOT)/programacions/$(CICLO_UPPER))
-	$(eval PROG_DIR:=$(PCCF_ROOT)/programacions)
-	$(eval OUTPUT_DIR:=$(PROG_DIR)/1_esborranysPerCicle)
+	$(eval PD_DIR:=$(abspath $(PCCF_ROOT))/programacions/$(CICLO_UPPER))
+	$(eval PROG_DIR:=$(abspath $(PCCF_ROOT))/programacions)
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
-	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) ] ${RESET}"
-	mkdir -p "$(OUTPUT_DIR)"
-	@echo " ${LIGHTBLUE} Generant Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf ${RESET}"
+	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) $(if $(MODULS),(mòduls: $(MODULS)),(tots els mòduls)) ] ${RESET}"
 	@# Es compila des d'un directori de muntatge local (temp/), no directament
 	@# des de PD_DIR: les Portada.md referencien fons amb path relatiu
 	@# "../rsrc/backgrounds/..." assumint que la plantilla és germana de rsrc/
@@ -214,25 +217,35 @@ compila-pd-pccf-%:
 	@STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; \
 		rm -rf "$$STAGE" && mkdir -p "$$STAGE" && \
 		cp "$(PD_DIR)"/PD_*.md "$$STAGE/" && \
-		python3 tools/copy_optatives_pd.py $(CICLO_UPPER) $(FAMILIA) "$(PCCF_ROOT)/programacions/OPTATIVES" "$$STAGE" && \
+		python3 tools/copy_optatives_pd.py $(CICLO_UPPER) $(FAMILIA) "$(PROG_DIR)/OPTATIVES" "$$STAGE" && \
 		sed -i "s#\.\./rsrc/backgrounds/#$(PROJECT_ROOT)/rsrc/backgrounds/#g" "$$STAGE"/*.md && \
-		python3 tools/prepara_pd_compilacio.py $(CICLO_UPPER) $(FAMILIA) --pd-dir "$(PD_DIR)" --stage "$$STAGE" && \
-		if [ -f "$$STAGE/.draft" ]; then DRAFT_OPT="-V draft=true"; else DRAFT_OPT=""; fi && \
-		cd "$$STAGE" && \
-		pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) $$DRAFT_OPT --include-in-header "$$STAGE/pd_header.tex" \
-			-o "$(OUTPUT_DIR)/Programaciones_$(CENTRO_EDUCATIVO)_$(CICLO_UPPER).pdf" ./PD_*.md
-	@echo " ${LIGHTBLUE} Generant un PDF per mòdul a $(PROG_DIR)/3_esborranyModuls/ (ignorant errors)${RESET}"
-	-STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; \
+		python3 tools/prepara_pd_compilacio.py $(CICLO_UPPER) $(FAMILIA) --pd-dir "$(PD_DIR)" --stage "$$STAGE" --moduls "$(MODULS)"
+	@echo " ${LIGHTBLUE} Generant un PDF per mòdul a $(PROG_DIR)/3_esborranyModuls/ ${RESET}"
+	@# Si algun mòdul no compila, es munten igualment el cicle i els
+	@# departaments (amb el PDF anterior d'eixe mòdul) i al final es torna error.
+	@STAGE="$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"; ERR=0; \
 		python3 tools/compila_pd_moduls.py $(CICLO_UPPER) --stage "$$STAGE" --prog-dir "$(PROG_DIR)" -- \
-			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) && \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) || ERR=1; \
+		python3 tools/compila_pd_cicle.py $(CICLO_UPPER) --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) -- \
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) || ERR=1; \
 		python3 tools/compila_pd_dept.py --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) --stage "$$STAGE" -- \
-			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
-	@echo " ${LIGHTBLUE} Generant reports de PD a $(PROG_DIR)/0_report/${RESET}"
-	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
-	python3 tools/report_pccf.py --type dept --prog-dir "$(PROG_DIR)"
-	@echo " ${LIGHTBLUE} Netejant fitxers temporals${RESET}"
-	rm -rf "$(PROJECT_ROOT)/temp/compila_pd_$(CICLO_UPPER)"
+			--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) || ERR=1; \
+		python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd; \
+		python3 tools/report_pccf.py --type dept --prog-dir "$(PROG_DIR)"; \
+		rm -rf "$$STAGE"; \
+		if [ $$ERR -ne 0 ]; then echo " ${LIGHTYELLOW} [ Programaciones $(CICLO_UPPER): hi ha hagut errors ] ${RESET}"; exit 1; fi
 	@echo " ${LIGHTGREEN} [ Compilacio Programaciones $(CICLO_UPPER) completada ] ${RESET}"
+
+# Torna a muntar el PDF del cicle i els dels seus departaments amb els PDF de
+# mòdul que ja hi ha (sense compilar cap mòdul): quan s'esborra la PD d'un mòdul.
+munta-pd-pccf-%:
+	$(eval CICLO_UPPER=$(shell echo $* | tr '[:lower:]' '[:upper:]'))
+	$(eval PROG_DIR:=$(abspath $(PCCF_ROOT))/programacions)
+	python3 tools/compila_pd_cicle.py $(CICLO_UPPER) --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) -- \
+		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
+	python3 tools/compila_pd_dept.py --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) \
+		$(foreach d,$(shell python3 -c "import sys; sys.path.insert(0,'tools'); from pccf_utils import departaments_del_cicle; print(' '.join(sorted(departaments_del_cicle('$(CICLO_UPPER)'))))"),--dept $(d)) -- \
+		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
 
 # ============================================================
 #  PCCF - Backward compatible: generate + compile (només PCCF)
@@ -254,7 +267,7 @@ report-pccf-%:
 	python3 tools/report_pccf.py $(CICLO_UPPER) --pd-dir "$(PD_DIR)" --type pd
 	python3 tools/report_pccf.py --type dept --prog-dir "$(PCCF_ROOT)/programacions"
 
-# Report per departament (INF, SCO, ANG, FOL) de tots els cicles a programacions/0_report/{DEPT}/.
+# Report per departament (INF, SCO, ANG, FOL) de tots els cicles a programacions/0_report/PerDept/{DEPT}/.
 report-pd-depts:
 	python3 tools/report_pccf.py --type dept --prog-dir "$(PCCF_ROOT)/programacions"
 
@@ -398,7 +411,8 @@ help:
 	@echo "  Families INF i SCO:"
 	@echo "    generar-plantilles-pccf-{ciclo}  Genera PCCF + PDs + Excel a pccf/ i programacions/"
 	@echo "    compila-pccf-{ciclo}             Compila PCCF PDF (auto si canvia pccf/src*)"
-	@echo "    compila-pd-pccf-{ciclo}          Compila Programaciones PDF (manual, cap dept)"
+	@echo "    compila-pd-pccf-{ciclo}          Compila Programaciones PDF (MODULS=\"0485 ...\" per a només eixos mòduls)"
+	@echo "    munta-pd-pccf-{ciclo}            Torna a muntar el PDF del cicle i dels departaments"
 	@echo "    report-pccf-{ciclo}              Report de [###] pendents d'emplenar"
 	@echo "    proyecto-{ciclo}                 Equival a generar-plantilles + compila-pccf"
 	@echo "    report-tots-pccf                 Report de [###] per a tots els cicles"
@@ -431,7 +445,8 @@ help:
 	@echo ""
 	@echo "Exemples:"
 	@echo "  make proyecto-dam                           # Genera + compila PCCF"
-	@echo "  make compila-pd-pccf-apd                    # Compila Programaciones (manual)"
+	@echo "  make compila-pd-pccf-apd                    # Compila totes les Programaciones de APD"
+	@echo "  make compila-pd-pccf-dam MODULS=\"0485\"     # Només el mòdul 0485 i munta el cicle"
 	@echo "  make generar-plantilles-pccf-dam            # Només plantilles (per a docents)"
 	@echo "  make compila-pccf-dam                       # Compila PCCF des de plantilles"
 	@echo "  make report-pccf-dam                        # Què falta per emplenar?"

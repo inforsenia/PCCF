@@ -26,12 +26,15 @@ Per a cada PD de mòdul copiada a STAGE:
      s'afig a l'índex amb `addtotoc` del mateix \\includepdf: si no, quedava
      sol en una pàgina en blanc abans del Quadre Resum (apaïsat).
 
-A més, escriu STAGE/.draft si el report no està verificat
-(`is_pd_verified`), perquè el Makefile active la marca d'aigua ESBORRANY, i
-STAGE/.moduls.json (fitxer, codi, departament, sigles, draft de cada mòdul)
-per a `compila_pd_moduls.py`, que en fa un PDF per mòdul. Cada PDF de mòdul
-porta la marca d'aigua només si eixe mòdul té ✎/✗ (no depén de la resta del
-cicle).
+A més, escriu STAGE/.moduls.json (fitxer, codi, departament, sigles, draft
+de cada mòdul) per a `compila_pd_moduls.py`, que en fa un PDF per mòdul. Cada
+PDF de mòdul porta la marca d'aigua només si eixe mòdul té ✎/✗ (no depén de
+la resta del cicle). El PDF del cicle el munta després `compila_pd_cicle.py`
+amb eixos PDF.
+
+Amb `--moduls CODI,CODI...` només es preparen eixos mòduls (els altres PD_*
+s'esborren de STAGE): és la compilació incremental del poller, que només
+torna a fer els mòduls que han canviat.
 """
 
 import argparse
@@ -46,7 +49,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pccf_utils import (parse_pd_filename, get_optatives_del_cicle, dualitza, get_departament,
                         get_hoja_label)
 from genera_fe import llig_fe_modul, resol_fulla, taula_markdown
-from report_pccf import compute_pd_status, is_pd_verified, find_placeholders
+from report_pccf import compute_pd_status, find_placeholders
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -176,7 +179,10 @@ def main():
     parser.add_argument("familia")
     parser.add_argument("--pd-dir", required=True)
     parser.add_argument("--stage", required=True)
+    parser.add_argument("--moduls", default="",
+                        help="Codis dels mòduls a preparar, separats per comes o espais (buit = tots)")
     args = parser.parse_args()
+    nomes = set(re.split(r"[,\s]+", args.moduls.strip())) - {""}
     cicle = args.ciclo.upper()
     familia = args.familia.upper()
 
@@ -186,13 +192,6 @@ def main():
     duals = {str(k) for k, v in json_moduls.items() if dualitza(v)}
 
     status = compute_pd_status(cicle, familia, args.pd_dir)
-    draft_path = os.path.join(args.stage, ".draft")
-    if is_pd_verified(status):
-        if os.path.exists(draft_path):
-            os.remove(draft_path)
-    else:
-        open(draft_path, "w").close()
-        print(" * [PD] Report no verificat: s'aplica la marca d'aigua ESBORRANY")
 
     with open(os.path.join(args.stage, "pd_header.tex"), "w", encoding="utf-8") as f:
         f.write(HEADER_TEX)
@@ -234,6 +233,9 @@ def main():
             continue
         path = os.path.join(args.stage, fname)
         codi = parsed["codi"]
+        if nomes and codi not in nomes:
+            os.remove(path)
+            continue
         nombre = moduls.get(codi)
         excel, sheetnames, excel_issues = llibres.get(codi, (None, [], []))
         fulla = resol_fulla(sheetnames, nombre) if nombre else None
