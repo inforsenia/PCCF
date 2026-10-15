@@ -30,6 +30,7 @@ Estructura esperada dins de sync-root:
 """
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -37,11 +38,13 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import (CICLES_INF, CICLES_SCO, get_familia, get_optatives_del_cicle, OPTATIVES_DIRNAME,
+from pccf_utils import (CICLES_INF, CICLES_SCO, get_familia, get_optatives, get_optatives_del_cicle, OPTATIVES_DIRNAME,
+                        OPTATIVES_LIBRO, check_excel_coherence, find_optativa_pd, hores_per_fulla,
                         DIR_ESBORRANY_CICLE, DIR_ESBORRANY_DEPT, departaments_del_cicle,
                         dir_report_cicle, dir_report_dept)
 from report_pccf import (compute_pd_status, compute_pccf_status, format_pd_report, format_pccf_report,
-                         find_placeholders, escriu_reports_dept, format_dept_report, modul_verificat)
+                         find_placeholders, escriu_reports_dept, format_dept_report, modul_verificat,
+                         estat_moduls_cicle, _issues_fulla)
 from memories_utils import get_teacher_emails
 from mailer import smtp_configured, send_report_email, get_department_email
 import genera_fe
@@ -136,23 +139,52 @@ def save_pd_teacher_state(state):
         json.dump(state, f)
 
 
-def notify_pd_teachers(cicle, familia, pd_dir):
+def incidencies_excel_cicle(cicle, prog_root, status):
+    """{fitxer de PD: [incidències de la seua fulla de l'Excel i de FE]} dels
+    mòduls del cicle (les mateixes del report, `estat_moduls_cicle`)."""
+    per_codi = {m["codi"]: [i.strip() for i in m["excel"]] + [f"FE: {i}" for i in m["fe"]]
+                for m in estat_moduls_cicle(cicle, prog_root, status)}
+    return {p["filename"]: per_codi.get(p["codi"], []) for p in status["borrador"] + status["ok"]}
+
+
+def incidencies_excel_optatives(opt_dir):
+    """{fitxer de PD d'optativa: [incidències de la seua fulla de libro_optatives.xlsx]}."""
+    opts = get_optatives()
+    issues = check_excel_coherence(os.path.join(opt_dir, OPTATIVES_LIBRO), hores_per_fulla(opts.values()))
+    res = {}
+    for codi, modul in opts.items():
+        fname = find_optativa_pd(opt_dir, codi)
+        if fname:
+            res[fname] = _issues_fulla(issues, modul["nombre"])
+    return res
+
+
+def _empremta(incidencies):
+    return hashlib.sha1("\n".join(sorted(incidencies)).encode("utf-8")).hexdigest() if incidencies else ""
+
+
+def notify_pd_teachers(cicle, familia, pd_dir, excel_per_fitxer=None):
     """Avisa cada docent per correu de les deficiències de la seua pròpia
     PD (no del report sencer del cicle), si el seu fitxer .md conté una
     línia "correu-e: adreça[, adreça...]" a la secció ### DOCENT (vore
-    memories_utils.get_teacher_emails). En esta v1 nomes compten com a
-    deficiència els placeholders [###]/[...] pendents i l'estat _BORRADOR
-    -- la coherència de l'Excel es queda fora (nomes al report agregat).
+    memories_utils.get_teacher_emails). Compten com a deficiència els
+    placeholders [###]/[...] pendents, l'estat _BORRADOR i les incidències
+    de la fulla del mòdul a l'Excel i de FE (`excel_per_fitxer`, {fitxer:
+    [incidències]}, les mateixes del report).
 
-    No invasiu: sense SMTP configurat no fa absolutament res. Cada versió
-    (mtime) d'un fitxer es processa com a màxim una vegada -- si
-    l'enviament falla, l'estat no es guarda i es reintenta a la propera
-    passada.
+    No invasiu: sense SMTP configurat no fa absolutament res. Es torna a
+    avisar quan canvia el .md (mtime) o les incidències de l'Excel
+    (empremta), i només si n'hi ha alguna -- si l'enviament falla, l'estat
+    no es guarda i es reintenta a la propera passada. Estat per fitxer:
+    {"mtime": ..., "excel": empremta}; els estats antics (només el mtime,
+    sense empremta) es tracten com a Excel sense incidències, per a no tornar
+    a avisar de les marques de la PD en desplegar.
     """
     if not smtp_configured():
         return
 
     state = load_pd_teacher_state()
+    excel_per_fitxer = excel_per_fitxer or {}
 
     for fname in sorted(os.listdir(pd_dir)):
         if not fname.endswith(".md") or "_000_" in fname:
@@ -160,13 +192,19 @@ def notify_pd_teachers(cicle, familia, pd_dir):
         filepath = os.path.join(pd_dir, fname)
         state_key = f"{familia}/{cicle}/{fname}"
         mtime = os.path.getmtime(filepath)
-        if mtime <= state.get(state_key, 0.0):
+        excel = excel_per_fitxer.get(fname, [])
+        empremta = _empremta(excel)
+        anterior = state.get(state_key, {})
+        if not isinstance(anterior, dict):
+            anterior = {"mtime": anterior, "excel": ""}
+        if mtime <= anterior.get("mtime", 0.0) and empremta == anterior.get("excel", ""):
             continue
+        nou_estat = {"mtime": mtime, "excel": empremta}
 
         # Diversos docents (separats per comes): un sol correu a tots.
         to_addr = ", ".join(get_teacher_emails(filepath))
         if not to_addr:
-            state[state_key] = mtime
+            state[state_key] = nou_estat
             save_pd_teacher_state(state)
             continue
 
@@ -179,21 +217,23 @@ def notify_pd_teachers(cicle, familia, pd_dir):
         if fname.endswith("_BORRADOR.md"):
             deficiencies.append("el fitxer segueix en estat BORRADOR (falta renombrar a _OK.md)")
 
-        if not deficiencies:
-            state[state_key] = mtime
+        if not deficiencies and not excel:
+            state[state_key] = nou_estat
             save_pd_teacher_state(state)
             continue
 
+        llibre = OPTATIVES_LIBRO if cicle == OPTATIVES_DIRNAME else f"libro_{cicle}.xlsx"
         subject = f"[PCCF {cicle}] Incidències pendents a la teua PD - {fname}"
-        body = (
-            f"S'han detectat les següents incidències a la teua Programació "
-            f"Didàctica ({fname}, cicle {cicle}):\n\n"
-            + "\n".join(f"- {d}" for d in deficiencies)
-            + "\n\nRevisa i completa-la directament al fitxer.\n"
-        )
+        body = f"S'han detectat les següents incidències a la teua Programació Didàctica ({fname}, cicle {cicle}):\n"
+        if deficiencies:
+            body += "\nAl fitxer de la PD:\n" + "\n".join(f"- {d}" for d in deficiencies) + "\n"
+        if excel:
+            body += (f"\nA la fulla del mòdul de l'Excel ({llibre}):\n"
+                     + "\n".join(f"- {d}" for d in excel) + "\n")
+        body += "\nRevisa-ho i corregix-ho directament als fitxers.\n"
         if send_report_email(to_addr, subject, body):
             print(f"[pccf-poller] correu enviat als docents ({to_addr}) per {fname}", flush=True)
-            state[state_key] = mtime
+            state[state_key] = nou_estat
             save_pd_teacher_state(state)
 
 
@@ -426,7 +466,7 @@ def poll_once(sync_root, centre, cicle=None):
     # vegada per passada (l'estat per fitxer evita repetir-los).
     opt_dir = os.path.join(prog_root, OPTATIVES_DIRNAME)
     if os.path.isdir(opt_dir):
-        notify_pd_teachers(OPTATIVES_DIRNAME, "OPT", opt_dir)
+        notify_pd_teachers(OPTATIVES_DIRNAME, "OPT", opt_dir, incidencies_excel_optatives(opt_dir))
 
     for cicle in cicles_a_processar:
         familia = get_familia(cicle)
@@ -492,7 +532,7 @@ def poll_once(sync_root, centre, cicle=None):
             os.makedirs(report_dir, exist_ok=True)
             with open(os.path.join(report_dir, f"{key}.txt"), "w", encoding="utf-8") as f:
                 f.write(format_pd_report(status))
-            notify_pd_teachers(cicle, familia, pdir)
+            notify_pd_teachers(cicle, familia, pdir, incidencies_excel_cicle(cicle, prog_root, status))
             cicles_fe.append(cicle)
 
         if pccf_canviat:
