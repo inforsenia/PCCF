@@ -207,7 +207,7 @@
                     }
                 }
             },
-            "horas": "299",
+            "horas": "266",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1207_1": "Realitzar operacions auxiliars de muntatge d'equips microinformàtics.",
@@ -291,7 +291,7 @@
                     }
                 }
             },
-            "horas": "200",
+            "horas": "266",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {
                 "UC1209_1": "Realitzar operacions auxiliars amb tecnologies de la informació i la comunicació."
@@ -411,7 +411,7 @@
                     }
                 }
             },
-            "horas": "299",
+            "horas": "332",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0974_1": "Realitzar operacions bàsiques de tractament de dades i textos, i confecció de documentació.",
@@ -517,7 +517,7 @@
                     }
                 }
             },
-            "horas": "332",
+            "horas": "266",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [

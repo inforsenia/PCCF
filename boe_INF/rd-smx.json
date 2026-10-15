@@ -215,7 +215,7 @@
                     }
                 }
             },
-            "horas": "68",
+            "horas": "67",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {}
         },
@@ -689,7 +689,7 @@
         },
         "0222": {
             "nombre": "Sistemes operatius monolloc",
-            "horas": "133",
+            "horas": "134",
             "curs": 1,
             "UnidadesCompetenciaAcreditadas": {
                 "UC0219_2": "Instal·lar i configurar el programari base en sistemes microinformàtics.",
