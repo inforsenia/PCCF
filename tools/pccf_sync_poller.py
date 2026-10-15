@@ -211,7 +211,8 @@ def notify_pd_teachers(cicle, familia, pd_dir, excel_per_fitxer=None):
         deficiencies = []
         places = find_placeholders(filepath)
         if places:
-            deficiencies.append(f"{len(places)} marques pendents ([###]/[...] sense substituir)")
+            deficiencies.append(f"{len(places)} marques pendents ([###]/[...] sense substituir):\n"
+                                + "\n".join(f"    L{ln}: {text}" for ln, text in places))
         # Pel sufix (no parse_pd_filename): val també per a les PD
         # d'optatives, que no porten el cicle al nom.
         if fname.endswith("_BORRADOR.md"):
