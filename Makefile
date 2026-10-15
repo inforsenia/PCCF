@@ -205,8 +205,11 @@ compila-pd-pccf-%:
 	$(eval CICLO_UPPER=$(shell echo $(CICLO) | tr '[:lower:]' '[:upper:]'))
 	$(eval FAMILIA=$(call check_ciclo,$(CICLO)))
 	@if [ -z "$(FAMILIA)" ]; then echo " ${LIGHTYELLOW} Error: ciclo no reconocido '$(CICLO_RAW)' ${RESET}"; exit 1; fi
-	$(eval PD_DIR:=$(abspath $(PCCF_ROOT))/programacions/$(CICLO_UPPER))
-	$(eval PROG_DIR:=$(abspath $(PCCF_ROOT))/programacions)
+	@# Camí absolut amb el shell, no amb $$(abspath): el de producció té espais
+	@# («General/PCCF i Programacions») i abspath el partiria en paraules.
+	$(eval ROOT_ABS:=$(shell cd "$(PCCF_ROOT)" && pwd))
+	$(eval PD_DIR:=$(ROOT_ABS)/programacions/$(CICLO_UPPER))
+	$(eval PROG_DIR:=$(ROOT_ABS)/programacions)
 	@if [ ! -d "$(PD_DIR)" ]; then echo " ${LIGHTYELLOW} Error: no existeix $(PD_DIR)/. Executa 'make generar-plantilles-pccf-$(CICLO_RAW)' primer. ${RESET}"; exit 1; fi
 	@echo " ${LIGHTBLUE} [ Compilant Programaciones: $(CICLO_UPPER) $(if $(MODULS),(mòduls: $(MODULS)),(tots els mòduls)) ] ${RESET}"
 	@# Es compila des d'un directori de muntatge local (temp/), no directament
@@ -240,7 +243,7 @@ compila-pd-pccf-%:
 # mòdul que ja hi ha (sense compilar cap mòdul): quan s'esborra la PD d'un mòdul.
 munta-pd-pccf-%:
 	$(eval CICLO_UPPER=$(shell echo $* | tr '[:lower:]' '[:upper:]'))
-	$(eval PROG_DIR:=$(abspath $(PCCF_ROOT))/programacions)
+	$(eval PROG_DIR:=$(shell cd "$(PCCF_ROOT)" && pwd)/programacions)
 	python3 tools/compila_pd_cicle.py $(CICLO_UPPER) --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) -- \
 		--template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS)
 	python3 tools/compila_pd_dept.py --prog-dir "$(PROG_DIR)" --centre $(CENTRO_EDUCATIVO) \
