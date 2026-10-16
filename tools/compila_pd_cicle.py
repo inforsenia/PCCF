@@ -48,7 +48,7 @@ def pdfs_cicle(prog_dir, cicle):
     pdfs = {}
     for dept in DEPARTAMENTS:
         for path in glob.glob(os.path.join(dir_moduls(prog_dir, dept), f"PD_{cicle}_*.pdf")):
-            m = re.match(rf"^PD_{cicle}_(\d+|[A-Z][A-Z0-9]*)_", os.path.basename(path))
+            m = re.match(rf"^PD_{cicle}_(\d+p?|[A-Z][A-Z0-9]*)_", os.path.basename(path))
             if m:
                 pdfs[m.group(1)] = path
     return pdfs

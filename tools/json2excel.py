@@ -13,7 +13,7 @@ from openpyxl.styles import Alignment
 from openpyxl.styles import NamedStyle
 
 from excel_estils import aplica_estils, escriu_capcalera, escriu_instruccions
-from pccf_utils import dualitza, get_hoja_label
+from pccf_utils import dualitza, es_ambit, get_hoja_label
 
 debug = False
 
@@ -79,12 +79,13 @@ for codigo in data_box.ModulosProfesionales:
 
     dual = dualitza(modulo)  # sense dual, no hi ha REQUISIT FE ni HORES DUAL
     escriu_capcalera(ws, codigo, modulo, dual)
+    ambit = es_ambit(modulo)  # grau bàsic: competències específiques (CE1…) i criteris 1.1…
 
 
 
     #print(" - Resultados de Aprendizaje ")
     ws.merge_cells(start_row=p_ra_titulo_row, start_column=p_ra_titulo_col, end_row=p_ra_titulo_row+1, end_column=p_ra_titulo_col)
-    ws.cell(column=p_ra_titulo_col,row=p_ra_titulo_row).value="RESULTAT D'APRENENTATGE"
+    ws.cell(column=p_ra_titulo_col,row=p_ra_titulo_row).value="COMPETÈNCIA ESPECÍFICA" if ambit else "RESULTAT D'APRENENTATGE"
     ws.cell(column=p_ra_titulo_col,row=p_ra_titulo_row).alignment = Alignment(horizontal='center', vertical='center')
 
     ws.column_dimensions[p_ra_col_l].width = 40
@@ -93,7 +94,7 @@ for codigo in data_box.ModulosProfesionales:
     p_percent_ra_col=p_ra_titulo_col+1
     p_percent_ra_row=p_ra_titulo_row
     ws.merge_cells(start_row=p_percent_ra_row, start_column=p_percent_ra_col, end_row=p_percent_ra_row+1, end_column=p_percent_ra_col)
-    ws.cell(column=p_percent_ra_col,row=p_percent_ra_row).value="% RA"
+    ws.cell(column=p_percent_ra_col,row=p_percent_ra_row).value="% CE" if ambit else "% RA"
     ws.cell(column=p_percent_ra_col,row=p_percent_ra_row).alignment = Alignment(horizontal='center', vertical='center')
 
     #print(" - COMP ")
@@ -126,7 +127,7 @@ for codigo in data_box.ModulosProfesionales:
     p_ce_per_col=p_h_col+1
     p_ce_per_row=p_h_row
     ws.merge_cells(start_row=p_ce_per_row, start_column=p_ce_per_col, end_row=p_ce_per_row+1, end_column=p_ce_per_col)
-    ws.cell(column=p_ce_per_col,row=p_ce_per_row).value="% CE"
+    ws.cell(column=p_ce_per_col,row=p_ce_per_row).value="% CRIT." if ambit else "% CE"
     ws.cell(column=p_ce_per_col,row=p_ce_per_row).alignment = Alignment(horizontal='center', vertical='center')
 
     if dual:

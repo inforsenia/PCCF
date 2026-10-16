@@ -29,7 +29,7 @@ from compila_pd_moduls import FONS_DEPT
 from pccf_utils import (CICLES_INF, CICLES_SCO, DEPARTAMENTS, DIR_ESBORRANY_DEPT, PROJECT_DIR,
                         dir_moduls, get_moduls_del_cicle, get_optatives, nom_departament)
 
-PDF_RE = re.compile(r"^PD_([A-Z]+)_(\d+|[A-Z][A-Z0-9]*)_.*\.pdf$")
+PDF_RE = re.compile(r"^PD_([A-Z]+)_(\d+p?|[A-Z][A-Z0-9]*)_.*\.pdf$")
 LATEX_ESPECIALS = {"&": r"\&", "%": r"\%", "#": r"\#", "_": r"\_", "$": r"\$", "{": r"\{", "}": r"\}"}
 
 

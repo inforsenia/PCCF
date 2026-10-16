@@ -7,48 +7,44 @@ Proyectos Curriculares de la Familia de Informática, así como la posibilidad d
 las diferentes hojas de cálculo de las Programaciones Didácticas de los Módulos
 a partir de los contenidos del BOE que se leen desde diferentes JSON.
 
-Se trata de un proyecto en desarrollo, que contiene toda la información de los 
+Se trata de un proyecto en desarrollo, que contiene toda la información de los
 diferentes ciclos.
 
 ## Ciclos Formativos
 
 ### Familia de Informática:
 
-| Siglas | Nombre Completo | Nivel |
-|--------|-----------------|-------|
-| IIO | Informática y Oficina | Grado Básico |
-| SMX    | Sistemas Microinformáticos y Redes | Grado Medio |
-| DAM    | Desarrollo de Aplicaciones Multiplataforma | Grado Superior |
-| CEIABD | Curso de especialización de IA y BD | Curso de Especialización |
+| Siglas | Nombre Completo                            | Nivel                    |
+|--------|--------------------------------------------|--------------------------|
+| IIO    | Informática y Oficina                      | Grado Básico             |
+| SMX    | Sistemas Microinformáticos y Redes         | Grado Medio              |
+| DAM    | Desarrollo de Aplicaciones Multiplataforma | Grado Superior           |
+| CEIABD | Curso de especialización de IA y BD        | Curso de Especialización |
 
 ### Familia de Servicios a la comunidad:
 
-| Siglas | Nombre Completo | Nivel |
-|--------|-----------------|-------|
-| APD | Atención a Personas en Situación de Dependencia | Grado Medio |
-| EI    | Educación Infantil | Grado Superior |
-| IS 	 | Integración Social | Grado Superior |
-
+| Siglas | Nombre Completo                                 | Nivel          |
+|--------|-------------------------------------------------|----------------|
+| APD    | Atención a Personas en Situación de Dependencia | Grado Medio    |
+| EI     | Educación Infantil                              | Grado Superior |
+| IS     | Integración Social                              | Grado Superior |
 
 ## Entorno y Desarrollo
 
 Se recomienda usar `emacs`, un editor de texto para toda una vida, scite o `vim` y trabajar desde
 Sistemas Operativos que promuevan el Software Libre y Abierto, como Ubuntu o Debian.
 
-[![Emacs](https://img.shields.io/badge/Emacs-%237F5AB6.svg?&logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](#)
+![Emacs](https://img.shields.io/badge/Emacs-%237F5AB6.svg?&logo=gnu-emacs&logoColor=white)![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)
 
 ## Herramientas
 
-[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-[![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff)](#)
-[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
-[![Haskell](https://img.shields.io/badge/Haskell-3776AB?logo=haskell&logoColor=fff)](#)
+![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff)![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)![Haskell](https://img.shields.io/badge/Haskell-3776AB?logo=haskell&logoColor=fff)
 
 ---
+
 ## Filosofía
 
-[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://fsfe.org/)
+![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 
 ---
 
@@ -58,6 +54,7 @@ Los Proyectos Curriculares (PCCF), se construyen usando varios niveles de constr
 los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
 
 **Pipeline bifàsica (PCCF)**:
+
 1. **Generació de plantilles** (`make generar-plantilles-pccf-dam`): copia `PD_*.md` a `plantilles_{FAMILIA}_{CICLO}/` + genera `libro_{CICLO}.xlsx`.
 2. **El docent ompli** les PDs (canvia `_BORRADOR` a `_OK`) i l'excel.
 3. **Report** (`make report-pccf-dam`): mostra estat BORRADOR/OK, `[###]` pendents, i coherència de l'excel.
@@ -66,6 +63,7 @@ los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
 `make proyecto-dam` fa (1) + (4) en un sol pas (compatible cap enrere).
 
 **Mòduls optatius compartits** (`make generar-plantilles-optatives`):
+
 - Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es gestionen desde `boe_OPTATIVES/optatives.json` (compartit entre tots els cicles).
 - `make generar-plantilles-optatives` genera `programacions/OPTATIVES/libro_optatives.xlsx` i `programacions/OPTATIVES/PD_*_BORRADOR.md`.
 - `make report-optatives` mostra l'estat BORRADOR/OK i `[###]` pendents.
@@ -77,9 +75,9 @@ los PCCFs se obtienen a partir de los ficheros que provienen de `/src/`,
 
 ### Creación del fichero
 
-Las Programaciones Didácticas de cada módulo se construyen en varias "etapas". 
+Las Programaciones Didácticas de cada módulo se construyen en varias "etapas".
 
-Por un lado tenemos la generación 
+Por un lado tenemos la generación
 automática de ficheros a partir de las plantillas Jinja2, que se generan en `plantilles_{FAMILIA}_{CICLO}/` (fitxers `PD_*_BORRADOR.md`).
 
 Y por otra parte podemos crear un fichero con el mismo nombre en la carpeta del Ciclo correspondiente (`src_ASIR/`,`src_SMX/`,`src_DAW/`,`src_DAM/`). En ese caso, la generació automàtica no sobreescriurà el fitxer i usarà el que el/la docente haya establecido.
@@ -88,7 +86,7 @@ A més, el/la docent pot editar directament el fitxer `PD_*_BORRADOR.md` dins `p
 
 ### Completado de la plantilla
 
-La plantilla del módulo elegido incluye una serie de mensajes y de marcas que deben ser revisados por parte 
+La plantilla del módulo elegido incluye una serie de mensajes y de marcas que deben ser revisados por parte
 del docente:
 
 #### A RELLENAR POR DOCENTE
@@ -99,7 +97,7 @@ con lo que se pide en cada una de las secciones.
 #### Imports del PCCF
 
 Como se ve en las diferentes plantillas, si se desea incluir alguno de los ficheros que conforman el texto refundido de los PCCFs, es tan sencillo
-como poner el nombre del fichero con tres `@` delante, y el *compilador* se encarga de introducir el texto 
+como poner el nombre del fichero con tres `@` delante, y el *compilador* se encarga de introducir el texto
 en la Programación Didáctica del Módulo.
 
 Ejemplo:
@@ -114,14 +112,14 @@ el fin de aportar más claridad.
 @@@PCCF_009_SoftwareLibre.md
 
 ...
-
 ```
+
 ### Hoja de Cálculo
 
-La Hoja de Cálculo Compartida en el repositorio del Departamento ha de ser rellenada con los pesos y 
-secuenciaciones de horas adecuadas. Cuando todo el departamento haya rellenado la hoja de cálculo con sus 
+La Hoja de Cálculo Compartida en el repositorio del Departamento ha de ser rellenada con los pesos y
+secuenciaciones de horas adecuadas. Cuando todo el departamento haya rellenado la hoja de cálculo con sus
 pesos y horas, se construirán las diferentes Programaciones Didácticas estableciendo como última página del PDF
-la hoja respectiva de su módulo. 
+la hoja respectiva de su módulo.
 
 Se han añadido las listas de las Competencias Profesionales y Sociales con su nivel de importancia (estrellas ★).
 
@@ -141,12 +139,14 @@ Si es vol tindre una còpia permanent d'estos fitxers, es poden copiar a `src_{F
 Els mòduls optatius de centre (MOPCOMPROF, MOPANGPROF, INP, IPR) es defineixen una sola vegada a `boe_OPTATIVES/optatives.json` i es compartixen entre tots els cicles que els oferten.
 
 **Característiques**:
+
 - Dades úniques (RAs, CEs, hores) al JSON centralitzat
 - Excel compartit: `programacions/OPTATIVES/libro_optatives.xlsx`
 - PDs compartides a `programacions/OPTATIVES/PD_{CODI}_{MODUL}_{ESTAT}.md`
 - `ObjetivosGenerales` i `CompetenciasTitulo` buits al JSON (no apliquen a un cicle específic)
 
 **Generació**:
+
 ```sh
 make generar-plantilles-optatives   # genera Excel + PDs
 make report-optatives               # report d'estat
@@ -208,6 +208,7 @@ PDFS/                        # PDF compilat i report (gitignored)
 ### Patró de noms dels fitxers
 
 **FP**: `{CURS_ACAD}_{CURS}{CICLE}[{GRUP}]_{MODUL}_{ESTAT}.md`
+
 ```
 25_26_1SMXA_AOF_BORRADOR.md
 25_26_1DAM_SEMI_SI_BORRADOR.md
@@ -215,6 +216,7 @@ PDFS/                        # PDF compilat i report (gitignored)
 ```
 
 **ESO/BAT**: `{CURS_ACAD}_{CURS_CODI}[_{GRUP}]_{MATERIA}_{ESTAT}.md`
+
 ```
 25_26_1ESOA_ANGLES_BORRADOR.md              # 1ESO, grup A
 25_26_4ESOD_MATA_BORRADOR.md                # 4ESO, grup D, Matemàtiques A
@@ -279,20 +281,20 @@ make compila-tots-fp                            # compilar
 
 El report es genera a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt` i detecta:
 
-| Detecció | Descripció |
-|----------|------------|
-| **BORRADOR** | Mòduls pendents de completar (fitxer `_BORRADOR.md`) |
-| **FALTA** | No hi ha cap fitxer `.md` per a eixa matèria/grup |
-| **NO IMPARTIT** | Fitxer `_NOIMPARTIT.md`: el mòdul/matèria no ha tingut alumnat este curs (confirmat pel cap de departament). No compta com a FALTA ni activa la marca d'aigua ESBORRANY |
-| **CONFLICTE** | Un mòdul té `_NOIMPARTIT.md` i també `_OK.md`/`_BORRADOR.md` alhora (cal esborrar el que no corresponga) |
-| **DUPLICAT** | Existeixen `_OK.md` i `_BORRADOR.md` per al mateix mòdul |
-| **INCOMPLET** | Fitxer `_OK.md` amb `[###]` pendents o estadístiques inconsistents |
-| **ZERO_STATS** | Aprovats=0 i suspensos=0 (dades no omplides) |
-| **CHECKBOX_FORMAT** | Caselles marcades amb espais de més: `[ x ]`, `[x ]` en lloc de `[x]` |
-| **SENSE_SUFIX** | Fitxer sense `_OK.md`, `_BORRADOR.md` ni `_NOIMPARTIT.md` |
-| **BORR_TRUNCAT** | Fitxer acaba en `_BORR.md` en lloc de `_BORRADOR.md` |
-| **Stats inc.** | aprovats+suspensos > avaluats, total > final, avaluats > final, final > inici |
-| **Neteja automàtica** | `[]` → `[ ]`, i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`). Es conserven `[###]` i `[...]`. |
+| Detecció              | Descripció                                                                                                                                                              |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **BORRADOR**          | Mòduls pendents de completar (fitxer `_BORRADOR.md`)                                                                                                                    |
+| **FALTA**             | No hi ha cap fitxer `.md` per a eixa matèria/grup                                                                                                                       |
+| **NO IMPARTIT**       | Fitxer `_NOIMPARTIT.md`: el mòdul/matèria no ha tingut alumnat este curs (confirmat pel cap de departament). No compta com a FALTA ni activa la marca d'aigua ESBORRANY |
+| **CONFLICTE**         | Un mòdul té `_NOIMPARTIT.md` i també `_OK.md`/`_BORRADOR.md` alhora (cal esborrar el que no corresponga)                                                                |
+| **DUPLICAT**          | Existeixen `_OK.md` i `_BORRADOR.md` per al mateix mòdul                                                                                                                |
+| **INCOMPLET**         | Fitxer `_OK.md` amb `[###]` pendents o estadístiques inconsistents                                                                                                      |
+| **ZERO_STATS**        | Aprovats=0 i suspensos=0 (dades no omplides)                                                                                                                            |
+| **CHECKBOX_FORMAT**   | Caselles marcades amb espais de més: `[ x ]`, `[x ]` en lloc de `[x]`                                                                                                   |
+| **SENSE_SUFIX**       | Fitxer sense `_OK.md`, `_BORRADOR.md` ni `_NOIMPARTIT.md`                                                                                                               |
+| **BORR_TRUNCAT**      | Fitxer acaba en `_BORR.md` en lloc de `_BORRADOR.md`                                                                                                                    |
+| **Stats inc.**        | aprovats+suspensos > avaluats, total > final, avaluats > final, final > inici                                                                                           |
+| **Neteja automàtica** | `[]` → `[ ]`, i es lleven claudàtors sobrants (`[24]`→`24`, `[CAP]`→`CAP`). Es conserven `[###]` i `[...]`.                                                             |
 
 El report inclou al final una **llegenda** amb tots estos codis i el seu significat (llegible des de `tools/report_legend.txt`).
 
@@ -368,6 +370,7 @@ make compilar-memories
 El PDF es genera a `PDFS/Memories_{FAMILIA}_{CENTRE}_{CURS}.pdf` i el report a `PDFS/0_YYYYMMDD_hhmm_report_memories_{ESOBAT|FP}/{FAMILIA}.txt`.
 
 Detecta:
+
 - Mòduls en estat **BORRADOR** (pendents de completar)
 - Mòduls **FALTA** (no hi ha fitxer ni BORRADOR ni OK)
 - Mòduls **NO IMPARTIT** (fitxer `_NOIMPARTIT.md`: sense alumnat este curs, no compta com a FALTA ni activa la marca d'aigua)
@@ -428,7 +431,7 @@ Algunos de los `targets` disponibles están listados a continuación, con el pro
 hojas de cálculo.
 
 No todos los `targets` tienen las mismas opciones y estan en construcción, así que se no se espera que tengan los mismos
-mensajes de salida, ni el mismo formato (colores) ^_^.
+mensajes de salida, ni el mismo formato (colores) ^\_^.
 
 ### Usage de los targets
 
@@ -444,7 +447,6 @@ make proyecto-smx
 make proyecto-asir
 make proyecto-dam
 make proyecto-daw
-
 ```
 
 #### Opción 2: Especificar un centro diferente:
@@ -568,7 +570,6 @@ sudo apt install python3-jinja2 \
          python-openpyxl-doc \
          python-pandas-doc \
          python3-pandas
-
 ```
 
 ## Contenedor

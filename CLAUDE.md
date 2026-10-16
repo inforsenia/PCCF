@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Read `AGENTS.md` first** — it is the authoritative, actively-maintained reference for this repo's build commands, pipeline, repo layout, and conventions (PCCF, optatives, and memòries systems). This file only adds pointers and things not already in `AGENTS.md`.
 
+**Then read `PENDENT.md`** if it exists: work left half-done in another session (uncommitted changes, deployment steps, decisions awaited). Remove the entry when it's done, and this paragraph with the file once it's empty.
+
 ## What this repo is
 
 Curricular projects (PCCF) and teaching plans (Programaciones Didácticas) for vocational training cycles at IES La Sénia / IESEPM, plus a separate system for compiling end-of-course department "memòries" (FP and ESO/BAT). Everything is driven by JSON data (from BOE) + Jinja2 templates → Markdown → Pandoc/XeLaTeX → PDF, with Excel spreadsheets (openpyxl) as a teacher-editable intermediate.

@@ -68,7 +68,7 @@ OPTATIVES_PATH = os.path.join(PROJECT_DIR, "boe_OPTATIVES", "optatives.json")
 # Pattern per a noms de fitxer PD:
 # PD_{CICLO}_{CODI}_{NOM}_{BORRADOR|OK}.md
 PD_FILE_RE = re.compile(
-    r'^PD_(' + '|'.join(CICLES_CONEGUTS) + r')_(\d+|[A-Z][A-Z0-9]*)_(.+?)_(BORRADOR|OK)\.md$'
+    r'^PD_(' + '|'.join(CICLES_CONEGUTS) + r')_(\d+p?|[A-Z][A-Z0-9]*)_(.+?)_(BORRADOR|OK)\.md$'
 )
 
 
@@ -122,6 +122,8 @@ HOJA_LABELS = [
     ('Ciències aplicades II', 'CA2'),
     ('Comunicació i societat I', 'CS1'),
     ('Comunicació i societat II', 'CS2'),
+    ('Comunicació i Ciències Socials I', 'CS1'),  # RD 498/2024: 3161
+    ('Comunicació i Ciències Socials II', 'CS2'),  # RD 498/2024: 3162
     ("Organització de l'atenció", 'OAPD'),
     ('Destreses socials', 'DDSS'),
     ('Característiques i necessitats', 'CNP'),
@@ -155,6 +157,10 @@ HOJA_LABELS = [
     ('Comunicació i societat 2', 'CS2'),
 ]
 
+# Sufix del nom de la part de 1r d'un mòdul repartit entre cursos (Decret
+# 95/2026, annex IV: el Projecte intermodular de DAM, EI i IS).
+PART_1R = " - 1r curs"
+
 _STOPWORDS = {"de", "del", "i", "a", "al", "als", "la", "les", "el", "els", "en", "per", "amb", "d", "l"}
 
 
@@ -170,7 +176,11 @@ def _sigles_automatiques(nom):
 
 def get_hoja_label(hoja):
     """Sigla del mòdul `hoja` (nom complet). Sense entrada a HOJA_LABELS,
-    torna el nom si cap en 31 caràcters o, si no, unes sigles automàtiques."""
+    torna el nom si cap en 31 caràcters o, si no, unes sigles automàtiques.
+    La part de 1r del Projecte intermodular (0492p, 0019p, 0345p; nom acabat
+    en PART_1R) porta la sigla de la de 2n amb un 1 (PI1)."""
+    if hoja.endswith(PART_1R):
+        return get_hoja_label(hoja[:-len(PART_1R)]) + "1"
     candidats = [(pre, lab) for pre, lab in HOJA_LABELS if hoja.startswith(pre)]
     if candidats:
         return max(candidats, key=lambda c: len(c[0]))[1]
@@ -385,7 +395,24 @@ def hores_fulla(ws):
 DUAL_MIN_PCT, DUAL_MAX_PCT = 10, 65
 MAX_CE_LLISTATS = 10   # CE que es nomenen en una incidència (un llibre nou els té tots a 0)
 
-_CE_LLETRA_RE = re.compile(r"^\s*([a-zñ]{1,2})\)")
+# Criteri d'avaluació: lletra als mòduls («a)») o número als àmbits de grau
+# bàsic («1.1)», annex V del RD 217/2022).
+_CE_LLETRA_RE = re.compile(r"^\s*([a-zñ]{1,2}|\d+\.\d+)\)")
+# Fila de RA d'una fulla: «RA01.…» als mòduls o «CE1.…» (competència
+# específica) als àmbits de grau bàsic.
+FILA_RA_RE = re.compile(r"^\s*(RA|CE)\s*\d")
+
+
+def es_fila_ra(valor):
+    """Si el valor de la columna B és la fila d'un RA o d'una competència específica."""
+    return isinstance(valor, str) and bool(FILA_RA_RE.match(valor))
+
+
+def es_ambit(modulo):
+    """Àmbit de grau bàsic (3161–3164): competències específiques (CE1…) en
+    lloc de RA (RD 498/2024, art. 6; Decret 117/2025, art. 3.3)."""
+    ras = modulo.get("ResultadosAprendizaje") or {}
+    return bool(ras) and all(str(k).startswith("CE") for k in ras)
 
 
 def _num(v):
@@ -407,7 +434,7 @@ def criteris_fulla(ws):
     ras, ces, ra = [], [], None
     for r in range(10, ws.max_row + 1):
         b = ws.cell(row=r, column=2).value
-        if isinstance(b, str) and b.strip().startswith("RA"):
+        if es_fila_ra(b):
             ra = b.strip().split(".")[0].replace(" ", "")
             ras.append((ra, _num(ws.cell(row=r, column=3).value)))
         ce = ws.cell(row=r, column=5).value
@@ -510,8 +537,8 @@ def check_excel_coherence(filepath, hores_moduls=None):
         for row in ws.iter_rows(min_row=2, max_col=3, values_only=False):
             cell_b = row[1] if len(row) > 1 else None
             cell_c = row[2] if len(row) > 2 else None
-            # Sols mirem files on la columna B comença per "RA" (descripció RA)
-            if not (cell_b and cell_b.value and str(cell_b.value).strip().startswith("RA")):
+            # Sols mirem files de RA (o de competència específica als àmbits)
+            if not (cell_b and es_fila_ra(cell_b.value)):
                 continue
             if cell_c and cell_c.value is not None:
                 try:

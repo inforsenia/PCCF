@@ -13,7 +13,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.dimensions import DimensionHolder
 import os
 
-from pccf_utils import HOJA_INSTRUCCIONS
+from pccf_utils import HOJA_INSTRUCCIONS, es_fila_ra
 
 LLETRA = "Liberation Sans"
 MIDA = 10
@@ -241,7 +241,7 @@ def aplica_estils(ws, dual=True):
             comp.fill = CLAR
             comp.font = _font(bold=True, size=9)
         ra = ws.cell(row=r, column=2)
-        if isinstance(ra.value, str) and ra.value.startswith("RA"):
+        if es_fila_ra(ra.value):
             ra.font = _font(bold=True)
 
     alinea_continguts(ws, dual, ultima)
@@ -260,7 +260,7 @@ def alinea_continguts(ws, dual, ultima=None):
     col = disposicio(dual)["col_continguts"]
     for r in range(FILA_CAPCALERA + 2, (ultima or ws.max_row) + 1):
         ra = ws.cell(row=r, column=2).value
-        if isinstance(ra, str) and ra.startswith("RA"):  # cel·la superior de la fusionada
+        if es_fila_ra(ra):  # cel·la superior de la fusionada
             ws.cell(row=r, column=col).alignment = DALT
 
 
@@ -321,7 +321,7 @@ def protegeix(ws, dual, ultima=None):
     cols_ce = [6, 7] + ([COL_FE, COL_FE + 1] if dual else [])
     for r in range(FILA_CAPCALERA + 2, ultima + 1):
         ra = ws.cell(row=r, column=2).value
-        if isinstance(ra, str) and ra.startswith("RA"):
+        if es_fila_ra(ra):
             for col in (3, d["col_continguts"]):  # cel·la superior de les fusionades
                 ws.cell(row=r, column=col).protection = EDITABLE
         ce = ws.cell(row=r, column=5).value

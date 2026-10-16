@@ -59,18 +59,18 @@ No escau: este mòdul no té estàndards de competència associats.
 {% endif %}{% endif %}
 
 {% if not optativa -%}
-## Contribució dels resultats d'aprenentatge a les competències
+## Contribució {% if ambit %}de les competències específiques{% else %}dels resultats d'aprenentatge{% endif %} a les competències
 
-Els resultats d'aprenentatge del mòdul, juntament amb els seus criteris d'avaluació, són els referents de l'avaluació i contribueixen a assolir els objectius generals i les competències professionals, personals i socials del títol que s'indiquen a continuació.
+{% if ambit %}Les competències específiques de l'àmbit{% else %}Els resultats d'aprenentatge del mòdul{% endif %}, juntament amb els seus criteris d'avaluació, són els referents de l'avaluació i contribueixen a assolir els objectius generals i les competències professionals, personals i socials del títol que s'indiquen a continuació.
 
-### Resultats d'aprenentatge
+### {% if ambit %}Competències específiques{% else %}Resultats d'aprenentatge{% endif %}
 {%- else -%}
 ## Resultats d'aprenentatge
 {%- endif %}
 
-Els **resultats d'aprenentatge** relatius al mòdul de {{modulo.nombre}} són:
+{% if ambit %}Les **competències específiques** de l'àmbit de {{modulo.nombre}} (annex V del Reial decret 217/2022, d'acord amb l'article 3.3 del Decret 117/2025) són:{% else %}Els **resultats d'aprenentatge** relatius al mòdul de {{modulo.nombre}} són:{% endif %}
 
-|Codi| Resultat d'aprenentatge |
+|Codi| {% if ambit %}Competència específica{% else %}Resultat d'aprenentatge{% endif %} |
 |------|--------------------------|{% for ra in modulo.ResultadosAprendizaje %}
 | {{ ra }} | {{ modulo.ResultadosAprendizaje[ra].Resultado }} |{% endfor %}
 |<img width=200/>|<img width=500/>|
@@ -104,7 +104,7 @@ La formació del mòdul contribueix a assolir les *competències del títol* seg
 
 ## Esquema general i seqüenciació de les unitats de programació
 
-L'esquema general del mòdul (RA, criteris d'avaluació, hores i ponderació de cada RA) es genera automàticament a partir de l'Excel compartit i s'inclou al final d'esta programació.
+{% if ambit %}L'esquema general de l'àmbit (competències específiques, criteris d'avaluació, hores i ponderació de cada competència) es genera{% else %}L'esquema general del mòdul (RA, criteris d'avaluació, hores i ponderació de cada RA) es genera{% endif %} automàticament a partir de l'Excel compartit i s'inclou al final d'esta programació.
 
 > Expliqueu breument com s'organitzen les unitats de programació: criteri de seqüenciació i relació amb els RA. Després completeu la taula amb una fila per unitat: número, títol, RA que treballa i trimestre (1r, 2n o 3r). Afegiu o esborreu files segons les unitats que tingueu.
 >
@@ -120,7 +120,7 @@ L'esquema general del mòdul (RA, criteris d'avaluació, hores i ponderació de 
 
 [###]
 
-| Número | Títol | RA    | Trimestre |
+{% if ambit %}| Número | Títol | CE    | Trimestre |{% else %}| Número | Títol | RA    | Trimestre |{% endif %}
 |--------|-------|-------|-----------|
 | 01     | [###] | [###] | [###]     |
 | 02     | [###] | [###] | [###]     |
@@ -156,13 +156,13 @@ Les mesures d'atenció a la diversitat contemplades en esta programació es fona
 
 Es parteix del reconeixement de la diversitat com un valor i una oportunitat per a l'aprenentatge, i es promouen estratègies que afavorisquen la participació, la motivació i el progrés de tot l'alumnat. Entre les mesures generals s'inclouen la flexibilització metodològica, l'adaptació de recursos, l'ús de suports personalitzats i l'atenció a diferents ritmes i estils d'aprenentatge.
 
-D'acord amb el Decret 104/2018, de 27 de juliol, i l'Orde 20/2019, de 30 d'abril, les adaptacions d'accés i metodològiques no suposen la modificació dels resultats d'aprenentatge ni dels criteris d'avaluació, que continuen sent els referents de l'avaluació.
+D'acord amb el Decret 104/2018, de 27 de juliol, i l'Orde 20/2019, de 30 d'abril, les adaptacions d'accés i metodològiques {% if ambit %}no suposen la modificació de les competències específiques ni dels criteris d'avaluació{% else %}no suposen la modificació dels resultats d'aprenentatge ni dels criteris d'avaluació{% endif %}, que continuen sent els referents de l'avaluació.
 
 Les adaptacions específiques, tant metodològiques com organitzatives, es concretaran en la **programació d'aula**, on es detallaran les actuacions necessàries per a atendre les necessitats individuals de l'alumnat, sempre en coordinació amb els serveis d'orientació i l'equip docent.
 
 ## Avaluació de l'aprenentatge
 
-L'avaluació és contínua i té com a referents els resultats d'aprenentatge i els criteris d'avaluació del mòdul. La qualificació del mòdul és numèrica, entre 1 i 10 sense decimals, i es considera superat amb una qualificació igual o superior a 5 (Orde 8/2025, art. 5). La ponderació de cada resultat d'aprenentatge s'indica en l'Esquema general.
+L'avaluació és contínua i {% if ambit %}té com a referents les competències específiques i els criteris d'avaluació de l'àmbit.{% else %}té com a referents els resultats d'aprenentatge i els criteris d'avaluació del mòdul.{% endif %} La qualificació del mòdul és numèrica, entre 1 i 10 sense decimals, i es considera superat amb una qualificació igual o superior a 5 (Orde 8/2025, art. 5). {% if ambit %}La ponderació de cada competència específica s'indica{% else %}La ponderació de cada resultat d'aprenentatge s'indica{% endif %} en l'Esquema general.
 
 Al principi de curs es realitza una avaluació inicial que permet adaptar esta programació a les característiques del grup, segons el que establix el PCCF.
 
@@ -178,7 +178,7 @@ Al principi de curs es realitza una avaluació inicial que permet adaptar esta p
 > | RA1 | Pràctiques de laboratori | 40 %        |
 > | RA2 | Projecte en grup         | 100 %       |
 
-| RA    | Instrument d'avaluació | Percentatge |
+{% if ambit %}| CE    | Instrument d'avaluació | Percentatge |{% else %}| RA    | Instrument d'avaluació | Percentatge |{% endif %}
 |-------|------------------------|-------------|
 | [###] | [###]                  | [###]       |
 | [###] | [###]                  | [###]       |
@@ -202,12 +202,12 @@ Els criteris de pèrdua del dret a l'avaluació contínua per faltes d'assistèn
 
 ### Primera convocatòria
 
-1. Tot l'alumnat té dret a una primera convocatòria. Si l'alumne o l'alumna ha superat tots els RA durant l'*avaluació contínua*, esta qualificació serà la de la primera convocatòria.
-2. Si hi ha RA **no superats** durant l'*avaluació contínua*, l'alumnat té dret a una prova que incloga eixos RA, amb l'objectiu de comprovar que ha adquirit els resultats d'aprenentatge descrits en el mòdul. Esta prova s'ajustarà al calendari proposat pel centre.
+1. Tot l'alumnat té dret a una primera convocatòria. Si l'alumne o l'alumna {% if ambit %}ha superat totes les competències específiques durant{% else %}ha superat tots els RA durant{% endif %} l'*avaluació contínua*, esta qualificació serà la de la primera convocatòria.
+{% if ambit %}2. Si hi ha competències específiques **no superades** durant l'*avaluació contínua*, l'alumnat té dret a una prova que les incloga, amb l'objectiu de comprovar que les ha adquirides.{% else %}2. Si hi ha RA **no superats** durant l'*avaluació contínua*, l'alumnat té dret a una prova que incloga eixos RA, amb l'objectiu de comprovar que ha adquirit els resultats d'aprenentatge descrits en el mòdul.{% endif %} Esta prova s'ajustarà al calendari proposat pel centre.
 
 ### Programa de recuperació
 
-L'alumnat amb RA no superats disposa d'un programa de recuperació i, si no supera el mòdul en la primera convocatòria, d'un programa formatiu específic per a preparar la segona convocatòria.
+{% if ambit %}L'alumnat amb competències específiques no superades disposa{% else %}L'alumnat amb RA no superats disposa{% endif %} d'un programa de recuperació i, si no supera el mòdul en la primera convocatòria, d'un programa formatiu específic per a preparar la segona convocatòria.
 
 > Indiqueu les activitats de recuperació, el moment en què es realitzaran i els criteris d'avaluació que s'aplicaran.
 >
@@ -218,7 +218,7 @@ L'alumnat amb RA no superats disposa d'un programa de recuperació i, si no supe
 {% if pla_pendents %}
 ### Pla de pendents
 
-L'alumnat que promociona a segon curs amb este mòdul pendent disposa d'un pla de recuperació que li permet superar-lo sense assistir a les classes ordinàries. El pla s'informa a l'alumnat a l'inici del curs i té com a referents els resultats d'aprenentatge i els criteris d'avaluació no superats.
+L'alumnat que promociona a segon curs amb este mòdul pendent disposa d'un pla de recuperació que li permet superar-lo sense assistir a les classes ordinàries. El pla s'informa a l'alumnat a l'inici del curs i {% if ambit %}té com a referents les competències específiques i els criteris d'avaluació no superats.{% else %}té com a referents els resultats d'aprenentatge i els criteris d'avaluació no superats.{% endif %}
 
 > Indiqueu les activitats i els treballs que haurà de realitzar l'alumnat, el calendari de lliuraments i proves, el seguiment previst (horari d'atenció, tutories, plataforma), i els instruments i criteris de qualificació.
 >

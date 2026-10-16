@@ -958,6 +958,103 @@
                 "j"
             ]
         },
+        "0019p": {
+            "nombre": "Projecte intermodular d'atenció a la infància - 1r curs",
+            "creditos": "5",
+            "ResultadosAprendizaje": {
+                "RA01": {
+                    "Resultado": "Identifica necessitats del sector productiu, relacionant-les amb projectes tipus que les puguen satisfer.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han classificat les empreses del sector per les seues característiques organitzatives i el tipus de producte o servei que ofereixen.",
+                        "b": "S'han caracteritzat les empreses tipus indicant l'estructura organitzativa i les funcions de cada departament.",
+                        "c": "S'han identificat les necessitats més demandades a les empreses.",
+                        "d": "S'han valorat les oportunitats de negoci previsibles en el sector.",
+                        "e": "S'ha identificat el tipus de projecte requerit per a donar resposta a les demandes previstes.",
+                        "f": "S'han determinat les característiques específiques requerides al projecte.",
+                        "g": "S'han determinat les obligacions fiscals, laborals i de prevenció de riscos i les seues condicions d'aplicació.",
+                        "h": "S'han identificat possibles ajudes o subvencions per a la incorporació de noves tecnologies de producció o de servei que es proposen.",
+                        "i": "S'ha elaborat el guió de treball que s'ha de seguir per a l'elaboració del projecte."
+                    }
+                },
+                "RA02": {
+                    "Resultado": "Dissenya projectes relacionats amb les competències expressades en el títol, incloent i desenvolupant les fases que el componen.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha recopilat informació relativa als aspectes que es van a tractar en el projecte.",
+                        "b": "S'ha realitzat l'estudi de viabilitat tècnica del projecte.",
+                        "c": "S'han identificat les fases o parts que componen el projecte i el seu contingut.",
+                        "d": "S'han establert els objectius que es pretenen aconseguir identificant el seu abast.",
+                        "e": "S'han previst els recursos materials i personals necessaris per a realitzar el projecte.",
+                        "f": "S'ha realitzat el pressupost econòmic corresponent.",
+                        "g": "S'han identificat les necessitats de finançament per a la posada en marxa del projecte.",
+                        "h": "S'ha definit i elaborat la documentació necessària per a la seua disseny.",
+                        "i": "S'han identificat els aspectes que s'han de controlar per a garantir la qualitat del projecte."
+                    }
+                },
+                "RA03": {
+                    "Resultado": "Planifica la implementació o execució del projecte, determinant el pla d'intervenció i la documentació associada.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'han seqüenciat les activitats ordenant-les en funció de les necessitats d'implementació.",
+                        "b": "S'han determinat els recursos i la logística necessària per a cada activitat.",
+                        "c": "S'han identificat les necessitats de permisos i autoritzacions per a portar a terme les activitats.",
+                        "d": "S'han determinat els procediments d'actuació o execució de les activitats.",
+                        "e": "S'han identificat els riscos inherents a la implementació definint el pla de prevenció de riscos i els mitjans i equips necessaris.",
+                        "f": "S'han planificat la assignació de recursos materials i humans i els temps d'execució per a les activitats del projecte.",
+                        "g": "S'ha fet la valoració econòmica que done resposta a les condicions de la implementació.",
+                        "h": "S'ha definit i elaborat la documentació necessària per a la implementació o execució."
+                    }
+                },
+                "RA04": {
+                    "Resultado": "Defineix els procediments per al seguiment i control en l'execució del projecte, justificant la selecció de variables i instruments emprats.",
+                    "CriteriosEvaluacion": {
+                        "a": "S'ha definit el procediment d'avaluació de les activitats o intervencions.",
+                        "b": "S'han definit els indicadors de qualitat per a realitzar l'avaluació.",
+                        "c": "S'ha definit el procediment per a l'avaluació de les incidències que puguen presentar-se durant la realització de les activitats, la seua possible solució i registre.",
+                        "d": "S'ha definit el procediment per a gestionar els possibles canvis en els recursos i en les activitats, incloent-hi el sistema de registre dels mateixos.",
+                        "e": "S'ha definit i elaborat la documentació necessària per a l'avaluació de les activitats i del projecte.",
+                        "f": "S'ha establert el procediment per a la participació en l'avaluació dels usuaris o clients i s'han elaborat els documents específics.",
+                        "g": "S'ha establert un sistema per a garantir el compliment del plec de condicions del projecte quan aquest existeix."
+                    }
+                }
+            },
+            "horas": "35",
+            "curs": 1,
+            "UnidadesCompetenciaAcreditadas": {},
+            "ObjetivosGenerales": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny"
+            ],
+            "CompetenciasTitulo": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "ny"
+            ],
+            "dualitza": false
+        },
         "0019": {
             "nombre": "Projecte intermodular d'atenció a la infància",
             "creditos": "5",
@@ -1016,7 +1113,7 @@
                     }
                 }
             },
-            "horas": "135",
+            "horas": "100",
             "curs": 2,
             "UnidadesCompetenciaAcreditadas": {},
             "ObjetivosGenerales": [
@@ -1060,42 +1157,57 @@
             "creditos": "4",
             "ResultadosAprendizaje": {
                 "RA01": {
-                    "Resultado": "Realitza l'avaluació inicial de l'assistència en una situació d'emergència amb xiquets i xiquetes.",
+                    "Resultado": "Realitza la valoració inicial de l'assistència en una urgència, descrivint riscos, recursos disponibles i tipus d'ajuda necessària.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han reconegut les característiques de les situacions d'urgència.",
-                        "b": "S'han identificat els protocols d'actuació en emergències.",
-                        "c": "S'han reconegut els signes de compromís vital.",
-                        "d": "S'han prioritzat les intervencions segons els criteris establerts.",
-                        "e": "S'han aplicat els protocols d'actuació per a la petició d'ajuda als serveis d'emergència."
+                        "a": "S'ha assegurat la zona segons el procediment oportú.",
+                        "b": "S'han identificat les tècniques d'autoprotecció en la manipulació de persones accidentades.",
+                        "c": "S'ha descrit el contingut mínim d'una farmaciola d'urgències i les indicacions dels productes i medicaments.",
+                        "d": "S'han establit les prioritats d'actuació en múltiples víctimes.",
+                        "e": "S'han descrit els procediments per a verificar la permeabilitat de les vies aèries.",
+                        "f": "S'han identificat les condicions de funcionament adequades de la ventilació-oxigenació.",
+                        "g": "S'han descrit i executat els procediments d'actuació en cas d'hemorràgies.",
+                        "h": "S'han descrit procediments per a comprovar el nivell de consciència.",
+                        "i": "S'han pres les constants vitals.",
+                        "j": "S'ha identificat la seqüència d'actuació segons el protocol establit per l'ILCOR (Comité de Coordinació Internacional sobre la Reanimació)."
                     }
                 },
                 "RA02": {
-                    "Resultado": "Aplica tècniques de suport vital bàsic, relacionant-les amb els objectius de l'assistència a realitzar.",
+                    "Resultado": "Aplica tècniques de suport vital bàsic, descrivint-les i relacionant-les amb l'objectiu que s'ha d'aconseguir.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat les tècniques d'obertura de la via aèria.",
-                        "b": "S'han aplicat tècniques de suport ventilatori en xiquets i xiquetes.",
-                        "c": "S'han aplicat tècniques de suport circulatori.",
-                        "d": "S'ha realitzat la desobstrucció de la via aèria.",
-                        "e": "S'ha aplicat la posició de seguretat a una persona inconscient."
+                        "a": "S'han descrit els fonaments de la reanimació cardiopulmonar.",
+                        "b": "S'han aplicat tècniques d'obertura de la via aèria.",
+                        "c": "S'han aplicat tècniques de suport ventilatori i circulatori.",
+                        "d": "S'ha realitzat desfibril·lació externa semiautomàtica (DEA).",
+                        "e": "S'han aplicat mesures postreanimació.",
+                        "f": "S'han indicat les lesions, patologies o traumatismes més freqüents.",
+                        "g": "S'ha descrit la valoració primària i secundària de la persona accidentada.",
+                        "h": "S'han aplicat primers auxilis davant de lesions per agents físics, químics i biològics.",
+                        "i": "S'han aplicat primers auxilis davant de patologies orgàniques d'urgència.",
+                        "j": "S'han especificat casos o circumstàncies en què no s'ha d'intervindre."
                     }
                 },
                 "RA03": {
-                    "Resultado": "Aplica tècniques d'immobilització en cas de traumatismes.",
+                    "Resultado": "Aplica procediments d'immobilització i mobilització de víctimes, seleccionant els mitjans materials i les tècniques.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat els tipus de traumatismes més freqüents en la infància.",
-                        "b": "S'han descrit les tècniques d'immobilització segons el tipus de traumatisme.",
-                        "c": "S'han aplicat tècniques d'immobilització.",
-                        "d": "S'han identificat les situacions que requereixen trasllat."
+                        "a": "S'han efectuat les maniobres necessàries per a accedir a la víctima.",
+                        "b": "S'han identificat els mitjans materials d'immobilització i mobilització.",
+                        "c": "S'han caracteritzat les mesures posturals davant d'una persona lesionada.",
+                        "d": "S'han descrit les repercussions d'una mobilització i un trasllat inadequats.",
+                        "e": "S'han confeccionat sistemes per a la immobilització i mobilització de persones malaltes o accidentades amb materials convencionals i inespecífics o mitjans de fortuna.",
+                        "f": "S'han aplicat normes i protocols de seguretat i d'autoprotecció personal."
                     }
                 },
                 "RA04": {
-                    "Resultado": "Aplica tècniques de suport en diferents situacions d'urgència.",
+                    "Resultado": "Aplica tècniques de suport psicològic i d'autocontrol a la persona accidentada i als acompanyants, descrivint i aplicant les estratègies de comunicació adequades.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat les situacions d'urgència més freqüents en xiquets i xiquetes.",
-                        "b": "S'han descrit les característiques de les ferides i hemorràgies i les tècniques d'actuació.",
-                        "c": "S'han descrit les característiques de les cremades i les tècniques d'actuació.",
-                        "d": "S'han descrit les característiques de les intoxicacions i les tècniques d'actuació.",
-                        "e": "S'han aplicat les tècniques en cada tipus de situació."
+                        "a": "S'han descrit les estratègies bàsiques de comunicació amb la persona accidentada i els seus acompanyants.",
+                        "b": "S'han detectat les necessitats psicològiques de la persona accidentada.",
+                        "c": "S'han aplicat tècniques bàsiques de suport psicològic per a millorar l'estat emocional de la persona accidentada.",
+                        "d": "S'ha valorat la importància d'infondre confiança i optimisme a la persona accidentada durant tota l'actuació.",
+                        "e": "S'han identificat els factors que predisposen a l'ansietat en les situacions d'accident, emergència i dol.",
+                        "f": "S'han especificat les tècniques que s'han d'emprar per a controlar una situació de dol, ansietat, angoixa o agressivitat.",
+                        "g": "S'han especificat les tècniques que s'han d'emprar per a superar psicològicament el fracàs en la prestació de l'auxili.",
+                        "h": "S'ha valorat la importància d'autocontrolar-se davant de situacions d'estrés."
                     }
                 }
             },

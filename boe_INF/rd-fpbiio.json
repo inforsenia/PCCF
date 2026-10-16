@@ -543,121 +543,71 @@
             ]
         },
         "3163": {
-            "nombre": "Ciències aplicades 1",
+            "nombre": "Ciències aplicades I",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Resol problemes matemàtics en situacions quotidianes, utilitzant els elements bàsics del llenguatge matemàtic i les seues operacions.",
+                "CE1": {
+                    "Resultado": "Reconéixer els motius pels quals ocorren els principals fenòmens naturals, a partir de situacions quotidianes, i explicar-los en termes de les lleis i teories científiques adequades, per a posar en valor la contribució de la ciència a la societat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat els diferents tipus de nombres i s'han utilitzat per interpretar adequadament la informació quantitativa.",
-                        "b": "S'han realitzat càlculs amb eficàcia, bé mitjançant càlcul mental o bé mitjançant algoritmes de llapis i calculadora (física o informàtica).",
-                        "c": "S'han utilitzat les TIC com a font de cerca d'informació.",
-                        "d": "S'ha operat amb potències d'exponent natural i enter aplicant les propietats.",
-                        "e": "S'ha utilitzat la notació científica per representar i operar amb nombres molt grans o molt petits.",
-                        "f": "S'han representat els diferents nombres reals sobre la recta numèrica.",
-                        "g": "S'ha caracteritzat la proporció com a expressió matemàtica.",
-                        "h": "S'han comparat magnituds establint el seu tipus de proporcionalitat.",
-                        "i": "S'ha utilitzat la regla de tres per resoldre problemes en els quals intervenen magnituds directa i inversament proporcionals.",
-                        "j": "S'ha aplicat l'interès simple i compost en activitats quotidianes."
+                        "1.1": "Explicar els fenòmens naturals més rellevants en termes de teories, lleis i principis científics adequats com a estratègia en la presa de decisions fonamentades.",
+                        "1.2": "Justificar la contribució de la ciència a la societat, i la tasca dels homes i les dones dedicats al seu desenvolupament, entenent la investigació com una tasca col·lectiva en constant evolució fruit de la interacció entre la ciència, la tecnologia, la societat i el medi ambient."
                     }
                 },
-                "RA02": {
-                    "Resultado": "Reconeix les instal·lacions i el material de laboratori valorant-los com a recursos necessaris per a la realització de les pràctiques.",
+                "CE2": {
+                    "Resultado": "Interpretar i modelitzar en termes científics problemes i situacions de la vida quotidiana i professional, aplicant diferents estratègies, formes de raonament, eines tecnològiques i el pensament computacional, per a trobar i analitzar solucions comprovant-ne la validesa.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat cadascuna de les tècniques experimentals que es van a realitzar.",
-                        "b": "S'han manipulat adequadament els materials instrumentals del laboratori.",
-                        "c": "S'han tingut en compte les condicions d'higiene i seguretat per a cadascuna de les tècniques experimentals que es van a realitzar."
+                        "2.1": "Elaborar representacions que ajuden en la cerca d'estratègies de resolució d'una situació problematitzada, organitzant les dades i comprenent les preguntes formulades.",
+                        "2.2": "Trobar les solucions d'un problema utilitzant les dades i la informació aportades, els coneixements propis, i les estratègies i eines apropiades.",
+                        "2.3": "Comprovar la correcció de les solucions d'un problema i la seua coherència en el context plantejat.",
+                        "2.4": "Emprar eines tecnològiques adequades en la representació, la resolució de problemes i la comprovació de les solucions."
                     }
                 },
-                "RA03": {
-                    "Resultado": "Identifica propietats fonamentals de la matèria en les diferents formes en les quals es presenta en la natura, manejant les seues magnituds físiques i les seues unitats fonamentals en unitats de sistema mètric decimal.",
+                "CE3": {
+                    "Resultado": "Utilitzar els mètodes científics, fent indagacions i duent a terme projectes, per a desenvolupar els raonaments propis del pensament científic i millorar les destreses en l'ús de les metodologies científiques.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han descrit les propietats de la matèria.",
-                        "b": "S'han practicat canvis d'unitats de longitud, massa i capacitat.",
-                        "c": "S'ha identificat l'equivalència entre unitats de volum i capacitat.",
-                        "d": "S'han efectuat mesures en situacions reals utilitzant les unitats del sistema mètric decimal i utilitzant la notació científica.",
-                        "e": "S'ha identificat la denominació dels canvis d'estat de la matèria.",
-                        "f": "S'han identificat amb exemples senzills diferents sistemes materials homogeneus i heterogeneus.",
-                        "g": "S'han identificat els diferents estats d'agregació en els quals es presenta la matèria utilitzant models cinètics per explicar els canvis d'estat.",
-                        "h": "S'han identificat sistemes materials relacionant-los amb el seu estat en la natura.",
-                        "i": "S'han reconegut els diferents estats d'agregació d'una substància donades la seua temperatura de fusió i ebullició.",
-                        "j": "S'han establert diferències entre ebullició i evaporació utilitzant exemples senzills."
+                        "3.1": "Plantejar preguntes i hipòtesis que puguen ser respostes o contrastades utilitzant els mètodes científics, l'observació, la informació i el raonament, explicant fenòmens naturals i fent prediccions sobre estos.",
+                        "3.2": "Dissenyar i realitzar experiments i obtindre dades quantitatives i qualitatives sobre fenòmens naturals en el medi natural i en el laboratori, utilitzant amb correcció els instruments, les eines o les tècniques adequades a l'hora d'obtindre resultats clars que responguen a qüestions concretes o que contrasten la veracitat d'una hipòtesi.",
+                        "3.3": "Interpretar els resultats obtinguts en projectes d'investigació, utilitzant el raonament i, quan siga necessari, eines matemàtiques i tecnològiques."
                     }
                 },
-                "RA04": {
-                    "Resultado": "Utilitza el mètode més adequat per a la separació de components de mescles senzilles relacionant-lo amb el procés físic o químic en què es basa.",
+                "CE4": {
+                    "Resultado": "Analitzar els efectes de determinades accions quotidianes o de l'entorn professional sobre la salut, el medi natural i social, basant-se en fonaments científics, per a valorar la importància dels hàbits que milloren la salut individual i col·lectiva, eviten o minimitzen els impactes mediambientals negatius i són compatibles amb un desenvolupament sostenible.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha identificat i descrit el que es considera substància pura i mescla.",
-                        "b": "S'han establert les diferències fonamentals entre mescles i compostos.",
-                        "c": "S'han discriminat els processos físics i químics.",
-                        "d": "S'han seleccionat d'un llistat de substàncies, les mescles, els compostos i els elements químics.",
-                        "e": "S'han aplicat de forma pràctica diferents separacions de mescles per mètodes senzills.",
-                        "f": "S'han descrit les característiques generals bàsiques de materials relacionats amb les professions, utilitzant les TIC.",
-                        "g": "S'ha treballat en equip en la realització de tasques."
+                        "4.1": "Avaluar els efectes de determinades accions individuals sobre l'organisme i el medi natural, proposant hàbits saludables i sostenibles basats en els coneixements adquirits i la informació disponible.",
+                        "4.2": "Relacionar amb fonaments científics la preservació de la biodiversitat, la conservació del medi ambient i la protecció dels éssers vius de l'entorn amb el desenvolupament sostenible i la qualitat de vida."
                     }
                 },
-                "RA05": {
-                    "Resultado": "Reconeix com l'energia està present en els processos naturals descrivint fenòmens simples de la vida real.",
+                "CE5": {
+                    "Resultado": "Interpretar i transmetre informació i dades científiques, contrastant-ne prèviament la veracitat i utilitzant llenguatge verbal o gràfic apropiat, per a adquirir i consolidar coneixements de l'entorn natural, social i professional.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat situacions de la vida quotidiana en les quals queda de manifest la intervenció de l'energia.",
-                        "b": "S'han reconegut diferents fonts d'energia.",
-                        "c": "S'han establert grups de fonts d'energia renovable i no renovable.",
-                        "d": "S'han mostrat els avantatges i desavantatges (obtenció, transport i utilització) de les fonts d'energia renovables i no renovables, utilitzant les TIC.",
-                        "e": "S'han aplicat canvis d'unitats de l'energia.",
-                        "f": "S'han mostrat en diferents sistemes la conservació de l'energia.",
-                        "g": "S'han descrit processos relacionats amb el manteniment de l'organisme i de la vida en els quals s'aprecia clarament el paper de l'energia."
+                        "5.1": "Organitzar i comunicar informació científica i matemàtica de manera clara i rigorosa de forma verbal, gràfica, numèrica, etc., utilitzant el format més adequat.",
+                        "5.2": "Analitzar i interpretar informació científica i matemàtica present en la vida quotidiana mantenint una actitud crítica.",
+                        "5.3": "Emprar i citar de manera adequada fonts fiables, seleccionant la informació científica rellevant en la consulta i la creació de continguts, i millorant l'aprenentatge propi i col·lectiu."
                     }
                 },
-                "RA06": {
-                    "Resultado": "Localitza les estructures anatòmiques bàsiques discriminant els sistemes o aparells als quals pertanyen i associant-los a les funcions que produeixen en l'organisme.",
+                "CE6": {
+                    "Resultado": "Identificar les ciències i les matemàtiques implicades en contextos diversos, interrelacionant conceptes i procediments, per a aplicar-los en situacions de la vida quotidiana i de l'àmbit professional corresponent.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat i descrit els òrgans que configuren el cos humà, i s'els ha associat al sistema o aparell corresponent.",
-                        "b": "S'ha relacionat cada òrgan, sistema i aparell a la seua funció i s'han reseñat les seues associacions.",
-                        "c": "S'ha descrit la fisiologia del procés de nutrició.",
-                        "d": "S'ha detallat la fisiologia del procés d'excreció.",
-                        "e": "S'ha descrit la fisiologia del procés de reproducció.",
-                        "f": "S'ha detallat com funciona el procés de relació.",
-                        "g": "S'han utilitzat eines informàtiques per descriure adequadament els aparells i sistemes."
+                        "6.1": "Aplicar procediments propis de les ciències i les matemàtiques en situacions diverses establint connexions entre diferents àrees de coneixement en contextos naturals, socials i professionals."
                     }
                 },
-                "RA07": {
-                    "Resultado": "Diferencia la salut de la malaltia, relacionant els hàbits de vida amb les malalties més freqüents reconeixent els principis bàsics de defensa contra les mateixes.",
+                "CE7": {
+                    "Resultado": "Desenvolupar destreses personals identificant i gestionant emocions, posant en pràctica estratègies d'acceptació de l'error com a part del procés d'aprenentatge i adaptant-se davant de situacions d'incertesa, per a millorar la perseverança en la consecució d'objectius i la valoració de l'aprenentatge de les ciències.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat situacions de salut i de malaltia per a les persones.",
-                        "b": "S'han descrit els mecanismes encarregats de la defensa de l'organisme.",
-                        "c": "S'han identificat i classificat les malalties infeccioses i no infeccioses més comunes en la població, i reconegut les seues causes, la prevenció i els tractaments.",
-                        "d": "S'han relacionat els agents que causen les malalties infeccioses habituals amb el contagi produït.",
-                        "e": "S'ha entés l'acció de les vacunes, antibiòtics i altres aportacions de la ciència mèdica per al tractament i prevenció de malalties infeccioses.",
-                        "f": "S'ha reconegut el paper que tenen les campanyes de vacunació en la prevenció de malalties infeccioses per descriure adequadament els aparells i sistemes.",
-                        "g": "S'ha descrit el tipus de donacions que existeixen i els problemes que es produeixen en els trasplantaments.",
-                        "h": "S'han reconegut situacions de risc per a la salut relacionades amb el seu entorn professional més proper.",
-                        "i": "S'han dissenyat pautes d'hàbits saludables relacionats amb situacions quotidianes."
+                        "7.1": "Mostrar resiliència davant dels reptes acadèmics assumint l'error com una oportunitat per a la millora i desenvolupant un autoconcepte positiu davant de les ciències."
                     }
                 },
-                "RA08": {
-                    "Resultado": "Elabora menús i dietes equilibrades senzilles diferenciant els nutrients que contenen i adaptant-los als diferents paràmetres corporals i a situacions diverses.",
+                "CE8": {
+                    "Resultado": "Desenvolupar destreses socials i treballar de manera col·laborativa en equips diversos amb rols assignats que permeten potenciar el creixement entre iguals, valorant la importància de trencar els estereotips de gènere en la investigació científica, per a l'emprenedoria personal i laboral.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha discriminat entre el procés de nutrició i el d'alimentació.",
-                        "b": "S'han diferenciat els nutrients necessaris per al manteniment de la salut.",
-                        "c": "S'ha reconegut la importància d'una bona alimentació i de l'exercici físic en la cura del cos humà.",
-                        "d": "S'han relacionat les dietes amb la salut, diferenciant entre les necessàries per al manteniment de la salut i les que poden conduir a un menyscabament de la mateixa.",
-                        "e": "S'ha realitzat el càlcul sobre balanços calòrics en situacions habituals del seu entorn.",
-                        "f": "S'ha calculat el metabolisme basal i els seus resultats s'ha representat en un diagrama, establint comparacions i conclusions.",
-                        "g": "S'han elaborat menús per a situacions concretes, investigant en la xarxa les propietats dels aliments."
-                    }
-                },
-                "RA09": {
-                    "Resultado": "Resol situacions quotidianes, utilitzant expressions algebraiques senzilles i aplicant els mètodes de resolució més adequats.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han concretat propietats o relacions de situacions senzilles mitjançant expressions algebraiques.",
-                        "b": "S'han simplificat expressions algebraiques senzilles utilitzant mètodes de desenvolupament i factorització.",
-                        "c": "S'ha aconseguit resoldre problemes de la vida quotidiana en els quals es precise el plantejament i resolució d'equacions de primer grau.",
-                        "d": "S'han resolt problemes senzills utilitzant el mètode gràfic i les TIC."
+                        "8.1": "Assumir responsablement una funció concreta dins d'un projecte científic, utilitzant espais virtuals quan siga necessari, aportant valor, analitzant críticament les contribucions de la resta de l'equip, respectant la diversitat i afavorint la inclusió.",
+                        "8.2": "Emprendre, de manera guiada i d'acord amb la metodologia adequada, projectes científics col·laboratius orientats a la millora i a la creació de valor en la societat."
                     }
                 }
             },
             "horas": "133",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "k",
@@ -680,160 +630,71 @@
             ]
         },
         "3164": {
-            "nombre": "Ciències aplicades 2",
+            "nombre": "Ciències aplicades II",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Resol situacions quotidianes aplicant els mètodes de resolució d'equacions i sistemes i valorant la precisió, simplicitat i utilitat del llenguatge algebraic.",
+                "CE1": {
+                    "Resultado": "Reconéixer els motius pels quals ocorren els principals fenòmens naturals, a partir de situacions quotidianes, i explicar-los en termes de les lleis i teories científiques adequades, per a posar en valor la contribució de la ciència a la societat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han utilitzat identitats notables en les operacions amb polinomis.",
-                        "b": "S'han obtingut valors numèrics a partir d'una expressió algebraica.",
-                        "c": "S'han resolt equacions de primer i segon grau senzilles de manera algebraica i gràfica.",
-                        "d": "S'han resolt problemes quotidianis i d'altres àrees de coneixement mitjançant equacions i sistemes.",
-                        "e": "S'ha valorat la precisió, simplicitat i utilitat del llenguatge algebraic per representar situacions plantejades en la vida real."
+                        "1.1": "Explicar els fenòmens naturals més rellevants en termes de teories, lleis i principis científics adequats com a estratègia en la presa de decisions fonamentades.",
+                        "1.2": "Justificar la contribució de la ciència a la societat, i la tasca dels homes i les dones dedicats al seu desenvolupament, entenent la investigació com una tasca col·lectiva en constant evolució fruit de la interacció entre la ciència, la tecnologia, la societat i el medi ambient."
                     }
                 },
-                "RA02": {
-                    "Resultado": "Resol problemes senzills de diversa índole, a través del seu anàlisi contrastat i aplicant les fases del mètode científic.",
+                "CE2": {
+                    "Resultado": "Interpretar i modelitzar en termes científics problemes i situacions de la vida quotidiana i professional, aplicant diferents estratègies, formes de raonament, eines tecnològiques i el pensament computacional, per a trobar i analitzar solucions comprovant-ne la validesa.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han plantejat hipòtesis senzilles, a partir d'observacions directes o indirectes recopilades per diferents mitjans.",
-                        "b": "S'han analitzat les diverses hipòtesis i s'ha emès una primera aproximació a la seua explicació.",
-                        "c": "S'han planificat mètodes i procediments experimentals senzills de diversa índole per a refutar o no la seua hipòtesi.",
-                        "d": "S'ha treballat en equip en el plantejament de la solució.",
-                        "e": "S'han recopilat els resultats dels assajos de verificació i plasmat en un document de forma coherent.",
-                        "f": "S'ha defensat el resultat amb argumentacions i proves les verificacions o refutacions de les hipòtesis emeses."
+                        "2.1": "Elaborar representacions que ajuden en la cerca d'estratègies de resolució d'una situació problematitzada, organitzant les dades i comprenent les preguntes formulades.",
+                        "2.2": "Trobar les solucions d'un problema utilitzant les dades i la informació aportades, els coneixements propis, i les estratègies i eines apropiades.",
+                        "2.3": "Comprovar la correcció de les solucions d'un problema i la seua coherència en el context plantejat.",
+                        "2.4": "Emprar eines tecnològiques adequades en la representació, la resolució de problemes i la comprovació de les solucions."
                     }
                 },
-                "RA03": {
-                    "Resultado": "Realitza mesures directes i indirectes de figures geomètriques presents en contextos reals, utilitzant els instruments, les fórmules i les tècniques necessàries.",
+                "CE3": {
+                    "Resultado": "Utilitzar els mètodes científics, fent indagacions i duent a terme projectes, per a desenvolupar els raonaments propis del pensament científic i millorar les destreses en l'ús de les metodologies científiques.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han utilitzat instruments apropiats per a mesurar angles, longituds, àrees i volums de cossos i figures geomètriques interpretant les escales de mesura.",
-                        "b": "S'han utilitzat diferents estratègies (semblances, descomposició en figures més senzilles, entre altres) per estimar o calcular mesures indirectes en el món físic.",
-                        "c": "S'han utilitzat les fórmules per calcular perímetres, àrees i volums i s'han assignat les unitats correctes.",
-                        "d": "S'ha treballat en equip en l'obtenció de mesures.",
-                        "e": "S'han utilitzat les TIC per representar diferents figures."
+                        "3.1": "Plantejar preguntes i hipòtesis que puguen ser respostes o contrastades utilitzant els mètodes científics, l'observació, la informació i el raonament, explicant fenòmens naturals i fent prediccions sobre estos.",
+                        "3.2": "Dissenyar i realitzar experiments i obtindre dades quantitatives i qualitatives sobre fenòmens naturals en el medi natural i en el laboratori, utilitzant amb correcció els instruments, les eines o les tècniques adequades a l'hora d'obtindre resultats clars que responguen a qüestions concretes o que contrasten la veracitat d'una hipòtesi.",
+                        "3.3": "Interpretar els resultats obtinguts en projectes d'investigació, utilitzant el raonament i, quan siga necessari, eines matemàtiques i tecnològiques."
                     }
                 },
-                "RA04": {
-                    "Resultado": "Interpreta gràfics de dues magnituds calculant els paràmetres significatius de les mateixes i relacionant-ho amb funcions matemàtiques elementals i els principals valors estadístics.",
+                "CE4": {
+                    "Resultado": "Analitzar els efectes de determinades accions quotidianes o de l'entorn professional sobre la salut, el medi natural i social, basant-se en fonaments científics, per a valorar la importància dels hàbits que milloren la salut individual i col·lectiva, eviten o minimitzen els impactes mediambientals negatius i són compatibles amb un desenvolupament sostenible.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha expressat l'equació de la recta de diverses formes.",
-                        "b": "S'ha representat gràficament la funció quadràtica aplicant mètodes senzills per a la seua representació.",
-                        "c": "S'ha representat gràficament la funció inversa.",
-                        "d": "S'ha representat gràficament la funció exponencial.",
-                        "e": "S'ha extret informació de gràfics que representen els diferents tipus de funcions associades a situacions reals.",
-                        "f": "S'ha utilitzat el vocabulari adequat per a la descripció de situacions relacionades amb l'atzar i l'estadística.",
-                        "g": "S'han elaborat i interpretat taules i gràfics estadístics.",
-                        "h": "S'han analitzat característiques de la distribució estadística obtenint mesures de centralització i dispersió.",
-                        "i": "S'han aplicat les propietats dels successos i la probabilitat.",
-                        "j": "S'han resolt problemes quotidianos mitjançant càlculs de probabilitat senzills."
+                        "4.1": "Avaluar els efectes de determinades accions individuals sobre l'organisme i el medi natural, proposant hàbits saludables i sostenibles basats en els coneixements adquirits i la informació disponible.",
+                        "4.2": "Relacionar amb fonaments científics la preservació de la biodiversitat, la conservació del medi ambient i la protecció dels éssers vius de l'entorn amb el desenvolupament sostenible i la qualitat de vida."
                     }
                 },
-                "RA05": {
-                    "Resultado": "Aplica tècniques físiques o químiques, utilitzant el material necessari, per a la realització de pràctiques de laboratori senzilles, mesurant les magnituds implicades.",
+                "CE5": {
+                    "Resultado": "Interpretar i transmetre informació i dades científiques, contrastant-ne prèviament la veracitat i utilitzant llenguatge verbal o gràfic apropiat, per a adquirir i consolidar coneixements de l'entorn natural, social i professional.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha verificat la disponibilitat del material bàsic utilitzat en un laboratori.",
-                        "b": "S'han identificat i mesurat magnituds bàsiques, entre altres, massa, pes, volum, densitat, temperatura.",
-                        "c": "S'han identificat diferents tipus de biomolècules presents en materials orgànics.",
-                        "d": "S'ha descrit la cèl·lula i teixits animals i vegetals mitjançant la seua observació a través d'instruments òptics.",
-                        "e": "S'han elaborat informes d'assajos en els quals s'inclou el procediment seguit, els resultats obtinguts i les conclusions finals."
+                        "5.1": "Organitzar i comunicar informació científica i matemàtica de manera clara i rigorosa de forma verbal, gràfica, numèrica, etc., utilitzant el format més adequat.",
+                        "5.2": "Analitzar i interpretar informació científica i matemàtica present en la vida quotidiana mantenint una actitud crítica.",
+                        "5.3": "Emprar i citar de manera adequada fonts fiables, seleccionant la informació científica rellevant en la consulta i la creació de continguts, i millorant l'aprenentatge propi i col·lectiu."
                     }
                 },
-                "RA06": {
-                    "Resultado": "Reconeix les reaccions químiques que es produeixen en els processos biològics i en la indústria argumentant la seua importància en la vida quotidiana i descrivint els canvis que es produeixen.",
+                "CE6": {
+                    "Resultado": "Identificar les ciències i les matemàtiques implicades en contextos diversos, interrelacionant conceptes i procediments, per a aplicar-los en situacions de la vida quotidiana i de l'àmbit professional corresponent.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat reaccions químiques principals de la vida quotidiana, la natura i la indústria.",
-                        "b": "S'han descrit les manifestacions de reaccions químiques.",
-                        "c": "S'han descrit els components principals d'una reacció química i la intervenció de l'energia en la mateixa.",
-                        "d": "S'han reconegut algunes reaccions químiques tipus, com combustió, oxidació, descomposició, neutralització, síntesi, aeròbica, anaeròbica.",
-                        "e": "S'han identificat els components i el procés de reaccions químiques senzilles mitjançant assajos de laboratori.",
-                        "f": "S'han elaborat informes utilitzant les TIC sobre les indústries més rellevants: alimentàries, cosmètica, reciclatge, descrivint de forma senzilla els processos que tenen lloc en les mateixes."
+                        "6.1": "Aplicar procediments propis de les ciències i les matemàtiques en situacions diverses establint connexions entre diferents àrees de coneixement en contextos naturals, socials i professionals."
                     }
                 },
-                "RA07": {
-                    "Resultado": "Identifica aspectes positius i negatius de l'ús de l'energia nuclear descrivint els efectes de la contaminació generada en la seua aplicació.",
+                "CE7": {
+                    "Resultado": "Desenvolupar destreses personals identificant i gestionant emocions, posant en pràctica estratègies d'acceptació de l'error com a part del procés d'aprenentatge i adaptant-se davant de situacions d'incertesa, per a millorar la perseverança en la consecució d'objectius i la valoració de l'aprenentatge de les ciències.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han analitzat efectes positius i negatius de l'ús de l'energia nuclear.",
-                        "b": "S'ha diferenciat el procés de fusió i fissió nuclear.",
-                        "c": "S'han identificat alguns problemes sobre vessaments nuclears producte de catàstrofes naturals o de mala gestió i manteniment de les centrals nuclears.",
-                        "d": "S'ha argumentat sobre la problemàtica dels residus nuclears.",
-                        "e": "S'ha treballat en equip i utilitzat les TIC."
+                        "7.1": "Mostrar resiliència davant dels reptes acadèmics assumint l'error com una oportunitat per a la millora i desenvolupant un autoconcepte positiu davant de les ciències."
                     }
                 },
-                "RA08": {
-                    "Resultado": "Identifica els canvis que es produeixen en el planeta terra argumentant les seues causes i tenint en compte les diferències que existeixen entre relleu i paisatge.",
+                "CE8": {
+                    "Resultado": "Desenvolupar destreses socials i treballar de manera col·laborativa en equips diversos amb rols assignats que permeten potenciar el creixement entre iguals, valorant la importància de trencar els estereotips de gènere en la investigació científica, per a l'emprenedoria personal i laboral.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han identificat els agents geològics externs i quina és la seua acció sobre el relleu.",
-                        "b": "S'han diferenciat els tipus de meteorització i identificat les seues conseqüències en el relleu.",
-                        "c": "S'ha analitzat el procés d'erosió, reconeixent els agents geològics externs que intervenen i les conseqüències en el relleu.",
-                        "d": "S'ha descrit el procés de transport discriminant els agents geològics externs que intervenen i les conseqüències en el relleu.",
-                        "e": "S'ha analitzat el procés de sedimentació discriminat els agents geològics externs que intervenen, les situacions i les conseqüències en el relleu."
-                    }
-                },
-                "RA09": {
-                    "Resultado": "Categoritza els contaminants atmosfèrics principals identificant els seus orígens i relacionant-los amb els efectes que produeixen.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han reconegut els fenòmens de la contaminació atmosfèrica i els principals agents causants de la mateixa.",
-                        "b": "S'ha investigat sobre el fenomen de la pluja àcida, les seues conseqüències immediates i futures i com seria possible evitar-la.",
-                        "c": "S'ha descrit l'efecte hivernacle argumentant les causes que l'originen o contribueixen i les mesures per a la seua minoració.",
-                        "d": "S'ha descrit la problemàtica que ocasiona la pèrdua paulatina de la capa d'ozó, les conseqüències per a la salut de les persones, l'equilibri de la hidrosfera i les poblacions."
-                    }
-                },
-                "RA10": {
-                    "Resultado": "Identifica els contaminants de l'aigua relacionant el seu efecte en el medi ambient amb el seu tractament de depuració.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha reconegut i valorat el paper de l'aigua en l'existència i supervivència de la vida en el planeta.",
-                        "b": "S'ha identificat l'efecte nociu que tenen per a les poblacions de éssers vius de la contaminació dels aqüífers.",
-                        "c": "S'han identificat possibles contaminants en mostres d'aigua de diferent origen planificant i realitzant assajos de laboratori.",
-                        "d": "S'ha analitzat els efectes produïts per la contaminació de l'aigua i l'ús responsable de la mateixa."
-                    }
-                },
-                "RA11": {
-                    "Resultado": "Contribueix a l'equilibri mediambiental analitzant i argumentant les línies bàsiques sobre el desenvolupament sostenible i proposant accions per a la seua millora i conservació.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'ha analitzat les implicacions positives d'un desenvolupament sostenible.",
-                        "b": "S'han proposat mesures elementals encaminades a afavorir el desenvolupament sostenible.",
-                        "c": "S'han dissenyat estratègies bàsiques per possibilitar el manteniment del medi ambient.",
-                        "d": "S'ha treballat en equip en la identificació dels objectius per a la millora del medi ambient."
-                    }
-                },
-                "RA12": {
-                    "Resultado": "Relaciona les forces que apareixen en situacions habituals amb els efectes produïts tenint en compte la seua contribució al moviment o repòs dels objectes i les magnituds posades en joc.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han discriminat moviments quotidianos en funció de la seua trajectòria i de la seua celeritat.",
-                        "b": "S'ha relacionat entre si la distància recorreguda, la velocitat, el temps i l'acceleració, expressant-les en unitats d'ús habitual.",
-                        "c": "S'han representat vectorialment a determinades magnituds com la velocitat i l'acceleració.",
-                        "d": "S'han relacionat els paràmetres que defineixen el moviment rectilini uniforme utilitzant les expressions gràfiques i matemàtica.",
-                        "e": "S'han realitzat càlculs senzills de velocitats en moviments amb acceleració constant.",
-                        "f": "S'ha descrit la relació causa-efecte en diferents situacions, per trobar la relació entre Forces i moviments.",
-                        "g": "S'han aplicat les lleis de Newton en situacions de la vida quotidiana."
-                    }
-                },
-                "RA13": {
-                    "Resultado": "Identifica els aspectes bàsics de la producció, transport i utilització de l'energia elèctrica i els factors que intervenen en el seu consum, descrivint els canvis produïts i les magnituds i valors característics.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han identificat i manejat les magnituds físiques bàsiques a tenir en compte en el consum d'electricitat en la vida quotidiana.",
-                        "b": "S'han analitzat els hàbits de consum i estalvi elèctric i establert línies de millora en els mateixos.",
-                        "c": "S'han classificat les centrals elèctriques i descrit la transformació energètica en les mateixes.",
-                        "d": "S'han analitzat els avantatges i desavantatges de les diferents centrals elèctriques.",
-                        "e": "S'han descrit bàsicament les etapes de la distribució de l'energia elèctrica des de la seua gènesi a l'usuari.",
-                        "f": "S'ha treballat en equip en la recopilació d'informació sobre centrals elèctriques a Espanya."
-                    }
-                },
-                "RA14": {
-                    "Resultado": "Identifica els components bàsics de circuits elèctrics senzills, realitzant mesures i determinant els valors de les magnituds que els caracteritzen.",
-                    "CriteriosEvaluacion": {
-                        "a": "S'han identificat els elements bàsics d'un circuit senzill, relacionant-los amb els existents en la seua vida quotidiana.",
-                        "b": "S'han posat de manifest els factors dels quals depén la resistència d'un conductor.",
-                        "c": "S'han experimentat sobre circuits elementals les variacions d'una magnitud bàsica en funció dels canvis produïts en les altres.",
-                        "d": "S'han realitzat esquemes de circuits elèctrics senzills interpretant les diferents situacions sobre els mateixos.",
-                        "e": "S'han descrit i exemplificat les variacions produïdes en les associacions: sèrie, paral·lel i mixtes.",
-                        "f": "S'han calculat magnituds elèctriques elementals en el seu entorn habitual de consum."
+                        "8.1": "Assumir responsablement una funció concreta dins d'un projecte científic, utilitzant espais virtuals quan siga necessari, aportant valor, analitzant críticament les contribucions de la resta de l'equip, respectant la diversitat i afavorint la inclusió.",
+                        "8.2": "Emprendre, de manera guiada i d'acord amb la metodologia adequada, projectes científics col·laboratius orientats a la millora i a la creació de valor en la societat."
                     }
                 }
             },
             "horas": "166",
             "curs": 2,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "k",
@@ -856,113 +717,76 @@
             ]
         },
         "3161": {
-            "nombre": "Comunicació i societat I",
+            "nombre": "Comunicació i Ciències Socials I",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Valora l'evolució històrica de les societats prehistòriques i de l'Edat Antiga i les seues relacions amb els paisatges naturals, analitzant els factors i elements implicats, i desenvolupant actituds i valors d'apreci del patrimoni natural i artístic.",
+                "CE1": {
+                    "Resultado": "Identificar i comprendre la naturalesa històrica i geogràfica de les relacions socials, les activitats econòmiques, les manifestacions culturals i els béns patrimonials, analitzant-ne els orígens i l'evolució i identificant les causes i les conseqüències dels canvis produïts, els problemes actuals i els seus valors presents, per a fer propostes que contribuïsquen al benestar futur i al desenvolupament sostenible de la societat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han descrit mitjançant l'anàlisi de fonts gràfiques les principals característiques d'un paisatge natural, reconeixent aquests elements en l'entorn més proper.",
-                        "b": "S'han explicat la ubicació, el desplaçament i l'adaptació al medi dels grups humans del període de l'hominització fins al domini tècnic dels metalls de les principals cultures que l'exemplifiquen.",
-                        "c": "S'han relacionat les característiques dels fets artístics més significatius del període prehistòric amb l'organització social i el cos de creences, valorant les seues diferències amb les societats actuals.",
-                        "d": "S'ha valorat la pervivència d'aquestes societats en les societats actuals, comparant les seues principals característiques.",
-                        "e": "S'han discriminat les principals característiques que requereix l'anàlisi de les obres arquitectòniques i escultòriques mitjançant exemples arquetípics, diferenciant estils canònics.",
-                        "f": "S'ha jutjat l'impacte de les primeres societats humanes en el paisatge natural, analitzant les característiques de les ciutats antigues i la seua evolució en l'actualitat.",
-                        "g": "S'ha analitzat la pervivència a la Península Ibèrica i els territoris extrapeninsulars espanyols de les societats prehistòriques i de l'Edat Antiga.",
-                        "h": "S'han elaborat instruments senzills de recollida d'informació mitjançant estratègies de composició protocol·litzades, utilitzant tecnologies de la informació i la comunicació.",
-                        "i": "S'han desenvolupat comportaments acords amb el desenvolupament del propi esforç i el treball col·laboratiu."
+                        "1.1": "Analitzar i interpretar l'entorn des d'una perspectiva sistèmica i integradora, a través de conceptes i procediments geogràfics, identificant-ne els principals elements i les interrelacions existents, valorant el grau de sostenibilitat i equilibri dels espais a partir d'actituds de defensa, protecció, conservació i millora de l'entorn (natural, rural i urbà).",
+                        "1.2": "Relacionar les cultures i civilitzacions que s'han desenvolupat al llarg de la història amb les diferents identitats col·lectives que s'han construït fins a l'actualitat, explicant i valorant la realitat multicultural generada al llarg del temps i analitzant les situacions i els problemes del present.",
+                        "1.3": "Valorar, protegir i conservar el patrimoni historicoartístic, cultural i natural, com a fonament de la nostra identitat col·lectiva i com un recurs essencial per al gaudi i el desenvolupament dels pobles, fent propostes que contribuïsquen a la seua conservació i a un desenvolupament ecosocial sostenible."
                     }
                 },
-                "RA02": {
-                    "Resultado": "Valora la construcció de l'espai europeu fins a les primeres transformacions industrials i societats agràries, analitzant les seues característiques principals i valorant la seua pervivència en la societat actual i en l'entorn immediat.",
+                "CE2": {
+                    "Resultado": "Comprendre els orígens i l'evolució dels processos d'integració europea i la seua rellevància en el present i el futur de la societat espanyola i de les comunitats locals, destacant la contribució de l'Estat, les seues institucions i les entitats socials a la pau, a la seguretat integral ciutadana, a la cooperació internacional, al desenvolupament sostenible enfront del canvi climàtic i a la ciutadania global, per a contribuir a crear un món més segur, solidari, sostenible i just.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha analitzat la transformació del món antic al medieval, analitzant l'evolució de l'espai europeu, les seues relacions amb l'espai extraeuropeu i les característiques més significatives de les societats medievals.",
-                        "b": "S'han valorat les característiques dels paisatges agraris medievals i la seua pervivència en les societats actuals, identificant els seus elements principals.",
-                        "c": "S'han valorat les conseqüències de la construcció dels imperis colonials a Amèrica en les cultures autòctones i en la europea.",
-                        "d": "S'ha analitzat el model polític i social de la monarquia absoluta durant l'Edat Moderna en les principals potències europees.",
-                        "e": "S'han valorat els indicadors demogràfics bàsics de les transformacions en la població europea durant el període analitzat.",
-                        "f": "S'han descrit les principals característiques de l'anàlisi de les obres pictòriques a través de l'estudi d'exemples arquetípics de les escoles i estils que es succeeixen a Europa des del Renaixement fins a la irrupció de les avantguardes històriques.",
-                        "g": "S'ha analitzat l'evolució del sector o dels sectors productius propis del perfil del títol, analitzant les seues transformacions i principals fites d'evolució en els seus sistemes organitzatius i tecnològics.",
-                        "h": "S'han elaborat instruments senzills de recollida d'informació mitjançant estratègies de composició protocol·litzades, utilitzant les tecnologies de la informació i la comunicació.",
-                        "i": "S'han desenvolupat comportaments acords amb el desenvolupament del propi esforç i el treball en equip."
+                        "2.1": "Explicar el procés d'unificació de l'espai europeu i la seua rellevància en la construcció de la societat espanyola, analitzant-ne l'evolució i argumentant-ne la influència en la política nacional.",
+                        "2.2": "Identificar i valorar les principals institucions europees, analitzant-ne els principis rectors, les normes de funcionament i les funcions, jutjant-ne el paper en els conflictes internacionals i reconeixent-ne la contribució a la pau i a la cooperació internacional, al desenvolupament sostenible, a la lluita contra el canvi climàtic i a la ciutadania global.",
+                        "2.3": "Interpretar des de la perspectiva del desenvolupament sostenible i la ciutadania global els principals desafiaments del món actual, expressant la importància d'implicar-se en la cerca de solucions i en la manera de concretar-les des de la pròpia capacitat d'acció, valorant la contribució de programes i missions dirigits pels estats, els organismes internacionals i les associacions civils per a l'assoliment de la pau, la seguretat integral, la convivència social i la cooperació entre els pobles."
                     }
                 },
-                "RA03": {
-                    "Resultado": "Utilitza estratègies comunicatives per interpretar i comunicar informació oral en llengua castellana, aplicant els principis de l'escolta activa, estratègies senzilles de composició i les normes lingüístiques bàsiques.",
+                "CE3": {
+                    "Resultado": "Reconéixer els principis, valors, drets i deures del nostre sistema democràtic i constitucional, analitzant de manera crítica els plantejaments històrics i geogràfics, les institucions i les diferents organitzacions polítiques i econòmiques en què s'emmarquen i es manifesten, per a adequar el comportament propi al compliment d'estos principis, valors, drets i deures.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha analitzat l'estructura de textos orals procedents dels mitjans de comunicació d'actualitat, identificant les seues característiques principals.",
-                        "b": "S'han aplicat les habilitats bàsiques per realitzar una escolta activa, identificant el sentit global i continguts específics d'un missatge oral.",
-                        "c": "S'ha realitzat un bon ús dels elements de comunicació no verbal en les argumentacions i exposicions.",
-                        "d": "S'han analitzat els usos i nivells de la llengua i les normes lingüístiques en la comprensió i composició de missatges orals, valorant i revisant els usos discriminatoris, específicament en les relacions de gènere.",
-                        "e": "S'ha utilitzat la terminologia gramatical apropiada en la comprensió de les activitats gramaticals proposades i en la resolució de les mateixes."
+                        "3.1": "Identificar i analitzar els principis, valors, deures i drets fonamentals de la Constitució espanyola, el sistema democràtic i les seues institucions i organitzacions socials, polítiques i econòmiques, explicant-ne la funció com a mecanismes que regulen la convivència i la vida en comunitat.",
+                        "3.2": "Reconéixer i explicar els mecanismes que han regulat la convivència i la vida en comú al llarg de la història, des de l'origen de la societat fins a les diferents civilitzacions que s'han anat succeint, assenyalant els principals models d'organització social i política que s'han anat gestant.",
+                        "3.3": "Adequar el comportament propi al compliment dels principis, valors, drets i deures democràtics i constitucionals, identificant els motius i arguments que en sustenten la validesa i rebutjant tot tipus de discriminació, especialment la que es produïx per motius socioeconòmics, de gènere, orientació sexual o pertinença a minories etnoculturals."
                     }
                 },
-                "RA04": {
-                    "Resultado": "Utilitza estratègies comunicatives per interpretar i comunicar informació escrita en llengua castellana, aplicant estratègies de lectura comprensiva i aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada i progressiva a la composició autònoma de textos breus seleccionats.",
+                "CE4": {
+                    "Resultado": "Buscar i seleccionar informació de manera progressivament autònoma a partir de diferents fonts, avaluant-ne la fiabilitat i la pertinència en funció de les necessitats detectades i evitant els riscos de manipulació i desinformació, per a integrar-la com a coneixement i compartir-la des d'un punt de vista crític, personal i respectuós amb la propietat intel·lectual.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han valorat i analitzat les característiques principals dels tipus en relació amb la seua idoneïtat per al treball que desitja realitzar.",
-                        "b": "S'han utilitzat eines de cerca diverses en la comprensió d'un text escrit, aplicant estratègies de reinterpretació de continguts.",
-                        "c": "S'han aplicat, de forma sistemàtica, estratègies de lectura comprensiva en la comprensió dels textos, extraient conclusions per a la seua aplicació en les activitats d'aprenentatge i reconeixent possibles usos discriminatoris des de la perspectiva de gènere.",
-                        "d": "S'ha resumit el contingut d'un text escrit, extraient la idea principal, les secundàries i el propòsit comunicatiu, revisant i reformulant les conclusions obtingudes.",
-                        "e": "S'ha analitzat l'estructura de diferents textos escrits d'utilització diària, reconeixent usos i nivells de la llengua i pautes d'elaboració.",
-                        "f": "S'han aplicat les principals normes gramaticals i ortogràfiques en la redacció de textos de manera que el text final resulti clar i precís.",
-                        "g": "S'han desenvolupat pautes sistemàtiques en l'elaboració de textos escrits que permeten la valoració dels aprenentatges desenvolupats i la reformulació de les necessitats d'aprenentatge per millorar la comunicació escrita.",
-                        "h": "S'han observat pautes de presentació de treballs escrits tenint en compte el contingut, el format i el públic destinatari, utilitzant un vocabulari adequat al context.",
-                        "i": "S'han resolt activitats de comprensió i anàlisi de les estructures gramaticals, comprovant la validesa de les inferències realitzades."
+                        "4.1": "Aplicar estratègies tant analògiques com digitals de cerca, selecció i organització d'informació, avaluant-ne la fiabilitat i la pertinència en funció de l'objectiu perseguit i evitant els riscos de manipulació i desinformació.",
+                        "4.2": "Elaborar continguts propis a partir de diferents fonts de manera progressivament autònoma, respectant els principis de propietat intel·lectual i citant les fonts consultades."
                     }
                 },
-                "RA05": {
-                    "Resultado": "Realitza la lectura de textos literaris representatius de la Literatura en llengua castellana anteriors al segle XIX, generant criteris estètics per a la construcció del gust personal.",
+                "CE5": {
+                    "Resultado": "Comunicar en llengua castellana de manera cooperativa i respectuosa, atenent les convencions pròpies dels diferents gèneres discursius i la seua adequació a diferents àmbits i contextos, per a donar resposta a necessitats concretes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han contrastat les etapes d'evolució de la literatura en llengua castellana en el període considerat i reconeixent les obres majors més representatives.",
-                        "b": "S'ha valorat l'estructura i l'ús del llenguatge d'una lectura personal d'una obra literària adequada al nivell, situant-la en el seu context i utilitzant instruments protocol·litzats de recollida d'informació.",
-                        "c": "S'han expressat opinions personals raonades sobre els aspectes més apreciats i menys apreciats d'una obra i sobre la implicació entre el seu contingut i les pròpies experiències vitals.",
-                        "d": "S'han aplicat estratègies per a la comprensió de textos literaris, tenint en compte dels temes i motius bàsics.",
-                        "e": "S'ha presentat informació sobre períodes, autors i obres de la literatura en llengua castellana a partir de textos literaris."
+                        "5.1": "Comprendre i interpretar el sentit global, l'estructura, la informació més rellevant en funció de les necessitats comunicatives i la intenció de l'emissor en textos orals, escrits i multimodals de diferents àmbits, avaluant-ne la qualitat, la fiabilitat i la idoneïtat del canal utilitzat.",
+                        "5.2": "Fer exposicions orals amb diferent grau de planificació sobre temes d'interés personal, ecosocial i professional, ajustant-se a les convencions pròpies dels diversos gèneres discursius, amb fluïdesa, coherència i el registre adequat, en diferents suports i utilitzant de manera eficaç recursos verbals i no verbals.",
+                        "5.3": "Planificar la redacció de textos escrits i multimodals atenent la situació comunicativa, el destinatari, el propòsit i el canal; redactar esborranys i revisar-los, i presentar un text final coherent, cohesionat i amb el registre adequat, amb precisió lèxica i correcció ortogràfica i gramatical.",
+                        "5.4": "Participar de manera activa i adequada en interaccions orals informals, en el treball en equip i en situacions orals formals de caràcter dialogat, amb actituds d'escolta activa i estratègies de cooperació conversacional i cortesia lingüística."
                     }
                 },
-                "RA06": {
-                    "Resultado": "Utilitza estratègies per comunicar informació oral en llengua anglesa, elaborant presentacions orals de poca extensió, ben estructurades, relatives a situacions habituals de comunicació quotidiana i freqüent d'àmbit personal o professional.",
+                "CE6": {
+                    "Resultado": "Interpretar i valorar obres diverses com a font de plaer i coneixement, compartint experiències de lectura, per a construir la pròpia identitat lectora i gaudir de la dimensió social d'esta activitat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han aplicat les estratègies d'escolta activa per a la comprensió precisa dels missatges rebuts.",
-                        "b": "S'ha identificat la intenció comunicativa bàsica de missatges directes o rebuts mitjançant formats electrònics, valorant les situacions de comunicació i les seues implicacions en l'ús del vocabulari emprat.",
-                        "c": "S'ha identificat el sentit global del text oral que presenta la informació de forma seqüenciada i progressiva en situacions habituals freqüents i de contingut previsible.",
-                        "d": "S'han identificat trets fonètics i d'entonació comuns i evidents que ajuden a entendre el sentit general del missatge.",
-                        "e": "S'han realitzat presentacions orals breus de textos descriptius, narratius i instructius, d'àmbit personal o professional, d'acord amb un guió senzill, aplicant l'estructura de cada tipus de text i utilitzant, en el seu cas, mitjans informàtics.",
-                        "f": "S'han utilitzat estructures gramaticals bàsiques i un repertori essencial i restringit d'expressions, frases i paraules de situacions habituals freqüents i de contingut altament previsible segons el propòsit comunicatiu del text.",
-                        "g": "S'ha expressat amb certa claredat, usant una entonació i pronunciació comprensible, acceptant-se les pausas i dubtes freqüents.",
-                        "h": "S'ha mostrat una actitud reflexiva i respecte a la informació que supose qualsevol tipus de discriminació.",
-                        "i": "S'han identificat les normes de relació social bàsiques i estandarditzades dels països on es parla la llengua estrangera.",
-                        "j": "S'han identificat les costums o activitats quotidianes de la comunitat on es parla la llengua estrangera."
+                        "6.1": "Llegir de manera autònoma textos seleccionats en funció dels propis gustos, interessos i necessitats, deixant constància del progrés del propi itinerari lector i cultural i explicant els criteris de selecció de les lectures.",
+                        "6.2": "Compartir l'experiència de lectura literària en suports diversos relacionant el text llegit amb altres manifestacions artístiques en funció de temes, estructures, llenguatge i valors ètics i estètics."
                     }
                 },
-                "RA07": {
-                    "Resultado": "Participa en converses en llengua anglesa utilitzant un llenguatge senzill i clar en situacions habituals freqüents de l'àmbit personal o professional, activant estratègies de comunicació bàsiques.",
+                "CE7": {
+                    "Resultado": "Comunicar-se en llengua estrangera, amb autonomia creixent, emprant recursos analògics i digitals i usant estratègies bàsiques de comprensió, producció i interacció, per a respondre de manera creativa i eficaç a necessitats personals i professionals concretes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha dialogat, de forma dirigida i seguint un guió ben estructurat utilitzant un repertori memoritzat de models d'oracions i converses breus i bàsiques, sobre situacions habituals freqüents i de contingut altament previsible.",
-                        "b": "S'ha mantingut la interacció utilitzant estratègies de comunicació senzilles per mostrar l'interès i la comprensió.",
-                        "c": "S'han utilitzat estratègies bàsiques de compensació per suplir mancances en la llengua estrangera.",
-                        "d": "S'han utilitzat estructures gramaticals bàsiques i un repertori essencial i restringit d'expressions, frases, paraules i marcadors de discurs lineals, segons el propòsit comunicatiu del text.",
-                        "e": "S'ha expressat amb certa claredat, utilitzant una entonació i pronunciació comprensible, acceptant-se les pausa i dubtes freqüents."
+                        "7.1": "Interpretar el sentit global i la informació específica i explícita de textos orals, escrits i multimodals breus i senzills sobre temes freqüents i quotidians, de rellevància personal o propis de l'àmbit professional d'especialització, expressats de manera clara i en el registre estàndard de la llengua estrangera.",
+                        "7.2": "Produir en llengua estrangera textos orals, escrits i multimodals, breus, senzills, estructurats, comprensibles i adequats a la situació comunicativa, seguint pautes establides i fent ús d'eines i recursos analògics i digitals.",
+                        "7.3": "Participar en situacions i accions guiades síncrones i asíncrones, breus i senzilles, en llengua estrangera, sobre temes quotidians, de rellevància personal o pròxims a l'àmbit professional del cicle, mostrant empatia i respecte per la cortesia lingüística i l'etiqueta digital, així com per les diferents necessitats, idees, inquietuds, iniciatives i motivacions dels interlocutors i les interlocutores.",
+                        "7.4": "Utilitzar, de manera guiada i en entorns personals i de la pròpia especialitat professional, estratègies adequades per a iniciar, mantindre i acabar la comunicació, prendre i cedir la paraula, sol·licitar i formular aclariments i explicacions en llengua estrangera."
                     }
                 },
-                "RA08": {
-                    "Resultado": "Elabora textos escrits en llengua anglesa breus i senzills de situacions de comunicació habituals i freqüents de l'àmbit personal o professional, aplicant estratègies de lectura comprensiva i desenvolupant estratègies estructurades de composició.",
+                "CE8": {
+                    "Resultado": "Valorar críticament la diversitat lingüística i cultural i adequar-s'hi, usant els repertoris personals i prenent consciència de les estratègies i els coneixements propis, per a gestionar de manera empàtica i respectuosa situacions interculturals.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha llegit de forma comprensiva el text, reconeixent els seus trets bàsics i el seu contingut global.",
-                        "b": "S'han identificat les idees fonamentals i la intenció comunicativa bàsica del text.",
-                        "c": "S'han identificat estructures gramaticals bàsiques i un repertori limitat d'expressions, frases i paraules i marcadors de discurs lineals, en situacions habituals freqüents, de contingut molt previsible.",
-                        "d": "S'han completat i reorganitzat frases i oracions, atenent al propòsit comunicatiu, a normes gramaticals bàsiques.",
-                        "e": "S'ha elaborat textos breus, adequats a un propòsit comunicatiu, seguint models estructurats.",
-                        "f": "S'ha utilitzat el lèxic essencial apropiat a situacions freqüents i al context de l'àmbit personal o professional.",
-                        "g": "S'ha mostrat interès per la bona presentació dels textos escrits, respectat les normes gramaticals, ortogràfiques i tipogràfiques i seguint senzilles pautes de revisió.",
-                        "h": "S'han utilitzat diccionaris impresos i online i correctors ortogràfics dels processadors de textos en la composició dels mateixos.",
-                        "i": "S'ha mostrat una actitud reflexiva i respecte a la informació que supose qualsevol tipus de discriminació."
+                        "8.1": "Millorar la capacitat de comunicar-se en llengua estrangera utilitzant els coneixements i les estratègies del repertori lingüístic i cultural propi, amb el suport d'altres participants i de suports analògics i digitals.",
+                        "8.2": "Acceptar i valorar la diversitat lingüística i cultural com a font d'enriquiment personal i professional, identificant els elements culturals i lingüístics que fomenten el respecte, la sostenibilitat i la democràcia."
                     }
                 }
             },
             "horas": "133",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "n",
@@ -989,115 +813,76 @@
             ]
         },
         "3162": {
-            "nombre": "Comunicació i societat II",
+            "nombre": "Comunicació i Ciències Socials II",
             "creditos": "",
             "ResultadosAprendizaje": {
-                "RA01": {
-                    "Resultado": "Infereix les característiques essencials de les societats contemporànies a partir de l'estudi de la seua evolució històrica, analitzant els trets bàsics de la seua organització social, política i econòmica en diferents moments i la successió de transformacions i conflictes ocorreguts.",
+                "CE1": {
+                    "Resultado": "Identificar i comprendre la naturalesa històrica i geogràfica de les relacions socials, les activitats econòmiques, les manifestacions culturals i els béns patrimonials, analitzant-ne els orígens i l'evolució i identificant les causes i les conseqüències dels canvis produïts, els problemes actuals i els seus valors presents, per a fer propostes que contribuïsquen al benestar futur i al desenvolupament sostenible de la societat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han discriminat les conseqüències per a l'organització de les societats actuals de les corrents ideològiques que l'han cimentat, situant-les en el temps i l'espai.",
-                        "b": "S'ha valorat el model de relacions econòmiques globalitzat actual mitjançant l'estudi de les transformacions econòmiques produïdes com a conseqüència de les innovacions tecnològiques i els sistemes organitzatius de l'activitat productiva.",
-                        "c": "S'han categoritzat les característiques de l'organització social contemporània, analitzant l'estructura i les relacions socials de la població actual i la seua evolució durant el període i utilitzant gràfiques i fonts directes seleccionades.",
-                        "d": "S'ha examinat l'evolució de les relacions internacionals contemporànies, elaborant explicacions causals i consecutives que permeten desenvolupar opinions pròpies sobre els conflictes actuals.",
-                        "e": "S'han valorat el procés d'unificació de l'espai europeu, analitzant la seua evolució, els seus principis i institucions significatives i argumentant la seua influència en les polítiques nacionals dels països membres de la Unió Europea.",
-                        "f": "S'ha associat l'evolució dels esdeveniments històrics globals amb l'evolució històrica de l'Estat espanyol, identificant les seues fases d'evolució, els principals conflictes i la seua situació actual.",
-                        "g": "S'han identificat els trets essencials de l'art contemporani i la seua evolució fins als nostres dies, construint opinions i criteris propis d'ordre estètic.",
-                        "h": "S'ha analitzat l'evolució del sector o dels sectors productius propis del títol, analitzant les seues transformacions i principals fites d'evolució en els seus sistemes organitzatius i tecnològics.",
-                        "i": "S'han elaborat instruments pautats de recollida i difusió d'informació que permeten l'avaluació dels aprenentatges realitzats, utilitzant diferents mitjans i suports, utilitzant el vocabulari precís.",
-                        "j": "S'han desenvolupant comportaments acords amb el desenvolupament del propi esforç i el treball col·laboratiu."
+                        "1.1": "Analitzar i interpretar l'entorn des d'una perspectiva sistèmica i integradora, a través de conceptes i procediments geogràfics, identificant-ne els principals elements i les interrelacions existents, valorant el grau de sostenibilitat i equilibri dels espais a partir d'actituds de defensa, protecció, conservació i millora de l'entorn (natural, rural i urbà).",
+                        "1.2": "Relacionar les cultures i civilitzacions que s'han desenvolupat al llarg de la història amb les diferents identitats col·lectives que s'han construït fins a l'actualitat, explicant i valorant la realitat multicultural generada al llarg del temps i analitzant les situacions i els problemes del present.",
+                        "1.3": "Valorar, protegir i conservar el patrimoni historicoartístic, cultural i natural, com a fonament de la nostra identitat col·lectiva i com un recurs essencial per al gaudi i el desenvolupament dels pobles, fent propostes que contribuïsquen a la seua conservació i a un desenvolupament ecosocial sostenible."
                     }
                 },
-                "RA02": {
-                    "Resultado": "Valora els principis bàsics del sistema democràtic analitzant les seues institucions, les seues formes de funcionament i les diferents organitzacions polítiques i econòmiques en què es manifesta i inferint pautes d'actuació per a acomodar el seu comportament al compliment d'aquests principis.",
+                "CE2": {
+                    "Resultado": "Comprendre els orígens i l'evolució dels processos d'integració europea i la seua rellevància en el present i el futur de la societat espanyola i de les comunitats locals, destacant la contribució de l'Estat, les seues institucions i les entitats socials a la pau, a la seguretat integral ciutadana, a la cooperació internacional, al desenvolupament sostenible enfront del canvi climàtic i a la ciutadania global, per a contribuir a crear un món més segur, solidari, sostenible i just.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han reconegut els principis bàsics de la Declaració Universal de Drets Humans i la seua situació en el món d'avui, valorant la seua implicació per a la vida quotidiana.",
-                        "b": "S'han analitzat els principis rectors, les institucions i normes de funcionament de les principals institucions internacionals, jutjant el seu paper en els conflictes mundials.",
-                        "c": "S'ha valorat la importància en la mediació i resolució de conflictes en l'extensió del model democràtic, desenvolupant criteris propis i raonats per a la resolució dels mateixos.",
-                        "d": "S'han jutjat els trets essencials del model democràtic espanyol mitjançant la seua comparació amb diferents models d'organització democràtica, valorant el context històric del seu desenvolupament.",
-                        "e": "S'ha valorat la implicació del principi de no discriminació en les relacions personals i socials de l'entorn proper, jutjant comportaments propis i aliens i inferint pautes i accions apropiades per a acomodar l'actitud als drets i a les obligacions que d'ell es deriven.",
-                        "f": "S'han aplicat pautes de resolució de conflictes adequades a les situacions trobades en les relacions amb l'entorn proper a partir dels aprenentatges adquirits, valorant les conseqüències i proposant mecanismes de millora.",
-                        "g": "S'ha elaborat informació pautada i organitzada per a la seua utilització en situacions de treball col·laboratiu i contrast d'opinions, aplicant criteris de claredat i precisió i de respecte a la pluralitat d'opinions."
+                        "2.1": "Explicar el procés d'unificació de l'espai europeu i la seua rellevància en la construcció de la societat espanyola, analitzant-ne l'evolució i argumentant-ne la influència en la política nacional.",
+                        "2.2": "Identificar i valorar les principals institucions europees, analitzant-ne els principis rectors, les normes de funcionament i les funcions, jutjant-ne el paper en els conflictes internacionals i reconeixent-ne la contribució a la pau i a la cooperació internacional, al desenvolupament sostenible, a la lluita contra el canvi climàtic i a la ciutadania global.",
+                        "2.3": "Interpretar des de la perspectiva del desenvolupament sostenible i la ciutadania global els principals desafiaments del món actual, expressant la importància d'implicar-se en la cerca de solucions i en la manera de concretar-les des de la pròpia capacitat d'acció, valorant la contribució de programes i missions dirigits pels estats, els organismes internacionals i les associacions civils per a l'assoliment de la pau, la seguretat integral, la convivència social i la cooperació entre els pobles."
                     }
                 },
-                "RA03": {
-                    "Resultado": "Utilitza estratègies comunicatives per interpretar i comunicar informació oral en llengua castellana, aplicant els principis de l'escolta activa, estratègies raonades de composició i les normes lingüístiques correctes en cada cas.",
+                "CE3": {
+                    "Resultado": "Reconéixer els principis, valors, drets i deures del nostre sistema democràtic i constitucional, analitzant de manera crítica els plantejaments històrics i geogràfics, les institucions i les diferents organitzacions polítiques i econòmiques en què s'emmarquen i es manifesten, per a adequar el comportament propi al compliment d'estos principis, valors, drets i deures.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han aplicat les habilitats de l'escolta activa en l'anàlisi de missatges orals procedents dels mitjans de comunicació, mitjans acadèmics, de l'àmbit professional o d'altres fonts, identificant les seues característiques principals.",
-                        "b": "S'ha reconegut la intenció comunicativa i l'estructura temàtica de la comunicació oral, valorant possibles respostes.",
-                        "c": "S'ha realitzat un ús correcte dels elements de comunicació no verbal en les argumentacions i exposicions.",
-                        "d": "S'han analitzat els usos i nivells de la llengua i les normes lingüístiques en la comprensió i composició de missatges orals, valorant i revisant els usos discriminatoris, específicament en les relacions de gènere.",
-                        "e": "S'ha utilitzat la terminologia gramatical correcta en la comprensió de les activitats gramaticals proposades i en la resolució de les mateixes."
+                        "3.1": "Identificar i analitzar els principis, valors, deures i drets fonamentals de la Constitució espanyola, el sistema democràtic i les seues institucions i organitzacions socials, polítiques i econòmiques, explicant-ne la funció com a mecanismes que regulen la convivència i la vida en comunitat.",
+                        "3.2": "Reconéixer i explicar els mecanismes que han regulat la convivència i la vida en comú al llarg de la història, des de l'origen de la societat fins a les diferents civilitzacions que s'han anat succeint, assenyalant els principals models d'organització social i política que s'han anat gestant.",
+                        "3.3": "Adequar el comportament propi al compliment dels principis, valors, drets i deures democràtics i constitucionals, identificant els motius i arguments que en sustenten la validesa i rebutjant tot tipus de discriminació, especialment la que es produïx per motius socioeconòmics, de gènere, orientació sexual o pertinença a minories etnoculturals."
                     }
                 },
-                "RA04": {
-                    "Resultado": "Utilitza estratègies comunicatives per interpretar i comunicar informació escrita en llengua castellana, aplicant estratègies sistemàtiques de lectura comprensiva i aplicant estratègies d'anàlisi, síntesi i classificació de forma estructurada i progressiva a la composició autònoma de textos de progressiva complexitat de l'àmbit acadèmic i professional.",
+                "CE4": {
+                    "Resultado": "Buscar i seleccionar informació de manera progressivament autònoma a partir de diferents fonts, avaluant-ne la fiabilitat i la pertinència en funció de les necessitats detectades i evitant els riscos de manipulació i desinformació, per a integrar-la com a coneixement i compartir-la des d'un punt de vista crític, personal i respectuós amb la propietat intel·lectual.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han valorat i analitzat les característiques principals dels tipus en relació amb la seua adequació per al treball que desitja realitzar.",
-                        "b": "S'han utilitzat eines de cerca diverses en la comprensió d'un text escrit, aplicant estratègies de reinterpretació de continguts.",
-                        "c": "S'han aplicat, de forma sistemàtica, estratègies de lectura comprensiva en la comprensió dels textos, aplicant les conclusions obtingudes en les activitats d'aprenentatge i reconeixent possibles usos discriminatoris des de la perspectiva de gènere.",
-                        "d": "S'ha resumit el contingut d'un text escrit, extraient la idea principal, les secundàries i el propòsit comunicatiu, revisant i reformulant les conclusions obtingudes.",
-                        "e": "S'ha analitzat l'estructura de diferents textos escrits d'ús acadèmic o professional, reconeixent usos i nivells de la llengua i pautes d'elaboració.",
-                        "f": "S'han aplicat les principals normes gramaticals i ortogràfiques en la redacció de textos de manera que el text final resulti clar, precís i adequat al format i al context comunicatiu.",
-                        "g": "S'han desenvolupat pautes sistemàtiques en la preparació de textos escrits que permeten la valoració dels aprenentatges desenvolupats i la reformulació de les necessitats d'aprenentatge per millorar la comunicació escrita.",
-                        "h": "S'han observat pautes de presentació de treballs escrits tenint en compte el contingut, el format i el públic destinatari, utilitzant un vocabulari correcte segons les normes lingüístiques i els usos a què es destina.",
-                        "i": "S'han resolt activitats de comprensió i anàlisi de les estructures gramaticals, comprovant la precisió i validesa de les inferències realitzades."
+                        "4.1": "Aplicar estratègies tant analògiques com digitals de cerca, selecció i organització d'informació, avaluant-ne la fiabilitat i la pertinència en funció de l'objectiu perseguit i evitant els riscos de manipulació i desinformació.",
+                        "4.2": "Elaborar continguts propis a partir de diferents fonts de manera progressivament autònoma, respectant els principis de propietat intel·lectual i citant les fonts consultades."
                     }
                 },
-                "RA05": {
-                    "Resultado": "Interpreta textos literaris representatius de la Literatura en llengua castellana des del segle XIX fins a l'actualitat, reconeixent la intenció de l'autor i relacionant-ho amb el seu context històric, sociocultural i literari i generant criteris estètics per a la valoració del gust personal.",
+                "CE5": {
+                    "Resultado": "Comunicar en llengua castellana de manera cooperativa i respectuosa, atenent les convencions pròpies dels diferents gèneres discursius i la seua adequació a diferents àmbits i contextos, per a donar resposta a necessitats concretes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han contrastat de forma successiva les etapes d'evolució de la literatura en llengua castellana en el període considerat, extraient escoles i estils i reconeixent les obres més representatives dels mateixos, utilitzant instruments de recollida d'informació analítics.",
-                        "b": "S'ha valorat l'estructura i l'ús del llenguatge d'una lectura personal d'una obra completa adequada al nivell i situant-la en el seu context i reconeixent autors seleccionats, utilitzant instruments formalitzats.",
-                        "c": "S'han expressat opinions personals fonamentades sobre els aspectes apreciats en una obra literària i sobre la implicació entre el seu contingut i les pròpies experiències vitals i criteris estètics.",
-                        "d": "S'han aplicat estratègies d'anàlisi de textos literaris, tenint en compte la comprensió dels temes i motius, reconeixent els gèneres i la seua evolució i la valoració dels elements simbòlics i la funcionalitat dels recursos estilístics més significatius.",
-                        "e": "S'ha presentat un treball personal en suport paper o digital en el qual es recull en forma analítica la informació sobre un autor, una obra o un període de la literatura en llengua castellana."
+                        "5.1": "Comprendre i interpretar el sentit global, l'estructura, la informació més rellevant en funció de les necessitats comunicatives i la intenció de l'emissor en textos orals, escrits i multimodals de diferents àmbits, avaluant-ne la qualitat, la fiabilitat i la idoneïtat del canal utilitzat.",
+                        "5.2": "Fer exposicions orals amb diferent grau de planificació sobre temes d'interés personal, ecosocial i professional, ajustant-se a les convencions pròpies dels diversos gèneres discursius, amb fluïdesa, coherència i el registre adequat, en diferents suports i utilitzant de manera eficaç recursos verbals i no verbals.",
+                        "5.3": "Planificar la redacció de textos escrits i multimodals atenent la situació comunicativa, el destinatari, el propòsit i el canal; redactar esborranys i revisar-los, i presentar un text final coherent, cohesionat i amb el registre adequat, amb precisió lèxica i correcció ortogràfica i gramatical.",
+                        "5.4": "Participar de manera activa i adequada en interaccions orals informals, en el treball en equip i en situacions orals formals de caràcter dialogat, amb actituds d'escolta activa i estratègies de cooperació conversacional i cortesia lingüística."
                     }
                 },
-                "RA06": {
-                    "Resultado": "Utilitza estratègies comunicatives per interpretar i comunicar informació oral en llengua anglesa, aplicant els principis de l'escolta activa i elaborant presentacions orals de poca extensió, clares i ben estructurades, relatius a temes freqüents i quotidian rellevants de l'àmbit personal i professional.",
+                "CE6": {
+                    "Resultado": "Interpretar i valorar obres diverses com a font de plaer i coneixement, compartint experiències de lectura, per a construir la pròpia identitat lectora i gaudir de la dimensió social d'esta activitat.",
                     "CriteriosEvaluacion": {
-                        "a": "S'han aplicat de forma sistemàtica les estratègies d'escolta activa per a la comprensió precisa dels missatges rebuts.",
-                        "b": "S'ha identificat la intenció comunicativa de missatges directes o rebuts mitjançant formats electrònics, valorant les situacions de comunicació i les seues implicacions en el vocabulari emprat sobre un repertori limitat d'expressions, frases, paraules i marcadors de discurs.",
-                        "c": "S'ha identificat el sentit global del text oral i estructures gramaticals bàsiques en oracions senzilles de situacions habituals freqüents i de contingut previsible.",
-                        "d": "S'han identificat trets fonètics i d'entonació bàsics que ajuden a entendre el sentit global del missatge.",
-                        "e": "S'han realitzat composicions i presentacions orals breus d'acord amb un guió estructurat, aplicant el format i els trets propis de cada composició d'àmbit personal o professional, utilitzant mitjans informàtics.",
-                        "f": "S'han utilitzat estructures gramaticals i oracions senzilles i un repertori bàsic i restringit d'expressions, frases, paraules i marcadors de discurs lineals, de situacions habituals freqüents i de contingut previsible.",
-                        "g": "S'ha expressat amb claredat, usant una entonació i pronunciació adequada, acceptant-se les pauses i petites vacil·lacions.",
-                        "h": "S'ha mostrat una actitud reflexiva i crítica respecte a la informació que supose qualsevol tipus de discriminació.",
-                        "i": "S'han identificat les normes de relació social bàsiques dels països on es parla la llengua estrangera i s'han contrastat amb les pròpies.",
-                        "j": "S'han identificat les costums o activitats quotidianes de la comunitat on es parla la llengua estrangera, contrastant-los amb les pròpies.",
-                        "k": "S'han identificat les principals actituds i comportaments professionals en situacions de comunicació habituals de l'àmbit laboral."
+                        "6.1": "Llegir de manera autònoma textos seleccionats en funció dels propis gustos, interessos i necessitats, deixant constància del progrés del propi itinerari lector i cultural i explicant els criteris de selecció de les lectures.",
+                        "6.2": "Compartir l'experiència de lectura literària en suports diversos relacionant el text llegit amb altres manifestacions artístiques en funció de temes, estructures, llenguatge i valors ètics i estètics."
                     }
                 },
-                "RA07": {
-                    "Resultado": "Manté i participa en converses en llengua anglesa utilitzant un llenguatge senzill i clar en situacions habituals freqüents de l'àmbit personal i professional, activant estratègies de comunicació bàsiques, tenint en compte opinions pròpies i alienes, sabent afrontar situacions de petits malentesos i alguns conflictes de caràcter cultural.",
+                "CE7": {
+                    "Resultado": "Comunicar-se en llengua estrangera, amb autonomia creixent, emprant recursos analògics i digitals i usant estratègies bàsiques de comprensió, producció i interacció, per a respondre de manera creativa i eficaç a necessitats personals i professionals concretes.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha dialogat utilitzant un repertori memoritzat de models d'oracions i converses molt bàsiques i dirigides sobre situacions habituals freqüents i de contingut previsible.",
-                        "b": "S'ha escoltat i dialogat en interaccions molt bàsiques, quotidianes i freqüents de la vida professional i personal, sol·licitant i proporcionant informació bàsica de forma activa.",
-                        "c": "S'ha mantingut la interacció utilitzant diverses estratègies de comunicació bàsiques per mostrar l'interès i la comprensió: l'escolta activa, l'empatia.",
-                        "d": "S'han utilitzat estratègies de compensació per suplir mancances en la llengua estrangera (parafrasejar, llenguatge corporal, ajudes audio-visuals).",
-                        "e": "S'han utilitzat estructures gramaticals i oracions senzilles i un repertori bàsic d'expressions, frases, paraules i marcadors de discurs lineals.",
-                        "f": "S'ha expressat amb certa claredat, usant una entonació i pronunciació adequada i comprensible, acceptant-se algunes pauses i vacil·lacions.",
-                        "g": "S'ha mostrat una actitud reflexiva i crítica respecte a la informació que supose qualsevol tipus de discriminació."
+                        "7.1": "Interpretar el sentit global i la informació específica i explícita de textos orals, escrits i multimodals breus i senzills sobre temes freqüents i quotidians, de rellevància personal o propis de l'àmbit professional d'especialització, expressats de manera clara i en el registre estàndard de la llengua estrangera.",
+                        "7.2": "Produir en llengua estrangera textos orals, escrits i multimodals, breus, senzills, estructurats, comprensibles i adequats a la situació comunicativa, seguint pautes establides i fent ús d'eines i recursos analògics i digitals.",
+                        "7.3": "Participar en situacions i accions guiades síncrones i asíncrones, breus i senzilles, en llengua estrangera, sobre temes quotidians, de rellevància personal o pròxims a l'àmbit professional del cicle, mostrant empatia i respecte per la cortesia lingüística i l'etiqueta digital, així com per les diferents necessitats, idees, inquietuds, iniciatives i motivacions dels interlocutors i les interlocutores.",
+                        "7.4": "Utilitzar, de manera guiada i en entorns personals i de la pròpia especialitat professional, estratègies adequades per a iniciar, mantindre i acabar la comunicació, prendre i cedir la paraula, sol·licitar i formular aclariments i explicacions en llengua estrangera."
                     }
                 },
-                "RA08": {
-                    "Resultado": "Interpreta, redacta i elabora textos breus i senzills de l'àmbit personal i professional en llengua anglesa relatius a situacions de comunicació habituals i freqüents de l'àmbit personal i professional, aplicant estratègies de lectura comprensiva i desenvolupant estratègies sistemàtiques de composició.",
+                "CE8": {
+                    "Resultado": "Valorar críticament la diversitat lingüística i cultural i adequar-s'hi, usant els repertoris personals i prenent consciència de les estratègies i els coneixements propis, per a gestionar de manera empàtica i respectuosa situacions interculturals.",
                     "CriteriosEvaluacion": {
-                        "a": "S'ha llegit de forma comprensiva el text, reconeixent els trets bàsics del gènere i interpretant el seu contingut global de forma independent a la comprensió de tots i cadascun dels elements del text.",
-                        "b": "S'ha identificat les idees fonamentals i la intenció comunicativa bàsica del text.",
-                        "c": "S'han identificat estructures gramaticals i oracions senzilles i un repertori limitat d'expressions, frases, paraules i marcadors de discurs bàsics i lineals, en situacions habituals freqüents de contingut previsible.",
-                        "d": "S'han completat frases, oracions i textos senzills atenent al propòsit comunicatiu, normes gramaticals bàsiques, mecanismes d'organització i cohesió bàsics, en situacions habituals de contingut previsible.",
-                        "e": "S'ha elaborat un text breu, adequat a un propòsit comunicatiu, seguint models de textos senzills, ben estructurats i de longitud adequada al contingut.",
-                        "f": "S'ha utilitzat el lèxic bàsic apropiat a situacions freqüents i al context de l'àmbit personal i professional.",
-                        "g": "S'ha mostrat interès per la presentació correcta dels textos escrits, tant en paper com en suport digital, amb respecte a normes gramaticals, ortogràfiques i tipogràfiques i seguint pautes sistemàtiques de revisió.",
-                        "h": "S'han utilitzat diccionaris impresos i online i correctors ortogràfics dels processadors de textos en la composició dels textos.",
-                        "i": "S'ha mostrat una actitud reflexiva i crítica respecte a la informació que supose qualsevol tipus de discriminació."
+                        "8.1": "Millorar la capacitat de comunicar-se en llengua estrangera utilitzant els coneixements i les estratègies del repertori lingüístic i cultural propi, amb el suport d'altres participants i de suports analògics i digitals.",
+                        "8.2": "Acceptar i valorar la diversitat lingüística i cultural com a font d'enriquiment personal i professional, identificant els elements culturals i lingüístics que fomenten el respecte, la sostenibilitat i la democràcia."
                     }
                 }
             },
             "horas": "166",
             "curs": 2,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [
                 "n",
@@ -1296,6 +1081,7 @@
             },
             "horas": "67",
             "curs": 1,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []
@@ -1341,6 +1127,7 @@
             },
             "horas": "34",
             "curs": 2,
+            "dualitza": false,
             "UnidadesCompetenciaAcreditadas": {},
             "CompetenciasTitulo": [],
             "ObjetivosGenerales": []

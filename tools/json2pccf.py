@@ -12,7 +12,7 @@ import jinja2
 import warnings
 warnings.filterwarnings('ignore')
 
-from pccf_utils import dualitza, get_hoja_label, get_optatives, CICLE_INFO, PD_TEMPLATE
+from pccf_utils import dualitza, es_ambit, get_hoja_label, get_optatives, CICLE_INFO, PD_TEMPLATE
 
 
 def get_template_loader_and_env(familia, template_name):
@@ -225,7 +225,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), pla_pendents=pla_pendents)
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), ambit=es_ambit(modulo), pla_pendents=pla_pendents)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
     else:
@@ -239,7 +239,7 @@ for codigo in data_box.ModulosProfesionales:
             templateLoader, templateEnv, used_path = get_template_loader_and_env(familia, TEMPLATE_FILE)
             print(f" * PD: usando plantillas desde: {used_path}")
             template = templateEnv.get_template(TEMPLATE_FILE)
-            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), pla_pendents=pla_pendents)
+            outputText = template.render(modulo=modulo, ciclo_contexto=ciclo_contexto, ciclo_curriculum=ciclo_curriculum, dualitza=dualitza(modulo), ambit=es_ambit(modulo), pla_pendents=pla_pendents)
             with open(fmod, "w") as fmodulo:
                 fmodulo.write(outputText)
 
