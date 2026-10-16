@@ -41,7 +41,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pccf_utils import (CICLES_INF, CICLES_SCO, DEPARTAMENTS, dir_moduls, dualitza, get_familia, get_moduls_del_cicle, get_optatives,
+from pccf_utils import (CICLES_INF, CICLES_SCO, DEPARTAMENTS, dir_moduls, get_familia, get_optatives,
                         get_optatives_del_cicle, OPTATIVES_DIRNAME,
                         OPTATIVES_LIBRO, check_excel_coherence, find_optativa_pd, hores_per_fulla,
                         DIR_ESBORRANY_CICLE, DIR_ESBORRANY_DEPT, departaments_del_cicle,
@@ -404,8 +404,9 @@ def find_pd_triggers(directori):
 
 def compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
     """Compila totes les Programacions d'un cicle (COMPILAR_ARA) i envia el PDF
-    al cap de departament (department_emails.json, tipus "PCCF", clau = cicle)
-    i, si el cicle té mòduls que dualitzen, a la coordinació de FE. Torna True
+    amb el report del cicle al cap de departament (department_emails.json,
+    tipus "PCCF", clau = cicle). La coordinació de FE no el rep: només
+    l'interessa el pla formatiu (notify_fe_coordinator). Torna True
     si s'han compilat els mòduls (encara que algun haja fallat: queda al log i
     es manté el seu PDF anterior; si no, el disparador es reintentaria sempre)."""
     print(f"[pccf-poller] {familia}_{cicle}: {motiu}, compilant Programacions...", flush=True)
@@ -425,26 +426,36 @@ def compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
             return False
     envia_pd_docents(cicle, os.path.join(sync_root, "programacions"), resultat.get("ok", []))
 
-    pdf_path = os.path.join(sync_root, "programacions", DIR_ESBORRANY_CICLE, f"Programaciones_{centre}_{cicle}.pdf")
-    destinataris = [get_department_email("PCCF", cicle)]
-    if any(dualitza(m) for m in get_moduls_del_cicle(cicle, familia).values()):
-        destinataris.append(get_department_email(FE_EMAIL_TIPUS, FE_EMAIL_CLAU))
-    to_addr = ", ".join(dict.fromkeys(d for d in destinataris if d))
+    prog_root = os.path.join(sync_root, "programacions")
+    pdf_path = os.path.join(prog_root, DIR_ESBORRANY_CICLE, f"Programaciones_{centre}_{cicle}.pdf")
+    # Report del cicle acabat de calcular, per adjuntar-lo amb el PDF
+    report_path = os.path.join(dir_report_cicle(prog_root), f"{familia}_{cicle}.txt")
+    try:
+        os.makedirs(os.path.dirname(report_path), exist_ok=True)
+        with open(report_path, "w", encoding="utf-8") as f:
+            f.write(format_pd_report(compute_pd_status(cicle, familia, pdir)))
+    except Exception as e:
+        print(f"[pccf-poller] {familia}_{cicle}: no s'ha pogut generar el report: {e}", flush=True)
+
+    ko = ""
+    if resultat.get("ko"):
+        ko = (f"\nNo s'han pogut compilar els mòduls {', '.join(resultat['ko'])}: el PDF inclou la seua "
+              "versió anterior. Cal revisar el seu fitxer de PD.\n")
+
+    to_addr = get_department_email("PCCF", cicle)
     if not to_addr:
         print(f"[pccf-poller] {familia}_{cicle}: PD compilada però no hi ha email de cap de departament a department_emails.json (tipus 'PCCF', clau '{cicle}')", flush=True)
-        return True
+    else:
+        subject = f"[PCCF {cicle}] Programacions compilades"
+        body = (
+            f"S'ha generat el PDF de Programacions del cicle {cicle} a petició del cap de departament "
+            f"(fitxer {PD_COMPILE_TRIGGER}).\n\n"
+            "Adjunts: la darrera versió compilada i el report del cicle (marques pendents, "
+            "incidències de l'Excel i de FE), si s'han pogut adjuntar.\n" + ko
+        )
+        if send_report_email(to_addr, subject, body, attachments=[pdf_path, report_path]):
+            print(f"[pccf-poller] correu enviat ({to_addr}) per Programacions {cicle}", flush=True)
 
-    subject = f"[PCCF {cicle}] Programacions compilades"
-    body = (
-        f"S'ha generat el PDF de Programacions del cicle {cicle} a petició del cap de departament "
-        f"(fitxer {PD_COMPILE_TRIGGER}).\n\n"
-        "L'adjunt d'este correu, si s'ha pogut adjuntar, és la darrera versió compilada.\n"
-    )
-    if resultat.get("ko"):
-        body += (f"\nNo s'han pogut compilar els mòduls {', '.join(resultat['ko'])}: el PDF inclou la seua "
-                 "versió anterior. Cal revisar el seu fitxer de PD.\n")
-    if send_report_email(to_addr, subject, body, attachments=[pdf_path]):
-        print(f"[pccf-poller] correu enviat ({to_addr}) per Programacions {cicle}", flush=True)
     return True
 
 
@@ -462,19 +473,25 @@ def _guarda_json(path, dades):
         json.dump(dades, f, indent=1)
 
 
-def marca_compilats(cicle, prog_root, codis=None):
-    """Guarda l'empremta actual dels mòduls `codis` (tots si és None) com a compilats."""
+def empremtes_o_none(cicle, prog_root):
     try:
-        fps = pd_build.empremtes(cicle, prog_root)
+        return pd_build.empremtes(cicle, prog_root)
     except Exception as e:
         print(f"[pccf-poller] {cicle}: no s'han pogut calcular les empremtes de les PD: {e}", flush=True)
+        return None
+
+
+def marca_compilats(cicle, fps):
+    """Guarda les empremtes `fps` com a compilades. S'han de calcular ABANS de
+    compilar: un canvi que arriba (OneDrive) durant la compilació, que dura
+    minuts, no ha entrat al PDF i s'ha de tornar a compilar."""
+    if fps is None:
         return
     state = _llig_json(PD_BUILD_STATE_PATH)
     for k in [k for k in state if k.startswith(f"{cicle}/") and k.split("/", 1)[1] not in fps]:
         del state[k]
     for codi, v in fps.items():
-        if codis is None or codi in codis:
-            state[f"{cicle}/{codi}"] = v["empremta"]
+        state[f"{cicle}/{codi}"] = v["empremta"]
     _guarda_json(PD_BUILD_STATE_PATH, state)
 
 
@@ -607,9 +624,10 @@ def check_pd_compile_trigger(cicle, familia, pdir, sync_root, centre, forcat=Fal
         return None
 
     motiu = "disparador global" if forcat and not triggers else f"disparador {PD_COMPILE_TRIGGER} detectat"
+    fps = empremtes_o_none(cicle, os.path.join(sync_root, "programacions"))
     if not compile_pd(cicle, familia, pdir, sync_root, centre, motiu):
         return False
-    marca_compilats(cicle, os.path.join(sync_root, "programacions"))
+    marca_compilats(cicle, fps)
 
     for trigger_path in triggers:
         try:
