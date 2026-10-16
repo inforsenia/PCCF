@@ -172,11 +172,21 @@ def format_pd_report(status):
         return "\n".join(lines)
 
     lines.append(f"PDs en BORRADOR: {len(status['borrador'])}")
-    for p in status["borrador"]:
-        lines.append(f"  - {p['nom']} ({p['codi']})")
     lines.append(f"PDs en OK: {len(status['ok'])}")
-    for p in status["ok"]:
-        lines.append(f"  - {p['nom']} ({p['codi']})")
+    lines.append("")
+    # Un mòdul per línia, amb la mateixa ✓/✗ que l'índex del PDF: l'estat
+    # OK del nom del fitxer no vol dir que el mòdul no tinga incidències.
+    lines.append("Mòduls (✓ sense incidències, ✗ amb alguna; el detall, més avall):")
+    for m in estat_moduls_cicle(status["cicle"], os.path.dirname(os.path.abspath(status["pd_dir"])), status):
+        motius = []
+        if m["marques"]:
+            motius.append(f"{m['marques']} marques pendents")
+        if m["excel"]:
+            motius.append(f"{len(m['excel'])} incidències de l'Excel")
+        if m["fe"]:
+            motius.append(f"{len(m['fe'])} incidències de FE")
+        marca = "✓" if modul_verificat(m) else "✗"
+        lines.append(f"  {marca} {m['codi']} {m['nom']}: {m['estat']}" + (f" ({', '.join(motius)})" if motius else ""))
     lines.append("")
 
     for f, places in status["placeholders"]:
