@@ -1,4 +1,4 @@
-# UP02 : Usuarios, Grupos y Permisos
+# UP02 : Software y Actualizaciones
 
 ## Resultados y Criterios
 
@@ -71,7 +71,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 8 Sesiones | 21/10/2025 $\rightarrow$ 24/11/2025 |
+| 8 Sesiones | 27/10/2026 $\rightarrow$ 12/11/2026 |
 
 # Evaluación
 
@@ -80,12 +80,10 @@
 
 ## Ejercicios realizados durante la Unidad
 
-* Creación de Usuarios y Grupos.
-* Comprobaciones de pertenencia a grupos.
-* Comprobaciones básicas de usuarios.
-* Scripts de Inicio de Sesión.
+* Conceptos de repositorios.
+* Empaquetado de aplicaciones.
+* Dependencias.
+* Ficheros de Configuración.
 * Registros y errores.
-* Scripting y Usuarios.
-
 
 

@@ -52,7 +52,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 26 Sesiones | 03/02/2026 $\rightarrow$ 10/05/2026 |
+| 26 Sesiones | 03/02/2027 $\rightarrow$ 10/05/2027 |
 
 # Evaluación
 

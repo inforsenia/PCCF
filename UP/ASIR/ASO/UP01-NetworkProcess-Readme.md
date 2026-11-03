@@ -71,7 +71,7 @@
 
 | Sesiones   | Fechas                              |
 |------------|-------------------------------------|
-| 16 Sesiones | 08/09/2025 $\rightarrow$ 20/10/2025 |
+| 16 Sesiones | 08/09/2026 $\rightarrow$ 20/10/2026 |
 
 # Evaluación
 
