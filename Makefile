@@ -32,7 +32,7 @@ todo:
 
 dependences:
 	@echo " [${BLUE} * Dependencias necesarias para PANDOC ${RESET}] "
-	sudo apt update ; sudo apt install --yes make pandoc texlive-extra-utils texlive-lang-spanish texlive-latex-extra texlive-fonts-extra libreoffice poppler-utils fonts-adobe-sourcesans3
+	sudo apt update ; sudo apt install --yes make pandoc texlive-extra-utils texlive-lang-spanish texlive-latex-extra texlive-fonts-extra libreoffice poppler-utils
 
 	@echo " [${BLUE} * Dependencias necesarias para PYTHON ${RESET}] "
 	sudo apt update ; sudo apt install --yes make python3-jinja2 python3-box python3-numpy python-openpyxl-doc python-pandas-doc python3-pandas
