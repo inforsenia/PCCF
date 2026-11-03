@@ -669,13 +669,13 @@ $endif$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   $if(fontfamily)$
   $else$
-  \usepackage[default]{sourcesans}
+  \usepackage[default]{sourcesanspro}
   \usepackage{sourcecodepro}
   $endif$
 \else % if not pdftex (e.g. lualatex)
   $if(mainfont)$
   $else$
-  \usepackage[default]{sourcesans}
+  \usepackage[default]{sourcesanspro}
   \usepackage{sourcecodepro}
   $endif$
 \fi
