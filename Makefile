@@ -14,7 +14,7 @@ LIGHTYELLOW= \e[93m
 RESET= \e[0m
 
 # Templates 
-TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.latex"
+TEMPLATE_TEX_PD="../rsrc/templates/eisvogel-2026.latex"
 TEMPLATE_CONFIG_A4="../rsrc/templates/config-a4.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="../rsrc/sorts-mill-goudy/OFLGoudyStM.otf" --pdf-engine=xelatex "
 PANDOC_OPTIONS_FEDORA="-V fontsize=12pt "

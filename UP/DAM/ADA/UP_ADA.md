@@ -263,7 +263,7 @@ La evaluación será continua y formativa, enfocada en la adquisición de los cr
 
 **Secuencia de actividades**
 *   **A1:** Concepto de API y tipos de API; introducción a REST y sus restricciones; la API como mecanismo de acceso a los datos.
-*   **A2:** Correspondencia recursos↔objetos de la BD relacional; métodos HTTP, formatos JSON/XML, encabezados, parámetros y códigos de estado.
+*   **A2:** Correspondencia recursos - objetos de la BD relacional; métodos HTTP, formatos JSON/XML, encabezados, parámetros y códigos de estado.
 *   **A3:** Consumo de la API mediante `HttpClient`, `HttpRequest` y `HttpResponse`: establecimiento de conexiones, envío de peticiones y consulta y recuperación de objetos simples y estructurados.
 *   **A4:** Modificación de los objetos almacenados mediante peticiones HTTP, gestión de transacciones, pruebas y documentación.
 
