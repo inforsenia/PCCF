@@ -100,6 +100,21 @@ proyecto-smx: files proyecto-base
 
 	@echo " ${LIGHTBLUE} Programaciones Generadas para SMX ${RESET}"
 
+proyecto-eso-batx: files 
+	@echo " [ ${BLUE} ESO y BACHILLERATO  ${RESET}]"
+	
+	cp -r ESO-BAT/* temp/
+	
+	for name in temp/*.md; do\
+		echo $${name}; \ 
+	done
+	
+	@echo " ${LIGHTBLUE} Programaciones de cada nivel : ${RESET}"
+	#$(foreach file, $(wildcard temp/*.md), echo $(file);)
+	#cd temp && pandoc --template $(TEMPLATE_TEX_PD) -o $(PDF_PATH)/$${f}.pdf ${f}; \
+	
+
+
 
 proyecto-rsn: files proyecto-base
 	@echo " [ ${BLUE} Proyecto Curricular : RSN ${RESET}]"
